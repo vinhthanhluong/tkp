@@ -1,0 +1,45 @@
+/* ▼▼▼▼▼ TOGGLE ▼▼▼▼▼ */
+.wp-list-table a.toggle {
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  width: 50px;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  background: #eee;
+  transition: 0.3s ease all;
+}
+a.toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+a.toggle em {
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 1px solid #aaa;
+  display: block;
+  color: #ccc;
+  position: relative;
+  transition: 0.3s ease all;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+a.toggle em .fa {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  display: block;
+}
+a.toggle[data-on="1"] {
+  background: #4cd964;
+  border-color: #4cd964;
+}
+a.toggle[data-on="1"] em {
+  left: 20px;
+  color: #4cd964;
+  border-color: #4cd964;
+}
+/* ▲▲▲▲▲ TOGGLE ▲▲▲▲▲ */

@@ -1,0 +1,33 @@
+.wp-pagenavi {
+  @include clearfix;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+  span,
+  a {
+    line-height: 30px;
+    display: inline-block;
+    margin: 0 4px;
+    color: #666;
+    text-align: center;
+  }
+  a {
+    @include HOVER {
+      background: #1489c3;
+      color: #fff;
+    }
+  }
+  span {
+    &.curren {
+      border-radius: 15px;
+      width: 30px;
+      height: 30px;
+      background: #ededed;
+      background: #1489c3;
+      color: #fff;
+    }
+  }
+  .pages {
+    margin-right: 15px;
+  }
+}

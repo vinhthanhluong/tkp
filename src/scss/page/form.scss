@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import "../utility/*";
+.page-form {
+  // BASE ON FORM DEFAULT
+  .errMsg {
+    margin-left: 1em;
+    padding-bottom: 1px;
+    display: block;
+    line-height: 1.4;
+    text-indent: -0.9em;
+  }
+  .formError {
+    padding-bottom: 13px;
+    display: block;
+  }
+  .fixed {
+    padding-bottom: 0px;
+  }
+  .formError .formErrorClose {
+    border: solid #252525 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    color: #efefef;
+    background: #333;
+    font-weight: bold;
+    text-align: center;
+    line-height: middle;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px -1px 3px #888;
+  }
+  .formError .formErrorClose:hover {
+    background: #666;
+  }
+  .fixed .formErrorClose {
+    display: none;
+  }
+  .formError .formErrorContent {
+    padding: 6px 10px;
+    position: relative;
+    color: #fff;
+    background: #252525;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica,
+      "ヒラギノ丸ゴ Pro W4", HiraMaruPro-W4, "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, Osaka, sans-serif;
+    font-size: 11px;
+    margin: 0 0;
+    z-index: 1;
+    border-radius: 3px;
+    box-shadow: 0px 0px 6px #888;
+  }
+  .fixed .formErrorContent {
+    margin-top: 0.5em;
+    background: #f60;
+    margin: 0 0 30px 0;
+    border-radius: none;
+    box-shadow: none;
+  }
+  .fadeOut {
+    opacity: 0.2;
+  }
+  .hid_url {
+    display: none;
+  }
+  // BASE ON FORM DEFAULT
+
+  .step-img {
+    margin: 60px auto;
+    display: block;
+  }
+
+  .tableContact {
+    border-top: #8f8f8f solid 1px;
+    border-bottom: #8f8f8f solid 1px;
+    width: 100%;
+    margin: 30px 0 50px;
+    font-size: 15px;
+    text-align: left;
+    td,
+    th {
+      border-bottom: #8f8f8f solid 1px;
+      padding: 20px;
+      vertical-align: top;
+    }
+    th {
+      background: #ededed;
+      width: 210px;
+      font-weight: normal;
+    }
+    td {
+      position: relative;
+    }
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"] {
+      width: 300px;
+      color: #1a1a1a;
+      padding: 10px;
+      border: #8f8f8f solid 1px;
+      border: 1px solid #aaa;
+      &::-webkit-input-placeholder,
+      &::placeholder {
+      }
+    }
+    .size01 input[type="text"] {
+      width: 160px;
+    }
+    .size02 input[type="text"],
+    textarea {
+      width: 100%;
+    }
+    textarea {
+      height: 150px;
+    }
+
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+      border: 1px solid #aaa;
+      padding: 10px;
+    }
+    .pRadio {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .pRadio input {
+      position: absolute;
+      opacity: 0;
+    }
+    .pRadio label {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      border: 1px solid #aaa;
+      padding: 10px 20px;
+    }
+
+    .pRadio input:checked ~ label {
+      background: #555;
+      border-color: #555;
+      color: #fff;
+    }
+
+    button {
+      height: 60px;
+      margin: 20px auto;
+      padding: 0 100px;
+      background: #eee;
+    }
+
+    em {
+      color: #fb2a2a;
+      font-style: normal;
+    }
+  }
+
+  &.fixHeader .header {
+    padding: 20px 15px;
+  }
+
+  // for step 2
+  &.form-confirm {
+    header {
+      #logo a {
+        pointer-events: none;
+      }
+    }
+  }
+
+  // for step 3
+  &.form-thanks {
+    .thanks-main {
+      text-align: center;
+      &__ttl {
+        @include font(20, 1.5, 50, bold);
+        margin-top: 40px;
+      }
+      &__txt {
+        margin-top: 40px;
+        @include font(16, 1.5);
+      }
+      &__mail {
+        @include font(16, 1.5);
+        margin-top: 10px;
+      }
+      &__back {
+        margin-top: 40px;
+      }
+    }
+  }
+}

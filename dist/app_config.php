@@ -1,0 +1,83 @@
+<?php
+// X-Frame
+header("X-Frame-Options: DENY");
+// NONCE
+// define('APP_NONCE', base64_encode(random_bytes(16)));
+// CSP
+// To run Browsersync locally, please add the following code to your vhosts config
+// MAMP file path:
+// /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
+// Code:
+// <IfModule mod_headers.c>
+//   Header unset Content-Security-Policy
+// </IfModule>
+// define('APP_CSP', ""
+//   . "default-src 'self';"
+//   . "base-uri 'self';"
+//   . "style-src 'self' 'unsafe-inline' fonts.gstatic.com fonts.googleapis.com *.typekit.net;"
+//   . "script-src 'self' 'nonce-" . APP_NONCE . "' 'strict-dynamic' google-analytics.com;"
+//   . "img-src 'self' 'unsafe-inline' placehold.jp data: google-analytics.com *.gravatar.com;"
+//   . "font-src 'self' fonts.gstatic.com fonts.googleapis.com *.typekit.net data: ;"
+//   . "connect-src 'self' google-analytics.com *.typekit.net;"
+//   . "object-src 'none';"
+//   . "frame-src 'self' data: google-analytics.com *.youtube.com *.google.com;"
+//   . "frame-ancestors 'none';"
+//   . "form-action 'self';");
+
+if (!defined("ABSPATH")) {
+  // date_default_timezone_set('Asia/Ho_Chi_Minh'); // For Vietnam
+  date_default_timezone_set('Asia/Tokyo'); // For Japan
+
+  // CSP CONFIG
+  // header("Content-Security-Policy:" . APP_CSP);
+  // } else {
+  // if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') header("Content-Security-Policy:" . APP_CSP);
+}
+
+$dist = '';
+// get protocol.
+$url = $_SERVER['HTTP_HOST'] . '/' . $dist;
+$protocol = (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') || !empty($_SERVER["HTTPS"]) ? 'https://' : 'http://';
+
+// Get dist folder.
+$script_name = str_replace($_SERVER['QUERY_STRING'], '', $_SERVER['SCRIPT_NAME']);
+$script_filename = str_replace(dirname(__FILE__), '', str_replace('private_html', 'public_html', $_SERVER['SCRIPT_FILENAME']));
+$dist = trim(str_replace($script_filename, '', $script_name), "/");
+if (!empty($dist)) $dist .= '/';
+if (strpos($dist, ".php") !== false || strpos($dist, ".html") !== false || strpos($dist, ".htm") !== false) $dist = "";
+
+// get host.
+$app_url = $protocol . $_SERVER['HTTP_HOST'] . '/' . $dist;
+define('APP_URL', $app_url);
+define('APP_VER', '1.0.0');
+if (defined('ABSPATH')) {
+  define('APP_THEME_URL', get_template_directory_uri() . '/');
+  define('APP_PATH', get_template_directory() . '/');
+  define('APP_ASSETS', APP_THEME_URL . 'assets/');
+} else {
+  define('APP_PATH', dirname(__FILE__) . '/');
+  define('APP_ASSETS', APP_URL . 'assets/');
+}
+define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.jpg');
+
+define('GOOGLE_MAP_API_KEY', '');
+define('GOOGLE_RECAPTCHA_KEY_API', '');
+define('GOOGLE_RECAPTCHA_KEY_SECRET', '');
+
+define('SMTP_ENABLED', false);
+define('SMTP_HOST', "smtp.gmail.com");
+define('SMTP_AUTH', true);
+define('SMTP_DEBUG', false);
+define('SMTP_SECURE', 'tls');
+define('SMTP_USERNAME', "");
+define('SMTP_PASSWORD', "");
+define('SMTP_PORT', 587);
+
+/* email list for forms */
+//contact
+$aMailtoContact = array('alivetestmail@alive-web.co.jp');
+$aBccToContact = array('');
+$fromContact = "alivetestmail@alive-web.biz";
+$fromName = "Company name";
+
+include(APP_PATH . 'libs/security.php');

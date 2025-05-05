@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+.c-img {
+  display: block;
+  position: relative;
+  img {
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &--contain {
+    img {
+      object-fit: contain;
+    }
+  }
+  &--top {
+    img {
+      object-position: top;
+    }
+  }
+}
+
+.c-fw {
+  width: 100%;
+}
+
+[rel~="js-lazy"] {
+  opacity: 0;
+  &:not(.initial) {
+    transition: opacity 0.15s;
+  }
+  &.initial,
+  &.loaded,
+  &.error {
+    opacity: 1;
+  }
+}
+
+.c-lazybg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &--top {
+    background-position: center top;
+  }
+  &--contain {
+    background-size: contain;
+  }
+}

@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.page404-main {
+  text-align: center;
+  padding: 200px 0;
+  @include SP {
+    padding: 100px 0;
+  }
+  &__hd {
+    @include font($size: 40, $line: 1.5, $letter: 50, $weight: bold);
+  }
+  &__link,
+  &__txt {
+    @include font($size: 20, $line: 1.5, $letter: 50, $weight: "");
+    margin-top: 40px;
+  }
+  &__link {
+    color: $color_link;
+  }
+}
