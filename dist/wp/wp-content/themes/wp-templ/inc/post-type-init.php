@@ -1,6 +1,5 @@
 <?php
-include_once(dirname(__FILE__) . "/post-type/blog.php");
-include_once(dirname(__FILE__) . "/post-type/event.php");
+include_once(dirname(__FILE__) . "/post-type/news.php");
 
 include_once(dirname(__FILE__) . "/functions-custom.php");
 
