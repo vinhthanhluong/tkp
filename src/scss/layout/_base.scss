@@ -231,6 +231,9 @@ FONT family
 .ffYM {
   @include ffYM;
 }
+.ffGT {
+  @include ffGT;
+}
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -303,6 +306,11 @@ body {
 /*-----------------------------------------------------------
 COMMON
 -------------------------------------------------------------*/
+.inner1170 {
+  max-width: 1218px; // 1170
+  padding: 0 24px;
+  margin: 0 auto;
+}
 .inner {
   max-width: 1030px;
   padding: 0 15px;
