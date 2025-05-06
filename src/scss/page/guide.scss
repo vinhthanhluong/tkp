@@ -1,3 +1,72 @@
 @charset 'UTF-8';
 @import "../utility/*";
 
+.sec-mv {
+	padding-top: 121px;
+	padding: 0 20px 117px;
+	overflow: hidden;
+	.content-sec {
+		position: relative;
+		max-width: 1274px;
+		margin: 0 auto;
+	}
+	.img-wave-blue {
+		position: absolute;
+		top: -62px;
+		left: 197px;
+	}
+	.img-wave-yellow {
+		position: absolute;
+		top: 223px;
+		left: 186px;
+	}
+	.img-item-1 {
+		position: absolute;
+		top: 80px;
+		left: 0;
+	}
+	.img-item-2 {
+		position: absolute;
+		top: -75px;
+		right: 15px;
+	}
+	.tit-sec {
+		position: relative;
+		text-align: center;
+		margin-bottom: 71px;
+		&:before {
+			position: absolute;
+			content: "";
+			background: url($img_url + "img/guide/circle_gra.png") no-repeat center center/100% auto;
+			width: 180px;
+			height: 180px;
+			left: 50%;
+			margin-left: -90px;
+			top: -36px;
+		}
+		span {
+			display: block;
+			@include font(18);
+			font-weight: 700;
+			color: #65B0D4;
+			letter-spacing: 2.2px;
+			margin-bottom: 14px;
+		}
+		strong {
+			display: block;
+			@include ffGT;
+			@include font(50);
+			font-weight: 600;
+			line-height: 1.5;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+	}
+	.desc {
+		text-align: center;
+		@include font(18);
+		line-height: 30px;
+		letter-spacing: 2.2px;
+		font-weight: 700;
+	}
+}
