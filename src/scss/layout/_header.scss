@@ -7,6 +7,42 @@
   }
 }
 
+body:not(.fixHeader) {
+  .header {
+    &.is-white {
+      #logo {
+        .logo-black {
+          opacity: 0;
+        }
+        .logo-white {
+          opacity: 1;
+        }
+      }
+      .layerMenuPC {
+        .gNaviPC .gNaviPC-item .gNaviPC-item__link {
+          color: #fff;
+          @include HOVER {
+            color: $blue01;
+          }
+        }
+      }
+      .btnLang {
+        .gLang .gLang-item .gLang-item__link {
+          color: #fff;
+          @include HOVER {
+            color: $blue01;
+          }
+        }
+      }
+      .hamberger {
+        span {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
 .header {
   position: fixed;
   left: auto;
@@ -74,38 +110,6 @@
       left: 0;
       margin: auto;
       opacity: 0;
-    }
-  }
-
-  &.is-white {
-    #logo {
-      .logo-black {
-        opacity: 0;
-      }
-      .logo-white {
-        opacity: 1;
-      }
-    }
-    .layerMenuPC {
-      .gNaviPC .gNaviPC-item .gNaviPC-item__link {
-        color: #fff;
-        @include HOVER {
-          color: $blue01;
-        }
-      }
-    }
-    .btnLang {
-      .gLang .gLang-item .gLang-item__link {
-        color: #fff;
-        @include HOVER {
-          color: $blue01;
-        }
-      }
-    }
-    .hamberger {
-      span {
-        background: #fff;
-      }
     }
   }
 }
@@ -380,6 +384,14 @@
     .gOfficial-item {
       @include SP {
         max-width: 32px;
+      }
+      a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        @include HOVER {
+          opacity: 1;
+          transform: translateY(-5px);
+        }
       }
     }
   }
