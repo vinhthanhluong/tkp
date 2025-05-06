@@ -205,7 +205,7 @@ Link
 ------------------------------------------------------------*/
 a {
   outline: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
   @include HOVER {
     opacity: 0.5;
   }

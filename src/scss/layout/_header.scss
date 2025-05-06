@@ -20,33 +20,38 @@
     height: 90px;
   }
   @include SP {
-    height: 90px;
-    padding: 0 15px;
+    height: 56px;
   }
   .inHeader {
     margin: 0 auto;
     position: relative;
     z-index: 2000;
-    height: 90px;
     transition: all 0.3s ease;
+    @include PC {
+      height: 90px;
+    }
+    @include SP {
+      height: 56px;
+    }
   }
   #logo {
     position: absolute;
-    left: 60px;
-    top: 25px;
     z-index: 1000;
-    height: 70px;
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(center);
     @include add_prefix(transition, 0.3s ease all);
     @include PC {
+      left: 60px;
+      top: 25px;
+      height: 70px;
       @include max-screen(1440px) {
         left: calc(60 / 1440 * 100vw);
       }
     }
     @include SP {
-      top: 15px;
+      left: 16px;
+      top: 16px;
     }
     img {
       display: block;
@@ -58,8 +63,7 @@
         }
       }
       @include SP {
-        width: 80px;
-        height: 20px;
+        width: 128px;
       }
     }
     .logo-white {
@@ -83,7 +87,7 @@
       }
     }
     .layerMenuPC {
-      .gNavi .gNavi-item .gNavi-item__link {
+      .gNaviPC .gNaviPC-item .gNaviPC-item__link {
         color: #fff;
         @include HOVER {
           color: $blue01;
@@ -111,7 +115,12 @@
     position: fixed;
     left: 0;
     top: 0;
-    padding: 20px;
+    @include PC {
+      padding: 20px;
+    }
+    @include SP {
+      padding: 10px;
+    }
     .inHeader {
       background: #fff;
       border-radius: 15px;
@@ -120,15 +129,24 @@
       -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
     }
     #logo {
-      left: 40px;
-      top: 10px;
       @include PC {
+        left: 40px;
+        top: 10px;
         @include max-screen(1440px) {
           left: calc(40 / 1440 * 100vw);
         }
       }
+      @include SP {
+        left: 20px;
+        top: 12px;
+      }
       img {
-        width: 159px;
+        @include PC {
+          width: 159px;
+        }
+        @include SP {
+          width: 102px;
+        }
       }
     }
   }
@@ -142,143 +160,275 @@
   }
   .hamberger {
     position: fixed;
-    top: 55px;
+    @include PC {
+      top: 55px;
+    }
+    @include SP {
+      top: 28px;
+      right: 30px;
+    }
   }
 }
 
 .layerMenu {
+  overflow: hidden;
   text-align: right;
   position: fixed;
-  // right: -100%;
-  right: 20px;
-  top: 20px;
-  border-radius: 20px;
+  right: -100%;
   z-index: 1000;
-  width: 100%;
-  max-width: 430px;
-  height: calc(100% - 40px);
   text-align: left;
   background: #fff;
-  .gNavi {
-    @include SP {
-      margin-bottom: 30px;
-    }
-    > li {
-      display: inline-block;
-      vertical-align: top;
-      width: auto;
-      margin-left: 3%;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-      @include SP {
-        display: block;
-        width: 100%;
-        font-weight: bold;
-        border-bottom: 1px solid #fff;
-        margin: 0;
-      }
-      > a {
-        display: block;
-        padding: 3px 0;
-        position: relative;
-        @include SP {
-          color: #7b7b7b;
-          padding: 17px 0 15px 0;
-        }
-        &:before {
-          content: "";
-          position: absolute;
-          right: 2px;
-          top: 50%;
-          width: 8px;
-          height: 8px;
-          margin-top: -6px;
-          border-left: 1px solid #000;
-          border-top: 1px solid #000;
-          transform: rotate(-135deg);
-          @include add_prefix(transition, 0.3s ease all);
-          display: none;
-          @include SP {
-            display: block;
-            right: 10px;
-            margin-top: -4px;
-            transform: rotate(135deg);
-          }
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 2px;
-          background: red;
-          transform: scaleX(0);
-          @include add_prefix(transition, 0.3s ease all);
-          @include SP {
-            display: none;
-          }
-        }
-        &:hover {
-          &:after {
-            transform: scaleX(1);
-          }
-        }
-      }
-      &.hasSub {
-        a {
-          padding-right: 20px;
-          &:before {
-            display: block;
-            border-color: red;
-            @include SP {
-              transform: rotate(-135deg);
-            }
-          }
-          &:hover {
-            &:after {
-              display: none;
-            }
-          }
-        }
-      }
-      &.active {
-        a {
-          &:before {
-            margin-top: -3px;
-            transform: rotate(45deg);
-            @include SP {
-              transform: rotate(45deg);
-            }
-          }
-        }
-      }
-    }
+  transition: all 0.3s ease;
+  @include PC {
+    top: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 430px;
+    height: calc(100% - 40px);
+    max-height: 880px;
+  }
+  @include SP {
+    top: 20px;
+    border-radius: 15px;
+    width: calc(100% - 32px);
+    max-width: 343px;
+    height: calc(100% - 40px);
+    max-height: 635px;
   }
   .inLayer {
+    height: 100%;
+    overflow-y: scroll;
+    @include PC {
+      padding: 69px 20px 0;
+    }
     @include SP {
-      position: relative;
-      height: 90%;
-      padding: 0 30px 30px;
-      overflow: auto;
+      padding: 48px 20px 0;
     }
   }
-  .close_layer {
+  .gNavi {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    width: 100%;
+    @include PC {
+      max-width: 290px;
+      margin: -20px auto 0;
+    }
     @include SP {
-      display: block;
-      padding: 12px 0 10px;
-      background: #bfbfbf;
-      color: #fff;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-align: center;
-      cursor: pointer;
+      max-width: 263px;
+      margin: -8px auto 0;
+    }
+
+    .gNavi-item {
+      position: relative;
+      @include PC {
+        margin-top: 20px;
+      }
+      @include SP {
+        margin-top: 8px;
+      }
+      &:nth-child(even) {
+        width: calc(108 / 290 * 100%);
+      }
+      &:nth-child(odd) {
+        width: calc(182 / 290 * 100%);
+      }
+      a {
+        position: relative;
+        display: block;
+        transition: all 0.3s ease;
+        @include PC {
+          @include font(18, 30, 0.1, 700);
+        }
+        @include SP {
+          @include font(16, 26, 0.1, 700);
+        }
+        @include HOVER {
+          opacity: 1;
+          color: $blue01;
+        }
+      }
+    }
+  }
+  .gNavi02 {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    width: 100%;
+    @include PC {
+      max-width: 290px;
+      margin: 27px auto 0;
+    }
+    @include SP {
+      max-width: 263px;
+      margin: 17px auto 0;
+    }
+    .gNavi02-item {
+      position: relative;
+      @include PC {
+        margin-top: 14px;
+      }
+      @include SP {
+        margin-bottom: 8px;
+      }
+      &:nth-child(even) {
+        width: calc(108 / 290 * 100%);
+        @include SP {
+          width: calc(118 / 290 * 100%);
+          margin-right: -10px;
+        }
+      }
+      &:nth-child(odd) {
+        width: calc(182 / 290 * 100%);
+      }
+      a {
+        position: relative;
+        display: block;
+        @include font(15, 26, 0.1, 500);
+        transition: all 0.3s ease;
+        @include HOVER {
+          opacity: 1;
+          color: $blue01;
+        }
+      }
+    }
+  }
+  .gReservat-ttl {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    @include PC {
+      margin-top: 63px;
+    }
+    @include SP {
+      margin-top: 21px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: calc(50% - 2px);
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 1px;
+      background: $blue01;
+      opacity: 0.3;
+    }
+    .txt {
+      @include ffGT;
+      display: inline-block;
+      background: #fff;
+      padding: 0 20px;
+      @include PC {
+        @include font(18, "", 0.05, 600);
+      }
+      @include SP {
+        @include font(16, "", 0.05, 600);
+      }
+    }
+  }
+  .gReservat {
+    @include PC {
+      margin-top: 37px;
+    }
+    @include SP {
+      margin-top: 20px;
+    }
+    .gReservat-item {
+      &:not(:last-child) {
+        @include PC {
+          margin-bottom: 20px;
+        }
+        @include SP {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  .gOfficial-ctn {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: transparent;
+    background-size: 100% 100%;
+    @include PC {
+      background-image: url($img_url + "img/common/header/bg_menu01.png");
+      margin: 65px -20px 0;
+      padding: 58px 20px 50px;
+    }
+    @include SP {
+      background-image: url($img_url + "img/common/header/bg_menu01_sp.png");
+      margin: 40px -20px 0;
+      padding: 45px 20px 29px;
+    }
+  }
+  .gOfficia-ttl {
+    @include ffGT;
+    @include font(18, "", 0.05, 600);
+    color: #fff;
+    text-align: center;
+  }
+  .gOfficial {
+    @include flexbox;
+    @include justify-content(space-between);
+    width: 100%;
+    @include PC {
+      max-width: 220px;
+      margin: 28px auto 0;
+    }
+    @include SP {
+      max-width: 164px;
+      margin: 0 auto 0;
+    }
+    .gOfficial-item {
+      width: 32px;
+    }
+  }
+  .gOfficial-lang {
+    @include flexbox;
+    @include justify-content(space-between);
+    width: 100%;
+    max-width: 268px;
+    margin: 17px auto 0;
+    .item {
+      &:nth-child(2) {
+        a {
+          @include ffGT;
+          @include font(15, 20, 0, 600);
+        }
+      }
+      a {
+        @include font(15, 20, 0.1, 700);
+        color: #fff;
+      }
+      &.is-active {
+        a {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
+      }
+    }
+  }
+
+  .close_layer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="27.3717" height="0.91239" transform="matrix(0.707102 0.707111 -0.707102 0.707111 0.644531 0)" fill="black"/><rect width="27.3717" height="0.91239" transform="matrix(-0.707102 0.707111 0.707102 0.707111 19.3555 0)" fill="black"/></svg>');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-size: 100% 100%;
+    @include PC {
+      top: 30px;
+      right: 30px;
+    }
+    @include SP {
+      top: 20px;
+      right: 20px;
     }
   }
 }
 
-.overlay {
+.menu_overlay {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -286,6 +436,9 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
 .layerMenuPC {
@@ -304,6 +457,9 @@
     @include max-screen(1440px) {
       max-width: calc(498 / 1440 * 100vw);
     }
+  }
+  @include SP {
+    display: none;
   }
   .gNaviPC {
     @include flexbox;
@@ -399,12 +555,15 @@
   position: absolute;
   right: 139px;
   top: 47px;
-  z-index: 1000;
+  z-index: 998;
   transition: all 0.3s ease;
   @include PC {
     @include max-screen(1440px) {
       right: calc(139 / 1440 * 100vw);
     }
+  }
+  @include SP {
+    display: none;
   }
   .gLang {
     .gLang-item {
@@ -504,17 +663,24 @@
 }
 
 .layerOn {
-  //overflow: hidden;
+  overflow: hidden;
   .layerMenu {
-    right: 0;
+    @include PC {
+      right: 20px;
+    }
+    @include SP {
+      right: 16px;
+    }
+  }
+  .menu_overlay {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
 .hamberger {
   // position: fixed;
   position: absolute;
-  right: 60px;
-  top: 50px;
   z-index: 1000;
   width: 30px;
   height: 20px;
@@ -525,9 +691,15 @@
   display: block;
   transition: all 0.3s ease;
   @include PC {
+    right: 60px;
+    top: 50px;
     @include max-screen(1440px) {
       right: calc(60 / 1440 * 100vw);
     }
+  }
+  @include SP {
+    right: 24px;
+    top: 26px;
   }
   @include HOVER {
     span {
