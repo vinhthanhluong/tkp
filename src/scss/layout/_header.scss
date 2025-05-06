@@ -378,7 +378,9 @@
       margin: 0 auto 0;
     }
     .gOfficial-item {
-      width: 32px;
+      @include SP {
+        max-width: 32px;
+      }
     }
   }
   .gOfficial-lang {
