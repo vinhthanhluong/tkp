@@ -10,6 +10,7 @@ $yellow01: #f5bb1e;
 
 $font_feature_settings_palt: false;
 $font_smooth: true;
+$img_url: "/wp/wp-content/themes/wp-templ/assets/";
 
 $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
 @mixin add_prefix($key, $value) {

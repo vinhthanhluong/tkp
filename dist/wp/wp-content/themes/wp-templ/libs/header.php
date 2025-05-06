@@ -13,12 +13,76 @@
     <div class="layerMenu">
       <div class="inLayer">
         <ul class="gNavi">
-          <li class="gNavi-item"><a href="#"><span>テキスト</span></a></li>
-          <li class="gNavi-item"><a href="#"><span>テキスト</span></a></li>
-          <li class="gNavi-item"><a href="#"><span>テキスト</span></a></li>
-          <li class="gNavi-item"><a href="#"><span>お問い合わせ</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/"><span>施設案内</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>news/"><span>ニュース</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>ways/"><span>楽しみ方</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>information/#"><span>アクセス</span></a></li>
         </ul>
-        <p class="close_layer"><span>× 閉じる</span></p>
+        <ul class="gNavi02">
+          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>information/#"><span>営業時間</span></a></li>
+          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>"><span>採用情報</span></a></li>
+          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>information/#"><span>周辺観光</span></a></li>
+          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>contact/"><span>お問い合わせ</span></a></li>
+          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>information/#"><span>よくあるご質問</span></a></li>
+        </ul>
+        <p class="gReservat-ttl">
+          <span class="txt">RESERVATION</span>
+        </p>
+        <ul class="gReservat">
+          <li class="gReservat-item">
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>砂湯・温泉予約</span>
+              <i class="arr02"></i>
+            </a>
+          </li>
+          <li class="gReservat-item">
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>レストラン予約</span>
+              <i class="arr02"></i>
+            </a>
+          </li>
+          <li class="gReservat-item">
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>宿泊コテージ予約</span>
+              <i class="arr02"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="gOfficial-ctn">
+          <p class="gOfficia-ttl pc">OFFICIAL SNS</p>
+          <ul class="gOfficial">
+            <li class="gOfficial-item">
+              <a href="<?php echo APP_URL ?>">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_tiktok.svg" rel="js-lazy" width="40" height="40" alt="">
+              </a>
+            </li>
+            <li class="gOfficial-item">
+              <a href="<?php echo APP_URL ?>">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_instagram.svg" rel="js-lazy" width="40" height="40" alt="">
+              </a>
+            </li>
+            <li class="gOfficial-item">
+              <a href="<?php echo APP_URL ?>">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_youtube.svg" rel="js-lazy" width="40" height="40" alt="">
+              </a>
+            </li>
+            <li class="gOfficial-item">
+              <a href="<?php echo APP_URL ?>">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_facebook.svg" rel="js-lazy" width="40" height="40" alt="">
+              </a>
+            </li>
+          </ul>
+          <ul class="gOfficial-lang sp">
+            <li class="item is-active"><a href="<?php echo APP_URL ?>">日本語</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>">English</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>">한국어</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>">中文簡体</a></li>
+          </ul>
+        </div>
+        <p class="close_layer"></p>
       </div>
     </div>
     <div class="layerMenuPC">
@@ -86,6 +150,6 @@
         </div>
       </div>
     </div>
-    <div class="overlay"></div>
+    <div class="menu_overlay"></div>
   </div>
 </header>
