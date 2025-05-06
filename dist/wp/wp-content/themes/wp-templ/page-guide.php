@@ -32,13 +32,25 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="content-sec">
         <div class="row-guide">
           <div class="box-left">
-            <img width="56" height="18" src="<?php echo createSVG(56, 18); ?>" data-src="<?php echo APP_ASSETS ?>img/common/ico_wave_yellow.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" rel="js-lazy" alt="">
           </div>
           <div class="box-right">
             <h2 class="tit-box">
               <span>砂湯・温泉</span>
               <strong>Spa Sand</strong>
             </h2>
+            <p class="desc">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供するサンドスパ。広大な砂湯施設の中にBarや無料で利用できる足湯も設置。別府の新名所として、極上のリラックス体験を提供します。</p>
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+            <p class="img-item-3">
+              <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_3.png" rel="js-lazy" alt="">
+            </p>
+            <p class="img-item-4">
+              <img width="166" height="140" src="<?php echo createSVG(166, 140); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_4.png" rel="js-lazy" alt="">
+            </p>
           </div>
         </div>
       </div>
