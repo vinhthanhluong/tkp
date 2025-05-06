@@ -1,41 +1,9 @@
 @charset 'UTF-8';
 
-.calling {
-  a {
-    pointer-events: none;
-  }
-  span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .tel {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding: 2px 10px 2px 20px;
+.top {
+  .header {
     position: relative;
-    font-family: Arial, sans-serif;
-  }
-  .time {
-    font-size: 12px;
-  }
-  .make {
-    display: none;
-    font-size: 12px;
-  }
-  @include max-screen(767px) {
-    .make,
-    .time {
-      display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) and (max-device-width: 768px) {
-  .calling {
-    a {
-      pointer-events: auto;
-    }
+    height: 0;
   }
 }
 
@@ -45,104 +13,156 @@
   top: auto;
   z-index: 1000;
   width: 100%;
-  padding: 20px 15px;
-  background: #fff;
-  @include add_prefix(box-shadow, 0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+  padding: 0;
+  // background: #fff;
+  // @include add_prefix(box-shadow, 0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+  @include PC {
+    height: 90px;
+  }
+  @include SP {
+    height: 90px;
+    padding: 0 15px;
+  }
   .inHeader {
-    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 2000;
-    background: #fff;
+    height: 90px;
+    transition: all 0.3s ease;
   }
   #logo {
     position: absolute;
-    left: 0;
-    top: 15px;
+    left: 60px;
+    top: 25px;
     z-index: 1000;
+    height: 70px;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
     @include add_prefix(transition, 0.3s ease all);
+    @include PC {
+      @include max-screen(1440px) {
+        left: calc(60 / 1440 * 100vw);
+      }
+    }
+    @include SP {
+      top: 15px;
+    }
     img {
       display: block;
-      width: 139px;
-      height: 34px;
+      width: 223px;
       @include add_prefix(transition, 0.3s ease all);
-    }
-  }
-  @include max-screen(767px) {
-    height: 50px;
-    padding: 0 15px;
-    #logo {
-      top: 15px;
-      img {
+      @include PC {
+        @include max-screen(1440px) {
+          width: calc(223 / 1440 * 100vw);
+        }
+      }
+      @include SP {
         width: 80px;
         height: 20px;
       }
     }
-    .hNavi {
-      display: none;
+    .logo-white {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      opacity: 0;
+    }
+  }
+
+  &.is-white {
+    #logo {
+      .logo-black {
+        opacity: 0;
+      }
+      .logo-white {
+        opacity: 1;
+      }
+    }
+    .layerMenuPC {
+      .gNavi .gNavi-item .gNavi-item__link {
+        color: #fff;
+        @include HOVER {
+          color: $blue01;
+        }
+      }
+    }
+    .btnLang {
+      .gLang .gLang-item .gLang-item__link {
+        color: #fff;
+        @include HOVER {
+          color: $blue01;
+        }
+      }
+    }
+    .hamberger {
+      span {
+        background: #fff;
+      }
     }
   }
 }
 
 .fixHeader {
-  // padding-top: 130px;
-  @include max-screen(767px) {
-    // padding-top: 50px;
-  }
   .header {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 15px 15px;
+    padding: 20px;
+    .inHeader {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    }
     #logo {
-      top: 72px;
-      img {
-        width: 108px;
-        height: 26px;
-      }
-    }
-    .hNavi {
-      margin-top: -70px;
-      margin-bottom: 25px;
-    }
-    @include max-screen(767px) {
-      #logo {
-        top: 0;
-        img {
-          width: 80px;
-          height: 20px;
+      left: 40px;
+      top: 10px;
+      @include PC {
+        @include max-screen(1440px) {
+          left: calc(40 / 1440 * 100vw);
         }
       }
-      .hNavi {
-        margin: 0 0 25px;
+      img {
+        width: 159px;
       }
     }
+  }
+  .layerMenuPC {
+    @include justify-content(center);
+    padding-bottom: 1px;
+  }
+  .btnLang {
+    position: fixed;
+    top: 52px;
+  }
+  .hamberger {
+    position: fixed;
+    top: 55px;
   }
 }
 
 .layerMenu {
   text-align: right;
-  position: relative;
-  .hNavi {
-    margin-bottom: 10px;
-    ul {
-      max-width: 1000px;
-      margin: 0 auto;
-      li {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-      }
-    }
-    @include max-screen(767px) {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-    }
-  }
+  position: fixed;
+  // right: -100%;
+  right: 20px;
+  top: 20px;
+  border-radius: 20px;
+  z-index: 1000;
+  width: 100%;
+  max-width: 430px;
+  height: calc(100% - 40px);
+  text-align: left;
+  background: #fff;
   .gNavi {
+    @include SP {
+      margin-bottom: 30px;
+    }
     > li {
       display: inline-block;
       vertical-align: top;
@@ -151,10 +171,21 @@
       font-weight: bold;
       letter-spacing: 1px;
       position: relative;
+      @include SP {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        border-bottom: 1px solid #fff;
+        margin: 0;
+      }
       > a {
         display: block;
         padding: 3px 0;
         position: relative;
+        @include SP {
+          color: #7b7b7b;
+          padding: 17px 0 15px 0;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -168,6 +199,12 @@
           transform: rotate(-135deg);
           @include add_prefix(transition, 0.3s ease all);
           display: none;
+          @include SP {
+            display: block;
+            right: 10px;
+            margin-top: -4px;
+            transform: rotate(135deg);
+          }
         }
         &:after {
           content: "";
@@ -179,6 +216,9 @@
           background: red;
           transform: scaleX(0);
           @include add_prefix(transition, 0.3s ease all);
+          @include SP {
+            display: none;
+          }
         }
         &:hover {
           &:after {
@@ -192,15 +232,15 @@
           &:before {
             display: block;
             border-color: red;
+            @include SP {
+              transform: rotate(-135deg);
+            }
           }
           &:hover {
             &:after {
               display: none;
             }
           }
-        }
-        .plus {
-          display: none;
         }
       }
       &.active {
@@ -208,130 +248,24 @@
           &:before {
             margin-top: -3px;
             transform: rotate(45deg);
-          }
-        }
-      }
-    }
-    .navSub {
-      position: absolute;
-      left: 50%;
-      top: 28px;
-      width: 260px;
-      padding-top: 10px;
-      transform: translateX(-50%);
-      display: none;
-      ul {
-        padding: 20px;
-        background: #ddd;
-        li {
-          border-bottom: 1px dashed #999;
-          text-align: left;
-          a {
-            display: block;
-            padding: 10px 20px 10px 0;
-            position: relative;
-            &:before {
-              content: "";
-              position: absolute;
-              right: 0;
-              top: 50%;
-              width: 6px;
-              height: 6px;
-              margin-top: -3px;
-              border-left: 1px solid #000;
-              border-top: 1px solid #000;
-              transform: rotate(135deg);
-            }
-          }
-          &:first-child {
-            border-top: 1px dashed #999;
-          }
-        }
-      }
-      .closeSub {
-        cursor: pointer;
-        padding: 10px;
-        text-align: center;
-        background: #999;
-        color: #fff;
-      }
-    }
-  }
-  .close_layer {
-    display: none;
-  }
-  @include max-screen(767px) {
-    position: fixed;
-    right: -100%;
-    top: 50px;
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    background: #e8e8e8;
-    .inLayer {
-      position: relative;
-      height: 90%;
-      padding: 0 30px 30px;
-      overflow: auto;
-    }
-    .gNavi {
-      margin-bottom: 30px;
-      > li {
-        display: block;
-        width: 100%;
-        font-weight: bold;
-        border-bottom: 1px solid #fff;
-        margin: 0;
-        > a {
-          color: #7b7b7b;
-          padding: 17px 0 15px 0;
-          &:before {
-            display: block;
-            right: 10px;
-            margin-top: -4px;
-            transform: rotate(135deg);
-          }
-          &:hover {
-            &:after {
-              display: none;
-            }
-          }
-        }
-        &.hasSub {
-          > a {
-            &:before {
-              transform: rotate(-135deg);
-            }
-          }
-          .plus {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 30%;
-            height: 100%;
-            cursor: pointer;
-          }
-        }
-        &.active {
-          > a {
-            &:before {
+            @include SP {
               transform: rotate(45deg);
             }
           }
         }
       }
-      .navSub {
-        position: static;
-        left: auto;
-        top: auto;
-        width: 100%;
-        padding: 0;
-        transform: none;
-      }
     }
-    .close_layer {
+  }
+  .inLayer {
+    @include SP {
+      position: relative;
+      height: 90%;
+      padding: 0 30px 30px;
+      overflow: auto;
+    }
+  }
+  .close_layer {
+    @include SP {
       display: block;
       padding: 12px 0 10px;
       background: #bfbfbf;
@@ -342,10 +276,230 @@
       cursor: pointer;
     }
   }
-  @include min-screen(768px) {
-    position: relative !important;
-    right: auto;
-    top: auto;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.layerMenuPC {
+  position: relative;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-end);
+  height: 100%;
+  width: 100%;
+  max-width: 498px;
+  margin: 0 auto;
+  padding-bottom: 3px;
+  padding-left: 12px;
+  transition: all 0.3s ease;
+  @include PC {
+    @include max-screen(1440px) {
+      max-width: calc(498 / 1440 * 100vw);
+    }
+  }
+  .gNaviPC {
+    @include flexbox;
+    @include justify-content(space-between);
+    .gNaviPC-item {
+      position: relative;
+      display: inline-block;
+      .gNaviPC-item__link {
+        position: relative;
+        display: block;
+        @include font(15, 20, 0.1, 700);
+        padding-top: 33px;
+        transition: color 0.3s ease;
+        @include PC {
+          @include max-screen(1200px) {
+            font-size: calc(15 / 1200 * 100vw);
+          }
+        }
+        @include HOVER {
+          opacity: 1;
+          color: $blue01;
+          .icon {
+            transform: translateY(5px);
+          }
+        }
+        .icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          transition: transform 0.3s ease;
+        }
+      }
+      &.hasSub {
+        .gNaviPC-item__link {
+          @include HOVER {
+            span {
+              &:before {
+                transform: rotate(90deg);
+              }
+            }
+          }
+          span {
+            padding-right: 20px;
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              right: 6px;
+              top: 3px;
+              width: 10px;
+              height: 10px;
+              background-image: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.25" width="1.5" height="10" fill="%2365B0D4"/><rect x="10" y="4.25" width="1.5" height="10" transform="rotate(90 10 4.25)" fill="%2365B0D4"/></svg>');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: transparent;
+              background-size: 100% 100%;
+              transition: transform 0.3s ease;
+              @include PC {
+                @include max-screen(1200px) {
+                  right: calc(6 / 1200 * 100vw);
+                  top: calc(3 / 1200 * 100vw);
+                  width: calc(10 / 1200 * 100vw);
+                  height: calc(10 / 1200 * 100vw);
+                }
+              }
+            }
+          }
+        }
+      }
+      &.active {
+        a {
+          &:before {
+            margin-top: -3px;
+            transform: rotate(45deg);
+            @include SP {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+    .navSub {
+      width: 180px;
+      top: 42px;
+    }
+  }
+}
+
+.btnLang {
+  position: fixed;
+  position: absolute;
+  right: 139px;
+  top: 47px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  @include PC {
+    @include max-screen(1440px) {
+      right: calc(139 / 1440 * 100vw);
+    }
+  }
+  .gLang {
+    .gLang-item {
+      position: relative;
+      display: inline-block;
+      .gLang-item__link {
+        position: relative;
+        display: block;
+        width: 106px;
+        padding-left: 31px;
+        @include ffGT;
+        @include font(15, "", 0.05, 600);
+        transition: color 0.3s ease;
+        @include HOVER {
+          color: $blue01;
+          .icon {
+            .circle {
+              transform: rotate(125deg);
+            }
+          }
+        }
+        .icon {
+          position: absolute;
+          display: block;
+          width: 24px;
+          height: 24px;
+          left: -1px;
+          top: -1px;
+          .circle {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+    }
+    .navSub {
+      width: 150px;
+      top: 28px;
+      .navSub-lst {
+        li {
+          &:nth-child(2) {
+            a {
+              @include ffGT;
+              @include font(15, 20, 0, 600);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btnLang,
+.layerMenuPC,
+.layerMenu {
+  .navSub {
+    position: absolute;
+    padding-top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    @include SP {
+      position: static;
+      left: auto;
+      top: auto;
+      width: 100%;
+      padding: 0;
+      transform: none;
+    }
+    .navSub-lst {
+      padding: 17px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      li {
+        text-align: center;
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+        a {
+          display: inline-block;
+          position: relative;
+          @include font(15, 20, 0.1, 700);
+          transition: color 0.3s ease;
+          @include HOVER {
+            opacity: 1;
+            color: $blue01;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -357,41 +511,52 @@
 }
 
 .hamberger {
-  position: fixed;
-  right: 0;
-  top: 0;
+  // position: fixed;
+  position: absolute;
+  right: 60px;
+  top: 50px;
   z-index: 1000;
-  width: 50px;
-  height: 50px;
-  padding: 16px 8px 0 10px;
+  width: 30px;
+  height: 20px;
+  padding: 6px 0;
   line-height: 1;
   font-size: 0;
-  text-align: center;
   cursor: pointer;
-  display: none;
-  span {
-    display: inline-block;
-    width: 22px;
-    height: 1px;
-    margin-bottom: 8px;
-    background: #7b7b7b;
-    @include add_prefix(transition, 0.3s ease all);
+  display: block;
+  transition: all 0.3s ease;
+  @include PC {
+    @include max-screen(1440px) {
+      right: calc(60 / 1440 * 100vw);
+    }
   }
-  &.active {
+  @include HOVER {
     span {
-      width: 28px;
-    }
-    .ham {
-      transform: rotate(45deg) translateY(7px) translateX(7px);
-    }
-    .ber {
-      transform: rotate(-45deg);
-    }
-    .ger {
-      display: none;
+      width: 20px;
     }
   }
-  @include max-screen(767px) {
+  span {
     display: block;
+    width: 30px;
+    height: 1px;
+    margin-bottom: 6px;
+    background: #000;
+    @include add_prefix(transition, 0.3s ease all);
+    .ham {
+      margin: 0 auto 0 0;
+    }
+    &.ber {
+      margin: 0 0 0 auto;
+    }
   }
+  // &.active {
+  //   span {
+  //     width: 30px;
+  //   }
+  //   .ham {
+  //     transform: rotate(45deg) translateY(7px) translateX(7px);
+  //   }
+  //   .ber {
+  //     transform: rotate(-45deg);
+  //   }
+  // }
 }

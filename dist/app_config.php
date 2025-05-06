@@ -55,10 +55,12 @@ if (defined('ABSPATH')) {
   define('APP_PATH', get_template_directory() . '/');
   define('APP_ASSETS', APP_THEME_URL . 'assets/');
 } else {
-  define('APP_PATH', dirname(__FILE__) . '/');
-  define('APP_ASSETS', APP_URL . 'assets/');
+  define('APP_PATH', dirname(__FILE__) . '/wp/wp-content/themes/wp-templ/');
+  define('APP_ASSETS', APP_URL . 'wp/wp-content/themes/wp-templ/assets/');
 }
-define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.jpg');
+define('ENVIRONMENT', 'dev');
+define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.png');
+define('APP_DUMMY_IMG', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 
 define('GOOGLE_MAP_API_KEY', '');
 define('GOOGLE_RECAPTCHA_KEY_API', '');

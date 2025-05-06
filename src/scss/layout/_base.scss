@@ -281,8 +281,9 @@ html.is-ipad * {
   @include add_prefix(text-size-adjust, none);
 }
 body {
-  @include ffN;
-  @include font(16px, 1.6);
+  @include ffYG;
+  @include font(14, 26);
+  font-weight: 500;
   word-break: break-word;
   color: $color_body;
   margin: 0;

@@ -1,2 +1,50 @@
 @charset 'UTF-8';
-@import '../utility/*';
+@import "../utility/*";
+
+#wrap {
+  padding-top: 0;
+}
+
+// Section Mainvisual
+.sec-mv {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    // padding-top: calc(1350 / 1440 * 100%);
+    padding-top: calc(1315 / 1440 * 100%);
+  }
+}
+.mv-video {
+  position: absolute;
+  // top: 0;
+  top: -35px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+.mv-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 143px;
+}
+.mv-ttl {
+  text-align: center;
+  .row {
+    display: block;
+    @include font(50, 68, 0.15, 700);
+    background: linear-gradient(180deg, $blue02, $blue03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    .is-font {
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  }
+}
+// Section Mainvisual

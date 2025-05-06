@@ -24,7 +24,8 @@ function handleGoogleFontLoader() {
           // Always check <html> class to ensure the font-family and font-weight
           // https://github.com/theprojectsomething/webfontloader/tree/feature/google-fonts-v2#google
           "Noto Sans JP:400,700",
-          "Noto Serif JP:400,700",
+          // "Noto Serif JP:400,700",
+          "Gantari:500,600",
         ],
       },
       active: function () {

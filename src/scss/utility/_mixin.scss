@@ -1,10 +1,12 @@
 /* arguments inittial */
-$color_body: #1b1b1b;
-$color_link: #444444;
-$color_heading: #dd0000;
+$color_body: #000;
+$color_link: #000;
 
-$color_bg: #c4c6c6;
-$color_bg_secondary: #000000;
+$black01: #000;
+$blue01: #65b0d4;
+$blue02: #2e8ab7;
+$blue03: #1b3da3;
+$yellow01: #f5bb1e;
 
 $font_feature_settings_palt: false;
 $font_smooth: true;
@@ -26,6 +28,7 @@ $yugothic: "游ゴシック体", "游ゴシック", "YuGothic", "Yu Gothic", "No
   "MS Pゴシック", "MS PGothic", sans-serif;
 $yumincho: "游明朝体", "游明朝", "YuMincho", "Yu Mincho", "Noto Serif JP",
   "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+$gantari: "Gantari", sans-serif;
 
 /* font style */
 @mixin ffN {
@@ -39,6 +42,9 @@ $yumincho: "游明朝体", "游明朝", "YuMincho", "Yu Mincho", "Noto Serif JP"
 }
 @mixin ffYM {
   font-family: $yumincho;
+}
+@mixin ffGT {
+  font-family: $gantari;
 }
 
 @mixin font-smooth() {
