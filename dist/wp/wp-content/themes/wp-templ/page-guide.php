@@ -23,9 +23,10 @@ include(APP_PATH . 'libs/head.php'); ?>
         </p>
         <h1 class="tit-sec">
           <span>SHONIN PARKについて</span>
-          <strong>About SHONIN PARK</strong>
+          <strong class="pc">About SHONIN PARK</strong>
+          <strong class="sp">About<br class="sp">SHONIN PARK</strong>
         </h1>
-        <p class="desc">4つのエリアで構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
+        <p class="desc">4つのエリアで<br class="sp">構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
       </div>
     </div>
     <div class="sec-guide">
@@ -89,9 +90,29 @@ include(APP_PATH . 'libs/head.php'); ?>
               <i class="arr02"></i>
             </a>
             <p class="img-item-4">
-              <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_6.png" rel="js-lazy" alt="">
+              <img width="143" height="170" src="<?php echo createSVG(143, 170); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_6.png" rel="js-lazy" alt="">
             </p>
             
+          </div>
+        </div>
+        <div class="row-guide row-reverse">
+          <div class="box-left">
+            <h2 class="tit-box">
+              <span>宿泊コテージ</span>
+              <strong>Stay</strong>
+            </h2>
+            <p class="desc">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+            <p class="img-item-5">
+              <img width="258" height="163" src="<?php echo createSVG(258, 163); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_7.png" rel="js-lazy" alt="">
+            </p>
+          </div>
+          <div class="box-right">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
           </div>
         </div>
       </div>
