@@ -32,10 +32,10 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-guide">
       <div class="content-sec">
         <div class="row-guide">
-          <div class="box-left">
+          <div class="box-detail">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" rel="js-lazy" alt="">
           </div>
-          <div class="box-right">
+          <div class="box-img">
             <h2 class="tit-box">
               <span>砂湯・温泉</span>
               <strong>Spa Sand</strong>
@@ -46,7 +46,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-1">
+            <p class="img-item-1 pc">
               <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_3.png" rel="js-lazy" alt="">
             </p>
             <p class="img-item-2">
@@ -55,7 +55,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
         <div class="row-guide row-reverse">
-          <div class="box-left">
+          <div class="box-img sp">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
+          </div>
+          <div class="box-detail">
             <h2 class="tit-box">
               <span>ショップ</span>
               <strong>Shop</strong>
@@ -70,15 +73,15 @@ include(APP_PATH . 'libs/head.php'); ?>
               <img width="117" height="119" src="<?php echo createSVG(117, 119); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_5.png" rel="js-lazy" alt="">
             </p>
           </div>
-          <div class="box-right">
+          <div class="box-img pc">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
           </div>
         </div>
         <div class="row-guide">
-          <div class="box-left">
+          <div class="box-detail">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" rel="js-lazy" alt="">
           </div>
-          <div class="box-right">
+          <div class="box-img">
             <h2 class="tit-box">
               <span>レストラン</span>
               <strong>Restaurant</strong>
@@ -96,7 +99,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
         <div class="row-guide row-reverse">
-          <div class="box-left">
+          <div class="box-img sp">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
+          </div>
+          <div class="box-detail">
             <h2 class="tit-box">
               <span>宿泊コテージ</span>
               <strong>Stay</strong>
@@ -111,7 +117,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <img width="258" height="163" src="<?php echo createSVG(258, 163); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_7.png" rel="js-lazy" alt="">
             </p>
           </div>
-          <div class="box-right">
+          <div class="box-img pc">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
           </div>
         </div>
