@@ -6,8 +6,55 @@
 /*-----------------------------------------------------------
 for ARCHIVE
 -------------------------------------------------------------*/
-.news-list {
-
+.sec-news {
+  @include PC {
+    padding: 100px 0 120px;
+  }
+  @include SP {
+    padding: 63px 0 64px;
+    .c-lstpost01__item:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}
+.c-catectn {
+  @include PC {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+  @include SP {
+    margin: 0 -4px 32px 0;
+  }
+  .c-cate01 {
+    border: 1px solid $blue01;
+    line-height: 1.6;
+    @include PC {
+      min-width: 120px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+      margin: 0 5px 5px;
+    }
+    &:not(.is-active) {
+      background: #fff;
+    }
+    @include HOVER {
+      &:not(.is-active) {
+        background: $blue01;
+      }
+    }
+    @include SP {
+      padding-top: 6px;
+      padding-bottom: 5px;
+      margin: 0 4px 4px 0;
+      @include max-screen(375px) {
+        padding-top: calc(6 / 375 * 100vw);
+        padding-bottom: calc(5 / 375 * 100vw);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 

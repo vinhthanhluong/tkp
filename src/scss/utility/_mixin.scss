@@ -201,6 +201,10 @@ $gantari: "Gantari", sans-serif;
   @include add_prefix(align-items, $align);
 }
 
+@mixin align-self($align: center) {
+  @include add_prefix(align-self, $align);
+}
+
 @mixin align-content($align: space-between) {
   @include add_prefix(align-content, $align);
 }

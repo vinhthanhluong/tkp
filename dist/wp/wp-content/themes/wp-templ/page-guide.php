@@ -35,7 +35,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <p class="desc">4つのエリアで<br class="sp">構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
       </div>
     </div>
-    <div class="sec-guide">
+    <div class="sec-guide c-bgwave01">
       <div class="content-sec">
         <div class="row-guide">
           <div class="box-img">
@@ -101,7 +101,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="img-item-4">
               <img width="143" height="170" src="<?php echo createSVG(143, 170); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_6.png" rel="js-lazy" alt="">
             </p>
-            
+
           </div>
         </div>
         <div class="row-guide row-reverse">

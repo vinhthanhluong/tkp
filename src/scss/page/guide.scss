@@ -49,7 +49,7 @@
 		position: absolute;
 		@include PC {
 			top: 223px;
-			right: 186px;	
+			right: 186px;
 			@include max-screen(1000px) {
 				right: 56px;
 			}
@@ -172,23 +172,8 @@
 
 .sec-guide {
 	padding: 120px 20px 140px;
-	position: relative;
 	@include SP {
 		padding: 72px 24px;
-	}
-	&:before {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: 0;
-		background: url($img_url + "img/common/wave_bg.png") repeat-x top left;
-		background-size: 100% auto;
-		width: 100%;
-		height: 450px;
-		@include SP {
-			background-image: url($img_url + "img/common/wave_bg_sp.png");
-			height: 491px;
-		}
 	}
 	&:after {
 		position: absolute;
@@ -223,7 +208,7 @@
 			margin-bottom: 100px;
 		}
 		@include SP {
-			margin-bottom: 65px;	
+			margin-bottom: 65px;
 		}
 		&:before {
 			position: absolute;
@@ -274,13 +259,13 @@
 			.box-img {
 				@include PC {
 					padding: 0;
-					width: 47.86%;	
+					width: 47.86%;
 					height: 400px;
 					-webkit-mask-image: url($img_url + "img/guide/img_shop.png");
 	  			mask-image: url($img_url + "img/guide/img_shop.png");
 	  			mask-size: 100% 100%;
 				  mask-repeat: no-repeat;
-				  mask-position: center;    
+				  mask-position: center;
 					img {
 						height: 100%;
 						width: 100%;
@@ -292,13 +277,13 @@
 
 		.box-img {
 			@include PC {
-				width: 47.86%;	
+				width: 47.86%;
 				height: 400px;
 				-webkit-mask-image: url($img_url + "img/guide/img_spa.png");
   			mask-image: url($img_url + "img/guide/img_spa.png");
   			mask-size: 100% 100%;
 			  mask-repeat: no-repeat;
-			  mask-position: center;    
+			  mask-position: center;
 				img {
 					height: 100%;
 					width: 100%;
@@ -376,7 +361,7 @@
 						left: 10px;
 					}
 				}
-			}	
+			}
 			strong {
 				display: block;
 				@include ffGT;
@@ -480,7 +465,7 @@
 			position: absolute;
 			bottom: -75px;
 			right: 35px;
-			
+
 			img {
 				width: 258px;
 				@include PC {
