@@ -1,1 +1,15 @@
 @charset 'UTF-8';
+
+.anim-ttl01 {
+  overflow: hidden;
+  .anim-inner {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+  }
+  &.aos-animate {
+    .anim-inner {
+      transform: translateY(0);
+    }
+  }
+}

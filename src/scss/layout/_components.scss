@@ -216,21 +216,26 @@
   .c-ttl01__en {
     display: inline-block;
     @include ffGT;
-    @include font(50, "", 0.1, 600);
+    @include font(50, 52, 0.1, 600);
     @include PC {
       margin-right: 12px;
     }
     @include SP {
-      @include font(28, "");
+      @include font(28, 30);
       margin-right: 9px;
     }
   }
   .c-ttl01__jp {
+    position: relative;
     display: inline-block;
     @include font(18, 25, 0.12, 700);
     color: $blue01;
+    @include PC {
+      top: -3px;
+    }
     @include SP {
       @include font(15, 25);
+      top: 2px;
     }
   }
 }

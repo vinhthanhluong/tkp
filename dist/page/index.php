@@ -21,8 +21,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #2e8ab7; color: #fff;">$blue02: #2e8ab7;</li>
           <li style="background: #1b3da3; color: #fff;">$blue03: #1b3da3;</li>
           <li style="background: #f1f1f1;">$gray01: #f1f1f1;</li>
+          <li style="background: #f2f2f2;">$gray02: #f2f2f2;</li>
           <li style="background: #f5bb1e; color: #fff;">$yellow01: #f5bb1e;</li>
           <li style="background: #b85632; color: #fff;">$orange01: #b85632;</li>
+          <li style="background: #755c49; color: #fff;">$brown01: #755c49;</li>
         </ul>
 
         <div class="section-demo">
@@ -40,8 +42,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </a>
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
-            <span class="c-ttl01__en"><span class="anim-inner">NEWS</span></span>
-            <span class="c-ttl01__jp"><span class="anim-inner">ニュース</span></span>
+            <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
+            <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
           </h2>
           <p class="demo-ttl">.c-cate01</p>
           <a href="" class="c-cate01">すべて</a>
@@ -49,7 +51,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <a href="" class="c-cate01 is-active">すべて</a>
           <p class="demo-ttl">.c-lstpost01</p>
           <ul class="c-lstpost01">
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
@@ -65,7 +67,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </a>
             </li>
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="100">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
@@ -81,7 +83,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </a>
             </li>
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="200">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
@@ -97,7 +99,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </a>
             </li>
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="300">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
@@ -113,7 +115,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </a>
             </li>
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="400">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
@@ -129,7 +131,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </a>
             </li>
-            <li class="c-lstpost01__item">
+            <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="500">
               <a href="" class="lstpost01-link">
                 <div class="lstpost01-ctn01">
                   <div class="lstpost01-img">
