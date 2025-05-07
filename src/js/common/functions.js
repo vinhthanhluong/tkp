@@ -50,3 +50,20 @@ function handleAntiSpamMailContact() {
       .text(address);
   }
 }
+
+function appIsMobile() {
+  return window.matchMedia("(max-width: 767px)").matches;
+}
+
+function initAos() {
+  if ($(".aos-init").length) {
+    setTimeout(function () {
+      AOS.init({
+        once: true,
+        duration: 1000,
+        // delay: 200,
+        // offset: 0,
+      });
+    }, 500);
+  }
+}

@@ -1,4 +1,9 @@
-@function vw($target, $container: 1400) {
+@function vw-pc($target, $container: 1440) {
+  $vw-container: ($container * 0.01) * 1px;
+  @return ($target / $vw-container) * 1vw;
+}
+
+@function vw-sp($target, $container: 375) {
   $vw-container: ($container * 0.01) * 1px;
   @return ($target / $vw-container) * 1vw;
 }

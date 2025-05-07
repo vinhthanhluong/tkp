@@ -4,7 +4,9 @@ $(function () {
   // DOCUMENT READY
   gNaviHover();
 });
-
+$(window).on("load", function () {
+  initAos();
+});
 $(window).on("resize", function () {
   $(".navSub").css("display", "none");
   $(".gNavi .hasSub").removeClass("active");
