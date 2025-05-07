@@ -9,9 +9,15 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap">
     <div class="sec-mv">
       <div class="content-sec">
-        <p class="img-wave-blue">
+
+        <div class="img-wave-blue">
+          <p class="c-mask img-l" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png"></p>
+          <p class="c-mask img-s" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png"></p>
+        </div>
+
+        <!-- <p class="img-wave-blue">
           <img width="56" height="18" src="<?php echo createSVG(56, 18); ?>" data-src="<?php echo APP_ASSETS ?>img/common/ico_wave_blue.png" rel="js-lazy" alt="">
-        </p>
+        </p> -->
         <p class="img-wave-yellow">
           <img width="56" height="18" src="<?php echo createSVG(56, 18); ?>" data-src="<?php echo APP_ASSETS ?>img/common/ico_wave_yellow.png" rel="js-lazy" alt="">
         </p>

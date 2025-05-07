@@ -461,3 +461,40 @@
   }
 }
 /* ===================== LIST POST ===================== */
+
+
+.c-mask {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @include PC {
+    -webkit-animation-name: brandSlidePC;
+    animation-name: brandSlidePC;
+  }
+  @include SP {
+    -webkit-animation-name: brandSlideSP;
+    animation-name: brandSlideSP;
+  }
+  @keyframes brandSlidePC {
+    0% {
+      background-position: 1943px;
+    }
+    100% {
+      background-position: 0;
+    }
+  }
+  @keyframes brandSlideSP {
+    0% {
+      background-position: 1036px;
+    }
+    100% {
+      background-position: 0;
+    }
+  }
+}
