@@ -152,7 +152,7 @@
 }
 
 .sec-guide {
-	padding: 120px 20px;
+	padding: 120px 20px 140px;
 	position: relative;
 	@include SP {
 		padding: 72px 24px;
@@ -171,42 +171,72 @@
 			height: 491px;
 		}
 	}
+	&:after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		background: url($img_url + "img/guide/bg_wave_grey.png") repeat-x top left;
+		background-size: 100% auto;
+		width: 100%;
+		height: 450px;
+		@include SP {
+			background-image: url($img_url + "img/guide/bg_wave_grey_sp.png");
+			height: 519px;
+		}
+	}
 	.content-sec {
 		max-width: 1170px;
 		margin: 0 auto;
 		position: relative;
 	}
 	.row-guide {
+		position: relative;
+		&:last-child {
+			margin-bottom: 0;
+			&:before {
+				display: none;
+			}
+		}
 		@include PC {
 			@include flexbox;
 			align-items: center;
 			margin-bottom: 100px;
-			position: relative;
-			&:last-child {
-				margin-bottom: 0;
-				&:before {
-					display: none;
-				}
-			}
-			&:before {
-				position: absolute;
-				content: '';
-				bottom: -103px;
-				left: 50%;
-				margin-left: -226px;
-				background: url($img_url + "img/guide/line_1.png") no-repeat top left;
-				background-size: 100% 100%;
-				width: 453px;
-				height: 103px;
-			}
 		}
 		@include SP {
 			margin-bottom: 65px;	
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			bottom: -103px;
+			left: 50%;
+			margin-left: -226px;
+			background: url($img_url + "img/guide/line_1.png") no-repeat top left;
+			background-size: 100% 100%;
+			width: 453px;
+			height: 103px;
+			@include SP {
+				background: url($img_url + "img/guide/line_2_sp.png") no-repeat top left;
+				background-size: 100% 100%;
+				width: 203px;
+				height: 66px;
+				bottom: -65px;
+				margin-left: -102px;
+			}
 		}
 		&.row-reverse {
 			&:before {
 				background-image: url($img_url + "img/guide/line_2.png");
 				margin-left: -227px;
+				@include SP {
+					background: url($img_url + "img/guide/line_2_sp.png") no-repeat top left;
+					background-size: 100% 100%;
+					width: 203px;
+					height: 66px;
+					bottom: -65px;
+					margin-left: -102px;
+				}
 			}
 			.box-detail {
 				position: relative;
@@ -241,7 +271,7 @@
 			}
 		}
 
-		.box-detail {
+		.box-img {
 			@include PC {
 				width: 47.86%;	
 				height: 400px;
@@ -257,13 +287,14 @@
 				}
 			}
 			@include SP {
+				position: relative;
 				margin-bottom: 30px;
 				img {
 					width: 100%;
 				}
 			}
 		}
-		.box-img {
+		.box-detail {
 			position: relative;
 			@include PC {
 				width: calc(100% - 47.86%);
@@ -375,22 +406,38 @@
 			img {
 				width: 166px;
 			}
+			@include SP {
+				bottom: auto;
+				right: 9px;
+				top: -76px;
+				img {
+					width: 126px;
+				}
+			}
 		}
 		.img-item-3 {
 			position: absolute;
 			bottom: -69px;
 			right: 56px;
-			@include PC {
-				@include max-screen(1000px) {
-					right: 30px;
-				}
-			}
 			img {
 				width: 117px;
 				@include PC {
 					@include max-screen(900px) {
 						width: 90px;
 					}
+				}
+			}
+			@include PC {
+				@include max-screen(1000px) {
+					right: 30px;
+				}
+			}
+			@include SP {
+				right: 14px;
+				top: -68px;
+				bottom: auto;
+				img {
+					width: 94px;
 				}
 			}
 		}
@@ -401,17 +448,20 @@
 			img {
 				width: 143px;
 			}
+			@include SP {
+				bottom: auto;
+				top: -86px;
+				right: 12px;
+				img {
+					width: 100px;
+				}
+			}
 		}
 		.img-item-5 {
 			position: absolute;
 			bottom: -75px;
 			right: 35px;
-			@include PC {
-				@include max-screen(1100px) {
-					bottom: -55px;
-					right: 5px;
-				}
-			}
+			
 			img {
 				width: 258px;
 				@include PC {
@@ -421,6 +471,20 @@
 					@include max-screen(900px) {
 						width: 140px;
 					}
+				}
+			}
+			@include PC {
+				@include max-screen(1100px) {
+					bottom: -55px;
+					right: 5px;
+				}
+			}
+			@include SP {
+				bottom: auto;
+				top: -70px;
+				right: -14px;
+				img {
+					width: 156px;
 				}
 			}
 		}

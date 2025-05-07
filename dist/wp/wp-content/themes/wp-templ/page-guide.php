@@ -32,10 +32,10 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-guide">
       <div class="content-sec">
         <div class="row-guide">
-          <div class="box-detail">
+          <div class="box-img">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" rel="js-lazy" alt="">
           </div>
-          <div class="box-img">
+          <div class="box-detail">
             <h2 class="tit-box">
               <span>砂湯・温泉</span>
               <strong>Spa Sand</strong>
@@ -78,10 +78,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
         <div class="row-guide">
-          <div class="box-detail">
+          <div class="box-img">
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" rel="js-lazy" alt="">
           </div>
-          <div class="box-img">
+          <div class="box-detail">
             <h2 class="tit-box">
               <span>レストラン</span>
               <strong>Restaurant</strong>
