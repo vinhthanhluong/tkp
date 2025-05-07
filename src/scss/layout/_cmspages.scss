@@ -153,6 +153,17 @@ a img.aligncenter {
     max-height: 100%;
     width: auto;
   }
+  span[style*="text-decoration: underline;"] {
+    text-decoration: none !important;
+    background-image: linear-gradient(
+      to right,
+      rgba($color: #F5BB1E, $alpha: 0.5),
+      rgba($color: #F5BB1E, $alpha: 0.5)
+    );
+    background-position: bottom 2px left;
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+  }
   table {
     table-layout: fixed;
     border: 1px solid $color_body;
