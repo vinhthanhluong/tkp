@@ -20,7 +20,9 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #65b0d4; color: #fff;">$blue01: #65b0d4;</li>
           <li style="background: #2e8ab7; color: #fff;">$blue02: #2e8ab7;</li>
           <li style="background: #1b3da3; color: #fff;">$blue03: #1b3da3;</li>
+          <li style="background: #f1f1f1;">$gray01: #f1f1f1;</li>
           <li style="background: #f5bb1e; color: #fff;">$yellow01: #f5bb1e;</li>
+          <li style="background: #b85632; color: #fff;">$orange01: #b85632;</li>
         </ul>
 
         <div class="section-demo">
@@ -30,7 +32,120 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
-          <br>
+          <p class="demo-ttl">.c-btn01.is-center</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
+            <i class="arr01"></i>
+            <span>レストラン予約</span>
+            <i class="arr02"></i>
+          </a>
+          <p class="demo-ttl">.c-ttl01</p>
+          <h2 class="c-ttl01">
+            <span class="c-ttl01__en"><span class="anim-inner">NEWS</span></span>
+            <span class="c-ttl01__jp"><span class="anim-inner">ニュース</span></span>
+          </h2>
+          <p class="demo-ttl">.c-cate01</p>
+          <a href="" class="c-cate01">すべて</a>
+          <p class="demo-ttl">.c-cate01.is-active</p>
+          <a href="" class="c-cate01 is-active">すべて</a>
+          <p class="demo-ttl">.c-lstpost01</p>
+          <ul class="c-lstpost01">
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb01.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-blue">お知らせ</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.03.20</p>
+                  <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                </div>
+              </a>
+            </li>
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb02.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-yellow">イベント</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.05.18</p>
+                  <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+                </div>
+              </a>
+            </li>
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb03.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-blue">お知らせ</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.05.30</p>
+                  <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                </div>
+              </a>
+            </li>
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb04.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-yellow">イベント</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.08.18</p>
+                  <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+                </div>
+              </a>
+            </li>
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb05.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-blue">お知らせ</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.10.18</p>
+                  <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                </div>
+              </a>
+            </li>
+            <li class="c-lstpost01__item">
+              <a href="" class="lstpost01-link">
+                <div class="lstpost01-ctn01">
+                  <div class="lstpost01-img">
+                    <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb06.jpg" rel="js-lazy" width="345" height="250" alt="">
+                  </div>
+                  <p class="cate">
+                    <span class="item is-yellow">イベント</span>
+                  </p>
+                </div>
+                <div class="lstpost01-ctn02">
+                  <p class="date">2025.02.14</p>
+                  <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
 
       </div>

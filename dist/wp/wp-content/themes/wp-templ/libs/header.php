@@ -30,21 +30,21 @@
         </p>
         <ul class="gReservat">
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>砂湯・温泉予約</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>レストラン予約</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>宿泊コテージ予約</span>
               <i class="arr02"></i>
