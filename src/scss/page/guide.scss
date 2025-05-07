@@ -97,20 +97,27 @@
 			position: relative;
 			&:last-child {
 				margin-bottom: 0;
+				&:before {
+					display: none;
+				}
 			}
 			&:before {
 				position: absolute;
 				content: '';
 				bottom: -100px;
 				left: 50%;
-				margin-left: -226px;
-				background: url($img_url + "img/guide/line_1.svg") no-repeat top left;
+				margin-left: -230px;
+				background: url($img_url + "img/guide/line_1.png") no-repeat top left;
 				background-size: 100% 100%;
 				width: 453px;
 				height: 103px;
 			}
 		}
 		&.row-reverse {
+			&:before {
+				background-image: url($img_url + "img/guide/line_2.png");
+				margin-left: -222px;
+			}
 			.box-left {
 				position: relative;
 				@include PC {
@@ -203,6 +210,16 @@
 			right: -20px;
 		}
 		.img-item-3 {
+			position: absolute;
+			bottom: -69px;
+			right: 56px;
+		}
+		.img-item-4 {
+			position: absolute;
+			bottom: -69px;
+			right: 56px;
+		}
+		.img-item-5 {
 			position: absolute;
 			bottom: -69px;
 			right: 56px;

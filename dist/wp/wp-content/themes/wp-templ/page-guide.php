@@ -73,6 +73,27 @@ include(APP_PATH . 'libs/head.php'); ?>
             <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
           </div>
         </div>
+        <div class="row-guide">
+          <div class="box-left">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" rel="js-lazy" alt="">
+          </div>
+          <div class="box-right">
+            <h2 class="tit-box">
+              <span>レストラン</span>
+              <strong>Restaurant</strong>
+            </h2>
+            <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+            <p class="img-item-4">
+              <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_6.png" rel="js-lazy" alt="">
+            </p>
+            
+          </div>
+        </div>
       </div>
     </div>
   </main>
