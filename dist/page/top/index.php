@@ -31,7 +31,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="row">パーク<span class="is-font">＆</span>リゾート</span>
           </span>
         </h1>
-        <div class="mv-desc">
+        <div class="mv-desc aos-init" data-aos="fade-up" data-aos-duration="500">
           <div class="mv-desc__inner">
             <p class="txt">別府市内で唯一の海浜砂湯が楽しめる上人ヶ<br class="sp">浜公園が、<br class="pc">新たな魅力を加えて生まれ変わった<br class="sp">「SHONIN PARK」<br>別府湾を一望できる絶景のロケーションで、<br>歴史ある砂湯温泉をはじめ、別府の魅力が集<br class="sp">結したショップや、<br class="pc">リゾート感あふれるレスト<br class="sp">ランや宿泊など様々な体験ができます。<br>別府の豊かな自然と共に、心安らぐひとときをお過ごしください。</p>
           </div>
@@ -42,17 +42,17 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-news">
       <div class="t-wcm01">
         <h2 class="c-ttl01">
-          <span class="c-ttl01__en"><span class="anim-inner">NEWS</span></span>
-          <span class="c-ttl01__jp"><span class="anim-inner">ニュース</span></span>
+          <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
+          <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
         </h2>
-        <div class="news-cate c-catectn">
+        <div class="news-cate c-catectn aos-init" data-aos="fade-up" data-aos-duration="500">
           <a href="" class="c-cate01 is-active">すべて</a>
           <a href="" class="c-cate01">お知らせ</a>
           <a href="" class="c-cate01">イベント</a>
         </div>
 
         <ul class="c-lstpost01">
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -68,7 +68,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </a>
           </li>
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="100">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -84,7 +84,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </a>
           </li>
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="200">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -100,7 +100,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </a>
           </li>
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="300">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -116,7 +116,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </a>
           </li>
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="400">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -132,7 +132,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </a>
           </li>
-          <li class="c-lstpost01__item">
+          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="500">
             <a href="" class="lstpost01-link">
               <div class="lstpost01-ctn01">
                 <div class="lstpost01-img">
@@ -155,6 +155,18 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>もっと見る</span>
             <i class="arr02"></i>
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-park">
+      <div class="t-wcm01">
+        <?php include(APP_PATH . 'libs/mod_park.php'); ?>
+        <div class="park-ctn">
+          <h2 class="park-ttl">
+            <span class=""><span class="anim-inner">About</span></span>
+            <span class=""><span class="anim-inner">SHONIN PARK</span></span>
+          </h2>
         </div>
       </div>
     </div>
