@@ -65,7 +65,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-1">
+            <p class="img-item-3">
               <img width="117" height="119" src="<?php echo createSVG(117, 119); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_5.png" rel="js-lazy" alt="">
             </p>
           </div>

@@ -79,7 +79,7 @@
 		content: '';
 		top: 0;
 		left: 0;
-		background: url($img_url + "img/guide/bg_wave_yellow.png") repeat-x top left;
+		background: url($img_url + "img/common/wave_bg.png") repeat-x top left;
 		background-size: 100% auto;
 		width: 100%;
 		height: 450px;
@@ -94,12 +94,25 @@
 			@include flexbox;
 			align-items: center;
 			margin-bottom: 100px;
+			position: relative;
 			&:last-child {
 				margin-bottom: 0;
+			}
+			&:before {
+				position: absolute;
+				content: '';
+				bottom: -100px;
+				left: 50%;
+				margin-left: -226px;
+				background: url($img_url + "img/guide/line_1.svg") no-repeat top left;
+				background-size: 100% 100%;
+				width: 453px;
+				height: 103px;
 			}
 		}
 		&.row-reverse {
 			.box-left {
+				position: relative;
 				@include PC {
 					padding-left: 20px;
 					padding-right: 80px;
@@ -119,6 +132,7 @@
 			}
 		}
 		.box-right {
+			position: relative;
 			@include PC {
 				width: calc(100% - 47.86%);
 				padding-right: 20px;
@@ -180,13 +194,18 @@
 		}
 		.img-item-1 {
 			position: absolute;
-			top: -23px;
+			top: -63px;
 			right: 2px;
 		}
 		.img-item-2 {
 			position: absolute;
-			bottom: -1px;
+			bottom: -41px;
 			right: -20px;
+		}
+		.img-item-3 {
+			position: absolute;
+			bottom: -69px;
+			right: 56px;
 		}
 	}
 }
