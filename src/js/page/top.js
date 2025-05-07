@@ -34,12 +34,12 @@ function mvLoad() {
     $headSection.removeClass(classList02.join(" "));
     $headSection.addClass(classList02[index]);
 
-    $("#mainVideo").fadeOut(0, function () {
+    $("#mainVideo").fadeOut(150, function () {
       videoElement.pause();
       videoElement.src = videoList[index];
       videoElement.load();
       videoElement.play();
-      $("#mainVideo").fadeIn(0);
+      $("#mainVideo").fadeIn(150);
     });
   }
 

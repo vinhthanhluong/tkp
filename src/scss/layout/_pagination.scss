@@ -31,3 +31,138 @@
     margin-right: 15px;
   }
 }
+
+.sg-pagination {
+  position: relative;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  width: calc(100% - 48px);
+  max-width: 850px;
+  margin: auto;
+  border-top: 1px dotted rgba($color_body, 0.5);
+  padding-top: 40px;
+  @include SP {
+    padding-bottom: 133px;
+    padding-top: 30px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: auto;
+  }
+  .prev,
+  .next {
+    flex: 1;
+    @include flexbox;
+    @include align-items(center);
+    @include font(16, 25, 100, 700);
+    @include SP {
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
+    &.disable {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+    }
+    @include HOVER {
+      opacity: 1;
+      .prev__thumb {
+        &::after {
+          left: -32px;
+        }
+      }
+      .next__thumb {
+        &::after {
+          right: -32px;
+        }
+      }
+      .decor {
+        opacity: 1;
+      }
+    }
+    &__thumb {
+      position: relative;
+      @include aspect-ratio(100, 100);
+      width: 35.972%;
+      @include PC {
+        margin-right: 18px;
+      }
+      @include SP {
+        width: 56.27%;
+        margin-bottom: 14px;
+        @include aspect-ratio(92, 92);
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.004 20"><g id="Group_3519" data-name="Group 3519" transform="translate(0 -40)"><g id="Group_3518" data-name="Group 3518"><g id="Group_3517" data-name="Group 3517"><path id="Icon_ionic-md-arrow-down" data-name="Icon ionic-md-arrow-down" d="M17.227,5.977V21.167l7-7,1.75,1.813-10,10-10-10,1.75-1.75,7,6.939V5.977Z" transform="translate(25.98 34.023) rotate(90)" fill="%23444"/></g></g></g></svg>')
+          center no-repeat;
+        @include add_prefix(transition, all 0.3s ease);
+        @include SP {
+          left: -32px;
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+        z-index: 2;
+      }
+    }
+    &__ttl {
+      @include font(13, 20, 100, 700);
+      @include multiLineEllipsis(2);
+      flex: 1;
+      text-align: left;
+    }
+  }
+  .next {
+    @include PC {
+      @include flex-direction(row-reverse);
+    }
+    &__thumb {
+      @include PC {
+        margin-left: 18px;
+        margin-right: 0;
+      }
+      &:after {
+        transform: scale(-1);
+        left: unset;
+        right: 0;
+        @include SP {
+          right: -32px;
+        }
+      }
+    }
+    &__ttl {
+      text-align: right;
+    }
+  }
+  .c__btn01 {
+    @include PC {
+      width: 250px;
+      margin-top: 10px;
+      margin-left: 22px;
+      margin-right: 22px;
+    }
+    @include SP {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+}

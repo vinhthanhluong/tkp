@@ -52,14 +52,11 @@
   }
 }
 
-
 /* ===================== MAINVISUAL ===================== */
 .c-mainvisual {
-
 }
 .c-breadcrumb {
   @include PC {
-
   }
   @include SP {
     line-height: 1;
@@ -106,12 +103,12 @@
         width: 12px;
         height: 19px;
         margin: auto 6px 5px 0;
-        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>') center no-repeat;
+        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>')
+          center no-repeat;
       }
     }
   }
 }
-
 
 /* ===================== BUTTON ===================== */
 .c-btn01 {
@@ -120,7 +117,6 @@
   overflow: hidden;
   width: 100%;
   max-width: 220px;
-  margin: 0 auto;
   text-align: center;
   // background: #fff;
   border: solid 1px $blue01;
@@ -131,6 +127,9 @@
   }
   @include SP {
     padding: 6px 27px 6px 29px;
+  }
+  &.is-center {
+    margin: 0 auto;
   }
   @include HOVER {
     opacity: 1;
@@ -212,3 +211,248 @@
   }
 }
 /* ===================== BUTTON ===================== */
+/* ===================== TITLE ===================== */
+.c-ttl01 {
+  .c-ttl01__en {
+    display: inline-block;
+    @include ffGT;
+    @include font(50, "", 0.1, 600);
+    @include PC {
+      margin-right: 12px;
+    }
+    @include SP {
+      @include font(28, "");
+      margin-right: 9px;
+    }
+  }
+  .c-ttl01__jp {
+    display: inline-block;
+    @include font(18, 25, 0.12, 700);
+    color: $blue01;
+    @include SP {
+      @include font(15, 25);
+    }
+  }
+}
+/* ===================== TITLE ===================== */
+/* ===================== CATEGORY ===================== */
+.c-cate01 {
+  display: inline-block;
+  @include font(15, 39, 0.12, 700);
+  background: $gray01;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  @include PC {
+    padding: 1px 26px 0;
+  }
+  @include SP {
+    @include font(14, 34);
+    padding: 1px 22px 0;
+    @include max-screen(375px) {
+      font-size: calc(14 / 375 * 100vw);
+      padding: calc(1 / 375 * 100vw) calc(22 / 375 * 100vw) 0;
+    }
+  }
+  @include HOVER {
+    opacity: 1;
+    background: $blue01;
+    color: #fff;
+  }
+  &.is-active {
+    background: $blue01;
+    color: #fff;
+    pointer-events: none;
+  }
+}
+/* ===================== CATEGORY ===================== */
+/* ===================== LIST POST ===================== */
+
+.c-lstpost01 {
+  @include PC {
+    @include flexbox;
+    @include flex-wrap(wrap);
+  }
+}
+.c-lstpost01__item {
+  @include PC {
+    width: calc(370 / 1170 * 100%);
+    margin-right: calc(60 / 2 / 1170 * 100%);
+    margin-top: 41px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @include SP {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  .lstpost01-link {
+    position: relative;
+    @include PC {
+      display: block;
+      padding-right: 25px;
+      @include max-screen(1218px) {
+        padding-right: calc(25 / 1218 * 100vw);
+      }
+    }
+    @include SP {
+      @include flexbox;
+      @include justify-content(space-between);
+    }
+    @include HOVER {
+      opacity: 1;
+      .lstpost01-img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .lstpost01-ctn01 {
+    position: relative;
+    @include SP {
+      width: calc(150 / 327 * 100%);
+    }
+    .cate {
+      position: absolute;
+      @include PC {
+        top: -20px;
+        right: -25px;
+        @include max-screen(1218px) {
+          top: calc(-20 / 1218 * 100vw);
+          right: calc(-25 / 1218 * 100vw);
+        }
+      }
+      @include SP {
+        top: -12px;
+        right: -12px;
+        @include max-screen(375px) {
+          top: calc(-12 / 375 * 100vw);
+          right: calc(-12 / 375 * 100vw);
+        }
+      }
+      .item {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        @include font(14, 18, 0, 700);
+        color: #fff;
+        text-align: center;
+        @include PC {
+          min-width: 88px;
+          padding: 31px 2px;
+          @include max-screen(1218px) {
+            min-width: calc(88 / 1218 * 100vw);
+            font-size: calc(14 / 1218 * 100vw);
+            padding: calc(31 / 1218 * 100vw) calc(2 / 1218 * 100vw);
+          }
+        }
+        @include SP {
+          @include font(12, 14);
+          min-width: 66px;
+          padding: 23px 2px;
+          @include max-screen(375px) {
+            font-size: calc(12 / 375 * 100vw);
+            min-width: calc(66 / 375 * 100vw);
+            padding: calc(23 / 375 * 100vw) calc(2 / 375 * 100vw);
+          }
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          -webkit-mask-image: url($img_url + "img/common/mask_cloud01.png");
+          mask-image: url($img_url + "img/common/mask_cloud01.png");
+          -webkit-mask-position: center;
+          mask-position: center;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+        }
+        &.is-blue {
+          &:before {
+            background: $blue01;
+          }
+        }
+        &.is-yellow {
+          &:before {
+            background: $yellow01;
+          }
+        }
+      }
+    }
+  }
+  .lstpost01-img {
+    position: relative;
+    -webkit-mask-image: url($img_url + "img/common/mask_bg01.png");
+    mask-image: url($img_url + "img/common/mask_bg01.png");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    img {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .lstpost01-ctn02 {
+    @include PC {
+      margin-top: 19px;
+    }
+    @include SP {
+      width: calc(153 / 327 * 100%);
+    }
+    .date {
+      @include ffGT;
+      @include font(14, "", 0.05, 500);
+      color: $blue01;
+      @include PC {
+        position: absolute;
+        top: 84px;
+        right: -4px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        white-space: nowrap;
+        @include max-screen(1218px) {
+          top: calc(84 / 1218 * 100vw);
+          right: calc(-4 / 1218 * 100vw);
+          font-size: calc(14 / 1218 * 100vw);
+        }
+      }
+      @include SP {
+        @include font(12, "");
+        @include max-screen(375px) {
+          font-size: calc(12 / 375 * 100vw);
+        }
+      }
+    }
+    .ttl {
+      @include font(18, 26, 0.12, 700);
+      @include PC {
+        @include multiLineEllipsis(2);
+        @include max-screen(1218px) {
+          font-size: calc(18 / 1218 * 100vw);
+        }
+      }
+      @include SP {
+        @include font(14, 24);
+        margin: 6px -2px 0 0;
+        @include multiLineEllipsis(3);
+        width: auto;
+        @include max-screen(375px) {
+          font-size: calc(14 / 375 * 100vw);
+        }
+      }
+    }
+  }
+}
+/* ===================== LIST POST ===================== */

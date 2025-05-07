@@ -1,5 +1,5 @@
 function gNaviHover() {
-  var btn = $(".gNavi .hasSub, .gLang .hasSub");
+  var btn = $(".gNaviPC .hasSub, .gLang .hasSub");
   var submenu = $(".navSub");
   $(btn).hover(
     function () {

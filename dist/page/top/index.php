@@ -37,7 +37,126 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
       </div>
-      <!-- <img class="view-bg" src="<?php echo APP_ASSETS ?>img/top/mv.jpg" width="1440" height="1350" alt=""> -->
+    </div>
+
+    <div class="sec-news">
+      <div class="t-wcm01">
+        <h2 class="c-ttl01">
+          <span class="c-ttl01__en"><span class="anim-inner">NEWS</span></span>
+          <span class="c-ttl01__jp"><span class="anim-inner">ニュース</span></span>
+        </h2>
+        <div class="news-cate c-catectn">
+          <a href="" class="c-cate01 is-active">すべて</a>
+          <a href="" class="c-cate01">お知らせ</a>
+          <a href="" class="c-cate01">イベント</a>
+        </div>
+
+        <ul class="c-lstpost01">
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb01.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-blue">お知らせ</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.03.20</p>
+                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+              </div>
+            </a>
+          </li>
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb02.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-yellow">イベント</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.05.18</p>
+                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+              </div>
+            </a>
+          </li>
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb03.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-blue">お知らせ</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.05.30</p>
+                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+              </div>
+            </a>
+          </li>
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb04.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-yellow">イベント</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.08.18</p>
+                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+              </div>
+            </a>
+          </li>
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb05.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-blue">お知らせ</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.10.18</p>
+                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+              </div>
+            </a>
+          </li>
+          <li class="c-lstpost01__item">
+            <a href="" class="lstpost01-link">
+              <div class="lstpost01-ctn01">
+                <div class="lstpost01-img">
+                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb06.jpg" rel="js-lazy" width="345" height="250" alt="">
+                </div>
+                <p class="cate">
+                  <span class="item is-yellow">イベント</span>
+                </p>
+              </div>
+              <div class="lstpost01-ctn02">
+                <p class="date">2025.02.14</p>
+                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="news-btn">
+          <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
+            <i class="arr02"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
