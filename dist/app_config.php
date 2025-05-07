@@ -59,7 +59,7 @@ if (defined('ABSPATH')) {
   define('APP_ASSETS', APP_URL . 'wp/wp-content/themes/wp-templ/assets/');
 }
 define('ENVIRONMENT', 'dev');
-define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.png');
+define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.jpg');
 define('APP_DUMMY_IMG', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 
 define('GOOGLE_MAP_API_KEY', '');
