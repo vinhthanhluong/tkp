@@ -67,3 +67,29 @@ function initAos() {
     }, 500);
   }
 }
+
+function jsPopup() {
+  if ($(".js-btnpopup").length) {
+    $(".js-btnpopup").on("click", function () {
+      var data_popup = $(this).attr("data-popup");
+      var data_popup_id = "#" + data_popup;
+      if ($(data_popup_id).length) {
+        $("body").toggleClass("hidden-scroll");
+        $(".js-modaloverlay").toggleClass("is-active");
+        $(data_popup_id).addClass("is-active");
+      }
+    });
+  }
+  $(".js-modaloverlay, .js-popupclose .btn").on("click", function () {
+    $("body").toggleClass("hidden-scroll");
+    $(".js-modaloverlay").toggleClass("is-active");
+    $(".js-modalpopup").removeClass("is-active");
+  });
+  $(window).on("load", function () {
+    $(".js-modalpopup").each(function (index) {
+      var popup_height =
+        $(this).find(".modal-popup__inner").outerHeight() + "px";
+      $(this).css("--maxheight", popup_height);
+    });
+  });
+}

@@ -161,12 +161,22 @@ include(APP_PATH . 'libs/head.php'); ?>
 
     <div class="sec-park">
       <div class="t-wcm01">
-        <?php include(APP_PATH . 'libs/mod_park.php'); ?>
-        <div class="park-ctn">
-          <h2 class="park-ttl">
-            <span class=""><span class="anim-inner">About</span></span>
-            <span class=""><span class="anim-inner">SHONIN PARK</span></span>
-          </h2>
+        <div class="park-wrap">
+          <?php include(APP_PATH . 'libs/mod_park.php'); ?>
+          <div class="park-ctn">
+            <h2 class="park-ttl">
+              <span class="park-ttl01">
+                <span class="row aos-init anim-ttl01" data-aos=""><span class="anim-inner">ABOUT</span></span>
+                <span class="row aos-init anim-ttl01" data-aos=""><span class="anim-inner">SHONIN PARK</span></span>
+              </span>
+              <span class="park-ttl02 aos-init anim-ttl01" data-aos="">
+                <span class="anim-inner">SHONIN PARKについて</span>
+              </span>
+            </h2>
+            <div class="park-desc aos-init anim-ttl01" data-aos="">
+              <p class="txt anim-inner">SHONIN PARKの魅力がひと目で分かる園内マップ。気になるエリアをタップしてみてください！</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -149,7 +149,6 @@ include(APP_PATH . 'libs/head.php'); ?>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </main>

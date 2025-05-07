@@ -3,6 +3,7 @@ handleAntiSpamMailContact();
 $(function () {
   // DOCUMENT READY
   gNaviHover();
+  jsPopup();
 });
 $(window).on("load", function () {
   initAos();

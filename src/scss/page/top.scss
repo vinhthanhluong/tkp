@@ -143,6 +143,7 @@ footer {
         width: calc(100% + calc(80 / 375 * 100vw));
         margin: calc(-78 / 375 * 100vw) calc(-40 / 375 * 100vw)
           calc(-108 / 375 * 100vw);
+        height: calc(426.6 / 375 * 100vw);
       }
     }
     .video-foot {
@@ -269,7 +270,7 @@ footer {
     padding: 56px 0 184px;
   }
   @include SP {
-    padding-top: 58px;
+    padding: 58px 0 74px;
   }
   &:before {
     content: "";
@@ -338,6 +339,10 @@ footer {
 .sec-park {
   position: relative;
   background: $gray02;
+  padding-bottom: 80px;
+  @include SP {
+    padding: 46px 0 20px;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -359,115 +364,82 @@ footer {
   }
   .mod-park {
     position: relative;
-    top: -84px;
+    @include PC {
+      top: -84px;
+    }
+    @include SP {
+      order: 2;
+      margin: 3px -16px 0 -17px;
+    }
   }
 }
-
-.mod-park {
+.park-wrap {
+  @include SP {
+    @include flexbox;
+    @include flex-wrap(wrap);
+  }
 }
-.mod-park__inner {
-  position: relative;
-}
-.mod-park__btn {
-  // 1170 668
-  display: block;
-  position: absolute;
-  border: solid #fff;
-  background: $brown01;
-  border-radius: 100px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+.park-ctn {
   @include PC {
-    border-width: 2px;
+    margin-top: -284px;
+    max-width: 500px;
     @include max-screen(1218px) {
-      border-width: calc(2 / 1170 * 100vw);
+      margin-top: calc(-284 / 1170 * 100vw);
+      max-width: calc(500 / 1170 * 100vw);
     }
   }
-  @include HOVER {
-    background: $blue01;
-    transform: translateY(5px);
+  @include SP {
+    order: 1;
   }
-  &.bnt01 {
-    top: 70px;
-    left: 61px;
-    padding: 0 17px 0 19px;
+}
+.park-ttl {
+  .park-ttl01 {
+    @include ffGT;
+    @include font(50, 60, 0.1, 600);
     @include PC {
       @include max-screen(1218px) {
-        top: calc(70 / 1170 * 100vw);
-        left: calc(61 / 1170 * 100vw);
-        padding: 0 calc(17 / 1170 * 100vw) 0 calc(19 / 1170 * 100vw);
+        font-size: calc(50 / 1170 * 100vw);
       }
+    }
+    @include SP {
+      @include font(28, 34);
+    }
+    .row {
+      display: block;
     }
   }
-  &.bnt02 {
-    top: 70px;
-    left: 304px;
-    padding: 0 17px 0 19px;
+  .park-ttl02 {
+    display: block;
+    @include font(18, 25, 0.12, 700);
+    color: $blue01;
     @include PC {
+      margin-top: 18px;
       @include max-screen(1218px) {
-        top: calc(70 / 1170 * 100vw);
-        left: calc(304 / 1170 * 100vw);
-        padding: 0 calc(17 / 1170 * 100vw) 0 calc(19 / 1170 * 100vw);
+        font-size: calc(18 / 1170 * 100vw);
       }
+    }
+    @include SP {
+      @include font(15, 25);
+      margin-top: 11px;
     }
   }
-  &.bnt03 {
-    top: 66px;
-    left: 778px;
-    padding: 0 27px 0 29px;
-    @include PC {
-      @include max-screen(1218px) {
-        top: calc(66 / 1170 * 100vw);
-        left: calc(778 / 1170 * 100vw);
-        padding: 0 calc(27 / 1170 * 100vw) 0 calc(29 / 1170 * 100vw);
-      }
-    }
+}
+.park-desc {
+  @include PC {
+    margin-top: 30px;
   }
-  &.bnt04 {
-    top: 424px;
-    left: 560px;
-    padding: 0 7px 0 9px;
-    @include PC {
-      @include max-screen(1218px) {
-        top: calc(424 / 1170 * 100vw);
-        left: calc(560 / 1170 * 100vw);
-        padding: 0 calc(7 / 1170 * 100vw) 0 calc(9 / 1170 * 100vw);
-      }
-    }
+  @include SP {
+    margin-top: 33px;
   }
   .txt {
-    position: relative;
-    display: inline-block;
-    @include font(18, 34, 0.12, 700);
-    color: #fff;
-    padding-left: 29px;
+    @include font(18, 30, 0.12, 700);
     @include PC {
       @include max-screen(1218px) {
         font-size: calc(18 / 1170 * 100vw);
-        padding-left: calc(29 / 1170 * 100vw);
       }
     }
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: calc(50% - 9px);
-      width: 21px;
-      height: 21px;
-      background-image: url('data:image/svg+xml,<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1666 15.6666L13.7916 12.2916M13.7916 12.2916C14.3333 11.7499 14.763 11.1068 15.0562 10.3991C15.3494 9.6913 15.5003 8.93272 15.5003 8.16664C15.5003 7.40056 15.3494 6.64197 15.0562 5.9342C14.763 5.22644 14.3333 4.58334 13.7916 4.04164C13.2499 3.49994 12.6068 3.07023 11.8991 2.77707C11.1913 2.4839 10.4327 2.33301 9.66664 2.33301C8.90056 2.33301 8.14197 2.4839 7.4342 2.77707C6.72644 3.07023 6.08334 3.49994 5.54164 4.04164C4.44762 5.13566 3.83301 6.61946 3.83301 8.16664C3.83301 9.71381 4.44762 11.1976 5.54164 12.2916C6.63566 13.3857 8.11946 14.0003 9.66664 14.0003C11.2138 14.0003 12.6976 13.3857 13.7916 12.2916Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: transparent;
-      background-size: 100% 100%;
-      @include PC {
-        @include max-screen(1218px) {
-          top: calc(50% - calc(9 / 1170 * 100vw));
-          width: calc(21 / 1170 * 100vw);
-          height: calc(21 / 1170 * 100vw);
-        }
-      }
+    @include SP {
+      @include font(14, 24);
     }
   }
 }
