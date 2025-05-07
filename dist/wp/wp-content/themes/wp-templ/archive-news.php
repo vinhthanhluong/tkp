@@ -1,6 +1,6 @@
 <?php
 $thisPageName = 'news';
-$currentTerm = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+$currentTerm  = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
 $currentTermName = "";
 $currentTermSlug = "";
 if (!empty($currentTerm)) {
@@ -15,28 +15,51 @@ include(APP_PATH . 'libs/head.php');
 <body id="news" class="news">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <div class="c__sub-mv">
-      <div class="inr">
-        <div class="c__ttl01 aos-init" data-aos="fade-up">
-          <span class="c__ttl01--en">News & Events</span>
-          <h1 class="c__ttl01--jp">ニュース・イベント</h1>
-        </div>
-        <ul class="breadcrumb aos-init" data-aos="fade-up">
-          <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-          <?php if(!empty($currentTerm)) { ?>
-          <li><a href="<?php echo APP_URL; ?>news/">ニュース・イベント</a></li>
-          <li><?php echo strip_tags($currentTermName); ?></li>
-          <?php } else { ?>
-            <li>ニュース・イベント</li>
-          <?php } ?>
-        </ul>
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <?php if(!empty($currentTerm)) { ?>
+        <li><a href="<?php echo APP_URL; ?>news/">ニュース</a></li>
+        <li><?php echo strip_tags($currentTermName); ?></li>
+        <?php } else { ?>
+          <li>ニュース</li>
+        <?php } ?>
+      </ul>
+    </div>
+    <div class="c-mainvisual">
+      <div class="mv-inner">
+        <h1 class="mv-ttl aos-init" data-aos="fade-up">
+          <span class="mv-ttl-jp">ニュース</span>
+          <span class="mv-ttl-en">News</span>
+        </h1>
       </div>
     </div>
-    <div class="mct">
-      <div class="wrapper">
+    <div class="sec-news">
+      <div class="inner1170">
+        <?php
+          $categories = get_terms(
+            array(
+              'post_type'   => 'news',
+              'taxonomy'    => 'newscat',
+              'hide_empty'  => true,
+              'pad_counts'  => false,
+              'orderby'     => 'menu_order',
+            )
+          );
+          if (!empty($categories)) {
+        ?>
+        <div class="block-category aos-init" data-aos="fade-up">
+          <ul class="c-category-list">
+            <li class="<?php echo empty($currentTermName) ? 'is-active ' : '' ?>"><a href="<?php echo APP_URL; ?>news/">すべて</a></li>
+            <li><a href="./">お知らせ</a></li>
+            <li><a href="./">イベント</a></li>
+          </ul>
+        </div>
+        <?php } ?>
+
         <?php
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-          $postsPerPage = 9;
+          $postsPerPage = -1;
           $args_news = array(
             'post_type'           => 'news',
             'orderby'             => 'menu_order',
@@ -50,76 +73,39 @@ include(APP_PATH . 'libs/head.php');
           $query_news = new WP_Query($args_news);
           if ($query_news->have_posts()) {
         ?>
-          <ul class="c__lst01">
+          <ul class="news-list">
             <?php
               $delay = 0;
               while ($query_news->have_posts()) {
-                $delay = $delay + 200;
+                $delay   = $delay + 200;
                 $query_news->the_post();
-                $id    = $post->ID;
-                $url = get_the_permalink($id);
-                $ttl   = get_the_title($id);
-                $date = get_the_date('Y / m / d');
-                $terms   = get_the_terms($id, 'newscat');
-                $thumb = get_the_post_thumbnail_url($id);
-                $photo = (!empty($thumb)) ? $thumb : APP_NO_IMG;
+                $n_id    = $post->ID;
+                $n_url   = get_the_permalink($n_id);
+                $n_ttl   = get_the_title($n_id);
+                $n_date  = get_the_date('Y . m . d');
+                $n_terms = get_the_terms($n_id, 'newscat');
+                $n_thumb = get_the_post_thumbnail_url($n_id);
+                $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;
             ?>
               <li class="aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
-                <a class="item" href="<?php echo $url; ?>">
-                  <p class="item__thumb">
-                    <img width="270" height="180" src="<?php echo createSVG(270, 180); ?>"
-                      data-src="<?php echo $photo; ?>" rel="js-lazy" alt="">
-                  </p>
+                <a class="item" href="<?php echo $n_url; ?>">
+                  <figure class="item__thumb"><img width="345" height="250" src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" alt=""></figure>
                   <div class="item__ct">
                     <p class="item__ct--sub">
-                      <span class="date"><?php echo $date; ?></span>
-                      <?php if(!empty($terms)) { foreach($terms as $term) { ?>
-                        <span class="cate"><?php echo $term->name; ?></span>
+                      <span class="date"><?php echo $n_date; ?></span>
+                      <?php if(!empty($n_terms)) { foreach($n_terms as $nterm) { ?>
+                        <span class="cate"><?php echo $nterm->name; ?></span>
                       <?php } }?>
                     </p>
-                    <h2 class="item__ct--ttl"><?php echo $ttl; ?></h2>
+                    <h2 class="item__ct--ttl"><?php echo $n_ttl; ?></h2>
                   </div>
                 </a>
               </li>
             <?php } ?>
           </ul>
         <?php } else { ?>
-            <p class="comming">表示する記事がありません。</p>
+          <p class="comming">表示する記事がありません。</p>
         <?php } wp_reset_postdata(); ?>
-
-        <?php if (function_exists('wp_pagenavi')) { ?>
-          <div class="c__pagenavi"><?php wp_pagenavi(array('query' => $query_news)); ?></div>
-        <?php } ?>
-      </div>
-      <div class="sidebar aos-init" data-aos="fade-up">
-        <p class="sidebar__ttl">Category</p>
-        <?php
-          $categories = get_terms(
-            array(
-              'post_type'   => 'news',
-              'taxonomy'    => 'newscat',
-              'hide_empty'  => true,
-              'pad_counts'  => false,
-              'orderby'     => 'menu_order',
-            )
-          );
-          if (!empty($categories)) {
-        ?>
-          <ul class="sidebar__lst">
-            <li class="<?php echo empty($currentTermName) ? 'active ' : '' ?>PC"><a href="<?php echo APP_URL; ?>news/">全体</a></li>
-            <li class="SP panel js-tg-panel"><a href="javascript:void(0);"><?php echo !empty($currentTermName) ? $currentTermName : '全体';  ?></a></li>
-            <?php if (!empty($categories)) { ?>
-              <ul class="js-tg-ct">
-                <?php if(!empty($currentTermName)) { ?>
-                  <li class="SP"><a href="<?php echo APP_URL; ?>news/">全体</a></li>
-                <?php } ?>
-                <?php foreach ($categories as $cate) { if($cate->name === $currentTermName && wp_is_mobile()) continue; ?>
-                  <li class="<?php echo (!empty($currentTermName) && $cate->name === $currentTermName) ? 'active ' : '' ?>"><a href="<?php echo get_term_link($cate); ?>"><?php echo $cate->name; ?></a></li>
-                <?php } ?>
-              </ul>
-            <?php } ?>
-          </ul>
-        <?php } ?>
       </div>
     </div>
   </main>

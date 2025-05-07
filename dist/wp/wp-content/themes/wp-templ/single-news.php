@@ -16,7 +16,7 @@ include(APP_PATH . 'libs/head.php');
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/sg-news.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="sg-news" class="sg-news sg-page01">
+<body id="sg-news" class="sg-news">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c__sub-mv">
@@ -93,7 +93,7 @@ include(APP_PATH . 'libs/head.php');
         $prev_title = get_the_title($prev_post);
         if (!empty($prev_id)) {
           $main_image_prev = wp_get_attachment_image_src(get_post_thumbnail_id($prev_id), 'full');
-          $photo_prev  = !empty($main_image_prev) ? $main_image_prev[0] : APP_NO_IMG;
+          $photo_prev  = !empty($main_image_prev) ? $main_image_prev[0] : APP_NOIMG;
         }
       }
       if (isset($ids[$this_post_index + 1])) {
@@ -103,7 +103,7 @@ include(APP_PATH . 'libs/head.php');
         $next_title = get_the_title($next_post);
         if (!empty($next_id)) {
           $main_image_next = wp_get_attachment_image_src(get_post_thumbnail_id($next_id), 'full');
-          $photo_next  = !empty($main_image_next) ? $main_image_next[0] : APP_NO_IMG;
+          $photo_next  = !empty($main_image_next) ? $main_image_next[0] : APP_NOIMG;
         }
       }
       ?>
@@ -111,7 +111,7 @@ include(APP_PATH . 'libs/head.php');
         <a href="<?php echo !empty($prev_url) ? $prev_url  : 'javascript:void(0)'; ?>" class="prev <?php echo empty($prev_url) ? ' disable' : ''; ?>">
           <p class="prev__thumb">
             <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>"
-              data-src="<?php echo !empty($photo_prev) ? $photo_prev : APP_NO_IMG; ?>" rel="js-lazy" alt="">
+              data-src="<?php echo !empty($photo_prev) ? $photo_prev : APP_NOIMG; ?>" rel="js-lazy" alt="">
             <span class="decor"></span>
           </p>
           <?php if (!empty($prev_title)) { ?><p class="prev__ttl PC"><?php echo $prev_title; ?></p><?php } ?>
@@ -127,7 +127,7 @@ include(APP_PATH . 'libs/head.php');
         <a href="<?php echo !empty($next_url) ? $next_url : 'javascript:void(0)'; ?>" class="next <?php echo empty($next_post) ? ' disable' : ''; ?>">
           <p class="next__thumb">
             <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>"
-              data-src="<?php echo !empty($photo_next) ? $photo_next : APP_NO_IMG; ?>" rel="js-lazy" alt="">
+              data-src="<?php echo !empty($photo_next) ? $photo_next : APP_NOIMG; ?>" rel="js-lazy" alt="">
             <span class="decor"></span>
           </p>
           <?php if (!empty($next_title)) { ?><p class="next__ttl PC"><?php echo $next_title; ?></p><?php } ?>
