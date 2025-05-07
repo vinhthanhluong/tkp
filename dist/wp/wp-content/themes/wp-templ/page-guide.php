@@ -45,12 +45,32 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-3">
+            <p class="img-item-1">
               <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_3.png" rel="js-lazy" alt="">
             </p>
-            <p class="img-item-4">
+            <p class="img-item-2">
               <img width="166" height="140" src="<?php echo createSVG(166, 140); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_4.png" rel="js-lazy" alt="">
             </p>
+          </div>
+        </div>
+        <div class="row-guide row-reverse">
+          <div class="box-left">
+            <h2 class="tit-box">
+              <span>ショップ</span>
+              <strong>Shop</strong>
+            </h2>
+            <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
+            <a href="<?php echo APP_URL ?>" class="c-btn01">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+            <p class="img-item-1">
+              <img width="117" height="119" src="<?php echo createSVG(117, 119); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_5.png" rel="js-lazy" alt="">
+            </p>
+          </div>
+          <div class="box-right">
+            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
           </div>
         </div>
       </div>
