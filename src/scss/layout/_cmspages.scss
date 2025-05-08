@@ -70,14 +70,14 @@ a img.aligncenter {
 //   padding: 0 4px 5px;
 // }
 
-// .wp-video {
-//   max-width: 100%;
-//   margin-bottom: 40px;
-//   video {
-//     max-width: 100%;
-//     height: auto;
-//   }
-// }
+.wp-video {
+  max-width: 100%;
+  margin-bottom: 40px;
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 .cms-content {
   -webkit-text-size-adjust: none;
@@ -94,14 +94,8 @@ a img.aligncenter {
     li {
       list-style: none;
       position: relative;
-      @include PC {
-        padding: 0 0 0 20px;
-        margin-bottom: 8px;
-      }
-      @include SP {
-        padding: 0 0 0 31px;
-        margin-bottom: 13px;
-      }
+      padding: 0 0 0 20px;
+      margin-bottom: 8px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -113,9 +107,6 @@ a img.aligncenter {
         width: 10px;
         height: 10px;
         background: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="3" fill="%2365B0D4"/><circle cx="5" cy="5" r="4.5" stroke="%2365B0D4"/></svg>') no-repeat 0 0;
-        @include SP {
-          top: 8px;
-        }
       }
     }
     &[style*="list-style-type: disc;"],
@@ -200,33 +191,18 @@ a img.aligncenter {
     @include font(15, 26, 100, 500);
     + p {
       margin-top: 25px;
-      @include SP {
-        margin-top: 10px;
-      }
     }
     + h2 {
       margin-top: 39px;
-      @include SP {
-        margin-top: 28px;
-      }
     }
     + h3 {
       margin-top: 39px;
-      @include SP {
-        margin-top: 28px;
-      }
     }
     + h4 {
       margin-top: 29px;
-      @include SP {
-        margin-top: 28px;
-      }
     }
     + blockquote {
       margin-top: 20px;
-      @include SP {
-        margin-top: 20px;
-      }
     }
   }
   h2 {
@@ -245,6 +221,9 @@ a img.aligncenter {
       width: 150px;
       height: 2px;
       background: $yellow01;
+      @include SP {
+        width: 100px;
+      }
     }
     &:after {
       position: absolute;
@@ -254,6 +233,9 @@ a img.aligncenter {
       width: calc(100% - 160px);
       height: 2px;
       background: $blue01;
+      @include SP {
+        width: calc(100% - 110px);
+      }
     }
   }
   h3 {
@@ -272,6 +254,9 @@ a img.aligncenter {
       width: 4px;
       height: 26px;
       background: url('data:image/svg+xml,<svg width="4" height="26" viewBox="0 0 4 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.375C0 1.27043 0.895431 0.375 2 0.375C3.10457 0.375 4 1.27043 4 2.375V12.375H0V2.375Z" fill="%23F5BB1E"/><path d="M0 13.625H4V23.625C4 24.7296 3.10457 25.625 2 25.625C0.895431 25.625 0 24.7296 0 23.625V13.625Z" fill="%2365B0D4"/></svg>') no-repeat 0 0;
+      @include SP {
+        top: 1px;
+      }
     }
   }
   h4 {
@@ -280,7 +265,7 @@ a img.aligncenter {
     padding-left: 20px;
     margin-bottom: 16px;
     @include SP {
-      @include font(16,28);
+      @include font(16,26);
     }
     &:before {
       position: absolute;
@@ -291,6 +276,9 @@ a img.aligncenter {
       border-radius: 2px;
       width: 10px;
       height: 10px;
+      @include SP {
+        top: 7px;
+      }
     }
   }
   a {
@@ -335,13 +323,6 @@ a img.aligncenter {
     border-radius: 10px;
     padding: 18px;
     margin-bottom: 20px;
-    p {
-      margin: 0;
-    }
-    @include SP {
-      padding: 13px 17px;
-      margin-bottom: 32px;
-    }
   }
   .img-2col {
     @include PC {
@@ -349,14 +330,21 @@ a img.aligncenter {
       margin: 30px 0 59px;
     }
     @include SP {
-      margin: 30px 0 59px;
+      margin: 30px 0 38px;
     }
     &__photo {
-      @include flex(1);
-      @include aspect-ratio(440, 310);
+      @include PC {
+        @include flex(1);
+        @include aspect-ratio(440, 310);
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
       @include SP {
-        @include aspect-ratio(327, 223);
-        margin-bottom: 5px;
+        @include aspect-ratio(331, 230);
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
       }
       img {
         position: absolute;
@@ -376,16 +364,14 @@ a img.aligncenter {
         -webkit-mask-size: 100% 100%;
         mask-size: 100% 100%;
         @include SP {
-          max-height: 223px;
-        }
-      }
-      &:not(:last-child) {
-        @include PC {
-          margin-right: 20px;
+          max-height: 230px;
         }
       }
       .wp-caption-text {
         margin-top: 15px;
+        @include SP {
+          margin-top: 18px;
+        }
       }
     }
   }
@@ -422,8 +408,24 @@ a img.aligncenter {
   }
 }
 .sg-share {
+  @include SP {
+    text-align: center;
+  }
   .share__ttl {
     @include ffGT;
     @include font(14,1.2,"",500);
+    @include SP {
+      display: none;
+    }
+  }
+  .share__link {
+    @include SP {
+      display: inline-block;
+      width: 42px;
+      margin: 0 9px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
