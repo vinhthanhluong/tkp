@@ -57,47 +57,52 @@
 }
 .c-breadcrumb {
   @include PC {
+    padding: 0 60px;
+    @include max-screen(1440px) {
+      padding: 0 calc(60 / 1440 * 100vw);
+    }
   }
   @include SP {
-    line-height: 1;
+    line-height: 1.55;
+    padding: 0 16px;
+    margin-top: 20px;
+    @include max-screen(375px) {
+      padding-left: calc(16 / 375 * 100vw);
+      padding-right: calc(16 / 375 * 100vw);
+    }
   }
   ul {
     @include PC {
       @include flexbox;
-      @include align-items(center);
       @include flex-wrap(wrap);
     }
   }
   li {
     display: inline;
     position: relative;
-    @include font(12, "", 0, 500);
+    @include font(12,"", 100, 500);
     &:not(:last-child) {
       &::after {
         display: inline-block;
         vertical-align: middle;
         content: "/";
-        margin: auto 10px 3px 11px;
+        @include PC {
+          margin: auto 15px 3px 15px;
+        }
+        @include SP {
+          margin: auto 11px 3px 15px;
+        }
       }
     }
     &:first-child {
-      // a {
-      //   opacity: 1;
-      //   transition: 0.3s;
-      //   @include HOVER {
-      //     color: $blue01;
-      //   }
-      // }
       &::before {
         display: inline-block;
         vertical-align: middle;
         content: "";
-        margin: auto;
         width: 12px;
         height: 19px;
-        margin: auto 6px 5px 0;
-        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>')
-          center no-repeat;
+        margin: auto 6px 0 0;
+        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>') center no-repeat;
       }
     }
   }
@@ -819,6 +824,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   @include PC {
+    height: 7px;
     -webkit-animation-name: brandSlidePC;
     animation-name: brandSlidePC;
   }

@@ -62,5 +62,55 @@ for ARCHIVE
 for SINGLE
 -------------------------------------------------------------*/
 .article-news {
-
+  @include PC {
+    margin: 19px auto 10px;
+  }
+}
+.article-inner {
+  position: relative;
+  @include PC {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .img-dot {
+    text-align: right;
+    @include PC {
+      padding-right: 25px;
+      margin-bottom: 3px;
+    }
+    @include SP {
+      width: 82px;
+    }
+  }
+  .img-wave-blue {
+    position: absolute;
+    right: 0;
+    width: 56px;
+    height: 18px;
+  }
+}
+.box-meta {
+  @include PC {
+    margin-bottom: 24px;
+  }
+  @include SP {
+    margin-bottom: 20px;
+  }
+  .meta-date {
+    color: #AFAFAF;
+    @include ffGT;
+    @include font(14,"","",500);
+    &:not(.meta-cates) {
+      margin-right: 16px;
+    }
+  }
+  .meta-cates {
+    color: $blue01;
+    @include font(14,18,"",700);
+  }
+}
+.sg-mainimg {
+  @include PC {
+    margin-top: 61px;
+  }
 }

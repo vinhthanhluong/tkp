@@ -41,48 +41,63 @@ a img.aligncenter {
   margin-right: auto;
 }
 
+// .wp-caption {
+//   background: #fff;
+//   border: 1px solid #f0f0f0;
+//   max-width: 96%; /* Image does not overflow the content area */
+//   padding: 5px 3px 10px;
+//   text-align: center;
+// }
+
+// .wp-caption.alignnone {
+//   margin: 5px 0 20px;
+// }
+
+// .wp-caption.alignleft {
+//   margin: 5px auto 20px 0;
+// }
+
+// .wp-caption.alignright {
+//   margin: 5px 0 20px auto;
+// }
+
+// .wp-caption img {
+//   border: 0 none;
+//   height: auto;
+//   margin: 0;
+//   max-width: 98.5%;
+//   padding: 0;
+//   width: auto;
+// }
+
+// .wp-caption p.wp-caption-text {
+//   font-size: 11px;
+//   line-height: 17px;
+//   margin: 0;
+//   padding: 0 4px 5px;
+// }
+
+// .wp-video {
+//   max-width: 100%;
+//   margin-bottom: 40px;
+//   video {
+//     max-width: 100%;
+//     height: auto;
+//   }
+// }
+
 .wp-caption {
-  background: #fff;
-  border: 1px solid #f0f0f0;
-  max-width: 96%; /* Image does not overflow the content area */
-  padding: 5px 3px 10px;
+  margin: auto;
   text-align: center;
+  width: auto!important;
 }
-
-.wp-caption.alignnone {
-  margin: 5px 0 20px;
-}
-
-.wp-caption.alignleft {
-  margin: 5px auto 20px 0;
-}
-
-.wp-caption.alignright {
-  margin: 5px 0 20px auto;
-}
-
-.wp-caption img {
-  border: 0 none;
-  height: auto;
-  margin: 0;
-  max-width: 98.5%;
-  padding: 0;
-  width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-  font-size: 11px;
-  line-height: 17px;
-  margin: 0;
-  padding: 0 4px 5px;
-}
-
-.wp-video {
-  max-width: 100%;
-  margin-bottom: 40px;
-  video {
-    max-width: 100%;
-    height: auto;
+.wp-caption-text {
+  @include font(15, 26, 100, 400);
+  margin-top: 9px;
+  margin-bottom: 20px;
+  @include SP {
+    @include font(13, 20, 100, 400);
+    margin-top: 15px;
   }
 }
 
@@ -95,8 +110,58 @@ a img.aligncenter {
   ol {
     padding-left: 20px;
     margin-bottom: 20px;
+    @include font(15, 24, 120, 700);
   }
   ul {
+    li {
+      list-style: none;
+      position: relative;
+      @include PC {
+        padding: 0 0 10px 35px;
+        margin-bottom: 14px;
+      }
+      @include SP {
+        padding: 0 0 12px 31px;
+        margin-bottom: 13px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="3" fill="%2365B0D4"/><circle cx="5" cy="5" r="4.5" stroke="%2365B0D4"/></svg>') no-repeat 0 0;
+        @include PC {
+          top: 9px;
+          left: 14px;
+        }
+        @include SP {
+          top: 8px;
+          left: 10px;
+        }
+      }
+    }
+    &[style*="list-style-type: disc;"],
+    &[style*="list-style-type: circle;"],
+    &[style*="list-style-type: square;"] {
+      li {
+        border: none;
+        margin-left: 25px;
+        padding: 0;
+        &:before {
+          opacity: 0;
+          background: none;
+          display: none;
+        }
+      }
+    }
+    &[style*="list-style-type: disc;"] {
+      li {
+        list-style-type: disc;
+      }
+    }
     &[style*="list-style-type: circle;"] {
       li {
         list-style-type: circle;
@@ -106,9 +171,6 @@ a img.aligncenter {
       li {
         list-style-type: square;
       }
-    }
-    li {
-      list-style: disc;
     }
   }
   ol {
@@ -142,7 +204,53 @@ a img.aligncenter {
     }
   }
   p {
+    @include font(15, 26, 100, 500);
     margin-bottom: 30px;
+  }
+  h2 {
+    position: relative;
+    @include font(25,"",120,700);
+    @include SP {
+      @include font(18,28);
+    }
+  }
+  h3 {
+    position: relative;
+    @include font(20,"",120,700);
+    @include SP {
+      @include font(18,28);
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 26px;
+      background: url('data:image/svg+xml,<svg width="4" height="26" viewBox="0 0 4 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.375C0 1.27043 0.895431 0.375 2 0.375C3.10457 0.375 4 1.27043 4 2.375V12.375H0V2.375Z" fill="%23F5BB1E"/><path d="M0 13.625H4V23.625C4 24.7296 3.10457 25.625 2 25.625C0.895431 25.625 0 24.7296 0 23.625V13.625Z" fill="%2365B0D4"/></svg>') no-repeat 0 0;
+    }
+  }
+  h4 {
+    position: relative;
+    @include font(20,"",120,700);
+    padding-left: 20px;
+    @include SP {
+      @include font(16,28);
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 0;
+      background: $blue01;
+      border-radius: 2px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  a {
+    color: $blue01;
+    @include ffGT;
   }
   iframe {
     max-width: 100% !important;
@@ -172,5 +280,91 @@ a img.aligncenter {
     th {
       border: 1px solid $color_body;
     }
+  }
+  blockquote {
+    @include font(15, 30, 100, 400);
+    border: 2px solid #DCDCDC;
+    border-radius: 10px;
+    padding: 14px 17px;
+    margin-bottom: 38px;
+    p {
+      margin: 0;
+    }
+    @include SP {
+      padding: 13px 17px;
+      margin-bottom: 32px;
+    }
+  }
+  .img-2col {
+    @include flexbox;
+    margin: 26px 0 3px;
+    @include SP {
+      @include flex-direction(column);
+    }
+    &__photo {
+      @include flex(1);
+      @include aspect-ratio(440, 310);
+      -webkit-mask-image: url($img_url + "img/common/mask_bg02.png");
+      mask-image: url($img_url + "img/common/mask_bg02.png");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      @include SP {
+        @include aspect-ratio(327, 223);
+        margin-bottom: 5px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 310px;
+        object-fit: cover;
+        margin: 0;
+        @include SP {
+          max-height: 223px;
+        }
+      }
+      &:not(:last-child) {
+        @include PC {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+.sg-heading {
+  @include font(30,45,120,700);
+  @include SP {
+    @include font(22,34);
+  }
+}
+.sg-mainimg {
+  -webkit-mask-image: url($img_url + "img/common/mask_bg02.png");
+  mask-image: url($img_url + "img/common/mask_bg02.png");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  @include PC {
+    @include aspect-ratio(1000, 490);
+  }
+  @include SP {
+    @include aspect-ratio(327, 160);
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
