@@ -11,8 +11,12 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="content-sec">
 
         <div class="img-wave-blue">
-          <p class="c-mask img-l" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png"></p>
-          <p class="c-mask img-s" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png"></p>
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
         </div>
 
         <!-- <p class="img-wave-blue">
