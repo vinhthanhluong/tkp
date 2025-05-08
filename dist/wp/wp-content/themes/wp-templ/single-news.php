@@ -69,7 +69,7 @@ include(APP_PATH . 'libs/head.php');
             </a>
           </div>
         </div>
-        <div class="sg-pagination">
+        <div class="mod-pagination">
           <a href="#" class="prev">
             <p class="prev__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img01.jpg" rel="js-lazy" alt=""></p>
             <p class="prev__ttl">7月22日～「むらごとマルシェ」がスタート！</p>
