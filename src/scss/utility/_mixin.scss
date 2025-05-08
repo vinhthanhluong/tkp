@@ -9,7 +9,7 @@ $blue03: #1b3da3;
 $gray01: #f1f1f1;
 $gray02: #f2f2f2;
 $yellow01: #f5bb1e;
-$orange01: #171615;
+$orange01: #b85632;
 $brown01: #755c49;
 
 $font_feature_settings_palt: false;
@@ -199,6 +199,10 @@ $gantari: "Gantari", sans-serif;
 
 @mixin align-items($align: center) {
   @include add_prefix(align-items, $align);
+}
+
+@mixin align-self($align: center) {
+  @include add_prefix(align-self, $align);
 }
 
 @mixin align-content($align: space-between) {

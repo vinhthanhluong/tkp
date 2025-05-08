@@ -310,11 +310,12 @@ COMMON
   max-width: 1218px; // 1170
   padding: 0 24px;
   margin: 0 auto;
-}
-.inner {
-  max-width: 1030px;
-  padding: 0 15px;
-  margin: 0 auto;
+  @include SP {
+    @include max-screen(375px) {
+      padding-left: calc(24 / 375 * 100vw);
+      padding-right: calc(24 / 375 * 100vw);
+    }
+  }
 }
 
 .sp,

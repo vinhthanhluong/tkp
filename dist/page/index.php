@@ -7,6 +7,14 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="page" class="page">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL; ?>news/">ニュース</a></li>
+        <li>7月22日～「むらごとマルシェ」がスタート！</li>
+      </ul>
+    </div>
+
     <div class="inner1170">
       <div class="section-demo">
         <div class="demo-text">
@@ -149,7 +157,6 @@ include(APP_PATH . 'libs/head.php'); ?>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </main>

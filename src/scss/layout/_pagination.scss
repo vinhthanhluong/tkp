@@ -51,7 +51,7 @@
   }
   .prev,
   .next {
-    flex: 1;
+    @include flex(1);
     @include flexbox;
     @include align-items(center);
     @include font(16, 25, 100, 700);
@@ -75,9 +75,6 @@
         &::after {
           right: -32px;
         }
-      }
-      .decor {
-        opacity: 1;
       }
     }
     &__thumb {
@@ -122,9 +119,9 @@
       }
     }
     &__ttl {
-      @include font(13, 20, 100, 700);
+      @include font(12, 22, 120, 700);
       @include multiLineEllipsis(2);
-      flex: 1;
+      @include flex(1);
       text-align: left;
     }
   }

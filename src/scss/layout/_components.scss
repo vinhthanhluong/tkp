@@ -57,55 +57,62 @@
 }
 .c-breadcrumb {
   @include PC {
+    padding: 0 60px;
+    @include max-screen(1440px) {
+      padding: 0 calc(60 / 1440 * 100vw);
+    }
   }
   @include SP {
-    line-height: 1;
+    line-height: 1.55;
+    padding: 0 16px;
+    margin-top: 20px;
+    @include max-screen(375px) {
+      padding-left: calc(16 / 375 * 100vw);
+      padding-right: calc(16 / 375 * 100vw);
+    }
   }
   ul {
     @include PC {
       @include flexbox;
-      @include align-items(center);
       @include flex-wrap(wrap);
     }
   }
-  li,
-  a {
-    display: inline-block;
-    color: $color_body;
-    @include SP {
-      display: inline;
-    }
-  }
   li {
+    display: inline;
     position: relative;
-    @include font(12, "", 0, 500);
+    @include font(12,"", 100, 500);
     &:not(:last-child) {
       &::after {
         display: inline-block;
         vertical-align: middle;
         content: "/";
-        margin: auto 10px 3px 11px;
+        @include PC {
+          margin: auto 15px 3px 15px;
+        }
+        @include SP {
+          margin: auto 11px 3px 15px;
+        }
       }
     }
     &:first-child {
-      a {
-        opacity: 1;
-        transition: 0.3s;
-        @include HOVER {
-          color: $blue01;
-        }
-      }
       &::before {
         display: inline-block;
         vertical-align: middle;
         content: "";
-        margin: auto;
         width: 12px;
         height: 19px;
-        margin: auto 6px 5px 0;
-        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>')
-          center no-repeat;
+        margin: auto 6px 0 0;
+        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>') center no-repeat;
       }
+    }
+  }
+  a {
+    display: inline-block;
+    color: $color_body;
+    opacity: 1;
+    transition: 0.3s;
+    @include HOVER {
+      color: $blue01;
     }
   }
 }
@@ -210,7 +217,7 @@
     }
   }
 }
-/* ===================== BUTTON ===================== */
+
 /* ===================== TITLE ===================== */
 .c-ttl01 {
   .c-ttl01__en {
@@ -239,7 +246,7 @@
     }
   }
 }
-/* ===================== TITLE ===================== */
+
 /* ===================== CATEGORY ===================== */
 .c-cate01 {
   display: inline-block;
@@ -404,8 +411,24 @@
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
+    @include PC {
+      padding-top: (250 / 345) * 100%;
+    }
+    @include SP {
+      padding-top: (110 / 150) * 100%;
+    }
     img {
-      transition: transform 0.3s ease;
+      display: block;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include PC {
+        transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        will-change: transform;
+      }
     }
   }
 
@@ -414,7 +437,10 @@
       margin-top: 19px;
     }
     @include SP {
+      -webkit-align-self: center;
+      align-self: center;
       width: calc(153 / 327 * 100%);
+      padding-bottom: 6px;
     }
     .date {
       @include ffGT;
@@ -461,8 +487,332 @@
   }
 }
 /* ===================== LIST POST ===================== */
+/* ===================== MODULE PARK ===================== */
 
+.mod-park__inner {
+  position: relative;
+}
+.mod-park__btn {
+  // 1170 668
+  // 360 205.5
+  display: block;
+  position: absolute;
+  border: solid #fff;
+  background: $brown01;
+  border-radius: 100px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  @include PC {
+    border-width: 2px;
+    @include max-screen(1218px) {
+      border-width: calc(2 / 1170 * 100vw);
+    }
+  }
+  @include SP {
+    font-size: 0;
+    line-height: 0;
+    @include max-screen(1218px) {
+      border-width: calc(0.74 / 375 * 100vw);
+    }
+  }
+  @include HOVER {
+    background: $blue01;
+    transform: translateY(5px);
+  }
+  &.bnt01 {
+    @include PC {
+      top: 70px;
+      left: 61px;
+      padding: 0 17px 0 19px;
+      @include max-screen(1218px) {
+        top: calc(70 / 668 * 100%);
+        left: calc(61 / 1170 * 100%);
+        padding: 0 calc(17 / 1170 * 100%) 0 calc(19 / 1170 * 100%);
+      }
+    }
+    @include SP {
+      top: calc(27 / 205.5 * 100%);
+      left: calc(12 / 360 * 100%);
+      padding: calc(1 / 360 * 100%) calc(7 / 360 * 100%) 0;
+    }
+  }
+  &.bnt02 {
+    @include PC {
+      top: 70px;
+      left: 304px;
+      padding: 0 17px 0 19px;
+      @include max-screen(1218px) {
+        top: calc(70 / 668 * 100%);
+        left: calc(304 / 1170 * 100%);
+        padding: 0 calc(17 / 1170 * 100%) 0 calc(19 / 1170 * 100%);
+      }
+    }
+    @include SP {
+      top: calc(27 / 205.5 * 100%);
+      left: calc(89 / 360 * 100%);
+      padding: calc(1 / 360 * 100%) calc(7 / 360 * 100%) 0;
+    }
+  }
+  &.bnt03 {
+    @include PC {
+      top: 66px;
+      left: 778px;
+      padding: 0 27px 0 29px;
+      @include max-screen(1218px) {
+        top: calc(66 / 668 * 100%);
+        left: calc(778 / 1170 * 100%);
+        padding: 0 calc(27 / 1170 * 100%) 0 calc(29 / 1170 * 100%);
+      }
+    }
+    @include SP {
+      top: calc(17 / 205.5 * 100%);
+      left: calc(232 / 360 * 100%);
+      padding: calc(1 / 360 * 100%) calc(10 / 360 * 100%) 0;
+    }
+  }
+  &.bnt04 {
+    @include PC {
+      top: 424px;
+      left: 560px;
+      padding: 0 7px 0 9px;
+      @include max-screen(1218px) {
+        top: calc(424 / 668 * 100%);
+        left: calc(560 / 1170 * 100%);
+        padding: 0 calc(7 / 1170 * 100%) 0 calc(9 / 1170 * 100%);
+      }
+    }
+    @include SP {
+      top: calc(131 / 205.5 * 100%);
+      left: calc(161 / 360 * 100%);
+      padding: calc(1 / 360 * 100%) calc(3 / 360 * 100%) 0;
+    }
+  }
+  .txt {
+    position: relative;
+    display: inline-block;
+    @include font(18, 34, 0.12, 700);
+    color: #fff;
+    @include PC {
+      padding-left: 29px;
+      @include max-screen(1218px) {
+        font-size: calc(18 / 1170 * 100vw);
+        padding-left: calc(29 / 1170 * 100vw);
+      }
+    }
+    @include SP {
+      padding-left: calc(10 / 375 * 100vw);
+      font-size: calc(6.63 / 375 * 100vw);
+      line-height: calc(11.95 / 375 * 100vw);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-image: url('data:image/svg+xml,<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1666 15.6666L13.7916 12.2916M13.7916 12.2916C14.3333 11.7499 14.763 11.1068 15.0562 10.3991C15.3494 9.6913 15.5003 8.93272 15.5003 8.16664C15.5003 7.40056 15.3494 6.64197 15.0562 5.9342C14.763 5.22644 14.3333 4.58334 13.7916 4.04164C13.2499 3.49994 12.6068 3.07023 11.8991 2.77707C11.1913 2.4839 10.4327 2.33301 9.66664 2.33301C8.90056 2.33301 8.14197 2.4839 7.4342 2.77707C6.72644 3.07023 6.08334 3.49994 5.54164 4.04164C4.44762 5.13566 3.83301 6.61946 3.83301 8.16664C3.83301 9.71381 4.44762 11.1976 5.54164 12.2916C6.63566 13.3857 8.11946 14.0003 9.66664 14.0003C11.2138 14.0003 12.6976 13.3857 13.7916 12.2916Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      background-size: 100% 100%;
+      @include PC {
+        top: calc(50% - 9px);
+        width: 21px;
+        height: 21px;
+        @include max-screen(1218px) {
+          top: calc(50% - calc(9 / 1170 * 100vw));
+          width: calc(21 / 1170 * 100vw);
+          height: calc(21 / 1170 * 100vw);
+        }
+      }
+      @include SP {
+        top: calc(50% - calc(4 / 375 * 100vw));
+        width: calc(8 / 375 * 100vw);
+        height: calc(8 / 375 * 100vw);
+      }
+    }
+  }
+}
+/* ===================== MODULE PARK ===================== */
+/* ===================== POPUP ===================== */
+.hidden-scroll {
+  overflow: hidden;
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(79, 92, 96, 0.59);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.modal-popup {
+  position: fixed;
+  z-index: 1001;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  max-width: 1102px;
+  margin: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  max-height: var(--maxheight);
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-inner {
+    overflow: hidden;
+    height: 100%;
+  }
+  .modal-window {
+    max-height: 100%;
+    overflow: auto;
+  }
+  .modal-popup__inner {
+    background: #fff;
+    height: 100%;
+    overflow: auto;
+    @include PC {
+      padding: 62px 63px 54px;
+      @include max-screen(1366px) {
+        padding: 62px calc(63 / 1366 * 100vw) 54px;
+      }
+    }
+    @include SP {
+      padding: 33px 21px 38px;
+    }
+  }
+  .popup-lst__item {
+    @include PC {
+      @include flexbox;
+      @include justify-content(space-between);
+    }
+    .popup-col01 {
+      @include PC {
+        width: calc(636 / 976 * 100%);
+        padding-left: 3px;
+      }
+      .popup-num {
+        font-size: 0;
+        line-height: 0;
+        @include SP {
+          text-align: center;
+        }
+        .num {
+          display: inline-block;
+          text-align: center;
+          color: #fff;
+          background: $blue01;
+          border-radius: 100%;
+          @include PC {
+            @include font(29, 48, 80, 600);
+            width: 53px;
+            height: 53px;
+            padding-left: 4px;
+          }
+          @include SP {
+            @include font(21, 34, 80, 600);
+            width: 40px;
+            height: 40px;
+            padding: 1px 0 0 4px;
+          }
+        }
+      }
+      .popup-ttl {
+        @include PC {
+          @include font(18, 40, 80);
+          margin-top: 22px;
+        }
+        @include SP {
+          @include font(18, 36, 80);
+          margin-top: 31px;
+        }
+      }
+      .popup-desc {
+        @include PC {
+          margin-top: 35px;
+        }
+        @include SP {
+          margin-top: 22px;
+        }
+        .txt {
+          @include PC {
+            @include font(14, 38, 40);
+          }
+          @include SP {
+            @include font(14, 32, 40);
+          }
+        }
+      }
+    }
+    .popup-col02 {
+      @include PC {
+        width: calc(316 / 976 * 100%);
+      }
+      @include SP {
+        margin-top: 27px;
+      }
+      .popup-thumb {
+        text-align: center;
+      }
+    }
+  }
 
+  .popup-close {
+    text-align: center;
+    @include PC {
+      margin-top: 49px;
+    }
+    @include SP {
+      margin-top: 33px;
+    }
+    .btn {
+      display: inline-block;
+      width: 60px;
+      height: 28px;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60.266" height="28.27" viewBox="0 0 60.266 28.27"><g id="Group_127833" data-name="Group 127833" transform="translate(-327.292 -21.045)"><line id="Line_116" data-name="Line 116" x2="59.851" y2="27.36" transform="translate(327.5 21.5)" fill="none" stroke="%234f5c60" stroke-width="1"/><line id="Line_117" data-name="Line 117" y1="27.36" x2="59.851" transform="translate(327.5 21.5)" fill="none" stroke="%234f5c60" stroke-width="1"/></g></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      background-size: 100% 100%;
+      transition: opacity 0.3s ease;
+      @include HOVER {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &.popupimg {
+    max-width: 763px;
+    .modal-popup__inner {
+      padding: 0;
+      background: none;
+    }
+    .popup-close {
+      @include PC {
+        margin-top: 34px;
+      }
+      @include SP {
+        margin-top: 20px;
+      }
+      .btn {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60.266" height="28.27" viewBox="0 0 60.266 28.27"><g id="Group_127833" data-name="Group 127833" transform="translate(-327.292 -21.045)"><line id="Line_116" data-name="Line 116" x2="59.851" y2="27.36" transform="translate(327.5 21.5)" fill="none" stroke="%23fff" stroke-width="1"/><line id="Line_117" data-name="Line 117" y1="27.36" x2="59.851" transform="translate(327.5 21.5)" fill="none" stroke="%23fff" stroke-width="1"/></g></svg>');
+      }
+    }
+  }
+}
+/* ===================== POPUP ===================== */
 .c-mask {
   position: absolute;
   left: 0;
@@ -474,6 +824,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   @include PC {
+    height: 7px;
     -webkit-animation-name: brandSlidePC;
     animation-name: brandSlidePC;
   }
@@ -497,4 +848,34 @@
       background-position: 0;
     }
   }
+}
+.c-bgwave01 {
+  position: relative;
+  isolation: isolate;
+  background: repeat-x top center;
+  @include PC {
+    background-image: url($img_url + "img/common/wave_bg.png");
+    background-size: auto 450px;
+  }
+  @include SP {
+    background-image: url($img_url + "img/common/wave_bg_sp.png");
+    background-size: 375px auto;
+  }
+  // &:before {
+  //   position: absolute;
+  //   content: '';
+  //   top: 0;
+  //   left: 0;
+  //   background: repeat-x top left;
+  //   background-size: 100% auto;
+  //   width: 100%;
+  //   @include PC {
+  //     background-image: url($img_url + "img/common/wave_bg.png");
+  //     height: 450px;
+  //   }
+  //   @include SP {
+  //     background-image: url($img_url + "img/common/wave_bg_sp.png");
+  //     height: 491px;
+  //   }
+  // }
 }

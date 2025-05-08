@@ -11,10 +11,10 @@ if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post
 include(APP_PATH . 'libs/head.php');
 
 ?>
-<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/sg-news.min.css?v=<?php echo APP_VER ?>">
+<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/news.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="sg-news">
+<body id="news-single">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
@@ -25,19 +25,24 @@ include(APP_PATH . 'libs/head.php');
       </ul>
     </div>
 
-    <div class="article-news">
-      <div class="inner1170">
+    <div class="article-news inner1170">
+      <div class="article-inner">
+        <div class="img-dot"><img width="180" height="55" src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/dot_decor.png" rel="js-lazy" alt="decoration"></div>
+        <div class="img-wave-blue">
+          <p class="c-mask img-l" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png"></p>
+          <p class="c-mask img-s" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png"></p>
+        </div>
         <div class="box-meta">
           <span class="meta-date"><?php echo $sg_date; ?></span>
           <?php if (!empty($sg_terms)) { foreach ($sg_terms as $term) { ?>
             <a class="meta-cates" href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
           <?php } } ?>
         </div>
-        <h1 class="sg-ttl"><?php echo $sg_title; ?></h1>
+        <h1 class="sg-heading"><?php echo $sg_title; ?></h1>
         <?php if (!empty($sg_thumb)) { ?>
-          <p class="sg-mainimg aos-init" data-aos="fade-up">
+          <figure class="sg-mainimg aos-init" data-aos="fade-up">
             <img width="<?php echo $sg_thumb[1]; ?>" height="<?php echo $sg_thumb[2]; ?>" src="<?php echo createSVG(1000, 490); ?>" data-src="<?php echo $sg_thumb[0]; ?>" rel="js-lazy" alt="<?php echo $sg_title_strip; ?>">
-          </p>
+          </figure>
         <?php } ?>
         <?php if (!empty($post->post_content)) { ?><div class="cms-content aos-init" data-aos="fade-up"><?php the_content(); ?></div><?php } ?>
         <div class="sg-share aos-init" data-aos="fade-up">

@@ -1,4 +1,4 @@
-<footer id="footer"></footer>
+<footer id="footer" class="footer"></footer>
 
 <script>
   var JS_APP_URL = '<?php echo APP_URL ?>';
