@@ -47,9 +47,8 @@ a img.aligncenter {
   // max-width: 96%; /* Image does not overflow the content area */
   // padding: 5px 3px 10px;
   // text-align: center;
-  margin: auto;
-  text-align: center;
-  width: auto!important;
+  margin: 26px auto 39px;
+  width: auto !important;
 }
 
 // .wp-caption.alignnone {
@@ -62,15 +61,6 @@ a img.aligncenter {
 
 // .wp-caption.alignright {
 //   margin: 5px 0 20px auto;
-// }
-
-// .wp-caption img {
-//   border: 0 none;
-//   height: auto;
-//   margin: 0;
-//   max-width: 98.5%;
-//   padding: 0;
-//   width: auto;
 // }
 
 // .wp-caption p.wp-caption-text {
@@ -88,16 +78,6 @@ a img.aligncenter {
 //     height: auto;
 //   }
 // }
-
-.wp-caption-text {
-  @include font(15, 26, 100, 400);
-  margin-top: 9px;
-  margin-bottom: 20px;
-  @include SP {
-    @include font(13, 20, 100, 400);
-    margin-top: 15px;
-  }
-}
 
 .cms-content {
   -webkit-text-size-adjust: none;
@@ -198,14 +178,62 @@ a img.aligncenter {
       list-style-type: decimal;
     }
   }
+  .wp-caption img {
+    width: 100%;
+    -webkit-mask-image: url($img_url + "img/common/mask_bg02.png");
+    mask-image: url($img_url + "img/common/mask_bg02.png");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  .wp-caption-text {
+    font-weight: 400;
+    margin-top: 14px;
+    @include SP {
+      margin-top: 15px;
+    }
+  }
   p {
     @include font(15, 26, 100, 500);
-    margin-bottom: 30px;
+    + p {
+      margin-top: 25px;
+      @include SP {
+        margin-top: 10px;
+      }
+    }
+    + h2 {
+      margin-top: 39px;
+      @include SP {
+        margin-top: 28px;
+      }
+    }
+    + h3 {
+      margin-top: 39px;
+      @include SP {
+        margin-top: 28px;
+      }
+    }
+    + h4 {
+      margin-top: 29px;
+      @include SP {
+        margin-top: 28px;
+      }
+    }
+    + blockquote {
+      margin-top: 20px;
+      @include SP {
+        margin-top: 20px;
+      }
+    }
   }
   h2 {
     position: relative;
     @include font(25,1.6,120,700);
     padding-bottom: 18px;
+    margin-bottom: 25px;
     @include SP {
       @include font(18,28);
     }
@@ -231,13 +259,15 @@ a img.aligncenter {
   h3 {
     position: relative;
     @include font(20,1.6,120,700);
+    padding-left: 14px;
+    margin-bottom: 26px;
     @include SP {
       @include font(18,28);
     }
     &:before {
       position: absolute;
       content: "";
-      top: 0;
+      top: 4px;
       left: 0;
       width: 4px;
       height: 26px;
@@ -248,13 +278,14 @@ a img.aligncenter {
     position: relative;
     @include font(20,1.6,120,700);
     padding-left: 20px;
+    margin-bottom: 16px;
     @include SP {
       @include font(16,28);
     }
     &:before {
       position: absolute;
       content: "";
-      top: 5px;
+      top: 11px;
       left: 0;
       background: $blue01;
       border-radius: 2px;
@@ -263,8 +294,11 @@ a img.aligncenter {
     }
   }
   a {
+    display: inline-block;
     color: $blue01;
     @include ffGT;
+    letter-spacing: 0;
+    margin-top: 2px;
   }
   iframe {
     max-width: 100% !important;
@@ -282,7 +316,7 @@ a img.aligncenter {
       rgba($color: #F5BB1E, $alpha: 0.5),
       rgba($color: #F5BB1E, $alpha: 0.5)
     );
-    background-position: bottom 2px left;
+    background-position: bottom left;
     background-repeat: no-repeat;
     background-size: 100% 5px;
   }
@@ -299,8 +333,8 @@ a img.aligncenter {
     @include font(15, 30, 100, 400);
     border: 2px solid #DCDCDC;
     border-radius: 10px;
-    padding: 14px 17px;
-    margin-bottom: 38px;
+    padding: 18px;
+    margin-bottom: 20px;
     p {
       margin: 0;
     }
@@ -310,22 +344,16 @@ a img.aligncenter {
     }
   }
   .img-2col {
-    @include flexbox;
-    margin: 26px 0 3px;
+    @include PC {
+      @include flexbox;
+      margin: 30px 0 59px;
+    }
     @include SP {
-      @include flex-direction(column);
+      margin: 30px 0 59px;
     }
     &__photo {
       @include flex(1);
       @include aspect-ratio(440, 310);
-      -webkit-mask-image: url($img_url + "img/common/mask_bg02.png");
-      mask-image: url($img_url + "img/common/mask_bg02.png");
-      -webkit-mask-position: center;
-      mask-position: center;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 100% 100%;
-      mask-size: 100% 100%;
       @include SP {
         @include aspect-ratio(327, 223);
         margin-bottom: 5px;
@@ -339,14 +367,25 @@ a img.aligncenter {
         max-height: 310px;
         object-fit: cover;
         margin: 0;
+        -webkit-mask-image: url($img_url + "img/common/mask_bg03.png");
+        mask-image: url($img_url + "img/common/mask_bg03.png");
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
         @include SP {
           max-height: 223px;
         }
       }
       &:not(:last-child) {
         @include PC {
-          margin-right: 30px;
+          margin-right: 20px;
         }
+      }
+      .wp-caption-text {
+        margin-top: 15px;
       }
     }
   }

@@ -14,6 +14,31 @@ include(APP_PATH . 'libs/head.php'); ?>
         <li>7月22日～「むらごとマルシェ」がスタート！</li>
       </ul>
     </div>
+    <div class="c-mainvisual">
+      <div class="mv-inner aos-init" data-aos="fade-up">
+        <div class="img-wave-blue">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+        </div>
+
+        <div class="img-wave-yellow">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+        </div>
+        <h1 class="mv-ttl">
+          <span class="mv-ttl-jp">ニュース</span>
+          <span class="mv-ttl-en">News</span>
+        </h1>
+      </div>
+    </div>
 
     <div class="inner1170">
       <div class="section-demo">
