@@ -319,6 +319,36 @@ a.c-btn01 {
       @include font(14, 24);
     }
   }
+  &.btn-anchor {
+    .arr01 {
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="white"/></svg>');
+      transform: translateX(-13px) scale(0.5);
+      opacity: 0;
+      @include PC {
+        left: 14px;
+      }
+      @include SP {
+        left: 9px;
+      }
+    }
+    .arr02 {
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="%2365B0D4"/></svg>');
+      transform: translateX(0) scale(1);
+      @include PC {
+        right: 14px;
+      }
+      @include SP {
+        right: 9px;
+      }
+    }
+    span {
+      position: relative;
+    }
+    .icon {
+      position: absolute;
+      left: 0; top: 0;
+    }
+  }
 }
 a.c-btn02 {
   position: relative;
