@@ -859,8 +859,8 @@
   height: 18px;
   @include SP {
     width: 41px;
-    height: 12px;
-    top: 32px;
+    height: 14px;
+    top: 40px;
     left: 4px;
   }
   .wave-top {
@@ -879,6 +879,7 @@
     overflow: hidden;
     position: relative;
     @include SP {
+      width: 28px;
       height: 5px;
     }
     .c-mask {
@@ -889,18 +890,24 @@
     height: 7px;
     background-size: auto 7px;
     @include SP {
+      height: 5px;
       background-size: auto 5px;
     }
   }
 }
 .img-wave-yellow {
-  top: 223px;
-  left: auto;
-  right: 186px;
   @include PC {
+    top: 223px;
+    left: auto;
+    right: 186px;
     @include max-screen(1000px) {
       right: 56px;
     }
+  }
+  @include SP {
+    top: 142px;
+    right: 3px;
+    left: auto;
   }
 }
 .c-bgwave01 {
