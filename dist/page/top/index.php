@@ -182,66 +182,148 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="sec-how">
       <div class="how-ctn">
-        <div class="how-cicle"></div>
+        <div class="how-circle aos-init" data-aos=""></div>
         <div class="how-box">
           <div class="how-box__inner">
-            <h2 class="how-ttl">
-              <span class="ttl01 aos-init anim-ttl01" data-aos="">
+            <h2 class="t-ttlbox01">
+              <span class="ttl01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                 <span class="anim-inner">HOW TO ENJOY</span>
               </span>
-              <span class="ttl02 aos-init anim-ttl01" data-aos="">
+              <span class="ttl02 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                 <span class="anim-inner">楽しみ方</span>
               </span>
             </h2>
-            <div class="how-desc aos-init anim-ttl01" data-aos="">
+            <div class="t-desc01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
               <p class="txt anim-inner">日帰りから宿泊、夜の利用まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
             </div>
-            <div class="how-btn">
+            <div class="how-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
               <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
                 <i class="arr01"></i>
                 <span>楽しみ方を見る</span>
                 <i class="arr02"></i>
               </a>
             </div>
-            <div class="how-img img01">
+            <div class="how-img img01 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="">
             </div>
-            <div class="how-img img02">
+            <div class="how-img img02 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img02.png" rel="js-lazy" width="160" height="110" alt="">
             </div>
-            <div class="how-img img03">
+            <div class="how-img img03 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(219, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img03.png" rel="js-lazy" width="219" height="150" alt="">
             </div>
-            <div class="how-img img04">
+            <div class="how-img img04 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img04.png" rel="js-lazy" width="280" height="200" alt="">
             </div>
-            <div class="how-img img05">
+            <div class="how-img img05 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img05.png" rel="js-lazy" width="280" height="200" alt="">
             </div>
-            <div class="how-img img06">
+            <div class="how-img img06 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(220, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img06.png" rel="js-lazy" width="220" height="150" alt="">
             </div>
-            <div class="how-img img07">
+            <div class="how-img img07 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img07.png" rel="js-lazy" width="160" height="110" alt="">
             </div>
-            <div class="how-img img08">
+            <div class="how-img img08 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="">
             </div>
 
-            <div class="how-cloud cloud01">
+            <div class="how-cloud cloud01 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud01.png" rel="js-lazy" width="56" height="18" alt="">
             </div>
-            <div class="how-cloud cloud02">
-              <img src="<?php echo createSVG(124, 80) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud02.png" rel="js-lazy" width="124" height="80" alt="">
+            <div class="how-cloud cloud02 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
+              <img src="<?php echo createSVG(140, 106) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud02.png" rel="js-lazy" width="140" height="106" alt="">
             </div>
-            <div class="how-cloud cloud03">
-              <img src="<?php echo createSVG(98, 63) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud03.png" rel="js-lazy" width="98" height="63" alt="">
+            <div class="how-cloud cloud03 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
+              <img src="<?php echo createSVG(105, 117) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud03.png" rel="js-lazy" width="105" height="117" alt="">
             </div>
-            <div class="how-cloud cloud04">
+            <div class="how-cloud cloud04 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
               <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud04.png" rel="js-lazy" width="56" height="18" alt="">
             </div>
-          </div>
 
+            <div class="how-decor decor01 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
+              <img src="<?php echo createSVG(137, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor01.png" rel="js-lazy" width="137" height="110" alt="">
+            </div>
+            <div class="how-decor decor02 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
+              <img src="<?php echo createSVG(219, 176) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor02.png" rel="js-lazy" width="219" height="176" alt="">
+            </div>
+            <div class="how-decor decor03 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
+              <img src="<?php echo createSVG(148, 124) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="148" height="124" alt="">
+            </div>
+            <div class="how-decor decor04 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
+              <img src="<?php echo createSVG(198, 144) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor04.png" rel="js-lazy" width="198" height="144" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-sight">
+      <div class="t-wcm02">
+        <div class="sec-sight__inner">
+          <div class="sight-decor decor01 aos-init anim-scale01" data-aos="">
+            <img src="<?php echo createSVG(305, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor01.png" rel="js-lazy" width="305" height="144" alt="">
+          </div>
+          <div class="sight-decor decor02 aos-init anim-scale01" data-aos="">
+            <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="306" height="144" alt="">
+          </div>
+          <h2 class="t-ttlbox01">
+            <span class="ttl01 aos-init anim-ttl01" data-aos="">
+              <span class="anim-inner">SIGHTSEEING</span>
+            </span>
+            <span class="ttl02 aos-init anim-ttl01" data-aos="">
+              <span class="anim-inner">周辺観光</span>
+            </span>
+          </h2>
+          <div class="t-desc01 aos-init anim-ttl01" data-aos="">
+            <p class="txt anim-inner">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>周辺観光を組み合わせて充実した日をお過ごしください。</p>
+          </div>
+          <div class="sight-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
+            <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
+              <i class="arr01"></i>
+              <span>周辺観光を見る</span>
+              <i class="arr02"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="sight-slider aos-init" data-aos="fade-up">
+        <div class="sight-group">
+          <ul class="lst-thumb">
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
+            </li>
+          </ul>
+        </div>
+        <div class="sight-group">
+          <ul class="lst-thumb">
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="">
+            </li>
+            <li class="item">
+              <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
+            </li>
+          </ul>
         </div>
       </div>
     </div>
