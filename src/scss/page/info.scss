@@ -1,0 +1,133 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.sec-mv {
+	padding-top: 121px;
+	padding: 115px 20px 117px;
+	overflow: hidden;
+	@include SP {
+		padding-top: 88px;
+		padding-bottom: 57px;
+	}
+	.content-sec {
+		position: relative;
+		max-width: 1274px;
+		margin: 0 auto;
+		z-index: 2;
+	}
+
+	
+	.img-item-1 {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		transition: all .3s;
+		@include PC {
+			@include max-screen(1200px) {
+				width: 200px;
+			}
+			@include max-screen(1000px) {
+				width: 150px;
+				top: 130px;
+			}
+			@include max-screen(900px) {
+				top: 215px;
+			}
+		}
+		@include SP {
+			width: 88px;
+			top: -83px;
+			left: -5px;
+		}
+	}
+	.img-item-2 {
+		position: absolute;
+		top: -75px;
+		right: 15px;
+		transition: all .3s;
+		@include PC {
+			@include max-screen(1200px) {
+				width: 180px;
+				right: 0;
+			}
+			@include max-screen(1000px) {
+				width: 150px;
+				top: -105px;
+			}
+		}
+		@include SP {
+			width: 73px;
+			top: -90px;
+			right: 6px;
+		}
+	}
+	.tit-sec {
+		position: relative;
+		text-align: center;
+		margin-bottom: 71px;
+		@include SP {
+			margin-bottom: 33px;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			background: url($img_url + "img/guide/circle_gra.png") no-repeat center center/100% auto;
+			width: 180px;
+			height: 180px;
+			left: 50%;
+			margin-left: -90px;
+			top: -36px;
+			@include SP {
+				width: 160px;
+				height: 160px;
+				margin-left: -80px;
+				top: -20px;
+			}
+		}
+		span {
+			display: block;
+			@include font(18);
+			font-weight: 700;
+			color: $blue01;
+			letter-spacing: 2.2px;
+			margin-bottom: 14px;
+			@include SP {
+				@include font(15);
+				line-height: 25px;
+				letter-spacing: 1.8px;
+				margin-bottom: 10px;
+			}
+		}
+		strong {
+			display: block;
+			@include ffGT;
+			@include font(50);
+			font-weight: 600;
+			line-height: 1.5;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			@include PC {
+				@include max-screen(1200px) {
+					@include font(45);
+				}
+			}
+			@include SP {
+				@include font(34);
+				line-height: 41px;
+				letter-spacing: 3.4px;
+			}
+		}
+	}
+	.desc {
+		text-align: center;
+		@include font(18);
+		line-height: 30px;
+		letter-spacing: 2.2px;
+		font-weight: 700;
+		@include SP {
+			@include font(14);
+			line-height: 28px;
+			letter-spacing: 1.7px;
+		}
+	}
+}
