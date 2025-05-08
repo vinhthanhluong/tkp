@@ -480,6 +480,8 @@ footer {
 .how-ctn {
   position: relative;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   &::before {
     content: "";
     display: block;
@@ -492,6 +494,13 @@ footer {
   left: calc(50% - 475px);
   width: 950px;
   height: 950px;
+  @include PC {
+    @include max-screen(1440px) {
+      left: calc(50% - calc(475 / 1440 * 100vw));
+      width: calc(950 / 1440 * 100vw);
+      height: calc(950 / 1440 * 100vw);
+    }
+  }
   &:before {
     content: "";
     position: absolute;
@@ -524,6 +533,12 @@ footer {
       $blue04 100%
     );
     opacity: 0.3;
+    @include PC {
+      @include max-screen(1440px) {
+        max-width: calc(600 / 1440 * 100vw);
+        max-height: calc(600 / 1440 * 100vw);
+      }
+    }
   }
 }
 .how-box {
@@ -533,15 +548,25 @@ footer {
   width: 100%;
   height: 100%;
   padding-top: 346px;
+  @include PC {
+    @include max-screen(1440px) {
+      padding-top: calc(346 / 1440 * 100vw);
+    }
+  }
 }
-.how-box__inner {
-}
+// .how-box__inner {
+// }
 .how-ttl {
   .ttl01 {
     display: block;
     @include ffGT;
     @include font(50, 60, 0.1, 600);
     text-align: center;
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(50 / 1440 * 100vw);
+      }
+    }
   }
   .ttl02 {
     display: block;
@@ -549,19 +574,63 @@ footer {
     color: $blue01;
     text-align: center;
     margin-top: 18px;
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(18 / 1440 * 100vw);
+        margin-top: calc(18 / 1440 * 100vw);
+      }
+    }
   }
 }
 .how-desc {
   margin-top: 30px;
   text-align: center;
+  @include PC {
+    @include max-screen(1440px) {
+      margin-top: calc(30 / 1440 * 100vw);
+    }
+  }
   .txt {
     @include font(18, 30, 0.12, 700);
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(18 / 1440 * 100vw);
+      }
+    }
   }
 }
 .how-btn {
   margin-top: 41px;
+  @include PC {
+    @include max-screen(1440px) {
+      margin-top: calc(41 / 1440 * 100vw);
+    }
+  }
   .c-btn01 {
     max-width: 200px;
+    line-height: 0;
+    @include PC {
+      @include max-screen(1440px) {
+        max-width: calc(200 / 1440 * 100vw);
+        padding: calc(9 / 1440 * 100vw) calc(31 / 1440 * 100vw)
+          calc(9 / 1440 * 100vw) calc(21 / 1440 * 100vw);
+        .arr01,
+        .arr02 {
+          top: calc(50% - calc(10 / 1440 * 100vw));
+          width: calc(20 / 1440 * 100vw);
+          height: calc(20 / 1440 * 100vw);
+        }
+        .arr01 {
+          left: calc(14 / 1440 * 100vw);
+        }
+        .arr02 {
+          right: calc(14 / 1440 * 100vw);
+        }
+        span {
+          font-size: calc(16 / 1440 * 100vw);
+        }
+      }
+    }
   }
 }
 .how-img {
@@ -569,34 +638,90 @@ footer {
   &.img01 {
     top: 304px;
     left: 70px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(130 / 1440 * 100vw);
+        top: calc(304 / 1440 * 100vw);
+        left: calc(70 / 1440 * 100vw);
+      }
+    }
   }
   &.img02 {
     top: 209px;
     left: 340px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(160 / 1440 * 100vw);
+        top: calc(209 / 1440 * 100vw);
+        left: calc(340 / 1440 * 100vw);
+      }
+    }
   }
   &.img03 {
     top: 70px;
     left: 711px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(219 / 1440 * 100vw);
+        top: calc(70 / 1440 * 100vw);
+        left: calc(711 / 1440 * 100vw);
+      }
+    }
   }
   &.img04 {
     top: 274px;
     left: 1069px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(280 / 1440 * 100vw);
+        top: calc(274 / 1440 * 100vw);
+        left: calc(1069 / 1440 * 100vw);
+      }
+    }
   }
   &.img05 {
     top: 484px;
     left: 100px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(280 / 1440 * 100vw);
+        top: calc(484 / 1440 * 100vw);
+        left: calc(100 / 1440 * 100vw);
+      }
+    }
   }
   &.img06 {
     top: 730px;
     left: 500px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(220 / 1440 * 100vw);
+        top: calc(730 / 1440 * 100vw);
+        left: calc(500 / 1440 * 100vw);
+      }
+    }
   }
   &.img07 {
     top: 595px;
     left: 910px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(160 / 1440 * 100vw);
+        top: calc(595 / 1440 * 100vw);
+        left: calc(910 / 1440 * 100vw);
+      }
+    }
   }
   &.img08 {
     top: 545px;
     left: 1240px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(130 / 1440 * 100vw);
+        top: calc(545 / 1440 * 100vw);
+        left: calc(1240 / 1440 * 100vw);
+      }
+    }
   }
 }
 .how-cloud {
@@ -604,18 +729,93 @@ footer {
   &.cloud01 {
     top: 389px;
     left: 317px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(56 / 1440 * 100vw);
+        top: calc(389 / 1440 * 100vw);
+        left: calc(317 / 1440 * 100vw);
+      }
+    }
   }
   &.cloud02 {
     top: 94px;
     left: 517px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(140 / 1440 * 100vw);
+        top: calc(94 / 1440 * 100vw);
+        left: calc(517 / 1440 * 100vw);
+      }
+    }
   }
   &.cloud03 {
     top: 207px;
     left: 946px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(105 / 1440 * 100vw);
+        top: calc(207 / 1440 * 100vw);
+        left: calc(946 / 1440 * 100vw);
+      }
+    }
   }
   &.cloud04 {
     top: 800px;
     left: 841px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(56 / 1440 * 100vw);
+        top: calc(800 / 1440 * 100vw);
+        left: calc(841 / 1440 * 100vw);
+      }
+    }
+  }
+}
+.how-decor {
+  position: absolute;
+  &.decor01 {
+    top: 123px;
+    left: 144px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(137 / 1440 * 100vw);
+        top: calc(123 / 1440 * 100vw);
+        left: calc(144 / 1440 * 100vw);
+      }
+    }
+  }
+  &.decor02 {
+    top: 372px;
+    left: 959px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(219 / 1440 * 100vw);
+        top: calc(372 / 1440 * 100vw);
+        left: calc(959 / 1440 * 100vw);
+      }
+    }
+  }
+  &.decor03 {
+    top: 630px;
+    left: 315px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(148 / 1440 * 100vw);
+        top: calc(630 / 1440 * 100vw);
+        left: calc(315 / 1440 * 100vw);
+      }
+    }
+  }
+  &.decor04 {
+    top: 735px;
+    left: 1111px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(198 / 1440 * 100vw);
+        top: calc(735 / 1440 * 100vw);
+        left: calc(1111 / 1440 * 100vw);
+      }
+    }
   }
 }
 // Section How

@@ -70,9 +70,10 @@
     }
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
-      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100%
+        auto;
       z-index: -1;
       @include PC {
         width: 180px;
@@ -106,13 +107,13 @@
   }
   .mv-ttl {
     text-align: center;
-    &>span {
+    & > span {
       display: block;
     }
   }
   .mv-ttl-jp {
     color: $blue01;
-    @include font("",1.5,120,bold);
+    @include font("", 1.5, 120, bold);
     @include PC {
       margin-bottom: 12px;
       @include font(18);
@@ -123,7 +124,7 @@
     }
   }
   .mv-ttl-en {
-    @include font("",1.5,100,600);
+    @include font("", 1.5, 100, 600);
     @include ffGT;
     text-transform: uppercase;
     @include PC {
@@ -712,11 +713,11 @@ a.c-btn02 {
       @include PC {
         padding: 0 17px 0 19px;
         @include max-screen(1218px) {
-          padding: 0 calc(17 / 1170 * 100%) 0 calc(19 / 1170 * 100%);
+          padding: 0 calc(17 / 1440 * 100vw) 0 calc(19 / 1440 * 100vw);
         }
       }
       @include SP {
-        padding: calc(1 / 360 * 100%) calc(7 / 360 * 100%) 0;
+        padding: calc(1 / 375 * 100vw) calc(7 / 375 * 100vw) 0;
       }
     }
   }
@@ -737,11 +738,11 @@ a.c-btn02 {
       @include PC {
         padding: 0 17px 0 19px;
         @include max-screen(1218px) {
-          padding: 0 calc(17 / 1170 * 100%) 0 calc(19 / 1170 * 100%);
+          padding: 0 calc(17 / 1440 * 100vw) 0 calc(19 / 1440 * 100vw);
         }
       }
       @include SP {
-        padding: calc(1 / 360 * 100%) calc(7 / 360 * 100%) 0;
+        padding: calc(1 / 375 * 100vw) calc(7 / 375 * 100vw) 0;
       }
     }
   }
@@ -762,11 +763,11 @@ a.c-btn02 {
       @include PC {
         padding: 0 27px 0 29px;
         @include max-screen(1218px) {
-          padding: 0 calc(27 / 1170 * 100%) 0 calc(29 / 1170 * 100%);
+          padding: 0 calc(27 / 1440 * 100vw) 0 calc(29 / 1440 * 100vw);
         }
       }
       @include SP {
-        padding: calc(1 / 360 * 100%) calc(10 / 360 * 100%) 0;
+        padding: calc(1 / 375 * 100vw) calc(10 / 375 * 100vw) 0;
       }
     }
   }
@@ -787,11 +788,11 @@ a.c-btn02 {
       @include PC {
         padding: 0 7px 0 9px;
         @include max-screen(1218px) {
-          padding: 0 calc(7 / 1170 * 100%) 0 calc(9 / 1170 * 100%);
+          padding: 0 calc(7 / 1440 * 100vw) 0 calc(9 / 1440 * 100vw);
         }
       }
       @include SP {
-        padding: calc(1 / 360 * 100%) calc(3 / 360 * 100%) 0;
+        padding: calc(1 / 375 * 100vw) calc(3 / 375 * 100vw) 0;
       }
     }
   }
@@ -1140,7 +1141,7 @@ a.c-btn02 {
   isolation: isolate;
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     background: repeat-x top left/100% auto;
@@ -1171,4 +1172,3 @@ a.c-btn02 {
     }
   }
 }
-

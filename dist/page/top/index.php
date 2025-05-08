@@ -232,13 +232,26 @@ include(APP_PATH . 'libs/head.php'); ?>
               <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud01.png" rel="js-lazy" width="56" height="18" alt="">
             </div>
             <div class="how-cloud cloud02">
-              <img src="<?php echo createSVG(124, 80) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud02.png" rel="js-lazy" width="124" height="80" alt="">
+              <img src="<?php echo createSVG(140, 106) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud02.png" rel="js-lazy" width="140" height="106" alt="">
             </div>
             <div class="how-cloud cloud03">
-              <img src="<?php echo createSVG(98, 63) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud03.png" rel="js-lazy" width="98" height="63" alt="">
+              <img src="<?php echo createSVG(105, 117) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud03.png" rel="js-lazy" width="105" height="117" alt="">
             </div>
             <div class="how-cloud cloud04">
               <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud04.png" rel="js-lazy" width="56" height="18" alt="">
+            </div>
+
+            <div class="how-decor decor01">
+              <img src="<?php echo createSVG(137, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor01.png" rel="js-lazy" width="137" height="110" alt="">
+            </div>
+            <div class="how-decor decor02">
+              <img src="<?php echo createSVG(219, 176) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor02.png" rel="js-lazy" width="219" height="176" alt="">
+            </div>
+            <div class="how-decor decor03">
+              <img src="<?php echo createSVG(148, 124) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="148" height="124" alt="">
+            </div>
+            <div class="how-decor decor04">
+              <img src="<?php echo createSVG(198, 144) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor04.png" rel="js-lazy" width="198" height="144" alt="">
             </div>
           </div>
 
