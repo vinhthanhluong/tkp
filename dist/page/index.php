@@ -48,6 +48,18 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>レストラン予約</span>
             <i class="arr02"></i>
           </a>
+          <p class="demo-ttl">.c-btn02</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn02">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
+            <i class="arr02"></i>
+          </a>
+          <p class="demo-ttl">.c-btn02.is-center</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
+            <i class="arr02"></i>
+          </a>
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
@@ -156,6 +168,8 @@ include(APP_PATH . 'libs/head.php'); ?>
               </a>
             </li>
           </ul>
+          <p class="demo-ttl">.mod-park</p>
+          <?php include(APP_PATH . 'libs/mod_park.php'); ?>
         </div>
       </div>
     </div>

@@ -366,6 +366,9 @@ footer {
     position: relative;
     @include PC {
       top: -84px;
+      @include max-screen(1440px) {
+        top: calc(-84 / 1440 * 100vw);
+      }
     }
     @include SP {
       order: 2;
