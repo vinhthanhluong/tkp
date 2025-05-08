@@ -682,18 +682,9 @@ a.c-btn02 {
   // 360 205.5
   display: block;
   position: absolute;
-  @include PC {
-    border-width: 2px;
-    @include max-screen(1218px) {
-      border-width: calc(2 / 1170 * 100vw);
-    }
-  }
   @include SP {
     font-size: 0;
     line-height: 0;
-    @include max-screen(1218px) {
-      border-width: calc(0.74 / 375 * 100vw);
-    }
   }
 
   &.bnt01 {
@@ -805,6 +796,17 @@ a.c-btn02 {
     -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    @include PC {
+      border-width: 2px;
+      @include max-screen(1218px) {
+        border-width: calc(2 / 1170 * 100vw);
+      }
+    }
+    @include SP {
+      @include max-screen(1218px) {
+        border-width: calc(0.74 / 375 * 100vw);
+      }
+    }
     @include HOVER {
       background: $blue01;
       transform: translateY(5px);

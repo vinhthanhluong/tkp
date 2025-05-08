@@ -20,6 +20,54 @@ footer {
     }
   }
 }
+.t-wcm02 {
+  // 1440px
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.t-ttlbox01 {
+  .ttl01 {
+    display: block;
+    @include ffGT;
+    @include font(50, 60, 0.1, 600);
+    text-align: center;
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(50 / 1440 * 100vw);
+      }
+    }
+  }
+  .ttl02 {
+    display: block;
+    @include font(18, 25, 0.12, 700);
+    color: $blue01;
+    text-align: center;
+    margin-top: 18px;
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(18 / 1440 * 100vw);
+        margin-top: calc(18 / 1440 * 100vw);
+      }
+    }
+  }
+}
+.t-desc01 {
+  text-align: center;
+  @include PC {
+    @include max-screen(1440px) {
+      margin-top: calc(30 / 1440 * 100vw);
+    }
+  }
+  .txt {
+    @include font(18, 30, 0.12, 700);
+    @include PC {
+      @include max-screen(1440px) {
+        font-size: calc(18 / 1440 * 100vw);
+      }
+    }
+  }
+}
 // Common
 
 // Section Mainvisual
@@ -452,10 +500,10 @@ footer {
   position: relative;
   z-index: 1;
   @include PC {
-    padding: 37px 0 184px;
+    padding-top: 37px;
   }
   @include SP {
-    padding: 58px 0 74px;
+    padding-top: 58px;
   }
   &:before {
     content: "";
@@ -476,6 +524,9 @@ footer {
       background-size: 98px 54px;
     }
   }
+  .t-desc01 {
+    margin-top: 30px;
+  }
 }
 .how-ctn {
   position: relative;
@@ -488,12 +539,23 @@ footer {
     padding-top: calc(950 / 1440 * 100%);
   }
 }
-.how-cicle {
+.how-circle {
   position: absolute;
   top: 0;
   left: calc(50% - 475px);
   width: 950px;
   height: 950px;
+  opacity: 0;
+  transition: transform 0.3s ease;
+  &.aos-animate {
+    opacity: 1;
+    &:before {
+      transform: scale(1);
+    }
+    &:after {
+      transform: scale(1);
+    }
+  }
   @include PC {
     @include max-screen(1440px) {
       left: calc(50% - calc(475 / 1440 * 100vw));
@@ -515,6 +577,8 @@ footer {
       $blue04 100%
     );
     opacity: 0.12;
+    transform: scale(50%);
+    transition: transform 0.3s ease;
   }
   &:after {
     content: "";
@@ -533,6 +597,8 @@ footer {
       $blue04 100%
     );
     opacity: 0.3;
+    transform: scale(50%);
+    transition: transform 0.3s ease;
     @include PC {
       @include max-screen(1440px) {
         max-width: calc(600 / 1440 * 100vw);
@@ -541,6 +607,7 @@ footer {
     }
   }
 }
+
 .how-box {
   position: absolute;
   top: 0;
@@ -551,51 +618,6 @@ footer {
   @include PC {
     @include max-screen(1440px) {
       padding-top: calc(346 / 1440 * 100vw);
-    }
-  }
-}
-// .how-box__inner {
-// }
-.how-ttl {
-  .ttl01 {
-    display: block;
-    @include ffGT;
-    @include font(50, 60, 0.1, 600);
-    text-align: center;
-    @include PC {
-      @include max-screen(1440px) {
-        font-size: calc(50 / 1440 * 100vw);
-      }
-    }
-  }
-  .ttl02 {
-    display: block;
-    @include font(18, 25, 0.12, 700);
-    color: $blue01;
-    text-align: center;
-    margin-top: 18px;
-    @include PC {
-      @include max-screen(1440px) {
-        font-size: calc(18 / 1440 * 100vw);
-        margin-top: calc(18 / 1440 * 100vw);
-      }
-    }
-  }
-}
-.how-desc {
-  margin-top: 30px;
-  text-align: center;
-  @include PC {
-    @include max-screen(1440px) {
-      margin-top: calc(30 / 1440 * 100vw);
-    }
-  }
-  .txt {
-    @include font(18, 30, 0.12, 700);
-    @include PC {
-      @include max-screen(1440px) {
-        font-size: calc(18 / 1440 * 100vw);
-      }
     }
   }
 }
@@ -635,9 +657,24 @@ footer {
 }
 .how-img {
   position: absolute;
+  opacity: 0;
+  &.aos-animate {
+    opacity: 1;
+    &.img01,
+    &.img02,
+    &.img03,
+    &.img04,
+    &.img05,
+    &.img06,
+    &.img07,
+    &.img08 {
+      transform: translate(0);
+    }
+  }
   &.img01 {
     top: 304px;
     left: 70px;
+    transform: translate(280%, 120%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(130 / 1440 * 100vw);
@@ -649,6 +686,7 @@ footer {
   &.img02 {
     top: 209px;
     left: 340px;
+    transform: translate(90%, 70%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(160 / 1440 * 100vw);
@@ -660,6 +698,7 @@ footer {
   &.img03 {
     top: 70px;
     left: 711px;
+    transform: translate(-20%, 100%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(219 / 1440 * 100vw);
@@ -671,6 +710,7 @@ footer {
   &.img04 {
     top: 274px;
     left: 1069px;
+    transform: translate(-130%, 60%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(280 / 1440 * 100vw);
@@ -682,6 +722,7 @@ footer {
   &.img05 {
     top: 484px;
     left: 100px;
+    transform: translate(150%, 10%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(280 / 1440 * 100vw);
@@ -693,6 +734,7 @@ footer {
   &.img06 {
     top: 730px;
     left: 500px;
+    transform: translate(50%, -90%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(220 / 1440 * 100vw);
@@ -704,6 +746,7 @@ footer {
   &.img07 {
     top: 595px;
     left: 910px;
+    transform: translate(-80%, -20%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(160 / 1440 * 100vw);
@@ -715,6 +758,7 @@ footer {
   &.img08 {
     top: 545px;
     left: 1240px;
+    transform: translate(-370%, 90%);
     @include PC {
       @include max-screen(1440px) {
         width: calc(130 / 1440 * 100vw);
@@ -819,4 +863,124 @@ footer {
   }
 }
 // Section How
-/* Ellipse 19 */
+// Section SIGHT
+.sec-sight {
+  margin-top: 101px;
+  .t-desc01 {
+    margin-top: 30px;
+  }
+}
+.sec-sight__inner {
+  position: relative;
+}
+.sight-decor {
+  position: absolute;
+  &.decor01 {
+    top: -167px;
+    left: 82px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(305 / 1440 * 100vw);
+        top: calc(-167 / 1440 * 100vw);
+        left: calc(82 / 1440 * 100vw);
+      }
+    }
+  }
+  &.decor02 {
+    top: -120px;
+    left: 1040px;
+    @include PC {
+      @include max-screen(1440px) {
+        width: calc(306 / 1440 * 100vw);
+        top: calc(-120 / 1440 * 100vw);
+        left: calc(1040 / 1440 * 100vw);
+      }
+    }
+  }
+}
+.sight-btn {
+  margin-top: 41px;
+  .c-btn01 {
+    max-width: 200px;
+    line-height: 0;
+  }
+}
+.sight-slider {
+  @include flexbox;
+  position: relative;
+  z-index: 5;
+  flex-flow: row nowrap;
+  width: 100vw;
+  overflow: hidden;
+  @include PC {
+    margin-top: 60px;
+  }
+  @include SP {
+    margin-top: 30px;
+  }
+}
+.sight-group {
+  display: table-cell;
+  padding: 0 10px;
+  @include PC {
+    @include max-screen(1440px) {
+      padding: 0 calc(10 / 1440 * 100vw);
+    }
+  }
+
+  &:nth-child(1) {
+    -webkit-animation: logo_slider 40s -20s linear infinite;
+    animation: logo_slider 40s -20s linear infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  &:nth-child(2) {
+    -webkit-animation: logo_slider2 40s linear infinite;
+    animation: logo_slider2 40s linear infinite;
+  }
+  .lst-thumb {
+    @include flexbox;
+    @include justify-content(space-between);
+    // min-width: 3180px;
+    min-width: 1580px;
+    @include PC {
+      @include max-screen(1440px) {
+        min-width: calc(1580 / 1440 * 100vw);
+      }
+    }
+    .item {
+      overflow: hidden;
+      @include PC {
+        // min-width: calc(300 / 3180 * 100%);
+        // margin-right: calc(20 / 3180 * 100%);
+        min-width: calc(300 / 1580 * 100%);
+        margin-right: calc(20 / 1580 * 100%);
+      }
+      @include SP {
+        min-width: 128px;
+        margin-right: 16px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@-webkit-keyframes logo_slider {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes logo_slider2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+// Section SIGHT
