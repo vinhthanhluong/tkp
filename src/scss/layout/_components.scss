@@ -54,6 +54,108 @@
 
 /* ===================== MAINVISUAL ===================== */
 .c-mainvisual {
+  @include PC {
+    padding: 74px 0 92px;
+  }
+  @include SP {
+    padding: 55px 0 58px;
+    overflow: hidden;
+  }
+  .mv-inner {
+    position: relative;
+    padding: 0 24px;
+    margin: 0 auto;
+    @include PC {
+      max-width: 1218px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
+      z-index: -1;
+      @include PC {
+        width: 180px;
+        height: 55px;
+      }
+      @include SP {
+        width: 82px;
+        height: 26px;
+      }
+    }
+    &:before {
+      @include PC {
+        left: 69px;
+        top: 88px;
+      }
+      @include SP {
+        left: -25px;
+        top: 68px;
+      }
+    }
+    &:after {
+      @include PC {
+        right: 69px;
+        top: -32px;
+      }
+      @include SP {
+        right: -26px;
+        top: -16px;
+      }
+    }
+  }
+  .mv-ttl {
+    text-align: center;
+    &>span {
+      display: block;
+    }
+  }
+  .mv-ttl-jp {
+    color: $blue01;
+    @include font("",1.5,120,bold);
+    @include PC {
+      margin-bottom: 12px;
+      @include font(18);
+    }
+    @include SP {
+      @include font(15);
+      margin-bottom: 7px;
+    }
+  }
+  .mv-ttl-en {
+    @include font("",1.5,100,600);
+    @include ffGT;
+    text-transform: uppercase;
+    @include PC {
+      @include font(50);
+    }
+    @include SP {
+      @include font(34);
+    }
+  }
+  .img-wave-blue {
+    @include PC {
+      top: -32px;
+      left: 50%;
+      margin-left: -290px;
+    }
+    @include SP {
+      top: -17px;
+      left: 34px;
+    }
+  }
+  .img-wave-yellow {
+    left: auto;
+    @include PC {
+      right: 50%;
+      margin-right: -305px;
+      top: 120px;
+    }
+    @include SP {
+      right: 34px;
+      top: 75px;
+    }
+  }
 }
 .c-breadcrumb {
   @include PC {
@@ -119,14 +221,14 @@
 }
 
 /* ===================== BUTTON ===================== */
-.c-btn01 {
+a.c-btn01 {
   position: relative;
   display: block;
   overflow: hidden;
   width: 100%;
   max-width: 220px;
   text-align: center;
-  // background: #fff;
+  background: #fff;
   border: solid 1px $blue01;
   border-radius: 25px;
   transition: all 0.4s ease;
@@ -595,11 +697,11 @@ a.c-btn02 {
 
   &.bnt01 {
     @include PC {
-      top: 70px;
-      left: 61px;
+      top: 69px;
+      left: 60px;
       @include max-screen(1218px) {
-        top: calc(70 / 668 * 100%);
-        left: calc(61 / 1170 * 100%);
+        top: calc(69 / 668 * 100%);
+        left: calc(60 / 1170 * 100%);
       }
     }
     @include SP {
@@ -620,10 +722,10 @@ a.c-btn02 {
   }
   &.bnt02 {
     @include PC {
-      top: 70px;
-      left: 304px;
+      top: 69px;
+      left: 303px;
       @include max-screen(1218px) {
-        top: calc(70 / 668 * 100%);
+        top: calc(69 / 668 * 100%);
         left: calc(304 / 1170 * 100%);
       }
     }
@@ -645,11 +747,11 @@ a.c-btn02 {
   }
   &.bnt03 {
     @include PC {
-      top: 66px;
-      left: 778px;
+      top: 65px;
+      left: 777px;
       @include max-screen(1218px) {
-        top: calc(66 / 668 * 100%);
-        left: calc(778 / 1170 * 100%);
+        top: calc(65 / 668 * 100%);
+        left: calc(777 / 1170 * 100%);
       }
     }
     @include SP {
@@ -670,11 +772,11 @@ a.c-btn02 {
   }
   &.bnt04 {
     @include PC {
-      top: 424px;
-      left: 560px;
+      top: 423px;
+      left: 559px;
       @include max-screen(1218px) {
-        top: calc(424 / 668 * 100%);
-        left: calc(560 / 1170 * 100%);
+        top: calc(423 / 668 * 100%);
+        left: calc(559 / 1170 * 100%);
       }
     }
     @include SP {
@@ -1002,7 +1104,7 @@ a.c-btn02 {
     left: auto;
   }
 }
-.c-bgwave01 {
+.c-bg-wave01 {
   position: relative;
   isolation: isolate;
   background: repeat-x top center;
@@ -1019,11 +1121,12 @@ a.c-btn02 {
   //   content: '';
   //   top: 0;
   //   left: 0;
-  //   background: repeat-x top left;
+  //   background: url($img_url + "img/common/wave_bg.png") repeat-x top left;
   //   background-size: 100% auto;
   //   width: 100%;
+  //   z-index: -1;
+  //   pointer-events: none;
   //   @include PC {
-  //     background-image: url($img_url + "img/common/wave_bg.png");
   //     height: 450px;
   //   }
   //   @include SP {
@@ -1032,3 +1135,40 @@ a.c-btn02 {
   //   }
   // }
 }
+.c-bg-wave02 {
+  position: relative;
+  isolation: isolate;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: repeat-x top left/100% auto;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  &:before {
+    top: 0;
+    @include PC {
+      background-image: url($img_url + "img/common/wave_bg.png");
+      height: 450px;
+    }
+    @include SP {
+      background-image: url($img_url + "img/common/wave_bg_sp.png");
+      height: 491px;
+    }
+  }
+  &:after {
+    bottom: 0;
+    @include PC {
+      background-image: url($img_url + "img/guide/bg_wave_grey.png");
+      height: 450px;
+    }
+    @include SP {
+      background-image: url($img_url + "img/guide/bg_wave_grey_sp.png");
+      height: 519px;
+    }
+  }
+}
+

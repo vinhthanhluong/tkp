@@ -14,6 +14,31 @@ include(APP_PATH . 'libs/head.php'); ?>
         <li>7月22日～「むらごとマルシェ」がスタート！</li>
       </ul>
     </div>
+    <div class="c-mainvisual">
+      <div class="mv-inner aos-init" data-aos="fade-up">
+        <div class="img-wave-blue">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+        </div>
+
+        <div class="img-wave-yellow">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+        </div>
+        <h1 class="mv-ttl">
+          <span class="mv-ttl-jp">ニュース</span>
+          <span class="mv-ttl-en">News</span>
+        </h1>
+      </div>
+    </div>
 
     <div class="inner1170">
       <div class="section-demo">
@@ -28,12 +53,21 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #65b0d4; color: #fff;">$blue01: #65b0d4;</li>
           <li style="background: #2e8ab7; color: #fff;">$blue02: #2e8ab7;</li>
           <li style="background: #1b3da3; color: #fff;">$blue03: #1b3da3;</li>
+          <li style="background: #63ccff; color: #fff;">$blue04: #63ccff;</li>
           <li style="background: #f1f1f1;">$gray01: #f1f1f1;</li>
           <li style="background: #f2f2f2;">$gray02: #f2f2f2;</li>
           <li style="background: #f5bb1e; color: #fff;">$yellow01: #f5bb1e;</li>
+          <li style="background: #ffdea1;">$yellow02: #ffdea1;</li>
+          <li style="background: #FFCB6A;">$yellow03: #FFCB6A;</li>
           <li style="background: #b85632; color: #fff;">$orange01: #b85632;</li>
           <li style="background: #755c49; color: #fff;">$brown01: #755c49;</li>
         </ul>
+
+        <p class="demo-ttl">.c-bg-wave01</p>
+        <div class="c-bg-wave01"></div>
+
+        <p class="demo-ttl">.c-bg-wave02</p>
+        <div class="c-bg-wave02"></div>
 
         <div class="section-demo">
           <p class="demo-ttl">.c-btn01</p>
@@ -221,6 +255,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (min-width: 768px) {
+    .c-bg-wave01,
+    .c-bg-wave02 {
+      height: 450px;
+    }
     .sec-relate {
       padding: 73px 0 76px;
     }
@@ -231,6 +269,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (max-width: 767px) {
+    .c-bg-wave01,
+    .c-bg-wave02 {
+      height: 293px;
+    }
     .sec-relate {
       padding: 49px 0 48px;
     }
