@@ -69,8 +69,15 @@
       opacity: 1;
     }
     &__thumb {
-      position: relative;
       @include aspect-ratio(100, 100);
+      -webkit-mask-image: url($img_url + "img/common/mask_bg04.png");
+      mask-image: url($img_url + "img/common/mask_bg04.png");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
       @include PC {
         width: calc(100/328*100%);
         max-width: 100px;
@@ -101,8 +108,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 100%;
-        z-index: 2;
       }
     }
     &__ttl {
@@ -143,55 +148,6 @@
     @include PC {
       max-width: 200px;
       margin: 1px 22px 0;
-      padding-left: 31px;
-      padding-right: 17px;
-      &:before {
-        left: 100%;
-        right: 0;
-      }
-    }
-    @include HOVER {
-      &:before {
-        right: auto;
-        left: 0;
-      }
-      span {
-        transform: translateX(-13px);
-      }
-      .arr01 {
-        transform: translateX(0) scale(1);
-      }
-      .arr02 {
-        transform: translateX(-13px) scale(0.5);
-      }
-    }
-    @include SP {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-    }
-    .arr01 {
-      left: auto;
-      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="white"/></svg>');
-      @include PC {
-        right: 14px;
-        transform: translateX(13px) scale(0.5);
-      }
-      @include SP {
-        right: 9px;
-      }
-    }
-    .arr02 {
-      right: auto;
-      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>');
-      @include PC {
-        left: 14px;
-      }
-      @include SP {
-        left: 9px;
-      }
     }
   }
 }

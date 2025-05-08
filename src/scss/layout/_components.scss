@@ -70,10 +70,9 @@
     }
     &:before,
     &:after {
-      content: "";
+      content: '';
       position: absolute;
-      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100%
-        auto;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
       z-index: -1;
       @include PC {
         width: 180px;
@@ -107,13 +106,13 @@
   }
   .mv-ttl {
     text-align: center;
-    & > span {
+    &>span {
       display: block;
     }
   }
   .mv-ttl-jp {
     color: $blue01;
-    @include font("", 1.5, 120, bold);
+    @include font("",1.5,120,bold);
     @include PC {
       margin-bottom: 12px;
       @include font(18);
@@ -124,7 +123,7 @@
     }
   }
   .mv-ttl-en {
-    @include font("", 1.5, 100, 600);
+    @include font("",1.5,100,600);
     @include ffGT;
     text-transform: uppercase;
     @include PC {
@@ -350,6 +349,59 @@ a.c-btn01 {
       left: 0; top: 0;
     }
   }
+  &.is-cover {
+    @include PC {
+      padding-left: 31px;
+      padding-right: 17px;
+      &:before {
+        left: 100%;
+        right: 0;
+      }
+    }
+    @include HOVER {
+      &:before {
+        right: auto;
+        left: 0;
+      }
+      span {
+        transform: translateX(-13px);
+      }
+      .arr01 {
+        transform: translateX(0) scale(1);
+      }
+      .arr02 {
+        transform: translateX(-13px) scale(0.5);
+      }
+    }
+    @include SP {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+    .arr01 {
+      left: auto;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="white"/></svg>');
+      @include PC {
+        right: 14px;
+        transform: translateX(13px) scale(0.5);
+      }
+      @include SP {
+        right: 9px;
+      }
+    }
+    .arr02 {
+      right: auto;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>');
+      @include PC {
+        left: 14px;
+      }
+      @include SP {
+        left: 9px;
+      }
+    }
+  }
 }
 a.c-btn02 {
   position: relative;
@@ -433,6 +485,30 @@ a.c-btn02 {
     transition: transform 0.4s ease;
   }
 }
+.c-link {
+  display: inline-block;
+  vertical-align: top;
+  @include font(16,1.5,100,bold);
+  color: $blue01;
+  position: relative;
+  padding-left: 24px;
+  color: $blue01;
+  &:link,
+  &:visited,
+  &:active {
+    color: $blue01;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 11.3035L3.75 11.3035L3.75 9.69645L13.2594 9.69645L9.06875 5.38622L10.1734 4.25L16.25 10.5L10.1734 16.75L9.06875 15.6138L13.2594 11.3035Z" fill="%2365B0D4"/></svg>') no-repeat center center/contain;
+  }
+}
+
 /* ===================== TITLE ===================== */
 .c-ttl01 {
   .c-ttl01__en {

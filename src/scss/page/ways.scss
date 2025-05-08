@@ -1,0 +1,330 @@
+@charset 'UTF-8';
+@import "../utility/*";
+#wrap {
+  @include PC {
+    padding-top: 144px;
+  }
+  @include SP {
+    padding-top: 93px;
+  }
+}
+.c-mainvisual {
+  @include PC {
+    padding-bottom: 77px;
+  }
+  @include SP {
+    .mv-inner {
+      &:before {
+        top: 88px;
+      }
+    }
+    .img-wave-yellow {
+      top: 95px;
+    }
+  }
+}
+
+.ways-tabs {
+  @include PC {
+    margin-bottom: 56px;
+  }
+  @include SP {
+    margin-bottom: 48px;
+  }
+  .tab-inner {
+    @include PC {
+      max-width: 1218px;
+      padding: 0 24px;
+      margin: 0 auto;
+    }
+    @include SP {
+      padding: 0 16px;
+    }
+  }
+}
+.tab-list {
+  @include font("",1.75,120,bold);
+  border-radius: 50px;
+  border: 1px solid $blue01;
+  @include flexbox;
+  @include PC {
+    max-width: 590px;
+    margin: 0 auto;
+    @include font(18);
+    padding: 3px;
+  }
+  @include SP {
+    padding: 4px;
+    @include font(14);
+  }
+  &>li {
+    width: 50%;
+    border-radius: 50px;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    transition: 0.5s ease;
+    padding: 4px 10px;
+    @include PC {
+      min-height: 56px;
+      .is-windows & {
+        padding-top: 7px;
+      }
+    }
+    @include SP {
+      min-height: 40px;
+    }
+    @include HOVER {
+      color: $blue01;
+    }
+    &.is-active {
+      background: $blue01;
+      color: #fff;
+    }
+  }
+}
+.sec-ways {
+  position: relative;
+  .ways-inner {
+    @include PC {
+      margin: 0 auto;
+      padding: 0 25px;
+      max-width: 1390px;
+    }
+    @include SP {
+      padding: 0 24px;
+    }
+  }
+  .ways-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    @include PC {
+      left: 50%;
+      margin-left: -642px;
+      width: 100px;
+      padding: 171px 0 138px 24px;
+      @include max-screen(1300px) {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+    @include SP {
+      width: 70px;
+      left: 26px;
+      padding: 63px 0;
+    }
+  }
+  .ways-sticky {
+    position: sticky;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @include PC {
+      max-height: calc(100vh - 150px);
+      top: 150px;
+    }
+    @include SP {
+      max-height: calc(100vh - 80px);
+      top: 80px;
+    }
+  }
+  .ways-container {
+    @include PC {
+      padding: 139px 0 141px;
+    }
+    @include SP {
+      padding: 64px 0 56px;
+    }
+    &:last-child {
+      @include PC {
+        padding-bottom: 138px;
+      }
+      @include SP {
+        padding-top: 56px;
+      }
+    }
+  }
+  .ways-list {
+    @include PC {
+      padding-left: 200px;
+      @include max-screen(1440px) {
+        padding-left: vw-pc(200px,1440);
+      }
+    }
+    @include SP {
+      padding-left: 87px;
+    }
+  }
+  .ways-item {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      @include flex-direction(row-reverse);
+      margin-bottom: 50px;
+    }
+    @include SP {
+      margin-bottom: 39px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ways-info {
+    @include PC {
+      -webkit-align-self: center;
+      align-self: center;
+      margin-right: 30px;
+      width: calc(520/1140*100%);
+      max-width: 450px
+    }
+  }
+  .ways-time {
+    @include ffGT;
+    @include font("",1.5,50,500);
+    @include PC {
+      margin-bottom: 20px;
+      @include font(20);
+    }
+    @include SP {
+      margin-bottom: 15px;
+      @include font(16);
+    }
+  }
+  .ways-ttl {
+    position: relative;
+    @include font("",1.5,100,bold);
+    @include PC {
+      margin-bottom: 22px;
+      padding-left: 20px;
+      @include font(32);
+      @include max-screen(1280px) {
+        font-size: vw-pc(30px,1280)
+      }
+    }
+    @include SP {
+      @include font(16);
+      padding-left: 14px;
+      margin-bottom: 13px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      background: linear-gradient(180deg,rgba($yellow01, 1) 0%, rgba($yellow01, 1) calc(50% - 1px), rgba(#fff, 1) calc(50% - 1px), rgba(#fff, 1) 50%, rgba($blue01, 1) 50%, rgba($blue01, 1) 100%);;
+      width: 4px;
+      border-radius: 5px;
+      @include PC {
+        top: 7px;
+        bottom: 7px;
+        @include max-screen(1280px) {
+          top: vw-pc(7px,1280);
+          bottom: vw-pc(7px,1280);
+        }
+      }
+      @include SP {
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .ways-desc {
+    letter-spacing: 0.1em;
+    @include PC {
+      margin-bottom: 33px;
+      @include font(16,28);
+    }
+    @include SP {
+      margin-bottom: 16px;
+      @include font(15,28);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .ways-img {
+    -webkit-mask-image: url($img_url + "img/ways/ways_mask.png");
+    mask-image: url($img_url + "img/ways/ways_mask.png");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    @include PC {
+      width: calc(620/1140*100%);
+      padding-top: calc(400/1140*100%);
+    }
+    @include SP {
+      @include aspect-ratio(240, 155);
+      margin-bottom: 18px;
+    }
+  }
+  .time-list {
+    @include ffGT;
+    font-weight: 600;;
+    &>li {
+      @include PC {
+        margin-bottom: 16px;
+      }
+      @include SP {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .time-txt {
+    @include font("",1.5,50);
+    @include PC {
+      margin-bottom: 13px;
+      @include font(20);
+    }
+    @include SP {
+      margin-bottom: 14px;
+      @include font(16);
+    }
+  }
+  .time-sub {
+    @include font("",1.75,120);
+    @include PC {
+      padding-left: 4px;
+    }
+    @include SP {
+      padding-left: 2px;
+      @include font(12);
+    }
+    &>li {
+      @include PC {
+        margin-bottom: 7px;
+      }
+      @include SP {
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      @include PC {
+        color: #7f7e7c;
+        transition: 0.5s ease;
+        &:link,
+        &:visited,
+        &:active {
+          color: #7f7e7c
+        }
+      }
+      @include HOVER {
+        opacity: 1;
+        color: $color_link;
+      }
+    }
+  }
+}
+.tab-content {
+  display: none;
+  &.is-current {
+    display: block;
+  }
+}
