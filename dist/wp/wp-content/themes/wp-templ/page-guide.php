@@ -19,12 +19,15 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
 
-        <!-- <p class="img-wave-blue">
-          <img width="56" height="18" src="<?php echo createSVG(56, 18); ?>" data-src="<?php echo APP_ASSETS ?>img/common/ico_wave_blue.png" rel="js-lazy" alt="">
-        </p> -->
-        <p class="img-wave-yellow">
-          <img width="56" height="18" src="<?php echo createSVG(56, 18); ?>" data-src="<?php echo APP_ASSETS ?>img/common/ico_wave_yellow.png" rel="js-lazy" alt="">
-        </p>
+        <div class="img-wave-yellow">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+        </div>
+        
         <p class="img-item-1">
           <img width="257" height="200" src="<?php echo createSVG(257, 200); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_1.png" rel="js-lazy" alt="">
         </p>

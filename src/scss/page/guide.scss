@@ -16,53 +16,7 @@
 		z-index: 2;
 	}
 
-	.img-wave-blue {
-		position: absolute;
-		top: -56px;
-		left: 197px;
-		overflow: hidden;
-		width: 56px;
-		height: 18px;
-		@include SP {
-			width: 41px;
-			height: 12px;
-			top: 32px;
-			left: 4px;
-		}
-		.wave-top {
-			margin-bottom: 3px;
-			width: 100%;
-			height: 7px;
-			position: relative;
-		}
-		.wave-bottom {
-			width: 37px;
-			height: 7px;
-			margin: 0 auto;
-			overflow: hidden;
-			position: relative;
-			.c-mask {
-				animation-duration: 50s;
-			}
-		}
-		.c-mask {
-			height: 7px;
-    	background-size: auto 7px;
-    	@include SP {
-    		background-size: auto 7px;
-    	}
-		}
-	}
-	.img-wave-yellow {
-		position: absolute;
-		@include PC {
-			top: 223px;
-			right: 186px;
-			@include max-screen(1000px) {
-				right: 56px;
-			}
-		}
-	}
+	
 	.img-item-1 {
 		position: absolute;
 		top: 80px;

@@ -829,6 +829,7 @@
     animation-name: brandSlidePC;
   }
   @include SP {
+    height: 5px;
     -webkit-animation-name: brandSlideSP;
     animation-name: brandSlideSP;
   }
@@ -846,6 +847,59 @@
     }
     100% {
       background-position: 0;
+    }
+  }
+}
+.img-wave-blue, .img-wave-yellow {
+  position: absolute;
+  top: -56px;
+  left: 197px;
+  overflow: hidden;
+  width: 56px;
+  height: 18px;
+  @include SP {
+    width: 41px;
+    height: 12px;
+    top: 32px;
+    left: 4px;
+  }
+  .wave-top {
+    margin-bottom: 3px;
+    width: 100%;
+    height: 7px;
+    position: relative;
+    @include SP {
+      height: 5px;
+    }
+  }
+  .wave-bottom {
+    width: 37px;
+    height: 7px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    @include SP {
+      height: 5px;
+    }
+    .c-mask {
+      animation-duration: 60s;
+    }
+  }
+  .c-mask {
+    height: 7px;
+    background-size: auto 7px;
+    @include SP {
+      background-size: auto 5px;
+    }
+  }
+}
+.img-wave-yellow {
+  top: 223px;
+  left: auto;
+  right: 186px;
+  @include PC {
+    @include max-screen(1000px) {
+      right: 56px;
     }
   }
 }
