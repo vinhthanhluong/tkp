@@ -180,6 +180,71 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
     </div>
+    <div class="sec-how">
+      <div class="how-ctn">
+        <div class="how-cicle"></div>
+        <div class="how-box">
+          <div class="how-box__inner">
+            <h2 class="how-ttl">
+              <span class="ttl01 aos-init anim-ttl01" data-aos="">
+                <span class="anim-inner">HOW TO ENJOY</span>
+              </span>
+              <span class="ttl02 aos-init anim-ttl01" data-aos="">
+                <span class="anim-inner">楽しみ方</span>
+              </span>
+            </h2>
+            <div class="how-desc aos-init anim-ttl01" data-aos="">
+              <p class="txt anim-inner">日帰りから宿泊、夜の利用まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
+            </div>
+            <div class="how-btn">
+              <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
+                <i class="arr01"></i>
+                <span>楽しみ方を見る</span>
+                <i class="arr02"></i>
+              </a>
+            </div>
+            <div class="how-img img01">
+              <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="">
+            </div>
+            <div class="how-img img02">
+              <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img02.png" rel="js-lazy" width="160" height="110" alt="">
+            </div>
+            <div class="how-img img03">
+              <img src="<?php echo createSVG(219, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img03.png" rel="js-lazy" width="219" height="150" alt="">
+            </div>
+            <div class="how-img img04">
+              <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img04.png" rel="js-lazy" width="280" height="200" alt="">
+            </div>
+            <div class="how-img img05">
+              <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img05.png" rel="js-lazy" width="280" height="200" alt="">
+            </div>
+            <div class="how-img img06">
+              <img src="<?php echo createSVG(220, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img06.png" rel="js-lazy" width="220" height="150" alt="">
+            </div>
+            <div class="how-img img07">
+              <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img07.png" rel="js-lazy" width="160" height="110" alt="">
+            </div>
+            <div class="how-img img08">
+              <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="">
+            </div>
+
+            <div class="how-cloud cloud01">
+              <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud01.png" rel="js-lazy" width="56" height="18" alt="">
+            </div>
+            <div class="how-cloud cloud02">
+              <img src="<?php echo createSVG(124, 80) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud02.png" rel="js-lazy" width="124" height="80" alt="">
+            </div>
+            <div class="how-cloud cloud03">
+              <img src="<?php echo createSVG(98, 63) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud03.png" rel="js-lazy" width="98" height="63" alt="">
+            </div>
+            <div class="how-cloud cloud04">
+              <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud04.png" rel="js-lazy" width="56" height="18" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/page/top.min.js?v=<?php echo APP_VER ?>"></script>
