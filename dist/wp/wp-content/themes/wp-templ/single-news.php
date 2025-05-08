@@ -26,12 +26,16 @@ include(APP_PATH . 'libs/head.php');
     </div>
 
     <div class="article-news inner1170">
+      <div class="img-wave-blue aos-init" data-aos="fade-up">
+        <div class="wave-top">
+          <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+        </div>
+        <div class="wave-bottom">
+          <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+        </div>
+      </div>
       <div class="article-inner">
         <div class="img-dot aos-init" data-aos="fade-up"><img width="180" height="55" src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/dot_decor.png" rel="js-lazy" alt="decoration"></div>
-        <div class="img-wave-blue">
-          <p class="c-mask img-l" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_l.png"></p>
-          <p class="c-mask img-s" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue_s.png"></p>
-        </div>
         <div class="box-meta aos-init" data-aos="fade-up">
           <span class="meta-date"><?php echo $sg_date; ?></span>
           <?php if (!empty($sg_terms)) { foreach ($sg_terms as $term) { ?>
@@ -66,18 +70,18 @@ include(APP_PATH . 'libs/head.php');
           </div>
         </div>
         <div class="sg-pagination">
-          <a href="#">
+          <a href="#" class="prev">
             <p class="prev__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img01.jpg" rel="js-lazy" alt=""></p>
-            <p class="prev__ttl pc">7月22日～「むらごとマルシェ」がスタート！</p>
+            <p class="prev__ttl">7月22日～「むらごとマルシェ」がスタート！</p>
           </a>
           <a href="<?php echo APP_URL ?>news/" class="c-btn01">
             <i class="arr01"></i>
             <span>一覧へ戻る</span>
             <i class="arr02"></i>
           </a>
-          <a href="#">
+          <a href="#" class="next">
             <p class="next__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img02.jpg" rel="js-lazy" alt=""></p>
-            <p class="next__ttl pc">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+            <p class="next__ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
           </a>
         </div>
       </div>

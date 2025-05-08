@@ -10,11 +10,11 @@
         editor.insertContent(`
          <div class="img-2col">
           <div class="img-2col__photo">
-            <img width="410" height="280" src="https://dummyimage.com/410x280/444444/A59F8C" rel="js-lazy" alt="">
+            <img width="440" height="310" src="https://dummyimage.com/440x310/444444/A59F8C" rel="js-lazy" alt="">
             <p class="wp-caption-text">テキストテキストテキスト</p>
           </div>
           <div class="img-2col__photo">
-            <img width="410" height="280"src="https://dummyimage.com/410x280/444444/A59F8C" rel="js-lazy" alt="">
+            <img width="440" height="310"src="https://dummyimage.com/440x310/444444/A59F8C" rel="js-lazy" alt="">
             <p class="wp-caption-text">テキストテキストテキストテキストテキスト</p>
           </div>
         </div>

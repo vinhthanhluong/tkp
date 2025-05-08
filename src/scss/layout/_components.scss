@@ -54,6 +54,108 @@
 
 /* ===================== MAINVISUAL ===================== */
 .c-mainvisual {
+  @include PC {
+    padding: 74px 0 92px;
+  }
+  @include SP {
+    padding: 55px 0 58px;
+    overflow: hidden;
+  }
+  .mv-inner {
+    position: relative;
+    padding: 0 24px;
+    margin: 0 auto;
+    @include PC {
+      max-width: 1218px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
+      z-index: -1;
+      @include PC {
+        width: 180px;
+        height: 55px;
+      }
+      @include SP {
+        width: 82px;
+        height: 26px;
+      }
+    }
+    &:before {
+      @include PC {
+        left: 69px;
+        top: 88px;
+      }
+      @include SP {
+        left: -25px;
+        top: 68px;
+      }
+    }
+    &:after {
+      @include PC {
+        right: 69px;
+        top: -32px;
+      }
+      @include SP {
+        right: -26px;
+        top: -16px;
+      }
+    }
+  }
+  .mv-ttl {
+    text-align: center;
+    &>span {
+      display: block;
+    }
+  }
+  .mv-ttl-jp {
+    color: $blue01;
+    @include font("",1.5,120,bold);
+    @include PC {
+      margin-bottom: 12px;
+      @include font(18);
+    }
+    @include SP {
+      @include font(15);
+      margin-bottom: 7px;
+    }
+  }
+  .mv-ttl-en {
+    @include font("",1.5,100,600);
+    @include ffGT;
+    text-transform: uppercase;
+    @include PC {
+      @include font(50);
+    }
+    @include SP {
+      @include font(34);
+    }
+  }
+  .img-wave-blue {
+    @include PC {
+      top: -32px;
+      left: 50%;
+      margin-left: -290px;
+    }
+    @include SP {
+      top: -17px;
+      left: 34px;
+    }
+  }
+  .img-wave-yellow {
+    left: auto;
+    @include PC {
+      right: 50%;
+      margin-right: -305px;
+      top: 120px;
+    }
+    @include SP {
+      right: 34px;
+      top: 75px;
+    }
+  }
 }
 .c-breadcrumb {
   @include PC {
@@ -1002,7 +1104,7 @@ a.c-btn02 {
     left: auto;
   }
 }
-.c-bgwave01 {
+.c-bg-wave01 {
   position: relative;
   isolation: isolate;
   background: repeat-x top center;
@@ -1019,11 +1121,12 @@ a.c-btn02 {
   //   content: '';
   //   top: 0;
   //   left: 0;
-  //   background: repeat-x top left;
+  //   background: url($img_url + "img/common/wave_bg.png") repeat-x top left;
   //   background-size: 100% auto;
   //   width: 100%;
+  //   z-index: -1;
+  //   pointer-events: none;
   //   @include PC {
-  //     background-image: url($img_url + "img/common/wave_bg.png");
   //     height: 450px;
   //   }
   //   @include SP {
@@ -1032,3 +1135,40 @@ a.c-btn02 {
   //   }
   // }
 }
+.c-bg-wave02 {
+  position: relative;
+  isolation: isolate;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: repeat-x top left/100% auto;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+  &:before {
+    top: 0;
+    @include PC {
+      background-image: url($img_url + "img/common/wave_bg.png");
+      height: 450px;
+    }
+    @include SP {
+      background-image: url($img_url + "img/common/wave_bg_sp.png");
+      height: 491px;
+    }
+  }
+  &:after {
+    bottom: 0;
+    @include PC {
+      background-image: url($img_url + "img/guide/bg_wave_grey.png");
+      height: 450px;
+    }
+    @include SP {
+      background-image: url($img_url + "img/guide/bg_wave_grey_sp.png");
+      height: 519px;
+    }
+  }
+}
+

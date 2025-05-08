@@ -37,11 +37,11 @@
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
-  width: calc(100% - 48px);
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
   border-top: 1px dotted rgba($color_body, 0.5);
   padding-top: 40px;
+  margin-top: 39px;
   @include SP {
     padding-bottom: 133px;
     padding-top: 30px;
@@ -54,7 +54,7 @@
     @include flex(1);
     @include flexbox;
     @include align-items(center);
-    @include font(16, 25, 100, 700);
+    @include font(12, 22, 120, 700);
     @include SP {
       @include flex-direction(column);
       @include justify-content(center);
@@ -66,16 +66,6 @@
     }
     @include HOVER {
       opacity: 1;
-      .prev__thumb {
-        &::after {
-          left: -32px;
-        }
-      }
-      .next__thumb {
-        &::after {
-          right: -32px;
-        }
-      }
     }
     &__thumb {
       position: relative;
@@ -120,9 +110,14 @@
     }
     &__ttl {
       @include font(12, 22, 120, 700);
-      @include multiLineEllipsis(2);
       @include flex(1);
       text-align: left;
+      @include PC {
+        @include multiLineEllipsis(2);
+      }
+      @include SP {
+        @include multiLineEllipsis(3);
+      }
     }
   }
   .next {
@@ -134,22 +129,14 @@
         margin-left: 18px;
         margin-right: 0;
       }
-      &:after {
-        transform: scale(-1);
-        left: unset;
-        right: 0;
-        @include SP {
-          right: -32px;
-        }
-      }
     }
     &__ttl {
       text-align: right;
     }
   }
-  .c__btn01 {
+  .c-btn01 {
     @include PC {
-      width: 250px;
+      max-width: 200px;
       margin-top: 10px;
       margin-left: 22px;
       margin-right: 22px;

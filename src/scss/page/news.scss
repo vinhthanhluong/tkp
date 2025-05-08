@@ -62,8 +62,15 @@ for ARCHIVE
 for SINGLE
 -------------------------------------------------------------*/
 .article-news {
+  position: relative;
   @include PC {
-    margin: 19px auto 10px;
+    margin-top: 19px;
+    margin-bottom: 10px;
+    .img-wave-blue {
+      top: 133px;
+      left: auto;
+      right: -9px;
+    }
   }
 }
 .article-inner {
@@ -71,6 +78,7 @@ for SINGLE
   @include PC {
     max-width: 1000px;
     margin: 0 auto;
+    width: calc(100% - 50px);
   }
   .img-dot {
     text-align: right;
@@ -81,12 +89,6 @@ for SINGLE
     @include SP {
       width: 82px;
     }
-  }
-  .img-wave-blue {
-    position: absolute;
-    right: 0;
-    width: 56px;
-    height: 18px;
   }
 }
 .box-meta {
@@ -125,14 +127,14 @@ for SINGLE
     .sg-share {
       position: absolute;
       top: 2px;
-      left: 8px;
+      left: 10px;
       height: 100%;
     }
     .share-inner {
       text-align: center;
       position: -webkit-sticky;
       position: sticky;
-      left: 8px;
+      left: 10px;
       top: 155px;
     }
     .share__ttl {
@@ -154,7 +156,5 @@ for SINGLE
 }
 .sg-pagination {
   @include PC {
-    max-width: 900px;
-    margin: 0 auto;
   }
 }
