@@ -32,22 +32,22 @@
   }
 }
 
-.sg-pagination {
+.mod-pagination {
   position: relative;
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
-  max-width: 900px;
-  margin: auto;
   border-top: 1px dotted rgba($color_body, 0.5);
-  padding-top: 40px;
-  margin-top: 39px;
+  @include PC {
+    padding-top: 40px;
+    max-width: 900px;
+    margin: 39px auto 0;
+  }
   @include SP {
     padding-bottom: 133px;
     padding-top: 30px;
     margin-left: 24px;
     margin-right: 24px;
-    width: auto;
   }
   .prev,
   .next {
@@ -58,6 +58,7 @@
     @include SP {
       @include flex-direction(column);
       @include justify-content(center);
+      @include font(11,19);
     }
     &.disable {
       opacity: 0;
@@ -70,31 +71,27 @@
     &__thumb {
       position: relative;
       @include aspect-ratio(100, 100);
-      width: 35.972%;
       @include PC {
-        margin-right: 18px;
+        width: calc(100/328*100%);
+        max-width: 100px;
+        margin-right: 20px;
       }
       @include SP {
         width: 56.27%;
         margin-bottom: 14px;
-        @include aspect-ratio(92, 92);
-      }
-      &:after {
-        position: absolute;
-        content: "";
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        width: 20px;
-        height: 20px;
-        z-index: 1;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.004 20"><g id="Group_3519" data-name="Group 3519" transform="translate(0 -40)"><g id="Group_3518" data-name="Group 3518"><g id="Group_3517" data-name="Group 3517"><path id="Icon_ionic-md-arrow-down" data-name="Icon ionic-md-arrow-down" d="M17.227,5.977V21.167l7-7,1.75,1.813-10,10-10-10,1.75-1.75,7,6.939V5.977Z" transform="translate(25.98 34.023) rotate(90)" fill="%23444"/></g></g></g></svg>')
-          center no-repeat;
-        @include add_prefix(transition, all 0.3s ease);
-        @include SP {
+        &:after {
+          position: absolute;
+          content: "";
+          display: block;
+          top: 0;
+          bottom: 0;
           left: -32px;
+          margin: auto;
+          width: 20px;
+          height: 20px;
+          z-index: 1;
+          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>')
+            center no-repeat;
         }
       }
       img {
@@ -111,11 +108,12 @@
     &__ttl {
       @include font(12, 22, 120, 700);
       @include flex(1);
-      text-align: left;
       @include PC {
+        text-align: left;
         @include multiLineEllipsis(2);
       }
       @include SP {
+        text-align: center;
         @include multiLineEllipsis(3);
       }
     }
@@ -123,23 +121,49 @@
   .next {
     @include PC {
       @include flex-direction(row-reverse);
+      &__ttl {
+        text-align: right;
+      }
     }
     &__thumb {
       @include PC {
         margin-left: 18px;
         margin-right: 0;
       }
-    }
-    &__ttl {
-      text-align: right;
+      @include SP {
+        &:after {
+          transform: scale(-1);
+          left: auto;
+          right: -32px;
+        }
+      }
     }
   }
   .c-btn01 {
     @include PC {
       max-width: 200px;
-      margin-top: 10px;
-      margin-left: 22px;
-      margin-right: 22px;
+      margin: 1px 22px 0;
+      padding-left: 31px;
+      padding-right: 17px;
+      &:before {
+        left: 100%;
+        right: 0;
+      }
+    }
+    @include HOVER {
+      &:before {
+        right: auto;
+        left: 0;
+      }
+      span {
+        transform: translateX(-13px);
+      }
+      .arr01 {
+        transform: translateX(0) scale(1);
+      }
+      .arr02 {
+        transform: translateX(-13px) scale(0.5);
+      }
     }
     @include SP {
       position: absolute;
@@ -147,6 +171,27 @@
       right: 0;
       left: 0;
       margin: auto;
+    }
+    .arr01 {
+      left: auto;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="white"/></svg>');
+      @include PC {
+        right: 14px;
+        transform: translateX(13px) scale(0.5);
+      }
+      @include SP {
+        right: 9px;
+      }
+    }
+    .arr02 {
+      right: auto;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>');
+      @include PC {
+        left: 14px;
+      }
+      @include SP {
+        left: 9px;
+      }
     }
   }
 }
