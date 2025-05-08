@@ -41,13 +41,16 @@ a img.aligncenter {
   margin-right: auto;
 }
 
-// .wp-caption {
-//   background: #fff;
-//   border: 1px solid #f0f0f0;
-//   max-width: 96%; /* Image does not overflow the content area */
-//   padding: 5px 3px 10px;
-//   text-align: center;
-// }
+.wp-caption {
+  // background: #fff;
+  // border: 1px solid #f0f0f0;
+  // max-width: 96%; /* Image does not overflow the content area */
+  // padding: 5px 3px 10px;
+  // text-align: center;
+  margin: auto;
+  text-align: center;
+  width: auto!important;
+}
 
 // .wp-caption.alignnone {
 //   margin: 5px 0 20px;
@@ -86,11 +89,6 @@ a img.aligncenter {
 //   }
 // }
 
-.wp-caption {
-  margin: auto;
-  text-align: center;
-  width: auto!important;
-}
 .wp-caption-text {
   @include font(15, 26, 100, 400);
   margin-top: 9px;
@@ -108,20 +106,20 @@ a img.aligncenter {
   @include clearfix;
   ul,
   ol {
-    padding-left: 20px;
-    margin-bottom: 20px;
+    margin: 25px 0;
     @include font(15, 24, 120, 700);
   }
   ul {
+    padding-left: 0;
     li {
       list-style: none;
       position: relative;
       @include PC {
-        padding: 0 0 10px 35px;
-        margin-bottom: 14px;
+        padding: 0 0 0 20px;
+        margin-bottom: 8px;
       }
       @include SP {
-        padding: 0 0 12px 31px;
+        padding: 0 0 0 31px;
         margin-bottom: 13px;
       }
       &:last-child {
@@ -130,16 +128,13 @@ a img.aligncenter {
       &:before {
         position: absolute;
         content: "";
+        top: 7px;
+        left: 0;
         width: 10px;
         height: 10px;
         background: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="3" fill="%2365B0D4"/><circle cx="5" cy="5" r="4.5" stroke="%2365B0D4"/></svg>') no-repeat 0 0;
-        @include PC {
-          top: 9px;
-          left: 14px;
-        }
         @include SP {
           top: 8px;
-          left: 10px;
         }
       }
     }
@@ -147,8 +142,7 @@ a img.aligncenter {
     &[style*="list-style-type: circle;"],
     &[style*="list-style-type: square;"] {
       li {
-        border: none;
-        margin-left: 25px;
+        margin-left: 20px;
         padding: 0;
         &:before {
           opacity: 0;
@@ -174,6 +168,7 @@ a img.aligncenter {
     }
   }
   ol {
+    padding-left: 20px;
     &[style*="list-style-type: lower-roman;"] {
       li {
         list-style-type: lower-roman;
@@ -209,14 +204,33 @@ a img.aligncenter {
   }
   h2 {
     position: relative;
-    @include font(25,"",120,700);
+    @include font(25,1.6,120,700);
+    padding-bottom: 18px;
     @include SP {
       @include font(18,28);
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 150px;
+      height: 2px;
+      background: $yellow01;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      width: calc(100% - 160px);
+      height: 2px;
+      background: $blue01;
     }
   }
   h3 {
     position: relative;
-    @include font(20,"",120,700);
+    @include font(20,1.6,120,700);
     @include SP {
       @include font(18,28);
     }
@@ -232,7 +246,7 @@ a img.aligncenter {
   }
   h4 {
     position: relative;
-    @include font(20,"",120,700);
+    @include font(20,1.6,120,700);
     padding-left: 20px;
     @include SP {
       @include font(16,28);
@@ -366,5 +380,11 @@ a img.aligncenter {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+.sg-share {
+  .share__ttl {
+    @include ffGT;
+    @include font(14,1.2,"",500);
   }
 }

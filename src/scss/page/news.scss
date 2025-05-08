@@ -107,10 +107,54 @@ for SINGLE
   .meta-cates {
     color: $blue01;
     @include font(14,18,"",700);
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
   }
 }
 .sg-mainimg {
   @include PC {
     margin-top: 61px;
+  }
+}
+.article-block {
+  @include PC {
+    position: relative;
+    margin-top: 79px;
+    padding: 0 70px;
+    .sg-share {
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      height: 100%;
+    }
+    .share-inner {
+      text-align: center;
+      position: -webkit-sticky;
+      position: sticky;
+      left: 8px;
+      top: 155px;
+    }
+    .share__ttl {
+      display: block;
+      margin-bottom: 14px;
+    }
+    .share__link {
+      display: block;
+      width: 31px;
+      margin: 0 auto 15px;
+    }
+  }
+}
+.cms-content {
+  @include PC {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+.sg-pagination {
+  @include PC {
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
