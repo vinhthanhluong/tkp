@@ -28,9 +28,12 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #65b0d4; color: #fff;">$blue01: #65b0d4;</li>
           <li style="background: #2e8ab7; color: #fff;">$blue02: #2e8ab7;</li>
           <li style="background: #1b3da3; color: #fff;">$blue03: #1b3da3;</li>
+          <li style="background: #63ccff; color: #fff;">$blue04: #63ccff;</li>
           <li style="background: #f1f1f1;">$gray01: #f1f1f1;</li>
           <li style="background: #f2f2f2;">$gray02: #f2f2f2;</li>
           <li style="background: #f5bb1e; color: #fff;">$yellow01: #f5bb1e;</li>
+          <li style="background: #ffdea1;">$yellow02: #ffdea1;</li>
+          <li style="background: #FFCB6A;">$yellow03: #FFCB6A;</li>
           <li style="background: #b85632; color: #fff;">$orange01: #b85632;</li>
           <li style="background: #755c49; color: #fff;">$brown01: #755c49;</li>
         </ul>
