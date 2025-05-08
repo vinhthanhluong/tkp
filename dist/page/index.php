@@ -60,6 +60,12 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #755c49; color: #fff;">$brown01: #755c49;</li>
         </ul>
 
+        <p class="demo-ttl">.c-bg-wave01</p>
+        <div class="c-bg-wave01"></div>
+
+        <p class="demo-ttl">.c-bg-wave02</p>
+        <div class="c-bg-wave02"></div>
+
         <div class="section-demo">
           <p class="demo-ttl">.c-btn01</p>
           <a href="<?php echo APP_URL ?>" class="c-btn01">
@@ -71,6 +77,18 @@ include(APP_PATH . 'libs/head.php'); ?>
           <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
             <i class="arr01"></i>
             <span>レストラン予約</span>
+            <i class="arr02"></i>
+          </a>
+          <p class="demo-ttl">.c-btn02</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn02">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
+            <i class="arr02"></i>
+          </a>
+          <p class="demo-ttl">.c-btn02.is-center</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
             <i class="arr02"></i>
           </a>
           <p class="demo-ttl">.c-ttl01</p>
@@ -181,6 +199,8 @@ include(APP_PATH . 'libs/head.php'); ?>
               </a>
             </li>
           </ul>
+          <p class="demo-ttl">.mod-park</p>
+          <?php include(APP_PATH . 'libs/mod_park.php'); ?>
         </div>
       </div>
     </div>
@@ -232,6 +252,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (min-width: 768px) {
+    .c-bg-wave01,
+    .c-bg-wave02 {
+      height: 450px;
+    }
     .sec-relate {
       padding: 73px 0 76px;
     }
@@ -242,6 +266,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (max-width: 767px) {
+    .c-bg-wave01,
+    .c-bg-wave02 {
+      height: 293px;
+    }
     .sec-relate {
       padding: 49px 0 48px;
     }
