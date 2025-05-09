@@ -104,7 +104,6 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>もっと見る</span>
             <i class="arr02"></i>
           </a>
-<<<<<<< HEAD
           <p class="demo-ttl">.c-btn03</p>
           <p class="demo-ttl">(No Background)</p>
           <a href="<?php echo APP_URL ?>" class="c-btn03">
@@ -118,9 +117,6 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
-=======
-
->>>>>>> 10122ffa8f1e4e14e71eee8d3ef25b63f6a16aa5
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>

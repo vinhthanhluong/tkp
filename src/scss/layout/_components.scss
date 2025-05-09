@@ -70,9 +70,10 @@
     }
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
-      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100%
+        auto;
       z-index: -1;
       @include PC {
         width: 180px;
@@ -106,13 +107,13 @@
   }
   .mv-ttl {
     text-align: center;
-    &>span {
+    & > span {
       display: block;
     }
   }
   .mv-ttl-jp {
     color: $blue01;
-    @include font("",1.5,120,bold);
+    @include font("", 1.5, 120, bold);
     @include PC {
       margin-bottom: 12px;
       @include font(18);
@@ -123,7 +124,7 @@
     }
   }
   .mv-ttl-en {
-    @include font("",1.5,100,600);
+    @include font("", 1.5, 100, 600);
     @include ffGT;
     text-transform: uppercase;
     @include PC {
@@ -346,7 +347,8 @@ a.c-btn01 {
     }
     .icon {
       position: absolute;
-      left: 0; top: 0;
+      left: 0;
+      top: 0;
     }
   }
   &.is-cover {
@@ -481,7 +483,6 @@ a.c-btn02 {
     transition: transform 0.4s ease;
   }
 }
-<<<<<<< HEAD
 a.c-btn03 {
   position: relative;
   display: block;
@@ -580,11 +581,10 @@ a.c-btn03 {
     }
   }
 }
-=======
 .c-link {
   display: inline-block;
   vertical-align: top;
-  @include font(16,1.5,100,bold);
+  @include font(16, 1.5, 100, bold);
   color: $blue01;
   position: relative;
   padding-left: 24px;
@@ -601,11 +601,11 @@ a.c-btn03 {
     top: 0;
     width: 20px;
     height: 20px;
-    background: url('data:image/svg+xml,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 11.3035L3.75 11.3035L3.75 9.69645L13.2594 9.69645L9.06875 5.38622L10.1734 4.25L16.25 10.5L10.1734 16.75L9.06875 15.6138L13.2594 11.3035Z" fill="%2365B0D4"/></svg>') no-repeat center center/contain;
+    background: url('data:image/svg+xml,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 11.3035L3.75 11.3035L3.75 9.69645L13.2594 9.69645L9.06875 5.38622L10.1734 4.25L16.25 10.5L10.1734 16.75L9.06875 15.6138L13.2594 11.3035Z" fill="%2365B0D4"/></svg>')
+      no-repeat center center/contain;
   }
 }
 
->>>>>>> 10122ffa8f1e4e14e71eee8d3ef25b63f6a16aa5
 /* ===================== TITLE ===================== */
 .c-ttl01 {
   .c-ttl01__en {
