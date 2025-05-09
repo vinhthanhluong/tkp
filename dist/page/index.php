@@ -117,6 +117,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
+
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
