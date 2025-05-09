@@ -403,6 +403,104 @@ a.c-btn02 {
     transition: transform 0.4s ease;
   }
 }
+a.c-btn03 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  border: solid 1px $blue01;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+  @include PC {
+    padding: 9px 31px 9px 21px;
+  }
+  @include SP {
+    padding: 6px 27px 6px 29px;
+  }
+  &.is-center {
+    margin: 0 auto;
+  }
+  @include HOVER {
+    opacity: 1;
+    background: $blue01;
+    color: #fff;
+    &:before {
+      right: 0;
+      opacity: 1;
+    }
+    .arr01 {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+    }
+    .arr02 {
+      transform: translateX(13px) scale(0.5);
+      opacity: 0;
+    }
+    span {
+      transform: translateX(13px);
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: $blue01;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .arr01,
+  .arr02 {
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: 100% 100%;
+    transition: all 0.4s ease;
+  }
+  .arr01 {
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="white"/></svg>');
+    transform: translateX(-13px) scale(0.5);
+    opacity: 0;
+    @include PC {
+      left: 14px;
+    }
+    @include SP {
+      left: 9px;
+    }
+  }
+  .arr02 {
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="%2365B0D4"/></svg>');
+    transform: translateX(0) scale(1);
+    @include PC {
+      right: 14px;
+    }
+    @include SP {
+      right: 9px;
+    }
+  }
+  span {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    @include font(16, 30, 0.12, 700);
+    transition: transform 0.4s ease;
+    @include SP {
+      @include font(14, 24);
+    }
+  }
+}
 /* ===================== TITLE ===================== */
 .c-ttl01 {
   .c-ttl01__en {
