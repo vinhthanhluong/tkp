@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.c-mainvisual {
+  @include PC {
+    padding: 74px 0 72px;
+  }
+}
+
+.sec-anchor {
+  .lst-anchor {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+  }
+}

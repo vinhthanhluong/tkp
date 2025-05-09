@@ -74,7 +74,7 @@ include(APP_PATH . 'libs/head.php');
             <p class="prev__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img01.jpg" rel="js-lazy" alt=""></p>
             <p class="prev__ttl">7月22日～「むらごとマルシェ」がスタート！</p>
           </a>
-          <a href="<?php echo APP_URL ?>news/" class="c-btn01">
+          <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-cover">
             <i class="arr01"></i>
             <span>一覧へ戻る</span>
             <i class="arr02"></i>

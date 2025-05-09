@@ -70,6 +70,9 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="c-bg-wave02"></div>
 
         <div class="section-demo">
+          <p class="demo-ttl">.c-link</p>
+          <a class="c-link" href="#">リンクリンク</a>
+
           <p class="demo-ttl">.c-btn01</p>
           <a href="<?php echo APP_URL ?>" class="c-btn01">
             <i class="arr01"></i>
@@ -82,6 +85,13 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
+          <p class="demo-ttl">.c-btn01.is-cover</p>
+          <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-cover">
+            <i class="arr01"></i>
+            <span>一覧へ戻る</span>
+            <i class="arr02"></i>
+          </a>
+
           <p class="demo-ttl">.c-btn02</p>
           <a href="<?php echo APP_URL ?>" class="c-btn02">
             <i class="arr01"></i>
@@ -94,6 +104,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>もっと見る</span>
             <i class="arr02"></i>
           </a>
+<<<<<<< HEAD
           <p class="demo-ttl">.c-btn03</p>
           <p class="demo-ttl">(No Background)</p>
           <a href="<?php echo APP_URL ?>" class="c-btn03">
@@ -107,6 +118,9 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
+=======
+
+>>>>>>> 10122ffa8f1e4e14e71eee8d3ef25b63f6a16aa5
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>

@@ -2,7 +2,6 @@
 @import "../utility/*";
 
 
-
 /*-----------------------------------------------------------
 for ARCHIVE
 -------------------------------------------------------------*/
@@ -65,11 +64,23 @@ for SINGLE
   position: relative;
   @include PC {
     margin-top: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 118px;
     .img-wave-blue {
       top: 133px;
       left: auto;
       right: -9px;
+      @include max-screen(1250px) {
+        right: 0;
+      }
+    }
+  }
+  @include SP {
+    margin-top: 6px;
+    margin-bottom: 64px;
+    .img-wave-blue {
+      top: 62px;
+      left: auto;
+      right: 23px;
     }
   }
 }
@@ -78,7 +89,7 @@ for SINGLE
   @include PC {
     max-width: 1000px;
     margin: 0 auto;
-    width: calc(100% - 50px);
+    width: calc(100% - 62px);
   }
   .img-dot {
     text-align: right;
@@ -87,7 +98,11 @@ for SINGLE
       margin-bottom: 3px;
     }
     @include SP {
-      width: 82px;
+      padding-right: 28px;
+      margin-bottom: 19px;
+      img {
+        width: 82px;
+      }
     }
   }
 }
@@ -96,7 +111,8 @@ for SINGLE
     margin-bottom: 24px;
   }
   @include SP {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-right: 42px;
   }
   .meta-date {
     color: #AFAFAF;
@@ -117,6 +133,9 @@ for SINGLE
 .sg-mainimg {
   @include PC {
     margin-top: 61px;
+  }
+  @include SP {
+    margin-top: 33px;
   }
 }
 .article-block {
@@ -147,6 +166,12 @@ for SINGLE
       margin: 0 auto 15px;
     }
   }
+  @include SP {
+    margin-top: 39px;
+    .sg-share {
+      margin-top: 40px;
+    }
+  }
 }
 .cms-content {
   @include PC {
@@ -154,7 +179,7 @@ for SINGLE
     margin: 0 auto;
   }
 }
-.sg-pagination {
-  @include PC {
-  }
+.mod-pagination {
+  margin-top: 39px;
 }
+
