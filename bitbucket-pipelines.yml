@@ -12,4 +12,4 @@ pipelines:
           script:
             - apt-get update
             - apt-get -qq install git-ftp
-            - git ftp push -f --syncroot dist/ --user $FTP_USERNAME_TONGALI --passwd $FTP_PASSWORD_TONGALI  ftp://aliveweb-space.sakura.ne.jp/www/ju.alive-web.space/tkp
+            - git ftp init -f --syncroot dist/ --user $FTP_USERNAME_TONGALI --passwd $FTP_PASSWORD_TONGALI  ftp://aliveweb-space.sakura.ne.jp/www/ju.alive-web.space/tkp
