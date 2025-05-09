@@ -201,14 +201,14 @@
 .sec-guide {
 	padding: 120px 20px 140px;
 	@include SP {
-		padding: 72px 24px;
+		padding: 72px 24px 64px;
 	}
 	&:after {
 		position: absolute;
 		content: '';
 		bottom: 0;
 		left: 0;
-		background: url($img_url + "img/guide/bg_wave_grey.png") repeat-x top left;
+		background: url($img_url + "img/guide/bg_wave_grey.png") repeat-x bottom left;
 		background-size: 100% auto;
 		width: 100%;
 		height: 450px;
@@ -462,10 +462,17 @@
 	text-align: center;
 	padding-top: 11px;
 	padding-bottom: 92px;
+	margin-bottom: 0;
+	@include SP {
+		padding-top: 63px;
+	}
 	.mod-park__inner {
 		max-width: 1480px;
 		padding: 0 20px;
 		margin: 0 auto;
+		@include SP {
+			padding: 0 7px;
+		}
 	}
 	.bnt01 {
 		@include PC {
@@ -474,7 +481,10 @@
 				left: 196px;
 			}
 		}
-		
+		@include SP {
+			top: 206px;
+			left: 20px;
+		}
 	}
 	.bnt02 {
 		@include PC {
@@ -483,7 +493,10 @@
 				left: 439px;
 			}
 		}
-		
+		@include SP {
+			top: 206px;
+			left: 96px;
+		}
 	}
 	.bnt03 {
 		@include PC {
@@ -492,7 +505,10 @@
 				left: 913px;
 			}
 		}
-		
+		@include SP {
+			top: 196px;
+			left: 240px;
+		}
 	}
 	.bnt04 {
 		@include PC {
@@ -501,6 +517,44 @@
 				left: 695px;
 			}
 		}
-		
+		@include SP {
+			top: 310px;
+		}
+	}
+	.content-mod {
+		max-width: 1170px;
+		margin: 0 auto;
+		position: relative;
+		@include PC {
+			margin-top: -169px;
+			@include max-screen(1000px) {
+				margin-top: -140px;
+			}
+			@include max-screen(900px) {
+				margin-top: -120px;
+			}
+		}
+		@include SP {
+			padding: 0 17px;
+			margin-bottom: 7px;
+		}
+		.tit-box {
+			text-align: left;
+			@include SP {
+				margin-bottom: 29px;
+			}
+		}
+		.desc {
+			text-align: left;
+			@include font(18);
+			line-height: 30px;
+			font-weight: 700;
+			letter-spacing: 2.2px;
+			@include SP {
+				@include font(14);
+				line-height: 24px;
+				letter-spacing: 1.7px;
+			}
+		}
 	}
 }

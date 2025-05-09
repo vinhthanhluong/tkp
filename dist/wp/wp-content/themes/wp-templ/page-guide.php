@@ -136,6 +136,13 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="mod-park">
       <div class="mod-park__inner">
+        <div class="content-mod sp">
+          <h2 class="tit-box">
+            <span>園内マップ</span>
+            <strong>Park Map</strong>
+          </h2>
+          <p class="desc">SHONIN PARKの魅力がひと目で分かる園内マップ。<br class="pc">気になるエリアをタップしてみてください！</p>
+        </div>
         <div class="park-bg aos-init" data-aos="fade-up" data-aos-delay="0">
           <img src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="">
         </div>
@@ -159,7 +166,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="txt">宿泊コテージ</span>
           </p>
         </div>
-        <div class="content-mod">
+        <div class="content-mod pc">
           <h2 class="tit-box">
             <span>園内マップ</span>
             <strong>Park Map</strong>
