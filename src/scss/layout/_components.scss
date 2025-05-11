@@ -157,6 +157,72 @@
       top: 75px;
     }
   }
+  .mv-img {
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    @include PC {
+      -webkit-mask-image: url($img_url + "img/common/mask_bg05.png");
+      mask-image: url($img_url + "img/common/mask_bg05.png");
+      height: 350px;
+      max-width: 1340px;
+      margin: 73px auto 0;
+    }
+    @include SP {
+      -webkit-mask-image: url($img_url + "img/common/mask_bg05_sp.png");
+      mask-image: url($img_url + "img/common/mask_bg05_sp.png");
+      @include aspect-ratio(343, 220);
+      margin: 43px 16px 0;
+    }
+  }
+  &.is-mainvisual {
+    @include PC {
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 0z;
+    }
+    .mv-ttl {
+      text-align: left;
+    }
+    .mv-inner {
+      @include PC {
+        padding: 0;
+        max-width: 1170px;
+      }
+      &:before {
+        display: none;
+      }
+      &:after {
+        @include PC {
+          margin-right: -397px;
+          right: 50%;
+          top: 30px;
+          @include max-screen(880px) {
+            right: 24px;
+            margin-right: 0;
+          }
+        }
+        @include SP {
+          right: 52px;
+          top: -26px;
+        }
+      }
+    }
+    .img-wave-blue {
+      left: auto;
+      @include PC {
+        right: 31px;
+        top: -24px;
+      }
+      @include SP {
+        top: 43px;
+        right: 24px;
+      }
+    }
+  }
 }
 .c-breadcrumb {
   @include PC {
@@ -191,6 +257,10 @@
         content: "/";
         @include PC {
           margin: auto 15px 3px 15px;
+          .is-windows & {
+            position: relative;
+            top: 1px;
+          }
         }
         @include SP {
           margin: auto 11px 3px 15px;
@@ -631,6 +701,68 @@ a.c-btn03 {
     @include SP {
       @include font(15, 25);
       top: 2px;
+    }
+  }
+}
+.c-ttl02 {
+  .c-ttl02__en {
+    display: block;
+    @include ffGT;
+    @include font(45, 52, 0.05, 600);
+    margin-top: 8px;
+    @include SP {
+      @include font(30, 30);
+    }
+  }
+  .c-ttl02__jp {
+    @include font("", "", 0.12, 700);
+    position: relative;
+    color: $blue01;
+    @include PC {
+      @include font(18, 25);
+      padding-left: 36px;
+    }
+    @include SP {
+      padding-left: 30px;
+      @include font(15, 25);
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      @include PC {
+        top: 5px;
+        width: 12px;
+        height: 12px;
+      }
+      @include SP {
+        top: 4px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &:before {
+      left: 0;
+      background: $yellow01;
+    }
+    &:after {
+      background: $blue01;
+      @include PC {
+        left: 12px;
+      }
+      @include SP {
+        left: 10px;
+      }
+    }
+  }
+  &.is-white {
+    color: #fff;
+    .c-ttl02__jp {
+      color: #fff;
+      &:after {
+        background: #fff;
+      }
     }
   }
 }
@@ -1334,7 +1466,7 @@ a.c-btn03 {
   //   top: 0;
   //   left: 0;
   //   background: url($img_url + "img/common/wave_bg.png") repeat-x top left;
-  //   background-size: 100% auto;
+  //   background-size: auto 100%;
   //   width: 100%;
   //   z-index: -1;
   //   pointer-events: none;
@@ -1343,7 +1475,7 @@ a.c-btn03 {
   //   }
   //   @include SP {
   //     background-image: url($img_url + "img/common/wave_bg_sp.png");
-  //     height: 491px;
+  //     height: 293px;
   //   }
   // }
 }
@@ -1355,7 +1487,7 @@ a.c-btn03 {
     content: "";
     position: absolute;
     left: 0;
-    background: repeat-x top left/100% auto;
+    background: repeat-x top center/auto 100%;
     width: 100%;
     z-index: -1;
     pointer-events: none;
@@ -1368,18 +1500,395 @@ a.c-btn03 {
     }
     @include SP {
       background-image: url($img_url + "img/common/wave_bg_sp.png");
-      height: 491px;
+      height: 293px;
     }
   }
   &:after {
     bottom: 0;
+    background-position: bottom center;
     @include PC {
-      background-image: url($img_url + "img/guide/bg_wave_grey.png");
+      background-image: url($img_url + "img/common/bg_wave_grey.png");
       height: 450px;
     }
     @include SP {
-      background-image: url($img_url + "img/guide/bg_wave_grey_sp.png");
+      background-image: url($img_url + "img/common/bg_wave_grey_sp.png");
       height: 519px;
+    }
+  }
+}
+.c-about-block {
+  position: relative;
+  color: #fff;
+  @include PC {
+    @include flexbox;
+    margin-top: -177px;
+    padding-top: 183px;
+  }
+  @include SP {
+    margin-top: -138px;
+    padding: 135px 24px 0;
+  }
+  .about-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: no-repeat center center/cover;
+    z-index: -1;
+    @include PC {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+      -webkit-mask-repeat: repeat-x;
+      mask-repeat: repeat-x;
+      -webkit-mask-size: auto 100%;
+      mask-size: auto 100%;
+      -webkit-mask-image: url($img_url + "img/common/mask_bg09.png");
+      mask-image: url($img_url + "img/common/mask_bg09.png");
+      bottom: 228px;
+      @include max-screen(1280px) {
+        bottom: vw-pc(208px,1280);
+      }
+    }
+    @include SP {
+      background-size: 100% 100%;
+    }
+  }
+  .inner1170 {
+    position: relative;
+    z-index: 1;
+  }
+  .about-img,
+  .about-pic {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+  .about-img {
+    -webkit-mask-image: url($img_url + "img/common/mask_bg10.png");
+    mask-image: url($img_url + "img/common/mask_bg10.png");
+    @include PC {
+      width: 546px;
+      height: 514px;
+      margin-left: auto;
+      left: -59px;
+      @include max-screen(1440px) {
+        left: vw-pc(-59px,1440);
+        width: calc(546/556*100%);
+      }
+      @include max-screen(1280px) {
+        width: calc(546/556*100%);
+        height: auto;
+        padding-top: calc(514/556*100%);
+      }
+    }
+    @include SP {
+      @include aspect-ratio(220, 207);
+      width: calc(220/375*100%);
+      margin-left: -20px;
+    }
+  }
+  .about-pic {
+    -webkit-mask-image: url($img_url + "img/guide/restaurant/mask_bg01.png");
+    mask-image: url($img_url + "img/guide/restaurant/mask_bg01.png");
+    @include SP {
+      @include aspect-ratio(131, 82);
+    }
+  }
+  .about-ttl {
+    @include font("","",120,bold);
+    @include PC {
+      @include font(34,60);
+      @include max-screen(1280px) {
+        font-size: vw-pc(34px,1280);
+      }
+    }
+    @include SP {
+      @include font(24,36);
+      margin-bottom: 25px;
+    }
+    @include ANDR {
+      @include font(20);
+      margin-bottom: 20px;
+    }
+  }
+  .about-desc {
+    @include font("","",120,bold);
+    @include PC {
+      @include font(18,34);
+      @include max-screen(1280px) {
+        font-size: vw-pc(18px,1280);
+      }
+    }
+    @include SP {
+      @include font(14,28);
+      margin-right: -3px;
+    }
+  }
+  .about-content {
+    @include PC {
+      max-width: 590px;
+    }
+  }
+  .about-left {
+    @include PC {
+      width: calc(50% - 165px);
+      @include max-screen(1280px) {
+        width: calc(50% - 100px);
+      }
+    }
+  }
+  .about-right {
+    @include PC {
+      @include flex(1);
+      padding: 0 24px 0 90px;
+      @include max-screen(1280px) {
+        padding-left: vw-pc(60px,1280);
+      }
+    }
+  }
+  .about-group {
+    @include SP {
+      @include flexbox;
+      @include align-items(flex-start);
+      margin: 48px -24px 0;
+      .cloud-decor {
+        width: calc(131/375*100%);
+        margin: 63px 0 0 20px;
+      }
+    }
+  }
+  .dot-decor {
+    position: relative;
+    &:after {
+      z-index: -1;
+      pointer-events: none;
+      @include PC {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 55px;
+        background: url('data:image/svg+xml,<svg width="180" height="55" viewBox="0 0 180 55" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="177.5" cy="52.5" r="2.5" transform="rotate(-180 177.5 52.5)" fill="white"/><circle cx="152.5" cy="52.5" r="2.5" transform="rotate(-180 152.5 52.5)" fill="white"/><circle cx="127.5" cy="52.5" r="2.5" transform="rotate(-180 127.5 52.5)" fill="white"/><circle cx="102.5" cy="52.5" r="2.5" transform="rotate(-180 102.5 52.5)" fill="white"/><circle cx="77.5" cy="52.5" r="2.5" transform="rotate(-180 77.5 52.5)" fill="white"/><circle cx="52.5" cy="52.5" r="2.5" transform="rotate(-180 52.5 52.5)" fill="white"/><circle cx="27.5" cy="52.5" r="2.5" transform="rotate(-180 27.5 52.5)" fill="white"/><circle cx="2.5" cy="52.5" r="2.5" transform="rotate(-180 2.5 52.5)" fill="white"/><circle cx="177.5" cy="27.5" r="2.5" transform="rotate(-180 177.5 27.5)" fill="white"/><circle cx="152.5" cy="27.5" r="2.5" transform="rotate(-180 152.5 27.5)" fill="white"/><circle cx="127.5" cy="27.5" r="2.5" transform="rotate(-180 127.5 27.5)" fill="white"/><circle cx="102.5" cy="27.5" r="2.5" transform="rotate(-180 102.5 27.5)" fill="white"/><circle cx="77.5" cy="27.5" r="2.5" transform="rotate(-180 77.5 27.5)" fill="white"/><circle cx="52.5" cy="27.5" r="2.5" transform="rotate(-180 52.5 27.5)" fill="white"/><circle cx="27.5" cy="27.5" r="2.5" transform="rotate(-180 27.5 27.5)" fill="white"/><circle cx="2.5" cy="27.5" r="2.5" transform="rotate(-180 2.5 27.5)" fill="white"/><circle cx="177.5" cy="2.5" r="2.5" transform="rotate(-180 177.5 2.5)" fill="white"/><circle cx="152.5" cy="2.5" r="2.5" transform="rotate(-180 152.5 2.5)" fill="white"/><circle cx="127.5" cy="2.5" r="2.5" transform="rotate(-180 127.5 2.5)" fill="white"/><circle cx="102.5" cy="2.5" r="2.5" transform="rotate(-180 102.5 2.5)" fill="white"/><circle cx="77.5" cy="2.5" r="2.5" transform="rotate(-180 77.5 2.5)" fill="white"/><circle cx="52.5" cy="2.5" r="2.5" transform="rotate(-180 52.5 2.5)" fill="white"/><circle cx="27.5" cy="2.5" r="2.5" transform="rotate(-180 27.5 2.5)" fill="white"/><circle cx="2.5" cy="2.5" r="2.5" transform="rotate(-180 2.5 2.5)" fill="white"/></svg>') no-repeat 0 0/100% auto;
+      }
+    }
+  }
+  .cloud-decor {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      background: url('data:image/svg+xml,<svg width="181" height="183" viewBox="0 0 181 183" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.1996 93.2743C37.1996 93.2743 37.1854 93.2486 37.1797 93.2383C34.328 87.7039 34.0882 81.3634 36.5389 76.2829C38.941 71.3031 44.0673 67.9309 49.2296 67.7231C48.1926 59.152 53.8627 50.1288 62.3746 47.3711C66.6571 45.9826 71.5023 46.1983 76.0157 47.9743C79.6931 49.4221 82.8907 51.7963 85.22 54.7704C89.7085 48.1962 98.0731 44.3374 105.986 45.4372C114.679 46.6436 122.271 53.7618 124.035 62.3653C124.521 64.7335 124.461 66.8593 123.874 68.6378C127.47 69.4149 131.512 71.6457 132.925 72.9456C138.483 78.065 140.588 85.2843 141.374 90.4404C142.402 97.1754 139.749 103.892 134.852 107.327C137.322 112.333 137.459 118.165 135.148 122.86C132.432 128.379 126.275 131.819 120.503 131.037C119.697 130.927 119.134 130.186 119.243 129.38C119.353 128.574 120.094 128.011 120.9 128.121C125.453 128.739 130.336 125.978 132.51 121.561C134.552 117.408 134.201 111.901 131.638 107.558C131.432 107.215 131.379 106.804 131.486 106.419C131.59 106.036 131.847 105.709 132.199 105.519C137.351 102.7 139.253 96.0209 138.467 90.882C137.75 86.1917 135.863 79.6481 130.932 75.1062C129.553 73.8352 124.678 71.3552 121.631 71.2996C121.088 71.29 120.591 70.9797 120.348 70.4959C120.1 70.011 120.14 69.4315 120.452 68.987C121.692 67.215 121.519 64.7275 121.154 62.9533C119.634 55.5326 113.084 49.391 105.58 48.3484C98.0789 47.3069 90.1014 51.4292 86.6143 58.1563C86.3701 58.6269 85.8901 58.932 85.359 58.9496C84.8279 58.9671 84.3285 58.6951 84.0522 58.243C79.8495 51.3008 70.7255 47.7555 63.283 50.1685C55.6832 52.6312 50.6133 61.3905 52.4318 68.9123C52.5456 69.3803 52.4221 69.875 52.1023 70.2329C51.7838 70.5933 51.3053 70.7733 50.8279 70.7176C46.2603 70.1707 41.368 73.0477 39.1918 77.5603C37.1712 81.7519 37.4028 87.2436 39.7987 91.8908C40.1702 92.6129 39.8862 93.4985 39.1655 93.8726C38.4562 94.237 37.5872 93.9708 37.2036 93.2755L37.1996 93.2743Z" fill="white"/></svg>') no-repeat center center/100% 100%;
+      animation: cloud 1.8s linear infinite;
+      z-index: -1;
+      pointer-events: none;
+      @include PC {
+        width: 192px;
+        height: 183px;
+        @include max-screen(1300px) {
+          width: calc(192 / 1300 * 100vw);
+          right: calc(-30 / 1300 * 100vw);
+        }
+      }
+      @include SP {
+        width: 114px;
+        height: 114px;
+        top: -102px;
+        left: -22px
+      }
+    }
+  }
+}
+
+.c-news-block {
+  background: no-repeat center -14px/cover;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  overflow: hidden;
+  position: relative;
+  @include PC {
+    -webkit-mask-size: 144px auto;
+    mask-size: 144px auto;
+    -webkit-mask-image: url($img_url + "img/common/mask_bg06.png");
+    mask-image: url($img_url + "img/common/mask_bg06.png");
+    padding: 119px 0 149px;
+  }
+  @include SP {
+    -webkit-mask-size: 97.5px auto;
+    mask-size: 97.5px auto;
+    -webkit-mask-image: url($img_url + "img/common/mask_bg06_sp.png");
+    mask-image: url($img_url + "img/common/mask_bg06_sp.png");
+    padding: 63px 0 104px;
+    margin-bottom: -30px;
+  }
+  .c-ttl02 {
+    @include PC {
+      margin-bottom: 49px;
+    }
+    @include SP {
+      margin-bottom: 35px;
+    }
+  }
+  .news-list {
+    @include PC {
+      @include flexbox;
+      @include flex-wrap;
+      @include justify-content(space-between);
+    }
+    @include SP {
+      margin-bottom: 31px;
+    }
+    &>li {
+      @include PC {
+        width: calc(549/1170*100%);
+        margin-bottom: 40px;
+        @include max-screen(1100px) {
+          width: 49%;
+        }
+      }
+      @include SP {
+        margin-bottom: 23px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .news-item {
+    @include flexbox;
+    @include align-items(flex-start);
+    @include HOVER {
+      opacity: 1;
+      img {
+        animation: imageHover 1.2s linear;
+      }
+    }
+  }
+  .news-img {
+    background: #fff;
+    -webkit-mask-image: url($img_url + "img/common/mask_bg07.png");
+    mask-image: url($img_url + "img/common/mask_bg07.png");
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    @include PC {
+      width: 165px;
+      height: 120px;
+    }
+    @include SP {
+      width: vw-sp(150px,375);
+      @include aspect-ratio(150, 110);
+    }
+    @include ANDR {
+      width: vw-sp(140px,375);
+    }
+    img {
+      @include PC {
+
+      }
+    }
+  }
+  .news-info {
+    @include flex(1);
+    color: #fff;
+    -webkit-align-self: center;
+    align-self: center;
+    @include PC {
+      padding-left: 32px;
+      @include max-screen(1100px) {
+        padding-left: 20px;
+      }
+    }
+    @include SP {
+      padding-left: 24px;
+    }
+    @include ANDR {
+      padding-left: 12px;
+    }
+  }
+  .news-head {
+    @include flexbox;
+    @include flex-wrap;
+    @include align-items(center);
+    margin-bottom: 9px;
+    @include SP {
+      margin-right: -10px;
+    }
+    @include ANDR {
+      margin-bottom: 5px;
+    }
+  }
+  .news-cate {
+    margin-right: 12px;
+    @include font(12,18,0,bold);
+    padding: 5px 10px 7px;
+    position: relative;
+    white-space: nowrap;
+    min-height: 30px;
+    @include PC {
+      padding-top: 5px;
+    }
+    @include SP {
+      padding-top: 4px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    &:before {
+      left: 0;
+      right: 0;
+      background: url($img_url + "img/common/tag_bg_l.png") no-repeat 0 0/15px auto, url($img_url + "img/common/tag_bg_r.png") no-repeat right 0/15px auto;
+    }
+    &:after {
+      left: 14px;
+      right: 14px;
+      background: url($img_url + "img/common/tag_bg_c.png") repeat-x 0 0/1px auto;
+    }
+  }
+  .news-time {
+    @include ffGT;
+    @include font("",1.5,50,500);
+    @include PC {
+      @include font(14);
+    }
+    @include SP {
+      @include font(12);
+    }
+  }
+  .news-ttl {
+    @include font("","",120,bold);
+    @include PC {
+      @include font(18,26);
+      @include max-screen(1100px) {
+        @include font(16)
+      }
+    }
+    @include SP {
+      @include font(14,24);
+      margin-right: -3px;
+    }
+    @include ANDR {
+      @include font(12)
+    }
+  }
+  a.c-btn01 {
+    @include PC {
+      max-width: 200px;
+    }
+    @include SP {
+      max-width: 180px;
+      padding-left: 19px;
     }
   }
 }
