@@ -40,7 +40,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <p class="desc">4つのエリアで<br class="sp">構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
       </div>
     </div>
-    <div class="sec-guide c-bg-wave01">
+    <div class="sec-guide c-bg-wave02">
       <div class="content-sec">
         <div class="row-guide">
           <div class="box-img">

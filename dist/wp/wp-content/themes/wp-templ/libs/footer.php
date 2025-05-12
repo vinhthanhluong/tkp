@@ -1,4 +1,84 @@
-<footer id="footer" class="footer"></footer>
+<footer id="footer" class="footer">
+  <div class="f-wcm01">
+    <div class="f-wrap">
+      <div class="col01">
+        <div class="f-logo">
+          <a href="<?php echo APP_URL; ?>">
+            <img src="<?php echo APP_ASSETS ?>img/common/footer/f_logo.svg" alt="logo">
+          </a>
+        </div>
+        <div class="f-info">
+          <p class="txt">〒874-0023 大分県別府市上人ケ浜町５０４番地１外</p>
+          <p class="txt">TEL <a href="tel:03-5227-8262">03-5227-8262</a></p>
+        </div>
+      </div>
+      <div class="col02">
+        <div class="col02-wrap01">
+          <ul class="f-navi">
+            <li class="item"><a href="<?php echo APP_URL ?>guide/">施設案内</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>ways/">楽しみ方</a></li>
+          </ul>
+          <ul class="f-navi">
+            <li class="item"><a href="<?php echo APP_URL ?>news/">ニュース</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>information/#">アクセス</a></li>
+          </ul>
+        </div>
+
+        <div class="col02-wrap02">
+          <ul class="f-navi02">
+            <li class="item"><a href="<?php echo APP_URL ?>information/#">営業時間</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>information/#">周辺観光</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>information/#">よくあるご質問</a></li>
+          </ul>
+          <ul class="f-navi02">
+            <li class="item"><a class="is-exter" href="<?php echo APP_URL ?>">採用情報</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div class="f-social pc">
+          <p class="ttl">Official SNS</p>
+          <ul class="social-lst">
+            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
+            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
+            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
+            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="f-btn">
+      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i></a></li>
+      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i></a></li>
+      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i></a></li>
+    </ul>
+    <div class="f-social sp">
+      <ul class="social-lst">
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+      </ul>
+    </div>
+    <ul class="f-copyright">
+      <li class="item">
+        <a class="link" href="<?php echo APP_URL ?>">利用規約</a>
+        <a class="link is-exter" href="<?php echo APP_URL ?>privacy/">プライバシーポリシー</a>
+      </li>
+      <li class="item">
+        <p class="ttl01">運営会社</p>
+        <a class="link" href="<?php echo APP_URL ?>terms/">株式会社ティーケーピー</a>
+      </li>
+      <li class="item">
+        <p class="ttl02">COPYRIGHT©2025 SHONIN PARK</p>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<p class="f-scrolltop go-up" id="gototop">
+  <span class="arr"></span>
+</p>
 
 <script>
   var JS_APP_URL = '<?php echo APP_URL ?>';

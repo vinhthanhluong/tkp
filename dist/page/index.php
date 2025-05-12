@@ -82,7 +82,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <p class="demo-ttl">.c-btn01.is-center</p>
           <a href="<?php echo APP_URL ?>" class="c-btn01 is-center">
             <i class="arr01"></i>
-            <span>レストラン予約</span>
+            <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
           <p class="demo-ttl">.c-btn01.is-cover</p>
@@ -104,12 +104,32 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>もっと見る</span>
             <i class="arr02"></i>
           </a>
+          <p class="demo-ttl">.c-btn03</p>
+          <p class="demo-ttl">(No Background)</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn03">
+            <i class="arr01"></i>
+            <span>砂湯・温泉予約</span>
+            <i class="arr02"></i>
+          </a>
+          <p class="demo-ttl">.c-btn03.is-center</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn03 is-center">
+            <i class="arr01"></i>
+            <span>砂湯・温泉予約</span>
+            <i class="arr02"></i>
+          </a>
 
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
             <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
           </h2>
+
+          <p class="demo-ttl">.c-ttl02</p>
+          <h2 class="c-ttl02">
+            <span class="c-ttl02__jp">メニュー</span>
+            <span class="c-ttl02__en">Menu</span>
+          </h2>
+
           <p class="demo-ttl">.c-cate01</p>
           <a href="" class="c-cate01">すべて</a>
           <p class="demo-ttl">.c-cate01.is-active</p>
@@ -266,10 +286,12 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (min-width: 768px) {
+
     .c-bg-wave01,
     .c-bg-wave02 {
       height: 450px;
     }
+
     .sec-relate {
       padding: 73px 0 76px;
     }
@@ -280,10 +302,12 @@ include(APP_PATH . 'libs/head.php'); ?>
   }
 
   @media (max-width: 767px) {
+
     .c-bg-wave01,
     .c-bg-wave02 {
       height: 293px;
     }
+
     .sec-relate {
       padding: 49px 0 48px;
     }
