@@ -91,7 +91,17 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>一覧へ戻る</span>
             <i class="arr02"></i>
           </a>
-
+          <p class="demo-ttl">.c-btn01.btn-anchor</p>
+          <a href="<?php echo APP_URL ?>" class="c-btn01 btn-anchor">
+            <i class="arr01"></i>
+            <span>
+              <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+              <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+              営業時間
+            </span>
+            <i class="arr02"></i>
+          </a>
+  
           <p class="demo-ttl">.c-btn02</p>
           <a href="<?php echo APP_URL ?>" class="c-btn02">
             <i class="arr01"></i>

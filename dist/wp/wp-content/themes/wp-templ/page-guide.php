@@ -10,8 +10,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
         <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-        <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
-        <li>レストラン</li>
+        <li>施設案内</li>
       </ul>
     </div>
     <div class="sec-mv aos-init" data-aos="fade-in">
@@ -51,7 +50,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="content-sec">
         <div class="row-guide aos-init" data-aos="fade-up">
           <div class="box-img">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -74,7 +73,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <div class="row-guide row-reverse aos-init" data-aos="fade-up">
           <div class="box-img sp">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -82,7 +81,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Shop</strong>
             </h2>
             <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -92,12 +91,12 @@ include(APP_PATH . 'libs/head.php'); ?>
             </p>
           </div>
           <div class="box-img pc">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" alt="">
           </div>
         </div>
         <div class="row-guide aos-init" data-aos="fade-up">
           <div class="box-img">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -105,7 +104,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Restaurant</strong>
             </h2>
             <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>restaurant/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -118,7 +117,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <div class="row-guide row-reverse aos-init" data-aos="fade-up">
           <div class="box-img sp">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -136,7 +135,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </p>
           </div>
           <div class="box-img pc">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" alt="">
           </div>
         </div>
       </div>
@@ -208,7 +207,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>restaurants/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>restaurant/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -270,7 +269,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>shop/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
