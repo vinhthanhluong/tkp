@@ -36,7 +36,7 @@
           </ul>
         </div>
 
-        <div class="f-social">
+        <div class="f-social pc">
           <p class="ttl">Official SNS</p>
           <ul class="social-lst">
             <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
@@ -52,6 +52,14 @@
       <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i></a></li>
       <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i></a></li>
     </ul>
+    <div class="f-social sp">
+      <ul class="social-lst">
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
+        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+      </ul>
+    </div>
     <ul class="f-copyright">
       <li class="item">
         <a class="link" href="<?php echo APP_URL ?>">利用規約</a>
@@ -66,8 +74,11 @@
       </li>
     </ul>
   </div>
-
 </footer>
+
+<p class="f-scrolltop go-up" id="gototop">
+  <span class="arr"></span>
+</p>
 
 <script>
   var JS_APP_URL = '<?php echo APP_URL ?>';
