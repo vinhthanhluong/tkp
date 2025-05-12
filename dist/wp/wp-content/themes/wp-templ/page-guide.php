@@ -5,7 +5,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 </head>
 
 <body id="guide" class="guide">
-  <?php //include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="sec-mv">
       <div class="content-sec">
