@@ -1155,7 +1155,7 @@
     background-position: center;
     background-color: transparent;
     background-size: 100% 100%;
-    animation: cloud01 1s linear infinite;
+    animation: cloud01 1.8s linear infinite;
     @include PC {
       @include max-screen(1300px) {
         top: -77px;
@@ -1261,7 +1261,7 @@
     background-position: center;
     background-color: transparent;
     background-size: 100% 100%;
-    animation: cloud02 1.2s linear infinite;
+    animation: cloud02 2s linear infinite;
     @include PC {
       @include max-screen(1300px) {
         width: calc(192 / 1300 * 100vw);
@@ -1286,7 +1286,7 @@
     transform: rotate(20deg) scale(0.5) translate(30px, 30px);
     opacity: 0;
   }
-  75% {
+  50% {
     transform: rotate(0) scale(1) translate(0);
     opacity: 1;
   }
@@ -1296,10 +1296,10 @@
 }
 @-webkit-keyframes cloud02 {
   0% {
-    transform: rotate(-20deg) scale(0.5) translate(-30px, -30px);
+    transform: rotate(-20deg) scale(0.5) translate(-30px, 30px);
     opacity: 0;
   }
-  75% {
+  50% {
     transform: rotate(0) scale(1) translate(0);
     opacity: 1;
   }
