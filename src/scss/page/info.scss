@@ -8,19 +8,40 @@
   @include PC {
     padding: 74px 0 72px;
   }
+  @include SP {
+   padding: 55px 0 51px;
+    .img-wave-yellow {
+      right: 34px;
+      top: 95px;
+    }
+  }
 }
 
 .sec-anchor {
   padding: 0 0 160px;
+  @include SP {
+    padding: 0 0 56px;
+  }
   .lst-anchor {
     @include flexbox();
     @include flex-wrap(wrap);
     @include justify-content(center);
+    @include SP {
+      margin: 0 -7px;
+    }
     li {
       width: 240px;
       margin: 0 12px 10px;
       a {
         max-width: 240px;
+      }
+      @include SP {
+        width: 50%;
+        margin: 0 0 16px;
+        padding: 0 7px 0;
+        a {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -30,6 +51,9 @@
   position: relative;
   background: #FDF7ED;
   padding: 43px 0 45px;
+  @include SP {
+    padding: 39px 0 41px;
+  }
   .dercor01 {
     content: "";
     position: absolute;
@@ -40,8 +64,7 @@
       top: 52%;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .dercor02 {
@@ -54,8 +77,7 @@
       top: 0%;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .dercor03 {
@@ -69,8 +91,7 @@
       margin-left: -351px;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .img-wave-yellow {
@@ -91,11 +112,19 @@
         width: 60%;
       }
     }
+    @include SP {
+      &__info {
+        margin: 42px 0 0;
+      }
+    }
   }
 }
 .sec-info02 {
   background-color: #fff;
   padding: 175px 0 196px;
+  @include SP {
+    padding: 89px 0 196px;
+  }
   .inner1170 {
     max-width: 1045px;
   }
@@ -104,6 +133,9 @@
   }
   .block01 {
     margin: 51px 0 0;
+    @include SP {
+      margin: 43px 0 0;
+    }
     &__map {
       line-height: 1;
       position: relative;
@@ -120,20 +152,41 @@
         width: 100%;
         height: 490px;
       }
+      @include SP {
+        iframe {
+          height: 233px;
+        }
+      }
     }
     .block01_info {
       margin: 28px 0 0;
+      @include SP {
+        margin: 22px 0 0;
+      }
       .ttl01 {
         @include font(16, 28, 0.1, 700);
       }
       .txt01 {
         @include font(16, 28, 0.1, 500);
+        @include SP {
+          @include font(15, 28);
+          margin: 0 -2px 0 0;
+        }
       }
       .btn01 {
         .c-btn01 {
           span {
             @include ffGT;
             @include font(15, 30, 0);
+          }
+        }
+        @include SP {
+          margin: 17px 0 0;
+          .c-btn01 {
+            max-width: 180px;
+            span {
+              @include font(14, 24);
+            }
           }
         }
       }
@@ -153,8 +206,14 @@
   }
   .block02 {
     margin: 59px 0 0;
+    @include SP {
+      margin: 55px 0 0;
+    }
     .img01 {
       margin: 30px 0 0;
+      @include SP {
+        margin: 55px 0 0;
+      }
     }
   }
   .block03 {
@@ -175,7 +234,7 @@
 }
 .sec-info03 {
   background-color: #F2F2F2;
-  padding: 45px 0 150px;
+  padding: 45px 0 148px;
   position: relative;
   .c-ttl02 {
     margin-bottom: 40px;
@@ -188,10 +247,10 @@
     content: "";
     position: absolute;
     @include PC {
-      width: 180px;
-      height: 211px;
-      right: 70px;
-      top: 52%;
+      width: 211px;
+      height: 224px;
+      right: 62px;
+      top: -101px;
     }
     @include SP {
       width: 82px;
@@ -243,9 +302,15 @@
     }
   }
 }
+
 .sec-info04 {
   position: relative;
-  background-color: #65B0D4;
+  padding: 123px 0 189px;
+  margin: -30px 0 0;
+  z-index: 2;
+  .c-ttl02 {
+    margin-bottom: 40px;
+  }
   &:before {
     top: -74px;
     @include PC {
@@ -282,5 +347,14 @@
       background-size: 100% 100%;
     }
   }
-
+  .desc01 {
+    color: #fff;
+    text-align: center;
+    @include font(18, 30, 0.12, 500);
+    margin: 39px 0 57px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }

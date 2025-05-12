@@ -109,7 +109,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <dd>9:30〜18:00</dd>
               </dl>
               <dl>
-                <dt>Spa Sand<br>(砂湯・温泉)</dt>
+                <dt>Spa Sand<br class="pc">(砂湯・温泉)</dt>
                 <dd>10:00〜21:00（最終入館時間 20:30）</dd>
               </dl>
               <dl>
@@ -159,7 +159,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <div class="block02">
           <h2 class="c-ttl03">
-            <span class="c-ttl03__icon"><img src="<?php echo createSVG(35, 36); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/img01.jpg" rel="js-lazy" width="35" height="36" alt=""></span>
+            <span class="c-ttl03__icon"><img src="<?php echo createSVG(35, 36); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_train.svg" rel="js-lazy" width="35" height="36" alt=""></span>
             <span class="c-ttl03__ttl">公共交通機関でお越しの方</span>
           </h2>
           <div class="img01">
@@ -306,14 +306,84 @@ include(APP_PATH . 'libs/head.php'); ?>
         </ul>
       </div>
     </div>
-    <div class="sec-info04" id="info04">
-      <div class="sec-info04-bg" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/about_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/about_bg_sp.png"></div>
+    <div class="sec-info04 c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg" id="info04">
       <div class="inner1170">
-        <h2 class="c-ttl02 is-white">
+        <h2 class="c-ttl02 is-white is-center">
           <span class="c-ttl02__jp">よくあるご質問</span>
           <span class="c-ttl02__en">Q&A</span>
         </h2>
         <p class="desc01">SHONIN PARKの利⽤についてよくあるご質問をまとめています。<br>こちらで確認できない内容は<a href="<?php echo APP_URL; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
+        <div class="mod-tabs">
+          <div class="nav-tabs">
+            <ul>
+              <li><p class="tab is-act" data-tab="tab01"><span class="txt">施設について</span></p></li>
+              <li><p class="tab" data-tab="tab02"><span class="txt">日帰り利用について</span></p></li>
+              <li><p class="tab" data-tab="tab03"><span class="txt">宿泊について</span></p></li>
+              <li><p class="tab" data-tab="tab05"><span class="txt">その他</span></p></li>
+            </ul>
+          </div>
+          <div class="tab-container">
+            <div class="tab-content is-show" id="tab01">
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>キャンセル規定について教えてください</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+               <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>ドローンは使用できますか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>定休日はありますか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>ペットは同伴可能ですか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>赤ちゃん用のおむつ替えスペースはありますか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>Wifiはありますか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+              <div class="qa">
+                <div class="qa__ques js-accordion">
+                  <p>海水浴はできますか？</p>
+                </div>
+                <div class="qa__ans js-accordion-content">
+                  <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
      </div>
   </main>
