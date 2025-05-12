@@ -660,7 +660,6 @@ a.c-link {
   display: inline-block;
   vertical-align: top;
   @include font(16, 1.5, 100, bold);
-  color: $blue01;
   position: relative;
   padding-left: 24px;
   color: $blue01;
@@ -668,7 +667,7 @@ a.c-link {
     content: "";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px;
     width: 20px;
     height: 20px;
     background: url('data:image/svg+xml,<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 11.3035L3.75 11.3035L3.75 9.69645L13.2594 9.69645L9.06875 5.38622L10.1734 4.25L16.25 10.5L10.1734 16.75L9.06875 15.6138L13.2594 11.3035Z" fill="%2365B0D4"/></svg>')  no-repeat center center/contain;
@@ -1878,12 +1877,14 @@ a.c-link {
     @include font("","",120,bold);
     @include PC {
       @include font(18,26);
+      @include multiLineEllipsis(2);
       @include max-screen(1100px) {
         @include font(16)
       }
     }
     @include SP {
       @include font(14,24);
+      @include multiLineEllipsis(3);
       margin-right: -3px;
     }
     @include ANDR {
