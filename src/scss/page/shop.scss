@@ -275,7 +275,7 @@
     @include PC {
       top: 325px;
       height: 170px;
-      background: url($img_url + "img/guide/shops/pattern_bg01.png") repeat-x 0 0/145px auto;
+      background: url($img_url + "img/guide/shop/pattern_bg01.png") repeat-x 0 0/145px auto;
       @include max-screen(1218px) {
         top: vw-pc(325px,1218);
       }
@@ -283,7 +283,7 @@
     @include SP {
       top: vw-sp(65px);
       height: 70px;
-      background: url($img_url + "img/guide/shops/pattern_bg01_sp.png") repeat-x 0 0/98px auto;
+      background: url($img_url + "img/guide/shop/pattern_bg01_sp.png") repeat-x 0 0/98px auto;
     }
   }
   @include PC {
@@ -441,12 +441,12 @@
       }
     }
     .icn-url {
-      -webkit-mask-image: url($img_url + "img/guide/shops/icn01.svg");
-      mask-image: url($img_url + "img/guide/shops/icn01.svg");
+      -webkit-mask-image: url($img_url + "img/guide/shop/icn01.svg");
+      mask-image: url($img_url + "img/guide/shop/icn01.svg");
     }
     .icn-instagram {
-      -webkit-mask-image: url($img_url + "img/guide/shops/icn02.svg");
-      mask-image: url($img_url + "img/guide/shops/icn02.svg");
+      -webkit-mask-image: url($img_url + "img/guide/shop/icn02.svg");
+      mask-image: url($img_url + "img/guide/shop/icn02.svg");
     }
   }
   .shop-time {
