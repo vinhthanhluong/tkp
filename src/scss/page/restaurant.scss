@@ -1,6 +1,12 @@
 @charset 'UTF-8';
 @import "../utility/*";
 
+.c-mainvisual .mv-ttl-en {
+  @include ANDR {
+    @include font(30);
+  }
+}
+
 .c-about-block {
   overflow: hidden;
   &:after {
@@ -434,6 +440,7 @@
   .menu-info {
     @include SP {
       @include flexbox;
+      @include align-items(flex-start);
     }
   }
   .c-btn01 {
