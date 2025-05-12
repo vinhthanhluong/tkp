@@ -70,6 +70,9 @@
     }
   }
 }
+.t-overflow {
+  overflow: hidden;
+}
 // Common
 
 // Section Mainvisual
@@ -1138,7 +1141,7 @@
 }
 .instagram-bg {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   left: 0;
   object-position: center;

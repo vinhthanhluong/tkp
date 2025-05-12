@@ -362,6 +362,14 @@ body:not(.fixHeader) {
       margin: 40px -20px 0;
       padding: 45px 20px 29px;
     }
+    .is-safari & {
+      @include PC {
+        margin-top: 71px;
+      }
+      @include SP {
+        margin-top: 48px;
+      }
+    }
   }
   .gOfficia-ttl {
     @include ffGT;
@@ -611,6 +619,9 @@ body:not(.fixHeader) {
             top: 2px;
             left: 0;
             transition: transform 0.3s ease;
+            .is-safari & {
+              top: 1px;
+            }
           }
         }
       }

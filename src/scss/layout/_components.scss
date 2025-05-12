@@ -567,6 +567,7 @@ a.c-btn03 {
   text-align: center;
   border: solid 1px $blue01;
   border-radius: 25px;
+  transform: translateZ(0);
   transition: all 0.4s ease;
   @include PC {
     padding: 9px 31px 9px 21px;
