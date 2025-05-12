@@ -5,9 +5,15 @@ include(APP_PATH . 'libs/head.php'); ?>
 </head>
 
 <body id="guide" class="guide">
-  <?php //include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <div class="sec-mv">
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li>施設案内</li>
+      </ul>
+    </div>
+    <div class="sec-mv aos-init" data-aos="fade-in">
       <div class="content-sec">
         <div class="img-wave-blue">
           <div class="wave-top">
@@ -26,10 +32,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
 
-        <p class="img-item-1">
+        <p class="img-item-1 aos-init" data-aos="zoom-in">
           <img width="257" height="200" src="<?php echo createSVG(257, 200); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_1.png" rel="js-lazy" alt="">
         </p>
-        <p class="img-item-2">
+        <p class="img-item-2 aos-init" data-aos="zoom-in" data-aos-delay="500">
           <img width="211" height="224" src="<?php echo createSVG(211, 224); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_2.png" rel="js-lazy" alt="">
         </p>
         <h1 class="tit-sec">
@@ -42,9 +48,9 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="sec-guide c-bg-wave02">
       <div class="content-sec">
-        <div class="row-guide">
+        <div class="row-guide aos-init" data-aos="fade-up">
           <div class="box-img">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_spa.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -57,17 +63,17 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-1 pc">
+            <p class="img-item-1 pc aos-init" data-aos="zoom-in" data-aos-delay="800">
               <img width="123" height="98" src="<?php echo createSVG(123, 98); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_3.png" rel="js-lazy" alt="">
             </p>
-            <p class="img-item-2">
+            <p class="img-item-2 aos-init" data-aos="zoom-in" data-aos-delay="1000">
               <img width="166" height="140" src="<?php echo createSVG(166, 140); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_4.png" rel="js-lazy" alt="">
             </p>
           </div>
         </div>
-        <div class="row-guide row-reverse">
+        <div class="row-guide row-reverse aos-init" data-aos="fade-up">
           <div class="box-img sp">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -75,22 +81,22 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Shop</strong>
             </h2>
             <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-3">
+            <p class="img-item-3 aos-init" data-aos="zoom-in">
               <img width="117" height="119" src="<?php echo createSVG(117, 119); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_5.png" rel="js-lazy" alt="">
             </p>
           </div>
           <div class="box-img pc">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_shop.png" alt="">
           </div>
         </div>
-        <div class="row-guide">
+        <div class="row-guide aos-init" data-aos="fade-up">
           <div class="box-img">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_restaurant.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -98,20 +104,20 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Restaurant</strong>
             </h2>
             <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>restaurant/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-4">
+            <p class="img-item-4 aos-init" data-aos="zoom-in">
               <img width="143" height="170" src="<?php echo createSVG(143, 170); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_6.png" rel="js-lazy" alt="">
             </p>
 
           </div>
         </div>
-        <div class="row-guide row-reverse">
+        <div class="row-guide row-reverse aos-init" data-aos="fade-up">
           <div class="box-img sp">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" alt="">
           </div>
           <div class="box-detail">
             <h2 class="tit-box">
@@ -124,17 +130,17 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span>もっと見る</span>
               <i class="arr02"></i>
             </a>
-            <p class="img-item-5">
+            <p class="img-item-5 aos-init" data-aos="zoom-in">
               <img width="258" height="163" src="<?php echo createSVG(258, 163); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/item_7.png" rel="js-lazy" alt="">
             </p>
           </div>
           <div class="box-img pc">
-            <img width="560" height="400" src="<?php echo createSVG(560, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" rel="js-lazy" alt="">
+            <img width="560" height="400" src="<?php echo APP_ASSETS ?>img/guide/img_stay.png" alt="">
           </div>
         </div>
       </div>
     </div>
-    <div class="mod-park">
+    <div class="mod-park aos-init" data-aos="fade-up">
       <div class="mod-park__inner">
         <div class="content-mod sp">
           <h2 class="tit-box">
@@ -201,7 +207,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>restaurants/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>restaurant/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -263,7 +269,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>shop/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
