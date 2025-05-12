@@ -331,11 +331,13 @@ include(APP_PATH . 'libs/head.php'); ?>
             </a>
           </li>
         </ul>
-        <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
-          <i class="arr01"></i>
-          <span>もっと見る</span>
-          <i class="arr02"></i>
-        </a>
+        <div class="aos-init" data-aos="fade-up">
+          <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
+            <i class="arr01"></i>
+            <span>もっと見る</span>
+            <i class="arr02"></i>
+          </a>
+        </div>
       </div>
     </section>
   </main>
