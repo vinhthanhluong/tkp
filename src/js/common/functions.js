@@ -93,3 +93,37 @@ function jsPopup() {
     });
   });
 }
+
+function modtabs() {
+  if ($('.mod-tabs').length > 0) {
+    $('.mod-tabs .nav-tabs ul li:first-child .tab').addClass('is-active');
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        $('.mod-tabs .nav-tabs .tab').click(function(){
+        var t = $(this).attr('data-tab');
+        $('.mod-tabs .nav-tabs .tab').removeClass('is-active');
+        $(this).addClass('is-active');
+        $('.mod-tabs .tab-content').hide().removeClass('is-active');
+        $('.mod-tabs .tab-content#'+t).fadeIn().addClass('is-active');
+      })
+    }
+  }
+}
+function toggleDropdown() {
+  if ($(".js-accordion").length) {
+    $(".js-accordion").click(function () {
+      if ($(this).hasClass("is-act")) {
+        $(this).removeClass("is-act");
+        $(this).parent().find(".js-accordion-content").slideUp();
+        // if($(this).hasClass('btn-contact')) {
+        //   app.bodyNoneFixed();
+        // }
+      } else {
+        $(this).addClass("is-act");
+        $(this).parent().find(".js-accordion-content").slideDown();
+        // if($(this).hasClass('btn-contact')) {
+        //   app.bodyActiveFixed();
+        // }
+      }
+    });
+  }
+};

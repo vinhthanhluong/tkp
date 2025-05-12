@@ -38,9 +38,11 @@ include(APP_PATH . 'libs/head.php');
         <div class="img-dot aos-init" data-aos="fade-up"><img width="180" height="55" src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/dot_decor.png" rel="js-lazy" alt="decoration"></div>
         <div class="box-meta aos-init" data-aos="fade-up">
           <span class="meta-date"><?php echo $sg_date; ?></span>
-          <?php if (!empty($sg_terms)) { foreach ($sg_terms as $term) { ?>
-            <a class="meta-cates" href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
-          <?php } } ?>
+          <?php if (!empty($sg_terms)) {
+            foreach ($sg_terms as $term) { ?>
+              <a class="meta-cates" href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
+          <?php }
+          } ?>
         </div>
         <h1 class="sg-heading aos-init" data-aos="fade-up"><?php echo $sg_title; ?></h1>
         <?php if (!empty($sg_thumb)) { ?>
@@ -50,7 +52,11 @@ include(APP_PATH . 'libs/head.php');
         <?php } ?>
       </div>
       <div class="article-block">
-        <?php if (!empty($post->post_content)) { ?><div class="cms-content aos-init" data-aos="fade-up"><?php the_content(); ?></div><?php } ?>
+        <?php if (!empty($post->post_content)) { ?>
+          <div class="cms-content aos-init" data-aos="fade-up">
+            <?php the_content(); ?>
+          </div>
+        <?php } ?>
         <div class="sg-share aos-init" data-aos="fade-up">
           <div class="share-inner">
             <span class="share__ttl">Share</span>
@@ -69,21 +75,74 @@ include(APP_PATH . 'libs/head.php');
             </a>
           </div>
         </div>
+
+        <?php
+        $postlist_args = array(
+          'posts_per_page' => '-1',
+          'post_status'    => 'publish',
+          'order'          => 'DESC',
+          'orderby'        => 'post_date',
+          'post_type'      => 'news',
+        );
+        $postlist = get_posts($postlist_args);
+        $ids = array();
+        foreach ($postlist as $thepost) {
+          $ids[] = $thepost->ID;
+        }
+
+        $thisindex = array_search($sg_id, $ids);
+
+        if (isset($ids[$thisindex + 1])) {
+          $previd = $ids[$thisindex + 1];
+          $prev_link = get_the_permalink($previd);
+          $prev_ttl = get_the_title($previd);
+          $prev_thumb = wp_get_attachment_url(get_post_thumbnail_id($previd), 'thumbnail');
+          $prev_thumb = $prev_thumb ? $prev_thumb : APP_NOIMG;
+        }
+        if (isset($ids[$thisindex - 1])) {
+          $nextid = $ids[$thisindex - 1];
+          $next_link = get_the_permalink($nextid);
+          $next_ttl = get_the_title($nextid);
+          $next_thumb = wp_get_attachment_url(get_post_thumbnail_id($nextid), 'thumbnail');
+          $next_thumb = $next_thumb ? $next_thumb : APP_NOIMG;
+        }
+        ?>
         <div class="mod-pagination">
-          <a href="#" class="prev">
-            <p class="prev__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img01.jpg" rel="js-lazy" alt=""></p>
-            <p class="prev__ttl">7月22日～「むらごとマルシェ」がスタート！</p>
+          <a href="<?php if (!empty($prev_link)) {
+                      echo $prev_link;
+                    } ?>" class="prev <?php if (empty($previd)) {
+                                        echo "disable";
+                                      } ?>">
+            <?php if (!empty($previd)) { ?>
+              <p class="prev__thumb">
+                <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $prev_thumb; ?>" rel="js-lazy" alt="">
+              </p>
+              <?php if (!empty($prev_ttl)) { ?>
+                <p class="prev__ttl"><?php echo $prev_ttl; ?></p>
+              <?php } ?>
+            <?php } ?>
           </a>
           <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-cover">
             <i class="arr01"></i>
             <span>一覧へ戻る</span>
             <i class="arr02"></i>
           </a>
-          <a href="#" class="next">
-            <p class="next__thumb"><img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/img02.jpg" rel="js-lazy" alt=""></p>
-            <p class="next__ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+          <a href="<?php if (!empty($next_link)) {
+                      echo $next_link;
+                    } ?>" class="next <?php if (empty($nextid)) {
+                                        echo "disable";
+                                      } ?>">
+            <?php if (!empty($nextid)) { ?>
+              <p class="next__thumb">
+                <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $next_thumb; ?>" rel="js-lazy" alt="">
+              </p>
+              <?php if (!empty($next_ttl)) { ?>
+                <p class="next__ttl"><?php echo $next_ttl; ?></p>
+              <?php } ?>
+            <?php } ?>
           </a>
         </div>
+
       </div>
     </div>
   </main>

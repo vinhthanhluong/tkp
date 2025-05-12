@@ -1,5 +1,16 @@
 <?php
 $thisPageName = 'shop';
+
+$post_id = get_the_ID();
+$shop_list = get_field('shop_list', $post_id);
+$shop_list_name = [];
+if (!empty($shop_list)) {
+  foreach ($shop_list as $shop) {
+    $shop_list_name[] = $shop['shop_name'];
+  }
+}
+$news_relate = get_field('news_relate', $post_id);
+
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/shop.min.css?v=<?php echo APP_VER ?>">
 </head>
@@ -62,284 +73,142 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <div class="map-block aos-init" data-aos="fade-up">
           <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="">
-          <p class="map-tag is-tag01">店舗名店舗名</p>
-          <p class="map-tag is-tag02">店舗名店舗名<br>店舗名店舗名店舗名</p>
-          <p class="map-tag is-tag03">店舗名店舗</p>
-          <p class="map-tag is-tag04">店舗名店舗名店舗名<br>店舗名店舗名店舗名店舗名</p>
-          <p class="map-tag is-tag05">店舗名</p>
-          <p class="map-tag is-tag06">店舗名店舗名<br>店舗名店舗名店舗名店舗名</p>
-          <p class="map-tag is-tag07">店舗名</p>
+          <?php if (!empty($shop_list_name[0])) { ?>
+            <p class="map-tag is-tag01"><?php echo $shop_list_name[0]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[1])) { ?>
+            <p class="map-tag is-tag02"><?php echo $shop_list_name[1]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[2])) { ?>
+            <p class="map-tag is-tag03"><?php echo $shop_list_name[2]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[3])) { ?>
+            <p class="map-tag is-tag04"><?php echo $shop_list_name[3]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[4])) { ?>
+            <p class="map-tag is-tag05"><?php echo $shop_list_name[4]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[5])) { ?>
+            <p class="map-tag is-tag06"><?php echo $shop_list_name[5]; ?></p>
+          <?php } ?>
+          <?php if (!empty($shop_list_name[6])) { ?>
+            <p class="map-tag is-tag07"><?php echo $shop_list_name[6]; ?></p>
+          <?php } ?>
         </div>
-        <h2 class="c-ttl02 aos-init" data-aos="fade-up">
-          <span class="c-ttl02__jp">エリア案内</span>
-          <span class="c-ttl02__en">Shop Area</span>
-        </h2>
-        <ul class="shop-list">
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">大分の名物料理や地元の特産品を販売するグルメストア。新鮮な海産物や地元産の食材を使った加工品など、美味しさと品質にこだわった商品が並びます。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">大分の名物料理や地元の特産品を販売するグルメストア。新鮮な海産物や地元産の食材を使った加工品など、美味しさと品質にこだわった商品が並びます。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <div class="shop-item">
-              <div class="shop-group">
-                <figure class="shop-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/shop_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="shop-info">
-                  <p class="shop-ttl js-match-height-ttl">ショップ名</p>
-                  <ul class="shop-sns">
-                    <li><a class="icn icn-url" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                    <li><a class="icn icn-instagram" href="#" target="_blank" rel="noopener nofollow"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <p class="shop-desc js-match-height-desc">大分の名物料理や地元の特産品を販売するグルメストア。新鮮な海産物や地元産の食材を使った加工品など、美味しさと品質にこだわった商品が並びます。</p>
-              <dl class="shop-time">
-                <dt>営業時間</dt>
-                <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-              </dl>
-            </div>
-          </li>
-        </ul>
+
+        <?php if (!empty($shop_list)) { ?>
+          <h2 class="c-ttl02 aos-init" data-aos="fade-up">
+            <span class="c-ttl02__jp">エリア案内</span>
+            <span class="c-ttl02__en">Shop Area</span>
+          </h2>
+          <ul class="shop-list">
+            <?php
+            foreach ($shop_list as $shop) {
+              $shop_name = $shop['shop_name'];
+              $shop_pic = $shop['shop_pic'];
+              $shop_pic = $shop_pic ? $shop_pic['sizes'] : '';
+              $shop_pic = $shop_pic ? $shop_pic['medium']  : APP_NOIMG;
+              $shop_desc = $shop['shop_desc'];
+              $shop_time = $shop['shop_time'];
+              $shop_web = $shop['shop_web'];
+              $shop_instagram = $shop['shop_instagram'];
+              if (!empty($shop_name) || $shop_pic != APP_NOIMG || !empty($shop_desc) || !empty($shop_time) || !empty($shop_web) || !empty($shop_instagram)) {
+
+            ?>
+                <li class="aos-init" data-aos="fade-up">
+                  <div class="shop-item">
+                    <div class="shop-group">
+                      <figure class="shop-img c-img">
+                        <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $shop_pic; ?>" rel="js-lazy" width="345" height="250" alt="">
+                      </figure>
+                      <div class="shop-info">
+                        <?php if (!empty($shop_name)) { ?>
+                          <p class="shop-ttl js-match-height-ttl"><?php echo $shop_name; ?></p>
+                        <?php } ?>
+                        <?php if (!empty($shop_web) || !empty($shop_instagram)) { ?>
+                          <ul class="shop-sns">
+                            <?php if (!empty($shop_web)) { ?>
+                              <li><a class="icn icn-url" href="<?php echo $shop_web['url']; ?>" target="_blank" rel="noopener nofollow"></a></li>
+                            <?php } ?>
+                            <?php if (!empty($shop_instagram)) { ?>
+                              <li><a class="icn icn-instagram" href="<?php echo $shop_instagram['url']; ?>" target="_blank" rel="noopener nofollow"></a></li>
+                            <?php } ?>
+                          </ul>
+                        <?php } ?>
+                      </div>
+                    </div>
+                    <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
+                    <dl class="shop-time">
+                      <dt>営業時間</dt>
+                      <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
+                    </dl>
+                  </div>
+                </li>
+            <?php }
+            } ?>
+          </ul>
+        <?php } ?>
       </div>
     </section>
-    <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
-      <div class="inner1170">
-        <h2 class="c-ttl02 is-white aos-init" data-aos="fade-up">
-          <span class="c-ttl02__jp">ニュース</span>
-          <span class="c-ttl02__en">News</span>
-        </h2>
-        <ul class="news-list">
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img05.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">ショップ</p>
-                  <p class="news-time">2025.03.20</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
+    <?php if (!empty($news_relate)) {  ?>
+      <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
+        <div class="inner1170">
+          <h2 class="c-ttl02 is-white aos-init" data-aos="fade-up">
+            <span class="c-ttl02__jp">ニュース</span>
+            <span class="c-ttl02__en">News</span>
+          </h2>
+          <ul class="news-list">
+            <?php
+            foreach ($news_relate as $news) {
+              $news_id = $news->ID;
+              $news_url = get_the_permalink($news_id);
+              $news_ttl = get_the_title($news_id);
+              $news_date = get_the_date('Y.m.d', $news_id);
+              $news_terms = get_the_terms($news_id, 'newscat');
+              $news_thumb = get_the_post_thumbnail_url($news_id);
+              $news_photo = (!empty($news_thumb)) ? $news_thumb : APP_NOIMG;
+            ?>
+              <li class="aos-init" data-aos="fade-up">
+                <a class="news-item" href="<?php echo $news_url; ?>">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="">
+                  </figure>
+                  <div class="news-info">
+                    <?php if (!empty($news_terms) || !empty($news_date)) { ?>
+                      <div class="news-head">
+                        <?php
+                        if (!empty($news_terms)) {
+                          foreach ($news_terms as $nterm) {
+                            $cat_name = $nterm->name;
+                        ?>
+                            <p class="news-cate"><?php echo $cat_name; ?></p>
+                        <?php }
+                        } ?>
+                        <?php
+                        if (!empty($news_date)) {
+                        ?>
+                          <p class="news-time"><?php echo $news_date; ?></p>
+                        <?php } ?>
+                      </div>
+                    <?php } ?>
+                    <?php if (!empty($news_ttl)) { ?>
+                      <p class="news-ttl"><?php echo $news_ttl; ?></p>
+                    <?php } ?>
+                  </div>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <div class="aos-init" data-aos="fade-up">
+            <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
             </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img06.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">ショップ</p>
-                  <p class="news-time">2025.03.18</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img07.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">ショップ</p>
-                  <p class="news-time">2025.03.30</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img08.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">ショップ</p>
-                  <p class="news-time">2025.03.18</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div class="aos-init" data-aos="fade-up">
-          <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
-            <i class="arr01"></i>
-            <span>もっと見る</span>
-            <i class="arr02"></i>
-          </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <?php } ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/jquery.matchHeight.min.js?v=<?php echo APP_VER ?>"></script>
