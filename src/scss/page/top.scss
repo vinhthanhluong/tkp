@@ -1334,30 +1334,5 @@
     }
   }
 }
-@-webkit-keyframes cloud01 {
-  0% {
-    transform: rotate(20deg) scale(0.5) translate(30px, 30px);
-    opacity: 0;
-  }
-  50% {
-    transform: rotate(0) scale(1) translate(0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes cloud02 {
-  0% {
-    transform: rotate(-20deg) scale(0.5) translate(-30px, 30px);
-    opacity: 0;
-  }
-  50% {
-    transform: rotate(0) scale(1) translate(0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 // Section Instagram
