@@ -1,5 +1,11 @@
 <?php
 $thisPageName = 'restaurant';
+
+$post_id = get_the_ID();
+$food_list = get_field('food_list', $post_id);
+$file_pdf = get_field('file_pdf', $post_id);
+$news_relate = get_field('news_relate', $post_id);
+
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/restaurant.min.css?v=<?php echo APP_VER ?>">
@@ -126,220 +132,122 @@ include(APP_PATH . 'libs/head.php'); ?>
         </dl>
       </div>
     </div>
+
     <section class="sec-menu">
-      <div class="inner1170">
-        <h2 class="c-ttl02 aos-init" data-aos="fade-up">
-          <span class="c-ttl02__jp">メニュー</span>
-          <span class="c-ttl02__en">Menu</span>
-        </h2>
-        <ul class="menu-list">
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ハワイアンBBQ<br>プレート</p>
-                  <p class="menu-price"><span class="number">1,450</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストです</p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ポキボウル</p>
-                  <p class="menu-price"><span class="number">1,200</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ロコモコ</p>
-                  <p class="menu-price"><span class="number">1,000</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ロコモコ</p>
-                  <p class="menu-price"><span class="number">1,000</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ハワイアンBBQ<br>プレート</p>
-                  <p class="menu-price"><span class="number">1,450</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストです</p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ポキボウル</p>
-                  <p class="menu-price"><span class="number">1,200</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ハワイアンBBQ<br>プレート</p>
-                  <p class="menu-price"><span class="number">1,450</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストです</p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ポキボウル</p>
-                  <p class="menu-price"><span class="number">1,200</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-          <li>
-            <div class="menu-item aos-init" data-aos="fade-up">
-              <div class="menu-info">
-                <figure class="menu-img c-img">
-                  <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/menu_img03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </figure>
-                <div class="menu-head">
-                  <p class="menu-ttl">ロコモコ</p>
-                  <p class="menu-price"><span class="number">1,000</span>円<small>(税込)</small></p>
-                </div>
-              </div>
-              <p class="menu-desc">これはダミーテキストですこれはダミーテキストです<span class="txt-lg">これはダミーテキストです</span></p>
-            </div>
-          </li>
-        </ul>
-        <a href="#" class="c-btn01 is-center">
-          <i class="arr01"></i>
-          <span>その他のメニューはこちら<small>（PDF：2MB）</small></span>
-          <i class="arr02"></i>
-        </a>
-      </div>
-    </section>
-    <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
-      <div class="inner1170">
-        <h2 class="c-ttl02 is-white aos-init" data-aos="fade-up">
-          <span class="c-ttl02__jp">ニュース</span>
-          <span class="c-ttl02__en">News</span>
-        </h2>
-        <ul class="news-list">
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img01.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">お知らせ</p>
-                  <p class="news-time">2025.03.20</p>
-                </div>
-                <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </div>
+      <?php if (!empty($food_list) || !empty($file_pdf)) { ?>
+        <div class="inner1170">
+          <h2 class="c-ttl02 aos-init" data-aos="fade-up">
+            <span class="c-ttl02__jp">メニュー</span>
+            <span class="c-ttl02__en">Menu</span>
+          </h2>
+          <?php if (!empty($food_list)) { ?>
+            <ul class="menu-list">
+              <?php
+              foreach ($food_list as $item) {
+                $food_name = $item['food_name'];
+                $food_pic = $item['food_pic'];
+                $food_pic = $food_pic ? $food_pic['sizes'] : '';
+                $food_pic = $food_pic ? $food_pic['medium'] : APP_NOIMG;
+                $food_price = $item['food_price'];
+                $food_desc = $item['food_desc'];
+              ?>
+                <li>
+                  <div class="menu-item aos-init" data-aos="fade-up">
+                    <div class="menu-info">
+                      <figure class="menu-img c-img">
+                        <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $food_pic; ?>" rel="js-lazy" width="345" height="250" alt="">
+                      </figure>
+                      <div class="menu-head">
+                        <?php if (!empty($food_name)) { ?>
+                          <p class="menu-ttl"><?php echo $food_name; ?></p>
+                        <?php } ?>
+                        <?php if (!empty($food_price)) { ?>
+                          <p class="menu-price"><span class="number"><?php echo $food_price; ?></span>円<small>(税込)</small></p>
+                        <?php } ?>
+                      </div>
+                    </div>
+                    <p class="menu-desc">これはダミーテキストです</p>
+                  </div>
+                </li>
+              <?php } ?>
+            </ul>
+          <?php } ?>
+          <?php
+          if (!empty($file_pdf)) {
+            $file_pdf_size = $file_pdf['filesize'];
+            $file_pdf_size = round($file_pdf['file_size'] / (1024 * 1024), 2);
+            $file_pdf_url = $file_pdf['url'];
+          ?>
+            <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
+              <i class="arr01"></i>
+              <span>その他のメニューはこちら<small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
+              <i class="arr02"></i>
             </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img02.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">イベント</p>
-                  <p class="news-time">2025.03.18</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img03.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">お知らせ</p>
-                  <p class="news-time">2025.03.30</p>
-                </div>
-                <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </div>
-            </a>
-          </li>
-          <li class="aos-init" data-aos="fade-up">
-            <a class="news-item" href="#">
-              <figure class="news-img c-img">
-                <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/news_img04.jpg" rel="js-lazy" width="165" height="120" alt="">
-              </figure>
-              <div class="news-info">
-                <div class="news-head">
-                  <p class="news-cate">イベント</p>
-                  <p class="news-time">2025.03.18</p>
-                </div>
-                <p class="news-ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div class="aos-init" data-aos="fade-up">
-          <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
-            <i class="arr01"></i>
-            <span>もっと見る</span>
-            <i class="arr02"></i>
-          </a>
+          <?php } ?>
         </div>
-      </div>
+      <?php } ?>
     </section>
+
+    <?php if (!empty($news_relate)) {  ?>
+      <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
+        <div class="inner1170">
+          <h2 class="c-ttl02 is-white aos-init" data-aos="fade-up">
+            <span class="c-ttl02__jp">ニュース</span>
+            <span class="c-ttl02__en">News</span>
+          </h2>
+
+          <ul class="news-list">
+            <?php
+            foreach ($news_relate as $news) {
+              $news_id = $news->ID;
+              $news_url = get_the_permalink($news_id);
+              $news_ttl = get_the_title($news_id);
+              $news_date = get_the_date('Y.m.d', $news_id);
+              $news_terms = get_the_terms($news_id, 'newscat');
+              $news_thumb = get_the_post_thumbnail_url($news_id);
+              $news_photo = (!empty($news_thumb)) ? $news_thumb : APP_NOIMG;
+            ?>
+              <li class="aos-init" data-aos="fade-up">
+                <a class="news-item" href="<?php echo $news_url; ?>">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="">
+                  </figure>
+                  <div class="news-info">
+                    <?php if (!empty($news_terms) || !empty($news_date)) { ?>
+                      <div class="news-head">
+                        <?php
+                        if (!empty($news_terms)) {
+                          foreach ($news_terms as $nterm) {
+                            $cat_name = $nterm->name;
+                        ?>
+                            <p class="news-cate"><?php echo $cat_name; ?></p>
+                        <?php }
+                        } ?>
+                        <?php
+                        if (!empty($news_date)) {
+                        ?>
+                          <p class="news-time"><?php echo $news_date; ?></p>
+                        <?php } ?>
+                      </div>
+                    <?php } ?>
+                    <?php if (!empty($news_ttl)) { ?>
+                      <p class="news-ttl"><?php echo $news_ttl; ?></p>
+                    <?php } ?>
+                  </div>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <div class="aos-init" data-aos="fade-up">
+            <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    <?php } ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
