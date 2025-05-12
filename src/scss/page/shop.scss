@@ -1,0 +1,477 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.c-about-block {
+  overflow: hidden;
+  @include PC {
+    margin-bottom: 64px;
+  }
+  @include SP {
+    margin-bottom: 49px;
+  }
+  .about-content.cloud-decor {
+    @include SP {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .about-ttl {
+    @include PC {
+      margin-bottom: 21px;
+    }
+  }
+  .about-right {
+    @include PC {
+      padding-left: 62px;
+      @include max-screen(1280px) {
+        padding-left: vw-pc(50px,1280);
+      }
+    }
+  }
+  .about-pic {
+    @include PC {
+      width: calc(317/590*100%);
+      padding-top: calc(198/590*100%);
+      margin: 0 43px 0 auto;
+    }
+  }
+  .about-desc {
+    @include PC {
+      max-width: 545px;
+      margin-bottom: 74px;
+      @include max-screen(1280px) {
+        margin-bottom: vw-pc(70px,1280);
+      }
+    }
+  }
+  .about-bg {
+    @include PC {
+      background-position: center 0;
+      bottom: 78px;
+      @include max-screen(1280px) {
+        bottom: vw-pc(78px,1280);
+      }
+    }
+    @include SP {
+      bottom: vw-sp(74px);
+    }
+  }
+  .about-group {
+    @include SP {
+      margin-top: 40px;
+    }
+    .cloud-decor:before {
+      @include PC {
+        display: none;
+      }
+    }
+  }
+  .cloud-decor:before {
+    @include PC {
+      top: -80px;
+      right: -150px;
+      @include max-screen(1280px) {
+        right: vw-pc(-50px,1280);
+      }
+    }
+    @include SP {
+      top: -110px;
+      left: -8px;
+    }
+  }
+  .dot-decor:after {
+    @include PC {
+      left: -60px;
+      top: -14px;
+      background-size: auto 100%;
+      width: 105px;
+      @include max-screen(1280px) {
+        left: vw-pc(-40px,1280);
+        width: vw-pc(105px,1280);
+      }
+    }
+    @include SP {
+      display: none;
+    }
+  }
+}
+.map-block {
+  position: relative;
+  @include PC {
+    margin-bottom: 38px;
+  }
+  @include SP {
+    margin-bottom: 24px;
+  }
+  .map-tag {
+    @include font("","",120,bold);
+    color: #fff;
+    border: 2px solid #fff;
+    background: #755C49;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0 0 10px rgba($black01, 0.1);
+    @include PC {
+      @include font(15,19);
+      border-radius: 50px;
+      padding: 5px 12px;
+      min-width: 79px;
+      @include max-screen(1218px) {
+        font-size: vw-pc(15px,1218);
+        border-radius: vw-pc(50px,1218);
+        padding: vw-pc(5px ,1218) vw-pc(12px,1218);
+        min-width: vw-pc(79px,1218);
+      }
+    }
+    @include SP {
+      font-size: vw-sp(6px);
+      line-height: calc(8/6);
+      border-radius: vw-sp(50px);
+      padding: vw-sp(1px) vw-sp(4px) vw-sp(1.5px);
+      min-width: vw-sp(30px);
+      border-width: vw-sp(1px);
+    }
+  }
+  .is-tag01 {
+    @include PC {
+      left: 164px;
+      top: 122px;
+      @include max-screen(1218px) {
+        left: vw-pc(164px,1218);
+        top: vw-pc(122px,1218);
+      }
+    }
+    @include SP {
+      left: vw-sp(35px);
+      top: vw-sp(28px);
+    }
+  }
+  .is-tag02 {
+    @include PC {
+      left: 345px;
+      top: 202px;
+      padding-left: 17px;
+      padding-right: 17px;
+      @include max-screen(1218px) {
+        left: vw-pc(345px,1218);
+        top: vw-pc(202px,1218);
+        padding-left: vw-pc(17px,1218);
+        padding-right: vw-pc(17px,1218);
+      }
+    }
+    @include SP {
+      left: vw-sp(88px);
+      top: vw-sp(52px);
+      padding-left: vw-sp(5px);
+      padding-right: vw-sp(5px);
+    }
+  }
+  .is-tag03 {
+    @include PC {
+      left: 586px;
+      top: 77px;
+      @include max-screen(1218px) {
+        left: vw-pc(586px,1218);
+        top: vw-pc(77px,1218);
+      }
+    }
+    @include SP {
+      left: vw-sp(160px);
+      top: vw-sp(18px);
+    }
+  }
+  .is-tag04 {
+    @include PC {
+      left: 503px;
+      top: 322px;
+      padding-left: 17px;
+      padding-right: 17px;
+      @include max-screen(1218px) {
+        left: vw-pc(503px,1218);
+        top: vw-pc(322px,1218);
+        padding-left: vw-pc(17px,1218);
+        padding-right: vw-pc(17px,1218);
+      }
+    }
+    @include SP {
+      left: vw-sp(134px);
+      top: vw-sp(84px);
+    }
+  }
+  .is-tag05 {
+    @include PC {
+      right: 221px;
+      top: 72px;
+      @include max-screen(1218px) {
+        right: vw-pc(221px,1218);
+        top: vw-pc(72px,1218);
+      }
+    }
+    @include SP {
+      right: vw-sp(55px);
+      top: vw-sp(16px);
+    }
+  }
+  .is-tag06 {
+    @include PC {
+      padding-left: 17px;
+      padding-right: 17px;
+      right: 40px;
+      top: 202px;
+      @include max-screen(1218px) {
+        padding-left: vw-pc(17px,1218);
+        padding-right: vw-pc(17px,1218);
+        right: vw-pc(40px,1218);
+        top: vw-pc(202px,1218);
+      }
+    }
+    @include SP {
+      right: 0;
+      top: vw-sp(48px);
+    }
+  }
+  .is-tag07 {
+    @include PC {
+      right: 231px;
+      bottom: 180px;
+      @include max-screen(1218px) {
+        right: vw-pc(231px,1218);
+        bottom: vw-pc(180px,1218);
+      }
+    }
+    @include SP {
+      right: vw-sp(60px);
+      bottom: vw-sp(47px);
+    }
+  }
+}
+
+.sec-shop {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &:after {
+    background: #f2f2f2;
+    bottom: 0;
+    @include PC {
+      top: 400px;
+      @include max-screen(1218px) {
+        top: vw-pc(400px,1218);
+      }
+    }
+    @include SP {
+      top: vw-sp(100px);
+    }
+  }
+  &:before {
+    @include PC {
+      top: 325px;
+      height: 170px;
+      background: url($img_url + "img/guide/shops/pattern_bg01.png") repeat-x 0 0/145px auto;
+      @include max-screen(1218px) {
+        top: vw-pc(325px,1218);
+      }
+    }
+    @include SP {
+      top: vw-sp(65px);
+      height: 70px;
+      background: url($img_url + "img/guide/shops/pattern_bg01_sp.png") repeat-x 0 0/98px auto;
+    }
+  }
+  @include PC {
+    padding-bottom: 102px;
+    margin-bottom: -40px;
+  }
+  @include SP {
+    padding-bottom: 94px;
+    margin-bottom: -30px;
+  }
+  .c-ttl02 {
+    @include PC {
+      margin-bottom: 81px;
+    }
+    @include SP {
+      margin-bottom: 34px;
+    }
+  }
+  .shop-list {
+    @include PC {
+      @include flexbox;
+      @include flex-wrap;
+      margin: 0 -34px;
+      @include max-screen(1280px) {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      @include max-screen(1130px) {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+    &>li {
+      @include PC {
+        width: calc(100% / 3);
+        padding: 0 34px;
+        margin-bottom: 40px;
+        @include max-screen(1280px) {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include max-screen(1130px) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      @include SP {
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .shop-item {
+    display: block;
+    position: relative;
+    @include PC {
+      padding-bottom: 48px;
+    }
+  }
+  .shop-img {
+    -webkit-mask-image: url($img_url + "img/common/mask_bg07.png");
+    mask-image: url($img_url + "img/common/mask_bg07.png");
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    @include PC {
+      margin-bottom: 21px;
+      padding-top: calc(250/345*100%);
+    }
+    @include SP {
+      @include aspect-ratio(150, 110);
+      width: calc(150/327*100%);
+    }
+  }
+  .shop-info {
+    @include SP {
+      @include flex(1);
+      padding-left: 24px;
+      -webkit-align-self: center;
+      align-self: center;
+    }
+    @include ANDR {
+      padding-left: 15px;
+    }
+  }
+  .shop-ttl {
+    @include font("","",120,bold);
+    @include PC {
+      @include font(18,26);
+      margin-bottom: 12px;
+      @include max-screen(1100px) {
+        font-size: vw-pc(18px,1100)
+      }
+    }
+    @include SP {
+      @include font(15,22);
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .shop-desc {
+    @include font(14,26,120);
+    @include PC {
+      margin-right: -1px;
+    }
+  }
+  .shop-group {
+    @include SP {
+      @include flexbox;
+      margin-bottom: 17px;
+    }
+  }
+  .shop-sns {
+    @include flexbox;
+    @include flex-wrap;
+    @include PC {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    &>li {
+      width: 32px;
+      @include PC {
+        margin-right: 15px;
+      }
+      @include SP {
+        margin-right: 12px;
+      }
+    }
+    a {
+      display: block;
+    }
+    .icn {
+      width: 32px;
+      height: 32px;
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+      background: $black01;
+      transition: 0.5s ease;
+      @include HOVER {
+        background: $blue01;
+        opacity: 1;
+      }
+    }
+    .icn-url {
+      -webkit-mask-image: url($img_url + "img/guide/shops/icn01.svg");
+      mask-image: url($img_url + "img/guide/shops/icn01.svg");
+    }
+    .icn-instagram {
+      -webkit-mask-image: url($img_url + "img/guide/shops/icn02.svg");
+      mask-image: url($img_url + "img/guide/shops/icn02.svg");
+    }
+  }
+  .shop-time {
+    @include flexbox;
+    border-top: 1px dotted $black01;
+    border-bottom: 1px dotted $black01;
+    @include font(14,1.75,120);
+    @include PC {
+      padding: 10px 0;
+      margin-top: 14px;
+    }
+    @include SP {
+      padding: 6px 0;
+      margin-top: 10px;
+    }
+    dt {
+      width: 92px;
+      font-weight: bold;
+      padding-right: 10px;
+    }
+    dd {
+      @include flex(1);
+      .txt {
+        margin-right: 14px;
+      }
+    }
+  }
+}
