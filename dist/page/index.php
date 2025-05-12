@@ -123,6 +123,13 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
             <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
           </h2>
+
+          <p class="demo-ttl">.c-ttl02</p>
+          <h2 class="c-ttl02">
+            <span class="c-ttl02__jp">メニュー</span>
+            <span class="c-ttl02__en">Menu</span>
+          </h2>
+
           <p class="demo-ttl">.c-cate01</p>
           <a href="" class="c-cate01">すべて</a>
           <p class="demo-ttl">.c-cate01.is-active</p>

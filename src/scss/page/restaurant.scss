@@ -1,0 +1,459 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.c-about-block {
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 190px;
+    background: #f2f2f2;
+    pointer-events: none;
+    z-index: -2;
+  }
+  @include PC {
+    padding-bottom: 120px;
+  }
+  @include SP {
+    padding-bottom: 56px;
+  }
+  .about-ttl {
+    @include PC {
+      max-width: 444px;
+      padding-left: 24px;
+      margin-left: auto;
+      margin-bottom: 70px;
+      @include max-screen(1280px) {
+        max-width: vw-pc(464px,1280);
+      }
+    }
+  }
+  .about-pic {
+    @include PC {
+      width: calc(400/590*100%);
+      padding-top: calc(250/590*100%);
+    }
+  }
+  .about-desc {
+    @include PC {
+      margin-bottom: 114px;
+      @include max-screen(1280px) {
+        margin-bottom: vw-pc(114px,1280);
+      }
+    }
+  }
+  .about-bg {
+    @include PC {
+      margin-bottom: 120px;
+      @include max-screen(1280px) {
+        margin-bottom: vw-pc(120px,1280);
+      }
+    }
+    @include SP {
+      bottom: vw-sp(145px,375);
+    }
+  }
+  .cloud-decor:before {
+    @include PC {
+      top: -66px;
+      right: -59px;
+      @include max-screen(1280px) {
+        right: vw-pc(-40px,1280);
+      }
+    }
+  }
+  .dot-decor:after {
+    @include PC {
+      right: -285px;
+      top: 37px;
+      @include max-screen(1350px) {
+        right: vw-pc(-225px,1350);
+      }
+      @include max-screen(1180px) {
+        right: -150px;
+        top: -60px;
+      }
+    }
+    @include SP {
+      display: none;
+    }
+  }
+}
+.sec-grill {
+  background: #f2f2f2;
+  @include PC {
+    padding-bottom: 98px;
+  }
+  @include SP {
+    padding-bottom: 55px;
+  }
+  .grill-logo {
+    @include PC {
+      width: 253px;
+      margin: 0 auto 40px;
+    }
+    @include SP {
+      width: 172px;
+      margin: 0 auto 24px;
+    }
+  }
+  .grill-data {
+    @include PC {
+      max-width: 798px;
+      padding: 0 24px;
+      margin: 0 auto;
+    }
+    @include SP {
+      margin: 0 24px;
+    }
+    dl {
+      border-bottom: 1px dotted rgba(#000, 0.5);
+      @include flexbox;
+      &:first-child {
+        border-top: 1px dotted rgba(#000, 0.5);
+      }
+    }
+    dt {
+      @include font("","",120,bold);
+      @include PC {
+        width: 220px;
+        padding: 20px 0;
+        @include font(18,26);
+      }
+      @include SP {
+        width: 86px;
+        padding: 16px 0;
+        @include font(13,1.5);
+      }
+      @include ANDR {
+        width: 72px;
+        @include font(12)
+      }
+    }
+    dd {
+      @include flex(1);
+      @include font("","",120);
+      @include PC {
+        @include font(16,26);
+        padding: 19px 0 20px;
+      }
+      @include SP {
+        @include font(12,24);
+        padding: 13px 0 12px;
+      }
+      @include ANDR {
+        @include font(11,"",60)
+      }
+    }
+    .txt-link {
+      color: $blue01;
+      text-decoration: underline;
+    }
+  }
+  .slider-container {
+    @include PC {
+      margin-bottom: 102px;
+    }
+    @include SP {
+      margin-bottom: 30px;
+    }
+  }
+  .slider-gallery {
+    overflow: hidden;
+    max-width: 2932px;
+    margin: 0 auto;
+    @include SP {
+      padding: 0 24px;
+      margin-bottom: 12px;
+    }
+    .gallery-wrapper {
+      @include PC {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 80%;
+      }
+      @include SP {
+        overflow: hidden;
+      }
+    }
+  }
+  .swiper-slide-active {
+    .gallery-pic {
+      transform: scale(1, 1) !important;
+    }
+  }
+  .gallery-pic {
+    transition: 0.3s ease all;
+    padding-top: calc(490/1000*100%);
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-image: url($img_url + "img/guide/restaurant/mask_bg02.png");
+    mask-image: url($img_url + "img/guide/restaurant/mask_bg02.png");
+    @include PC {
+      transform: scale(0.92, 0.865) !important;
+    }
+    @include SP {
+      transform: scale(0.82, 0.765) !important;
+    }
+  }
+  .slider-gallery-wrapper {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    @include PC {
+      padding: 0 22px;
+      width: 80%;
+      max-width: 800px;
+      margin: -39px auto;
+    }
+    @include SP {
+      padding: 0 44px;
+    }
+  }
+  .slider-gallery-thumb {
+    .swiper-slide {
+      width: 176px;
+    }
+    .thumb-pic {
+      padding-top: calc(120/176*100%);
+      background: #fff;
+      @include PC {
+        border-radius: 15px;
+      }
+      @include SP {
+        border-radius: 6px;
+      }
+      @include HOVER {
+        img {
+          opacity: 1;
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 4px solid $blue01;
+        z-index: 1;
+        transition: 0.3s ease;
+        opacity: 0;
+        @include PC {
+          border-radius: 15px;
+        }
+        @include SP {
+          border-radius: 6px;
+          border-width: 2px;
+        }
+      }
+      img {
+        border-radius: 15px;
+        transition: 0.3s ease;
+        opacity: 0.5;
+        @include PC {
+          border-radius: 15px;
+        }
+        @include SP {
+          border-radius: 6px;
+        }
+      }
+    }
+    .swiper-slide-thumb-active {
+      .thumb-pic {
+        &:before {
+          opacity: 1;
+        }
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.sec-menu {
+  overflow: hidden;
+  background: #f2f2f2;
+  @include PC {
+    padding-bottom: 140px;
+    margin-bottom: -40px;
+  }
+  @include SP {
+    padding-bottom: 94px;
+    margin-bottom: -30px;
+  }
+  .c-ttl02 {
+    @include PC {
+      margin-bottom: 48px;
+    }
+    @include SP {
+      margin-bottom: 34px;
+    }
+  }
+  .menu-list {
+    @include PC {
+      @include flexbox;
+      @include flex-wrap;
+      margin: 0 -34px;
+      @include max-screen(1130px) {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+    @include SP {
+      margin-bottom: 32px;
+    }
+    &>li {
+      @include PC {
+        width: calc(100% / 3);
+        padding: 0 34px;
+        margin-bottom: 39px;
+        @include max-screen(1130px) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      @include SP {
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .menu-item {
+    display: block;
+  }
+  .menu-img {
+    -webkit-mask-image: url($img_url + "img/common/mask_bg07.png");
+    mask-image: url($img_url + "img/common/mask_bg07.png");
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    @include PC {
+      margin-bottom: 21px;
+      padding-top: calc(250/345*100%);
+    }
+    @include SP {
+      @include aspect-ratio(150, 110);
+      width: calc(150/327*100%);
+    }
+  }
+  .menu-head {
+    @include PC {
+      @include flexbox;
+    }
+    @include SP {
+      @include flex(1);
+      padding-left: 24px;
+      -webkit-align-self: center;
+      align-self: center;
+    }
+    @include ANDR {
+      padding-left: 20px;
+    }
+  }
+  .menu-price {
+    @include font("","",120,bold);
+    @include PC {
+      text-align: right;
+      @include font(18,24);
+      width: 160px;
+      @include max-screen(1100px) {
+        width: vw-pc(150px,1100);
+        font-size: vw-pc(18px,1100)
+      }
+    }
+    @include SP {
+      @include font(15,24);
+    }
+    small {
+      @include font(12,24,120);
+      @include PC {
+        @include max-screen(1100px) {
+          font-size: vw-pc(12px,1100)
+        }
+      }
+    }
+    .number {
+      @include font("","",50,500);
+      @include ffGT;
+      @include PC {
+        @include font(23,26);
+        @include max-screen(1100px) {
+          font-size: vw-pc(23px,1100)
+        }
+      }
+      @include SP {
+        @include font(19,26);
+      }
+    }
+  }
+  .menu-ttl {
+    @include font("","",120,bold);
+    @include PC {
+      @include flex(1);
+      @include font(18,26);
+      @include max-screen(1100px) {
+        font-size: vw-pc(18px,1100)
+      }
+    }
+    @include SP {
+      @include font(14,24);
+      margin-bottom: 6px;
+    }
+  }
+  .menu-desc {
+    border-top: 1px dotted rgba(#000, 0.5);
+    @include font(14,26,120);
+    @include multiLineEllipsis(2);
+    @include PC {
+      margin-top: 7px;
+      padding-top: 10px;
+    }
+    @include SP {
+      margin-top: 15px;
+      padding-top: 8px;
+    }
+    .txt-lg {
+      @include PC {
+        @include font(16,26,120);
+      }
+    }
+  }
+  .menu-info {
+    @include SP {
+      @include flexbox;
+    }
+  }
+  .c-btn01 {
+    @include PC {
+      max-width: 420px;
+    }
+    @include SP {
+      max-width: 327px;
+      padding-left: 8px;
+    }
+    small {
+      letter-spacing: 0.12em;
+      @include PC {
+        @include font(14,30);
+      }
+      @include SP {
+        @include font(12,24);
+        margin-right: -5px;
+        display: inline-block;
+      }
+    }
+  }
+}

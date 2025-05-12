@@ -3,12 +3,12 @@
 
 <header id="header" class="header">
   <div class="inHeader">
-    <h1 id="logo">
+    <div id="logo">
       <a href="<?php echo APP_URL ?>">
         <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo.svg" alt="logo">
         <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo_white.svg" alt="logo">
       </a>
-    </h1>
+    </div>
     <p class="hamberger"><span class="ham"> </span><span class="ber"> </span></p>
     <div class="layerMenu">
       <div class="inLayer">

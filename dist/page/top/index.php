@@ -332,15 +332,16 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-instagram">
-      <img class="instagram-bg" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01.png" rel="js-lazy" width="1230" height="1440" alt="">
+      <img class="instagram-bg pc" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01.png" rel="js-lazy" width="1230" height="1440" alt="">
+      <img class="instagram-bg sp" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01_sp.png" rel="js-lazy" width="1230" height="1440" alt="">
       <div class="instagram-inner">
         <div class="instagram-decor01">
           <img src="<?php echo createSVG(180, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor01.svg" rel="js-lazy" width="180" height="55" alt="">
         </div>
-        <div class="instagram-decor02">
+        <div class="instagram-decor02 pc">
           <img src="<?php echo createSVG(80, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor02.svg" rel="js-lazy" width="80" height="55" alt="">
         </div>
-        <div class="instagram-decor03">
+        <div class="instagram-decor03 pc">
           <img src="<?php echo createSVG(80, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor02.svg" rel="js-lazy" width="80" height="55" alt="">
         </div>
         <div class="img-wave-blue">
@@ -389,10 +390,6 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
     </div>
-
-    <p class="f-scrolltop go-up" id="gototop">
-      <span class="arr"></span>
-    </p>
 
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
