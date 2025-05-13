@@ -22,6 +22,11 @@
       top: 95px;
     }
   }
+  @include ANDR {
+    .mv-ttl-en {
+      @include font(31);
+    }
+  }
 }
 
 .ways-tabs {
@@ -139,10 +144,11 @@
     }
     &:last-child {
       @include PC {
-        padding-bottom: 138px;
+        padding-bottom: 189px;
       }
       @include SP {
         padding-top: 56px;
+        padding-bottom: 82px;
       }
     }
   }
@@ -156,6 +162,9 @@
     @include SP {
       padding-left: 87px;
     }
+    @include ANDR {
+      padding-left: 70px;
+    }
   }
   .ways-item {
     @include PC {
@@ -166,7 +175,7 @@
       margin-bottom: 50px;
     }
     @include SP {
-      margin-bottom: 39px;
+      margin-bottom: 40px;
     }
     &:last-child {
       margin-bottom: 0;
@@ -178,14 +187,14 @@
       align-self: center;
       margin-right: 30px;
       width: calc(520/1140*100%);
-      max-width: 450px
+      max-width: 450px;
     }
   }
   .ways-time {
     @include ffGT;
     @include font("",1.5,50,500);
     @include PC {
-      margin-bottom: 20px;
+      margin-bottom: 19px;
       @include font(20);
     }
     @include SP {
@@ -207,7 +216,7 @@
     @include SP {
       @include font(16);
       padding-left: 14px;
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
     &:before {
       content: "";
@@ -237,7 +246,7 @@
       @include font(16,28);
     }
     @include SP {
-      margin-bottom: 16px;
+      margin-bottom: 13px;
       @include font(15,28);
     }
     &:last-child {
@@ -259,7 +268,7 @@
     }
     @include SP {
       @include aspect-ratio(240, 155);
-      margin-bottom: 18px;
+      margin-bottom: 19px;
     }
   }
   .time-list {

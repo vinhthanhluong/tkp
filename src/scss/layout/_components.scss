@@ -68,6 +68,12 @@
     @include PC {
       max-width: 1218px;
     }
+    @include SP {
+      @include max-screen(375px) {
+        padding-left: calc(24 / 375 * 100vw);
+        padding-right: calc(24 / 375 * 100vw);
+      }
+    }
     &:before,
     &:after {
       content: "";
@@ -267,19 +273,27 @@
       }
     }
     &:first-child {
-      &::before {
-        display: inline-block;
-        vertical-align: middle;
-        content: "";
-        width: 12px;
-        height: 19px;
-        margin: auto 6px 0 0;
-        background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>')
-          center no-repeat;
+      a {
+        &:before {
+          display: inline-block;
+          vertical-align: middle;
+          content: "";
+          width: 12px;
+          height: 19px;
+          margin: auto 6px 0 0;
+          transition: 0.3s ease;
+          background: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="black"/></svg>') center no-repeat;
+        }
+        @include HOVER {
+          &:before {
+            background-image: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="%2365B0D4"/></svg>');
+          }
+        }
       }
     }
   }
   a {
+    position: relative;
     display: inline-block;
     color: $color_body;
     opacity: 1;
@@ -486,7 +500,6 @@ a.c-btn01 {
     }
     @include HOVER {
       &:before {
-        right: auto;
         left: 0;
       }
       span {
@@ -986,6 +999,10 @@ a.c-link {
     }
     .cate {
       position: absolute;
+      @include flexbox;
+      @include flex-wrap;
+      @include align-items(flex-start);
+      @include justify-content(flex-end);
       @include PC {
         top: -20px;
         right: -25px;
@@ -1003,29 +1020,36 @@ a.c-link {
         }
       }
       .item {
+        @include flexbox;
+        @include flex-wrap;
+        @include align-items;
+        @include justify-content;
         position: relative;
         z-index: 1;
-        display: inline-block;
         @include font(14, 18, 0, 700);
         color: #fff;
         text-align: center;
         @include PC {
-          min-width: 88px;
-          padding: 31px 2px;
+          width: 88px;
+          height: 80px;
+          padding: 10px 4px;
           @include max-screen(1218px) {
-            min-width: calc(88 / 1218 * 100vw);
+            width: calc(88 / 1218 * 100vw);
+            height: calc(80 / 1218 * 100vw);
             font-size: calc(14 / 1218 * 100vw);
-            padding: calc(31 / 1218 * 100vw) calc(2 / 1218 * 100vw);
+            padding: calc(10 / 1218 * 100vw) calc(4 / 1218 * 100vw);
           }
         }
         @include SP {
           @include font(12, 14);
-          min-width: 66px;
-          padding: 23px 2px;
+          width: 66px;
+          height: 60px;
+          padding: 10px 4px;
           @include max-screen(375px) {
             font-size: calc(12 / 375 * 100vw);
-            min-width: calc(66 / 375 * 100vw);
-            padding: calc(23 / 375 * 100vw) calc(2 / 375 * 100vw);
+            width: calc(66 / 375 * 100vw);
+            height: calc(60 / 375 * 100vw);
+            padding: calc(10 / 375 * 100vw) calc(4 / 375 * 100vw);
           }
         }
         &:before {
