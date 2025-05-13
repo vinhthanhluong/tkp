@@ -343,6 +343,94 @@
         pointer-events: none;
       }
     }
+    .sec-form {
+      margin-top: 183px;
+      .form-block {
+        padding: 130px 100px;
+        .short-desc {
+          margin-bottom: 31px;
+        }
+      }
+      .tableContact {
+        tr {
+          &:last-child {
+            th, td {
+              &:before, &:after {
+                display: none;
+              }
+            }
+          }
+        }
+        th, td {
+          position: relative;
+          padding: 20px 20px 21px;
+          margin-bottom: 0;
+          @include font(15);
+          line-height: 24px;
+        }
+        th {
+          width: 250px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #65B0D4;
+            bottom: 0;
+            left: 0;
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 1px;
+            background: #fff;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+          }
+        }
+        td {
+          width: calc(100% - 250px);
+          padding-left: 29px;
+          letter-spacing: 1.7px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #DCDCDC;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+      .list-btn {
+        .btn-back {
+
+        }
+        .btn-send {
+
+        }
+        #btnSend {
+          max-width: 300px;
+          height: 60px;
+          border-radius: 50px;
+          @include SP {
+            height: 50px;
+          }
+          span {
+            transform: none;
+            @include font(18);
+            letter-spacing: 2px;
+            left: 6px;
+            @include SP {
+              @include font(14);
+            }
+          }
+        }
+      }
+    }
   }
 
   // for step 3
