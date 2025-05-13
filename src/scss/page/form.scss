@@ -69,31 +69,30 @@
   }
   // BASE ON FORM DEFAULT
 
-  .step-img {
-    margin: 60px auto;
-    display: block;
+  .form-block {
+    background: #fff;
+    border-radius: 30px;
+    border: solid 1px #65B0D4;
+    padding: 80px 80px;
   }
 
   .tableContact {
-    border-top: #8f8f8f solid 1px;
-    border-bottom: #8f8f8f solid 1px;
     width: 100%;
-    margin: 30px 0 50px;
-    font-size: 15px;
     text-align: left;
     td,
     th {
-      border-bottom: #8f8f8f solid 1px;
-      padding: 20px;
-      vertical-align: top;
+      vertical-align: middle;
+      margin-bottom: 20px;
     }
     th {
-      background: #ededed;
-      width: 210px;
-      font-weight: normal;
+      width: 220px;
+      @include font(15);
+      line-height: 24px;
+      font-weight: 700;
     }
     td {
       position: relative;
+      width: calc(100% - 220px);
     }
     textarea,
     input[type="text"],
@@ -101,26 +100,31 @@
     input[type="number"],
     input[type="tel"],
     input[type="url"] {
-      width: 300px;
-      color: #1a1a1a;
+      width: 100%;
+      height: 50px;
+      border-radius: 25px;
+      background: #fff;
+      border: solid 1px #DCDCDC;
+      color: #000000;
       padding: 10px;
-      border: #8f8f8f solid 1px;
-      border: 1px solid #aaa;
       &::-webkit-input-placeholder,
       &::placeholder {
+        color: #BBBBBB;
       }
     }
-    .size01 input[type="text"] {
-      width: 160px;
-    }
-    .size02 input[type="text"],
+    
     textarea {
       width: 100%;
     }
     textarea {
-      height: 150px;
+      height: 160px;
     }
-
+    .txt-hint {
+      @include font(13);
+      line-height: 21px;
+      font-weight: 500;
+      margin-top: 10px;
+    }
     select {
       -webkit-appearance: none;
       appearance: none;
@@ -156,13 +160,18 @@
     }
 
     em {
-      color: #fb2a2a;
+      width: 40px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      display: inline-block;
+      border-radius: 12px;
+      background: #F5BB1E;
+      margin-right: 12px;
       font-style: normal;
+      font-weight: 700;
+      @include font(12);
     }
-  }
-
-  &.fixHeader .header {
-    padding: 20px 15px;
   }
 
   // for step 2
