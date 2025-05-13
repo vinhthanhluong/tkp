@@ -13,6 +13,36 @@ include(APP_PATH . 'libs/head.php'); ?>
   <?php include(APP_PATH . 'libs/header.php'); ?>
 
   <main id="wrap">
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li>お問い合わせ</li>
+      </ul>
+    </div>
+    <div class="c-mainvisual">
+      <div class="mv-inner aos-init" data-aos="fade-up">
+        <div class="img-wave-blue">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
+          </div>
+        </div>
+        <div class="img-wave-yellow">
+          <div class="wave-top">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+          <div class="wave-bottom">
+            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
+          </div>
+        </div>
+        <h1 class="mv-ttl">
+          <span class="mv-ttl-jp">お問い合わせ</span>
+          <span class="mv-ttl-en">contact</span>
+        </h1>
+      </div>
+    </div>
     <form method="post" class="contactform" id="contactform" action="<?php echo APP_URL; ?>contact/confirm/?g=<?php echo time() ?>" name="contactform" onSubmit="return check()">
       <div class="inner form-block">
         <p class="txtContact">ご質問等に関しては、以下のフォームよりお問い合わせ下さい。<br>必要項目を入力して確認ボタンを押してください。<br>（<em>【必須】</em>は入力必須項目です）</p>
