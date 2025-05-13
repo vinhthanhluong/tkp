@@ -5,6 +5,8 @@ $(function () {
   gNaviHover();
   jsPopup();
   btnTop();
+  toggleDropdown();
+  modtabs();
 });
 $(window).on("load", function () {
   initAos();

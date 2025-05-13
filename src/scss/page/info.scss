@@ -8,19 +8,40 @@
   @include PC {
     padding: 74px 0 72px;
   }
+  @include SP {
+   padding: 55px 0 51px;
+    .img-wave-yellow {
+      right: 34px;
+      top: 95px;
+    }
+  }
 }
 
 .sec-anchor {
   padding: 0 0 160px;
+  @include SP {
+    padding: 0 0 56px;
+  }
   .lst-anchor {
     @include flexbox();
     @include flex-wrap(wrap);
     @include justify-content(center);
+    @include SP {
+      margin: 0 -7px;
+    }
     li {
       width: 240px;
       margin: 0 12px 10px;
       a {
         max-width: 240px;
+      }
+      @include SP {
+        width: 50%;
+        margin: 0 0 16px;
+        padding: 0 7px 0;
+        a {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -30,6 +51,9 @@
   position: relative;
   background: #FDF7ED;
   padding: 43px 0 45px;
+  @include SP {
+    padding: 39px 0 41px;
+  }
   .dercor01 {
     content: "";
     position: absolute;
@@ -40,8 +64,7 @@
       top: 52%;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .dercor02 {
@@ -54,8 +77,7 @@
       top: 0%;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .dercor03 {
@@ -69,8 +91,7 @@
       margin-left: -351px;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .img-wave-yellow {
@@ -91,11 +112,19 @@
         width: 60%;
       }
     }
+    @include SP {
+      &__info {
+        margin: 42px 0 0;
+      }
+    }
   }
 }
 .sec-info02 {
   background-color: #fff;
   padding: 175px 0 196px;
+  @include SP {
+    padding: 89px 0 88px;
+  }
   .inner1170 {
     max-width: 1045px;
   }
@@ -104,6 +133,9 @@
   }
   .block01 {
     margin: 51px 0 0;
+    @include SP {
+      margin: 43px 0 0;
+    }
     &__map {
       line-height: 1;
       position: relative;
@@ -120,20 +152,41 @@
         width: 100%;
         height: 490px;
       }
+      @include SP {
+        iframe {
+          height: 233px;
+        }
+      }
     }
     .block01_info {
       margin: 28px 0 0;
+      @include SP {
+        margin: 22px 0 0;
+      }
       .ttl01 {
         @include font(16, 28, 0.1, 700);
       }
       .txt01 {
         @include font(16, 28, 0.1, 500);
+        @include SP {
+          @include font(15, 28);
+          margin: 0 -2px 0 0;
+        }
       }
       .btn01 {
         .c-btn01 {
           span {
             @include ffGT;
             @include font(15, 30, 0);
+          }
+        }
+        @include SP {
+          margin: 17px 0 0;
+          .c-btn01 {
+            max-width: 180px;
+            span {
+              @include font(14, 24);
+            }
           }
         }
       }
@@ -153,49 +206,76 @@
   }
   .block02 {
     margin: 59px 0 0;
+    @include SP {
+      margin: 55px 0 0;
+    }
     .img01 {
       margin: 30px 0 0;
+      @include SP {
+        margin: 15px 0 0;
+      }
     }
   }
   .block03 {
     margin: 59px 0 0;
+    @include SP {
+      margin: 55px 0 0;
+    }
     .img01 {
       margin: 30px 0 0;
+      @include SP {
+        margin: 15px 0 0;
+      }
     }
   }
   .block04 {
     margin: 61px 0 0;
+    @include SP {
+      margin: 55px 0 0;
+    }
     .img01 {
       margin: 30px 0 0;
       img {
         border-radius: 10px;
+      }
+      @include SP {
+        margin: 24px 0 0;
       }
     }
   }
 }
 .sec-info03 {
   background-color: #F2F2F2;
-  padding: 45px 0 150px;
+  padding: 45px 0 226px;
   position: relative;
+  @include SP {
+    padding: 40px 0 111px;
+  }
   .c-ttl02 {
     margin-bottom: 40px;
+    @include SP {
+      margin-bottom: 27px;
+    }
   }
   .desc01 {
     @include font(18, 34, 0.12, bold);
     margin-bottom: 19px;
+    @include SP {
+       @include font(14, 28);
+      margin-bottom: 40px;
+    }
   }
   .dercor01 {
     content: "";
     position: absolute;
     @include PC {
-      width: 180px;
-      height: 211px;
-      right: 70px;
-      top: 52%;
+      width: 211px;
+      height: 224px;
+      right: 62px;
+      top: -101px;
     }
     @include SP {
-      width: 82px;
-      height: 26px;
+      display: none;
     }
   }
   .c-lstpost01 {
@@ -211,7 +291,7 @@
       }
       @include SP {
         &:not(:last-child) {
-          margin-bottom: 30px;
+          margin-bottom: 23px;
         }
       }
       .access {
@@ -235,26 +315,104 @@
       }
       .desc {
         @include font(14, 26, 0.12, 500);
-        margin-top: 14px;
       }
     }
-    &-ctn02 {
-      margin: 14px 0 0;
+    .lstpost01-info {
+      @include SP {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        width: calc(155 / 327 * 100%);
+        .access {
+          width: 100%;
+          order: 2;
+          background: none;
+          padding: 0 0 0 38px;
+          &:before {
+             top: 3px;
+            left: 0;
+          }
+        }
+        .ttl {
+          order: 1;
+          width: 100%;
+          @include font(16, 22);
+          margin: 0 0 10px;
+        }
+      }
+    }
+    .lstpost01-img {
+      margin: 0 0 19px;
+      @include SP {
+        width: calc(150 / 327 * 100%);
+        height: 110px;
+        margin: 0 22px 0 0;
+        padding-top: 0;
+      }
+    }
+    .lstpost01-ctn01 {
+      @include SP {
+        width: 100%;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        align-items: center;
+      }
+    }
+    .lstpost01-ctn02 {
+      margin-top: 14px;
+      @include SP {
+        width: 100%;
+        margin: 17px 0 0;
+        padding: 0;
+      }
     }
   }
 }
+
 .sec-info04 {
   position: relative;
-  background-color: #65B0D4;
+  padding: 47px 0 189px;
+  margin: -30px 0 0;
+  z-index: 2;
+  background: #65B0D4;
+  @include SP {
+    padding: 40px 0 105px;
+    margin: -30px 0 -25px;
+  }
+  .c-ttl02 {
+    margin-bottom: 40px;
+    @include SP {
+      margin-bottom: 35px;
+    }
+  }
   &:before {
     top: -74px;
+    content: "";
+    position: absolute;
+    left: 0;
+    background: repeat-x top center/auto 100%;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
     @include PC {
       background-image: url($img_url + "img/common/wave_bg04.png");
       height: 75px;
     }
     @include SP {
       background-image: url($img_url + "img/common/wave_bg04_sp.png");
-      height: 75px;
+      height: 25px;
+      top: -24px;
+    }
+  }
+  &::after {
+    position: absolute; content: "";
+    left: 0; top: 0;
+    right: 0; bottom: 0;
+    background: url($img_url + "img/info/bg_wp01.png") no-repeat center bottom;
+    height: 1375px;
+    background-size: cover;
+    @include SP {
+      background-image: url($img_url + "img/common/bg_wp01_sp.png");
+      height: 815px;
     }
   }
   &-bg {
@@ -282,5 +440,22 @@
       background-size: 100% 100%;
     }
   }
-
+  .inner1170 {
+    position: relative;
+    z-index: 22;
+  }
+  .desc01 {
+    color: #fff;
+    text-align: center;
+    @include font(18, 30, 0.12, 500);
+    margin: 39px 0 57px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    @include SP {
+      @include font(14, 24);
+      margin: 35px 0 49px;
+    }
+  }
 }
