@@ -87,12 +87,12 @@ include(APP_PATH . 'libs/head.php'); ?>
             </ul>
           </div>
           <div class="box-confirm">
-            <p><label><input type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
-            <p class="t30b20">
-              <button id="btnConfirm"><span>入力内容を確認する</span></button>
+            <p class="check-confirm"><label><input type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
+            <div class="btn-confirm">
+              <button id="btnConfirm" class="c-btn02"><span>入力内容を確認する</span></button>
               <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
               <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('confirm') ?>">
-            </p>
+            </div>
           </div>
         </div>
       </form>
