@@ -96,16 +96,14 @@ function jsPopup() {
 
 function modtabs() {
   if ($('.mod-tabs').length > 0) {
-    $('.mod-tabs .nav-tabs ul li:first-child .tab').addClass('is-active');
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        $('.mod-tabs .nav-tabs .tab').click(function(){
-        var t = $(this).attr('data-tab');
-        $('.mod-tabs .nav-tabs .tab').removeClass('is-active');
-        $(this).addClass('is-active');
-        $('.mod-tabs .tab-content').hide().removeClass('is-active');
-        $('.mod-tabs .tab-content#'+t).fadeIn().addClass('is-active');
-      })
-    }
+    $('.mod-tabs .nav-tabs ul li:first-child .tab').addClass('is-act');
+      $('.mod-tabs .nav-tabs .tab').click(function(){
+      var t = $(this).attr('data-tab');
+      $('.mod-tabs .nav-tabs .tab').removeClass('is-act');
+      $(this).addClass('is-act');
+      $('.mod-tabs .tab-content').hide().removeClass('is-show');
+      $('.mod-tabs .tab-content#'+t).fadeIn().addClass('is-show');
+    })
   }
 }
 function toggleDropdown() {
