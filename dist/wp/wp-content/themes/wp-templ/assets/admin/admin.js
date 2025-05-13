@@ -106,3 +106,13 @@ function handleACFToggle() {
     return false;
   });
 }
+
+$("#servicescatchecklist input[type='checkbox']").attr("type", "radio");
+$(".type-services .column-title .button-link").on("click", function () {
+  setTimeout(function () {
+    $(".inline-editor .servicescat-checklist input[type='checkbox']").attr(
+      "type",
+      "radio"
+    );
+  }, 100);
+});

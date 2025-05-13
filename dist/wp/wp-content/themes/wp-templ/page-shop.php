@@ -137,11 +137,15 @@ include(APP_PATH . 'libs/head.php'); ?>
                         <?php } ?>
                       </div>
                     </div>
-                    <p class="shop-desc js-match-height-desc">別府の伝統工芸や新鮮な地元食材を取り揃えたお店。竹細工や温泉関連商品など、ここでしか手に入らないアイテムを多数ご用意しています。</p>
-                    <dl class="shop-time">
-                      <dt>営業時間</dt>
-                      <dd><span class="txt">10:00 - 22:00</span>年中無休</dd>
-                    </dl>
+                    <?php if (!empty($shop_desc)) { ?>
+                      <p class="shop-desc js-match-height-desc"><?php echo $shop_desc; ?></p>
+                    <?php } ?>
+                    <?php if (!empty($shop_time)) { ?>
+                      <dl class="shop-time">
+                        <dt>営業時間</dt>
+                        <dd><span class="txt"><?php echo $shop_time; ?></span>年中無休</dd>
+                      </dl>
+                    <?php } ?>
                   </div>
                 </li>
             <?php }
