@@ -45,11 +45,27 @@ include(APP_PATH . 'libs/head.php'); ?>
           <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
           <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
         </h2>
-        <div class="news-cate c-catectn aos-init" data-aos="fade-up" data-aos-duration="500">
+        <!-- <div class="news-cate c-catectn aos-init" data-aos="fade-up" data-aos-duration="500">
           <a href="" class="c-cate01 is-active">すべて</a>
           <a href="" class="c-cate01">お知らせ</a>
           <a href="" class="c-cate01">イベント</a>
-        </div>
+        </div> -->
+        <form method="get" class="searchform" id="searchform" action="<?php echo APP_URL ?>" name="searchform">
+          <ul class="news-cate">
+            <li class="item">
+              <input type="radio" name="newscat" id="newscat01" value="すべて">
+              <label for="newscat01">すべて</label>
+            </li>
+            <li class="item">
+              <input type="radio" name="newscat" id="newscat02" value="お知らせ">
+              <label for="newscat02">お知らせ</label>
+            </li>
+            <li class="item">
+              <input type="radio" name="newscat" id="newscat03" value="イベント">
+              <label for="newscat03">イベント</label>
+            </li>
+          </ul>
+        </form>
 
         <ul class="c-lstpost01">
           <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">
@@ -396,6 +412,29 @@ include(APP_PATH . 'libs/head.php'); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/page/top.min.js?v=<?php echo APP_VER ?>"></script>
+  <script>
+    $('.news-cate input').on("change", function() {
+      // var btnCate = $(this).siblings('label');
+      // var otherBtnCate = $('.news-cate lable');
+      // otherBtnCate.removeClass('is-active');
+      // btnCate.addClass('is-active');
+      $.ajax({
+        type: "GET",
+        url: "<?php echo get_bloginfo('template_directory') ?>/works_search_ajax.php?" + $('.searchform').serialize(),
+        data: {},
+        success: function(response) {
+          if (response.success) {
+            $txt_number = response.data;
+            $(".row-submit .num-desc b").html($txt_number);
+          }
+        },
+        error: function() {
+          console.log('Failed');
+        }
+      });
+
+    });
+  </script>
 </body>
 
 </html>

@@ -1,5 +1,8 @@
 <?php
 $thisPageName = 'top';
+
+$cat_search  = (!empty($_GET['newscat'])) ? $_GET['newscat'] : array();
+
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/top.min.css?v=<?php echo APP_VER ?>">
 </head>
@@ -49,137 +52,96 @@ include(APP_PATH . 'libs/head.php'); ?>
         'order'       => 'ASC',
       )
     );
-    if (!empty($news_categories)) {
-    }
+
     $args_news = array(
       'post_type'           => 'news',
       'order'               => 'DESC',
       'orderby'             => 'post_date',
       'posts_status'        => 'publish',
-      'posts_per_page'      => -1,
+      'posts_per_page'      => 6,
     );
     $query_news = new WP_Query($args_news);
+    if ($query_news->have_posts()) {
     ?>
+      <div class="sec-news">
+        <div class="t-wcm01">
+          <h2 class="c-ttl01">
+            <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
+            <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
+          </h2>
+          <?php if (!empty($news_categories)) { ?>
+            <form method="get" class="searchform" id="searchform" action="<?php echo APP_URL ?>" name="searchform">
+              <ul class="news-cate aos-init" data-aos="fade-up">
+                <li class="item is-active">
+                  <input type="radio" name="newscat" id="newscat00" value="">
+                  <label for="newscat00">すべて</label>
+                </li>
+                <?php
+                $count_cat = 0;
+                foreach ($news_categories as $catitem) {
+                  $count_cat = $count_cat + 1;
+                  $cat_id = $catitem->term_id;
+                  $cat_name = $catitem->name;
+                ?>
+                  <li class="item">
+                    <input type="radio" name="newscat" id="newscat0<?php echo $count_cat; ?>" value="<?php echo $cat_id; ?>">
+                    <label for="newscat0<?php echo $count_cat; ?>"><?php echo $cat_name; ?></label>
+                  </li>
+                <?php } ?>
+              </ul>
+            </form>
+          <?php } ?>
 
-    <div class="sec-news">
-      <div class="t-wcm01">
-        <h2 class="c-ttl01">
-          <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
-          <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
-        </h2>
-        <div class="news-cate c-catectn aos-init" data-aos="fade-up" data-aos-duration="500">
-          <a href="" class="c-cate01 is-active">すべて</a>
-          <a href="" class="c-cate01">お知らせ</a>
-          <a href="" class="c-cate01">イベント</a>
-        </div>
-
-        <ul class="c-lstpost01">
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb01.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-blue">お知らせ</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.03.20</p>
-                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </div>
+          <ul class="c-lstpost01">
+            <?php
+            $delay = 0;
+            while ($query_news->have_posts()) {
+              $delay   = $delay + 200;
+              $query_news->the_post();
+              $n_id    = $post->ID;
+              $n_url   = get_the_permalink($n_id);
+              $n_ttl   = get_the_title($n_id);
+              $n_date  = get_the_date('Y.m.d');
+              $n_terms = get_the_terms($n_id, 'newscat');
+              $n_thumb = get_the_post_thumbnail_url($n_id);
+              $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;
+            ?>
+              <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
+                <a class="lstpost01-link" href="<?php echo $n_url; ?>">
+                  <div class="lstpost01-ctn01">
+                    <div class="lstpost01-img">
+                      <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="">
+                    </div>
+                    <?php if (!empty($n_terms)) { ?>
+                      <p class="cate">
+                        <?php
+                        foreach ($n_terms as $nterm) {
+                          $cat_name = $nterm->name;
+                          $cat_class = $cat_name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                        ?>
+                          <span class="item <?php echo $cat_class; ?>"><?php echo $cat_name; ?></span>
+                        <?php } ?>
+                      </p>
+                    <?php } ?>
+                  </div>
+                  <div class="lstpost01-ctn02">
+                    <p class="date"><?php echo $n_date; ?></p>
+                    <p class="ttl"><?php echo $n_ttl; ?></p>
+                  </div>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <div class="news-btn aos-init" data-aos="fade-up">
+            <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-center">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
             </a>
-          </li>
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="100">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb02.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-yellow">イベント</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.05.18</p>
-                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="200">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb03.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-blue">お知らせ</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.05.30</p>
-                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="300">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb04.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-yellow">イベント</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.08.18</p>
-                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="400">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb05.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-blue">お知らせ</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.10.18</p>
-                <p class="ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </div>
-            </a>
-          </li>
-          <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="500">
-            <a href="" class="lstpost01-link">
-              <div class="lstpost01-ctn01">
-                <div class="lstpost01-img">
-                  <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/news_thumb06.jpg" rel="js-lazy" width="345" height="250" alt="">
-                </div>
-                <p class="cate">
-                  <span class="item is-yellow">イベント</span>
-                </p>
-              </div>
-              <div class="lstpost01-ctn02">
-                <p class="date">2025.02.14</p>
-                <p class="ttl">7月22日～「むらごとマルシェ」がスタート！</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div class="news-btn aos-init" data-aos="fade-up">
-          <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-center">
-            <i class="arr01"></i>
-            <span>もっと見る</span>
-            <i class="arr02"></i>
-          </a>
+          </div>
         </div>
       </div>
-    </div>
+    <?php } ?>
 
     <div class="sec-park">
       <div class="t-wcm01">
@@ -378,10 +340,10 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <div class="t-wcm01">
           <h2 class="instagram-ttl">
-            <span class="ttl01">
+            <span class="ttl01 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">INSTAGRAM</span>
             </span>
-            <span class="ttl02">
+            <span class="ttl02 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">公式インスタグラム</span>
             </span>
           </h2>
@@ -418,6 +380,29 @@ include(APP_PATH . 'libs/head.php'); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/page/top.min.js?v=<?php echo APP_VER ?>"></script>
+  <script>
+    $('.news-cate input').on("change", function() {
+      $.ajax({
+        type: "GET",
+        url: "<?php echo admin_url('admin-ajax.php'); ?>",
+        data: {
+          action: "search_ajax",
+          newscat: $(this).val(),
+        },
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            $html = response.data;
+            $(".sec-news .news-cate .item.is-active").removeClass("is-active");
+            $(".sec-news .c-lstpost01").html($html);
+          }
+        },
+        error: function() {
+          console.log('Failed');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

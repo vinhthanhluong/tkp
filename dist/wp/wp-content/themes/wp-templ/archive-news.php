@@ -100,7 +100,6 @@ include(APP_PATH . 'libs/head.php');
             array(
               'taxonomy' => 'newscat',
               'field'    => 'term_id',
-              'field'       => 'term_id',
               'terms'    => $currentTermId,
             )
           );

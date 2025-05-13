@@ -361,6 +361,58 @@
       margin: 4px 0 0 4px;
     }
   }
+
+  .item {
+    display: inline-block;
+    position: relative;
+    @include PC {
+      margin: 10px 0 0 10px;
+    }
+    @include SP {
+      margin: 4px 0 0 4px;
+    }
+    &.is-active {
+      label {
+        background: $blue01;
+        color: #fff;
+        pointer-events: none;
+      }
+    }
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    label {
+      display: inline-block;
+      @include font(15, 39, 0.12, 700);
+      background: $gray01;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      @include PC {
+        padding: 1px 26px 0;
+      }
+      @include SP {
+        @include font(14, 34);
+        padding: 1px 22px 0;
+        @include max-screen(375px) {
+          font-size: calc(14 / 375 * 100vw);
+          padding: calc(1 / 375 * 100vw) calc(22 / 375 * 100vw) 0;
+        }
+      }
+      @include HOVER {
+        opacity: 1;
+        background: $blue01;
+        color: #fff;
+      }
+    }
+    input:checked ~ label {
+      background: $blue01;
+      color: #fff;
+      pointer-events: none;
+    }
+  }
 }
 .c-lstpost01 {
   @include PC {

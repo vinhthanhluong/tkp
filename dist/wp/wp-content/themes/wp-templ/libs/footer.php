@@ -76,7 +76,7 @@
   </div>
 </footer>
 
-<p class="f-scrolltop go-up" id="gototop">
+<p class="f-scrolltop" id="gototop">
   <span class="arr"></span>
 </p>
 
