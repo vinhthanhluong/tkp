@@ -321,16 +321,16 @@ include(APP_PATH . 'libs/head.php'); ?>
       <img class="instagram-bg pc" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01.png" rel="js-lazy" width="1230" height="1440" alt="">
       <img class="instagram-bg sp" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01_sp.png" rel="js-lazy" width="1230" height="1440" alt="">
       <div class="instagram-inner">
-        <div class="instagram-decor01">
+        <div class="instagram-decor01 aos-init pc" data-aos="fade-up">
           <img src="<?php echo createSVG(180, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor01.svg" rel="js-lazy" width="180" height="55" alt="">
         </div>
-        <div class="instagram-decor02 pc">
+        <div class="instagram-decor02 pc aos-init" data-aos="fade-up">
           <img src="<?php echo createSVG(80, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor02.svg" rel="js-lazy" width="80" height="55" alt="">
         </div>
-        <div class="instagram-decor03 pc">
+        <div class="instagram-decor03 pc aos-init" data-aos="fade-up">
           <img src="<?php echo createSVG(80, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor02.svg" rel="js-lazy" width="80" height="55" alt="">
         </div>
-        <div class="img-wave-blue">
+        <div class="img-wave-blue aos-init" data-aos="fade-up">
           <div class="wave-top">
             <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_white.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_white.png"></p>
           </div>
@@ -347,7 +347,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span class="anim-inner">公式インスタグラム</span>
             </span>
           </h2>
-          <ul class="instagram-lst">
+          <ul class="instagram-lst aos-init" data-aos="fade-up">
             <li class="item">
               <img src="<?php echo createSVG(276, 276) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/instagram_thumb01.png" rel="js-lazy" width="276" height="276" alt="">
             </li>

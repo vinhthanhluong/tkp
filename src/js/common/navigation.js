@@ -7,10 +7,10 @@ function gNaviHover() {
       browserWidth = $(window).width();
       if (browserWidth > 767) {
         if ($(shownav).css("display") == "none") {
-          $(shownav).stop().slideDown(200);
+          $(shownav).stop().fadeIn(200);
           $(this).addClass("active");
         } else {
-          $(shownav).stop().slideUp(0);
+          $(shownav).stop().fadeOut(200);
           $(this).removeClass("active");
         }
       }
@@ -19,7 +19,8 @@ function gNaviHover() {
       var shownav = $(this).find(".navSub");
       browserWidth = $(window).width();
       if (browserWidth > 767) {
-        $(shownav).stop().slideUp(0);
+        $(shownav).stop().fadeOut(200);
+        // $(shownav).stop().slideUp(0);
         $(this).removeClass("active");
       }
     }
