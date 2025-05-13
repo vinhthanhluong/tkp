@@ -76,17 +76,38 @@
     padding: 80px 80px;
     max-width: 1000px;
     margin: 0 auto;
+    @include PC {
+      @include max-screen(1000px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @include max-screen(900px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    @include SP {
+      border-radius: 20px;
+      padding: 30px 23px 55px;
+    }
   }
 
   .tableContact {
     width: 100%;
     text-align: left;
     margin-bottom: 22px;
+    @include SP {
+      margin-bottom: 17px;
+    }
     td,
     th {
       display: inline-block;
       vertical-align: top;
       margin-bottom: 20px;
+      @include SP {
+        display: block;
+        margin-bottom: 0;
+      }
     }
     th {
       width: 220px;
@@ -95,10 +116,21 @@
       letter-spacing: 1.8px;
       font-weight: 700;
       padding-top: 11px;
+      @include SP {
+        width: 100%;
+        @include font(14);
+        line-height: 22px;
+        margin-bottom: 9px;
+        padding-top: 0;
+      }
     }
     td {
       position: relative;
       width: calc(100% - 220px);
+      @include SP {
+        width: 100%;
+        margin-bottom: 15px;
+      }
 
     }
     textarea,
@@ -119,6 +151,12 @@
       &::placeholder {
         color: #BBBBBB;
       }
+      @include SP {
+        height: 40px;
+        @include font(12);
+        padding: 10px 15px;
+        letter-spacing: 1.5px;
+      }
     }
     
     textarea {
@@ -126,6 +164,9 @@
     }
     textarea {
       height: 160px;
+      @include SP {
+        height: 120px;
+      }
     }
     .txt-hint {
       @include font(13);
@@ -133,6 +174,11 @@
       letter-spacing: 1.5px;
       font-weight: 500;
       margin-top: 10px;
+      @include SP {
+        @include font(12);
+        line-height: 19px;
+        margin-top: 7px;
+      }
     }
     
     button {
@@ -159,13 +205,24 @@
   }
 
   .txtContact01 {
+    @include SP {
+      padding-left: 5px;
+    }
     ul {
       text-align: center;
+      @include SP {
+        text-align: left;
+      }
       li {
         @include font(15);
         line-height: 24px;
         font-weight: 500;
         letter-spacing: 2.1px;
+        @include SP {
+          @include font(13);
+          line-height: 21px;
+          letter-spacing: 1.5px;
+        }
         a {
           color: #65B0D4;
           text-decoration: underline;
@@ -179,6 +236,9 @@
             height: 8px;
             top: -5px;
             right: -8px;
+            @include SP {
+              top: -3px;
+            }
           }
         }
       }
@@ -187,6 +247,9 @@
 
   .box-confirm {
     margin-top: 39px;
+    @include SP {
+      margin-top: 22px;
+    }
     .check-confirm {
       text-align: center;
       label {
@@ -195,6 +258,11 @@
         line-height: 24px;
         font-weight: 500;
         letter-spacing: 1.8px;
+        @include SP {
+          @include font(14);
+          line-height: 22px;
+          letter-spacing: 1.7px;
+        }
         input {
           position: absolute;
           top: 0;
@@ -220,6 +288,9 @@
             border: solid 1px #DCDCDC;
             left: 4px;
             top: -2px;
+            @include SP {
+              left: 3px;
+            }
           }
           &:after {
             position: absolute;
@@ -231,22 +302,34 @@
             left: 8px;
             top: 2px;
             display: none;
+            @include SP {
+              left: 7px;
+            }
           }
         }
       }
     }
     .btn-confirm {
       margin-top: 115px;
+      @include SP {
+        margin-top: 111px;
+      }
       #btnConfirm {
         margin: 0 auto;
         max-width: 300px;
         height: 60px;
         border-radius: 50px;
+        @include SP {
+          height: 50px;
+        }
         span {
           transform: none;
           @include font(18);
           letter-spacing: 2px;
           left: 6px;
+          @include SP {
+            @include font(14);
+          }
         }
       }
     }
