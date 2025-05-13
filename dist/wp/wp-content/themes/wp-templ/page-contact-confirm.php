@@ -1,4 +1,8 @@
 <?php
+/**
+ * Template Name: Page CONTACT CONFIRM
+**/
+
 if (session_status() === PHP_SESSION_NONE) session_start();
 ob_start();
 if (empty($_POST['actionFlag']) && empty($_SESSION['statusFlag']) && (!isset($_POST['_csrf']) || !verify_csrf_token(sanitize_form_value($_POST['_csrf'])))) header('location: ' . APP_URL);

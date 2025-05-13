@@ -1,2 +1,26 @@
 @charset "utf-8";
 @import "../utility/*";
+
+.short-desc {
+	margin-top: -51px;
+	text-align: center;
+	@include font(18);
+	line-height: 30px;
+	font-weight: 700;
+	letter-spacing: 2.1px;
+	margin-bottom: 168px;
+	a {
+		text-decoration: underline;
+	}
+}
+
+.sec-form {
+	position: relative;
+	padding: 112px 20px;
+	.img-step {
+		position: absolute;
+		top: -88px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}

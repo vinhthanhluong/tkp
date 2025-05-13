@@ -1,4 +1,8 @@
 <?php
+/**
+ * Template Name: Page CONTACT COMPLETE
+**/
+
 include_once(APP_PATH . 'page-contact-confirm.php');
 require_once(APP_PATH . "libs/form/phpmailer/PHPMailer.php");
 require_once(APP_PATH . "libs/form/phpmailer/SMTP.php");
