@@ -40,7 +40,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="sec-anchor">
       <div class="inner1170">
-        <ul class="lst-anchor">
+        <ul class="lst-anchor aos-init" data-aos="fade-up">
           <li><a href="#info01" class="c-btn01 btn-anchor">
             <i class="arr01"></i>
             <span>
@@ -80,7 +80,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-info01 c-bg-wave02 wave-yellow" id="info01">
       <p class="dercor01"><img src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/dot_decor.png" rel="js-lazy" width="180" height="55" alt=""></p>
       <p class="dercor02"><img src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/dot_decor.png" rel="js-lazy" width="180" height="55" alt=""></p>
-      <p class="dercor03"><img src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/decor01.png" rel="js-lazy" width="180" height="55" alt=""></p>
+      <p class="dercor03 pc aos-init anim-scale01" data-aos=""><img src="<?php echo createSVG(180, 55); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/decor01.png" rel="js-lazy" width="180" height="55" alt=""></p>
       <div class="img-wave-yellow">
         <div class="wave-top">
           <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
@@ -91,13 +91,13 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
       <div class="inner1170">
         <div class="block">
-          <div class="block__ttl">
+          <div class="block__ttl aos-init" data-aos="fade-up">
             <h2 class="c-ttl02">
               <span class="c-ttl02__jp">営業時間</span>
               <span class="c-ttl02__en">Opening Hours</span>
             </h2>
           </div>   
-          <div class="block__info">
+          <div class="block__info aos-init" data-aos="fade-up">
             <div class="c-table01">
               <dl>
                 <dt>SHONIN PARK園内</dt>
@@ -134,21 +134,21 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="sec-info02" id="info02">
       <div class="inner1170">
-        <h2 class="c-ttl02 is-center">
+        <h2 class="c-ttl02 is-center aos-init" data-aos="fade-up">
           <span class="c-ttl02__jp">アクセス</span>
           <span class="c-ttl02__en">Access</span>
         </h2>
-        <div class="block01">
+        <div class="block01 aos-init" data-aos="fade-up">
           <div class="block01__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6668.273548213143!2d131.49681869902713!3d33.3152395594634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7680a24218f%3A0x2878f925a3e1e27b!2z5pel5pys44CB44CSODc0LTAwMjMg5aSn5YiG55yM5Yil5bqc5biC5LiK5Lq644Kx5rWc55S6!5e0!3m2!1sja!2s!4v1747030032309!5m2!1sja!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13336.660713111058!2d131.501546!3d33.3144969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7429cb1b081%3A0xd8c33740847482de!2z5LiK5Lq644O25rWc5YWs5ZyS!5e0!3m2!1sja!2s!4v1747109995113!5m2!1sja!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           <div class="block01_info">
             <div class="info01">
               <p class="ttl01">SHONIN PARK</p>
               <p class="txt01">〒874-0023 大分県別府市上人ヶ浜町504-1</p>
             </div>
             <p class="btn01">
-              <a href="https://maps.app.goo.gl/jZxDf34seZtgWGoN9" class="c-btn01" target="_blank" rel="noopener nofollow">
+              <a href="https://maps.app.goo.gl/NJRoi8aJ2yiwogVr7" class="c-btn01" target="_blank" rel="noopener nofollow">
                 <i class="arr01"></i>
                 <span>Google map</span>
                 <i class="arr02"></i>
@@ -156,7 +156,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </p>
           </div>   
         </div>
-        <div class="block02">
+        <div class="block02 aos-init" data-aos="fade-up">
           <h2 class="c-ttl03">
             <span class="c-ttl03__icon"><img src="<?php echo createSVG(35, 36); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_train.svg" rel="js-lazy" width="35" height="36" alt=""></span>
             <span class="c-ttl03__ttl">公共交通機関でお越しの方</span>
@@ -166,7 +166,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="sp"><img src="<?php echo createSVG(327, 124); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map01_sp.jpg" rel="js-lazy" width="327" height="124" alt=""></span>
           </div>
         </div>
-        <div class="block03">
+        <div class="block03 aos-init" data-aos="fade-up">
           <h2 class="c-ttl03">
             <span class="c-ttl03__icon"><img src="<?php echo createSVG(32, 32); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_delivery.svg" rel="js-lazy" width="32" height="32" alt=""></span>
             <span class="c-ttl03__ttl">お車でお越しの方</span>
@@ -176,7 +176,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="sp"><img src="<?php echo createSVG(327, 124); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map02_sp.jpg" rel="js-lazy" width="327" height="124" alt=""></span>
           </div>
         </div>
-        <div class="block04">
+        <div class="block04 aos-init" data-aos="fade-up">
           <h2 class="c-ttl03">
             <span class="c-ttl03__icon">
               <img class="pc" src="<?php echo createSVG(32, 32); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_car.svg" rel="js-lazy" width="32" height="32" alt="">
@@ -192,13 +192,13 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-info03 c-bg-wave02 wave-gray" id="info03">
-      <p class="dercor01"><img src="<?php echo createSVG(211, 224); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/decor02.png" rel="js-lazy" width="211" height="224" alt=""></p>
+      <p class="dercor01 pc aos-init anim-scale01" data-aos=""><img src="<?php echo createSVG(211, 224); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/decor02.png" rel="js-lazy" width="211" height="224" alt=""></p>
       <div class="inner1170">
-        <h2 class="c-ttl02">
+        <h2 class="c-ttl02 aos-init" data-aos="fade-up">
           <span class="c-ttl02__jp">周辺観光</span>
           <span class="c-ttl02__en">Sightseeing</span>
         </h2>
-        <p class="desc01">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>SHONIN PARKと周辺観光を組み合わせて充実した日をお過ごしください。</p>
+        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>SHONIN PARKと周辺観光を組み合わせて充実した日をお過ごしください。</p>
         <ul class="c-lstpost01">
           <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">
             <div class="lstpost01-ctn01">
@@ -331,12 +331,12 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <div class="sec-info04" id="info04">
       <div class="inner1170">
-        <h2 class="c-ttl02 is-white is-center">
+        <h2 class="c-ttl02 is-white is-center aos-init" data-aos="fade-up">
           <span class="c-ttl02__jp">よくあるご質問</span>
           <span class="c-ttl02__en">Q&A</span>
         </h2>
-        <p class="desc01">SHONIN PARKの利⽤に<br class="sp">ついてよくあるご質問をまとめています。<br>こちらで確認できない内容は<br class="sp"><a href="<?php echo APP_URL; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
-        <div class="mod-tabs">
+        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARKの利⽤に<br class="sp">ついてよくあるご質問をまとめています。<br>こちらで確認できない内容は<br class="sp"><a href="<?php echo APP_URL; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
+        <div class="mod-tabs aos-init" data-aos="fade-up">
           <div class="nav-tabs">
             <ul>
               <li><p class="tab is-act" data-tab="tab01"><span class="txt">施設に<br class="sp">ついて</span></p></li>
