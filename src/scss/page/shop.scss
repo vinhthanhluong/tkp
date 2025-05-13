@@ -105,64 +105,84 @@
     margin-bottom: 24px;
   }
   .map-tag {
-    @include font("","",120,bold);
-    color: #fff;
-    border: 2px solid #fff;
-    background: #755C49;
-    text-align: center;
-    display: inline-block;
     position: absolute;
-    box-shadow: 0 0 10px rgba($black01, 0.1);
+    text-align: center;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
     @include PC {
-      @include font(15,19);
-      border-radius: 50px;
-      padding: 5px 12px;
-      min-width: 79px;
+      width: 240px;
       @include max-screen(1218px) {
-        font-size: vw-pc(15px,1218);
-        border-radius: vw-pc(50px,1218);
-        padding: vw-pc(5px ,1218) vw-pc(12px,1218);
-        min-width: vw-pc(79px,1218);
+        width: vw-pc(240px,1218);
       }
     }
     @include SP {
-      font-size: vw-sp(6px);
-      line-height: calc(8/6);
-      border-radius: vw-sp(50px);
-      padding: vw-sp(1px) vw-sp(4px) vw-sp(1.5px);
-      min-width: vw-sp(30px);
-      border-width: vw-sp(1px);
+      width: vw-sp(91px);
+    }
+    .tag-txt {
+      @include font("","",120,bold);
+      color: #fff;
+      border: 2px solid #fff;
+      background: $brown01;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      box-shadow: 0 0 10px rgba($black01, 0.1);
+      @include PC {
+        @include font(15,19);
+        border-radius: 50px;
+        padding: 5px 12px;
+        min-width: 79px;
+        @include max-screen(1218px) {
+          font-size: vw-pc(15px,1218);
+          border-radius: vw-pc(50px,1218);
+          padding: vw-pc(5px ,1218) vw-pc(12px,1218);
+          min-width: vw-pc(79px,1218);
+        }
+      }
+      @include SP {
+        font-size: vw-sp(6px);
+        line-height: calc(8/6);
+        border-radius: vw-sp(50px);
+        padding: vw-sp(1px) vw-sp(4px) vw-sp(1.5px);
+        min-width: vw-sp(30px);
+        border-width: vw-sp(1px);
+      }
     }
   }
   .is-tag01 {
     @include PC {
-      left: 164px;
+      left: 109px;
       top: 122px;
       @include max-screen(1218px) {
-        left: vw-pc(164px,1218);
+        left: vw-pc(109px,1218);
         top: vw-pc(122px,1218);
       }
     }
     @include SP {
-      left: vw-sp(35px);
+      left: vw-sp(15px);
       top: vw-sp(28px);
     }
   }
   .is-tag02 {
     @include PC {
-      left: 345px;
+      left: 321px;
       top: 202px;
-      padding-left: 17px;
-      padding-right: 17px;
       @include max-screen(1218px) {
-        left: vw-pc(345px,1218);
+        left: vw-pc(321px,1218);
         top: vw-pc(202px,1218);
-        padding-left: vw-pc(17px,1218);
-        padding-right: vw-pc(17px,1218);
+      }
+      .tag-txt {
+        padding-left: 17px;
+        padding-right: 17px;
+        @include max-screen(1218px) {
+          padding-left: vw-pc(15px,1218);
+          padding-right: vw-pc(15px,1218);
+        }
       }
     }
     @include SP {
-      left: vw-sp(88px);
+      left: vw-sp(78px);
       top: vw-sp(52px);
       padding-left: vw-sp(5px);
       padding-right: vw-sp(5px);
@@ -170,15 +190,15 @@
   }
   .is-tag03 {
     @include PC {
-      left: 586px;
+      left: 523px;
       top: 77px;
       @include max-screen(1218px) {
-        left: vw-pc(586px,1218);
+        left: vw-pc(523px,1218);
         top: vw-pc(77px,1218);
       }
     }
     @include SP {
-      left: vw-sp(160px);
+      left: vw-sp(136px);
       top: vw-sp(18px);
     }
   }
@@ -186,13 +206,17 @@
     @include PC {
       left: 503px;
       top: 322px;
-      padding-left: 17px;
-      padding-right: 17px;
       @include max-screen(1218px) {
         left: vw-pc(503px,1218);
         top: vw-pc(322px,1218);
-        padding-left: vw-pc(17px,1218);
-        padding-right: vw-pc(17px,1218);
+      }
+      .tag-txt {
+        padding-left: 17px;
+        padding-right: 17px;
+        @include max-screen(1218px) {
+          padding-left: vw-pc(15px,1218);
+          padding-right: vw-pc(15px,1218);
+        }
       }
     }
     @include SP {
@@ -202,29 +226,33 @@
   }
   .is-tag05 {
     @include PC {
-      right: 221px;
+      right: 140px;
       top: 72px;
       @include max-screen(1218px) {
-        right: vw-pc(221px,1218);
+        right: vw-pc(140px,1218);
         top: vw-pc(72px,1218);
       }
     }
     @include SP {
-      right: vw-sp(55px);
+      right: vw-sp(25px);
       top: vw-sp(16px);
     }
   }
   .is-tag06 {
     @include PC {
-      padding-left: 17px;
-      padding-right: 17px;
       right: 40px;
       top: 202px;
       @include max-screen(1218px) {
-        padding-left: vw-pc(17px,1218);
-        padding-right: vw-pc(17px,1218);
         right: vw-pc(40px,1218);
         top: vw-pc(202px,1218);
+      }
+      .tag-txt {
+        padding-left: 17px;
+        padding-right: 17px;
+        @include max-screen(1218px) {
+          padding-left: vw-pc(15px,1218);
+          padding-right: vw-pc(15px,1218);
+        }
       }
     }
     @include SP {
@@ -234,15 +262,15 @@
   }
   .is-tag07 {
     @include PC {
-      right: 231px;
+      right: 150px;
       bottom: 180px;
       @include max-screen(1218px) {
-        right: vw-pc(231px,1218);
+        right: vw-pc(150px,1218);
         bottom: vw-pc(180px,1218);
       }
     }
     @include SP {
-      right: vw-sp(60px);
+      right: vw-sp(29px);
       bottom: vw-sp(47px);
     }
   }

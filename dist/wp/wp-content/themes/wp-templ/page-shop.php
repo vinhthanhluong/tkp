@@ -74,25 +74,25 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="map-block aos-init" data-aos="fade-up">
           <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="">
           <?php if (!empty($shop_list_name[0])) { ?>
-            <p class="map-tag is-tag01"><?php echo $shop_list_name[0]; ?></p>
+            <p class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[1])) { ?>
-            <p class="map-tag is-tag02"><?php echo $shop_list_name[1]; ?></p>
+            <p class="map-tag is-tag02"><span class="tag-txt"><?php echo $shop_list_name[1]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[2])) { ?>
-            <p class="map-tag is-tag03"><?php echo $shop_list_name[2]; ?></p>
+            <p class="map-tag is-tag03"><span class="tag-txt"><?php echo $shop_list_name[2]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[3])) { ?>
-            <p class="map-tag is-tag04"><?php echo $shop_list_name[3]; ?></p>
+            <p class="map-tag is-tag04"><span class="tag-txt"><?php echo $shop_list_name[3]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[4])) { ?>
-            <p class="map-tag is-tag05"><?php echo $shop_list_name[4]; ?></p>
+            <p class="map-tag is-tag05"><span class="tag-txt"><?php echo $shop_list_name[4]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[5])) { ?>
-            <p class="map-tag is-tag06"><?php echo $shop_list_name[5]; ?></p>
+            <p class="map-tag is-tag06"><span class="tag-txt"><?php echo $shop_list_name[5]; ?></span></p>
           <?php } ?>
           <?php if (!empty($shop_list_name[6])) { ?>
-            <p class="map-tag is-tag07"><?php echo $shop_list_name[6]; ?></p>
+            <p class="map-tag is-tag07"><span class="tag-txt"><?php echo $shop_list_name[6]; ?></span></p>
           <?php } ?>
         </div>
 
