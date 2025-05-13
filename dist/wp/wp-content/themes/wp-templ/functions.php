@@ -5,6 +5,76 @@
 
 if (!defined('APP_URL')) include_once(dirname(ABSPATH) . "/app_config.php");
 include_once(APP_PATH . 'inc/post-type-init.php');
+// include_once(APP_PATH . 'top_news_ajax.php');
+
+add_action("wp_ajax_search_ajax", "search_ajax");
+add_action("wp_ajax_nopriv_search_ajax", "search_ajax");
+
+function search_ajax()
+{
+  if (!empty($_GET['newscat'])) {
+    $news_cat_id = $_GET['newscat'];
+  }
+  $args_news = array(
+    'post_type'           => 'news',
+    'order'               => 'DESC',
+    'orderby'             => 'post_date',
+    'posts_status'        => 'publish',
+    'posts_per_page'      => 6,
+  );
+  if (!empty($news_cat_id)) {
+    $args_news['tax_query'] = array(
+      array(
+        'taxonomy' => 'newscat',
+        'field'    => 'term_id',
+        'terms'    => $news_cat_id,
+      )
+    );
+  }
+  $query_news = new WP_Query($args_news);
+  if ($query_news->have_posts()) {
+    $delay = 0;
+    $html = '';
+    while ($query_news->have_posts()) {
+      $delay   = $delay + 200;
+      $query_news->the_post();
+      $n_id    = $post->ID;
+      $n_url   = get_the_permalink($n_id);
+      $n_ttl   = get_the_title($n_id);
+      $n_date  = get_the_date('Y.m.d');
+      $n_terms = get_the_terms($n_id, 'newscat');
+      $n_thumb = get_the_post_thumbnail_url($n_id);
+      $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;
+
+      $html = $html . '
+      <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="' . $delay . '">
+        <a class="lstpost01-link" href="' . $n_url . '">
+          <div class="lstpost01-ctn01">
+            <div class="lstpost01-img">
+              <img src="' . $n_photo . '" width="345" height="250" alt="">
+            </div>';
+      if (!empty($n_terms)) {
+        $html_cat = '';
+        foreach ($n_terms as $nterm) {
+          $cat_name = $nterm->name;
+          $cat_class = $cat_name == "お知らせ" ? "is-blue" : "is-yellow";
+          $html_cat .= '<span class="item ' . $cat_class . '">' . $cat_name . '</span>';
+        }
+        $html .= '<p class="cate">' . $html_cat . '</p>';
+      }
+      $html .= '</div>
+          <div class="lstpost01-ctn02">
+            <p class="date">' . $n_date . '</p>
+            <p class="ttl">' . $n_ttl . '</p>
+          </div>
+        </a>
+      </li>';
+    }
+  }
+  wp_send_json_success($html);
+  die();
+}
+
 
 // FOR ONCA PROJECTS
 // ▼▼▼▼▼ START ONCA DELETE CODE ▼▼▼▼▼
