@@ -74,25 +74,32 @@
     border-radius: 30px;
     border: solid 1px #65B0D4;
     padding: 80px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .tableContact {
     width: 100%;
     text-align: left;
+    margin-bottom: 22px;
     td,
     th {
-      vertical-align: middle;
+      display: inline-block;
+      vertical-align: top;
       margin-bottom: 20px;
     }
     th {
       width: 220px;
       @include font(15);
       line-height: 24px;
+      letter-spacing: 1.8px;
       font-weight: 700;
+      padding-top: 11px;
     }
     td {
       position: relative;
       width: calc(100% - 220px);
+
     }
     textarea,
     input[type="text"],
@@ -106,7 +113,8 @@
       background: #fff;
       border: solid 1px #DCDCDC;
       color: #000000;
-      padding: 10px;
+      padding: 10px 28px;
+      letter-spacing: 1.7px;
       &::-webkit-input-placeholder,
       &::placeholder {
         color: #BBBBBB;
@@ -122,36 +130,11 @@
     .txt-hint {
       @include font(13);
       line-height: 21px;
+      letter-spacing: 1.5px;
       font-weight: 500;
       margin-top: 10px;
     }
-    select {
-      -webkit-appearance: none;
-      appearance: none;
-      border: 1px solid #aaa;
-      padding: 10px;
-    }
-    .pRadio {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .pRadio input {
-      position: absolute;
-      opacity: 0;
-    }
-    .pRadio label {
-      display: inline-block;
-      margin: 0 5px 0 0;
-      border: 1px solid #aaa;
-      padding: 10px 20px;
-    }
-
-    .pRadio input:checked ~ label {
-      background: #555;
-      border-color: #555;
-      color: #fff;
-    }
-
+    
     button {
       height: 60px;
       margin: 20px auto;
@@ -167,11 +150,107 @@
       display: inline-block;
       border-radius: 12px;
       background: #F5BB1E;
-      margin-right: 12px;
+      margin-right: 11px;
       font-style: normal;
       font-weight: 700;
       @include font(12);
+      letter-spacing: 1.4px;
     }
+  }
+
+  .txtContact01 {
+    ul {
+      text-align: center;
+      li {
+        @include font(15);
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: 2.1px;
+        a {
+          color: #65B0D4;
+          text-decoration: underline;
+          margin-right: 6px;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: '';
+            background: url($img_url + "img/contact/ico_blank.svg") no-repeat center center/100% auto;
+            width: 8px;
+            height: 8px;
+            top: -5px;
+            right: -8px;
+          }
+        }
+      }
+    }
+  }
+
+  .box-confirm {
+    margin-top: 39px;
+    .check-confirm {
+      text-align: center;
+      label {
+        position: relative;
+        @include font(15);
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          &:checked {
+            ~ span {
+              &:after {
+                display: block;
+              }
+            }
+          }
+        }
+        span {
+          position: relative;
+          padding-left: 35px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: solid 1px #DCDCDC;
+            left: 4px;
+            top: -2px;
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            background: #F5BB1E;
+            left: 8px;
+            top: 2px;
+            display: none;
+          }
+        }
+      }
+    }
+    .btn-confirm {
+      margin-top: 115px;
+      #btnConfirm {
+        margin: 0 auto;
+        max-width: 300px;
+        height: 60px;
+        border-radius: 50px;
+        span {
+          transform: none;
+          @include font(18);
+          letter-spacing: 2px;
+          left: 6px;
+        }
+      }
+    }
+    
   }
 
   // for step 2
