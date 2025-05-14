@@ -357,6 +357,11 @@
         pointer-events: none;
       }
     }
+    .c-breadcrumb {
+      a {
+        pointer-events: none;
+      }
+    }
     .sec-form {
       margin-top: 183px;
       @include SP {

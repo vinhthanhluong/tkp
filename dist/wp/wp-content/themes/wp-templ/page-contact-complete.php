@@ -47,8 +47,7 @@ $reg_email
 $reg_tel
 
 ■お問い合わせ内容
-$reg_content
-";
+$reg_content";
 
 
   //お問い合わせメッセージ送信
