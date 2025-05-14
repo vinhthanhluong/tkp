@@ -299,6 +299,11 @@
             left: 4px;
             top: 50%;
             transform: translate(0, -50%);
+            @include PC {
+              @include Safari {
+                top: 52%;
+              }
+            }
             @include SP {
               left: 3px;
             }
@@ -314,6 +319,11 @@
             top: 50%;
             transform: translate(0, -50%);
             display: none;
+            @include PC {
+              @include Safari {
+                top: 52%;
+              }
+            }
             @include SP {
               left: 7px;
             }
