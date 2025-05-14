@@ -34,10 +34,7 @@ if ($actionFlag == 'send') {
   $entry_host = gethostbyaddr(getenv("REMOTE_ADDR"));
   $entry_ua = getenv("HTTP_USER_AGENT");
 
-  $msgBody = "■お問い合わせの種類
-$reg_sl01
-
-■お名前
+  $msgBody = "■お名前
 $reg_name
 
 ■フリガナ
@@ -206,15 +203,15 @@ unset($_SESSION['ses_gtime_step2']);
 unset($_SESSION['ses_from_step2']);
 unset($_SESSION['ses_step3']);
 ?>
-<!-- <meta http-equiv="refresh" content="15; url=<?php echo APP_URL ?>"> -->
-<!-- <script type="text/javascript">
+<meta http-equiv="refresh" content="15; url=<?php echo APP_URL ?>">
+<script type="text/javascript">
   history.pushState({
     page: 1
   }, "title 1", "#noback");
   window.onhashchange = function(event) {
     window.location.hash = "#noback";
   };
-</script> -->
+</script>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css?v=<?php echo APP_VER ?>">
 </head>
@@ -235,12 +232,13 @@ unset($_SESSION['ses_step3']);
         <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03.png" rel="js-lazy" width="520" height="140" alt="送信完了">
         <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_sp.png" rel="js-lazy" width="327" height="88" alt="送信完了">
       </div>
+      <div class="thanks-main">
+        <p class="thanks-main__ttl"><strong>お問い合わせありがとう<br class="sp">ございました</strong></p>
+        <p class="thanks-main__txt">ご入力頂いたメールアドレス宛へ、ご確認<br class="sp">メールをお送りしておりますのでご確認ください。<br class="pc">内容を確認次第、担当者より折り返しご<br class="sp">連絡させていただきます。<br><br>※しばらく経ってもメールが届かない場合は、<br class="sp">入力頂いたメールアドレスの誤り、<br class="pc">システムの不具合、迷惑メールフォルダに振り分けられている可能性がございます。<br>その際にはお手数ですがもう一度フォームよりお問い合わせ頂くか、<br class="pc">お電話にてお問い合わ<br class="sp">せください。</p>
+        <a class="thanks-main__back c-btn02" href="<?php echo APP_URL; ?>"><span>Back to top</span></a>
+      </div>
     </div>
-    <div class="thanks-main">
-      <p class="thanks-main__ttl"><strong>お問い合わせありがとうございました</strong></p>
-      <p class="thanks-main__txt">お問い合わせありがとうございます。<br>後日、担当よりご連絡させていただきます。<br />3日以内に弊社より連絡がない場合はお手数ですが、再送信もしくは直接ご連絡くださいますようお願い致します。</p>
-      <a class="thanks-main__back c-btn02" href="<?php echo APP_URL; ?>"><span>Back to top</span></a>
-    </div>
+    
   </main>
   <?php include(APP_PATH . 'libs/footer.php') ?>
 </body>

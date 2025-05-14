@@ -548,28 +548,51 @@
 
   // for step 3
   &.form-thanks {
+    .sec-form {
+      margin-top: 183px;
+      padding-top: 131px;
+      @include SP {
+        margin-top: 97px;
+        padding-top: 75px;
+      }
+    }
     .thanks-main {
       text-align: center;
       &__ttl {
         @include font(34);
         line-height: 30px;
         font-weight: 700;
-        letter-spacing: 2px;
+        letter-spacing: 4px;
         margin-bottom: 40px;
+        @include SP {
+          @include font(24);
+          line-height: 36px;
+          letter-spacing: 2.8px;
+          margin-bottom: 17px;
+        }
       }
       &__txt {
         @include font(18);
         line-height: 30px;
         font-weight: 500;
-        letter-spacing: 2px;
-        margin-bottom: 50px;
+        letter-spacing: 2.2px;
+        margin-bottom: 52px;
+        @include SP {
+          @include font(14);
+          line-height: 26px;
+          letter-spacing: 1.7px;
+          margin-bottom: 32px;
+        }
       }
       
       &__back {
         width: 300px;
+        max-width: 300px;
         height: 60px;
-        line-height: 60px;
+        line-height: 58px;
+        padding: 0;
         margin: 0 auto;
+        border-radius: 50px;
         @include font(18);
         font-weight: 600;
         @include ffGT;
@@ -586,21 +609,33 @@
         }
         @include SP {
           height: 50px;
-          line-height: 50px;
+          line-height: 48px;
+          @include font(16);
         }
         span {
           position: relative;
-          padding-left: 20px;
+          padding-left: 27px;
+          letter-spacing: 1.2px;
           transform: none;
+          @include SP {
+            padding-left: 21px;
+            letter-spacing: 0;
+          }
           &:before {
             position: absolute;
             content: '';
             background: url($img_url + "img/contact/ico_home_w.svg") no-repeat center center/100% auto;
             width: 16px;
             height: 16px;
-            left: 0;
-            top: 8px;
+            left: 1px;
+            top: 6px;
             transition: all .3s;
+            @include SP {
+              width: 13px;
+              height: 13px;
+              left: -1px;
+              top: 8px
+            }
           }
           &:after {
             position: absolute;
@@ -608,10 +643,13 @@
             background: url($img_url + "img/contact/ico_home.svg") no-repeat center center/100% auto;
             width: 16px;
             height: 16px;
-            left: 0;
-            top: 8px;
+            left: 1px;
+            top: 6px;
             opacity: 0;
             transition: all .3s;
+            @include SP {
+              display: none;
+            }
           }
         }
       }
