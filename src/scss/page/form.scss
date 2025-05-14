@@ -1,11 +1,11 @@
 @charset "utf-8";
 @import "../utility/*";
 
-.capcha{margin:19px auto;display:flex;justify-content:center;align-items:center}@media (max-width: 767px){.capcha{margin-top:14px}}.capcha .g-recaptcha,.capcha .g-recaptcha>div,.capcha iframe{max-width:100% !important}
+.capcha{margin:19px auto;display:flex;justify-content:center;align-items:center}@media (max-width: 767px){.capcha{margin-top:14px}}.capcha .g-recaptcha,.capcha .g-recaptcha>div,.capcha iframe{max-width:110% !important}
 
 #btnConfirm:disabled,
 #btnConfirm[disabled]{
-  //pointer-events: none;
+  pointer-events: none;
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -297,7 +297,8 @@
             border-radius: 5px;
             border: solid 1px #DCDCDC;
             left: 4px;
-            top: -2px;
+            top: 50%;
+            transform: translate(0, -50%);
             @include SP {
               left: 3px;
             }
@@ -310,7 +311,8 @@
             border-radius: 3px;
             background: #F5BB1E;
             left: 8px;
-            top: 2px;
+            top: 50%;
+            transform: translate(0, -50%);
             display: none;
             @include SP {
               left: 7px;
@@ -325,6 +327,12 @@
         max-width: 300px;
         height: 60px;
         border-radius: 50px;
+        &:before {
+          display: none;
+        }
+        @include HOVER {
+          color: $blue01;
+        }
         @include SP {
           height: 50px;
         }
@@ -502,7 +510,7 @@
           }
           .txt-back {
             cursor: pointer;
-            transition: all .3s;
+            transition: all .4s;
             width: 300px;
             height: 60px;
             text-align: center;
@@ -514,7 +522,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             @include HOVER {
-              opacity: .7;
+              background: $black01;
             }
             @include SP {
               width: 100%;
@@ -525,14 +533,17 @@
             }
           }
         }
-        .btn-send {
-
-        }
         #btnSend {
           max-width: 300px;
           width: 300px;
           height: 60px;
           border-radius: 50px;
+          &:before {
+            display: none;
+          }
+          @include HOVER {
+            color: $blue01;
+          }
           @include SP {
             height: 50px;
             max-width: 100%;
@@ -603,7 +614,11 @@
         font-weight: 600;
         @include ffGT;
         text-transform: uppercase;
+        &:before {
+          display: none;
+        }
         @include HOVER {
+          color: $blue01;
           span {
             &:before {
               opacity: 0;

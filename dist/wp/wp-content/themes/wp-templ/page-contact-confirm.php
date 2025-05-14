@@ -39,7 +39,7 @@ if ($actionFlag == "confirm") {
     <main id="wrap">
       <div class="c-breadcrumb aos-init" data-aos="fade-up">
         <ul>
-          <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+          <li>TOP</li>
           <li>お問い合わせ</li>
           <li>内容確認</li>
         </ul>
