@@ -69,7 +69,7 @@ if ($actionFlag == "confirm") {
         </div>
         <form method="post" class="confirmform" action="../complete/?g=<?php echo $gtime ?>" name="confirmform" id="confirmform">
           <div class="form-block">
-            <p class="short-desc">ご入力いただいた内容をご確認ください。<br>こちらの内容で宜しければ、送信ボタンを押してください。</p>
+            <p class="short-desc">ご入力いただいた内容をご確認ください。<br class="pc">こちらの内容で宜しければ、送信ボタンを押してください。</p>
             <div>
               <p class="hid_url">Leave this empty: <input type="text" name="url" value="<?php echo $reg_url ?>"></p><!-- Anti spam part1: the contact form -->
               <table class="tableContact" cellspacing="0">
@@ -107,7 +107,7 @@ if ($actionFlag == "confirm") {
 
             <div class="list-btn">
               <div class="btn-back">
-                <p rel="js-back">入力内容を変更する</p>
+                <p rel="js-back" class="txt-back">入力内容を変更する</p>
               </div>
               <div class="btn-send">
                 <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
