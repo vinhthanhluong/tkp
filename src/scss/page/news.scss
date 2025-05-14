@@ -7,10 +7,10 @@ for ARCHIVE
 -------------------------------------------------------------*/
 .sec-news {
   @include PC {
-    padding: 100px 0 120px;
+    padding: 100px 0 190px;
   }
   @include SP {
-    padding: 63px 0 64px;
+    padding: 65px 0 82px;
     .c-lstpost01__item:not(:last-child) {
       margin-bottom: 28px;
     }
@@ -64,7 +64,7 @@ for SINGLE
   position: relative;
   @include PC {
     margin-top: 19px;
-    margin-bottom: 118px;
+    margin-bottom: 189px;
     .img-wave-blue {
       top: 133px;
       left: auto;
@@ -76,7 +76,7 @@ for SINGLE
   }
   @include SP {
     margin-top: 6px;
-    margin-bottom: 64px;
+    margin-bottom: 81px;
     .img-wave-blue {
       top: 62px;
       left: auto;
