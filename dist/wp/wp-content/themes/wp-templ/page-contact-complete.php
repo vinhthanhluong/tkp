@@ -34,61 +34,21 @@ if ($actionFlag == 'send') {
   $entry_host = gethostbyaddr(getenv("REMOTE_ADDR"));
   $entry_ua = getenv("HTTP_USER_AGENT");
 
-  $msgBody = "■お問い合わせの種類
-$reg_sl01
-
-■お名前
+  $msgBody = "■お名前
 $reg_name
 
-■性別
-$reg_gender
-";
-
-  if (isset($reg_checkAll01) && $reg_checkAll01 != '') $msgBody .= "
-■Checkbox1
-$reg_checkAll01
-";
-
-  if (isset($reg_company) && $reg_company != '') $msgBody .= "
-■会社名
-$reg_company
-";
-
-  if (isset($reg_department) && $reg_department != '') $msgBody .= "
-■部署
-$reg_department
-";
-
-  $msgBody .= "
-■お電話番号
-$reg_tel
-";
-
-  if (isset($reg_fax) && $reg_fax != '') $msgBody .= "
-■FAX番号
-$reg_fax
-";
-
-  $msgBody .= "
-■郵便番号
-$reg_zipcode
-
-■住所
-$reg_pref_name$reg_address01$reg_address02
+■フリガナ
+$reg_namekata
 
 ■メールアドレス
 $reg_email
-";
 
-  if (isset($reg_time) && $reg_time != '') $msgBody .= "
-■連絡希望の時間帯
-$reg_time
-";
+■お電話番号
+$reg_tel
 
-  if (isset($reg_content) && $reg_content != '') $msgBody .= "
 ■お問い合わせ内容
-$reg_content";
-
+$reg_content
+";
 
 
   //お問い合わせメッセージ送信
@@ -259,18 +219,26 @@ unset($_SESSION['ses_step3']);
 <body id="contact" class="contact page-form form-thanks">
   <?php include(APP_PATH . "libs/header.php") ?>
   <main id="wrap">
-    <div class="inner thanks-main">
-
-      <img class="step-img sp" src="<?php echo createSVG(345, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/form/img_step03SP.svg" rel="js-lazy" width="345" height="55" alt="送信完了">
-      <img class="step-img pc" src="<?php echo createSVG(714, 45) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/form/img_step03.svg" rel="js-lazy" width="714" height="45" alt="送信完了">
-
-      <p class="thanks-main__ttl"><strong>送信が完了いたしました。</strong></p>
-      <p class="thanks-main__txt">お問い合わせありがとうございます。<br>後日、担当よりご連絡させていただきます。<br />3日以内に弊社より連絡がない場合はお手数ですが、再送信もしくは直接ご連絡くださいますようお願い致します。</p>
-
-      <p class="thanks-main__mail"><a id="mailContact" href="#"></a>までメールを<br class="sp">お送りください。</p>
-
-      <p class="thanks-main__back"><a href="<?php echo APP_URL; ?>">←TOPへ戻る</a></p>
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li>お問い合わせ</li>
+        <li>内容確認</li>
+        <li>完了</li>
+      </ul>
     </div>
+    <div class="sec-form c-bg-wave01">
+      <div class="img-step">
+        <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03.png" rel="js-lazy" width="520" height="140" alt="送信完了">
+        <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_sp.png" rel="js-lazy" width="327" height="88" alt="送信完了">
+      </div>
+      <div class="thanks-main">
+        <p class="thanks-main__ttl"><strong>お問い合わせありがとう<br class="sp">ございました</strong></p>
+        <p class="thanks-main__txt">ご入力頂いたメールアドレス宛へ、ご確認<br class="sp">メールをお送りしておりますのでご確認ください。<br class="pc">内容を確認次第、担当者より折り返しご<br class="sp">連絡させていただきます。<br><br>※しばらく経ってもメールが届かない場合は、<br class="sp">入力頂いたメールアドレスの誤り、<br class="pc">システムの不具合、迷惑メールフォルダに振り分けられている可能性がございます。<br>その際にはお手数ですがもう一度フォームよりお問い合わせ頂くか、<br class="pc">お電話にてお問い合わ<br class="sp">せください。</p>
+        <a class="thanks-main__back c-btn02" href="<?php echo APP_URL; ?>"><span>Back to top</span></a>
+      </div>
+    </div>
+    
   </main>
   <?php include(APP_PATH . 'libs/footer.php') ?>
 </body>

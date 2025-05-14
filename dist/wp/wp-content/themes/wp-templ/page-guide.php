@@ -41,7 +41,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <h1 class="tit-sec">
           <span>SHONIN PARKについて</span>
           <strong class="pc">About SHONIN PARK</strong>
-          <strong class="sp">About<br class="sp">SHONIN PARK</strong>
+          <strong class="sp">About<br>SHONIN PARK</strong>
         </h1>
         <p class="desc">4つのエリアで<br class="sp">構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
       </div>
@@ -81,7 +81,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Shop</strong>
             </h2>
             <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
-            <a href="<?php echo APP_URL ?>shop/" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -104,7 +104,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Restaurant</strong>
             </h2>
             <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
-            <a href="<?php echo APP_URL ?>restaurant/" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>

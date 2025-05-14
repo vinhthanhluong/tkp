@@ -57,6 +57,13 @@
       bottom: vw-sp(74px);
     }
   }
+  .about-img {
+    @include PC {
+      @include max-screen(1280px) {
+        height: calc(514 / 546 * 100%);
+      }
+    }
+  }
   .about-group {
     @include SP {
       margin-top: 40px;
