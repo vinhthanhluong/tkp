@@ -7,6 +7,12 @@ include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/validationEngine.jquery.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css?v=<?php echo APP_VER ?>">
+
+<?php if(GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
+  <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
+  <script>function onSubmit(token) { document.getElementsByClassName("contactform").submit(); }</script>
+  <style>.grecaptcha-badge {display: none}</style>
+<?php } ?>
 </head>
 
 <body id="contact" class="contact page-form">
@@ -89,7 +95,14 @@ include(APP_PATH . 'libs/head.php'); ?>
           <div class="box-confirm">
             <p class="check-confirm"><label><input type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
             <div class="btn-confirm">
-              <button id="btnConfirm" class="c-btn02"><span>入力内容を確認する</span></button>
+              <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
+                <div class="capcha">
+                  <div class="g-recaptcha" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API; ?>"></div>
+                </div>
+                <button id="btnConfirm" class="g-recaptcha c-btn02" data-size="invisible" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API ?>" data-callback="onSubmit"><span>入力内容を確認する</span></button>
+              <?php } else { ?>
+                <button id="btnConfirm" class="c-btn02"><span>入力内容を確認する</span></button>
+              <?php } ?>
               <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
               <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('confirm') ?>">
             </div>

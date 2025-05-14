@@ -32,24 +32,6 @@ if ($actionFlag == "confirm") {
 ?>
   <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
   <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css?v=<?php echo APP_VER ?>">
-  <!-- Anti spam part1: the contact form start -->
-
-  <?php if (
-    defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '' &&
-    defined('GOOGLE_RECAPTCHA_KEY_SECRET') && GOOGLE_RECAPTCHA_KEY_SECRET != ''
-  ) { ?>
-    <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("confirmform").submit();
-      }
-    </script>
-    <style>
-      .grecaptcha-badge {
-        display: none
-      }
-    </style>
-  <?php } ?>
   </head>
   <body id="contact" class="contact page-form form-confirm">
     <?php include(APP_PATH . 'libs/header.php'); ?>
@@ -110,11 +92,7 @@ if ($actionFlag == "confirm") {
                 <p rel="js-back" class="txt-back">入力内容を変更する</p>
               </div>
               <div class="btn-send">
-                <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
-                  <button id="btnSend" name="actionFlag" value="<?php echo sanitize_form_value('send') ?>" class="c-btn02 g-recaptcha" data-size="invisible" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API ?>" data-callback="onSubmit"><span>この内容で送信する</span></button>
-                <?php } else { ?>
-                  <button class="c-btn02" id="btnSend"><span>この内容で送信する</span></button>
-                <?php } ?>
+                <button class="c-btn02" id="btnSend"><span>この内容で送信する</span></button>
                 <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
                 <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('send') ?>">
               </div>

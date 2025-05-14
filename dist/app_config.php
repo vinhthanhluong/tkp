@@ -63,8 +63,8 @@ define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.jpg');
 define('APP_DUMMY_IMG', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 
 define('GOOGLE_MAP_API_KEY', '');
-define('GOOGLE_RECAPTCHA_KEY_API', '');
-define('GOOGLE_RECAPTCHA_KEY_SECRET', '');
+define('GOOGLE_RECAPTCHA_KEY_API', '6LdZEzkrAAAAADcAENwYl0UdZz29x_Xr9tZjgm6r');
+define('GOOGLE_RECAPTCHA_KEY_SECRET', '6LdZEzkrAAAAAPR2xlpECDnPMrEQIyFDY84nj530');
 
 define('SMTP_ENABLED', false);
 define('SMTP_HOST', "smtp.gmail.com");
