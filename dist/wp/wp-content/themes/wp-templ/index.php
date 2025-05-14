@@ -14,7 +14,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <ul class="mv-video">
         <li class="mv-video__item">
           <div class="video-head sp"></div>
-          <video id="mainVideo" autoplay muted loop playsinline data-baseurl="<?php echo APP_ASSETS; ?>img/top/"></video>
+          <video id="mainVideo" preload="auto" muted playsinline autoplay loop data-baseurl="<?php echo APP_ASSETS; ?>img/top/"></video>
           <div class="video-foot sp"></div>
         </li>
       </ul>
@@ -321,7 +321,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <img class="instagram-bg pc" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01.png" rel="js-lazy" width="1230" height="1440" alt="">
       <img class="instagram-bg sp" src="<?php echo createSVG(1440, 1230) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_bg01_sp.png" rel="js-lazy" width="1230" height="1440" alt="">
       <div class="instagram-inner">
-        <div class="instagram-decor01 aos-init pc" data-aos="fade-up">
+        <div class="instagram-decor01 aos-init" data-aos="fade-up">
           <img src="<?php echo createSVG(180, 55) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/instagram_decor01.svg" rel="js-lazy" width="180" height="55" alt="">
         </div>
         <div class="instagram-decor02 pc aos-init" data-aos="fade-up">

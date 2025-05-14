@@ -177,7 +177,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <?php
           if (!empty($file_pdf)) {
             $file_pdf_size = $file_pdf['filesize'];
-            $file_pdf_size = round($file_pdf['file_size'] / (1024 * 1024), 2);
+            $file_pdf_size = round($file_pdf_size / (1024 * 1024), 2);
             $file_pdf_url = $file_pdf['url'];
           ?>
             <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">

@@ -210,6 +210,9 @@ body:not(.fixHeader) {
     @include SP {
       padding: 48px 20px 0;
     }
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .gNavi {
     @include flexbox;
@@ -550,6 +553,14 @@ body:not(.fixHeader) {
                   top: calc(3 / 1200 * 100vw);
                   width: calc(10 / 1200 * 100vw);
                   height: calc(10 / 1200 * 100vw);
+                }
+              }
+              .is-safari & {
+                top: 6px;
+                @include PC {
+                  @include max-screen(1200px) {
+                    top: calc(6 / 1200 * 100vw);
+                  }
                 }
               }
             }
