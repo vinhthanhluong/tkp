@@ -18,8 +18,8 @@ function mvLoad() {
 
   const classList02 = ["", "", "is-white"];
 
-  let currentIndex = getCurrentIndexByHour();
-  // let currentIndex = 0;
+  // let currentIndex = getCurrentIndexByHour();
+  let currentIndex = 0;
 
   function getCurrentIndexByHour() {
     const hour = new Date().getHours();
@@ -45,8 +45,8 @@ function mvLoad() {
 
   changeVideo(currentIndex);
 
-  // setInterval(function () {
-  //   currentIndex = (currentIndex + 1) % videoList.length;
-  //   changeVideo(currentIndex);
-  // }, 10000);
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % videoList.length;
+    changeVideo(currentIndex);
+  }, 60000);
 }

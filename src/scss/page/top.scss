@@ -225,10 +225,10 @@
       padding-top: calc(143 / 1440 * 100vw);
     }
     @include screen(901px, 1100px) {
-      padding-top: calc(170 / 1440 * 100vw);
+      padding-top: calc(180 / 1440 * 100vw);
     }
     @include max-screen(900px) {
-      padding-top: 100px;
+      padding-top: 110px;
     }
   }
   @include SP {
@@ -301,10 +301,10 @@
       margin: 0 auto 0 calc(131 / 1440 * 100vw);
     }
     @include SP {
-      @include screen(380px, 390px) {
-        max-width: calc(330 / 375 * 100vw);
-      }
-      max-width: calc(328 / 375 * 100vw);
+      max-width: calc(330 / 375 * 100vw);
+      // @include screen(380px, 390px) {
+      // }
+      // max-width: calc(328 / 375 * 100vw);
       margin: 0 auto;
     }
   }

@@ -629,14 +629,16 @@ body:not(.fixHeader) {
           height: 24px;
           left: -1px;
           top: -1px;
+          font-size: 0;
+          line-height: 0;
           .circle {
             position: absolute;
-            top: 2px;
+            top: 0;
             left: 0;
             transition: transform 0.3s ease;
-            .is-safari & {
-              top: 1px;
-            }
+            // .is-safari & {
+            //   top: 1px;
+            // }
           }
         }
       }

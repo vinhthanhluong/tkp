@@ -49,7 +49,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </h1>
       </div>
     </div>
-    <p class="short-desc">お問い合わせ前に<a href="#">よくあるご質問</a>をご確認い<br class="sp">ただいた上で、<br class="pc">お問い合わせフォームへのご入<br class="sp">力をお願いいたします。</p>
+    <p class="short-desc">お問い合わせ前に<a href="<?php echo APP_URL ?>info#info04">よくあるご質問</a>をご確認い<br class="sp">ただいた上で、<br class="pc">お問い合わせフォームへのご入<br class="sp">力をお願いいたします。</p>
     <div class="sec-form c-bg-wave01">
       <div class="img-step">
         <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step01.png" rel="js-lazy" width="520" height="140" alt="内容入力">
@@ -89,7 +89,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
           <div class="txtContact01">
             <ul>
-              <li><a href="#">プライバシーポリシー</a>  に同意の上、「入力内容を確認する」ボタンを押してください。</li>
+              <li><a href="<?php echo APP_URL ?>privacy/" target="_blank">プライバシーポリシー</a>  に同意の上、「入力内容を確認する」ボタンを押してください。</li>
             </ul>
           </div>
           <div class="box-confirm">

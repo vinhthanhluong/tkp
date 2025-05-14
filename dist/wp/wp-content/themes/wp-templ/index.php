@@ -266,7 +266,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="txt anim-inner">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>周辺観光を組み合わせて充実した日をお過ごしください。</p>
           </div>
           <div class="sight-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
-            <a href="<?php echo APP_URL ?>information/#" class="c-btn01 is-center">
+            <a href="<?php echo APP_URL ?>info/#" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>周辺観光を見る</span>
               <i class="arr02"></i>
