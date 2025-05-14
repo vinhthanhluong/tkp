@@ -93,7 +93,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </ul>
           </div>
           <div class="box-confirm">
-            <p class="check-confirm"><label><input type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
+            <p class="check-confirm"><label><input id="check1" type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
             <div class="btn-confirm">
               <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
                 <div class="capcha">
