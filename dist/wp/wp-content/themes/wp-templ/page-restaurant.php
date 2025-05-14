@@ -166,7 +166,9 @@ include(APP_PATH . 'libs/head.php'); ?>
                         <?php } ?>
                       </div>
                     </div>
-                    <p class="menu-desc">これはダミーテキストです</p>
+                    <?php if (!empty($food_desc)) { ?>
+                      <p class="menu-desc"><?php echo $food_desc; ?></p>
+                    <?php } ?>
                   </div>
                 </li>
               <?php } ?>

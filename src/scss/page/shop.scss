@@ -25,14 +25,14 @@
     @include PC {
       padding-left: 62px;
       @include max-screen(1280px) {
-        padding-left: vw-pc(50px,1280);
+        padding-left: vw-pc(50px, 1280);
       }
     }
   }
   .about-pic {
     @include PC {
-      width: calc(317/590*100%);
-      padding-top: calc(198/590*100%);
+      width: calc(317 / 590 * 100%);
+      padding-top: calc(198 / 590 * 100%);
       margin: 0 43px 0 auto;
     }
   }
@@ -41,7 +41,7 @@
       max-width: 545px;
       margin-bottom: 74px;
       @include max-screen(1280px) {
-        margin-bottom: vw-pc(70px,1280);
+        margin-bottom: vw-pc(70px, 1280);
       }
     }
   }
@@ -50,7 +50,7 @@
       background-position: center 0;
       bottom: 78px;
       @include max-screen(1280px) {
-        bottom: vw-pc(78px,1280);
+        bottom: vw-pc(78px, 1280);
       }
     }
     @include SP {
@@ -79,7 +79,7 @@
       top: -80px;
       right: -150px;
       @include max-screen(1280px) {
-        right: vw-pc(-50px,1280);
+        right: vw-pc(-50px, 1280);
       }
     }
     @include SP {
@@ -94,8 +94,8 @@
       background-size: auto 100%;
       width: 105px;
       @include max-screen(1280px) {
-        left: vw-pc(-40px,1280);
-        width: vw-pc(105px,1280);
+        left: vw-pc(-40px, 1280);
+        width: vw-pc(105px, 1280);
       }
     }
     @include SP {
@@ -120,38 +120,38 @@
     @include PC {
       width: 240px;
       @include max-screen(1218px) {
-        width: vw-pc(240px,1218);
+        width: vw-pc(240px, 1218);
       }
     }
     @include SP {
-      width: calc(91/327*100%);
+      width: calc(91 / 327 * 100%);
       left: 0;
-      top: 0
+      top: 0;
     }
     .tag-txt {
-      @include font("","",120,bold);
+      @include font("", "", 120, bold);
       color: #fff;
       border: 2px solid #fff;
-      background: #755C49;
+      background: #755c49;
       text-align: center;
       display: inline-block;
       vertical-align: top;
       box-shadow: 0 0 10px rgba($black01, 0.1);
       @include PC {
-        @include font(15,19);
+        @include font(15, 19);
         border-radius: 50px;
         padding: 5px 12px;
         min-width: 79px;
         @include max-screen(1218px) {
-          font-size: vw-pc(15px,1218);
-          border-radius: vw-pc(50px,1218);
-          padding: vw-pc(5px ,1218) vw-pc(12px,1218);
-          min-width: vw-pc(79px,1218);
+          font-size: vw-pc(15px, 1218);
+          border-radius: vw-pc(50px, 1218);
+          padding: vw-pc(5px, 1218) vw-pc(12px, 1218);
+          min-width: vw-pc(79px, 1218);
         }
       }
       @include SP {
         font-size: vw-sp(6px);
-        line-height: calc(8/6);
+        line-height: calc(8 / 6);
         border-radius: vw-sp(50px);
         padding: vw-sp(1px) vw-sp(4px) vw-sp(1.5px);
         min-width: vw-sp(30px);
@@ -164,13 +164,13 @@
       left: 109px;
       top: 122px;
       @include max-screen(1218px) {
-        left: vw-pc(109px,1218);
-        top: vw-pc(122px,1218);
+        left: vw-pc(109px, 1218);
+        top: vw-pc(122px, 1218);
       }
     }
     @include SP {
-      margin-left: calc(15/327*100%);
-      margin-top: calc(28/327*100%);
+      margin-left: calc(15 / 327 * 100%);
+      margin-top: calc(28 / 327 * 100%);
     }
   }
   .is-tag02 {
@@ -178,21 +178,21 @@
       left: 321px;
       top: 202px;
       @include max-screen(1218px) {
-        left: vw-pc(321px,1218);
-        top: vw-pc(202px,1218);
+        left: vw-pc(321px, 1218);
+        top: vw-pc(202px, 1218);
       }
       .tag-txt {
         padding-left: 17px;
         padding-right: 17px;
         @include max-screen(1218px) {
-          padding-left: vw-pc(15px,1218);
-          padding-right: vw-pc(15px,1218);
+          padding-left: vw-pc(15px, 1218);
+          padding-right: vw-pc(15px, 1218);
         }
       }
     }
     @include SP {
-      margin-left: calc(78/327*100%);
-      margin-top: calc(52/327*100%);
+      margin-left: calc(78 / 327 * 100%);
+      margin-top: calc(52 / 327 * 100%);
       padding-left: vw-sp(5px);
       padding-right: vw-sp(5px);
     }
@@ -202,13 +202,13 @@
       left: 523px;
       top: 77px;
       @include max-screen(1218px) {
-        left: vw-pc(523px,1218);
-        top: vw-pc(77px,1218);
+        left: vw-pc(523px, 1218);
+        top: vw-pc(77px, 1218);
       }
     }
     @include SP {
-      margin-left: calc(136/327*100%);
-      margin-top: calc(18/327*100%);
+      margin-left: calc(136 / 327 * 100%);
+      margin-top: calc(18 / 327 * 100%);
     }
   }
   .is-tag04 {
@@ -216,21 +216,21 @@
       left: 503px;
       top: 322px;
       @include max-screen(1218px) {
-        left: vw-pc(503px,1218);
-        top: vw-pc(322px,1218);
+        left: vw-pc(503px, 1218);
+        top: vw-pc(322px, 1218);
       }
       .tag-txt {
         padding-left: 17px;
         padding-right: 17px;
         @include max-screen(1218px) {
-          padding-left: vw-pc(15px,1218);
-          padding-right: vw-pc(15px,1218);
+          padding-left: vw-pc(15px, 1218);
+          padding-right: vw-pc(15px, 1218);
         }
       }
     }
     @include SP {
-      margin-left: calc(134/327*100%);
-      margin-top: calc(84/327*100%);
+      margin-left: calc(134 / 327 * 100%);
+      margin-top: calc(84 / 327 * 100%);
     }
   }
   .is-tag05 {
@@ -238,13 +238,13 @@
       right: 140px;
       top: 72px;
       @include max-screen(1218px) {
-        right: vw-pc(140px,1218);
-        top: vw-pc(72px,1218);
+        right: vw-pc(140px, 1218);
+        top: vw-pc(72px, 1218);
       }
     }
     @include SP {
-      margin-left: calc(211/327*100%);
-      margin-top: calc(16/327*100%);
+      margin-left: calc(211 / 327 * 100%);
+      margin-top: calc(16 / 327 * 100%);
     }
   }
   .is-tag06 {
@@ -252,21 +252,21 @@
       right: 40px;
       top: 202px;
       @include max-screen(1218px) {
-        right: vw-pc(40px,1218);
-        top: vw-pc(202px,1218);
+        right: vw-pc(40px, 1218);
+        top: vw-pc(202px, 1218);
       }
       .tag-txt {
         padding-left: 17px;
         padding-right: 17px;
         @include max-screen(1218px) {
-          padding-left: vw-pc(15px,1218);
-          padding-right: vw-pc(15px,1218);
+          padding-left: vw-pc(15px, 1218);
+          padding-right: vw-pc(15px, 1218);
         }
       }
     }
     @include SP {
-      margin-left: calc(236/327*100%);
-      margin-top: calc(48/327*100%);
+      margin-left: calc(236 / 327 * 100%);
+      margin-top: calc(48 / 327 * 100%);
     }
   }
   .is-tag07 {
@@ -274,13 +274,13 @@
       right: 150px;
       bottom: 180px;
       @include max-screen(1218px) {
-        right: vw-pc(150px,1218);
-        bottom: vw-pc(180px,1218);
+        right: vw-pc(150px, 1218);
+        bottom: vw-pc(180px, 1218);
       }
     }
     @include SP {
-      margin-left: calc(207/327*100%);
-      margin-top: calc(102/327*100%);
+      margin-left: calc(207 / 327 * 100%);
+      margin-top: calc(102 / 327 * 100%);
     }
   }
 }
@@ -301,7 +301,7 @@
     @include PC {
       top: 400px;
       @include max-screen(1218px) {
-        top: vw-pc(400px,1218);
+        top: vw-pc(400px, 1218);
       }
     }
     @include SP {
@@ -312,15 +312,17 @@
     @include PC {
       top: 325px;
       height: 170px;
-      background: url($img_url + "img/guide/shop/pattern_bg01.png") repeat-x 0 0/145px auto;
+      background: url($img_url + "img/guide/shop/pattern_bg01.png") repeat-x 0 0/145px
+        auto;
       @include max-screen(1218px) {
-        top: vw-pc(325px,1218);
+        top: vw-pc(325px, 1218);
       }
     }
     @include SP {
       top: vw-sp(65px);
       height: 70px;
-      background: url($img_url + "img/guide/shop/pattern_bg01_sp.png") repeat-x 0 0/98px auto;
+      background: url($img_url + "img/guide/shop/pattern_bg01_sp.png") repeat-x
+        0 0/98px auto;
     }
   }
   @include PC {
@@ -353,7 +355,7 @@
         margin-right: -10px;
       }
     }
-    &>li {
+    & > li {
       @include PC {
         width: calc(100% / 3);
         padding: 0 34px;
@@ -393,11 +395,12 @@
     mask-size: 100% 100%;
     @include PC {
       margin-bottom: 21px;
-      padding-top: calc(250/345*100%);
+      padding-top: calc(250 / 345 * 100%);
     }
     @include SP {
       @include aspect-ratio(150, 110);
-      width: calc(150/327*100%);
+      width: calc(150 / 327 * 100%);
+      max-width: 150px;
     }
   }
   .shop-info {
@@ -412,16 +415,16 @@
     }
   }
   .shop-ttl {
-    @include font("","",120,bold);
+    @include font("", "", 120, bold);
     @include PC {
-      @include font(18,26);
+      @include font(18, 26);
       margin-bottom: 12px;
       @include max-screen(1100px) {
-        font-size: vw-pc(18px,1100)
+        font-size: vw-pc(18px, 1100);
       }
     }
     @include SP {
-      @include font(15,22);
+      @include font(15, 22);
       margin-bottom: 16px;
       &:last-child {
         margin-bottom: 0;
@@ -429,7 +432,7 @@
     }
   }
   .shop-desc {
-    @include font(14,26,120);
+    @include font(14, 26, 120);
     @include PC {
       margin-right: -1px;
     }
@@ -449,7 +452,7 @@
       bottom: 0;
       width: 100%;
     }
-    &>li {
+    & > li {
       width: 32px;
       @include PC {
         margin-right: 15px;
@@ -490,7 +493,7 @@
     @include flexbox;
     border-top: 1px dotted $black01;
     border-bottom: 1px dotted $black01;
-    @include font(14,1.75,120);
+    @include font(14, 1.75, 120);
     @include PC {
       padding: 10px 0;
       margin-top: 14px;

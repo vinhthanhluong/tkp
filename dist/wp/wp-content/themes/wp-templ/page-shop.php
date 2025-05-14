@@ -143,7 +143,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <?php if (!empty($shop_time)) { ?>
                       <dl class="shop-time">
                         <dt>営業時間</dt>
-                        <dd><span class="txt"><?php echo $shop_time; ?></span>年中無休</dd>
+                        <dd><span class="txt"><?php echo $shop_time; ?></span></dd>
                       </dl>
                     <?php } ?>
                   </div>
