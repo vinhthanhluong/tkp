@@ -72,7 +72,7 @@
   .form-block {
     background: #fff;
     border-radius: 30px;
-    border: solid 1px #65B0D4;
+    border: solid 1px $blue01;
     padding: 80px 80px;
     max-width: 1000px;
     margin: 0 auto;
@@ -224,7 +224,7 @@
           letter-spacing: 1.5px;
         }
         a {
-          color: #65B0D4;
+          color: $blue01;
           text-decoration: underline;
           margin-right: 6px;
           position: relative;
@@ -345,19 +345,75 @@
     }
     .sec-form {
       margin-top: 183px;
+      @include SP {
+        margin-top: 97px;
+        padding-top: 69px;
+      }
       .form-block {
-        padding: 130px 100px;
+        @include PC {
+          padding: 130px 100px 79px;
+          @include max-screen(1000px) {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+          @include max-screen(900px) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+        @include SP {
+          padding-top: 38px;
+        }
         .short-desc {
           margin-bottom: 31px;
+          @include SP {
+            margin-bottom: 8px;
+            text-align: left;
+            margin-top: 0;
+            padding: 0;
+            line-height: 24px;
+          }
         }
       }
       .tableContact {
+        margin-bottom: 20px;
+        @include SP {
+          margin-bottom: 15px;
+        }
         tr {
           &:last-child {
             th, td {
               &:before, &:after {
                 display: none;
               }
+            }
+          }
+          @include SP {
+            display: block;
+            padding: 15px 0;
+            position: relative;
+            &:last-child {
+              &:before, &:after {
+                display: none;
+              }
+            }
+            &:before {
+              position: absolute;
+              content: "";
+              width: 80px;
+              height: 1px;
+              background: $blue01;
+              bottom: 0;
+              left: 0;
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              width: calc(100% - 85px);
+              height: 1px;
+              background: #DCDCDC;
+              bottom: 0;
+              right: 0;
             }
           }
         }
@@ -367,17 +423,28 @@
           margin-bottom: 0;
           @include font(15);
           line-height: 24px;
+          @include SP {
+            padding: 0;
+            @include font(14);
+          }
         }
         th {
           width: 250px;
+          @include SP {
+            width: 100%;
+            margin-bottom: 4px;
+          }
           &:before {
             position: absolute;
             content: "";
             width: 100%;
             height: 1px;
-            background: #65B0D4;
+            background: $blue01;
             bottom: 0;
             left: 0;
+            @include SP {
+              display: none;
+            }
           }
           &:after {
             position: absolute;
@@ -388,12 +455,20 @@
             bottom: 0;
             right: 0;
             z-index: 2;
+            @include SP {
+              display: none;
+            }
           }
         }
         td {
           width: calc(100% - 250px);
           padding-left: 29px;
           letter-spacing: 1.7px;
+          @include SP {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 2px;
+          }
           &:before {
             position: absolute;
             content: "";
@@ -402,22 +477,60 @@
             background: #DCDCDC;
             bottom: 0;
             left: 0;
+            @include SP {
+              display: none;
+            }
           }
         }
       }
       .list-btn {
+        @include PC {
+          @include flexbox;
+          justify-content: center;
+        }
         .btn-back {
-
+          margin-right: 20px;
+          @include SP {
+            margin-bottom: 16px;
+            margin-right: 0;
+          }
+          .txt-back {
+            cursor: pointer;
+            transition: all .3s;
+            width: 300px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50px;
+            background: #CCCCCC;
+            color: #fff;
+            @include font(18);
+            font-weight: 700;
+            letter-spacing: 2px;
+            @include HOVER {
+              opacity: .7;
+            }
+            @include SP {
+              width: 100%;
+              @include font(14);
+              letter-spacing: 1.6px;
+              height: 50px;
+              line-height: 50px;
+            }
+          }
         }
         .btn-send {
 
         }
         #btnSend {
           max-width: 300px;
+          width: 300px;
           height: 60px;
           border-radius: 50px;
           @include SP {
             height: 50px;
+            max-width: 100%;
+            width: 100%;
           }
           span {
             transform: none;
@@ -438,19 +551,69 @@
     .thanks-main {
       text-align: center;
       &__ttl {
-        @include font(20, 1.5, 50, bold);
-        margin-top: 40px;
+        @include font(34);
+        line-height: 30px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
       }
       &__txt {
-        margin-top: 40px;
-        @include font(16, 1.5);
+        @include font(18);
+        line-height: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
       }
-      &__mail {
-        @include font(16, 1.5);
-        margin-top: 10px;
-      }
+      
       &__back {
-        margin-top: 40px;
+        width: 300px;
+        height: 60px;
+        line-height: 60px;
+        margin: 0 auto;
+        @include font(18);
+        font-weight: 600;
+        @include ffGT;
+        text-transform: uppercase;
+        @include HOVER {
+          span {
+            &:before {
+              opacity: 0;
+            }
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+        @include SP {
+          height: 50px;
+          line-height: 50px;
+        }
+        span {
+          position: relative;
+          padding-left: 20px;
+          transform: none;
+          &:before {
+            position: absolute;
+            content: '';
+            background: url($img_url + "img/contact/ico_home_w.svg") no-repeat center center/100% auto;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 8px;
+            transition: all .3s;
+          }
+          &:after {
+            position: absolute;
+            content: '';
+            background: url($img_url + "img/contact/ico_home.svg") no-repeat center center/100% auto;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 8px;
+            opacity: 0;
+            transition: all .3s;
+          }
+        }
       }
     }
   }
