@@ -157,33 +157,33 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>   
         </div>
         <div class="block02 aos-init" data-aos="fade-up">
-          <h2 class="c-ttl03">
+          <div class="c-ttl03">
             <span class="c-ttl03__icon"><img src="<?php echo createSVG(35, 36); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_train.svg" rel="js-lazy" width="35" height="36" alt=""></span>
             <span class="c-ttl03__ttl">公共交通機関でお越しの方</span>
-          </h2>
+          </div>
           <div class="img01">
             <span class="pc"><img src="<?php echo createSVG(1000, 380); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map01.jpg" rel="js-lazy" width="1000" height="380" alt=""></span>
             <span class="sp"><img src="<?php echo createSVG(327, 124); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map01_sp.jpg" rel="js-lazy" width="327" height="124" alt=""></span>
           </div>
         </div>
         <div class="block03 aos-init" data-aos="fade-up">
-          <h2 class="c-ttl03">
+          <div class="c-ttl03">
             <span class="c-ttl03__icon"><img src="<?php echo createSVG(32, 32); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_delivery.svg" rel="js-lazy" width="32" height="32" alt=""></span>
             <span class="c-ttl03__ttl">お車でお越しの方</span>
-          </h2>
+          </div>
           <div class="img01">
             <span class="pc"><img src="<?php echo createSVG(1000, 380); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map02.jpg" rel="js-lazy" width="1000" height="380" alt=""></span>
             <span class="sp"><img src="<?php echo createSVG(327, 124); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map02_sp.jpg" rel="js-lazy" width="327" height="124" alt=""></span>
           </div>
         </div>
         <div class="block04 aos-init" data-aos="fade-up">
-          <h2 class="c-ttl03">
+          <div class="c-ttl03">
             <span class="c-ttl03__icon">
               <img class="pc" src="<?php echo createSVG(32, 32); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_car.svg" rel="js-lazy" width="32" height="32" alt="">
               <img class="sp" src="<?php echo createSVG(24, 24); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/ico_car_sp.svg" rel="js-lazy" width="24" height="24" alt="">
             </span>
             <span class="c-ttl03__ttl">駐車場のご案内</span>
-          </h2>
+          </div>
           <div class="img01">
             <span class="pc"><img src="<?php echo createSVG(1000, 380); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map03.png" rel="js-lazy" width="1000" height="380" alt=""></span>
             <span class="sp"><img src="<?php echo createSVG(327, 124); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/map03_sp.jpg" rel="js-lazy" width="327" height="124" alt=""></span>

@@ -408,8 +408,13 @@ a.c-btn01 {
     }
   }
   &.btn-anchor {
+    @include PC {
+      @include max-screen(999px) {
+        padding: 9px 25px 9px 15px;
+      }
+    }
     @include SP {
-      padding: 7px 26px 7px 7px;
+      padding: 6px 22px 8px 8px;
     }
     .arr01 {
       background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.19645 10.2594L6.19645 0.749999L7.80355 0.75L7.80355 10.2594L12.1138 6.06875L13.25 7.17344L7 13.25L0.750001 7.17344L1.88622 6.06875L6.19645 10.2594Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -446,6 +451,14 @@ a.c-btn01 {
     span {
       position: relative;
       padding: 0 5px 0 40px;
+      @include PC {
+        @include max-screen(1199px) {
+          @include font(15, 26);
+        }
+        @include max-screen(999px) {
+          padding: 0 5px 0 30px;
+        }
+      }
       @include SP {
         display: block;
         @include font(12, 24);
@@ -775,6 +788,14 @@ a.c-link {
     @include ffGT;
     @include font(45, 52, 0.05, 600);
     margin-top: 8px;
+    @include PC {
+      @include max-screen(1199px) {
+        @include font(42, 50);
+      }
+      @include max-screen(1099px) {
+        @include font(40, 48);
+      }
+    }
     @include SP {
       @include font(30, 30);
     }
@@ -1687,7 +1708,7 @@ a.c-link {
       @include PC {
         background-image: url($img_url + "img/common/wave_bg02.png");
         height: 75px;
-        top: -74px;
+        top: -22px;
       }
       @include SP {
         background-image: url($img_url + "img/common/wave_bg02_sp.png");
@@ -1701,7 +1722,7 @@ a.c-link {
       @include PC {
         background-image: url($img_url + "img/common/wave_bg02.png");
         height: 75px;
-        bottom: -74px;
+        bottom: -22px;
       }
       @include SP {
         background-image: url($img_url + "img/common/wave_bg02_sp.png");
@@ -1715,7 +1736,7 @@ a.c-link {
       display: none;
     }
     &:before {
-      top: -74px;
+      top: -22px;
       @include PC {
         background-image: url($img_url + "img/common/wave_bg03.png");
         height: 75px;
@@ -1732,7 +1753,7 @@ a.c-link {
       display: none;
     }
     &:before {
-      top: -74px;
+      top: -22px;
       @include PC {
         background-image: url($img_url + "img/common/wave_bg04.png");
         height: 75px;
@@ -2138,15 +2159,28 @@ a.c-link {
 }
 .c-table01 {
   dl {
-    background: url($img_url + "img/common/ico_line01.png") repeat-x center
-      bottom;
+    background: url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
     background-size: 15px 1px;
     padding: 20px 0 19px;
+    &:first-child {
+      background: url($img_url + "img/common/ico_line01.png") repeat-x center top,  url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
+      background-size: 15px 1px;
+    }
     dt {
       @include font(18, 30, 0.12, 700);
+      @include PC {
+        @include max-screen(1099px) {
+          @include font(16, 28, 0.1);
+        }
+      }
     }
     dd {
-      @include font(16, 26, 0.12, 400);
+      @include font(16, 26, 0.12, 500);
+      @include PC {
+        @include max-screen(1099px) {
+          @include font(15, 28, 0.1);
+        }
+      }
     }
     @include PC {
       display: table;
@@ -2167,6 +2201,7 @@ a.c-link {
     }
     @include SP {
       padding: 16px 0 15px;
+      background-size: 6px 1px;
       &:first-child {
         background: url($img_url + "img/common/ico_line01_sp.png") repeat-x
             center top,
@@ -2204,6 +2239,12 @@ a.c-link {
         .txt {
           @include font(18, 30, 0.12, bold);
           text-align: center;
+          transition: all 0.4s ease;
+          @include PC {
+            @include max-screen(1099px) {
+              @include font(16, 28);
+            }
+          }
           @include SP {
             @include font(12, 15);
             width: 100%;
@@ -2212,6 +2253,11 @@ a.c-link {
         .tab {
           padding: 13px 12px 13px;
           transition: all 0.4s ease;
+          @include PC {
+            @include max-screen(1099px) {
+              padding: 13px 5px 13px;
+            }
+          }
           @include SP {
             padding: 2px 5px 2px;
             @include flexbox();
@@ -2219,15 +2265,13 @@ a.c-link {
             align-items: center;
             height: 44px;
           }
-          &.is-act {
-            background-color: #65b0d4;
-            border-radius: 30px;
-            .txt {
-              color: #fff;
-            }
-          }
           @include HOVER {
             opacity: 1;
+            .txt {
+              color: #65b0d4;
+            }
+          }
+          &.is-act {
             background-color: #65b0d4;
             border-radius: 30px;
             .txt {
@@ -2238,11 +2282,17 @@ a.c-link {
       }
     }
   }
+  .tab-content {
+    display: none;
+    &.is-show {
+      display: block;
+    }
+  }
   .tab-container {
     margin: 33px auto 0;
     max-width: 900px;
     @include SP {
-      margin: 40px auto 0;
+      margin: 27px auto 0;
     }
     .qa {
       border-bottom: 1px solid #fff;
@@ -2326,7 +2376,7 @@ a.c-link {
         }
         p {
           color: #fff;
-          @include font(15, 26, 0.1, 400);
+          @include font(15, 26, 0.1, 500);
         }
       }
     }
