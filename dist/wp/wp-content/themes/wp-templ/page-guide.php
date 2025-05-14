@@ -41,7 +41,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <h1 class="tit-sec">
           <span>SHONIN PARKについて</span>
           <strong class="pc">About SHONIN PARK</strong>
-          <strong class="sp">About<br class="sp">SHONIN PARK</strong>
+          <strong class="sp">About<br>SHONIN PARK</strong>
         </h1>
         <p class="desc">4つのエリアで<br class="sp">構成されているSHONIN PARK。<br>各エリアについて紹介します。</p>
       </div>
@@ -81,7 +81,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Shop</strong>
             </h2>
             <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
-            <a href="<?php echo APP_URL ?>shop/" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -104,7 +104,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Restaurant</strong>
             </h2>
             <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
-            <a href="<?php echo APP_URL ?>restaurant/" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -150,7 +150,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           <p class="desc">SHONIN PARKの魅力がひと目で分かる園内マップ。<br class="pc">気になるエリアをタップしてみてください！</p>
         </div>
         <div class="park-bg aos-init" data-aos="fade-up" data-aos-delay="0">
-          <img src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="">
+          <img class="pc" src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="">
+          <img class="sp" src="<?php echo createSVG(361, 206) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park_sp.png" rel="js-lazy" width="361" height="206" alt="">
         </div>
         <div class="mod-park__btn bnt01 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
           <p class="btn-link js-btnpopup" data-popup="modal01">

@@ -107,12 +107,14 @@ function handleACFToggle() {
   });
 }
 
-$("#servicescatchecklist input[type='checkbox']").attr("type", "radio");
-$(".type-services .column-title .button-link").on("click", function () {
-  setTimeout(function () {
-    $(".inline-editor .servicescat-checklist input[type='checkbox']").attr(
-      "type",
-      "radio"
-    );
-  }, 100);
+$(window).on("load", function () {
+  $("#newscatchecklist input[type='checkbox']").attr("type", "radio");
+  $(".type-news .column-title .button-link").on("click", function () {
+    setTimeout(function () {
+      $(".inline-editor .newscat-checklist input[type='checkbox']").attr(
+        "type",
+        "radio"
+      );
+    }, 100);
+  });
 });

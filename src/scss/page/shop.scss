@@ -57,6 +57,13 @@
       bottom: vw-sp(74px);
     }
   }
+  .about-img {
+    @include PC {
+      @include max-screen(1280px) {
+        height: calc(514 / 546 * 100%);
+      }
+    }
+  }
   .about-group {
     @include SP {
       margin-top: 40px;
@@ -117,13 +124,15 @@
       }
     }
     @include SP {
-      width: vw-sp(91px);
+      width: calc(91/327*100%);
+      left: 0;
+      top: 0
     }
     .tag-txt {
       @include font("","",120,bold);
       color: #fff;
       border: 2px solid #fff;
-      background: $brown01;
+      background: #755C49;
       text-align: center;
       display: inline-block;
       vertical-align: top;
@@ -160,8 +169,8 @@
       }
     }
     @include SP {
-      left: vw-sp(15px);
-      top: vw-sp(28px);
+      margin-left: calc(15/327*100%);
+      margin-top: calc(28/327*100%);
     }
   }
   .is-tag02 {
@@ -182,8 +191,8 @@
       }
     }
     @include SP {
-      left: vw-sp(78px);
-      top: vw-sp(52px);
+      margin-left: calc(78/327*100%);
+      margin-top: calc(52/327*100%);
       padding-left: vw-sp(5px);
       padding-right: vw-sp(5px);
     }
@@ -198,8 +207,8 @@
       }
     }
     @include SP {
-      left: vw-sp(136px);
-      top: vw-sp(18px);
+      margin-left: calc(136/327*100%);
+      margin-top: calc(18/327*100%);
     }
   }
   .is-tag04 {
@@ -220,8 +229,8 @@
       }
     }
     @include SP {
-      left: vw-sp(134px);
-      top: vw-sp(84px);
+      margin-left: calc(134/327*100%);
+      margin-top: calc(84/327*100%);
     }
   }
   .is-tag05 {
@@ -234,8 +243,8 @@
       }
     }
     @include SP {
-      right: vw-sp(25px);
-      top: vw-sp(16px);
+      margin-left: calc(211/327*100%);
+      margin-top: calc(16/327*100%);
     }
   }
   .is-tag06 {
@@ -256,8 +265,8 @@
       }
     }
     @include SP {
-      right: 0;
-      top: vw-sp(48px);
+      margin-left: calc(236/327*100%);
+      margin-top: calc(48/327*100%);
     }
   }
   .is-tag07 {
@@ -270,8 +279,8 @@
       }
     }
     @include SP {
-      right: vw-sp(29px);
-      bottom: vw-sp(47px);
+      margin-left: calc(207/327*100%);
+      margin-top: calc(102/327*100%);
     }
   }
 }
