@@ -148,8 +148,10 @@ include(APP_PATH . 'libs/head.php');
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script>
-    $('.cms-content .wp-caption img').each(function() {
-      $(this).wrap('<div class="img-container"></div>');
+    $('.cms-content .wp-caption img, .cms-content p img').each(function() {
+      if ($(this).closest('.img-2col__photo').length === 0) {
+        $(this).wrap('<div class="img-container"></div>');
+      }
     });
   </script>
 </body>
