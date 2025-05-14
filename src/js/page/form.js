@@ -14,6 +14,20 @@ function check() {
   }
 }
 
+$(window).on("load", function() {
+  $('#btnConfirm').prop("disabled",true);
+  if($("#check1").is(':checked')){
+    $('#btnConfirm').prop("disabled",false);
+  }
+})
+$('#check1').click(function(){
+  if($("#check1").is(':checked')){
+    $('#btnConfirm').prop("disabled",false);}
+  else {
+    $('#btnConfirm').prop("disabled",true); }
+});
+
+
 $(function () {
   $(".contactform #btnConfirm").on("click",function (e) {
     e.preventDefault();

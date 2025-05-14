@@ -3,6 +3,13 @@
 
 .capcha{margin:19px auto;display:flex;justify-content:center;align-items:center}@media (max-width: 767px){.capcha{margin-top:14px}}.capcha .g-recaptcha,.capcha .g-recaptcha>div,.capcha iframe{max-width:100% !important}
 
+#btnConfirm:disabled,
+#btnConfirm[disabled]{
+  //pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 .page-form {
   // BASE ON FORM DEFAULT
   .errMsg {
