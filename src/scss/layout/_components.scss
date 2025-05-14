@@ -1808,7 +1808,6 @@ a.c-link {
         width: calc(546 / 556 * 100%);
       }
       @include max-screen(1280px) {
-        width: calc(546 / 556 * 100%);
         height: auto;
         padding-top: calc(514 / 556 * 100%);
       }
