@@ -14,6 +14,22 @@ function check() {
   }
 }
 
+$(function () {
+  $(".contactform #btnConfirm").on("click",function (e) {
+    e.preventDefault();
+    if($('.capcha').length > 0){
+      var response = grecaptcha.getResponse();
+      if (response.length == 0) {
+        alert("私はロボットではありません");
+      } else {
+        $(".contactform").submit();
+      }
+    } else{
+      $(".contactform").submit();
+    }
+  });
+});
+
 handleScrollBack();
 window.onpageshow = function (event) {
   if (event.persisted) handleScrollBack(true);

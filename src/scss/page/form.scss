@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "../utility/*";
 
-.capcha{margin:56px auto;display:flex;justify-content:center;align-items:center}@media (max-width: 767px){.capcha{margin-top:44px}}.capcha .g-recaptcha,.capcha .g-recaptcha>div,.capcha iframe{max-width:100% !important}
+.capcha{margin:19px auto;display:flex;justify-content:center;align-items:center}@media (max-width: 767px){.capcha{margin-top:14px}}.capcha .g-recaptcha,.capcha .g-recaptcha>div,.capcha iframe{max-width:100% !important}
 
 .page-form {
   // BASE ON FORM DEFAULT
@@ -313,10 +313,6 @@
       }
     }
     .btn-confirm {
-      margin-top: 115px;
-      @include SP {
-        margin-top: 111px;
-      }
       #btnConfirm {
         margin: 0 auto;
         max-width: 300px;
