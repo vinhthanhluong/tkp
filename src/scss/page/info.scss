@@ -272,10 +272,10 @@
 }
 .sec-info03 {
   background-color: #F2F2F2;
-  padding: 95px 0 224px;
+  padding: 95px 0 194px;
   position: relative;
   @include SP {
-    padding: 40px 0 111px;
+    padding: 40px 0 80px;
   }
   .c-ttl02 {
     margin-bottom: 40px;
@@ -397,12 +397,12 @@
 .sec-info04 {
   position: relative;
   padding: 47px 0 189px;
-  margin: -30px 0 0;
+  margin: 0px 0 0;
   z-index: 2;
   background: #65B0D4;
   @include SP {
     padding: 40px 0 105px;
-    margin: -30px 0 -25px;
+    margin: 0px 0 -25px;
   }
   .c-ttl02 {
     margin-bottom: 40px;
