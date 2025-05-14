@@ -14,11 +14,14 @@
       right: 34px;
       top: 95px;
     }
+    .mv-inner:before {
+      top: 88px;
+    }
   }
 }
 
 .sec-anchor {
-  padding: 0 0 160px;
+  padding: 0 0 111px;
   @include SP {
     padding: 0 0 56px;
   }
@@ -26,15 +29,29 @@
     @include flexbox();
     @include flex-wrap(wrap);
     @include justify-content(center);
+    @include PC {
+      @include max-screen(1099px) {
+        margin: 0 -5px;
+      }
+    }
     @include SP {
       margin: 0 -7px;
     }
     li {
       width: 240px;
       margin: 0 12px 10px;
+      @include PC {
+        @include max-screen(1199px) {
+          width: calc(25% - 24px);
+        }
+        @include max-screen(1099px) {
+          width: calc(25% - 10px);
+          margin: 0 5px 10px;
+        }
+      }
       a {
         max-width: 240px;
-      }
+      }  
       @include SP {
         width: 50%;
         margin: 0 0 16px;
@@ -50,7 +67,7 @@
 .sec-info01 {
   position: relative;
   background: #FDF7ED;
-  padding: 43px 0 45px;
+  padding: 98px 0 95px;
   @include SP {
     padding: 39px 0 41px;
   }
@@ -61,7 +78,10 @@
       width: 180px;
       height: 55px;
       left: 70px;
-      top: 52%;
+      top: 58%;
+      @include max-screen(1099px) {
+        left: 50px;
+      }
     }
     @include SP {
       display: none;
@@ -74,7 +94,7 @@
       width: 180px;
       height: 55px;
       right: -85px;
-      top: 0%;
+      top: 7%;
     }
     @include SP {
       display: none;
@@ -87,7 +107,7 @@
       width: 166px;
       height: 140px;
       left: 50%;
-      top: 61%;
+      top: 67%;
       margin-left: -351px;
     }
     @include SP {
@@ -96,9 +116,15 @@
   }
   .img-wave-yellow {
     position: absolute;
-    top: 41%;
+    top: 47.5%;
     left: 50%;
     margin-left: -413px;
+    @include PC {
+      @include max-screen(1099px) {
+        left: 19%;
+        margin-left: 0;
+      }
+    }
   }
   .block {
     @include PC {
@@ -121,7 +147,7 @@
 }
 .sec-info02 {
   background-color: #fff;
-  padding: 175px 0 196px;
+  padding: 125px 0 145px;
   @include SP {
     padding: 89px 0 88px;
   }
@@ -177,7 +203,7 @@
         .c-btn01 {
           span {
             @include ffGT;
-            @include font(15, 30, 0);
+            @include font(15, 30, 0, 600);
           }
         }
         @include SP {
@@ -246,7 +272,7 @@
 }
 .sec-info03 {
   background-color: #F2F2F2;
-  padding: 45px 0 226px;
+  padding: 95px 0 224px;
   position: relative;
   @include SP {
     padding: 40px 0 111px;
@@ -272,7 +298,7 @@
       width: 211px;
       height: 224px;
       right: 62px;
-      top: -101px;
+      top: -51px;
     }
     @include SP {
       display: none;
@@ -360,8 +386,8 @@
     .lstpost01-ctn02 {
       margin-top: 14px;
       @include SP {
-        width: 100%;
-        margin: 17px 0 0;
+        width: calc(100% + 2px);
+        margin: 17px -2px 0;
         padding: 0;
       }
     }
@@ -405,7 +431,7 @@
   }
   &::after {
     position: absolute; content: "";
-    left: 0; top: 0;
+    left: 0; max-height: 100%;
     right: 0; bottom: 0;
     background: url($img_url + "img/info/bg_wp01.png") no-repeat center bottom;
     height: 1375px;
@@ -447,7 +473,7 @@
   .desc01 {
     color: #fff;
     text-align: center;
-    @include font(18, 30, 0.12, 500);
+    @include font(18, 30, 0.12, bold);
     margin: 39px 0 57px;
     a {
       color: #fff;
