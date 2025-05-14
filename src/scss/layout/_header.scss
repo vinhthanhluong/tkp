@@ -210,6 +210,9 @@ body:not(.fixHeader) {
     @include SP {
       padding: 48px 20px 0;
     }
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .gNavi {
     @include flexbox;
@@ -552,6 +555,14 @@ body:not(.fixHeader) {
                   height: calc(10 / 1200 * 100vw);
                 }
               }
+              .is-safari & {
+                top: 6px;
+                @include PC {
+                  @include max-screen(1200px) {
+                    top: calc(6 / 1200 * 100vw);
+                  }
+                }
+              }
             }
           }
         }
@@ -618,14 +629,16 @@ body:not(.fixHeader) {
           height: 24px;
           left: -1px;
           top: -1px;
+          font-size: 0;
+          line-height: 0;
           .circle {
             position: absolute;
-            top: 2px;
+            top: 0;
             left: 0;
             transition: transform 0.3s ease;
-            .is-safari & {
-              top: 1px;
-            }
+            // .is-safari & {
+            //   top: 1px;
+            // }
           }
         }
       }

@@ -17,8 +17,19 @@ $(window).on("resize", function () {
 });
 
 $(window).on("scroll load", function () {
-  if ($(window).scrollTop() > 60) $("body").addClass("fixHeader");
-  else $("body").removeClass("fixHeader");
+  if ($("body").hasClass("top")) {
+    if (
+      $(window).scrollTop() >=
+      $(".sec-mv").offset().top + $(".sec-mv").outerHeight() - 60
+    ) {
+      $("body").addClass("fixHeader");
+    } else {
+      $("body").removeClass("fixHeader");
+    }
+  } else {
+    if ($(window).scrollTop() > 60) $("body").addClass("fixHeader");
+    else $("body").removeClass("fixHeader");
+  }
 });
 
 function btnTop() {

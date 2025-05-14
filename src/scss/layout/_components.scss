@@ -2261,6 +2261,7 @@ a.c-link {
         .tab {
           padding: 13px 12px 13px;
           transition: all 0.4s ease;
+          border-radius: 30px;
           @include PC {
             @include max-screen(1099px) {
               padding: 13px 5px 13px;
@@ -2281,7 +2282,6 @@ a.c-link {
           }
           &.is-act {
             background-color: #65b0d4;
-            border-radius: 30px;
             .txt {
               color: #fff;
             }

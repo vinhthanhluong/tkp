@@ -1,11 +1,14 @@
 function gNaviHover() {
   var btn = $(".gNaviPC .hasSub, .gLang .hasSub");
   var submenu = $(".navSub");
-  $(btn).hover(
-    function () {
+
+  browserWidth = $(window).width();
+  if (browserWidth > 767 && browserWidth <= 1024) {
+    $(btn).on("click", function () {
+      event.preventDefault();
       var shownav = $(this).find(".navSub");
       browserWidth = $(window).width();
-      if (browserWidth > 767) {
+      if (browserWidth > 767 && browserWidth <= 1024) {
         if ($(shownav).css("display") == "none") {
           $(shownav).stop().fadeIn(200);
           $(this).addClass("active");
@@ -14,17 +17,32 @@ function gNaviHover() {
           $(this).removeClass("active");
         }
       }
-    },
-    function () {
-      var shownav = $(this).find(".navSub");
-      browserWidth = $(window).width();
-      if (browserWidth > 767) {
-        $(shownav).stop().fadeOut(200);
-        // $(shownav).stop().slideUp(0);
-        $(this).removeClass("active");
+    });
+  } else {
+    $(btn).hover(
+      function () {
+        var shownav = $(this).find(".navSub");
+        browserWidth = $(window).width();
+        if (browserWidth > 767) {
+          if ($(shownav).css("display") == "none") {
+            $(shownav).stop().fadeIn(200);
+            $(this).addClass("active");
+          } else {
+            $(shownav).stop().fadeOut(200);
+            $(this).removeClass("active");
+          }
+        }
+      },
+      function () {
+        var shownav = $(this).find(".navSub");
+        browserWidth = $(window).width();
+        if (browserWidth > 767) {
+          $(shownav).stop().fadeOut(200);
+          $(this).removeClass("active");
+        }
       }
-    }
-  );
+    );
+  }
 }
 $(".closeSub").click(function () {
   $(this).parent(".navSub").stop().slideUp(200);

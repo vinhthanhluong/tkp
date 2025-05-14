@@ -48,5 +48,5 @@ function mvLoad() {
   setInterval(function () {
     currentIndex = (currentIndex + 1) % videoList.length;
     changeVideo(currentIndex);
-  }, 10000);
+  }, 60000);
 }

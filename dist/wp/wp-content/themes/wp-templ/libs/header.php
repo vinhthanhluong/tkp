@@ -97,8 +97,8 @@
           <div class="navSub">
             <ul class="navSub-lst">
               <li class="item"><a href="<?php echo APP_URL ?>">砂湯・温泉</a></li>
-              <li class="item"><a href="<?php echo APP_URL ?>shops/">ショップ</a></li>
-              <li class="item"><a href="<?php echo APP_URL ?>restaurant/">レストラン</a></li>
+              <li class="item"><a href="<?php echo APP_URL ?>guide/shop/">ショップ</a></li>
+              <li class="item"><a href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>">宿泊コテージ</a></li>
             </ul>
           </div>
