@@ -147,6 +147,11 @@ include(APP_PATH . 'libs/head.php');
     </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <script>
+    $('.cms-content .wp-caption img').each(function() {
+      $(this).wrap('<div class="img-container"></div>');
+    });
+  </script>
 </body>
 
 </html>
