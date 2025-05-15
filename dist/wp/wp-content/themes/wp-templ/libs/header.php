@@ -14,16 +14,26 @@
       <div class="inLayer">
         <ul class="gNavi">
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/"><span>施設案内</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>news/"><span>ニュース</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>ways/"><span>楽しみ方</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>news/"><span>ニュース</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>info/#info02"><span>アクセス</span></a></li>
         </ul>
         <ul class="gNavi02">
-          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>info/#info01"><span>営業時間</span></a></li>
-          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>"><span>採用情報</span></a></li>
-          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>info/#info03"><span>周辺観光</span></a></li>
-          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>contact/"><span>お問い合わせ</span></a></li>
-          <li class="gNavi02-item"><a href="<?php echo APP_URL ?>info/#info04"><span>よくあるご質問</span></a></li>
+          <li class="gNavi02-item">
+            <a href="<?php echo APP_URL ?>info/#info01"><span>営業時間</span></a>
+          </li>
+          <li class="gNavi02-item">
+            <a href="<?php echo APP_URL ?>info/#info03"><span>周辺観光</span></a>
+          </li>
+          <li class="gNavi02-item">
+            <a href="<?php echo APP_URL ?>info/#info04"><span>よくあるご質問</span></a>
+          </li>
+          <li class="gNavi02-item">
+            <a class="is-exter" href="<?php echo APP_URL ?>" target="_blank" rel="noopener"><span>採用情報</span></a>
+          </li>
+          <li class="gNavi02-item">
+            <a href="<?php echo APP_URL ?>contact/"><span>お問い合わせ</span></a>
+          </li>
         </ul>
         <p class="gReservat-ttl">
           <span class="txt">RESERVATION</span>

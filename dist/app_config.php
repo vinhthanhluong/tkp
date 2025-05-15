@@ -80,6 +80,6 @@ define('SMTP_PORT', 587);
 $aMailtoContact = array('alivetestmail@alive-web.co.jp');
 $aBccToContact = array('');
 $fromContact = "alivetestmail@alive-web.biz";
-$fromName = "Company name";
+$fromName = "SHONIN PARK";
 
 include(APP_PATH . 'libs/security.php');

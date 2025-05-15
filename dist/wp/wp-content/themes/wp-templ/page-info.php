@@ -42,38 +42,38 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <ul class="lst-anchor aos-init" data-aos="fade-up">
           <li><a href="#info01" class="c-btn01 btn-anchor">
-            <i class="arr01"></i>
-            <span>
-              <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-              <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-              営業時間
-            </span>
-            <i class="arr02"></i>
-          </a></li> 
+              <i class="arr01"></i>
+              <span>
+                <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor01_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                営業時間
+              </span>
+              <i class="arr02"></i>
+            </a></li>
           <li><a href="#info02" class="c-btn01 btn-anchor">
-            <i class="arr01"></i>
-            <span>
-            <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor02_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor02_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            アクセス</span>
-            <i class="arr02"></i>
-          </a></li> 
+              <i class="arr01"></i>
+              <span>
+                <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor02_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor02_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                アクセス</span>
+              <i class="arr02"></i>
+            </a></li>
           <li><a href="#info03" class="c-btn01 btn-anchor">
-            <i class="arr01"></i>
-            <span>
-            <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor03_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor03_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            周辺観光</span>
-            <i class="arr02"></i>
-          </a></li> 
+              <i class="arr01"></i>
+              <span>
+                <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor03_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor03_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                周辺観光</span>
+              <i class="arr02"></i>
+            </a></li>
           <li><a href="#info04" class="c-btn01 btn-anchor">
-            <i class="arr01"></i>
-            <span>
-            <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor04_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor04_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
-            よくあるご質問</span>
-            <i class="arr02"></i>
-          </a></li> 
+              <i class="arr01"></i>
+              <span>
+                <em class="icon icon__off"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor04_icn.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                <em class="icon icon__on"><img src="<?php echo createSVG(24, 22); ?>" data-src="<?php echo APP_ASSETS; ?>img/info/anchor04_icn_hv.svg" rel="js-lazy" width="24" height="22" alt=""></em>
+                よくあるご質問</span>
+              <i class="arr02"></i>
+            </a></li>
         </ul>
       </div>
     </div>
@@ -96,7 +96,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span class="c-ttl02__jp">営業時間</span>
               <span class="c-ttl02__en">Opening Hours</span>
             </h2>
-          </div>   
+          </div>
           <div class="block__info aos-init" data-aos="fade-up">
             <div class="c-table01">
               <dl>
@@ -128,7 +128,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <dd>11:00〜22:00</dd>
               </dl>
             </div>
-          </div>   
+          </div>
         </div>
       </div>
     </div>
@@ -140,12 +140,12 @@ include(APP_PATH . 'libs/head.php'); ?>
         </h2>
         <div class="block01 aos-init" data-aos="fade-up">
           <div class="block01__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13336.660713111058!2d131.501546!3d33.3144969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7429cb1b081%3A0xd8c33740847482de!2z5LiK5Lq644O25rWc5YWs5ZyS!5e0!3m2!1sja!2s!4v1747109995113!5m2!1sja!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13336.660713111058!2d131.501546!3d33.3144969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7429cb1b081%3A0xd8c33740847482de!2z5LiK5Lq644O25rWc5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1747289828965!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
           <div class="block01_info">
             <div class="info01">
               <p class="ttl01">SHONIN PARK</p>
-              <p class="txt01">〒874-0023 大分県別府市上人ヶ浜町504-1</p>
+              <p class="txt01">〒874-0023 大分県別府市上人ケ浜町795-1</p>
             </div>
             <p class="btn01">
               <a href="https://maps.app.goo.gl/NJRoi8aJ2yiwogVr7" class="c-btn01" target="_blank" rel="noopener nofollow">
@@ -154,7 +154,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <i class="arr02"></i>
               </a>
             </p>
-          </div>   
+          </div>
         </div>
         <div class="block02 aos-init" data-aos="fade-up">
           <div class="c-ttl03">
@@ -339,10 +339,18 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="mod-tabs aos-init" data-aos="fade-up">
           <div class="nav-tabs">
             <ul>
-              <li><p class="tab is-act" data-tab="tab01"><span class="txt">施設に<br class="sp">ついて</span></p></li>
-              <li><p class="tab" data-tab="tab02"><span class="txt">日帰り利用<br class="sp">について</span></p></li>
-              <li><p class="tab" data-tab="tab03"><span class="txt">宿泊に<br class="sp">ついて</span></p></li>
-              <li><p class="tab" data-tab="tab04"><span class="txt">その他</span></p></li>
+              <li>
+                <p class="tab is-act" data-tab="tab01"><span class="txt">施設に<br class="sp">ついて</span></p>
+              </li>
+              <li>
+                <p class="tab" data-tab="tab02"><span class="txt">日帰り利用<br class="sp">について</span></p>
+              </li>
+              <li>
+                <p class="tab" data-tab="tab03"><span class="txt">宿泊に<br class="sp">ついて</span></p>
+              </li>
+              <li>
+                <p class="tab" data-tab="tab04"><span class="txt">その他</span></p>
+              </li>
             </ul>
           </div>
           <div class="tab-container">
@@ -355,7 +363,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
               </div>
-               <div class="qa">
+              <div class="qa">
                 <div class="qa__ques js-accordion">
                   <p>ドローンは使用できますか？</p>
                 </div>
@@ -406,7 +414,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
             </div>
             <div class="tab-content" id="tab02">
-               <div class="qa">
+              <div class="qa">
                 <div class="qa__ques js-accordion">
                   <p>ドローンは使用できますか？</p>
                 </div>
@@ -500,7 +508,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </div>
               </div>
-               <div class="qa">
+              <div class="qa">
                 <div class="qa__ques js-accordion">
                   <p>ドローンは使用できますか？</p>
                 </div>
@@ -553,8 +561,9 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
       </div>
-     </div>
+    </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
 </body>
+
 </html>

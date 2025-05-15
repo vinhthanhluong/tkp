@@ -8,7 +8,7 @@
           </a>
         </div>
         <div class="f-info">
-          <p class="txt">〒874-0023 大分県別府市上人ケ浜町５０４番地１外</p>
+          <p class="txt">〒874-0023 大分県別府市上人ケ浜町795-1</p>
           <p class="txt">TEL <a href="tel:03-5227-8262">03-5227-8262</a></p>
         </div>
       </div>
@@ -63,7 +63,7 @@
     <ul class="f-copyright">
       <li class="item">
         <a class="link" href="<?php echo APP_URL ?>">利用規約</a>
-        <a class="link is-exter" href="<?php echo APP_URL ?>privacy/">プライバシーポリシー</a>
+        <a class="link is-exter" href="https://www.tkp.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
       </li>
       <li class="item">
         <p class="ttl01">運営会社</p>

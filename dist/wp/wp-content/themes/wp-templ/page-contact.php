@@ -8,10 +8,18 @@ include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css?v=<?php echo APP_VER ?>">
 
-<?php if(GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
+<?php if (GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
   <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
-  <script>function onSubmit(token) { document.getElementsByClassName("contactform").submit(); }</script>
-  <style>.grecaptcha-badge {display: none}</style>
+  <script>
+    function onSubmit(token) {
+      document.getElementsByClassName("contactform").submit();
+    }
+  </script>
+  <style>
+    .grecaptcha-badge {
+      display: none
+    }
+  </style>
 <?php } ?>
 </head>
 
@@ -89,7 +97,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
           <div class="txtContact01">
             <ul>
-              <li><a href="<?php echo APP_URL ?>privacy/" target="_blank">プライバシーポリシー</a>  に同意の上、「入力内容を確認する」ボタンを押してください。</li>
+              <li><a href="https://www.tkp.jp/privacy/" target="_blank">プライバシーポリシー</a> に同意の上、「入力内容を確認する」ボタンを押してください。</li>
             </ul>
           </div>
           <div class="box-confirm">
@@ -110,7 +118,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </form>
     </div>
-    
+
   </main>
 
   <?php include(APP_PATH . 'libs/footer.php'); ?>

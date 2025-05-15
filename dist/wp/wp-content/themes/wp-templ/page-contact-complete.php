@@ -1,7 +1,8 @@
 <?php
+
 /**
  * Template Name: Page CONTACT COMPLETE
-**/
+ **/
 
 include_once(APP_PATH . 'page-contact-confirm.php');
 require_once(APP_PATH . "libs/form/phpmailer/PHPMailer.php");
@@ -27,7 +28,10 @@ if ($actionFlag == 'send') {
 以下、お問い合わせ内容となっております。
 ご確認くださいませ。";
   $email_body_footer = "
-    About company
+SHONIN PARK
+https://www.shoninpark.jp/
+〒874-0023 大分県別府市上人ケ浜町795-1
+TEL 03-5227-8262
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);
@@ -144,47 +148,47 @@ $msgBody
 
 
   // if ($allow_send_email) {
-    //////// お客様受け取りメール送信
-    $email = new PHPMailer\PHPMailer\PHPmailer();
+  //////// お客様受け取りメール送信
+  $email = new PHPMailer\PHPMailer\PHPmailer();
 
-    //////// send mail via SMTP
-    if (defined('SMTP_ENABLED') && SMTP_ENABLED) {
-      $email->isSMTP();
-      $email->Host = SMTP_HOST;
-      $email->SMTPAuth = SMTP_AUTH;
-      $email->SMTPDebug = SMTP_DEBUG;
-      $email->SMTPSecure = SMTP_SECURE;
-      $email->Username = SMTP_USERNAME;
-      $email->Password = SMTP_PASSWORD;
-      $email->Port = SMTP_PORT;
-    }
+  //////// send mail via SMTP
+  if (defined('SMTP_ENABLED') && SMTP_ENABLED) {
+    $email->isSMTP();
+    $email->Host = SMTP_HOST;
+    $email->SMTPAuth = SMTP_AUTH;
+    $email->SMTPDebug = SMTP_DEBUG;
+    $email->SMTPSecure = SMTP_SECURE;
+    $email->Username = SMTP_USERNAME;
+    $email->Password = SMTP_PASSWORD;
+    $email->Port = SMTP_PORT;
+  }
 
-    // メール送信 USER
-    $email->CharSet = 'utf-8';
-    $email->setFrom($from, $mailFromName);
-    $email->addAddress($reg_email);
-    $email->Sender = $from;
-    $email->Subject = $subject_user;
-    $email->Body = $body_user;
+  // メール送信 USER
+  $email->CharSet = 'utf-8';
+  $email->setFrom($from, $mailFromName);
+  $email->addAddress($reg_email);
+  $email->Sender = $from;
+  $email->Subject = $subject_user;
+  $email->Body = $body_user;
 
-    if ($email->send()) {
-      /*Do you want to debug something?*/
-    }
+  if ($email->send()) {
+    /*Do you want to debug something?*/
+  }
 
-    // メール送信 ADMIN
-    $email->clearAddresses();
-    foreach ($aMailto as $mailAddr) $email->addAddress($mailAddr);
-    if ($aBccTo) foreach ($aBccTo as $mailAddr) $email->addBcc($mailAddr);
-    if (!empty($reg_email) && !empty($reg_name)) $email->addReplyTo($reg_email, $reg_name);
-    $email->Sender = $from;
-    $email->Subject = $subject_admin;
-    $email->Body = $body_admin;
+  // メール送信 ADMIN
+  $email->clearAddresses();
+  foreach ($aMailto as $mailAddr) $email->addAddress($mailAddr);
+  if ($aBccTo) foreach ($aBccTo as $mailAddr) $email->addBcc($mailAddr);
+  if (!empty($reg_email) && !empty($reg_name)) $email->addReplyTo($reg_email, $reg_name);
+  $email->Sender = $from;
+  $email->Subject = $subject_admin;
+  $email->Body = $body_admin;
 
-    if ($email->send()) {
-      /*Do you want to debug something?*/
-    }
+  if ($email->send()) {
+    /*Do you want to debug something?*/
+  }
 
-    // $_SESSION['ses_step3'] = true;
+  // $_SESSION['ses_step3'] = true;
   // }
 
   // $_SESSION['statusFlag'] = 1;
@@ -237,7 +241,7 @@ unset($_SESSION['ses_step3']);
         <a class="thanks-main__back c-btn02" href="<?php echo APP_URL; ?>"><span>Back to top</span></a>
       </div>
     </div>
-    
+
   </main>
   <?php include(APP_PATH . 'libs/footer.php') ?>
 </body>

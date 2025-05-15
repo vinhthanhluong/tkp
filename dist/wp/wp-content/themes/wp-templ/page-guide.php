@@ -208,7 +208,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>restaurant/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -270,7 +270,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>shop/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>

@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>restaurants/" class="c-btn02 is-center">
+    <a href="<?php echo APP_URL ?>guide/restaurants/" class="c-btn02 is-center">
       <i class="arr01"></i>
       <span>もっと見る</span>
       <i class="arr02"></i>
@@ -114,7 +114,7 @@
     </div>
   </div>
   <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>shops/" class="c-btn02 is-center">
+    <a href="<?php echo APP_URL ?>guide/shops/" class="c-btn02 is-center">
       <i class="arr01"></i>
       <span>もっと見る</span>
       <i class="arr02"></i>
