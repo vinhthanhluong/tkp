@@ -56,7 +56,9 @@ $(".hamberger").click(function () {
   $("body").toggleClass("layerOn");
 });
 
-$(".close_layer, .gNavi li a, .menu_overlay").click(function () {
+$(
+  ".close_layer, .gNavi li a, .gNavi02 li a, .gReservat li a, .menu_overlay"
+).click(function () {
   $(".hamberger").removeClass("active");
   $("body").toggleClass("layerOn");
 });

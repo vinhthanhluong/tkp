@@ -16,17 +16,25 @@
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/"><span>施設案内</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>ways/"><span>楽しみ方</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>news/"><span>ニュース</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>info/#info02"><span>アクセス</span></a></li>
+          <li class="gNavi-item"><a href="<?php if ($thisPageName != 'info') {
+                                            echo APP_URL . 'info/';
+                                          } ?>#info02"><span>アクセス</span></a></li>
         </ul>
         <ul class="gNavi02">
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL ?>info/#info01"><span>営業時間</span></a>
+            <a href="<?php if ($thisPageName != 'info') {
+                        echo APP_URL . 'info/';
+                      } ?>#info01"><span>営業時間</span></a>
           </li>
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL ?>info/#info03"><span>周辺観光</span></a>
+            <a href="<?php if ($thisPageName != 'info') {
+                        echo APP_URL . 'info/';
+                      } ?>#info03"><span>周辺観光</span></a>
           </li>
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL ?>info/#info04"><span>よくあるご質問</span></a>
+            <a href="<?php if ($thisPageName != 'info') {
+                        echo APP_URL . 'info/';
+                      } ?>#info04"><span>よくあるご質問</span></a>
           </li>
           <li class="gNavi02-item">
             <a class="is-exter" href="<?php echo APP_URL ?>" target="_blank" rel="noopener"><span>採用情報</span></a>
@@ -130,7 +138,9 @@
           </a>
         </li>
         <li class="gNaviPC-item">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL ?>info/#info02">
+          <a class="gNaviPC-item__link" href="<?php if ($thisPageName != 'info') {
+                                                echo APP_URL . 'info/';
+                                              } ?>#info02">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu04.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>

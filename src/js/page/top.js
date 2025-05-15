@@ -18,13 +18,13 @@ function mvLoad() {
 
   const classList02 = ["", "", "is-white"];
 
-  // let currentIndex = getCurrentIndexByHour();
-  let currentIndex = 0;
+  let currentIndex = getCurrentIndexByHour();
+  // let currentIndex = 0;
 
   function getCurrentIndexByHour() {
     const hour = new Date().getHours();
-    if (hour >= 5 && hour <= 11) return 0; // Sáng
-    if (hour >= 12 && hour <= 17) return 1; // Chiều
+    if (hour >= 5 && hour <= 14) return 0; // Sáng
+    if (hour >= 15 && hour <= 18) return 1; // Chiều
     return 2; // Tối
   }
 
@@ -45,8 +45,8 @@ function mvLoad() {
 
   changeVideo(currentIndex);
 
-  setInterval(function () {
-    currentIndex = (currentIndex + 1) % videoList.length;
-    changeVideo(currentIndex);
-  }, 60000);
+  // setInterval(function () {
+  //   currentIndex = (currentIndex + 1) % videoList.length;
+  //   changeVideo(currentIndex);
+  // }, 60000);
 }

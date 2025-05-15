@@ -1,8 +1,8 @@
 $(window).on("load resize", function (e) {
   $('a[href^="#"]:not([href="#"])').on("click", function (e) {
     var widthwin = $(window).width();
-    var headerh = 115;
-    if (widthwin < 768) headerh = 76;
+    var headerh = 110;
+    if (widthwin < 768) headerh = 66;
     e.preventDefault();
     var target = this.hash,
       $target = $(target),
@@ -22,13 +22,15 @@ $(function () {
         return nav.type;
       })
       .includes("reload");
-  handleAnchor(isReload);
+  setTimeout(function () {
+    handleAnchor(isReload);
+  }, 1500);
 });
 
 function handleAnchor(isReload = false) {
   var winWidth = $(window).width();
-  var headerHeight = 115;
-  if (winWidth < 768) headerHeight = 76;
+  var headerHeight = 110;
+  if (winWidth < 768) headerHeight = 66;
   var hashStr = location.hash;
   if (hashStr && hashStr != "#noback") {
     var pos = $(hashStr).offset().top - headerHeight;
