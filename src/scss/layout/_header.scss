@@ -189,7 +189,7 @@ body:not(.fixHeader) {
     width: 100%;
     max-width: 430px;
     height: calc(100% - 40px);
-    max-height: 880px;
+    max-height: 840px;
   }
   @include SP {
     top: 20px;
@@ -197,7 +197,7 @@ body:not(.fixHeader) {
     width: calc(100% - 32px);
     max-width: 343px;
     height: calc(100% - 40px);
-    max-height: 635px;
+    max-height: 601px;
   }
   .inLayer {
     height: 100%;

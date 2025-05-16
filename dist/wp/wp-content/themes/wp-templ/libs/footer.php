@@ -9,7 +9,7 @@
         </div>
         <div class="f-info">
           <p class="txt">〒874-0023 大分県別府市上人ケ浜町795-1</p>
-          <p class="txt">TEL <a href="tel:03-5227-8262">03-5227-8262</a></p>
+          <p class="txt">TEL <a href="tel:0977-75-6363">0977-75-6363</a></p>
         </div>
       </div>
       <div class="col02">
@@ -28,10 +28,9 @@
           <ul class="f-navi02">
             <li class="item"><a href="<?php echo APP_URL ?>info/#info01">営業時間</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>info/#info03">周辺観光</a></li>
-            <li class="item"><a href="<?php echo APP_URL ?>info/#info04">よくあるご質問</a></li>
           </ul>
           <ul class="f-navi02">
-            <li class="item"><a class="is-exter" href="<?php echo APP_URL ?>">採用情報</a></li>
+            <li class="item"><a href="<?php echo APP_URL ?>info/#info04">よくあるご質問</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
           </ul>
         </div>
