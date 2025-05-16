@@ -31,7 +31,7 @@ if ($actionFlag == 'send') {
 SHONIN PARK
 https://www.shoninpark.jp/
 〒874-0023 大分県別府市上人ケ浜町795-1
-TEL 03-5227-8262
+TEL 0977-75-6363（代表番号）
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);

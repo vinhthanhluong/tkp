@@ -37,9 +37,6 @@
                       } ?>#info04"><span>よくあるご質問</span></a>
           </li>
           <li class="gNavi02-item">
-            <a class="is-exter" href="<?php echo APP_URL ?>" target="_blank" rel="noopener"><span>採用情報</span></a>
-          </li>
-          <li class="gNavi02-item">
             <a href="<?php echo APP_URL ?>contact/"><span>お問い合わせ</span></a>
           </li>
         </ul>

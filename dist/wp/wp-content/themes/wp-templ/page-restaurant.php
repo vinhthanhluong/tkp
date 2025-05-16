@@ -130,6 +130,10 @@ include(APP_PATH . 'libs/head.php'); ?>
           <dt>ご予約</dt>
           <dd>ご予約は<a class="txt-link" href="#">こちら</a></dd>
         </dl>
+        <dl>
+          <dt>TEL</dt>
+          <dd><a class="txt-link" href="tel:0977-75-6361">0977-75-6361</a></dd>
+        </dl>
       </div>
     </div>
 
