@@ -638,6 +638,11 @@ body:not(.fixHeader) {
         @include ffGT;
         @include font(15, "", 0.05, 600);
         transition: color 0.3s ease;
+        @include PC {
+          @include max-screen(1200px) {
+            font-size: calc(15 / 1200 * 100vw);
+          }
+        }
         @include HOVER {
           color: $blue01;
           .icon {

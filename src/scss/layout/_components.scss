@@ -428,6 +428,11 @@ a.c-btn01 {
       @include PC {
         left: auto;
         right: 18px;
+        @include PC {
+          @include max-screen(1440px) {
+            right: calc(18 / 1440 * 100vw);
+          }
+        }
       }
       @include SP {
         left: auto;
@@ -444,6 +449,11 @@ a.c-btn01 {
       top: calc(50% - 7px);
       @include PC {
         right: 18px;
+        @include PC {
+          @include max-screen(1440px) {
+            right: calc(18 / 1440 * 100vw);
+          }
+        }
       }
       @include SP {
         right: 14px;
@@ -470,6 +480,12 @@ a.c-btn01 {
       position: absolute;
       left: 0;
       top: 0;
+      @include PC {
+        @include max-screen(1440px) {
+          width: calc(24 / 1440 * 100vw);
+          height: calc(24 / 1440 * 100vw);
+        }
+      }
       &__off {
         opacity: 1;
       }

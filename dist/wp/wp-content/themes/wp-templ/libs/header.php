@@ -90,12 +90,12 @@
               </a>
             </li>
           </ul>
-          <ul class="gOfficial-lang sp">
+          <!-- <ul class="gOfficial-lang sp">
             <li class="item is-active"><a href="<?php echo APP_URL ?>">日本語</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>">English</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>">한국어</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>">中文簡体</a></li>
-          </ul>
+          </ul> -->
         </div>
         <p class="close_layer"></p>
       </div>

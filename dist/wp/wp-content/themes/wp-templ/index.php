@@ -234,7 +234,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <img src="<?php echo createSVG(219, 176) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor02.png" rel="js-lazy" width="219" height="176" alt="">
               </div>
               <div class="how-decor decor03 aos-init anim-scale01 pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
-                <img src="<?php echo createSVG(148, 124) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="148" height="124" alt="">
+                <img src="<?php echo createSVG(193, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="193" height="110" alt="">
               </div>
               <div class="how-decor decor04 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
                 <img src="<?php echo createSVG(198, 144) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor04.png" rel="js-lazy" width="198" height="144" alt="">
@@ -293,6 +293,21 @@ include(APP_PATH . 'libs/head.php'); ?>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
               </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="">
+              </li>
             </ul>
           </div>
           <div class="sight-group">
@@ -311,6 +326,21 @@ include(APP_PATH . 'libs/head.php'); ?>
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
+              </li>
+              <li class="item">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="">
               </li>
             </ul>
           </div>

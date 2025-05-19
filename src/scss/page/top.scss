@@ -184,6 +184,9 @@
         @include max-screen(1500px) {
           margin-top: calc(-75 / 1440 * 100vw);
         }
+        @include max-screen(1100px) {
+          margin-top: calc(-55 / 1440 * 100vw);
+        }
       }
       @include SP {
         width: calc(100% + calc(80 / 375 * 100vw));
@@ -217,11 +220,8 @@
     @include min-screen(1101px) {
       padding-top: calc(118 / 1440 * 100vw);
     }
-    @include screen(901px, 1100px) {
+    @include max-screen(1100px) {
       padding-top: calc(155 / 1440 * 100vw);
-    }
-    @include max-screen(900px) {
-      padding-top: 90px;
     }
   }
   @include SP {
@@ -980,13 +980,13 @@
     }
   }
   &.decor03 {
-    top: 630px;
-    left: 315px;
+    top: 622px;
+    left: 269px;
     @include PC {
       @include max-screen(1440px) {
-        width: calc(148 / 1440 * 100vw);
-        top: calc(630 / 1440 * 100vw);
-        left: calc(315 / 1440 * 100vw);
+        width: calc(193 / 1440 * 100vw);
+        top: calc(622 / 1440 * 100vw);
+        left: calc(269 / 1440 * 100vw);
       }
     }
   }
@@ -1095,48 +1095,51 @@
 }
 .sight-group {
   display: table-cell;
-  padding: 0 10px;
   @include PC {
+    padding: 0 10px;
     @include max-screen(1440px) {
       padding: 0 calc(10 / 1440 * 100vw);
     }
   }
+  @include SP {
+    padding: 0 calc(6 / 1440 * 100vw);
+  }
 
   &:nth-child(1) {
-    -webkit-animation: logo_slider 40s -20s linear infinite;
-    animation: logo_slider 40s -20s linear infinite;
+    -webkit-animation: logo_slider 80s -40s linear infinite;
+    animation: logo_slider 80s -40s linear infinite;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     will-change: transform;
   }
   &:nth-child(2) {
-    -webkit-animation: logo_slider2 40s linear infinite;
-    animation: logo_slider2 40s linear infinite;
+    -webkit-animation: logo_slider2 80s linear infinite;
+    animation: logo_slider2 80s linear infinite;
   }
   .lst-thumb {
     @include flexbox;
     @include justify-content(space-between);
     // min-width: 3180px;
     @include PC {
-      min-width: 1580px;
+      min-width: 3180px;
       @include max-screen(1440px) {
-        min-width: calc(1580 / 1440 * 100vw);
+        min-width: calc(3180 / 1440 * 100vw);
       }
     }
     @include SP {
-      min-width: calc(913 / 375 * 100vw);
+      min-width: calc(1838 / 375 * 100vw);
     }
     .item {
       overflow: hidden;
       @include PC {
         // min-width: calc(300 / 3180 * 100%);
         // margin-right: calc(20 / 3180 * 100%);
-        min-width: calc(300 / 1580 * 100%);
-        margin-right: calc(20 / 1580 * 100%);
+        min-width: calc(300 / 3180 * 100%);
+        margin-right: calc(20 / 3180 * 100%);
       }
       @include SP {
-        min-width: calc(173 / 913 * 100%);
-        margin-right: calc(12 / 913 * 100%);
+        min-width: calc(173 / 1838 * 100%);
+        margin-right: calc(12 / 1838 * 100%);
       }
       img {
         width: 100%;
