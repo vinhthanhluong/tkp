@@ -35,26 +35,26 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
           </div>
         </div>
-        <h1 class="mv-ttl aos-init" data-aos="fade-up">
-          <span class="mv-ttl-jp">ショップ</span>
+        <div class="mv-ttl aos-init" data-aos="fade-up">
+          <h1 class="mv-ttl-jp">ショップ</h1>
           <span class="mv-ttl-en">shop</span>
-        </h1>
+        </div>
       </div>
       <div class="mv-img c-img aos-init" data-aos="fade-up">
-        <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="">
-        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="">
+        <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="ショップのヘッダー画像">
+        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="ショップのヘッダー画像">
       </div>
     </div>
     <div class="c-about-block">
       <div class="about-bg" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/about_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/shop/about_bg_sp.png"></div>
       <div class="about-left">
         <figure class="about-img c-img pc aos-init" data-aos="fade-up">
-          <img src="<?php echo createSVG(546, 514); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img01.jpg" rel="js-lazy" width="546" height="514" alt="">
+          <img src="<?php echo createSVG(546, 514); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img01.jpg" rel="js-lazy" width="546" height="514" alt="ショップ画像">
         </figure>
       </div>
       <div class="about-right aos-init" data-aos="fade-up">
         <div class="about-content cloud-decor">
-          <p class="about-ttl">別府の魅力を一堂に<br>ここにしかない<br class="sp">ショッピング体験</p>
+          <h2 class="about-ttl">別府の魅力を一堂に<br>ここにしかない<br class="sp">ショッピング体験</h2>
           <p class="about-desc">別府の特産品や特産品やグルメを楽しめるショップエリア。<br>別府の魅力を体験いただけるショップや、ここでしか手に入らない特別なアイテムを取り揃えています。</p>
           <div class="about-group dot-decor">
             <figure class="about-img c-img sp">
@@ -72,35 +72,35 @@ include(APP_PATH . 'libs/head.php'); ?>
     <section class="sec-shop">
       <div class="inner1170">
         <div class="map-block aos-init" data-aos="fade-up">
-          <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="">
+          <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
           <?php if (!empty($shop_list_name[0])) { ?>
-            <p class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></p>
+            <h3 class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[1])) { ?>
-            <p class="map-tag is-tag02"><span class="tag-txt"><?php echo $shop_list_name[1]; ?></span></p>
+            <h3 class="map-tag is-tag02"><span class="tag-txt"><?php echo $shop_list_name[1]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[2])) { ?>
-            <p class="map-tag is-tag03"><span class="tag-txt"><?php echo $shop_list_name[2]; ?></span></p>
+            <h3 class="map-tag is-tag03"><span class="tag-txt"><?php echo $shop_list_name[2]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[3])) { ?>
-            <p class="map-tag is-tag04"><span class="tag-txt"><?php echo $shop_list_name[3]; ?></span></p>
+            <h3 class="map-tag is-tag04"><span class="tag-txt"><?php echo $shop_list_name[3]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[4])) { ?>
-            <p class="map-tag is-tag05"><span class="tag-txt"><?php echo $shop_list_name[4]; ?></span></p>
+            <h3 class="map-tag is-tag05"><span class="tag-txt"><?php echo $shop_list_name[4]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[5])) { ?>
-            <p class="map-tag is-tag06"><span class="tag-txt"><?php echo $shop_list_name[5]; ?></span></p>
+            <h3 class="map-tag is-tag06"><span class="tag-txt"><?php echo $shop_list_name[5]; ?></span></h3>
           <?php } ?>
           <?php if (!empty($shop_list_name[6])) { ?>
-            <p class="map-tag is-tag07"><span class="tag-txt"><?php echo $shop_list_name[6]; ?></span></p>
+            <h3 class="map-tag is-tag07"><span class="tag-txt"><?php echo $shop_list_name[6]; ?></span></h3>
           <?php } ?>
         </div>
 
         <?php if (!empty($shop_list)) { ?>
-          <h2 class="c-ttl02 aos-init" data-aos="fade-up">
-            <span class="c-ttl02__jp">エリア案内</span>
+          <div class="c-ttl02 aos-init" data-aos="fade-up">
+            <h2 class="c-ttl02__jp">エリア案内</h2>
             <span class="c-ttl02__en">Shop Area</span>
-          </h2>
+          </div>
           <ul class="shop-list">
             <?php
             foreach ($shop_list as $shop) {
@@ -119,11 +119,11 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="shop-item">
                     <div class="shop-group">
                       <figure class="shop-img c-img">
-                        <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $shop_pic; ?>" rel="js-lazy" width="345" height="250" alt="">
+                        <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $shop_pic; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($shop_name); ?>">
                       </figure>
                       <div class="shop-info">
                         <?php if (!empty($shop_name)) { ?>
-                          <p class="shop-ttl js-match-height-ttl"><?php echo $shop_name; ?></p>
+                          <h3 class="shop-ttl js-match-height-ttl"><?php echo $shop_name; ?></h3>
                         <?php } ?>
                         <?php if (!empty($shop_web) || !empty($shop_instagram)) { ?>
                           <ul class="shop-sns">
@@ -157,10 +157,10 @@ include(APP_PATH . 'libs/head.php'); ?>
     <?php if (!empty($news_relate)) {  ?>
       <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
         <div class="inner1170">
-          <h2 class="c-ttl02 is-white aos-init" data-aos="fade-up">
-            <span class="c-ttl02__jp">ニュース</span>
+          <div class="c-ttl02 is-white aos-init" data-aos="fade-up">
+            <h2 class="c-ttl02__jp">ニュース</h2>
             <span class="c-ttl02__en">News</span>
-          </h2>
+          </div>
           <ul class="news-list">
             <?php
             foreach ($news_relate as $news) {
@@ -175,7 +175,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <li class="aos-init" data-aos="fade-up">
                 <a class="news-item" href="<?php echo $news_url; ?>">
                   <figure class="news-img c-img">
-                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="">
+                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="<?php echo strip_tags($news_ttl); ?>">
                   </figure>
                   <div class="news-info">
                     <?php if (!empty($news_terms) || !empty($news_date)) { ?>
@@ -196,7 +196,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     <?php } ?>
                     <?php if (!empty($news_ttl)) { ?>
-                      <p class="news-ttl"><?php echo $news_ttl; ?></p>
+                      <h3 class="news-ttl"><?php echo $news_ttl; ?></h3>
                     <?php } ?>
                   </div>
                 </a>

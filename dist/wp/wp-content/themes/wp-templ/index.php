@@ -110,7 +110,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <a class="lstpost01-link" href="<?php echo $n_url; ?>">
                   <div class="lstpost01-ctn01">
                     <div class="lstpost01-img">
-                      <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="">
+                      <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($n_ttl); ?>">
                     </div>
                     <?php if (!empty($n_terms)) { ?>
                       <p class="cate">
@@ -126,7 +126,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   </div>
                   <div class="lstpost01-ctn02">
                     <p class="date"><?php echo $n_date; ?></p>
-                    <p class="ttl"><?php echo $n_ttl; ?></p>
+                    <h3 class="ttl"><?php echo $n_ttl; ?></h3>
                   </div>
                 </a>
               </li>
@@ -148,15 +148,15 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="park-wrap">
           <?php include(APP_PATH . 'libs/mod_park.php'); ?>
           <div class="park-ctn">
-            <h2 class="park-ttl">
+            <div class="park-ttl">
               <span class="park-ttl01">
                 <span class="row aos-init anim-ttl01" data-aos=""><span class="anim-inner">ABOUT</span></span>
                 <span class="row aos-init anim-ttl01" data-aos=""><span class="anim-inner">SHONIN PARK</span></span>
               </span>
-              <span class="park-ttl02 aos-init anim-ttl01" data-aos="">
+              <h2 class="park-ttl02 aos-init anim-ttl01" data-aos="">
                 <span class="anim-inner">SHONIN PARKについて</span>
-              </span>
-            </h2>
+              </h2>
+            </div>
             <div class="park-desc aos-init anim-ttl01" data-aos="">
               <p class="txt anim-inner">SHONIN PARKの魅力がひと目で分かる園内マップ。気になるエリアをタップしてみてください！</p>
             </div>
@@ -171,14 +171,14 @@ include(APP_PATH . 'libs/head.php'); ?>
           <div class="how-circle aos-init" data-aos=""></div>
           <div class="how-box">
             <div class="how-box__inner">
-              <h2 class="t-ttlbox01">
+              <div class="t-ttlbox01">
                 <span class="ttl01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                   <span class="anim-inner">HOW TO ENJOY</span>
                 </span>
-                <span class="ttl02 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
+                <h2 class="ttl02 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                   <span class="anim-inner">楽しみ方</span>
-                </span>
-              </h2>
+                </h2>
+              </div>
               <div class="t-desc01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                 <p class="txt anim-inner">日帰りから宿泊、夜の利用まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
               </div>
@@ -190,28 +190,28 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </a>
               </div>
               <div class="how-img img01 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="">
+                <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像1">
               </div>
               <div class="how-img img02 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img02.png" rel="js-lazy" width="160" height="110" alt="">
+                <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img02.png" rel="js-lazy" width="160" height="110" alt="楽しみ方画像2">
               </div>
               <div class="how-img img03 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(219, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img03.png" rel="js-lazy" width="219" height="150" alt="">
+                <img src="<?php echo createSVG(219, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img03.png" rel="js-lazy" width="219" height="150" alt="楽しみ方画像3">
               </div>
               <div class="how-img img04 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img04.png" rel="js-lazy" width="280" height="200" alt="">
+                <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img04.png" rel="js-lazy" width="280" height="200" alt="楽しみ方画像4">
               </div>
               <div class="how-img img05 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img05.png" rel="js-lazy" width="280" height="200" alt="">
+                <img src="<?php echo createSVG(280, 200) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img05.png" rel="js-lazy" width="280" height="200" alt="楽しみ方画像8">
               </div>
               <div class="how-img img06 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(220, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img06.png" rel="js-lazy" width="220" height="150" alt="">
+                <img src="<?php echo createSVG(220, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img06.png" rel="js-lazy" width="220" height="150" alt="楽しみ方画像7">
               </div>
               <div class="how-img img07 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img07.png" rel="js-lazy" width="160" height="110" alt="">
+                <img src="<?php echo createSVG(160, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img07.png" rel="js-lazy" width="160" height="110" alt="楽しみ方画像6">
               </div>
               <div class="how-img img08 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
-                <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="">
+                <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像5">
               </div>
 
               <div class="how-cloud cloud01 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
@@ -231,13 +231,13 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <img src="<?php echo createSVG(137, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor01.png" rel="js-lazy" width="137" height="110" alt="">
               </div>
               <div class="how-decor decor02 aos-init anim-scale01 pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
-                <img src="<?php echo createSVG(219, 176) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor02.png" rel="js-lazy" width="219" height="176" alt="">
+                <img src="<?php echo createSVG(219, 176) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor02.png" rel="js-lazy" width="219" height="176" alt="ピクニックイラスト">
               </div>
               <div class="how-decor decor03 aos-init anim-scale01 pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
-                <img src="<?php echo createSVG(193, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="193" height="110" alt="">
+                <img src="<?php echo createSVG(193, 110) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor03.png" rel="js-lazy" width="193" height="110" alt="砂湯に入る人イラスト">
               </div>
               <div class="how-decor decor04 aos-init anim-scale01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="1200">
-                <img src="<?php echo createSVG(198, 144) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor04.png" rel="js-lazy" width="198" height="144" alt="">
+                <img src="<?php echo createSVG(198, 144) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_decor04.png" rel="js-lazy" width="198" height="144" alt="松の木イラスト">
               </div>
             </div>
           </div>
@@ -252,16 +252,16 @@ include(APP_PATH . 'libs/head.php'); ?>
             <img src="<?php echo createSVG(305, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor01.png" rel="js-lazy" width="305" height="144" alt="">
           </div>
           <div class="sight-decor decor02 pc aos-init anim-scale01" data-aos="">
-            <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="306" height="144" alt="">
+            <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="306" height="144" alt="レストランイラスト">
           </div>
-          <h2 class="t-ttlbox01">
+          <div class="t-ttlbox01">
             <span class="ttl01 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">SIGHTSEEING</span>
             </span>
-            <span class="ttl02 aos-init anim-ttl01" data-aos="">
+            <h2 class="ttl02 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">周辺観光</span>
-            </span>
-          </h2>
+            </h2>
+          </div>
           <div class="t-desc01 aos-init anim-ttl01" data-aos="">
             <p class="txt anim-inner">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>周辺観光を組み合わせて充実した日をお過ごしください。</p>
           </div>
@@ -282,31 +282,31 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="道の駅 たのうらら">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="別府タワー">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="グローバルタワー">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="ラクテンチ">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="大分香りの博物館">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="志高湖">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="別府ロープウェイ">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="地獄めぐり（白池地獄）">
               </li>
             </ul>
           </div>
@@ -316,31 +316,31 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="道の駅 たのうらら">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb03.png" alt="別府タワー">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb04.png" alt="グローバルタワー">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb05.png" alt="ラクテンチ">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb06.png" alt="大分香りの博物館">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb07.png" alt="志高湖">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="別府ロープウェイ">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="地獄めぐり（白池地獄）">
               </li>
             </ul>
           </div>
@@ -369,14 +369,14 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
         <div class="t-wcm01">
-          <h2 class="instagram-ttl">
+          <div class="instagram-ttl">
             <span class="ttl01 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">INSTAGRAM</span>
             </span>
-            <span class="ttl02 aos-init anim-ttl01" data-aos="">
+            <h2 class="ttl02 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">公式インスタグラム</span>
-            </span>
-          </h2>
+            </h2>
+          </div>
           <ul class="instagram-lst aos-init" data-aos="fade-up">
             <li class="item">
               <img src="<?php echo createSVG(276, 276) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/instagram_thumb01.png" rel="js-lazy" width="276" height="276" alt="">

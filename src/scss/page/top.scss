@@ -444,7 +444,7 @@
   position: relative;
   background: $gray02;
   @include PC {
-    padding-bottom: 114px;
+    padding: 100px 0 135px;
   }
   @include SP {
     padding: 46px 0 41px;

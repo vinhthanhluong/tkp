@@ -1,28 +1,28 @@
 <div class="mod-park">
   <div class="mod-park__inner">
     <div class="park-bg aos-init" data-aos="fade-up" data-aos-delay="0">
-      <img class="pc" src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="">
-      <img class="sp" src="<?php echo createSVG(361, 206) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park_sp.png" rel="js-lazy" width="361" height="206" alt="">
+      <img class="pc" src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="SHONIN PARK マップ">
+      <img class="sp" src="<?php echo createSVG(361, 206) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park_sp.png" rel="js-lazy" width="361" height="206" alt="SHONIN PARK マップ">
     </div>
     <div class="mod-park__btn bnt01 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
-      <p class="btn-link js-btnpopup" data-popup="modal01">
+      <h3 class="btn-link js-btnpopup" data-popup="modal01">
         <span class="txt">レストラン</span>
-      </p>
+      </h3>
     </div>
     <div class="mod-park__btn bnt02 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
-      <p class="btn-link js-btnpopup" data-popup="modal02">
+      <h3 class="btn-link js-btnpopup" data-popup="modal02">
         <span class="txt">砂湯・温泉</span>
-      </p>
+      </h3>
     </div>
     <div class="mod-park__btn bnt03 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
-      <p class="btn-link js-btnpopup" data-popup="modal03">
+      <h3 class="btn-link js-btnpopup" data-popup="modal03">
         <span class="txt">ショップ</span>
-      </p>
+      </h3>
     </div>
     <div class="mod-park__btn bnt04 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
-      <p class="btn-link js-btnpopup" data-popup="modal04">
+      <h3 class="btn-link js-btnpopup" data-popup="modal04">
         <span class="txt">宿泊コテージ</span>
-      </p>
+      </h3>
     </div>
   </div>
 </div>
@@ -37,11 +37,11 @@
           <li class="popup-lst__item">
             <div class="popup-ctn01">
               <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup01.jpg" width="280" height="190" rel="js-lazy" alt="">
+                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup01.jpg" width="280" height="190" rel="js-lazy" alt="レストラン">
               </div>
             </div>
             <div class="popup-ctn02">
-              <p class="popup-ttl">レストラン</p>
+              <h3 class="popup-ttl">レストラン</h3>
               <div class="popup-desc">
                 <p class="txt">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を堪能できます。</p>
               </div>
@@ -68,11 +68,11 @@
           <li class="popup-lst__item">
             <div class="popup-ctn01">
               <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup02.jpg" width="280" height="190" rel="js-lazy" alt="">
+                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup02.jpg" width="280" height="190" rel="js-lazy" alt="砂湯・温泉">
               </div>
             </div>
             <div class="popup-ctn02">
-              <p class="popup-ttl">砂湯・温泉</p>
+              <h3 class="popup-ttl">砂湯・温泉</h3>
               <div class="popup-desc">
                 <p class="txt">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Spa Sand」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
               </div>
@@ -99,11 +99,11 @@
           <li class="popup-lst__item">
             <div class="popup-ctn01">
               <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup03.jpg" width="280" height="190" rel="js-lazy" alt="">
+                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup03.jpg" width="280" height="190" rel="js-lazy" alt="ショップ">
               </div>
             </div>
             <div class="popup-ctn02">
-              <p class="popup-ttl">ショップ</p>
+              <h3 class="popup-ttl">ショップ</h3>
               <div class="popup-desc">
                 <p class="txt">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
               </div>
@@ -130,11 +130,11 @@
           <li class="popup-lst__item">
             <div class="popup-ctn01">
               <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup04.jpg" width="280" height="190" rel="js-lazy" alt="">
+                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup04.jpg" width="280" height="190" rel="js-lazy" alt="宿泊コテージ">
               </div>
             </div>
             <div class="popup-ctn02">
-              <p class="popup-ttl">宿泊コテージ</p>
+              <h3 class="popup-ttl">宿泊コテージ</h3>
               <div class="popup-desc">
                 <p class="txt">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
               </div>

@@ -51,10 +51,10 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
           </div>
         </div>
-        <h1 class="mv-ttl">
-          <span class="mv-ttl-jp">お問い合わせ</span>
+        <div class="mv-ttl">
+          <h1 class="mv-ttl-jp">お問い合わせ</h1>
           <span class="mv-ttl-en">contact</span>
-        </h1>
+        </div>
       </div>
     </div>
     <p class="short-desc">お問い合わせ前に<a href="<?php echo APP_URL ?>info#info04">よくあるご質問</a>をご確認い<br class="sp">ただいた上で、<br class="pc">お問い合わせフォームへのご入<br class="sp">力をお願いいたします。</p>

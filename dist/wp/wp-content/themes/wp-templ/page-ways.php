@@ -25,17 +25,21 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
           </div>
         </div>
-        <h1 class="mv-ttl aos-init" data-aos="fade-up">
-          <span class="mv-ttl-jp">楽しみ方</span>
+        <div class="mv-ttl aos-init" data-aos="fade-up">
+          <h1 class="mv-ttl-jp">楽しみ方</h1>
           <span class="mv-ttl-en">How to Enjoy</span>
-        </h1>
+        </div>
       </div>
     </div>
     <div class="ways-tabs">
       <div class="tab-inner">
         <ul class="tab-list js-tabs">
-          <li data-tab="tab01">日帰り利用</li>
-          <li class="is-active" data-tab="tab02">宿泊利用</li>
+          <li data-tab="tab01">
+            <h2>日帰り利用</h2>
+          </li>
+          <li class="is-active" data-tab="tab02">
+            <h2>宿泊利用</h2>
+          </li>
         </ul>
       </div>
     </div>
@@ -70,46 +74,46 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="anchor-time01">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">10:00</p>
-                <p class="ways-ttl">到着</p>
+                <h3 class="ways-ttl">到着</h3>
                 <p class="ways-desc">まずは公園内の豊かな自然を楽しむ散策コースへ。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time02">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">12:00</p>
-                <p class="ways-ttl">レストランで食事</p>
+                <h3 class="ways-ttl">レストランで食事</h3>
                 <p class="ways-desc">テラスから見える別府湾の美しい景色と共に、この土地で育った食材を使用したお料理を味わっていただきます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time03">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">13:00</p>
-                <p class="ways-ttl">ショップエリアでお買い物</p>
+                <h3 class="ways-ttl">ショップエリアでお買い物</h3>
                 <p class="ways-desc">別府の魅力が感じられるショップエリアでショッピングやカフェを楽しめます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time04">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">15:00</p>
-                <p class="ways-ttl">スパエリアで砂湯体験</p>
+                <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">歩き疲れた後はスパエリアでゆっくりと過ごします。温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time05">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">17:00</p>
-                <p class="ways-ttl">バーでほっと一息</p>
+                <h3 class="ways-ttl">バーでほっと一息</h3>
                 <p class="ways-desc">湯上りにはスパエリアのロビーでドリンクを楽しみながら、ゆったりとくつろげます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
@@ -121,46 +125,46 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="anchor-time06">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">10:00</p>
-                <p class="ways-ttl">到着</p>
+                <h3 class="ways-ttl">到着</h3>
                 <p class="ways-desc">まずは公園内の豊かな自然を楽しむ散策コースへ。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time07">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">12:00</p>
-                <p class="ways-ttl">レストランで食事</p>
+                <h3 class="ways-ttl">レストランで食事</h3>
                 <p class="ways-desc">テラスから見える別府湾の美しい景色と共に、この土地で育った食材を使用したお料理を味わっていただきます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time08">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">13:00</p>
-                <p class="ways-ttl">ショップエリアでお買い物</p>
+                <h3 class="ways-ttl">ショップエリアでお買い物</h3>
                 <p class="ways-desc">別府の魅力が感じられるショップエリアでショッピングやカフェを楽しめます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time09">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">15:00</p>
-                <p class="ways-ttl">スパエリアで砂湯体験</p>
+                <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">歩き疲れた後はスパエリアでゆっくりと過ごします。温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time10">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">18:00</p>
-                <p class="ways-ttl">バーでほっと一息</p>
+                <h3 class="ways-ttl">バーでほっと一息</h3>
                 <p class="ways-desc">湯上りにはスパエリアのロビーでドリンクを楽しみながら、ゆったりとくつろげます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
@@ -200,46 +204,46 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="time01">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">10:00</p>
-                <p class="ways-ttl">到着</p>
+                <h3 class="ways-ttl">到着</h3>
                 <p class="ways-desc">まずは公園内の豊かな自然を楽しむ散策コースへ。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time02">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">12:00</p>
-                <p class="ways-ttl">レストランで食事</p>
+                <h3 class="ways-ttl">レストランで食事</h3>
                 <p class="ways-desc">テラスから見える別府湾の美しい景色と共に、この土地で育った食材を使用したお料理を味わっていただきます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time03">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">13:00</p>
-                <p class="ways-ttl">ショップエリアでお買い物</p>
+                <h3 class="ways-ttl">ショップエリアでお買い物</h3>
                 <p class="ways-desc">別府の魅力が感じられるショップエリアでショッピングやカフェを楽しめます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time04">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">15:00</p>
-                <p class="ways-ttl">スパエリアで砂湯体験</p>
+                <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">歩き疲れた後はスパエリアでゆっくりと過ごします。温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time05">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">17:00</p>
-                <p class="ways-ttl">バーでほっと一息</p>
+                <h3 class="ways-ttl">バーでほっと一息</h3>
                 <p class="ways-desc">湯上りにはスパエリアのロビーでドリンクを楽しみながら、ゆったりとくつろげます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
@@ -251,46 +255,46 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="time06">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">10:00</p>
-                <p class="ways-ttl">到着</p>
+                <h3 class="ways-ttl">到着</h3>
                 <p class="ways-desc">まずは公園内の豊かな自然を楽しむ散策コースへ。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time07">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">12:00</p>
-                <p class="ways-ttl">レストランで食事</p>
+                <h3 class="ways-ttl">レストランで食事</h3>
                 <p class="ways-desc">テラスから見える別府湾の美しい景色と共に、この土地で育った食材を使用したお料理を味わっていただきます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time08">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">13:00</p>
-                <p class="ways-ttl">ショップエリアでお買い物</p>
+                <h3 class="ways-ttl">ショップエリアでお買い物</h3>
                 <p class="ways-desc">別府の魅力が感じられるショップエリアでショッピングやカフェを楽しめます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time09">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">15:00</p>
-                <p class="ways-ttl">スパエリアで砂湯体験</p>
+                <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">歩き疲れた後はスパエリアでゆっくりと過ごします。温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
             </li>
             <li class="ways-item" id="time10">
-              <figure class="ways-img c-img"><img  src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">17:00</p>
-                <p class="ways-ttl">バーでほっと一息</p>
+                <h3 class="ways-ttl">バーでほっと一息</h3>
                 <p class="ways-desc">湯上りにはスパエリアのロビーでドリンクを楽しみながら、ゆったりとくつろげます。</p>
                 <a class="c-link" href="#">リンクリンク</a>
               </div>
@@ -302,13 +306,13 @@ include(APP_PATH . 'libs/head.php'); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script>
-    $('.js-tabs li').click(function () {
+    $('.js-tabs li').click(function() {
       var t = $(this).attr('data-tab');
       $('.js-tabs li').removeClass('is-active');
       $('.tab-content').removeClass('is-current');
       $(this).addClass('is-active');
       $('#' + t).addClass('is-current');
-  });
+    });
   </script>
 </body>
 

@@ -48,7 +48,7 @@
   }
 }
 .tab-list {
-  @include font("",1.75,120,bold);
+  @include font("", 1.75, 120, bold);
   border-radius: 50px;
   border: 1px solid $blue01;
   @include flexbox;
@@ -62,7 +62,7 @@
     padding: 4px;
     @include font(14);
   }
-  &>li {
+  & > li {
     width: 50%;
     border-radius: 50px;
     @include flexbox;
@@ -85,6 +85,9 @@
     &.is-active {
       background: $blue01;
       color: #fff;
+    }
+    h2 {
+      font-weight: inherit;
     }
   }
 }
@@ -156,7 +159,7 @@
     @include PC {
       padding-left: 200px;
       @include max-screen(1440px) {
-        padding-left: vw-pc(200px,1440);
+        padding-left: vw-pc(200px, 1440);
       }
     }
     @include SP {
@@ -186,13 +189,13 @@
       -webkit-align-self: center;
       align-self: center;
       margin-right: 30px;
-      width: calc(520/1140*100%);
+      width: calc(520 / 1140 * 100%);
       max-width: 450px;
     }
   }
   .ways-time {
     @include ffGT;
-    @include font("",1.5,50,500);
+    @include font("", 1.5, 50, 500);
     @include PC {
       margin-bottom: 19px;
       @include font(20);
@@ -204,13 +207,13 @@
   }
   .ways-ttl {
     position: relative;
-    @include font("",1.5,100,bold);
+    @include font("", 1.5, 100, bold);
     @include PC {
       margin-bottom: 22px;
       padding-left: 20px;
       @include font(32);
       @include max-screen(1280px) {
-        font-size: vw-pc(30px,1280)
+        font-size: vw-pc(30px, 1280);
       }
     }
     @include SP {
@@ -222,15 +225,23 @@
       content: "";
       position: absolute;
       left: 0;
-      background: linear-gradient(180deg,rgba($yellow01, 1) 0%, rgba($yellow01, 1) calc(50% - 1px), rgba(#fff, 1) calc(50% - 1px), rgba(#fff, 1) 50%, rgba($blue01, 1) 50%, rgba($blue01, 1) 100%);;
+      background: linear-gradient(
+        180deg,
+        rgba($yellow01, 1) 0%,
+        rgba($yellow01, 1) calc(50% - 1px),
+        rgba(#fff, 1) calc(50% - 1px),
+        rgba(#fff, 1) 50%,
+        rgba($blue01, 1) 50%,
+        rgba($blue01, 1) 100%
+      );
       width: 4px;
       border-radius: 5px;
       @include PC {
         top: 7px;
         bottom: 7px;
         @include max-screen(1280px) {
-          top: vw-pc(7px,1280);
-          bottom: vw-pc(7px,1280);
+          top: vw-pc(7px, 1280);
+          bottom: vw-pc(7px, 1280);
         }
       }
       @include SP {
@@ -243,11 +254,11 @@
     letter-spacing: 0.1em;
     @include PC {
       margin-bottom: 33px;
-      @include font(16,28);
+      @include font(16, 28);
     }
     @include SP {
       margin-bottom: 13px;
-      @include font(15,28);
+      @include font(15, 28);
     }
     &:last-child {
       margin-bottom: 0;
@@ -263,8 +274,8 @@
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     @include PC {
-      width: calc(620/1140*100%);
-      padding-top: calc(400/1140*100%);
+      width: calc(620 / 1140 * 100%);
+      padding-top: calc(400 / 1140 * 100%);
     }
     @include SP {
       @include aspect-ratio(240, 155);
@@ -273,8 +284,8 @@
   }
   .time-list {
     @include ffGT;
-    font-weight: 600;;
-    &>li {
+    font-weight: 600;
+    & > li {
       @include PC {
         margin-bottom: 16px;
       }
@@ -284,7 +295,7 @@
     }
   }
   .time-txt {
-    @include font("",1.5,50);
+    @include font("", 1.5, 50);
     @include PC {
       margin-bottom: 13px;
       @include font(20);
@@ -295,7 +306,7 @@
     }
   }
   .time-sub {
-    @include font("",1.75,120);
+    @include font("", 1.75, 120);
     @include PC {
       padding-left: 4px;
     }
@@ -303,7 +314,7 @@
       padding-left: 2px;
       @include font(12);
     }
-    &>li {
+    & > li {
       @include PC {
         margin-bottom: 7px;
       }
@@ -321,7 +332,7 @@
         &:link,
         &:visited,
         &:active {
-          color: #7f7e7c
+          color: #7f7e7c;
         }
       }
       @include HOVER {

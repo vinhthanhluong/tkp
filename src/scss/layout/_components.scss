@@ -398,7 +398,7 @@ a.c-btn01 {
       right: 9px;
     }
   }
-  span {
+  h2 {
     position: relative;
     z-index: 3;
     display: inline-block;
@@ -459,7 +459,7 @@ a.c-btn01 {
         right: 14px;
       }
     }
-    span {
+    h2 {
       position: relative;
       padding: 0 5px 0 40px;
       @include PC {
@@ -505,7 +505,7 @@ a.c-btn01 {
         opacity: 0;
         transform: translate(0, 13px) scale(0) rotate(0deg);
       }
-      span {
+      h2 {
         position: relative;
         transform: translateX(0);
       }
@@ -983,6 +983,9 @@ a.c-link {
     background: $blue01;
     color: #fff;
     pointer-events: none;
+  }
+  h2 {
+    font-weight: inherit;
   }
 }
 /* ===================== CATEGORY ===================== */
@@ -2196,6 +2199,9 @@ a.c-link {
         @include max-screen(1099px) {
           @include font(16, 28, 0.1);
         }
+      }
+      h3 {
+        font-weight: inherit;
       }
     }
     dd {

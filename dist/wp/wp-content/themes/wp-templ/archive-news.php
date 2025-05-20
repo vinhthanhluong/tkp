@@ -46,10 +46,10 @@ include(APP_PATH . 'libs/head.php');
             <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_yellow.png"></p>
           </div>
         </div>
-        <h1 class="mv-ttl">
-          <span class="mv-ttl-jp">ニュース</span>
+        <div class="mv-ttl">
+          <h1 class="mv-ttl-jp">ニュース</h1>
           <span class="mv-ttl-en">News</span>
-        </h1>
+        </div>
       </div>
     </div>
     <div class="sec-news c-bg-wave01">
@@ -68,7 +68,9 @@ include(APP_PATH . 'libs/head.php');
         if (!empty($categories)) {
         ?>
           <div class="c-catectn aos-init" data-aos="fade-up">
-            <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL; ?>news/">すべて</a>
+            <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL; ?>news/">
+              <h2>すべて</h2>
+            </a>
             <?php
             foreach ($categories as $catitem) {
               $cat_id = $catitem->term_id;
@@ -77,9 +79,11 @@ include(APP_PATH . 'libs/head.php');
             ?>
               <a class="c-cate01 <?php if ($currentTermName == $cat_name) {
                                     echo 'is-active';
-                                  } ?>" href="<?php echo $cat_link; ?>"><?php if (!empty($cat_name)) {
-                                                                          echo $cat_name;
-                                                                        } ?></a>
+                                  } ?>" href="<?php echo $cat_link; ?>">
+                <h2><?php if (!empty($cat_name)) {
+                      echo $cat_name;
+                    } ?></h2>
+              </a>
             <?php } ?>
           </div>
         <?php } ?>
@@ -124,7 +128,7 @@ include(APP_PATH . 'libs/head.php');
               <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                 <a class="lstpost01-link" href="<?php echo $n_url; ?>">
                   <div class="lstpost01-ctn01">
-                    <figure class="lstpost01-img"><img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt=""></figure>
+                    <figure class="lstpost01-img"><img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($n_ttl); ?>"></figure>
                     <?php if (!empty($n_terms)) { ?>
                       <p class="cate">
                         <?php
@@ -139,7 +143,7 @@ include(APP_PATH . 'libs/head.php');
                   </div>
                   <div class="lstpost01-ctn02">
                     <p class="date"><?php echo $n_date; ?></p>
-                    <p class="ttl"><?php echo $n_ttl; ?></p>
+                    <h3 class="ttl"><?php echo $n_ttl; ?></h3>
                   </div>
                 </a>
               </li>

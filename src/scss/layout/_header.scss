@@ -562,7 +562,7 @@ body:not(.fixHeader) {
               content: "";
               position: absolute;
               right: 6px;
-              top: 3px;
+              top: calc(50% - 5px);
               width: 10px;
               height: 10px;
               background-image: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.25" width="1.5" height="10" fill="%2365B0D4"/><rect x="10" y="4.25" width="1.5" height="10" transform="rotate(90 10 4.25)" fill="%2365B0D4"/></svg>');
@@ -574,7 +574,7 @@ body:not(.fixHeader) {
               @include PC {
                 @include max-screen(1200px) {
                   right: calc(6 / 1200 * 100vw);
-                  top: calc(3 / 1200 * 100vw);
+                  top: calc(50% - calc(5 / 1200 * 100vw));
                   width: calc(10 / 1200 * 100vw);
                   height: calc(10 / 1200 * 100vw);
                 }
