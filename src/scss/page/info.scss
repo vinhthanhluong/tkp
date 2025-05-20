@@ -55,7 +55,8 @@
               calc(9 / 1440 * 100vw) calc(21 / 1440 * 100vw);
           }
         }
-        span {
+        span,
+        h2 {
           @include PC {
             padding: 0 5px 0 40px;
             @include max-screen(1440px) {
