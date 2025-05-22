@@ -1,6 +1,12 @@
 <?php
-$thisPageName = 'newsSingle';
-$sg_id = $post->ID;
+$thisPageName = 'single-exclusive-offers';
+
+$post = get_post($current_id);
+if (empty($post)) {
+  redirect404();
+}
+
+$sg_id = $current_id;
 $current_ID = get_the_ID($sg_id);
 $sg_title = get_the_title($sg_id);
 $sg_title_strip = strip_tags($sg_title);
@@ -9,18 +15,18 @@ $sg_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($sg_id), 'full');
 $sg_terms = get_the_terms($sg_id, 'newscat');
 $editor = get_field('editor', $sg_id);
 if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post->post_content, false);
-include(APP_PATH . 'libs/head.php');
+include(APP_PATH_EN . 'libs/head.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/news.min.css?v=<?php echo APP_VER ?>">
 </head>
 
 <body id="news-single">
-  <?php include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
-        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-        <li><a href="<?php echo APP_URL; ?>news/">ニュース</a></li>
+        <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL_EN; ?>news/">ニュース</a></li>
         <li><?php echo $sg_title_strip; ?></li>
       </ul>
     </div>
@@ -60,7 +66,7 @@ include(APP_PATH . 'libs/head.php');
         <div class="sg-share aos-init" data-aos="fade-up">
           <div class="share-inner">
             <span class="share__ttl">Share</span>
-            <a class="share__link" target="_blank" href="https://twitter.com/share?url=<?php echo APP_URL; ?>news/<?php echo urlencode($post->post_name); ?>">
+            <a class="share__link" target="_blank" href="https://twitter.com/share?url=<?php echo APP_URL_EN; ?>news/<?php echo urlencode($post->post_name); ?>">
               <img width="31" height="30" src="<?php echo createSVG(31, 30); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/ico_x.svg" rel="js-lazy" alt="">
             </a>
             <a class="share__link pc" target="_blank" href="https://line.me/R/msg/text/?<?php echo urlencode(get_the_title($sg_id)); ?>%0D%0A<?php echo urlencode(get_the_permalink($sg_id)); ?>">
@@ -122,7 +128,7 @@ include(APP_PATH . 'libs/head.php');
               <?php } ?>
             <?php } ?>
           </a>
-          <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-cover">
+          <a href="<?php echo APP_URL_EN ?>news/" class="c-btn01 is-cover">
             <i class="arr01"></i>
             <span>一覧へ戻る</span>
             <i class="arr02"></i>
@@ -146,7 +152,7 @@ include(APP_PATH . 'libs/head.php');
       </div>
     </div>
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
   <script>
     $('.cms-content .wp-caption img, .cms-content p img').each(function() {
       if ($(this).closest('.img-2col__photo').length === 0) {

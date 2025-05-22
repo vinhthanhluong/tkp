@@ -981,12 +981,12 @@
   }
   &.decor03 {
     top: 622px;
-    left: 269px;
+    left: 279px;
     @include PC {
       @include max-screen(1440px) {
-        width: calc(193 / 1440 * 100vw);
+        width: calc(133 / 1440 * 100vw);
         top: calc(622 / 1440 * 100vw);
-        left: calc(269 / 1440 * 100vw);
+        left: calc(279 / 1440 * 100vw);
       }
     }
   }
@@ -1039,23 +1039,23 @@
 .sight-decor {
   position: absolute;
   &.decor01 {
-    top: -167px;
+    top: -129px;
     left: 82px;
     @include PC {
       @include max-screen(1440px) {
-        width: calc(305 / 1440 * 100vw);
-        top: calc(-167 / 1440 * 100vw);
+        width: calc(306 / 1440 * 100vw);
+        top: calc(-129 / 1440 * 100vw);
         left: calc(82 / 1440 * 100vw);
       }
     }
   }
   &.decor02 {
-    top: -120px;
+    top: -80px;
     left: 1040px;
     @include PC {
       @include max-screen(1440px) {
-        width: calc(306 / 1440 * 100vw);
-        top: calc(-120 / 1440 * 100vw);
+        width: calc(245 / 1440 * 100vw);
+        top: calc(-80 / 1440 * 100vw);
         left: calc(1040 / 1440 * 100vw);
       }
     }

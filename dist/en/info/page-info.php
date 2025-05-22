@@ -1,22 +1,23 @@
+<?php /* Template Name: Privacy Policy */ ?>
 <?php
 $thisPageName = 'info';
 
-$post_id = get_the_ID();
+$post_id = '202';
 $faq01 = get_field('faq01', $post_id);
 $faq02 = get_field('faq02', $post_id);
 $faq03 = get_field('faq03', $post_id);
 $faq04 = get_field('faq04', $post_id);
 
-include(APP_PATH . 'libs/head.php'); ?>
-</head>
+include(APP_PATH_EN . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/info.min.css?v=<?php echo APP_VER ?>">
+</head>
 
 <body id="info">
-  <?php include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
-        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
         <li>施設情報</li>
       </ul>
     </div>
@@ -359,7 +360,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <h2 class="c-ttl02__jp">よくあるご質問</h2>
           <span class="c-ttl02__en">Q&A</span>
         </div>
-        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARKの利⽤に<br class="sp">ついてよくあるご質問をまとめています。<br>こちらで確認できない内容は<br class="sp"><a href="<?php echo APP_URL; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
+        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARKの利⽤に<br class="sp">ついてよくあるご質問をまとめています。<br>こちらで確認できない内容は<br class="sp"><a href="<?php echo APP_URL_EN; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
         <div class="mod-tabs aos-init" data-aos="fade-up">
           <div class="nav-tabs">
             <ul>
@@ -480,7 +481,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
 </body>
 
 </html>

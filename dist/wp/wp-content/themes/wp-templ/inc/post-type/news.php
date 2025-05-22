@@ -24,7 +24,7 @@ function create_custom_post_type_news()
     // ),
     'rewrite'                 => true,
     'show_ui'                 => true,
-    'supports'                => array('title', 'editor', 'thumbnail', 'revisions'),
+    'supports'                => array('title', 'thumbnail', 'revisions'),
     'query_var'               => true,
     'menu_icon'               => 'dashicons-welcome-write-blog',
     'has_archive'             => true,

@@ -282,6 +282,37 @@ function wpc_keep_taxonomy_hierarchical($args, $idPost)
   return $args;
 }
 
+// get url
+function getUrlParts()
+{
+  $current_url = $_SERVER['REQUEST_URI'];
+  return explode('/', trim($current_url, '/'));
+}
+
+function redirectLang()
+{
+  $url_parts = getUrlParts();
+
+  $lang = isset($url_parts[0]) ? $url_parts[0] : '';
+  $path1 = isset($url_parts[1]) ? $url_parts[1] : '';
+  $path2 = isset($url_parts[2]) ? $url_parts[2] : '';
+
+  if ($lang != 'vi' && ($path1 == 'wine-dine' || $path1 == 'wellness-spa' || $path1 == 'about-us' || $path1 == 'privacy-policy') && !empty($path2)) {
+    redirect404();
+  }
+}
+
+function redirect404()
+{
+  global $wp_query;
+  $wp_query->set_404();
+  status_header(404);
+  get_template_part(404);
+  exit();
+}
+
+redirectLang();
+
 // remove unneeded files
 add_action('wp_enqueue_scripts', 'wpc_remove_core_libs', 100);
 function wpc_remove_core_libs()

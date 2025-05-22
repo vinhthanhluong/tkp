@@ -1,15 +1,18 @@
 <?php
 $thisPageName = 'guide';
-include(APP_PATH . 'libs/head.php'); ?>
+include_once(dirname(dirname(__DIR__)) . '/app_config.php');
+include(APP_PATH_EN . 'libs/head.php');
+?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/guide.min.css?v=<?php echo APP_VER ?>">
+
 </head>
 
 <body id="guide" class="guide">
-  <?php include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
-        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
         <li>施設案内</li>
       </ul>
     </div>
@@ -58,7 +61,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Spa Sand</strong>
             </div>
             <p class="desc">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供するサンドスパ。広大な砂湯施設の中にBarや無料で利用できる足湯も設置。別府の新名所として、極上のリラックス体験を提供します。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL_EN ?>" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -81,7 +84,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Shop</strong>
             </div>
             <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
-            <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn01">
+            <a href="<?php echo APP_URL_EN ?>guide/shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -104,7 +107,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Restaurant</strong>
             </div>
             <p class="desc">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を楽しめます。</p>
-            <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn01">
+            <a href="<?php echo APP_URL_EN ?>guide/restaurant/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -125,7 +128,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Stay</strong>
             </div>
             <p class="desc">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL_EN ?>" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -208,7 +211,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>guide/restaurant/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -239,7 +242,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -270,7 +273,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>guide/shop/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -301,7 +304,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -311,7 +314,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
     <!-- Popup -->
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
 </body>
 
 </html>

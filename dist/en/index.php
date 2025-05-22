@@ -1,14 +1,15 @@
 <?php
 $thisPageName = 'top';
+include('../wp/wp-load.php');
 
 $cat_search  = (!empty($_GET['newscat'])) ? $_GET['newscat'] : array();
 
-include(APP_PATH . 'libs/head.php'); ?>
+include(APP_PATH_EN . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/top.min.css?v=<?php echo APP_VER ?>">
 </head>
 
 <body id="top" class="top">
-  <?php include(APP_PATH . 'libs/header.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="sec-mv">
       <ul class="mv-video">
@@ -70,7 +71,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
           </h2>
           <?php if (!empty($news_categories)) { ?>
-            <form method="get" class="searchform" id="searchform" action="<?php echo APP_URL ?>" name="searchform">
+            <form method="get" class="searchform" id="searchform" action="<?php echo APP_URL_EN ?>" name="searchform">
               <ul class="news-cate aos-init" data-aos="fade-up">
                 <li class="item is-active">
                   <input type="radio" name="newscat" id="newscat00" value="">
@@ -133,7 +134,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <?php } ?>
           </ul>
           <div class="news-btn aos-init" data-aos="fade-up">
-            <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-center">
+            <a href="<?php echo APP_URL_EN ?>news/" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -146,7 +147,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-park">
       <div class="t-wcm01">
         <div class="park-wrap">
-          <?php include(APP_PATH . 'libs/mod_park.php'); ?>
+          <?php include(APP_PATH_EN . 'libs/mod_park.php'); ?>
           <div class="park-ctn">
             <div class="park-ttl">
               <span class="park-ttl01">
@@ -183,7 +184,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="txt anim-inner">日帰りから宿泊、夜の利用まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
               </div>
               <div class="how-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
-                <a href="<?php echo APP_URL ?>ways/" class="c-btn01 is-center">
+                <a href="<?php echo APP_URL_EN ?>ways/" class="c-btn01 is-center">
                   <i class="arr01"></i>
                   <span>楽しみ方を見る</span>
                   <i class="arr02"></i>
@@ -266,7 +267,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="txt anim-inner">SHONIN PARKの周辺には、別府市を代表する観光スポットや魅力的な施設が多数！<br>周辺観光を組み合わせて充実した日をお過ごしください。</p>
           </div>
           <div class="sight-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
-            <a href="<?php echo APP_URL ?>info/#info03" class="c-btn01 is-center">
+            <a href="<?php echo APP_URL_EN ?>info/#info03" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>周辺観光を見る</span>
               <i class="arr02"></i>
@@ -408,7 +409,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
 
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/page/top.min.js?v=<?php echo APP_VER ?>"></script>
   <script>
     $('.news-cate input').on("change", function() {
