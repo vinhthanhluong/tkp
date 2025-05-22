@@ -1,4 +1,6 @@
 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5L4KRFL6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header id="header" class="header">
@@ -146,7 +148,7 @@
         </li>
       </ul>
     </div>
-    <div class="btnLang">
+    <!-- <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -166,7 +168,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="menu_overlay"></div>
   </div>
 </header>

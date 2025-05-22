@@ -253,7 +253,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
             <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor01.png" rel="js-lazy" width="306" height="144" alt="">
           </div>
           <div class="sight-decor decor02 pc aos-init anim-scale01" data-aos="">
-            <img src="<?php echo createSVG(245, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="245" height="140" alt="レストランイラスト">
+            <img src="<?php echo createSVG(245, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="245" height="140" alt="宿泊コテージイラスト">
           </div>
           <div class="t-ttlbox01">
             <span class="ttl01 aos-init anim-ttl01" data-aos="">
@@ -280,7 +280,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
           <div class="sight-group">
             <ul class="lst-thumb">
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="十文字原展望台（昼）">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="道の駅 たのうらら">
@@ -304,7 +304,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="別府ロープウェイ">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="十文字原展望台（夜）">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="地獄めぐり（白池地獄）">
@@ -314,7 +314,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
           <div class="sight-group">
             <ul class="lst-thumb">
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb01.png" alt="十文字原展望台（昼）">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb02.png" alt="道の駅 たのうらら">
@@ -338,7 +338,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb08.png" alt="別府ロープウェイ">
               </li>
               <li class="item">
-                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="">
+                <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb09.png" alt="十文字原展望台（夜）">
               </li>
               <li class="item">
                 <img src="<?php echo APP_ASSETS; ?>img/top/sight_thumb10.png" alt="地獄めぐり（白池地獄）">
