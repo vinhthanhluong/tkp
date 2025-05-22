@@ -123,7 +123,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </dl>
               <dl>
                 <dt>
-                  <h3>Sand Spa<br class="pc">(砂湯・温泉)</h3>
+                  <h3>Sand SPA<br class="pc">(砂湯・温泉)</h3>
                 </dt>
                 <dd>10:00〜21:00（最終入館時間 20:30）</dd>
               </dl>
