@@ -1,6 +1,11 @@
 @charset 'UTF-8';
 @import "../utility/*";
 
+body {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
 .tit-box {
   margin-bottom: 42px;
   @include SP {

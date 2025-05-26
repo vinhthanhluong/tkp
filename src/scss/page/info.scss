@@ -2,7 +2,9 @@
 @import "../utility/*";
 
 #wrap {
-  overflow: hidden;
+  @include PC {
+    overflow: hidden;
+  }
 }
 .c-mainvisual {
   @include PC {
@@ -253,6 +255,9 @@
       margin: 30px 0 0;
       @include SP {
         margin: 15px 0 0;
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -265,6 +270,9 @@
       margin: 30px 0 0;
       @include SP {
         margin: 15px 0 0;
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -277,6 +285,9 @@
       margin: 30px 0 0;
       img {
         border-radius: 10px;
+        @include SP {
+          width: 100%;
+        }
       }
       @include SP {
         margin: 24px 0 0;

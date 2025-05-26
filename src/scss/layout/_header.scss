@@ -195,13 +195,14 @@ body:not(.fixHeader) {
     top: 20px;
     border-radius: 15px;
     width: calc(100% - 32px);
-    max-width: 343px;
+    // max-width: 343px;
     height: calc(100% - 40px);
     max-height: 601px;
   }
   .inLayer {
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     @include flexbox;
     @include flex-direction(column);
     @include PC {

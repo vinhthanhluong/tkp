@@ -2,40 +2,41 @@
 @import "../utility/*";
 
 .short-desc {
-	margin-top: -51px;
-	text-align: center;
-	@include font(18);
-	line-height: 30px;
-	font-weight: 700;
-	letter-spacing: 2.1px;
-	margin-bottom: 168px;
-	a {
-		text-decoration: underline;
-	}
-	@include SP {
-		margin-top: -31px;
-		padding: 0 10px;
-		@include font(14);
-		line-height: 28px;
-		letter-spacing: 1.6px;
-		margin-bottom: 77px;
-	}
+  margin-top: -51px;
+  text-align: center;
+  @include font(18);
+  line-height: 30px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+  margin-bottom: 168px;
+  a {
+    text-decoration: underline;
+  }
+  @include SP {
+    margin-top: -31px;
+    padding: 0 10px;
+    @include font(14);
+    line-height: 28px;
+    letter-spacing: 1.6px;
+    margin-bottom: 77px;
+  }
 }
 
 .sec-form {
-	position: relative;
-	padding: 112px 20px 188px;
-	@include SP {
-		padding: 76px 16px 83px;
-	}
-	.img-step {
-		position: absolute;
-		top: -88px;
-		left: 50%;
-		transform: translate(-50%, 0);
-		@include SP {
-			top: -44px;
-			width: 87.2%;
-		}
-	}
+  position: relative;
+  padding: 112px 20px 188px;
+  @include SP {
+    padding: 76px 16px 83px;
+  }
+  .img-step {
+    position: absolute;
+    top: -88px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    @include SP {
+      top: -44px;
+      width: 87.2%;
+    }
+  }
 }

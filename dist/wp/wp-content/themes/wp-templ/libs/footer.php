@@ -20,17 +20,25 @@
           </ul>
           <ul class="f-navi">
             <li class="item"><a href="<?php echo APP_URL ?>news/">ニュース</a></li>
-            <li class="item"><a href="<?php echo APP_URL ?>info/#info02">アクセス</a></li>
+            <li class="item"><a href="<?php if ($thisPageName != 'info') {
+                                        echo APP_URL . 'info/';
+                                      } ?>#info02">アクセス</a></li>
           </ul>
         </div>
 
         <div class="col02-wrap02">
           <ul class="f-navi02">
-            <li class="item"><a href="<?php echo APP_URL ?>info/#info01">営業時間</a></li>
-            <li class="item"><a href="<?php echo APP_URL ?>info/#info03">周辺観光</a></li>
+            <li class="item"><a href="<?php if ($thisPageName != 'info') {
+                                        echo APP_URL . 'info/';
+                                      } ?>#info01">営業時間</a></li>
+            <li class="item"><a href="<?php if ($thisPageName != 'info') {
+                                        echo APP_URL . 'info/';
+                                      } ?>#info03">周辺観光</a></li>
           </ul>
           <ul class="f-navi02">
-            <li class="item"><a href="<?php echo APP_URL ?>info/#info04">よくあるご質問</a></li>
+            <li class="item"><a href="<?php if ($thisPageName != 'info') {
+                                        echo APP_URL . 'info/';
+                                      } ?>#info04">よくあるご質問</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
           </ul>
         </div>

@@ -7,6 +7,12 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="ways">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li>楽しみ方</li>
+      </ul>
+    </div>
     <div class="c-mainvisual">
       <div class="mv-inner">
         <div class="img-wave-blue">

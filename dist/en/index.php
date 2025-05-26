@@ -250,7 +250,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
       <div class="t-wcm02">
         <div class="sec-sight__inner">
           <div class="sight-decor decor01 pc aos-init anim-scale01" data-aos="">
-            <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor01.png" rel="js-lazy" width="306" height="144" alt="">
+            <img src="<?php echo createSVG(306, 192) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor01.png" rel="js-lazy" width="306" height="144" alt="レストランイラスト">
           </div>
           <div class="sight-decor decor02 pc aos-init anim-scale01" data-aos="">
             <img src="<?php echo createSVG(245, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/sight_decor02.png" rel="js-lazy" width="245" height="140" alt="宿泊コテージイラスト">
