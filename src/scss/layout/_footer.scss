@@ -117,6 +117,9 @@
     }
     .col02-wrap01 {
       @include flexbox;
+      @include PC {
+        margin-left: -4px;
+      }
       .f-navi {
         &:nth-child(1) {
           @include PC {
@@ -178,6 +181,7 @@
     @include justify-content(space-between);
     @include PC {
       margin-top: 21px;
+      margin-right: -10px;
     }
     @include SP {
       margin-top: 15px;
@@ -185,7 +189,7 @@
     .f-navi02 {
       &:nth-child(1) {
         @include PC {
-          width: 37%;
+          width: 40%;
         }
         @include SP {
           width: 60%;
@@ -193,7 +197,7 @@
       }
       &:nth-child(2) {
         @include PC {
-          width: 51%;
+          width: 48%;
         }
         @include SP {
           flex: 1;

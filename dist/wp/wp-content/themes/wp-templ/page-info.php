@@ -393,7 +393,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <?php } ?>
                     <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
-                        <p><?php echo $answer; ?></p>
+                        <?php echo $answer; ?>
                       </div>
                     <?php } ?>
                   </div>
@@ -418,7 +418,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <?php } ?>
                     <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
-                        <p><?php echo $answer; ?></p>
+                        <?php echo $answer; ?>
                       </div>
                     <?php } ?>
                   </div>
@@ -442,7 +442,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <?php } ?>
                     <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
-                        <p><?php echo $answer; ?></p>
+                        <?php echo $answer; ?>
                       </div>
                     <?php } ?>
                   </div>
@@ -466,7 +466,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <?php } ?>
                     <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
-                        <p><?php echo $answer; ?></p>
+                        <?php echo $answer; ?>
                       </div>
                     <?php } ?>
                   </div>

@@ -2413,6 +2413,14 @@ a.c-link {
           color: #fff;
           @include font(15, 26, 0.1, 500);
         }
+        a {
+          color: #fff;
+          text-decoration: underline;
+          @include HOVER {
+            opacity: 1;
+            text-decoration: none;
+          }
+        }
       }
     }
   }

@@ -24,7 +24,7 @@ $(function () {
       .includes("reload");
   setTimeout(function () {
     handleAnchor(isReload);
-  }, 1500);
+  }, 500);
 });
 
 function handleAnchor(isReload = false) {
