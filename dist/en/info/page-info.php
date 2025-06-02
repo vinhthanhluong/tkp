@@ -165,7 +165,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
         </div>
         <div class="block01 aos-init" data-aos="fade-up">
           <div class="block01__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13336.660713111058!2d131.501546!3d33.3144969!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7429cb1b081%3A0xd8c33740847482de!2z5LiK5Lq644O25rWc5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1747289828965!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5296.497497479467!2d131.5012107!3d33.3138848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a94de4fdd5%3A0x5e4099a53d0100aa!2sSHONIN%20PARK!5e1!3m2!1sen!2s!4v1748589203279!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="block01_info">
             <div class="info01">
@@ -173,7 +173,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
               <p class="txt01">〒874-0023 大分県別府市上人ケ浜町795-1</p>
             </div>
             <p class="btn01">
-              <a href="https://maps.app.goo.gl/NJRoi8aJ2yiwogVr7" class="c-btn01" target="_blank" rel="noopener nofollow">
+              <a href="https://maps.app.goo.gl/Bd4oWGeGLXp5BEjN6" class="c-btn01" target="_blank" rel="noopener nofollow">
                 <i class="arr01"></i>
                 <span>Google map</span>
                 <i class="arr02"></i>

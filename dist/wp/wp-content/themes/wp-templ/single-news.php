@@ -9,6 +9,11 @@ $sg_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($sg_id), 'full');
 $sg_terms = get_the_terms($sg_id, 'newscat');
 $editor = get_field('editor', $sg_id);
 if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post->post_content, false);
+
+$titlepage = 'ニュース・イベントタイトルが入ります｜SHONIN PARK';
+$desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($post->post_content)), 0, 120);
+$desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
+
 include(APP_PATH . 'libs/head.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/news.min.css?v=<?php echo APP_VER ?>">
