@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+// Common
+#wrap02 {
+  @include PC {
+    padding-top: 80px;
+  }
+  @include SP {
+    padding-top: 64px;
+  }
+}
+
+.ishinoya {
+  #wrap02 {
+    padding-top: 0;
+  }
+}
+// Common
+// Section Mainvisual
+.sec-mv {
+}
+// Section Mainvisual
