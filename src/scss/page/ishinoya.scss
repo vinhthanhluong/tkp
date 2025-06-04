@@ -16,8 +16,209 @@
     padding-top: 0;
   }
 }
+
+.i-wcm01 {
+  // 1170px
+  width: 100%;
+  max-width: 1218px;
+  padding: 0 24px;
+  margin: 0 auto;
+  @include SP {
+    @include max-screen(375px) {
+      padding: 0 calc(24 / 375 * 100vw);
+    }
+  }
+}
+.i-bg {
+  background: #fff;
+}
+.i-ttl01 {
+}
 // Common
 // Section Mainvisual
 .sec-mv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+}
+.mv-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.mv-ctn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-end);
+  @include PC {
+    padding-bottom: 120px;
+  }
+  @include SP {
+    padding-bottom: 151px;
+  }
+}
+
+.mv-ttl {
+  position: relative;
+  @include font(70, 101, 0.12, 700);
+  color: #fff;
+  width: 100%;
+  transform: translate3d(0, 40px, 0);
+  opacity: 0;
+  transition: all 0.3s ease;
+  @include PC {
+    padding: 0 0 59px 120px;
+    max-width: 748px;
+    @include max-screen(1440px) {
+      font-size: calc(70 / 1440 * 100vw);
+      padding: 0 0 calc(59 / 1440 * 100vw) calc(120 / 1440 * 100vw);
+      max-width: calc(748 / 1440 * 100vw);
+    }
+  }
+  @include SP {
+    @include font(36, 56);
+    padding: 0 24px 35px;
+    max-width: 375px;
+    margin: 0 auto;
+    @include max-screen(375px) {
+      font-size: calc(36 / 375 * 100vw);
+      padding: 0 calc(24 / 375 * 100vw) calc(35 / 375 * 100vw);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    width: 0;
+    transition: all 0.3s ease;
+    transition-delay: 0.5s;
+  }
+  .row {
+    display: block;
+  }
+}
+.mv-scrolldown {
+  position: absolute;
+  @include ffGT;
+  @include font(15, 20, 0, 500);
+  color: #fff;
+  @include PC {
+    padding-right: 57px;
+    right: 100px;
+    bottom: 106px;
+    @include max-screen(1440px) {
+      right: calc(100 / 1440 * 100vw);
+      bottom: calc(106 / 1440 * 100vw);
+      font-size: calc(15 / 1440 * 100vw);
+      padding-right: calc(57 / 1440 * 100vw);
+    }
+  }
+  @include SP {
+    padding-bottom: 51px;
+    right: calc(50% - 40px);
+    bottom: 0;
+  }
+  .circle {
+    display: block;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    // border-radius: 100%;
+    // background-color: rgba(255, 255, 255, 0.15);
+    // animation: scrolldow 1.5s ease-in-out infinite;
+    @include PC {
+      right: 0;
+      top: calc(50% - 36px);
+      @include max-screen(1440px) {
+        width: calc(72 / 1440 * 100vw);
+        height: calc(72 / 1440 * 100vw);
+        top: calc(50% - (36 / 1440 * 100vw));
+      }
+    }
+    @include SP {
+      right: calc(50% - 35px);
+      bottom: -36px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      background-color: #fff;
+      @include PC {
+        width: 6px;
+        height: 6px;
+        top: calc(50% - 3px);
+        left: calc(50% - 3px);
+        @include max-screen(1440px) {
+          width: calc(6 / 1440 * 100vw);
+          height: calc(6 / 1440 * 100vw);
+          top: calc(50% - (3 / 1440 * 100vw));
+          left: calc(50% - (3 / 1440 * 100vw));
+        }
+      }
+      @include SP {
+        width: 10px;
+        height: 10px;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translate3d(-50%, -50%, 0);
+      transition: all 0.3s ease;
+    }
+  }
+}
+.is-loaded {
+  .mv-ttl {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    &::before {
+      @include PC {
+        width: calc(100% - 9px);
+        @include max-screen(1440px) {
+          width: calc(100% - (9 / 1440 * 100vw));
+        }
+      }
+      @include SP {
+        width: calc(100% - 34px);
+        @include max-screen(375px) {
+          width: calc(100% - (34 / 375 * 100vw));
+        }
+      }
+    }
+  }
 }
 // Section Mainvisual

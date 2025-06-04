@@ -58,9 +58,11 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li style="background: #f2f2f2;">$gray02: #f2f2f2;</li>
           <li style="background: #f5bb1e; color: #fff;">$yellow01: #f5bb1e;</li>
           <li style="background: #ffdea1;">$yellow02: #ffdea1;</li>
-          <li style="background: #FFCB6A;">$yellow03: #FFCB6A;</li>
+          <li style="background: #ffcb6a;">$yellow03: #ffcb6a;</li>
+          <li style="background: #b2a46f;">$yellow04: #b2a46f;</li>
           <li style="background: #b85632; color: #fff;">$orange01: #b85632;</li>
           <li style="background: #755c49; color: #fff;">$brown01: #755c49;</li>
+          <li style="background: #231816; color: #fff;">$brown02: #231816;</li>
         </ul>
 
         <p class="demo-ttl">.c-bg-wave01</p>
@@ -101,7 +103,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </span>
             <i class="arr02"></i>
           </a>
-  
+
           <p class="demo-ttl">.c-btn02</p>
           <a href="<?php echo APP_URL ?>" class="c-btn02">
             <i class="arr01"></i>

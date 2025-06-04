@@ -6,8 +6,9 @@
 <header id="header02" class="header02">
   <div class="inHeader">
     <div id="logo">
-      <a class="logo-link" href="<?php echo APP_URL ?>">
-        <img src="<?php echo APP_ASSETS ?>img/common/logo02.svg" alt="logo">
+      <a class="logo-link" href="<?php echo APP_URL ?>guide/ishinoya/">
+        <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo02.svg" alt="logo">
+        <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="logo">
       </a>
       <a class="home-link" href="<?php echo APP_URL; ?>">
         <span class="txt">SHONIN PARK</span>
@@ -17,19 +18,19 @@
 
     <div class="layerMenu">
       <div class="inLayer">
+        <p class="close_layer sp"></p>
+        <a class="gLogo sp" href="<?php echo APP_URL ?>guide/ishinoya/">
+          <img src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="logo">
+        </a>
         <ul class="gNavi">
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>"><span>お部屋</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>"><span>温泉・砂湯</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>"><span>お食事</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL ?>"><span>お問い合わせ</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/rooms/"><span>お部屋</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/spa/"><span>温泉・砂湯</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/cuisine/"><span>お食事</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/contact/"><span>お問い合わせ</span></a></li>
         </ul>
-        <div class="gLang">
+        <div class="gLang pc">
           <div class="gLang-item hasSub">
             <p class="gLang-item__link">
-              <i class="icon">
-                <img class="main" src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_lang_main.svg" width="24" height="24" rel="js-lazy" alt="">
-                <img class="circle" src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_lang_circle.svg" width="24" height="24" rel="js-lazy" alt="">
-              </i>
               <span>Language</span>
             </p>
             <div class="navSub">
@@ -46,10 +47,16 @@
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>予約確認</span></a></li>
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>宿泊予約</span></a></li>
         </ul>
-
+        <ul class="gLangSp sp">
+          <li class="gLangSp-item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
+          <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">English</a></li>
+          <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">한국어</a></li>
+          <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">中文簡体</a></li>
+        </ul>
+        <a class="gLinkSp sp" href="<?php echo APP_URL; ?>">
+          <span class="txt">SHONIN PARK</span>
+        </a>
       </div>
     </div>
-
-    <div class="menu_overlay"></div>
   </div>
 </header>
