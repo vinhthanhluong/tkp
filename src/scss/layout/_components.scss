@@ -846,6 +846,50 @@ a.c-link {
     }
   }
 }
+.c-btn04 {
+  width: 176px;
+  min-height: 44px;
+  @include font(14,20,100,700);
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  padding: 11px 10px;
+  text-align: center;
+  color: #231816;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s ease;
+  }
+  &::after {
+    border: 1px solid #231816;
+    background: #fff;
+  }
+  &::before {
+    background: #B2A46F;
+    transform: translateX(-110%);
+    z-index: 1;
+  }
+  &>span {
+    position: relative;
+    z-index: 2;
+  }
+  @include HOVER {
+    opacity: 1;
+    color: #fff;
+    &::before {
+      transform: translateX(0);
+    }
+  }
+}
 
 /* ===================== TITLE ===================== */
 .c-ttl01 {
@@ -1029,6 +1073,29 @@ a.c-link {
     @include SP {
       width: 24px;
       margin: 1px 10px 0 0;
+    }
+  }
+}
+.c-ttl04 {
+  .c-ttl04__jp {
+    @include font("",1.4,50,700);
+    color: #B2A46F;
+    display: block;
+    @include PC {
+      @include font(16);
+    }
+    @include SP {
+      margin-bottom: 4px;
+    }
+  }
+  .c-ttl04__en {
+    @include font("",1.5,0,500);
+    @include ffGT;
+    @include PC {
+      @include font(60);
+    }
+    @include SP {
+      @include font(36);
     }
   }
 }
