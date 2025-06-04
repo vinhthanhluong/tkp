@@ -1,0 +1,387 @@
+@charset 'UTF-8';
+@import "../utility/*";
+.c-keyvisual {
+  @include PC {
+    margin-bottom: 50px;
+  }
+  @include SP {
+    margin-bottom: 43px;
+  }
+}
+
+.sec-tabs {
+  @include PC {
+    margin-bottom: 50px;
+  }
+  @include SP {
+    margin-bottom: 43px;
+  }
+}
+.tabs-list {
+  @include flexbox;
+  @include flex-wrap;
+  @include PC {
+    @include justify-content(center);
+  }
+  @include SP {
+    @include justify-content(space-between);
+  }
+  &>li {
+    @include PC {
+      width: 320px;
+      margin: 10px 20px;
+    }
+    @include SP {
+      width: calc(50% - 5px);
+      margin: 5px 0;
+    }
+  }
+  .tab-item {
+    background: #fff;
+    border: 1px solid #231816;
+    @include font("","",100,700);
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    padding: 5px 10px;
+    color: #231816;
+    transition: 0.26s ease;
+    @include PC {
+      min-height: 60px;
+      @include font(18,20);
+    }
+    @include SP {
+      min-height: 50px;
+      @include font(16,20);
+    }
+    &.is-current {
+      background: #B2A46F;
+      border-color: #B2A46F;
+      color: #fff;
+    }
+    @include HOVER {
+      opacity: 1;
+      background: #B2A46F;
+      border-color: #B2A46F;
+      color: #fff;
+    }
+  }
+}
+
+.sec-cuisine {
+  background: repeat-x 0 0/50px auto;
+  overflow: hidden;
+  @include PC {
+    padding: 100px 0 50px;
+  }
+  @include SP {
+    padding: 56px 0 44px;
+  }
+  .cuisine-ttl {
+    text-align: center;
+    @include font("","",100,700);
+    @include PC {
+      margin-bottom: 30px;
+      @include font(35,50);
+    }
+    @include SP {
+      margin-bottom: 16px;
+      @include font(24,36);
+    }
+    @include ANDR {
+      @include font(20)
+    }
+  }
+  .cuisine-desc {
+    @include font("","",100);
+    text-align: center;
+    @include PC {
+      margin-bottom: 80px;
+      @include font(18,34);
+    }
+    @include SP {
+      margin-bottom: 57px;
+      @include font(15,26);
+    }
+  }
+  .cuisine-list {
+    @include PC {
+      margin-bottom: 128px;
+    }
+    @include SP {
+      margin-bottom: 56px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .cuisine-item {
+    @include font("","",100);
+    @include PC {
+      margin-top: -79px;
+      @include flexbox;
+      @include justify-content(space-between);
+      @include font(16,28);
+    }
+    @include SP {
+      @include font(15,28);
+      margin-bottom: 49px;
+    }
+    &:first-child {
+      @include PC {
+        margin-top: 0;
+        .cuisine-info {
+          padding-top: 0;
+          margin-top: -2px;
+        }
+      }
+    }
+    &:last-child {
+      @include PC {
+        .cuisine-info {
+          padding-bottom: 0;
+        }
+      }
+      @include SP {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(2n) {
+      @include PC {
+        @include flex-direction(row-reverse);
+        .cuisine-img {
+          margin: 0 0 0 -35px;
+        }
+        .cuisine-info {
+          margin-right: 24px;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  .cuisine-img {
+    @include PC {
+      width: 530px;
+      min-height: 420px;
+      margin-right: -35px;
+    }
+    @include SP {
+      @include aspect-ratio(327, 267);
+      margin-bottom: 32px;
+    }
+  }
+  .cuisine-info {
+    @include PC {
+      width: 550px;
+      max-width: 550px;
+      padding-bottom: 178px;
+      margin: 177px 30px 0 0;
+    }
+    @include SP {
+    }
+  }
+  .cuisine-txt {
+    @include SP {
+      margin-right: -3px;
+    }
+  }
+  .c-ttl04 {
+    @include PC {
+      margin-bottom: 41px;
+    }
+    @include SP {
+      margin-bottom: 26px;
+    }
+  }
+  .cuisine-wrapper {
+    @include PC {
+      max-width: 1000px;
+      margin: 0 auto 42px;
+    }
+    @include SP {
+      margin-bottom: 20px;
+    }
+  }
+  .cuisine-head {
+    @include PC {
+      margin-bottom: 40px;
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+    }
+    @include SP {
+      margin-bottom: 24px;
+    }
+  }
+  .cuisine-logo {
+    @include PC {
+      width: 253px;
+      margin-top: -8px;
+    }
+    @include SP {
+      width: 202px;
+      margin: 0 auto 24px;
+    }
+  }
+  .cuisine-summary {
+    letter-spacing: 0.1em;
+    @include PC {
+      width: 600px;
+      max-width: 600px;
+      @include font(16,28);
+      margin-left: 30px;
+    }
+    @include SP {
+      @include font(15,28);
+    }
+  }
+  .cuisine-group {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+    }
+    @include SP {
+    }
+  }
+  .cuisine-time {
+    @include font(15,24,120);
+    @include PC {
+      @include flexbox;
+      @include flex-wrap;
+      @include flex(1);
+    }
+    @include SP {
+      margin-bottom: 26px;
+    }
+    dt,
+    dd {
+      @include PC {
+        margin-bottom: 9px;
+      }
+      @include SP {
+      }
+    }
+    dt {
+      font-weight: 700;
+      @include PC {
+        width: 100px;
+      }
+      @include SP {
+        margin-bottom: 2px;
+      }
+    }
+    dd {
+      @include PC {
+        width: calc(100% - 100px);
+      }
+      @include SP {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .c-btn04 {
+    @include PC {
+      margin-top: 5px;
+    }
+    @include SP {
+      margin: 0 auto;
+    }
+  }
+  .gallery-container {
+    overflow: hidden;
+    width: 100%;
+    @include PC {
+      margin-bottom: 41px;
+    }
+    @include SP {
+      margin-bottom: 32px;
+    }
+  }
+  .slider-gallery {
+    position: relative;
+  }
+  .gallery-pic {
+    padding-top: calc(450/1000*100%);
+  }
+  .thumb-pic {
+    padding-top: calc(100/140*100%);
+  }
+  .slider-thumb-wrapper {
+    max-width: 622px;
+    margin: -40px 0 0 39px;
+  }
+  .swiper-wrapper {
+    height: auto;
+  }
+  .swiper-group {
+    width: 178px;
+    position: absolute;
+    right: 0;
+    bottom: -67px;
+    padding: 0 0 20px 77px;
+  }
+  .swiper-pagination {
+    position: absolute;
+    left: 0;
+    top: -13px;
+    bottom: auto;
+    @include ffGT;
+    @include font(12,1.5,100,400);
+    color: #9f9b9a;
+    width: auto;
+    transform: none
+  }
+  .swiper-pagination-current {
+    @include font(20,28,100);
+    color: #231816;
+    width: 30px;
+    display: inline-block;
+  }
+}
+
+.swiper-progress-bar {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  height: 1px;
+  .slide-progress-bar {
+    position: absolute;
+    height: 2px;
+    background: #DDD;
+    width: auto;
+    clear: both;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #231816;
+      height: 100%;
+      width: 0;
+      content: "";
+      transition: 0.1s width linear;
+    }
+  }
+  &.active {
+    .slide-progress-bar {
+      opacity: 1;
+    }
+  }
+  &.animate {
+    .slide-progress-bar {
+      &:after {
+        transition: width linear;
+        transition-delay: unset;
+        width: 100%;
+        transition-duration: 5s;
+      }
+    }
+  }
+}
