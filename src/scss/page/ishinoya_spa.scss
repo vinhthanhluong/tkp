@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.c-keyvisual {
+  @include PC {
+    margin-bottom: 120px;
+  }
+  @include SP {
+    margin-bottom: 56px;
+  }
+}
+.c-intro {
+  @include PC {
+    padding-bottom: 100px;
+  }
+  @include SP {
+    padding-bottom: 64px;
+  }
+}
