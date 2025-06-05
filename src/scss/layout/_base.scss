@@ -302,6 +302,14 @@ body {
     padding-top: 50px;
   }
 }
+#wrap02 {
+  @include PC {
+    padding-top: 80px;
+  }
+  @include SP {
+    padding-top: 64px;
+  }
+}
 
 /*-----------------------------------------------------------
 COMMON

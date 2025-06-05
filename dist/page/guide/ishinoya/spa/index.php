@@ -7,7 +7,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
 <body id="ishinoya-spa">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
-  <main id="wrap">
+  <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/spa/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/spa/mv_sp.jpg">
       <div class="inner1170">
         <h1 class="keyvisual-ttl">
@@ -16,9 +16,9 @@ include(APP_PATH . 'libs/head.php'); ?>
         </h1>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
-            <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL_EN; ?>guide/">施設案内</a></li>
-            <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/">ISHINOYA 別府 / 石のや 別府</a></li>
+            <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+            <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
+            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA 別府 / 石のや 別府</a></li>
             <li>温泉・砂湯</li>
           </ul>
         </div>
@@ -75,7 +75,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
         </ul>
         <div class="aos-init" data-aos="fade-up">
-          <a class="intro-btn" href="#"><span>Sand SPAについて詳しく見る</span></a>
+          <a class="intro-btn" href="<?php echo APP_URL; ?>guide/spa/"><span>Sand SPAについて詳しく見る</span></a>
         </div>
       </div>
     </section>

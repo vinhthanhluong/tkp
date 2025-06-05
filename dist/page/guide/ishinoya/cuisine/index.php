@@ -8,7 +8,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
 <body id="ishinoya-cuisine">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
-  <main id="wrap">
+  <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv_sp.jpg">
       <div class="inner1170">
         <h1 class="keyvisual-ttl">
@@ -17,9 +17,9 @@ include(APP_PATH . 'libs/head.php'); ?>
         </h1>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
-            <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL_EN; ?>guide/">施設案内</a></li>
-            <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/">ISHINOYA 別府 / 石のや 別府</a></li>
+            <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+            <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
+            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA 別府 / 石のや 別府</a></li>
             <li>お食事</li>
           </ul>
         </div>
@@ -137,7 +137,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <dt>ご朝食</dt>
                   <dd>7:30~10:00（最終入場 9:00）</dd>
                 </dl>
-                <a class="c-btn04" href="#"><span>詳しく見る</span></a>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>guide/restaurant/"><span>詳しく見る</span></a>
               </div>
             </div>
           </div>

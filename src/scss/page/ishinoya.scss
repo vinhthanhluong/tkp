@@ -2,15 +2,6 @@
 @import "../utility/*";
 
 // Common
-#wrap02 {
-  @include PC {
-    padding-top: 80px;
-  }
-  @include SP {
-    padding-top: 64px;
-  }
-}
-
 .ishinoya {
   #wrap02 {
     padding-top: 0;

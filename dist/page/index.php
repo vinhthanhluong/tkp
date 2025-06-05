@@ -129,6 +129,8 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span>砂湯・温泉予約</span>
             <i class="arr02"></i>
           </a>
+          <p class="demo-ttl">.c-btn04</p>
+          <a class="c-btn04" href="#"><span>詳しく見る</span></a>
 
           <p class="demo-ttl">.c-ttl01</p>
           <h2 class="c-ttl01">
