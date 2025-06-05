@@ -350,6 +350,9 @@
   &.is-breadcrumb-white {
     color: #fff;
     padding: 0;
+    @include SP {
+      margin-right: -8px;
+    }
     li {
       &:first-child {
         a {
@@ -361,16 +364,41 @@
       &:not(:last-child) {
         &::after {
           @include SP {
-            margin-left: 8px;
+            margin-left: 0;
             margin-right: 3px;
           }
+        }
+      }
+      @include SP {
+        display: inline-block;
+        margin-right: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 14px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:first-child {
+          padding-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+        &::after {
+          display: none;
+        }
+        &::before {
+          content: "/";
+          position: absolute;
+          top: 0;
+          left: 0;
         }
       }
     }
     a {
       color: #fff;
       @include HOVER {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
   }
@@ -874,9 +902,11 @@ a.c-link {
     background: #fff;
   }
   &::before {
-    background: #B2A46F;
-    transform: translateX(-110%);
-    z-index: 1;
+    @include PC {
+      background: #B2A46F;
+      transform: translateX(-110%);
+      z-index: 1;
+    }
   }
   &>span {
     position: relative;
@@ -1082,9 +1112,10 @@ a.c-link {
     color: #B2A46F;
     display: block;
     @include PC {
-      @include font(16);
+      @include font(20);
     }
     @include SP {
+      @include font(16);
       margin-bottom: 4px;
     }
   }
@@ -2591,9 +2622,10 @@ a.c-link {
         }
         .intro-img {
           margin: 0 -135px 0 0;
+          @include max-screen(1400px) {
+            margin-right: vw-pc(-135px,1400);
+          }
         }
-      }
-      @include SP {
       }
     }
     .intro-ttl {
@@ -2610,6 +2642,9 @@ a.c-link {
       width: 655px;
       min-height: 535px;
       margin-left: -135px;
+      @include max-screen(1400px) {
+        margin-left: vw-pc(-135px,1400);
+      }
     }
     @include SP {
       @include aspect-ratio(327,267);
@@ -2681,8 +2716,16 @@ a.c-link {
       position: absolute;
       left: 0;
       top: 2px;
-      bottom: 2px;
       border-left: 3px solid #B2A46F;
+      @include PC {
+        bottom: 2px;
+        .is-windows & {
+          top: 1px;
+        }
+      }
+      @include SP {
+        bottom: 0;
+      }
     }
   }
   .intro-efficacy {
@@ -2724,7 +2767,7 @@ a.c-link {
           margin-top: vw-pc(80px,1200);
         }
         .intro-pic {
-          &:after {
+          &::after {
             left: 60px;
             right: -60px;
             @include max-screen(1200px) {
@@ -2740,12 +2783,7 @@ a.c-link {
       }
     }
     .intro-ttl {
-      @include PC {
-        margin-bottom: 15px;
-      }
-      @include SP {
-        margin-bottom: 15px;
-      }
+      margin-bottom: 15px;
     }
     .intro-desc {
       @include PC {
@@ -2768,7 +2806,7 @@ a.c-link {
       @include aspect-ratio(327,267);
       margin-bottom: 32px;
     }
-    &:after {
+    &::after {
       @include PC {
         content: "";
         position: absolute;
@@ -2818,7 +2856,7 @@ a.c-link {
       @include SP {
         padding-left: 48px;
       }
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         left: 0;

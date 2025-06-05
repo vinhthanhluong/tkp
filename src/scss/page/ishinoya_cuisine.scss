@@ -32,20 +32,21 @@
       margin: 10px 20px;
     }
     @include SP {
-      width: calc(50% - 5px);
+      width: calc(50% - 4.5px);
       margin: 5px 0;
     }
   }
   .tab-item {
     background: #fff;
-    border: 1px solid #231816;
     @include font("","",100,700);
     @include flexbox;
     @include align-items(center);
     @include justify-content(center);
     padding: 5px 10px;
     color: #231816;
-    transition: 0.26s ease;
+    transition: 0.5s ease;
+    position: relative;
+    overflow: hidden;
     @include PC {
       min-height: 60px;
       @include font(18,20);
@@ -55,15 +56,50 @@
       @include font(16,20);
     }
     &.is-current {
-      background: #B2A46F;
-      border-color: #B2A46F;
       color: #fff;
+      &::before {
+        @include PC {
+          transform: translateX(0);
+        }
+        @include SP {
+          opacity: 1;
+        }
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: 0.5s ease;
+    }
+    &::after {
+      border: 1px solid #231816;
+      background: #fff;
+    }
+    &::before {
+      background: #B2A46F;
+      z-index: 1;
+      @include PC {
+        transform: translateX(-110%);
+      }
+      @include SP {
+        opacity: 0;
+      }
+    }
+    &>span {
+      position: relative;
+      z-index: 2;
     }
     @include HOVER {
       opacity: 1;
-      background: #B2A46F;
-      border-color: #B2A46F;
       color: #fff;
+      &::before {
+        transform: translateX(0);
+      }
     }
   }
 }
@@ -100,8 +136,11 @@
       @include font(18,34);
     }
     @include SP {
-      margin-bottom: 57px;
       @include font(15,26);
+      margin: 0 -2px 57px;
+    }
+    @include ANDR {
+      @include font(13)
     }
   }
   .cuisine-list {
@@ -112,7 +151,12 @@
       margin-bottom: 56px;
     }
     &:last-child {
-      margin-bottom: 0;
+      @include PC {
+        margin-bottom: 50px;
+      }
+      @include SP {
+        margin-bottom: 20px;
+      }
     }
   }
   .cuisine-item {
@@ -177,8 +221,6 @@
       padding-bottom: 178px;
       margin: 177px 30px 0 0;
     }
-    @include SP {
-    }
   }
   .cuisine-txt {
     @include SP {
@@ -240,8 +282,6 @@
       @include flexbox;
       @include align-items(flex-start);
     }
-    @include SP {
-    }
   }
   .cuisine-time {
     @include font(15,24,120);
@@ -257,8 +297,6 @@
     dd {
       @include PC {
         margin-bottom: 9px;
-      }
-      @include SP {
       }
     }
     dt {
@@ -291,10 +329,10 @@
     }
   }
   .gallery-container {
-    overflow: hidden;
     width: 100%;
     @include PC {
-      margin-bottom: 41px;
+      overflow: hidden;
+      padding-bottom: 41px;
     }
     @include SP {
       margin-bottom: 32px;
@@ -302,26 +340,62 @@
   }
   .slider-gallery {
     position: relative;
+    @include PC {
+      padding-bottom: 67px;
+      @include max-screen(980px) {
+        padding-bottom: vw-pc(67px,980);
+      }
+    }
   }
   .gallery-pic {
-    padding-top: calc(450/1000*100%);
+    @include PC {
+      padding-top: calc(450/1000*100%);
+    }
+    @include SP {
+      @include aspect-ratio(327,230);
+    }
   }
   .thumb-pic {
-    padding-top: calc(100/140*100%);
+    @include PC {
+      padding-top: calc(100/140*100%);
+    }
+    @include SP {
+      @include aspect-ratio(84,60);
+    }
   }
   .slider-thumb-wrapper {
-    max-width: 622px;
-    margin: -40px 0 0 39px;
+    overflow: hidden;
+    @include PC {
+      max-width: 622px;
+      margin: -107px 0 0 39px;
+      @include max-screen(980px) {
+        margin-right: 231px;
+        margin-top: vw-pc(-107px,980);
+      }
+    }
+    @include SP {
+      margin: vw-sp(-19px) -24px 0 85px;
+      @include max-screen(375px) {
+        margin-right: calc(-24 / 375 * 100vw);
+      }
+    }
   }
   .swiper-wrapper {
     height: auto;
   }
   .swiper-group {
-    width: 178px;
     position: absolute;
-    right: 0;
-    bottom: -67px;
-    padding: 0 0 20px 77px;
+    @include PC {
+      width: 178px;
+      right: 0;
+      bottom: 0;
+      padding: 0 0 20px 78px;
+    }
+    @include SP {
+      left: -8px;
+      bottom: vw-sp(-25px);
+      width: 85px;
+    }
   }
   .swiper-pagination {
     position: absolute;
@@ -332,55 +406,70 @@
     @include font(12,1.5,100,400);
     color: #9f9b9a;
     width: auto;
-    transform: none
+    transform: none;
+    white-space: nowrap
   }
   .swiper-pagination-current {
     @include font(20,28,100);
     color: #231816;
-    width: 30px;
+    min-width: 32px;
+    padding-right: 2px;
     display: inline-block;
   }
-}
-
-.swiper-progress-bar {
-  position: relative;
-  width: 100%;
-  display: block;
-  z-index: 1;
-  height: 1px;
-  .slide-progress-bar {
+  .tab-wrapper {
+    position: relative;
+  }
+  .tab-content {
     position: absolute;
-    height: 2px;
-    background: #DDD;
-    width: auto;
-    clear: both;
-    opacity: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    &:after {
+    left: -999999999px;
+    width: 100%;
+    visibility: hidden;
+    &.is-current {
+      position: static;
+      left: auto;
+      visibility: visible;
+    }
+  }
+  .swiper-progress-bar {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: 1px;
+    .slide-progress-bar {
       position: absolute;
-      top: 0;
+      height: 1px;
+      background: #DDD;
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
       left: 0;
-      background: #231816;
-      height: 100%;
-      width: 0;
-      content: "";
-      transition: 0.1s width linear;
+      right: 0;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #231816;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
     }
-  }
-  &.active {
-    .slide-progress-bar {
-      opacity: 1;
+    &.active {
+      .slide-progress-bar {
+        opacity: 1;
+      }
     }
-  }
-  &.animate {
-    .slide-progress-bar {
-      &:after {
-        transition: width linear;
-        transition-delay: unset;
-        width: 100%;
-        transition-duration: 5s;
+    &.animate {
+      .slide-progress-bar {
+        &::after {
+          transition: width linear;
+          transition-delay: unset;
+          width: 100%;
+          transition-duration: 5s;
+        }
       }
     }
   }
