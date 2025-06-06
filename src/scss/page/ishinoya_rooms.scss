@@ -1,0 +1,718 @@
+@charset 'UTF-8';
+@import "../utility/*";
+
+.sec-rooms {
+  background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+  @include PC {
+    padding: 90px 0;
+  }
+  @include SP {
+    padding: 36px 0 60px;
+  }
+  .inner {
+    padding: 0 24px;
+    @include PC {
+      margin: 0 auto;
+      max-width: 1338px;
+    }
+    @include SP {
+      @include max-screen(375px) {
+        padding-left: calc(24 / 375 * 100vw);
+        padding-right: calc(24 / 375 * 100vw);
+      }
+    }
+  }
+  .rooms-list {
+    &>li {
+      @include PC {
+        margin-bottom: 20px;
+      }
+      @include SP {
+        margin-bottom: 12px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.c-txt-list {
+  @include flexbox;
+  @include flex-wrap;
+  font-weight: 700;
+  .icn {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background: no-repeat center center/auto 100%;
+    }
+  }
+}
+
+.anchor-list {
+  @include flexbox;
+  @include flex-wrap;
+  @include PC {
+    @include justify-content(center);
+    max-width: 1160px;
+    margin: 0 auto 90px;
+    @include max-screen(800px) {
+      @include justify-content(space-between);
+    }
+  }
+  @include SP {
+    @include justify-content(space-between);
+    margin: 0 -8px 36px;
+  }
+  &>li {
+    @include PC {
+      width: 25%;
+      padding: 10px;
+      @include max-screen(1023px) {
+        width: calc(100% / 3);
+      }
+      @include max-screen(800px) {
+        width: 50%;
+      }
+    }
+    @include SP {
+      width: calc(50% - 4.5px);
+      margin: 4px 0 5px;
+    }
+  }
+  .anchor-item {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    height: 100%;
+    background: #fff;
+    border: 1px solid #231816;
+    position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
+    @include PC {
+      padding: 11px 5px;
+    }
+    @include SP {
+      padding: 9px 2px;
+    }
+    @include HOVER {
+      opacity: 1;
+      background: #B2A46F;
+      color: #fff;
+      &::after {
+        border-right-color: #fff;
+        right: -1px;
+        bottom: -5px;
+      }
+      .c-txt-list {
+        .icn01::before {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon01_on.svg");
+        }
+        .icn02::before {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon02_on.svg");
+        }
+        .icn04::before {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon04_on.svg");
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transform: rotate(-135deg);
+      border-right: 8px solid #B2A46F;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      @include PC {
+        transition: 0.3s ease;
+        right: 2px;
+        bottom: -2px;
+      }
+      @include SP {
+        right: 1px;
+        bottom: -3px;
+        border-right-width: 7px;
+        border-top-width: 7px;
+        border-bottom-width: 7px;
+      }
+    }
+  }
+  .anchor-inner {
+    width: 100%;
+  }
+  .anchor-txt {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    @include PC {
+      margin-bottom: 1px;
+      @include font(16,26,100);
+      @include max-screen(1200px) {
+        @include font(14);
+      }
+    }
+    @include SP {
+      margin-bottom: 3px;
+      @include font(12,19);
+    }
+    @include ANDR {
+      @include font(10);
+    }
+  }
+  .c-txt-list {
+    @include font("","",0);
+    @include justify-content(center);
+    @include PC {
+      @include font(12,19);
+      margin-bottom: -3px;
+      @include max-screen(1200px) {
+        @include font(10);
+      }
+    }
+    @include SP {
+      @include font(10,14);
+      margin: 0 -2px;
+    }
+    @include ANDR {
+      @include font(8);
+    }
+    &>li {
+      @include PC {
+        margin: 0 7px 3px 6px;
+        @include max-screen(1200px) {
+          margin-left: 3px;
+          margin-right: 3px;
+        }
+      }
+      @include SP {
+        margin: 0 2px;
+      }
+    }
+    .icn {
+      @include PC {
+        padding-left: 23px;
+        @include max-screen(1200px) {
+          padding-left: 20px;
+        }
+      }
+      @include SP {
+        padding-left: 15px;
+      }
+      @include ANDR {
+        padding-left: 14px;
+      }
+      &::before {
+        @include PC {
+          width: 20px;
+          height: 22px;
+          margin-top: -11px;
+          transition: 0.5s ease;
+          @include max-screen(1200px) {
+            width: 16px;
+            height: 18px;
+            margin-top: -9px;
+          }
+        }
+        @include SP {
+          width: 14px;
+          height: 18px;
+          margin-top: -8px;
+        }
+        @include ANDR {
+          width: 12px;
+          height: 16px;
+          margin-top: -7px;
+        }
+      }
+    }
+    .icn01 {
+      &::before {
+        @include PC {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon01.svg");
+        }
+        @include SP {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon01_sp.svg");
+        }
+      }
+    }
+    .icn02 {
+      &::before {
+        @include PC {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon02.svg");
+        }
+        @include SP {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon02_sp.svg");
+        }
+      }
+    }
+    .icn03 {
+      &::before {
+        background-image: url($img_url + "img/ishinoya/rooms/icon03.svg");
+      }
+    }
+    .icn04 {
+      &::before {
+        @include PC {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon04.svg");
+          margin-top: -13px;
+          @include max-screen(1200px) {
+            margin-top: -10px;
+          }
+        }
+        @include SP {
+          background-image: url($img_url + "img/ishinoya/rooms/a_icon04_sp.svg");
+        }
+      }
+    }
+  }
+}
+
+.rooms-item {
+  background: #fff;
+  @include PC {
+    @include flexbox;
+    @include justify-content(space-between);
+    padding: 60px;
+    @include max-screen(1040px) {
+      padding: vw-pc(50px,1040);
+    }
+  }
+  @include SP {
+    padding: 24px 24px 32px;
+  }
+  .rooms-ttl {
+    @include font("","",50,700);
+    @include PC {
+      margin-bottom: 15px;
+      @include font(35,1.6);
+      @include max-screen(1040px) {
+        font-size: vw-pc(34px,1023);
+      }
+    }
+    @include SP {
+      margin-bottom: 15px;
+      @include font(22,35);
+    }
+    @include ANDR {
+      @include font(18);
+    }
+  }
+  .rooms-desc {
+    @include font("","",100);
+    @include PC {
+      margin-bottom: 19px;
+      @include font(16,28);
+    }
+    @include SP {
+      margin-bottom: 12px;
+      @include font(13,25);
+    }
+  }
+  .rooms-img {
+    @include PC {
+      width: calc(590/1170*100%);
+      padding-top: calc(350/1170*100%);
+    }
+    @include SP {
+      @include aspect-ratio(279,196);
+      margin-bottom: 24px;
+    }
+  }
+  .rooms-info {
+    @include PC {
+      width: 500px;
+      max-width: 500px;
+      padding: 30px 0;
+      -webkit-align-self: center;
+      align-self: center;
+      margin-left: 30px;
+    }
+  }
+  .c-btn04 {
+    width: 156px;
+    @include PC {
+      margin-top: 40px;
+    }
+    @include SP {
+      margin-top: 23px;
+    }
+  }
+  .c-txt-list {
+    @include font("","",100);
+    @include PC {
+      @include font(16,28);
+      @include max-screen(980px) {
+        @include font(13);
+      }
+    }
+    @include SP {
+      @include font(13,21);
+      margin-left: -2px;
+    }
+    @include ANDR {
+      @include font(11);
+    }
+    &>li {
+      @include PC {
+        margin-right: 28px;
+        @include max-screen(1023px) {
+          margin-right: 15px;
+        }
+      }
+      @include SP {
+        margin-right: 15px;
+        @include ANDR {
+          margin-right: 10px;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .icn {
+      @include PC {
+        padding-left: 31px;
+        @include max-screen(980px) {
+          padding-left: 22px;
+        }
+      }
+      @include SP {
+        padding-left: 28px;
+        @include ANDR {
+          padding-left: 22px;
+        }
+      }
+      &::before {
+        @include PC {
+          width: 22px;
+          height: 28px;
+          margin-top: -14px;
+          @include max-screen(980px) {
+            width: 16px;
+            height: 22px;
+            margin-top: -11px;
+          }
+        }
+        @include SP {
+          width: 24px;
+          height: 24px;
+          margin-top: -10px;
+        }
+        @include ANDR {
+          width: 20px;
+          height: 20px;
+          margin-top: -9px;
+        }
+      }
+    }
+    .icn01 {
+      &::before {
+        background-image: url($img_url + "img/ishinoya/rooms/icon01.svg");
+      }
+    }
+    .icn02 {
+      &::before {
+        background-image: url($img_url + "img/ishinoya/rooms/icon02.svg");
+      }
+    }
+    .icn03 {
+      &::before {
+        background-image: url($img_url + "img/ishinoya/rooms/icon03.svg");
+      }
+    }
+    .icn04 {
+      &::before {
+        background-image: url($img_url + "img/ishinoya/rooms/icon04.svg");
+      }
+    }
+  }
+}
+
+// Detail
+.sec-rooms-archive {
+  @include PC {
+    padding: 15px 0 114px;
+  }
+  @include SP {
+    padding: 50px 0 64px;
+  }
+  .inner1170 {
+    @include PC {
+      max-width: 1328px;
+    }
+  }
+  .c-breadcrumb {
+    padding: 0;
+    @include PC {
+      max-width: 1170px;
+      margin: 0 auto 75px;
+    }
+    @include SP {
+      margin-top: 0;
+      margin-bottom: 37px;
+    }
+  }
+  .archive-row {
+    @include PC {
+      @include flexbox;
+      @include justify-content(space-between);
+      @include align-items(flex-start);
+    }
+  }
+  .archive-left {
+    @include PC {
+      width: calc(665/1280*100%);
+      padding-right: 40px;
+      @include max-screen(1200px) {
+        padding-right: vw-pc(40px,980)
+      }
+    }
+    @include SP {
+      margin-bottom: 25px;
+    }
+  }
+  .archive-right {
+    @include PC {
+      width: 535px;
+      max-width: 535px;
+      margin-left: 30px;
+    }
+  }
+  .archive-content {
+    @include PC {
+      max-width: 480px;
+    }
+  }
+  .archive-ttl {
+    @include font("","",50,700);
+    @include PC {
+      margin-bottom: 30px;
+      @include font(36,50);
+      @include max-screen(980px) {
+        font-size: vw-pc(32px,980)
+      }
+    }
+    @include SP {
+      @include font(26,36);
+      margin-bottom: 24px;
+    }
+  }
+  .archive-desc {
+    @include font("","",100);
+    @include PC {
+      @include font(16,28);
+      margin-bottom: 15px;
+    }
+    @include SP {
+      @include font(15,28);
+      margin-bottom: 11px;
+    }
+  }
+  .archive-data {
+    @include font(15,24,120);
+    @include PC {
+      @include flexbox;
+      @include flex-wrap;
+      @include max-screen(1023px) {
+        @include font(13);
+      }
+      @include max-screen(800px) {
+        @include font(12);
+      }
+    }
+    dt,
+    dd {
+      @include PC {
+        margin-bottom: 6px;
+      }
+    }
+    dt {
+      font-weight: 700;
+      @include PC {
+        width: 176px;
+        padding-right: 20px;
+        @include max-screen(1023px) {
+          width: 120px;
+          padding-right: 10px;
+        }
+      }
+      @include SP {
+        margin-bottom: 4px;
+      }
+    }
+    dd {
+      @include PC {
+        width: calc(100% - 176px);
+        @include max-screen(1023px) {
+          width: calc(100% - 120px);
+        }
+      }
+      @include SP {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .c-btn04 {
+    width: 207px;
+    @include PC {
+      margin-top: 34px;
+    }
+    @include SP {
+      margin: 24px auto 0;
+    }
+  }
+  .slider-gallery {
+    position: relative;
+    overflow: hidden;
+    @include PC {
+      padding-bottom: 65px;
+      @include max-screen(1200px) {
+        padding-bottom: vw-pc(65px,1200);
+      }
+    }
+    @include SP {
+      padding-bottom: 40px;
+    }
+  }
+  .is-no-slider {
+    .slider-thumb-wrapper,
+    .swiper-group {
+      display: none;
+    }
+    .slider-gallery {
+      padding-bottom: 0;
+    }
+  }
+  .has-slider {
+    .slider-thumb-wrapper {
+      @include PC {
+        margin-left: 365px;
+        @include max-screen(1200px) {
+          margin-left: vw-pc(365px,1200);
+        }
+      }
+      @include SP {
+        margin-left: 175px;
+      }
+    }
+  }
+  .gallery-pic {
+    @include PC {
+      padding-top: calc(440/625*100%);
+    }
+    @include SP {
+      @include aspect-ratio(327,230);
+    }
+  }
+  .thumb-pic {
+    @include PC {
+      padding-top: calc(100/140*100%);
+      cursor: pointer;
+    }
+    @include SP {
+      @include aspect-ratio(84,60);
+    }
+  }
+  .slider-thumb-wrapper {
+    overflow: hidden;
+    @include PC {
+      margin: -91px -40px 0 205px;
+      @include max-screen(1200px) {
+        margin: vw-pc(-91px,1200) vw-pc(-40px,1200) 0 vw-pc(205px,1200);
+      }
+    }
+    @include SP {
+      margin: vw-sp(-59px) -24px 0 85px;
+      @include max-screen(375px) {
+        margin-right: calc(-24 / 375 * 100vw);
+      }
+    }
+  }
+  .swiper-wrapper {
+    height: auto;
+  }
+  .swiper-group {
+    position: absolute;
+    left: 0;
+    @include PC {
+      width: 178px;
+      bottom: 0;
+      padding: 0 0 20px 78px;
+      @include max-screen(1200px) {
+        width: vw-pc(178px,1200);
+      }
+    }
+    @include SP {
+      bottom: 14px;
+      width: 85px;
+    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    left: 0;
+    top: -13px;
+    bottom: auto;
+    @include ffGT;
+    @include font(12,1.5,100,400);
+    color: #9f9b9a;
+    width: auto;
+    transform: none;
+    white-space: nowrap;
+    text-align: left
+  }
+  .swiper-pagination-current {
+    @include font(20,28,100);
+    color: #231816;
+    min-width: 30px;
+    padding-right: 2px;
+    display: inline-block;
+  }
+  .swiper-progress-bar {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: 1px;
+    .slide-progress-bar {
+      position: absolute;
+      height: 1px;
+      background: #DDD;
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #231816;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
+    }
+    &.active {
+      .slide-progress-bar {
+        opacity: 1;
+      }
+    }
+    &.animate {
+      .slide-progress-bar {
+        &::after {
+          transition: width linear;
+          transition-delay: unset;
+          width: 100%;
+          transition-duration: 5s;
+        }
+      }
+    }
+  }
+}
