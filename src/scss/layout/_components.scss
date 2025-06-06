@@ -402,6 +402,53 @@
       }
     }
   }
+  &.is-breadcrumb-dis {
+    color: #231816;
+    padding: 0;
+    @include SP {
+      margin-right: -8px;
+    }
+    li {
+      &:not(:last-child) {
+        &::after {
+          @include SP {
+            margin-left: 0;
+            margin-right: 3px;
+          }
+        }
+      }
+      @include SP {
+        display: inline-block;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        padding-left: 14px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:first-child {
+          padding-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+        &::after {
+          display: none;
+        }
+        &::before {
+          content: "/";
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    a {
+      color: #231816;
+      @include HOVER {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 /* ===================== BUTTON ===================== */
@@ -917,6 +964,20 @@ a.c-link {
     color: #fff;
     &::before {
       transform: translateX(0);
+    }
+  }
+  &.is-btn-reverse {
+    color: #fff;
+    @include HOVER {
+      color: #231816;
+      &::before {
+        transform: translateX(110%);
+      }
+    }
+    &::before {
+      background: #B2A46F;
+      transform: translateX(0);
+      z-index: 1;
     }
   }
 }
