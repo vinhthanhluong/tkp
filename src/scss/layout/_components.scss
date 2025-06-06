@@ -1256,12 +1256,12 @@ a.c-link {
           }
         }
         @include SP {
-          @include font(12, 14);
+          @include font(11, 14);
           width: 66px;
           height: 60px;
           padding: 10px 4px;
           @include max-screen(375px) {
-            font-size: calc(12 / 375 * 100vw);
+            font-size: calc(11 / 375 * 100vw);
             width: calc(66 / 375 * 100vw);
             height: calc(60 / 375 * 100vw);
             padding: calc(10 / 375 * 100vw) calc(4 / 375 * 100vw);

@@ -61,12 +61,12 @@
     </div>
     <ul class="f-copyright">
       <li class="item">
-        <a class="link" href="<?php echo APP_URL_EN ?>">利用規約</a>
+        <a class="link" href="<?php echo APP_URL_EN ?>rules/">利用規約</a>
         <a class="link is-exter" href="https://www.tkp.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
       </li>
       <li class="item">
         <p class="ttl01">運営会社</p>
-        <a class="link" href="<?php echo APP_URL_EN ?>terms/">株式会社ティーケーピー</a>
+        <a class="link" href="https://www.tkp.jp/" target="_blank" rel="noopener">株式会社ティーケーピー</a>
       </li>
       <li class="item">
         <p class="ttl02">COPYRIGHT©2025 SHONIN PARK</p>

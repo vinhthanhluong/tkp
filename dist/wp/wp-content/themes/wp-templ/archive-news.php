@@ -23,7 +23,7 @@ include(APP_PATH . 'libs/head.php');
           <li><a href="<?php echo APP_URL; ?>news/">ニュース</a></li>
           <li><?php echo strip_tags($currentTermName); ?></li>
         <?php } else { ?>
-          <li>ニュース</li>
+          <li>ニュース・イベント</li>
         <?php } ?>
       </ul>
     </div>
@@ -47,8 +47,8 @@ include(APP_PATH . 'libs/head.php');
           </div>
         </div>
         <div class="mv-ttl">
-          <h1 class="mv-ttl-jp">ニュース</h1>
-          <span class="mv-ttl-en">News</span>
+          <h1 class="mv-ttl-jp">ニュース・イベント</h1>
+          <span class="mv-ttl-en">NEWS & EVENT</span>
         </div>
       </div>
     </div>

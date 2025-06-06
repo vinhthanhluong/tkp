@@ -10,7 +10,7 @@ $sg_terms = get_the_terms($sg_id, 'newscat');
 $editor = get_field('editor', $sg_id);
 if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post->post_content, false);
 
-$titlepage = 'ニュース・イベントタイトルが入ります｜SHONIN PARK';
+$titlepage = $sg_title_strip . '｜SHONIN PARK';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($post->post_content)), 0, 120);
 $desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
 
@@ -25,7 +25,7 @@ include(APP_PATH . 'libs/head.php');
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
         <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-        <li><a href="<?php echo APP_URL; ?>news/">ニュース</a></li>
+        <li><a href="<?php echo APP_URL; ?>news/">ニュース・イベント</a></li>
         <li><?php echo $sg_title_strip; ?></li>
       </ul>
     </div>
