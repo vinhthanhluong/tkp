@@ -82,7 +82,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">11:00</p>
                 <h3 class="ways-ttl">ショップエリアで買い物</h3>
                 <p class="ways-desc">気になるお菓子屋や雑貨をチェック。</p>
-                <a class="c-link" href="#">ショップ</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/shop/">ショップ</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time03">
@@ -91,7 +91,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">12:00</p>
                 <h3 class="ways-ttl">Grill Takkaで昼食</h3>
                 <p class="ways-desc">10種類以上のメニューからお選びいただける自慢のランチ。<br>レストラン横に広がる海を眺めながら、シェフが腕をかけたお料理をご堪能ください。</p>
-                <a class="c-link" href="#">レストラン</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time04">
@@ -100,7 +100,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">14:00</p>
                 <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">事前に予約しておいた砂湯を「Sand SPA」で体験。<br>目の前に広がる海を見ながら温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
-                <a class="c-link" href="#">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
               </div>
             </li>
           </ul>
@@ -149,7 +149,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">14:00</p>
                 <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">名物でもある砂湯を「Sand SPA」で体験。目の前に広がる海を見ながら温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
-                <a class="c-link" href="#">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
               </div>
             </li>
             <li class="ways-item" id="time03">
@@ -158,7 +158,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">15:00</p>
                 <h3 class="ways-ttl">バーでひと息</h3>
                 <p class="ways-desc">スパエリア内にあるバーで、湯上りに一杯。<br>まったりと時間が流れるような、贅沢なひとときを。</p>
-                <a class="c-link" href="#">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
               </div>
             </li>
             <li class="ways-item" id="time04">
@@ -167,7 +167,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">17:00</p>
                 <h3 class="ways-ttl">チェックイン</h3>
                 <p class="ways-desc">体が温まった後は、お部屋にチェックイン。<br>全室オーシャンビューが望めるお部屋で、ご夕食時間までゆっくりとお寛ぎください。</p>
-                <a class="c-link" href="#">宿泊コテージ</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a>
               </div>
             </li>
             <li class="ways-item" id="time05">
@@ -176,7 +176,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">19:00</p>
                 <h3 class="ways-ttl">夕食</h3>
                 <p class="ways-desc">大分の食材を使ったハワイアングリルを堪能。<br>見た目にもこだわったお食事で、心もお腹も満たされるはず。</p>
-                <a class="c-link" href="#">お食事</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>
               </div>
             </li>
           </ul>
@@ -199,7 +199,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">8:00</p>
                 <h3 class="ways-ttl">朝食</h3>
                 <p class="ways-desc">夕食に続き、大分の食材を使った栄養バランスの整ったご朝食をご用意。</p>
-                <a class="c-link" href="#">お食事</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>
               </div>
             </li>
             <li class="ways-item" id="time08">
@@ -208,7 +208,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">10:00</p>
                 <h3 class="ways-ttl">チェックアウト</h3>
                 <p class="ways-desc">お部屋に戻って荷物をまとめたら、チェックアウトへ。<br>気になる観光地を巡って、時間いっぱい大分を満喫。</p>
-                <a class="c-link" href="#">周辺観光</a>
+                <a class="c-link" href="<?php echo APP_URL ?>info/#info03">周辺観光</a>
               </div>
             </li>
           </ul>

@@ -247,12 +247,12 @@
     @include SP {
       margin-bottom: 32px;
     }
-    &>span {
+    & > span {
       display: block;
     }
     .ttl-en {
       @include ffGT;
-      @include font("",1.2,0,500);
+      @include font("", 1.2, 0, 500);
       @include PC {
         margin-bottom: 32px;
         @include font(80);
@@ -263,7 +263,7 @@
       }
     }
     .ttl-jp {
-      @include font("",1.5,120,700);
+      @include font("", 1.5, 120, 700);
       @include PC {
         @include font(20);
       }
@@ -357,7 +357,7 @@
       &:first-child {
         a {
           &:before {
-            background-image: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="white"/></svg>')
+            background-image: url('data:image/svg+xml,<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1.5L12 6.30761V13.5H0V6.30761L6 1.5ZM4.8 12.3463H7.2V9.46193H4.8V12.3463ZM8.4 12.3463H10.8V6.84756L6 3.00216L1.2 6.84756V12.3463H3.6V8.30819H8.4V12.3463Z" fill="white"/></svg>');
           }
         }
       }
@@ -924,7 +924,7 @@ a.c-link {
 .c-btn04 {
   width: 176px;
   min-height: 44px;
-  @include font(14,20,100,700);
+  @include font(14, 20, 100, 700);
   @include flexbox;
   @include justify-content(center);
   @include align-items(center);
@@ -950,12 +950,12 @@ a.c-link {
   }
   &::before {
     @include PC {
-      background: #B2A46F;
+      background: #b2a46f;
       transform: translateX(-110%);
       z-index: 1;
     }
   }
-  &>span {
+  & > span {
     position: relative;
     z-index: 2;
   }
@@ -1169,8 +1169,8 @@ a.c-link {
 }
 .c-ttl04 {
   .c-ttl04__jp {
-    @include font("",1.4,50,700);
-    color: #B2A46F;
+    @include font("", 1.4, 50, 700);
+    color: #b2a46f;
     display: block;
     @include PC {
       @include font(20);
@@ -1181,7 +1181,7 @@ a.c-link {
     }
   }
   .c-ttl04__en {
-    @include font("",1.5,0,500);
+    @include font("", 1.5, 0, 500);
     @include ffGT;
     @include PC {
       @include font(60);
@@ -2684,7 +2684,7 @@ a.c-link {
         .intro-img {
           margin: 0 -135px 0 0;
           @include max-screen(1400px) {
-            margin-right: vw-pc(-135px,1400);
+            margin-right: vw-pc(-135px, 1400);
           }
         }
       }
@@ -2704,11 +2704,11 @@ a.c-link {
       min-height: 535px;
       margin-left: -135px;
       @include max-screen(1400px) {
-        margin-left: vw-pc(-135px,1400);
+        margin-left: vw-pc(-135px, 1400);
       }
     }
     @include SP {
-      @include aspect-ratio(327,267);
+      @include aspect-ratio(327, 267);
       margin-bottom: 33px;
     }
   }
@@ -2725,7 +2725,7 @@ a.c-link {
   .intro-ttl,
   .intro-ttls,
   .intro-txt {
-    @include font("",1.5,100,700);
+    @include font("", 1.5, 100, 700);
   }
   .intro-ttl {
     @include PC {
@@ -2751,11 +2751,11 @@ a.c-link {
   .intro-desc {
     letter-spacing: 0.1em;
     @include PC {
-      @include font(16,30);
+      @include font(16, 30);
       margin-bottom: 28px;
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
       margin-bottom: 14px;
     }
     &:last-child {
@@ -2777,7 +2777,7 @@ a.c-link {
       position: absolute;
       left: 0;
       top: 2px;
-      border-left: 3px solid #B2A46F;
+      border-left: 3px solid #b2a46f;
       @include PC {
         bottom: 2px;
         .is-windows & {
@@ -2790,9 +2790,9 @@ a.c-link {
     }
   }
   .intro-efficacy {
-    line-height: calc(22/14);
+    line-height: calc(22 / 14);
     letter-spacing: 0.1em;
-    background: #F6F6F6;
+    background: #f6f6f6;
     @include PC {
       padding: 20px;
     }
@@ -2809,13 +2809,13 @@ a.c-link {
   }
   .intro-col {
     @include PC {
-      width: calc(570/1170*100%);
+      width: calc(570 / 1170 * 100%);
       margin-bottom: 100px;
       padding: 0 60px;
       @include max-screen(1200px) {
-        padding-left: vw-pc(60px,1200);
-        padding-right: vw-pc(60px,1200);
-        margin-bottom: vw-pc(60px,1200);
+        padding-left: vw-pc(60px, 1200);
+        padding-right: vw-pc(60px, 1200);
+        margin-bottom: vw-pc(60px, 1200);
       }
     }
     @include SP {
@@ -2825,15 +2825,15 @@ a.c-link {
       @include PC {
         margin-top: 80px;
         @include max-screen(1200px) {
-          margin-top: vw-pc(80px,1200);
+          margin-top: vw-pc(80px, 1200);
         }
         .intro-pic {
           &::after {
             left: 60px;
             right: -60px;
             @include max-screen(1200px) {
-              left: vw-pc(60px,1200);
-              right: vw-pc(-60px,1200);
+              left: vw-pc(60px, 1200);
+              right: vw-pc(-60px, 1200);
             }
           }
         }
@@ -2857,14 +2857,14 @@ a.c-link {
   }
   .intro-pic {
     @include PC {
-      padding-top: calc(550/450*100%);
+      padding-top: calc(550 / 450 * 100%);
       margin-bottom: 47px;
       @include max-screen(1200px) {
-        margin-bottom: vw-pc(47px,1200);
+        margin-bottom: vw-pc(47px, 1200);
       }
     }
     @include SP {
-      @include aspect-ratio(327,267);
+      @include aspect-ratio(327, 267);
       margin-bottom: 32px;
     }
     &::after {
@@ -2876,12 +2876,13 @@ a.c-link {
         top: -60px;
         right: 60px;
         bottom: 60px;
-        background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+        background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+          auto;
         @include max-screen(1200px) {
-          left: vw-pc(-60px,1200);
-          right: vw-pc(60px,1200);
-          top: vw-pc(-60px,1200);
-          bottom: vw-pc(60px,1200);
+          left: vw-pc(-60px, 1200);
+          right: vw-pc(60px, 1200);
+          top: vw-pc(-60px, 1200);
+          bottom: vw-pc(60px, 1200);
         }
       }
     }
@@ -2891,7 +2892,7 @@ a.c-link {
     @include justify-content(center);
     @include align-items(center);
     color: #231816;
-    @include font("",1.5,100,700);
+    @include font("", 1.5, 100, 700);
     margin: 0 auto;
     border: 1px solid #231816;
     padding: 10px;
@@ -2908,7 +2909,7 @@ a.c-link {
     @include ANDR {
       @include font(13);
     }
-    &>span {
+    & > span {
       position: relative;
       display: inline-block;
       @include PC {
@@ -2922,7 +2923,8 @@ a.c-link {
         position: absolute;
         left: 0;
         top: 50%;
-        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100% auto;
+        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100%
+          auto;
         @include PC {
           margin-top: -10px;
           width: 54px;
