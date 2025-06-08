@@ -43,7 +43,7 @@
     @include align-items(center);
     @include justify-content(center);
     padding: 5px 10px;
-    color: #231816;
+    color: $brown02;
     transition: 0.5s ease;
     position: relative;
     overflow: hidden;
@@ -77,7 +77,7 @@
       transition: 0.5s ease;
     }
     &::after {
-      border: 1px solid #231816;
+      border: 1px solid $brown02;
       background: #fff;
     }
     &::before {
@@ -411,7 +411,7 @@
   }
   .swiper-pagination-current {
     @include font(20,28,100);
-    color: #231816;
+    color: $brown02;
     min-width: 32px;
     padding-right: 2px;
     display: inline-block;
@@ -450,7 +450,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #231816;
+        background: $brown02;
         height: 100%;
         width: 0;
         content: "";

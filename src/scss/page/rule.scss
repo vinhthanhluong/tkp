@@ -1,0 +1,179 @@
+@charset 'UTF-8';
+@import "../utility/*";
+#wrap {
+  @include PC {
+    padding-top: 115px;
+  }
+}
+.c-mainvisual {
+  @include PC {
+    padding-bottom: 92px;
+  }
+  @include SP {
+    .mv-inner {
+      &:before {
+        top: 88px;
+      }
+    }
+    .img-wave-yellow {
+      top: 95px;
+    }
+  }
+  @include ANDR {
+    .mv-ttl-en {
+      @include font(31);
+    }
+  }
+}
+.c-bg-wave01 {
+  @include PC {
+    padding: 100px 0 189px;
+  }
+  @include SP {
+    padding: 65px 0 82px;
+  }
+  .inner1170 {
+    @include PC {
+      max-width: 948px;
+    }
+  }
+}
+.rule-anchor {
+  @include PC {
+    @include flexbox;
+    @include flex-wrap;
+    padding: 0 10px;
+    margin-bottom: 79px;
+    li {
+      width: calc(280/880*100%);
+      margin-right: calc(20/880*100%);
+      &:first-child {
+        a.c-btn01 {
+          span {
+            padding-right: 6px;
+          }
+          .arr02 {
+            right: 11px;
+            @include max-screen(1440px) {
+              right: calc(11 / 1440 * 100vw);
+            }
+          }
+        }
+      }
+      &:nth-child(2n) {
+        a.c-btn01 span {
+          padding-right: 10px;
+        }
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+        a.c-btn01 span {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  @include SP {
+    max-width: 260px;
+    margin: 0 auto 55px;
+    li {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  a.c-btn01 {
+    background: none;
+    max-width: 100%;
+    @include SP {
+      padding: 5px 8px;
+    }
+    span {
+      padding: 0;
+      @include SP {
+        @include font(14);
+      }
+    }
+  }
+}
+.sec-rule {
+  & + .sec-rule {
+    margin-top: 59px;
+    @include SP {
+      margin-top: 55px;
+    }
+  }
+  .rule-heading {
+    position: relative;
+    @include font(25,1.6,120,700);
+    padding-bottom: 18px;
+    margin-bottom: 25px;
+    @include SP {
+      @include font(18);
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      height: 2px;
+    }
+    &:after {
+      left: 0;
+      background: $yellow01;
+      width: 150px;
+      @include SP {
+        width: 100px;
+      }
+    }
+    &:before {
+      right: 0;
+      background: $blue01;
+      width: calc(100% - 160px);
+      @include SP {
+        width: calc(100% - 105px);
+      }
+    }
+  }
+  .rule-txt {
+    @include font(15,26,100,500);
+    @include SP {
+      @include font(14,25);
+    }
+    p {
+      + p {
+        margin-top: 10px;
+      }
+      a {
+        text-decoration: underline;
+        color: $blue01;
+      }
+    }
+  }
+  .list-dot {
+    li {
+      position: relative;
+      padding-left: 23px;
+      @include SP {
+        padding-left: 21px;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 9px;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background: $brown02;
+      }
+    }
+  }
+  .desc {
+    margin-top: 10px;
+  }
+}
+
+
+

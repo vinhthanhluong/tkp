@@ -90,7 +90,7 @@
     @include justify-content(center);
     height: 100%;
     background: #fff;
-    border: 1px solid #231816;
+    border: 1px solid $brown02;
     position: relative;
     transition: 0.3s ease;
     overflow: hidden;
@@ -667,7 +667,7 @@
   }
   .swiper-pagination-current {
     @include font(20,28,100);
-    color: #231816;
+    color: $brown02;
     min-width: 30px;
     padding-right: 2px;
     display: inline-block;
@@ -692,7 +692,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #231816;
+        background: $brown02;
         height: 100%;
         width: 0;
         content: "";

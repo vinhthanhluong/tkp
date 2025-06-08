@@ -403,7 +403,7 @@
     }
   }
   &.is-breadcrumb-dis {
-    color: #231816;
+    color: $brown02;
     padding: 0;
     @include SP {
       margin-right: -8px;
@@ -443,7 +443,7 @@
       }
     }
     a {
-      color: #231816;
+      color: $brown02;
       @include HOVER {
         opacity: 0.5;
       }
@@ -575,11 +575,9 @@ a.c-btn01 {
       @include PC {
         left: auto;
         right: 18px;
-        @include PC {
-          @include max-screen(1440px) {
-            right: calc(18 / 1440 * 100vw);
-            top: calc(50% - calc(7 / 1440 * 100vw));
-          }
+        @include max-screen(1440px) {
+          right: calc(18 / 1440 * 100vw);
+          top: calc(50% - calc(7 / 1440 * 100vw));
         }
       }
       @include SP {
@@ -597,11 +595,9 @@ a.c-btn01 {
       top: calc(50% - 7px);
       @include PC {
         right: 18px;
-        @include PC {
-          @include max-screen(1440px) {
-            right: calc(18 / 1440 * 100vw);
-            top: calc(50% - calc(7 / 1440 * 100vw));
-          }
+        @include max-screen(1440px) {
+          right: calc(18 / 1440 * 100vw);
+          top: calc(50% - calc(7 / 1440 * 100vw));
         }
       }
       @include SP {
@@ -930,7 +926,7 @@ a.c-link {
   @include align-items(center);
   padding: 11px 10px;
   text-align: center;
-  color: #231816;
+  color: $brown02;
   position: relative;
   overflow: hidden;
   transition: 0.5s ease;
@@ -945,7 +941,7 @@ a.c-link {
     transition: 0.5s ease;
   }
   &::after {
-    border: 1px solid #231816;
+    border: 1px solid $brown02;
     background: #fff;
   }
   &::before {
@@ -969,7 +965,7 @@ a.c-link {
   &.is-btn-reverse {
     color: #fff;
     @include HOVER {
-      color: #231816;
+      color: $brown02;
       &::before {
         transform: translateX(110%);
       }
@@ -2656,7 +2652,7 @@ a.c-link {
   }
 }
 .c-intro {
-  color: #231816;
+  color: $brown02;
   overflow: hidden;
   .intro-list {
     @include PC {
@@ -2891,15 +2887,28 @@ a.c-link {
     @include flexbox;
     @include justify-content(center);
     @include align-items(center);
-    color: #231816;
+    color: $brown02;
     @include font("", 1.5, 100, 700);
     margin: 0 auto;
-    border: 1px solid #231816;
+    border: 1px solid $brown02;
     padding: 10px;
+    transition: .3s;
     @include PC {
       width: 521px;
       min-height: 80px;
       @include font(18);
+    }
+    @include HOVER {
+      opacity: 1;
+      background: #928DAB;
+      border-color: #928DAB;
+      color: #fff;
+      > span {
+        color: #fff;
+        &::before {
+          background-image: url($img_url + "img/ishinoya/spa/icn_dot_wh.svg");
+        }
+      }
     }
     @include SP {
       max-width: 327px;
@@ -2911,7 +2920,9 @@ a.c-link {
     }
     & > span {
       position: relative;
+      z-index: 2;
       display: inline-block;
+      transition: .3s;
       @include PC {
         padding-left: 85px;
       }
@@ -2923,8 +2934,8 @@ a.c-link {
         position: absolute;
         left: 0;
         top: 50%;
-        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100%
-          auto;
+        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100% auto;
+        transition: .3s;
         @include PC {
           margin-top: -10px;
           width: 54px;
