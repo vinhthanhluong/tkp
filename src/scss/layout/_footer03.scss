@@ -1,0 +1,324 @@
+@charset 'UTF-8';
+.footer03 {
+  background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+  color: #231816;
+  @include PC {
+    padding: 60px 0 39px;
+  }
+  @include SP {
+    padding: 48px 0;
+  }
+  a {
+    color: #231816;
+  }
+  .footer-row {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      margin-bottom: 30px;
+    }
+    @include SP {
+      margin-bottom: 23px;
+    }
+  }
+  .footer-left {
+    @include PC {
+      width: 370px;
+      margin-right: 30px;
+    }
+    @include SP {
+      margin-bottom: 31px;
+    }
+  }
+  .footer-right {
+    @include PC {
+      width: 574px;
+      max-width: 574px;
+      padding-top: 12px;
+    }
+    @include SP {
+    }
+    .footer-flex {
+      &>li {
+        @include PC {
+          &.col-pc01 {
+            width: 24%;
+          }
+          &.col-pc02 {
+            width: 31.5%;
+          }
+          &.col-pc03 {
+            width: 20%;
+          }
+        }
+        @include SP {
+          margin-bottom: 8px;
+          order: 0;
+          &.col-sp01 {
+            width: 62%;
+          }
+          &.col-sp02 {
+            width: 38%;
+          }
+          &.is-order01 {
+            order: 3;
+          }
+          &.is-order02 {
+            order: 2;
+          }
+          &.is-order03 {
+            order: 4;
+          }
+          &.is-order04 {
+            order: 5;
+          }
+        }
+      }
+    }
+  }
+  .footer-logo {
+    display: block;
+    @include PC {
+      margin-bottom: 31px;
+      width: 253px;
+      @include max-screen(1023px) {
+        width: vw-pc(253px,1023);
+      }
+    }
+    @include SP {
+      width: 191px;
+      margin: 0 auto 23px;
+    }
+  }
+  .footer-address {
+    @include font("","",120);
+    @include PC {
+      @include font(15,26);
+      @include max-screen(1023px) {
+        font-size: vw-pc(15px,1023)
+      }
+    }
+    @include SP {
+      @include font(12,1.85);
+      text-align: center
+    }
+  }
+  .footer-flex {
+    @include flexbox;
+    @include flex-wrap
+  }
+  .footer-menu,
+  .footer-menus {
+    @include SP {
+      padding-left: 24px;
+    }
+    a {
+      @include PC {
+        transition: 0.26s ease;
+      }
+      @include HOVER {
+        opacity: 1;
+        color: #65B0D4
+      }
+    }
+  }
+  .footer-menu {
+    @include font("","",100,700);
+    @include PC {
+      @include font(16,24);
+      margin-bottom: 19px;
+      @include max-screen(1023px) {
+        font-size: vw-pc(16px,1023)
+      }
+    }
+    @include SP {
+      @include font(15,26);
+      margin-bottom: 9px;
+    }
+  }
+  .footer-menus {
+    @include font(14,24,100);
+    @include PC {
+      margin-bottom: 26px;
+      @include max-screen(1023px) {
+        font-size: vw-pc(14px,1023)
+      }
+    }
+    @include SP {
+      .is-blank {
+        padding-right: 20px;
+      }
+    }
+  }
+  .footer-link {
+    @include font(12,20,100);
+    @include PC {
+      @include max-screen(1023px) {
+        font-size: vw-pc(12px,1023)
+      }
+    }
+    @include SP {
+      @include justify-content(center);
+      margin: 0 -19px 20px;
+    }
+    &>li {
+      @include PC {
+        margin-right: 40px;
+      }
+      @include SP {
+        margin: 0 19px;
+      }
+    }
+  }
+  .footer-sns {
+    @include align-items(center);
+  }
+  .footer-txt {
+    @include ffGT;
+    @include font(15,1.5,0,600);
+    width: 113px;
+    @include PC {
+      @include max-screen(1023px) {
+        font-size: vw-pc(15px,1023);
+        width: vw-pc(113px,1023)
+      }
+    }
+  }
+  .footer-social {
+    @include flexbox;
+    @include flex-wrap;
+    @include SP {
+      @include justify-content(center);
+      margin-bottom: 18px;
+    }
+    &>li {
+      @include PC {
+        width: 30px;
+        margin: 5px 15px 5px 0;
+        @include max-screen(1023px) {
+          width: vw-pc(30px,1023)
+        }
+      }
+      @include SP {
+        width: 40px;
+        margin: 5px 10px;
+      }
+    }
+    a {
+      display: block;
+      transition: 0.5s ease;
+      @include HOVER {
+        opacity: 1;
+        margin-top: -8px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .footer-btn {
+    @include PC {
+      margin-bottom: 40px;
+      @include justify-content(center);
+      @include max-screen(1023px) {
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @include SP {
+      margin: 0 auto 35px;
+      display: block;
+      max-width: 250px;
+    }
+    &>li {
+      @include PC {
+        width: 250px;
+        margin: 0 15px;
+        @include max-screen(1023px) {
+          width: calc(100% / 3);
+          margin-left: 0;
+          margin-right: 0;
+          padding: 0 vw-pc(10px,1023);
+        }
+      }
+      @include SP {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .c-btn04 {
+      width: 100%;
+      @include PC {
+        @include max-screen(1023px) {
+          font-size: vw-pc(14px,1023);
+          min-height: vw-pc(44px,1023);
+        }
+      }
+      &::after {
+        background: none;
+      }
+    }
+  }
+  .footer-bottom {
+    @include font(12,1.5,100);
+    @include PC {
+      @include justify-content(space-between);
+      @include max-screen(1023px) {
+        font-size: vw-pc(12px,1023);
+      }
+    }
+    @include SP {
+      display: block;
+      text-align: center;
+    }
+    a {
+      @include PC {
+        transition: 0.26s ease;
+      }
+      @include HOVER {
+        opacity: 1;
+        color: #65B0D4;
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-center {
+    @include PC {
+      padding-right: 70px;
+    }
+    @include SP {
+      @include justify-content(center);
+      margin-bottom: 18px;
+    }
+  }
+  .footer-tkp {
+    margin: 0 6px 0 10px;
+    @include PC {
+      @include max-screen(1023px) {
+        width: vw-pc(42px,1023)
+      }
+    }
+  }
+  .footer-copyright {
+    font-weight: 400;
+    @include ffGT;
+    text-transform: uppercase;
+  }
+  .is-blank {
+    padding-right: 24px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+    }
+  }
+}

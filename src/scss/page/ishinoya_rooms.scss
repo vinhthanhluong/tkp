@@ -38,6 +38,7 @@
 }
 
 .c-txt-list {
+  color: $brown02;
   @include flexbox;
   @include flex-wrap;
   font-weight: 700;
@@ -92,6 +93,7 @@
     background: #fff;
     border: 1px solid $brown02;
     position: relative;
+    color: $brown02;
     transition: 0.3s ease;
     overflow: hidden;
     @include PC {
@@ -165,7 +167,7 @@
     }
   }
   .c-txt-list {
-    @include font("","",0);
+    letter-spacing: 0;
     @include justify-content(center);
     @include PC {
       @include font(12,19);
@@ -303,7 +305,8 @@
     }
   }
   .rooms-desc {
-    @include font("","",100);
+    color: $brown02;
+    letter-spacing: .1em;
     @include PC {
       margin-bottom: 19px;
       @include font(16,28);
@@ -484,6 +487,7 @@
     }
   }
   .archive-content {
+    color: $brown02;
     @include PC {
       max-width: 480px;
     }

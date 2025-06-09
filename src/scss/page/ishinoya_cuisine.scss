@@ -105,6 +105,7 @@
 }
 
 .sec-cuisine {
+  color: $brown02;
   background: repeat-x 0 0/50px auto;
   overflow: hidden;
   @include PC {
@@ -125,7 +126,7 @@
       @include font(24,36);
     }
     @include ANDR {
-      @include font(20)
+      @include font(20);
     }
   }
   .cuisine-desc {
@@ -140,7 +141,7 @@
       margin: 0 -2px 57px;
     }
     @include ANDR {
-      @include font(13)
+      @include font(13);
     }
   }
   .cuisine-list {

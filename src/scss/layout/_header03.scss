@@ -1,0 +1,502 @@
+@charset 'UTF-8';
+
+.header03 {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  color: #231816;
+  @include PC {
+    min-height: 100px;
+    padding: 15px 30px;
+  }
+  @include SP {
+    min-height: 88px;
+    padding: 9px 16px;
+  }
+  .header-inner {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    position: relative;
+    min-height: 70px;
+  }
+  .header-logo {
+    display: block;
+    @include PC {
+      width: 175px;
+      @include max-screen(1140px) {
+        width: vw-pc(175px,1140)
+      }
+    }
+    @include SP {
+      width: 159px;
+    }
+  }
+  .header-info {
+    @include flexbox;
+    @include align-items(center);
+    @include flex(1);
+    @include justify-content(flex-end);
+    @include PC {
+      padding-left: 30px;
+      @include max-screen(1140px) {
+        padding-left: vw-pc(15px,1140);
+      }
+    }
+  }
+  .header-menu {
+    @include flexbox;
+    &>li {
+      margin-right: 30px;
+      padding: 0 10px;
+      @include PC {
+        @include max-screen(1140px) {
+          margin-right: vw-pc(15px,1140);
+          padding-right: vw-pc(8px,1140);
+          padding-left: vw-pc(8px,1140);
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .menu-link {
+    @include font(14,20,100,700);
+    display: block;
+    color: #231816;
+    @include PC {
+      @include max-screen(1140px) {
+        font-size: vw-pc(14px,1140)
+      }
+    }
+  }
+  .has-sub {
+    position: relative;
+    .menu-link {
+      position: relative;
+      padding-right: 18px;
+      @include PC {
+        @include max-screen(1140px) {
+          padding-right: vw-pc(18px,1140)
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 10px;
+        height: 6px;
+        margin-top: -3px;
+        background: url('data:image/svg+xml,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="%23231816"/></svg>') no-repeat center center/100% auto;
+        @include max-screen(1140px) {
+          width: vw-pc(10px,1140);
+          height: vw-pc(6px,1140);
+        }
+      }
+    }
+  }
+  .header-mega {
+    position: absolute;
+    top: calc(100% - 5px);
+    width: 135px;
+    left: 50%;
+    margin-left: -67px;
+    padding-top: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: z-index 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    pointer-events: none;
+  }
+  .menu-list {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(#888, 0.15);
+    text-align: center;
+    @include font(14,20,100);
+    padding: 22px 20px;
+    &>li {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .language {
+    .menu-link {
+      @include font(15,20,0,500);
+      @include ffGT;
+      @include PC {
+        @include max-screen(1140px) {
+          font-size: vw-pc(15px,1140)
+        }
+      }
+    }
+    .txt-language {
+      @include ffGT;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+    .header-mega {
+      width: 113px;
+      margin-left: -56px;
+    }
+  }
+  .header-btn {
+    width: 167px;
+    min-height: 44px;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include font(14,20,100,700);
+    border: 1px solid #928DAB;
+    background: #928DAB;
+    transition: 0.3s ease;
+    color: #fff;
+    margin-left: 40px;
+    @include PC {
+      @include max-screen(1140px) {
+        margin-left: vw-pc(30px,1140);
+        width: vw-pc(165px,1140);
+        font-size: vw-pc(14px,1140);
+      }
+    }
+    @include HOVER {
+      background: #fff;
+      color: #928DAB;
+    }
+  }
+  .hamburger-btn {
+    position: relative;
+    border: 1px solid #231816;
+    top: auto;
+    right: auto;
+    @include PC {
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      margin-left: 15px;
+    }
+    @include SP {
+      width: 40px;
+      height: 40px;
+    }
+    @include HOVER {
+      &::before,
+      &::after {
+        width: 15px;
+      }
+      &::after {
+        margin-left: 5px;
+      }
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-top: 1px solid #231816;
+      transform: translateX(-50%);
+      transition: 0.26s ease;
+      @include PC {
+        width: 20px;
+      }
+      @include SP {
+        width: 16px;
+      }
+    }
+    &::before {
+      @include PC {
+        margin-top: -3px;
+      }
+      @include SP {
+        margin-top: -4px;
+      }
+    }
+    &::after {
+      @include PC {
+        margin-top: 2px;
+      }
+      @include SP {
+        margin-top: 3px;
+      }
+    }
+  }
+}
+.c-txt-hover {
+  .txt-wrap {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  .txt-default,
+  .txt-on {
+    transition: 0.3s ease;
+    display: block;
+  }
+  .txt-on {
+    position: absolute;
+    width: 100%;
+    top: 110%;
+  }
+  @include HOVER {
+    opacity: 1;
+    .txt-default {
+      transform: translateY(-110%);
+    }
+    .txt-on {
+      top: 0;
+    }
+  }
+}
+.layerOn .layerMenu {
+  @include SP {
+    &.navigation {
+      right: 0;
+    }
+  }
+}
+.navigation {
+  position: fixed;
+  max-height: 940px;
+  color: #231816;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(#888, 0.15);
+  @include SP {
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
+  .navigation-inner {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 0;
+    @include PC {
+      padding: 111px 70px;
+    }
+    @include SP {
+      padding: 48px;
+    }
+    @include ANDR {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .navigation-menu {
+    @include font("",1.5,100);
+    @include flexbox;
+    @include flex-wrap;
+    @include PC {
+      margin-bottom: 20px;
+      @include font(16);
+    }
+    @include SP {
+      @include font(15);
+      margin-bottom: 6px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &>li {
+      @include PC {
+        width: 190px;
+        margin-bottom: 23px;
+        &.is-col {
+          width: 120px;
+          margin-right: -50px;
+        }
+      }
+      @include SP {
+        margin-bottom: 16px;
+        order: 0;
+        &.is-col01 {
+          width: 62.7%;
+          margin-right: 0;
+        }
+        &.is-col02 {
+          width: calc(37.3% + 30px);
+          margin-right: -30px;
+        }
+      }
+    }
+    .is-order01 {
+      @include SP {
+        order: 3;
+      }
+    }
+    .is-order02 {
+      @include SP {
+        order: 2;
+      }
+    }
+    .is-order03 {
+      @include SP {
+        order: 4;
+      }
+    }
+    .is-order04 {
+      @include SP {
+        order: 5;
+      }
+    }
+    .is-order05 {
+      @include SP {
+        order: 4;
+      }
+    }
+    &.fs {
+      font-weight: 700;
+      @include PC {
+        @include font(18);
+      }
+      @include SP {
+        @include font(16);
+      }
+    }
+    a {
+      color: #231816;
+    }
+  }
+  .navigation-row {
+    @include PC {
+      margin-bottom: 55px;
+    }
+    @include SP {
+      max-width: 279px;
+      margin: 0 auto 22px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .navigation-ttl {
+    @include font("",1.5,50,500);
+    @include ffGT;
+    text-align: center;
+    text-transform: uppercase;
+    @include PC {
+      margin-bottom: 28px;
+      @include font(20);
+    }
+    @include SP {
+      margin-bottom: 21px;
+      @include font(18);
+    }
+    &.is-space {
+      letter-spacing: 0;
+    }
+  }
+  .navigation-btn {
+    max-width: 250px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    &>li {
+      @include PC {
+        margin-bottom: 20px;
+      }
+      @include SP {
+        margin-bottom: 12px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .c-btn04 {
+      width: 100%;
+      color: #231816;
+      @include HOVER {
+        color: #fff
+      }
+    }
+  }
+  .navigation-sns {
+    @include flexbox;
+    @include flex-wrap;
+    @include justify-content(center);
+    @include PC {
+      padding-top: 2px;
+    }
+    @include SP {
+      padding-top: 1px;
+      margin-bottom: 36px;
+    }
+    &>li {
+      width: 40px;
+      margin: 0 10px;
+    }
+  }
+  .navigation-close {
+    width: 20px;
+    height: 20px;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="27.3717" height="0.91239" transform="matrix(0.707102 0.707111 -0.707102 0.707111 0.645508 3.8147e-06)" fill="%23231816"/><rect width="27.3717" height="0.91239" transform="matrix(-0.707102 0.707111 0.707102 0.707111 19.355 0)" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    @include PC {
+      right: 40px;
+      top: 40px;
+    }
+    @include SP {
+      right: 24px;
+      top: 24px;
+    }
+  }
+  .language-list {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-wrap;
+    @include font(15,20,100,700);
+    margin: 0 -20px;
+    &>li {
+      margin: 0 10px;
+    }
+    .language-txt {
+      @include ffGT;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .is-active {
+      text-decoration: underline;
+    }
+  }
+}
+html:not(.is-ipad) {
+  .header03 {
+    .header-drop {
+      @include PC {
+        &:hover {
+          .header-mega {
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+}
+.is-ipad {
+  .header03 {
+    .header-menu {
+      .has-sub.is-current {
+        .header-mega {
+          @include PC {
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+}

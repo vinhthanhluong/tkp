@@ -1,0 +1,682 @@
+@charset 'UTF-8';
+@import "../utility/*";
+#wrap {
+  @include PC {
+    padding-top: 100px;
+  }
+  @include SP {
+    padding-top: 88px;
+  }
+}
+.c-ttl04 {
+  color: #231816;
+  .c-ttl04__jp {
+    color: #928DAB;
+  }
+}
+.sec-spa-keyvisual {
+  position: relative;
+  z-index: 1;
+  @include PC {
+    padding: 240px 0 70px;
+    min-height: 770px;
+    margin: 0 30px 110px;
+  }
+  @include SP {
+    padding: 140px 0 48px;
+    min-height: 563px;
+    margin: 0 16px 80px;
+  }
+  .keyvisual-logo {
+    @include PC {
+      width: 216px;
+      margin: 0 auto 180px;
+    }
+    @include SP {
+      width: 157px;
+      margin: 0 auto 127px;
+    }
+  }
+  .anchor-container {
+    background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, 0.6) 24.52%, rgba(#fff, 0.6) 50%, rgba(#fff, 0.6) 74.52%, rgba(#fff, 0) 100%);
+    @include PC {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px 50px;
+      @include max-screen(1023px) {
+        padding-left: vw-pc(30px);
+        padding-right: vw-pc(30px);
+      }
+    }
+    @include SP {
+      margin: 0 -16px;
+    }
+  }
+  .anchor-list {
+    @include font("","",100,700);
+    @include flexbox;
+    @include flex-wrap;
+    @include PC {
+      @include justify-content(center);
+      @include font(15,24);
+    }
+    @include SP {
+      @include justify-content(space-between);
+      padding: 14px 48px;
+      @include font(13,18);
+      max-width: 375px;
+      margin: 0 auto;
+    }
+    @include ANDR {
+      @include font(11);
+    }
+    &>li {
+      @include PC {
+        margin: 0 41px;
+        @include max-screen(1023px) {
+          width: 25%;
+          margin: 0;
+          text-align: center;
+        }
+      }
+      @include SP {
+        width: 43%;
+        margin: 6px 0;
+      }
+      @include ANDR {
+        width: 45%;
+      }
+    }
+    a {
+      position: relative;
+      color: $brown02;
+      @include PC {
+        display: inline-block;
+        padding-right: 26px;
+      }
+      @include SP {
+        display: block;
+        padding-right: 14px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.04152 1.58312L7.04152 11.1089L9.90856 8.24183C9.95853 8.1901 10.0183 8.14883 10.0844 8.12044C10.1505 8.09205 10.2215 8.07711 10.2935 8.07649C10.3654 8.07586 10.4367 8.08957 10.5033 8.1168C10.5699 8.14404 10.6303 8.18426 10.6812 8.23512C10.7321 8.28598 10.7723 8.34645 10.7995 8.41302C10.8267 8.47959 10.8404 8.55092 10.8398 8.62284C10.8392 8.69476 10.8243 8.76584 10.7959 8.83193C10.7675 8.89801 10.7262 8.95778 10.6745 9.00775L6.88281 12.7994C6.78123 12.901 6.64348 12.958 6.49985 12.958C6.35622 12.958 6.21847 12.901 6.1169 12.7994L2.32523 9.00775C2.22656 8.90559 2.17196 8.76876 2.1732 8.62674C2.17443 8.48472 2.2314 8.34886 2.33183 8.24843C2.43226 8.148 2.56811 8.09103 2.71014 8.0898C2.85216 8.08857 2.98899 8.14316 3.09115 8.24183L5.95819 11.1089L5.95819 1.58312C5.95819 1.43946 6.01526 1.30169 6.11684 1.20011C6.21842 1.09852 6.3562 1.04146 6.49985 1.04146C6.64351 1.04146 6.78129 1.09852 6.88287 1.20011C6.98445 1.30169 7.04152 1.43946 7.04152 1.58312Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+        @include PC {
+          margin-top: -6.5px;
+          width: 13px;
+          height: 13px;
+        }
+        @include SP {
+          margin-top: -6px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
+.sec-spa-about {
+  position: relative;
+  color: $brown02;
+  @include PC {
+    margin-bottom: 78px;
+    padding-top: 60px;
+  }
+  @include SP {
+    margin-bottom: 65px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+    @include PC {
+      top: -525px;
+      bottom: 112px;
+      left: 50%;
+      margin-left: -335px;
+    }
+    @include SP {
+      top: -377px;
+      bottom: 488px;
+      left: 0;
+    }
+  }
+  .about-item {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      margin-bottom: 120px;
+    }
+    @include SP {
+      margin-bottom: 48px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.is-reverse {
+      @include PC {
+        @include flex-direction(row-reverse);
+      }
+      @include SP {
+      }
+      .about-info {
+        @include PC {
+          margin-left: 0;
+          margin-right: 30px;
+        }
+        @include SP {
+        }
+      }
+    }
+  }
+  .about-info {
+    @include PC {
+      width: 560px;
+      max-width: 560px;
+      margin-left: 30px;
+    }
+    @include SP {
+    }
+  }
+  .about-img {
+    @include PC {
+      width: 500px;
+      height: 560px;
+    }
+    @include SP {
+      @include aspect-ratio(327, 367);
+      margin-bottom: 32px;
+    }
+  }
+  .about-pic {
+    @include PC {
+      width: 250px;
+      height: 160px;
+      margin: -60px 0 100px auto;
+    }
+    @include SP {
+      @include aspect-ratio(157, 100);
+      width: vw-sp(157px);
+      margin: calc(-92/375*100vw) -24px 24px auto;
+      @include max-screen(375px) {
+        margin-right: calc(-24 / 375 * 100vw);
+      }
+    }
+  }
+  .about-ttl {
+    @include font("","",100,700);
+    @include PC {
+      @include font(35,60);
+      margin-bottom: 40px;
+      @include max-screen(1023px) {
+        font-size: vw-pc(35px,1023);
+      }
+    }
+    @include SP {
+      @include font(26,40);
+      margin-bottom: 16px;
+    }
+    @include ANDR {
+      @include font(23);
+    }
+  }
+  .about-desc {
+    letter-spacing: 0.1em;
+    @include PC {
+      @include font(16,36);
+    }
+    @include SP {
+      @include font(15,28);
+    }
+  }
+}
+.sec-spa-area {
+  position: relative;
+  color: $brown02;
+  @include PC {
+    margin-bottom: 50px;
+  }
+  @include SP {
+    margin-bottom: 65px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+    @include PC {
+      top: 423px;
+      bottom: 594px;
+    }
+    @include SP {
+      top: 176px;
+      bottom: 389px;
+    }
+  }
+  .c-ttl04 {
+    @include PC {
+      margin-bottom: 51px;
+    }
+    @include SP {
+      margin-bottom: 25px;
+    }
+  }
+  .area-img {
+    @include PC {
+      margin-bottom: 69px;
+    }
+    @include SP {
+      margin-bottom: 56px;
+    }
+  }
+}
+.c-intro {
+  @include PC {
+    padding-top: 110px;
+  }
+  @include SP {
+  }
+  .intro-item {
+    @include PC {
+      margin-bottom: 120px;
+    }
+    @include SP {
+    }
+  }
+  .intro-img {
+    @include SP {
+      margin-bottom: 31px;
+    }
+  }
+  .intro-photo {
+    @include PC {
+      width: 250px;
+      height: 160px;
+      margin: -182px 0 76px auto;
+    }
+    @include SP {
+      width: vw-sp(157px);
+      @include aspect-ratio(157, 100);
+      margin: vw-sp(-91px) -24px 24px auto;
+      @include max-screen(375px) {
+        margin-right: calc(-24 / 375 * 100vw);
+      }
+    }
+  }
+  .intro-info {
+    @include PC {
+      -webkit-align-self: normal;;
+      align-self: normal;
+      padding-top: 80px;
+      padding-bottom: 0;
+    }
+    @include SP {
+    }
+  }
+  .intro-ttl {
+    @include SP {
+      &.is-mb {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .intro-desc {
+    @include PC {
+      margin-bottom: 29px;
+    }
+    @include SP {
+      margin-bottom: 16px;
+    }
+  }
+  .intro-txt {
+    @include font(14);
+    @include SP {
+    }
+    &::before {
+      border-left-color: #928DAB;
+    }
+  }
+  .intro-efficacy {
+    border: 1px solid #928DAB;
+    background: #fff;
+  }
+  .intro-pic::after {
+    display: none;
+  }
+  .intro-list {
+    @include PC {
+      margin-bottom: 120px;
+    }
+    @include SP {
+    }
+  }
+  .intro-col {
+    @include PC {
+      margin-bottom: 70px;
+    }
+    @include SP {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.sec-spa-info {
+  color: $brown02;
+  @include PC {
+    margin-bottom: 120px;
+  }
+  @include SP {
+    margin-bottom: 48px;
+  }
+  a {
+    color: $brown02;
+  }
+  .inner1170 {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+    }
+  }
+  .c-ttl04 {
+    @include PC {
+      width: 360px;
+    }
+    @include SP {
+      margin-bottom: 18px;
+      .c-ttl04__jp {
+        margin-bottom: 1px;
+      }
+    }
+  }
+  .info-data {
+    @include PC {
+      width: 650px;
+      max-width: 650px;
+      @include max-screen(1023px) {
+        width: calc(100% - 360px);
+      }
+    }
+    dl {
+      @include PC {
+        border-bottom: 1px solid #928DAB;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        @include flexbox;
+      }
+      @include SP {
+        border-top: 1px solid #928DAB;
+        padding: 18px 0 16px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+        @include PC {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+      &:first-child {
+        @include SP {
+          border-top: none;
+        }
+      }
+    }
+    dt {
+      @include font("",1.5,100,700);
+      @include PC {
+        padding: 0 20px;
+        width: 230px;
+        @include font(18);
+        @include max-screen(1023px) {
+          width: vw-pc(150px,1023);
+          font-size: vw-pc(18px,1023);
+          padding-left: vw-pc(15px,1023);
+          padding-right: vw-pc(15px,1023);
+        }
+      }
+      @include SP {
+        @include font(16);
+        margin-bottom: 8px;
+      }
+    }
+    dd {
+      letter-spacing: 0.1em;
+      @include PC {
+        @include flex(1);
+        @include font(16,30);
+        @include max-screen(1023px) {
+          font-size: vw-pc(16px,1023)
+        }
+      }
+      @include SP {
+        @include font(15,28);
+      }
+    }
+  }
+  .txt-list {
+    @include flexbox;
+    @include flex-wrap;
+    letter-spacing: 0.1em;
+    @include PC {
+      @include font(16,30);
+      @include max-screen(1023px) {
+        font-size: vw-pc(16px,1023)
+      }
+    }
+    @include SP {
+      @include font(15,28);
+    }
+    &>li {
+      position: relative;
+      padding-left: 18px;
+      @include PC {
+        width: 47.5%;
+      }
+      @include SP {
+        width: 59.5%;
+        &:nth-child(2n) {
+          width: 40.5%;
+        }
+      }
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+.sec-spa-step {
+  background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+  @include PC {
+    padding: 118px 0 120px;
+    margin-bottom: 120px;
+  }
+  @include SP {
+    padding: 67px 0 64px;
+    margin-bottom: 66px;
+  }
+  .c-ttl04 {
+    @include PC {
+      margin-bottom: 71px;
+    }
+    @include SP {
+      margin-bottom: 40px;
+      .c-ttl04__jp {
+        margin-bottom: 6px;
+      }
+      .c-ttl04__en {
+        line-height: calc(43/36);
+      }
+    }
+  }
+  .step-item {
+    background: rgba(#fff,0.8);
+    color: $brown02;
+    line-height: calc(26/14);
+    letter-spacing: 0.1em;
+    @include PC {
+      margin-bottom: 20px;
+      @include flexbox;
+    }
+    @include SP {
+      margin-bottom: 24px;
+    }
+    @include ANDR {
+      @include font(12);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .step-img {
+    @include PC {
+      width: 280px;
+      min-height: 150px;
+    }
+    @include SP {
+      @include aspect-ratio(327, 175);
+    }
+  }
+  .step-info {
+    @include PC {
+      @include flex(1);
+      -webkit-align-self: center;
+      align-self: center;
+      padding: 10px 30px 10px 61px;
+      @include max-screen(1023px) {
+        padding-left: vw-pc(50px,1023);
+      }
+    }
+    @include SP {
+      padding: 22px 24px 24px;
+    }
+  }
+  .step-head {
+    @include flexbox;
+    @include PC {
+      margin-bottom: 8px;
+    }
+    @include SP {
+      margin-bottom: 12px;
+    }
+  }
+  .step-number {
+    white-space: nowrap;
+    color: #928DAB;
+    @include font(20,1.5,0,500);
+    @include ffGT;
+    min-width: 80px;
+    @include PC {
+      margin-right: 10px;
+    }
+    @include SP {
+      margin-right: 11px;
+    }
+    @include ANDR {
+      @include font(17);
+      min-width: 60px
+    }
+  }
+  .step-ttl {
+    @include flex(1);
+    @include font("",1.6,100,700);
+    @include PC {
+      @include font(20);
+    }
+    @include SP {
+      @include font(18);
+      position: relative;
+      top: 2px;
+    }
+    @include ANDR {
+      @include font(16);
+      top: 0;
+    }
+  }
+}
+.c-sec-news {
+  @include PC {
+    margin-bottom: 50px;
+  }
+  @include SP {
+    margin-bottom: 50px;
+  }
+  .inner1170 {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      position: relative;
+    }
+    @include SP {
+    }
+  }
+  .c-ttl04 {
+    @include PC {
+      width: 160px;
+    }
+    @include SP {
+      margin-bottom: 34px;
+      .c-ttl04__jp {
+      margin-bottom: 1px;
+      }
+    }
+  }
+  .c-btn04 {
+    position: absolute;
+    left: 24px;
+    bottom: 0;
+  }
+  .news-content {
+    @include PC {
+      width: 880px;
+      max-width: 880px;
+      margin-left: 30px;
+    }
+    @include SP {
+    }
+  }
+  .news-item {
+    display: block;
+    @include PC {
+      width: 260px;
+    }
+    @include SP {
+      width: 180px;
+    }
+  }
+  .news-img {
+    padding-top: calc(260/260*100%);
+    margin-bottom: 24px;
+  }
+  .news-head {
+    @include flexbox;
+    @include align-items(center);
+    margin-bottom: 14px;
+  }
+  .news-time {
+    @include font(14,1.4,50,500);
+    @include ffGT;
+    color: #928DAB;
+    margin-right: 12px;
+  }
+  .news-cate {
+    @include font(12,15,50,700);
+  }
+  .news-ttl {
+    @include font(16,26,120,700)
+  }
+}
