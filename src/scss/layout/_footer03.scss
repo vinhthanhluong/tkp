@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 .footer03 {
   background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
-  color: #231816;
+  color: $brown02;
   @include PC {
     padding: 60px 0 39px;
   }
@@ -9,7 +9,7 @@
     padding: 48px 0;
   }
   a {
-    color: #231816;
+    color: $brown02;
   }
   .footer-row {
     @include PC {
@@ -36,8 +36,6 @@
       width: 574px;
       max-width: 574px;
       padding-top: 12px;
-    }
-    @include SP {
     }
     .footer-flex {
       &>li {
@@ -96,17 +94,17 @@
     @include PC {
       @include font(15,26);
       @include max-screen(1023px) {
-        font-size: vw-pc(15px,1023)
+        font-size: vw-pc(15px,1023);
       }
     }
     @include SP {
       @include font(12,1.85);
-      text-align: center
+      text-align: center;
     }
   }
   .footer-flex {
     @include flexbox;
-    @include flex-wrap
+    @include flex-wrap;
   }
   .footer-menu,
   .footer-menus {
@@ -119,7 +117,7 @@
       }
       @include HOVER {
         opacity: 1;
-        color: #65B0D4
+        color: #65B0D4;
       }
     }
   }
@@ -129,7 +127,7 @@
       @include font(16,24);
       margin-bottom: 19px;
       @include max-screen(1023px) {
-        font-size: vw-pc(16px,1023)
+        font-size: vw-pc(16px,1023);
       }
     }
     @include SP {
@@ -155,7 +153,7 @@
     @include font(12,20,100);
     @include PC {
       @include max-screen(1023px) {
-        font-size: vw-pc(12px,1023)
+        font-size: vw-pc(12px,1023);
       }
     }
     @include SP {
@@ -181,7 +179,7 @@
     @include PC {
       @include max-screen(1023px) {
         font-size: vw-pc(15px,1023);
-        width: vw-pc(113px,1023)
+        width: vw-pc(113px,1023);
       }
     }
   }
@@ -197,7 +195,7 @@
         width: 30px;
         margin: 5px 15px 5px 0;
         @include max-screen(1023px) {
-          width: vw-pc(30px,1023)
+          width: vw-pc(30px,1023);
         }
       }
       @include SP {
@@ -299,7 +297,7 @@
     margin: 0 6px 0 10px;
     @include PC {
       @include max-screen(1023px) {
-        width: vw-pc(42px,1023)
+        width: vw-pc(42px,1023);
       }
     }
   }
@@ -315,7 +313,8 @@
       content: "";
       position: absolute;
       right: 0;
-      top: 0;
+      top: 50%;
+      margin-top: -8px;
       width: 16px;
       height: 16px;
       background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;

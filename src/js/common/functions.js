@@ -125,3 +125,78 @@ function toggleDropdown() {
     });
   }
 };
+function jsSliderNews() {
+  var sliderJs;
+  var sliderWrapper;
+  var sliderWrapperItem;
+  var sliderWrapperHTML;
+  if ($('.js-slider-news').length) {
+    sliderJs = $('.js-slider-news');
+    sliderWrapper = sliderJs.find('.swiper-wrapper');
+    sliderWrapperItem = sliderJs.find('.swiper-wrapper .swiper-slide');
+    sliderWrapperHTML = sliderWrapper.html();
+    if($('.js-slider-news .swiper-slide').length == 1) {
+      $('.js-slider-news').addClass('is-no-slider');
+    } else {
+      if($('.js-slider-news .swiper-slide').length == 2) {
+        sliderWrapper.append(sliderWrapperHTML);
+      }
+      new Swiper('.js-slider-news', {
+        loop: true,
+        spaceBetween: 24,
+        slidesPerView: 2,
+        grabCursor: true,
+        threshold: 30,
+        lazy: true,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "custom",
+          renderCustom: function (swiper, current, total) {
+            if(total > 9) {
+              var contentCurrent;
+              if(current < 10) {
+                contentCurrent = '<span class="swiper-pagination-current">0';
+              } else {
+                contentCurrent = '<span class="swiper-pagination-current">';
+              }
+              return contentCurrent + current + '</span>/ ' + total;
+            } else {
+              return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
+            }
+          }
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: 30,
+            slidesPerView: 3,
+          },
+          1020: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        on: {
+          init: function () {
+            $(".swiper-progress-bar").removeClass("animate");
+            $(".swiper-progress-bar").removeClass("active");
+            $(".swiper-progress-bar").eq(0).addClass("animate");
+            $(".swiper-progress-bar").eq(0).addClass("active");
+          },
+          slideChangeTransitionStart: function () {
+            $(".swiper-progress-bar").removeClass("animate");
+            $(".swiper-progress-bar").removeClass("active");
+            $(".swiper-progress-bar").eq(0).addClass("active");
+          },
+          slideChangeTransitionEnd: function () {
+            $(".swiper-progress-bar").eq(0).addClass("animate");
+          }
+        }
+      });
+    }
+  }
+};

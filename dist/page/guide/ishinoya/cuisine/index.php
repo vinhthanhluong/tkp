@@ -214,11 +214,28 @@ include(APP_PATH . 'libs/head.php'); ?>
         thumbs: {
           swiper: sliderThumbnail
         },
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   type: "custom",
+        //   renderCustom: function (swiper, current, total) {
+        //     return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
+        //   }
+        // },
         pagination: {
           el: ".swiper-pagination",
           type: "custom",
           renderCustom: function (swiper, current, total) {
-            return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
+            if(total > 9) {
+              var contentCurrent;
+              if(current < 10) {
+                contentCurrent = '<span class="swiper-pagination-current">0';
+              } else {
+                contentCurrent = '<span class="swiper-pagination-current">';
+              }
+              return contentCurrent + current + '</span>/ ' + total;
+            } else {
+              return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
+            }
           }
         },
         on: {

@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  color: #231816;
+  color: $brown02;
   @include PC {
     min-height: 100px;
     padding: 15px 30px;
@@ -67,10 +67,10 @@
   .menu-link {
     @include font(14,20,100,700);
     display: block;
-    color: #231816;
+    color: $brown02;
     @include PC {
       @include max-screen(1140px) {
-        font-size: vw-pc(14px,1140)
+        font-size: vw-pc(14px,1140);
       }
     }
   }
@@ -81,7 +81,7 @@
       padding-right: 18px;
       @include PC {
         @include max-screen(1140px) {
-          padding-right: vw-pc(18px,1140)
+          padding-right: vw-pc(18px,1140);
         }
       }
       &::after {
@@ -171,7 +171,7 @@
   }
   .hamburger-btn {
     position: relative;
-    border: 1px solid #231816;
+    border: 1px solid $brown02;
     top: auto;
     right: auto;
     @include PC {
@@ -199,7 +199,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      border-top: 1px solid #231816;
+      border-top: 1px solid $brown02;
       transform: translateX(-50%);
       transition: 0.26s ease;
       @include PC {
@@ -253,19 +253,52 @@
     }
   }
 }
-.layerOn .layerMenu {
-  @include SP {
-    &.navigation {
-      right: 0;
+.layerOn {
+  .header03 {
+    .menu_overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .layerMenu {
+      @include PC {
+        right: 20px;
+      }
+      @include SP {
+        &.navigation {
+          right: 0;
+        }
+      }
     }
   }
 }
+.menu_overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
 .navigation {
   position: fixed;
-  max-height: 940px;
-  color: #231816;
+  color: $brown02;
   border-radius: 0;
   box-shadow: 0 0 8px rgba(#888, 0.15);
+  right: -100%;
+  z-index: 1000;
+  background: #fff;
+  transition: all 0.5s ease;
+  @include PC {
+    top: 20px;
+    height: calc(100% - 40px);
+    max-height: 940px;
+    width: 430px;
+  }
   @include SP {
     top: 0;
     height: 100vh;
@@ -362,7 +395,7 @@
       }
     }
     a {
-      color: #231816;
+      color: $brown02;
     }
   }
   .navigation-row {
@@ -411,9 +444,16 @@
     }
     .c-btn04 {
       width: 100%;
-      color: #231816;
+      color: $brown02;
+      @include SP {
+        border: 1px solid $brown02;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
       @include HOVER {
-        color: #fff
+        color: #fff;
       }
     }
   }
@@ -470,7 +510,7 @@
 }
 html:not(.is-ipad) {
   .header03 {
-    .header-drop {
+    .has-sub {
       @include PC {
         &:hover {
           .header-mega {

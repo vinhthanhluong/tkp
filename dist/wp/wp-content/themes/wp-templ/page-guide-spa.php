@@ -4,15 +4,16 @@
 **/
 $thisPageName = 'guide-spa';
 include(APP_PATH . 'libs/head.php'); ?>
+<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/guide_spa.min.css?v=<?php echo APP_VER ?>">
 </head>
 
 <body id="guide-spa">
   <?php include(APP_PATH . 'libs/header03.php'); ?>
   <main id="wrap">
-    <section class="sec-spa-keyvisual" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual_sp.jpg">
+    <div class="sec-spa-keyvisual" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual_sp.jpg">
       <div class="inner1170">
-        <div class="keyvisual-logo"><img src="<?php echo createSVG(216, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="216" height="220" alt=""></div>
+        <h1 class="keyvisual-logo"><img src="<?php echo createSVG(216, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="216" height="220" alt=""></h1>
       </div>
       <div class="anchor-container">
         <ul class="anchor-list">
@@ -22,7 +23,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li><a href="#news">お知らせ</a></li>
         </ul>
       </div>
-    </section>
+    </div>
     <section class="sec-spa-about">
       <div class="inner1170">
         <ul class="about-list">
@@ -251,18 +252,62 @@ include(APP_PATH . 'libs/head.php'); ?>
           <span class="c-ttl04__en">News</span>
         </h2>
         <div class="news-content">
-          <div class="news-slider">
-            <div class="swipe-slide">
-              <a class="news-item" href="#">
-                <figure class="news-img c-img">
-                  <img src="<?php echo createSVG(260, 260); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/news_img01.jpg" rel="js-lazy" width="260" height="260" alt="">
-                </figure>
-                <div class="news-head">
-                  <span class="news-time">2025.03.20</span>
-                  <span class="news-cate">お知らせ</span>
-                </div>
-                <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-              </a>
+          <div class="news-slider js-slider-news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="news-item" href="#">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img01.jpg" width="260" height="260" alt="">
+                  </figure>
+                  <div class="news-head">
+                    <span class="news-time">2025.03.20</span>
+                    <span class="news-cate">お知らせ</span>
+                  </div>
+                  <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="news-item" href="#">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
+                  </figure>
+                  <div class="news-head">
+                    <span class="news-time">2025.03.20</span>
+                    <span class="news-cate">お知らせ</span>
+                  </div>
+                  <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="news-item" href="#">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img03.jpg" width="260" height="260" alt="">
+                  </figure>
+                  <div class="news-head">
+                    <span class="news-time">2025.03.20</span>
+                    <span class="news-cate">お知らせ</span>
+                  </div>
+                  <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="news-item" href="#">
+                  <figure class="news-img c-img">
+                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
+                  </figure>
+                  <div class="news-head">
+                    <span class="news-time">2025.03.20</span>
+                    <span class="news-cate">お知らせ</span>
+                  </div>
+                  <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-group">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-progress-bar">
+                <span class="slide-progress-bar"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -271,6 +316,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
   </main>
   <?php include(APP_PATH . 'libs/footer03.php'); ?>
+  <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
 
 </html>

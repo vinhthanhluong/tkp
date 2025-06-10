@@ -2950,3 +2950,211 @@ a.c-btn04 {
     }
   }
 }
+.c-sec-news {
+  .inner1170 {
+    @include PC {
+      @include flexbox;
+      @include align-items(flex-start);
+      @include justify-content(space-between);
+      position: relative;
+    }
+  }
+  .c-ttl04 {
+    @include PC {
+      width: 160px;
+    }
+    @include SP {
+      margin-bottom: 34px;
+      .c-ttl04__jp {
+      margin-bottom: 1px;
+      }
+    }
+  }
+  .c-btn04 {
+    width: 156px;
+    @include PC {
+      position: absolute;
+      left: 24px;
+      bottom: -12px;
+    }
+    @include SP {
+      margin: 38px auto 0;
+    }
+  }
+  .news-content {
+    overflow: hidden;
+    position: relative;
+    @include PC {
+      width: 880px;
+      max-width: 880px;
+      margin-left: 30px;
+      padding-bottom: 72px;
+      @include max-screen(1200px) {
+        max-width: none;
+        width: calc(100% - 190px);
+      }
+    }
+    @include SP {
+      margin-right: -24px;
+      padding-bottom: 57px;
+      @include max-screen(375px) {
+        margin-right: calc(-24 / 375 * 100vw);
+      }
+      .news-slider {
+        margin-right: -30px;
+      }
+    }
+  }
+  .news-slider {
+    &:not(.swiper-initialized) {
+      .swiper-slide {
+        @include PC {
+          width: 260px;
+        }
+        @include SP {
+          width: vw-sp(180px);
+        }
+      }
+      .swiper-slide:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+  .news-item {
+    display: block;
+    @include HOVER {
+      opacity: 1;
+      img {
+        animation: imageHover 1.2s linear;
+      }
+    }
+  }
+  .news-img {
+    padding-top: calc(260/260*100%);
+    margin-bottom: 24px;
+    overflow: hidden;
+    img {
+      @include PC {
+        transition: 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        will-change: transform;
+      }
+    }
+  }
+  .news-head {
+    @include flexbox;
+    @include align-items(center);
+    margin-bottom: 14px;
+  }
+  .news-time {
+    @include font(14,1.4,50,500);
+    @include ffGT;
+    color: #928DAB;
+    margin-right: 12px;
+  }
+  .news-cate {
+    @include font(12,15,50,700);
+  }
+  .news-ttl {
+    @include font(16,26,120,700);
+  }
+  .is-no-slider {
+    @include PC {
+      margin-bottom: -72px;
+    }
+    @include SP {
+      margin-bottom: -57px;
+    }
+    .news-item {
+      @include PC {
+        width: 260px;
+      }
+      @include SP {
+        width: vw-sp(180px);
+      }
+    }
+  }
+  .swiper-wrapper {
+    height: auto;
+  }
+  .swiper-group {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    @include PC {
+      padding-right: 108px;
+    }
+    @include SP {
+      padding-right: 103px;
+    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    left: auto;
+    top: -13px;
+    bottom: auto;
+    @include ffGT;
+    @include font(12,1.5,100,400);
+    color: #9f9b9a;
+    width: auto;
+    transform: none;
+    white-space: nowrap;
+    text-align: left;
+    @include PC {
+      right: 0;
+    }
+    @include SP {
+      right: 23px;
+    }
+  }
+  .swiper-pagination-current {
+    @include font(20,28,100);
+    color: $brown02;
+    min-width: 30px;
+    padding-right: 2px;
+    display: inline-block;
+  }
+  .swiper-progress-bar {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: 1px;
+    .slide-progress-bar {
+      position: absolute;
+      height: 1px;
+      background: #DDD;
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $brown02;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
+    }
+    &.active {
+      .slide-progress-bar {
+        opacity: 1;
+      }
+    }
+    &.animate {
+      .slide-progress-bar {
+        &::after {
+          transition: width linear;
+          transition-delay: unset;
+          width: 100%;
+          transition-duration: 5s;
+        }
+      }
+    }
+  }
+}

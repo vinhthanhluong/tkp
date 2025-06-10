@@ -7,6 +7,7 @@ $(function () {
   btnTop();
   toggleDropdown();
   modtabs();
+  jsSliderNews();
 });
 $(window).on("load", function () {
   initAos();
@@ -52,5 +53,18 @@ $(window).bind("ready resize scroll", function () {
     $("#gototop").addClass("go-up");
   } else {
     $("#gototop").removeClass("go-up");
+  }
+});
+
+$(function () {
+  if ($(".is-ipad").length) {
+    $(".js-header-menu-drop .has-sub .menu-link").on("click", function () {
+      if (!$(this).parent('.has-sub').hasClass("is-current")) {
+        $(".js-header-menu-drop .has-sub.is-current").removeClass("is-current");
+        $(this).parent('.has-sub').addClass("is-current");
+      } else {
+        $(this).parent('.has-sub').removeClass("is-current");
+      }
+    });
   }
 });
