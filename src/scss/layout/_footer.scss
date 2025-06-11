@@ -348,7 +348,7 @@
     }
     @include SP {
       &:not(:last-child) {
-        margin-bottom: 16px;
+        margin-bottom: 18px;
       }
     }
   }
@@ -582,6 +582,250 @@
     }
     &:after {
       transform: translateY(100%);
+    }
+  }
+}
+
+
+//.footer03
+.footer03 {
+  background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+  color: $brown02;
+  @include PC {
+    padding: 60px 0 28px;
+  }
+  @include SP {
+    padding: 48px 0 40px;
+  }
+  &::before {
+    display: none;
+  }
+  a {
+    color: $brown02;
+  }
+  .f-btn {
+    @include PC {
+      max-width: 100%;
+      @include justify-content(center);
+      width: 90%;
+      margin-top: 30px;
+    }
+    @include SP {
+      max-width: 250px;
+    }
+    &>li {
+      @include PC {
+        width: 250px;
+        margin: 0 15px;
+        @include max-screen(1023px) {
+          width: calc(100% / 3);
+          margin-left: 0;
+          margin-right: 0;
+          padding: 0 vw-pc(10px,1023);
+        }
+      }
+      @include SP {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .c-btn03 {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding-right: 21px;
+      border-color: $brown01;
+      padding: 8px 20px;
+      @include PC {
+        overflow: visible;
+      }
+      .arr01,
+      .arr02 {
+        display: none;
+      }
+      &::before {
+        background: #b2a46f;
+        z-index: 1;
+        @include PC {
+          left: -1px;
+          right: 105%;
+          top: -1px;
+          bottom: -1px
+        }
+      }
+      span {
+        @include font(14,"",100);
+        @include PC {
+          @include max-screen(1218px) {
+            font-size: vw-pc(14px,1218);
+          }
+        }
+      }
+      @include HOVER {
+        background: none;
+        padding-left: 21px;
+        span {
+          transform: translateX(0);
+        }
+        &::before {
+          right: -1px
+        }
+      }
+    }
+  }
+  .f-logo {
+    a {
+      display: block;
+    }
+    @include PC {
+      width: 253px;
+      @include max-screen(1218px) {
+        width: vw-pc(253px,1218);
+      }
+    }
+    @include SP {
+      width: 191px;
+      margin: 0 auto 23px;
+    }
+  }
+  .f-wrap {
+    .f-info {
+      @include PC {
+        @include max-screen(1218px) {
+          margin-top: vw-pc(30px,1218);
+        }
+      }
+      @include SP {
+        margin-top: 25px;
+      }
+      .txt {
+        font-weight: 500;
+        &:not(:last-child) {
+          @include PC {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .col02 {
+      @include PC {
+        width: calc(570 / 1170 * 100%);
+        padding-top: 11px;
+        .col02-wrap01 .f-navi {
+          &:nth-child(1) {
+            width: 48.3%;
+          }
+          &:nth-child(2) {
+            .item:nth-child(1) {
+              width: 60%;
+            }
+          }
+        }
+        .col02-wrap02 {
+          margin-right: 0;
+          margin-top: 18px;
+          margin-left: -4px;
+          @include justify-content(flex-start);
+          .f-navi02 {
+            @include justify-content(flex-start);
+            .item a {
+              @include font(14);
+              @include max-screen(1218px) {
+                font-size: vw-pc(14px,1218);
+              }
+            }
+            &:nth-child(1) {
+              width: 48.3%;
+              .item {
+                width: 50%;
+              }
+            }
+            &:nth-child(2) {
+              @include flex(1);
+              width: auto;
+              .item:nth-child(1),
+              .item:nth-child(2) {
+                width: 60%;
+              }
+              .item:nth-child(3) {
+                @include flex(1)
+              }
+            }
+          }
+        }
+      }
+      @include SP {
+        max-width: 280px;
+        .col02-wrap01 .f-navi,
+        .col02-wrap02 .f-navi02 {
+          &:nth-child(1) {
+            width: 67%;
+          }
+        }
+        .col02-wrap02 .f-navi02 {
+          &:nth-child(2) {
+            .item {
+              margin-right: -15px;
+            }
+          }
+        }
+      }
+    }
+    .f-navi {
+      .item a {
+        @include PC {
+          @include font(16);
+          @include max-screen(1218px) {
+            font-size: vw-pc(16px,1218);
+          }
+        }
+      }
+    }
+  }
+  .f-social {
+    @include PC {
+      margin-top: 24px;
+      margin-left: -4px;
+    }
+  }
+  .f-copyright {
+    @include PC {
+      margin-top: 33px;
+    }
+    .item {
+      .link.is-exter::after {
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+        @include PC {
+          @include max-screen(1218px) {
+            width: vw-pc(16px,1218);
+            height: vw-pc(16px,1218);
+            top: vw-pc(3px,1218);
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .is-blank {
+    padding-right: 20px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -8px;
+      width: 16px;
+      height: 16px;
+      background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
     }
   }
 }
