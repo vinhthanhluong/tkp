@@ -2,6 +2,7 @@
 $thisPageName = 'page';
 include(dirname(__DIR__) . '/app_config.php');
 include(APP_PATH . 'libs/head.php'); ?>
+<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 </head>
 
 <body id="page" class="page">
@@ -249,11 +250,84 @@ include(APP_PATH . 'libs/head.php'); ?>
           </ul>
           <p class="demo-ttl">.mod-park</p>
           <?php include(APP_PATH . 'libs/mod_park.php'); ?>
+
+          <p class="demo-ttl">.c-sec-news</p>
+          <section class="c-sec-news" id="news">
+            <div class="inner1170">
+              <h2 class="c-ttl04">
+                <span class="c-ttl04__jp">お知らせ</span>
+                <span class="c-ttl04__en">News</span>
+              </h2>
+              <div class="news-content">
+                <div class="news-slider js-slider-news">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a class="news-item" href="#">
+                        <figure class="news-img c-img">
+                          <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img01.jpg" width="260" height="260" alt="">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time">2025.03.20</span>
+                          <span class="news-cate">お知らせ</span>
+                        </div>
+                        <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="news-item" href="#">
+                        <figure class="news-img c-img">
+                          <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time">2025.03.20</span>
+                          <span class="news-cate">お知らせ</span>
+                        </div>
+                        <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="news-item" href="#">
+                        <figure class="news-img c-img">
+                          <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img03.jpg" width="260" height="260" alt="">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time">2025.03.20</span>
+                          <span class="news-cate">お知らせ</span>
+                        </div>
+                        <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a class="news-item" href="#">
+                        <figure class="news-img c-img">
+                          <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time">2025.03.20</span>
+                          <span class="news-cate">お知らせ</span>
+                        </div>
+                        <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-group">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-progress-bar">
+                      <span class="slide-progress-bar"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="c-btn04" href="#"><span>もっと見る</span></a>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
 <style>
   #wrap {

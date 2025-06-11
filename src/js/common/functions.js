@@ -25,7 +25,7 @@ function handleGoogleFontLoader() {
           // https://github.com/theprojectsomething/webfontloader/tree/feature/google-fonts-v2#google
           "Noto Sans JP:400,700",
           // "Noto Serif JP:400,700",
-          "Gantari:500,600",
+          "Gantari:200,400,500,600",
         ],
       },
       active: function () {
@@ -95,15 +95,17 @@ function jsPopup() {
 }
 
 function modtabs() {
-  if ($('.mod-tabs').length > 0) {
-    $('.mod-tabs .nav-tabs ul li:first-child .tab').addClass('is-act');
-      $('.mod-tabs .nav-tabs .tab').click(function(){
-      var t = $(this).attr('data-tab');
-      $('.mod-tabs .nav-tabs .tab').removeClass('is-act');
-      $(this).addClass('is-act');
-      $('.mod-tabs .tab-content').hide().removeClass('is-show');
-      $('.mod-tabs .tab-content#'+t).fadeIn().addClass('is-show');
-    })
+  if ($(".mod-tabs").length > 0) {
+    $(".mod-tabs .nav-tabs ul li:first-child .tab").addClass("is-act");
+    $(".mod-tabs .nav-tabs .tab").click(function () {
+      var t = $(this).attr("data-tab");
+      $(".mod-tabs .nav-tabs .tab").removeClass("is-act");
+      $(this).addClass("is-act");
+      $(".mod-tabs .tab-content").hide().removeClass("is-show");
+      $(".mod-tabs .tab-content#" + t)
+        .fadeIn()
+        .addClass("is-show");
+    });
   }
 }
 function toggleDropdown() {
@@ -124,24 +126,24 @@ function toggleDropdown() {
       }
     });
   }
-};
+}
 function jsSliderNews() {
   var sliderJs;
   var sliderWrapper;
   var sliderWrapperItem;
   var sliderWrapperHTML;
-  if ($('.js-slider-news').length) {
-    sliderJs = $('.js-slider-news');
-    sliderWrapper = sliderJs.find('.swiper-wrapper');
-    sliderWrapperItem = sliderJs.find('.swiper-wrapper .swiper-slide');
+  if ($(".js-slider-news").length) {
+    sliderJs = $(".js-slider-news");
+    sliderWrapper = sliderJs.find(".swiper-wrapper");
+    sliderWrapperItem = sliderJs.find(".swiper-wrapper .swiper-slide");
     sliderWrapperHTML = sliderWrapper.html();
-    if($('.js-slider-news .swiper-slide').length == 1) {
-      $('.js-slider-news').addClass('is-no-slider');
+    if ($(".js-slider-news .swiper-slide").length == 1) {
+      $(".js-slider-news").addClass("is-no-slider");
     } else {
-      if($('.js-slider-news .swiper-slide').length == 2) {
+      if ($(".js-slider-news .swiper-slide").length == 2) {
         sliderWrapper.append(sliderWrapperHTML);
       }
-      new Swiper('.js-slider-news', {
+      new Swiper(".js-slider-news", {
         loop: true,
         spaceBetween: 24,
         slidesPerView: 2,
@@ -151,33 +153,41 @@ function jsSliderNews() {
         speed: 500,
         autoplay: {
           delay: 5000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         },
         pagination: {
           el: ".swiper-pagination",
           type: "custom",
           renderCustom: function (swiper, current, total) {
-            if(total > 9) {
+            if (total > 9) {
               var contentCurrent;
-              if(current < 10) {
+              if (current < 10) {
                 contentCurrent = '<span class="swiper-pagination-current">0';
               } else {
                 contentCurrent = '<span class="swiper-pagination-current">';
               }
-              return contentCurrent + current + '</span>/ ' + total;
+              return contentCurrent + current + "</span>/ " + total;
             } else {
-              return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
+              return (
+                '<span class="swiper-pagination-current">0' +
+                current +
+                "</span>/ " +
+                "0" +
+                total
+              );
             }
-          }
+          },
         },
         breakpoints: {
           768: {
             spaceBetween: 30,
             slidesPerView: 3,
+            slidesPerGroup: 1,
           },
           1020: {
             slidesPerView: 3,
             spaceBetween: 50,
+            slidesPerGroup: 3,
           },
         },
         on: {
@@ -194,9 +204,9 @@ function jsSliderNews() {
           },
           slideChangeTransitionEnd: function () {
             $(".swiper-progress-bar").eq(0).addClass("animate");
-          }
-        }
+          },
+        },
       });
     }
   }
-};
+}

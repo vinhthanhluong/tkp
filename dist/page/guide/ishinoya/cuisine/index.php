@@ -224,10 +224,10 @@ include(APP_PATH . 'libs/head.php'); ?>
         pagination: {
           el: ".swiper-pagination",
           type: "custom",
-          renderCustom: function (swiper, current, total) {
-            if(total > 9) {
+          renderCustom: function(swiper, current, total) {
+            if (total > 9) {
               var contentCurrent;
-              if(current < 10) {
+              if (current < 10) {
                 contentCurrent = '<span class="swiper-pagination-current">0';
               } else {
                 contentCurrent = '<span class="swiper-pagination-current">';
@@ -239,24 +239,24 @@ include(APP_PATH . 'libs/head.php'); ?>
           }
         },
         on: {
-          init: function () {
+          init: function() {
             $(".swiper-progress-bar").removeClass("animate");
             $(".swiper-progress-bar").removeClass("active");
             $(".swiper-progress-bar").eq(0).addClass("animate");
             $(".swiper-progress-bar").eq(0).addClass("active");
           },
-          slideChangeTransitionStart: function () {
+          slideChangeTransitionStart: function() {
             $(".swiper-progress-bar").removeClass("animate");
             $(".swiper-progress-bar").removeClass("active");
             $(".swiper-progress-bar").eq(0).addClass("active");
           },
-          slideChangeTransitionEnd: function () {
+          slideChangeTransitionEnd: function() {
             $(".swiper-progress-bar").eq(0).addClass("animate");
           }
         }
       });
     }
-    $('.js-tabs li').click(function () {
+    $('.js-tabs li').click(function() {
       var t = $(this).attr('data-tab');
       $('.js-tabs li').removeClass('is-current');
       $('.js-tab-content .tab-content').removeClass('is-current');

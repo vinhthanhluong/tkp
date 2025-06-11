@@ -971,7 +971,7 @@ a.c-btn04 {
       }
     }
     &::before {
-      background: #B2A46F;
+      background: #b2a46f;
       transform: translateX(0);
       z-index: 1;
     }
@@ -1179,6 +1179,7 @@ a.c-btn04 {
   .c-ttl04__en {
     @include font("", 1.5, 0, 500);
     @include ffGT;
+    color: $brown02;
     @include PC {
       @include font(60);
     }
@@ -2892,7 +2893,7 @@ a.c-btn04 {
     margin: 0 auto;
     border: 1px solid $brown02;
     padding: 10px;
-    transition: .3s;
+    transition: 0.3s;
     @include PC {
       width: 521px;
       min-height: 80px;
@@ -2900,8 +2901,8 @@ a.c-btn04 {
     }
     @include HOVER {
       opacity: 1;
-      background: #928DAB;
-      border-color: #928DAB;
+      background: #928dab;
+      border-color: #928dab;
       color: #fff;
       > span {
         color: #fff;
@@ -2922,7 +2923,7 @@ a.c-btn04 {
       position: relative;
       z-index: 2;
       display: inline-block;
-      transition: .3s;
+      transition: 0.3s;
       @include PC {
         padding-left: 85px;
       }
@@ -2934,8 +2935,9 @@ a.c-btn04 {
         position: absolute;
         left: 0;
         top: 50%;
-        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100% auto;
-        transition: .3s;
+        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100%
+          auto;
+        transition: 0.3s;
         @include PC {
           margin-top: -10px;
           width: 54px;
@@ -2966,7 +2968,7 @@ a.c-btn04 {
     @include SP {
       margin-bottom: 34px;
       .c-ttl04__jp {
-      margin-bottom: 1px;
+        margin-bottom: 1px;
       }
     }
   }
@@ -3030,7 +3032,7 @@ a.c-btn04 {
     }
   }
   .news-img {
-    padding-top: calc(260/260*100%);
+    padding-top: calc(260 / 260 * 100%);
     margin-bottom: 24px;
     overflow: hidden;
     img {
@@ -3046,16 +3048,18 @@ a.c-btn04 {
     margin-bottom: 14px;
   }
   .news-time {
-    @include font(14,1.4,50,500);
+    @include font(14, 1.4, 50, 500);
     @include ffGT;
-    color: #928DAB;
+    color: #928dab;
     margin-right: 12px;
   }
   .news-cate {
-    @include font(12,15,50,700);
+    @include font(12, 15, 50, 700);
+    color: $brown02;
   }
   .news-ttl {
-    @include font(16,26,120,700);
+    @include font(16, 26, 120, 700);
+    color: $brown02;
   }
   .is-no-slider {
     @include PC {
@@ -3094,7 +3098,7 @@ a.c-btn04 {
     top: -13px;
     bottom: auto;
     @include ffGT;
-    @include font(12,1.5,100,400);
+    @include font(12, 1.5, 100, 400);
     color: #9f9b9a;
     width: auto;
     transform: none;
@@ -3108,7 +3112,7 @@ a.c-btn04 {
     }
   }
   .swiper-pagination-current {
-    @include font(20,28,100);
+    @include font(20, 28, 100);
     color: $brown02;
     min-width: 30px;
     padding-right: 2px;
@@ -3123,7 +3127,7 @@ a.c-btn04 {
     .slide-progress-bar {
       position: absolute;
       height: 1px;
-      background: #DDD;
+      background: #ddd;
       width: auto;
       clear: both;
       opacity: 0;
