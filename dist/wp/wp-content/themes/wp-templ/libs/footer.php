@@ -1,4 +1,4 @@
-<footer id="footer" class="footer">
+<footer id="footer" class="footer<?php if(($thisPageName == 'guide-spa')): ?> footer03<?php endif ?>">
   <div class="f-wcm01">
     <div class="f-wrap">
       <div class="col01">
@@ -9,7 +9,7 @@
         </div>
         <div class="f-info">
           <p class="txt">〒874-0023 大分県別府市上人ケ浜町795-1</p>
-          <p class="txt">TEL <a href="tel:0977-75-6363">0977-75-6363</a></p>
+          <p class="txt">TEL <?php if(($thisPageName == 'guide-spa')): ?><a href="tel:03-5227-8262">03-5227-8262</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
         </div>
       </div>
       <div class="col02">
@@ -34,9 +34,13 @@
             <li class="item"><a href="<?php if ($thisPageName != 'info') {
                                         echo APP_URL . 'info/';
                                       } ?>#info03">周辺観光</a></li>
+            <?php if(($thisPageName == 'guide-spa')): ?><li class="item sp"><a href="<?php if ($thisPageName != 'info') {
+                                        echo APP_URL . 'info/';
+                                      } ?>#info04">よくあるご質問</a></li><?php endif; ?>
           </ul>
           <ul class="f-navi02">
-            <li class="item"><a href="<?php if ($thisPageName != 'info') {
+            <?php if(($thisPageName == 'guide-spa')): ?><li class="item sp"><a class="is-blank" href="#" target="_blank" rel="noopener nofollow">採用情報</a></li><?php endif; ?>
+            <li class="item<?php if(($thisPageName == 'guide-spa')): ?> pc<?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
                                         echo APP_URL . 'info/';
                                       } ?>#info04">よくあるご質問</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
@@ -69,12 +73,12 @@
     </div>
     <ul class="f-copyright">
       <li class="item">
-        <a class="link" href="<?php echo APP_URL ?>rules/">利用規約</a>
+        <a class="link" href="<?php echo APP_URL ?>">利用規約</a>
         <a class="link is-exter" href="https://www.tkp.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
       </li>
       <li class="item">
         <p class="ttl01">運営会社</p>
-        <a class="link" href="https://www.tkp.jp/" target="_blank" rel="noopener">株式会社ティーケーピー</a>
+        <a class="link" href="<?php echo APP_URL ?>terms/">株式会社ティーケーピー</a>
       </li>
       <li class="item">
         <p class="ttl02">COPYRIGHT©2025 SHONIN PARK</p>

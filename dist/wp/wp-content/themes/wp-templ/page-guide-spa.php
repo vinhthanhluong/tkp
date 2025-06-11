@@ -315,7 +315,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </section>
   </main>
-  <?php include(APP_PATH . 'libs/footer03.php'); ?>
+  <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
 
