@@ -152,6 +152,13 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
         </div>
       </div>
+
+      <div class="sec-room">
+        <div class="i-wcm01">
+
+        </div>
+
+      </div>
     </div>
 
 
