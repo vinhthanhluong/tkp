@@ -217,16 +217,16 @@
     @include font(16,26,"",700);
     @include PC {
       cursor: pointer;
-      padding: 29px 60px 30px 69px;
+      padding: 28px 25px 31px 69px;
     }
     @include SP {
-      padding: 19px 25px 20px 44px;
+      padding: 19px 0 20px 44px;
     }
     &::before {
       content: "Q";
       color: $brown02;
       @include PC {
-        top: 15px;
+        top: 16px;
         left: 26px;
       }
       @include SP {
@@ -234,26 +234,67 @@
         left: 0;
       }
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 16px;
-      height: 16px;
-      margin-top: -9px;
-      background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7.5" width="1" height="16" fill="%23231816"/><rect x="16" y="7.5" width="1" height="16" transform="rotate(90 16 7.5)" fill="%23231816"/></svg>') no-repeat center center/100% auto;
-      @include PC {
-        right: 25px;
+    > span {
+      display: block;
+      position: relative;
+      padding-right: 25px;
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   top: 50%;
+      //   width: 16px;
+      //   height: 16px;
+      //   margin-top: -9px;
+      //   background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7.5" width="1" height="16" fill="%23231816"/><rect x="16" y="7.5" width="1" height="16" transform="rotate(90 16 7.5)" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+      //   @include PC {
+      //     right: 25px;
+      //   }
+      //   @include SP {
+      //     right: 0;
+      //   }
+      // }
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: scale(1.001) translateY(-50%);
+        background: $brown02;
+        -webkit-transition: -webkit-transform .8s;
+        transition: -webkit-transform .8s;
+        -o-transition: transform .8s;
+        transition: transform .8s,
+        -webkit-transform .8s;
+        margin-top: 1px;
       }
-      @include SP {
+      &:before {
+        right: 7px;
+        height: 16px;
+        width: 1px;
+        opacity: 1;
+      }
+      &:after {
         right: 0;
+        height: 1px;
+        width: 16px;
+      }
+    }
+    &.is-act {
+      > span {
+        &:after {
+          transform: scale(1.001) translateY(-50%) rotate(180deg);
+        }
+        &:before {
+          opacity: 0;
+        }
       }
     }
   }
   .faq-answer {
     @include font(15,26);
     @include PC {
-      padding: 1px 20px 29px 66px;
+      padding: 0 20px 30px 66px;
     }
     @include SP {
       padding: 0 0 20px 42px;
@@ -262,7 +303,8 @@
       content: "A";
       color: #B2A46F;
       @include PC {
-        top: -13px;
+        line-height: 1.2;
+        top: -9px;
         left: 26px;
       }
       @include SP {

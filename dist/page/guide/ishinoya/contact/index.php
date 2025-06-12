@@ -7,7 +7,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
 <body id="ishinoya-contact">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
-  <main id="wrap">
+  <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv_sp.jpg">
       <div class="inner1170">
         <h1 class="keyvisual-ttl">
@@ -42,7 +42,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 別府の利⽤についてよくあるご質問をまとめています。<br>こちらで確認できない内容は<a class="contact-link" href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/">お問い合わせフォーム</a>よりご質問ください。</p>
         <ul class="faq-list">
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">キャンセル規定について教えてください</h3>
+            <h3 class="faq-question js-accordion"><span>キャンセル規定について教えてください</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -50,7 +50,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">ドローンは使用できますか？</h3>
+            <h3 class="faq-question js-accordion"><span>ドローンは使用できますか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -58,7 +58,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">定休日はありますか？</h3>
+            <h3 class="faq-question js-accordion"><span>定休日はありますか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -66,7 +66,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">ペットは同伴可能ですか？</h3>
+            <h3 class="faq-question js-accordion"><span>ペットは同伴可能ですか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -74,7 +74,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">赤ちゃん用のおむつ替えスペースはありますか？</h3>
+            <h3 class="faq-question js-accordion"><span>赤ちゃん用のおむつ替えスペースはありますか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -82,7 +82,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">Wifiはありますか？</h3>
+            <h3 class="faq-question js-accordion"><span>Wifiはありますか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -90,7 +90,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </li>
           <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion">海水浴はできますか？</h3>
+            <h3 class="faq-question js-accordion"><span>海水浴はできますか？</span></h3>
             <div class="faq-accordion js-accordion-content">
               <div class="faq-answer">
                 <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
