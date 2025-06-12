@@ -1,0 +1,410 @@
+@charset 'UTF-8';
+
+.footer02 {
+  background: #fff;
+  // Common
+  .f2-bg {
+    background: url($img_url + "img/common/footer02/f02_bg.png");
+    background-repeat: repeat;
+    background-color: transparent;
+    background-position: center;
+    background-size: 135px 93px;
+  }
+  .f2-wrap {
+    @include PC {
+      @include flexbox;
+      @include justify-content(space-between);
+    }
+    .col-logo {
+      @include PC {
+        width: calc(300 / 1170 * 100%);
+      }
+    }
+    .col-menu {
+      @include PC {
+        width: calc(748 / 1170 * 100%);
+      }
+      @include SP {
+        margin-top: 24px;
+      }
+      .col-menu__lst {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include PC {
+          margin-top: -2px;
+        }
+        @include SP {
+          margin-top: -12px;
+        }
+        .col-menu__item {
+          @include PC {
+            margin-top: 2px;
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7) {
+              width: calc(260 / 748 * 100%);
+            }
+            &:nth-child(2),
+            &:nth-child(5),
+            &:nth-child(8) {
+              width: calc(256 / 748 * 100%);
+            }
+            &:nth-child(3),
+            &:nth-child(6),
+            &:nth-child(9) {
+              width: calc(232 / 748 * 100%);
+            }
+          }
+          @include SP {
+            margin-top: 12px;
+          }
+          .link {
+            @include font(14, 26, 0.12, 500);
+            color: $brown02;
+            @include PC {
+              @include max-screen(1218px) {
+                font-size: calc(14 / 1218 * 100vw);
+              }
+            }
+            @include SP {
+              @include max-screen(375px) {
+                font-size: calc(14 / 375 * 100vw);
+              }
+            }
+            &.is-exter {
+              &:after {
+                content: "";
+                position: relative;
+                display: inline-block;
+                top: 3px;
+                margin-left: 9px;
+                width: 16px;
+                height: 16px;
+                background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: transparent;
+                background-size: 100% 100%;
+                @include PC {
+                  @include max-screen(1218px) {
+                    top: calc(3 / 1218 * 100vw);
+                    margin-left: calc(9 / 1218 * 100vw);
+                    width: calc(16 / 1218 * 100vw);
+                    height: calc(16 / 1218 * 100vw);
+                  }
+                }
+                @include SP {
+                  @include max-screen(375px) {
+                    top: calc(3 / 375 * 100vw);
+                    margin-left: calc(9 / 375 * 100vw);
+                    width: calc(16 / 375 * 100vw);
+                    height: calc(16 / 375 * 100vw);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .f2-add,
+  .f2-phone,
+  .f2-copyright {
+    @include font(12, "", 0.12, 500);
+    color: #fff;
+    @include PC {
+      @include max-screen(1218px) {
+        font-size: calc(12 / 1218 * 100vw);
+      }
+    }
+    @include SP {
+      text-align: center;
+      @include max-screen(375px) {
+        font-size: calc(12 / 375 * 100vw);
+      }
+    }
+  }
+  .f2-phone {
+    margin-top: -2px;
+    a {
+      color: inherit;
+    }
+  }
+  .f2-copyright {
+    @include PC {
+      margin-top: -27px;
+      width: 50%;
+    }
+    @include SP {
+      margin-top: 17px;
+    }
+  }
+  // Common
+  .footer02-ctn01 {
+    border-bottom: solid 1px #fff;
+    @include PC {
+      padding: 20px 0 19px;
+    }
+    @include SP {
+      padding: 32px 0 32px;
+    }
+    .f2-wrap {
+      .col-logo {
+        @include PC {
+          padding-top: 7px;
+        }
+      }
+      .col-menu .col-menu__lst .col-menu__item {
+        @include SP {
+          &:nth-child(1) {
+            order: 1;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(2) {
+            order: 5;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(3) {
+            order: 4;
+            width: calc(133 / 327 * 100%);
+          }
+          &:nth-child(4) {
+            order: 3;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(5) {
+            order: 2;
+            width: calc(133 / 327 * 100%);
+          }
+          &:nth-child(6) {
+            order: 6;
+            width: calc(133 / 327 * 100%);
+          }
+        }
+      }
+    }
+  }
+  .footer02-ctn02 {
+    border-bottom: solid 1px #fff;
+    @include PC {
+      padding: 20px 0 19px;
+    }
+    @include SP {
+      padding: 33px 0 32px;
+    }
+    .f2-wrap {
+      .col-menu .col-menu__lst .col-menu__item {
+        @include SP {
+          &:nth-child(1) {
+            order: 1;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(2) {
+            order: 5;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(3) {
+            order: 4;
+            width: calc(133 / 327 * 100%);
+          }
+          &:nth-child(4) {
+            order: 3;
+            width: calc(194 / 327 * 100%);
+          }
+          &:nth-child(5) {
+            order: 2;
+            width: calc(133 / 327 * 100%);
+          }
+          &:nth-child(6) {
+            order: 6;
+            width: calc(133 / 327 * 100%);
+          }
+        }
+      }
+    }
+  }
+  .footer02-ctn03 {
+    border-bottom: solid 1px #fff;
+    @include PC {
+      padding: 20px 0 19px;
+    }
+    @include SP {
+      padding: 34px 0 30px;
+    }
+    .f2-wrap {
+      .col-logo {
+        margin-top: -3px;
+        img {
+          @include SP {
+            width: 100%;
+            max-width: 283px;
+            @include max-screen(375px) {
+              max-width: calc(283 / 375 * 100vw);
+            }
+          }
+        }
+      }
+      .col-menu {
+        .col-menu__lst .col-menu__item {
+          @include SP {
+            width: 100%;
+            &:nth-child(1) {
+              order: 1;
+            }
+            &:nth-child(2) {
+              order: 4;
+            }
+            &:nth-child(3) {
+              order: 7;
+            }
+            &:nth-child(4) {
+              order: 2;
+            }
+            &:nth-child(5) {
+              order: 5;
+            }
+            &:nth-child(6) {
+              order: 8;
+            }
+            &:nth-child(7) {
+              order: 3;
+            }
+            &:nth-child(8) {
+              order: 6;
+            }
+            &:nth-child(9) {
+              order: 9;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer02-ctn04 {
+    background: #50463a;
+    @include PC {
+      padding: 15px 0 19px;
+    }
+    @include SP {
+      padding: 27px 0 31px;
+    }
+    .f2-wrap02 {
+      @include PC {
+        @include flexbox;
+      }
+    }
+    .col-info {
+      @include PC {
+        width: 50%;
+      }
+    }
+    .col-social {
+      @include PC {
+        width: 50%;
+        padding-top: 5px;
+      }
+      @include SP {
+        margin-top: 22px;
+      }
+      .solcial-btn {
+        @include flexbox;
+        @include PC {
+          @include justify-content(flex-end);
+        }
+        @include SP {
+          @include justify-content(center);
+        }
+      }
+      .solcial-btn__item {
+        &:not(:last-child) {
+          @include PC {
+            margin-right: 15px;
+          }
+          @include SP {
+            margin-right: 24px;
+            @include max-screen(375px) {
+              margin-right: calc(24 / 375 * 100vw);
+            }
+          }
+        }
+      }
+
+      .social-external {
+        @include flexbox;
+        @include PC {
+          @include justify-content(flex-end);
+          margin-top: 13px;
+        }
+        @include SP {
+          @include justify-content(center);
+          margin: 19px -10px 0;
+        }
+      }
+      .social-external__item {
+        &:not(:last-child) {
+          @include PC {
+            margin-right: 29px;
+          }
+          @include SP {
+            margin-right: 16px;
+          }
+        }
+        .link {
+          position: relative;
+          @include font(13, "", 0.12, 500);
+          color: #fff;
+          @include PC {
+            @include max-screen(1218px) {
+              font-size: calc(13 / 1218 * 100vw);
+            }
+          }
+          @include SP {
+            @include font(12, "");
+            @include max-screen(375px) {
+              font-size: calc(12 / 375 * 100vw);
+            }
+          }
+          &.is-exter {
+            &:after {
+              content: "";
+              position: relative;
+              display: inline-block;
+
+              width: 16px;
+              height: 16px;
+              background-image: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="4" width="8" height="6" stroke="white"/><path d="M4 6.5V7.5H3V12.5H10V11.5H11V13.5H2V6.5H4Z" fill="white"/></svg>');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: transparent;
+              background-size: 100% 100%;
+              @include PC {
+                top: 3px;
+                margin-left: 4px;
+                @include max-screen(1218px) {
+                  top: calc(3 / 1218 * 100vw);
+                  margin-left: calc(4 / 1218 * 100vw);
+                  width: calc(16 / 1218 * 100vw);
+                  height: calc(16 / 1218 * 100vw);
+                }
+              }
+              @include SP {
+                top: 5px;
+                margin-left: -1px;
+                @include max-screen(375px) {
+                  top: calc(5 / 375 * 100vw);
+                  margin-left: calc(-1 / 375 * 100vw);
+                  width: calc(16 / 375 * 100vw);
+                  height: calc(16 / 375 * 100vw);
+                }
+              }
+            }
+          }
+          .txt {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

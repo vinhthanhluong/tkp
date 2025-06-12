@@ -362,7 +362,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 
 
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
   <script src="<?php echo APP_ASSETS ?>js/page/ishinoya.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
