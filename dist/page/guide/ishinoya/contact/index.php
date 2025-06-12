@@ -29,7 +29,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <p class="c-contact-desc">下記の「<a class="contact-link" href="#faq">よくあるご質問</a>」で解決しない場合は、下記フォームよりお問い合わせください。</p>
         <ul class="btn-list">
           <li><a href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/"><span class="icn icn01">個人のお客様</span></a></li>
-          <li><a href="#"><span class="icn icn02">法人のお客様</span></a></li>
+          <li><a href="https://reg34.smp.ne.jp/regist/is?SMPFORM=qc-sinjs-2237e2e2d56727399f186f7c0c9bcea4&f000607785=SHONIN%20PARK" target="_blank" rel="noopener"><span class="icn icn02">法人のお客様</span></a></li>
         </ul>
       </div>
     </div>

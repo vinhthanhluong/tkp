@@ -210,3 +210,141 @@ function jsSliderNews() {
     }
   }
 }
+
+/* ===================== SECTION WRAPCONTENT ===================== */
+function jsSlideGallery() {
+  const configs = [
+    {
+      gallery: ".js-slider-gallery01",
+      thumb: ".js-slider-thumb01",
+      next: ".swiper01-next",
+      prev: ".swiper01-prev",
+      pagination: ".swiper01-pagination",
+      progress: ".swiper01-progress-bar",
+    },
+    {
+      gallery: ".js-slider-gallery02",
+      thumb: ".js-slider-thumb02",
+      next: ".swiper02-next",
+      prev: ".swiper02-prev",
+      pagination: ".swiper02-pagination",
+      progress: ".swiper02-progress-bar",
+    },
+    {
+      gallery: ".js-slider-gallery03",
+      thumb: ".js-slider-thumb03",
+      next: ".swiper03-next",
+      prev: ".swiper03-prev",
+      pagination: ".swiper03-pagination",
+      progress: ".swiper03-progress-bar",
+    },
+  ];
+
+  configs.forEach((cfg) => {
+    if ($(cfg.gallery).length) {
+      const sliderThumbnail = new Swiper(cfg.thumb, {
+        slidesPerView: 3,
+        spaceBetween: 8,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+
+      new Swiper(cfg.gallery, {
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        threshold: 30,
+        lazy: true,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        thumbs: {
+          swiper: sliderThumbnail,
+        },
+        navigation: {
+          nextEl: cfg.next,
+          prevEl: cfg.prev,
+        },
+        pagination: {
+          el: cfg.pagination,
+          type: "custom",
+          renderCustom: function (swiper, current, total) {
+            if (total > 9) {
+              var contentCurrent =
+                current < 10
+                  ? '<span class="swiper-pagination-current">0'
+                  : '<span class="swiper-pagination-current">';
+              return contentCurrent + current + "</span>/ " + total;
+            } else {
+              return (
+                '<span class="swiper-pagination-current">0' +
+                current +
+                "</span>/ " +
+                "0" +
+                total
+              );
+            }
+          },
+        },
+        on: {
+          init: function () {
+            $(cfg.progress).removeClass("animate active");
+            $(cfg.progress).eq(0).addClass("animate active");
+          },
+          slideChangeTransitionStart: function () {
+            $(cfg.progress).removeClass("animate active");
+            $(cfg.progress).eq(0).addClass("active");
+          },
+          slideChangeTransitionEnd: function () {
+            $(cfg.progress).eq(0).addClass("animate");
+          },
+        },
+      });
+    }
+  });
+}
+function initCustomCursor() {
+  var $curs = $(".js-cursor__slide").hide();
+  var $galleryWrapper = $(".gallery-wrapper");
+  var $prevBtn = $(".gallerySwiper-prev");
+  var $nextBtn = $(".gallerySwiper-next");
+
+  if ($galleryWrapper.length) {
+    $galleryWrapper.on("mouseenter", () => $curs.show());
+    $galleryWrapper.on("mouseleave", () => {
+      $curs.hide().html("");
+    });
+  }
+
+  $(document).on("mousemove", (e) => {
+    $curs.css({
+      left: e.clientX - 30 + "px",
+      top: e.clientY - 30 + "px",
+    });
+  });
+
+  if ($prevBtn.length) {
+    $prevBtn.on("mouseenter", () =>
+      $curs.html('<span class="txt">Prev</span>')
+    );
+    $prevBtn.on("mouseleave", () => $curs.html(""));
+  }
+
+  if ($nextBtn.length) {
+    $nextBtn.on("mouseenter", () =>
+      $curs.html('<span class="txt">Next</span>')
+    );
+    $nextBtn.on("mouseleave", () => $curs.html(""));
+  }
+}
+/* ===================== SECTION WRAPCONTENT ===================== */

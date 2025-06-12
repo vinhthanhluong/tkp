@@ -20,18 +20,7 @@
     }
   }
 }
-.i-wcm02 {
-  // 1440px
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 24px;
-  @include SP {
-    @include max-screen(375px) {
-      padding: 0 calc(24 / 375 * 100vw);
-    }
-  }
-}
+
 .i-bg {
   background: #fff;
 }
@@ -48,529 +37,6 @@
   }
 }
 // Common
-// Common Slide
-
-.i-gallery__main {
-  position: relative;
-  @include PC {
-    overflow: hidden;
-    padding-bottom: 64px;
-    margin-right: 40px;
-    @include PC {
-      @include max-screen(1200px) {
-        padding-bottom: calc(64 / 1200 * 100vw);
-        margin-right: calc(40 / 1200 * 100vw);
-      }
-    }
-  }
-  .gallery-pic {
-    @include PC {
-      padding-top: calc(440 / 625 * 100%);
-    }
-    @include SP {
-      @include aspect-ratio(327, 230);
-    }
-  }
-
-  .gallery-wrapper {
-    position: relative;
-    @include SP {
-      overflow: hidden;
-    }
-  }
-  .gallerySwiper-prev,
-  .gallerySwiper-next {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-    cursor: none;
-  }
-  .cursor {
-    position: fixed;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    border: solid 1px rgba(255, 255, 255, 0.6);
-    border-radius: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2.5px);
-    top: -100px;
-    pointer-events: none;
-    .txt {
-      @include flexbox;
-      @include justify-content(center);
-      @include align-items(center);
-      height: 100%;
-      @include ffGT;
-      @include font(14, "", 0, 500);
-      color: #fff;
-    }
-  }
-  .gallerySwiper-prev {
-    left: 0;
-  }
-  .gallerySwiper-next {
-    right: 0;
-  }
-  .swiper-wrapper {
-    height: auto;
-  }
-  .swiper-group {
-    position: absolute;
-    @include PC {
-      width: 178px;
-      left: 0;
-      bottom: 0;
-      padding: 0 0 20px 78px;
-      @include max-screen(1200px) {
-        width: calc(178 / 1200 * 100vw);
-        padding: calc(0 / 1200 * 100vw) calc(0 / 1200 * 100vw)
-          calc(20 / 1200 * 100vw) calc(78 / 1200 * 100vw);
-      }
-    }
-    @include SP {
-      left: 0;
-      bottom: vw-sp(-25px);
-      width: 85px;
-    }
-  }
-  .gallerySwiper-pagination {
-    position: absolute;
-    left: 0;
-    top: -13px;
-    bottom: auto;
-    @include ffGT;
-    @include font(12, 1.5, 100, 400);
-    color: #9f9b9a;
-    width: auto;
-    transform: none;
-    white-space: nowrap;
-    @include PC {
-      @include max-screen(1200px) {
-        top: calc(-13 / 1200 * 100vw);
-        font-size: calc(12 / 1200 * 100vw);
-      }
-    }
-  }
-  .swiper-pagination-current {
-    @include font(20, 28, 100);
-    color: $brown02;
-    padding-right: 2px;
-    display: inline-block;
-    @include PC {
-      min-width: 32px;
-      @include max-screen(1200px) {
-        font-size: calc(20 / 1200 * 100vw);
-        min-width: calc(32 / 1200 * 100vw);
-        padding-right: calc(2 / 1200 * 100vw);
-      }
-    }
-    @include SP {
-      min-width: 29px;
-    }
-  }
-  .gallerySwiper-progress-bar {
-    position: relative;
-    width: 100%;
-    display: block;
-    z-index: 1;
-    height: 1px;
-    .slide-progress-bar {
-      position: absolute;
-      height: 1px;
-      background: #ddd;
-      width: auto;
-      clear: both;
-      opacity: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: $brown02;
-        height: 100%;
-        width: 0;
-        content: "";
-        transition: 0.1s width linear;
-      }
-    }
-    &.active {
-      .slide-progress-bar {
-        opacity: 1;
-      }
-    }
-    &.animate {
-      .slide-progress-bar {
-        &::after {
-          transition: width linear;
-          transition-delay: unset;
-          width: 100%;
-          transition-duration: 5s;
-        }
-      }
-    }
-  }
-}
-.i-gallery__thumb {
-  overflow: hidden;
-  @include PC {
-    max-width: 460px;
-    width: calc(100% - 190px);
-    margin: -90px 0 0 auto;
-    @include max-screen(1200px) {
-      max-width: calc(460 / 1200 * 100vw);
-      width: calc(100% - (190 / 1200 * 100vw));
-      margin: calc(-90 / 1200 * 100vw) 0 0 auto;
-    }
-  }
-  @include SP {
-    margin: vw-sp(-19px) -24px 0 85px;
-    @include max-screen(375px) {
-      margin-right: calc(-24 / 375 * 100vw);
-    }
-  }
-  .thumb-pic {
-    @include PC {
-      padding-top: calc(100 / 140 * 100%);
-    }
-    @include SP {
-      @include aspect-ratio(84, 60);
-    }
-  }
-}
-.i-wrap {
-  @include PC {
-    @include flexbox;
-    @include justify-content(space-between);
-  }
-  @include SP {
-    margin-top: 25px;
-  }
-  &.wrap-right {
-    .i-wrap__colslide {
-      @include PC {
-        order: 2;
-        width: calc(665 / 1360 * 100%);
-      }
-    }
-    .i-wrap__colctn {
-      @include PC {
-        order: 1;
-        width: calc(595 / 1360 * 100%);
-        padding-top: 11px;
-      }
-      @include SP {
-        margin-top: 31px;
-      }
-      .colctn-inner {
-        @include PC {
-          max-width: 500px;
-          margin: 0 0 0 auto;
-        }
-      }
-    }
-    .colctn-ttl {
-      @include font(22, 36, 0.1, 700);
-      color: $brown02;
-      @include PC {
-        margin-top: 41px;
-        @include max-screen(1200px) {
-          font-size: calc(22 / 1200 * 100vw);
-          margin-top: calc(41 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        @include font(18, 30);
-        @include max-screen(375px) {
-          font-size: calc(18 / 375 * 100vw);
-        }
-      }
-    }
-    .colctn-desc {
-      @include PC {
-        margin-top: 20px;
-        @include max-screen(1200px) {
-          margin-top: calc(20 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 13px;
-        @include max-screen(375px) {
-          margin-top: calc(13 / 375 * 100vw);
-        }
-      }
-      .txt {
-        @include font(16, 28, 0.1, 500);
-        color: $brown02;
-        @include PC {
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(15, 28);
-          @include max-screen(375px) {
-            font-size: calc(15 / 375 * 100vw);
-          }
-        }
-      }
-    }
-    .colctn-info {
-      border: solid #dedcdc;
-      border-width: 1px 0;
-      color: $brown02;
-      @include PC {
-        @include flexbox;
-        @include justify-content(space-between);
-        margin-top: 31px;
-        padding: 18px 19px 19px 20px;
-        @include max-screen(1200px) {
-          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw)
-            calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 24px;
-        padding: 6px 0 8px;
-        text-align: center;
-        @include max-screen(375px) {
-          padding: calc(6 / 375 * 100vw) 0 calc(8 / 375 * 100vw);
-        }
-      }
-      .info-item {
-        @include SP {
-          display: inline-block;
-        }
-      }
-      .ttl01 {
-        display: inline-block;
-        @include font(16, 28, 0.1, 500);
-        @include PC {
-          margin-right: 30px;
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-            margin-right: calc(30 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(14, 26);
-          margin-right: 6px;
-          @include max-screen(375px) {
-            font-size: calc(14 / 375 * 100vw);
-            margin-right: calc(6 / 375 * 100vw);
-          }
-        }
-      }
-      .time01 {
-        position: relative;
-        top: 1px;
-        @include ffGT;
-        @include font(16, 28, 0.1, 400);
-        @include PC {
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(14, 26);
-          @include max-screen(375px) {
-            font-size: calc(14 / 375 * 100vw);
-          }
-        }
-      }
-    }
-    .slash {
-      position: relative;
-      top: 3px;
-      display: inline-block;
-      @include ffGT;
-      @include font(24, 26, 0.1, 200);
-      color: #c9c9c9;
-      margin: 0 4px;
-      @include SP {
-        @include max-screen(375px) {
-          font-size: calc(24 / 375 * 100vw);
-          margin: 0 calc(4 / 375 * 100vw);
-        }
-      }
-    }
-    .c-btn04 {
-      max-width: 156px;
-      @include PC {
-        margin-top: 47px;
-        @include max-screen(1200px) {
-          margin-top: calc(47 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 32px;
-      }
-    }
-  }
-  &.wrap-left {
-    .i-wrap__colslide {
-      @include PC {
-        width: calc(665 / 1360 * 100%);
-      }
-    }
-    .i-wrap__colctn {
-      @include PC {
-        width: calc(595 / 1360 * 100%);
-        padding-top: 11px;
-      }
-      @include SP {
-        margin-top: 31px;
-      }
-      .colctn-inner {
-        @include PC {
-          max-width: 500px;
-        }
-      }
-    }
-    .colctn-ttl {
-      @include font(22, 36, 0.1, 700);
-      color: $brown02;
-      @include PC {
-        margin-top: 41px;
-        @include max-screen(1200px) {
-          font-size: calc(22 / 1200 * 100vw);
-          margin-top: calc(41 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        @include font(18, 30);
-        @include max-screen(375px) {
-          font-size: calc(18 / 375 * 100vw);
-        }
-      }
-    }
-    .colctn-desc {
-      @include PC {
-        margin-top: 20px;
-        @include max-screen(1200px) {
-          margin-top: calc(20 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 13px;
-        @include max-screen(375px) {
-          margin-top: calc(13 / 375 * 100vw);
-        }
-      }
-      .txt {
-        @include font(16, 28, 0.1, 500);
-        color: $brown02;
-        @include PC {
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(15, 28);
-          @include max-screen(375px) {
-            font-size: calc(15 / 375 * 100vw);
-          }
-        }
-      }
-    }
-    .colctn-info {
-      border: solid #dedcdc;
-      border-width: 1px 0;
-      color: $brown02;
-      @include PC {
-        @include flexbox;
-        @include justify-content(space-between);
-        margin-top: 31px;
-        padding: 18px 19px 19px 20px;
-        @include max-screen(1200px) {
-          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw)
-            calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 24px;
-        padding: 6px 0 8px;
-        text-align: center;
-        @include max-screen(375px) {
-          padding: calc(6 / 375 * 100vw) 0 calc(8 / 375 * 100vw);
-        }
-      }
-      .info-item {
-        @include SP {
-          display: inline-block;
-        }
-      }
-      .ttl01 {
-        display: inline-block;
-        @include font(16, 28, 0.1, 500);
-        @include PC {
-          margin-right: 30px;
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-            margin-right: calc(30 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(14, 26);
-          margin-right: 6px;
-          @include max-screen(375px) {
-            font-size: calc(14 / 375 * 100vw);
-            margin-right: calc(6 / 375 * 100vw);
-          }
-        }
-      }
-      .time01 {
-        position: relative;
-        top: 1px;
-        @include ffGT;
-        @include font(16, 28, 0.1, 400);
-        @include PC {
-          @include max-screen(1200px) {
-            font-size: calc(16 / 1200 * 100vw);
-          }
-        }
-        @include SP {
-          @include font(14, 26);
-          @include max-screen(375px) {
-            font-size: calc(14 / 375 * 100vw);
-          }
-        }
-      }
-    }
-    .slash {
-      position: relative;
-      top: 3px;
-      display: inline-block;
-      @include ffGT;
-      @include font(24, 26, 0.1, 200);
-      color: #c9c9c9;
-      margin: 0 4px;
-      @include SP {
-        @include max-screen(375px) {
-          font-size: calc(24 / 375 * 100vw);
-          margin: 0 calc(4 / 375 * 100vw);
-        }
-      }
-    }
-    .c-btn04 {
-      max-width: 156px;
-      @include PC {
-        margin-top: 47px;
-        @include max-screen(1200px) {
-          margin-top: calc(47 / 1200 * 100vw);
-        }
-      }
-      @include SP {
-        margin-top: 32px;
-      }
-    }
-  }
-}
-// Common Slide
 // Section Mainvisual
 .sec-mv {
   position: relative;
@@ -816,12 +282,14 @@
 .sec-room {
   @include PC {
     padding: 120px 16px 120px;
-    @include max-screen(1218px) {
-      padding: 120px 0 500px;
-    }
   }
   @include SP {
     padding: 65px 0 500px;
+  }
+  .c-secwrap__colctn {
+    @include PC {
+      padding-top: 11px;
+    }
   }
 }
 // Section Room
@@ -829,10 +297,7 @@
 .sec-spa {
   position: relative;
   @include PC {
-    padding: 120px 16px 500px;
-    @include max-screen(1218px) {
-      padding: 120px 0 500px;
-    }
+    padding: 120px 16px 120px;
   }
   @include SP {
     padding: 65px 0 500px;
@@ -860,9 +325,40 @@
       background: url($img_url + "img/ishinoya/news_bg_sp.jpg");
     }
   }
-  .i-wcm02 {
+  .c-wcm01 {
     position: relative;
     z-index: 2;
   }
+  .c-secwrap__colctn {
+    @include PC {
+      padding-top: 64px;
+    }
+  }
+  .c-btn04 {
+    &:after {
+      background: none;
+    }
+  }
 }
 // Section Spa
+// Section Cuisine
+.sec-cuisine {
+  position: relative;
+  @include PC {
+    padding: 120px 16px 500px;
+  }
+  @include SP {
+    padding: 65px 0 500px;
+  }
+  .c-secwrap__colctn {
+    @include PC {
+      padding-top: 32px;
+    }
+  }
+  .c-btn04 {
+    &:after {
+      background: none;
+    }
+  }
+}
+// Section Cuisine

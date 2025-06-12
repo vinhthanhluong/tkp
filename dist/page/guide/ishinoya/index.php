@@ -122,15 +122,15 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
 
       <div class="sec-room">
-        <div class="i-wcm02">
+        <div class="c-wcm01">
           <h2 class="c-ttl04 sp">
             <span class="c-ttl04__jp">お部屋</span>
             <span class="c-ttl04__en pc">Rooms</span>
             <span class="c-ttl04__en sp">Room</span>
           </h2>
-          <div class="i-wrap wrap-right">
-            <div class="i-wrap__colslide">
-              <div class="i-gallery__main">
+          <section class="c-secwrap wrap-right">
+            <div class="c-secwrap__colslide">
+              <div class="c-gallery__main">
                 <div class="gallery-wrapper js-slider-gallery01">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -149,7 +149,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     </div>
                   </div>
-                  <p class="cursor">
+                  <p class="c-cursor__slide js-cursor__slide">
                     <span class="txt">Prev</span>
                   </p>
                   <div class="gallerySwiper-prev swiper01-prev">
@@ -164,7 +164,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   </div>
                 </div>
               </div>
-              <div class="i-gallery__thumb">
+              <div class="c-gallery__thumb">
                 <div class="slider-thumb-gallery js-slider-thumb01">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -180,7 +180,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </div>
             </div>
-            <div class="i-wrap__colctn">
+            <div class="c-secwrap__colctn">
               <div class="colctn-inner">
                 <h2 class="c-ttl04 pc">
                   <span class="c-ttl04__jp">お部屋</span>
@@ -204,19 +204,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <a class="c-btn04" href="#"><span>もっと見る</span></a>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
 
       <div class="sec-spa">
-        <div class="i-wcm02">
+        <div class="c-wcm01">
           <h2 class="c-ttl04 sp">
             <span class="c-ttl04__jp">温泉・砂湯</span>
             <span class="c-ttl04__en">Spa</span>
           </h2>
-          <div class="i-wrap wrap-left">
-            <div class="i-wrap__colslide">
-              <div class="i-gallery__main">
+          <section class="c-secwrap wrap-left">
+            <div class="c-secwrap__colslide">
+              <div class="c-gallery__main">
                 <div class="gallery-wrapper js-slider-gallery02">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -235,7 +235,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     </div>
                   </div>
-                  <p class="cursor">
+                  <p class="c-cursor__slide js-cursor__slide">
                     <span class="txt">Prev</span>
                   </p>
                   <div class="gallerySwiper-prev swiper02-prev">
@@ -250,7 +250,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   </div>
                 </div>
               </div>
-              <div class="i-gallery__thumb">
+              <div class="c-gallery__thumb">
                 <div class="slider-thumb-gallery js-slider-thumb02">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -266,31 +266,95 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
               </div>
             </div>
-            <div class="i-wrap__colctn">
+            <div class="c-secwrap__colctn">
               <div class="colctn-inner">
                 <h2 class="c-ttl04 pc">
                   <span class="c-ttl04__jp">温泉・砂湯</span>
                   <span class="c-ttl04__en">Spa</span>
                 </h2>
-                <p class="colctn-ttl">別府の大自然に囲まれたここでしかない空間</p>
+                <p class="colctn-ttl">自然と一体化する癒しの湯</p>
                 <div class="colctn-desc">
-                  <p class="txt">全7種 23室の様々なお部屋タイプがあり、露天風呂付客室では、プライベートな時間と別府温泉の源泉をひとり占め。非日常に囲まれた空間で、贅沢なひとときをお過ごしください。</p>
-                </div>
-                <div class="colctn-info">
-                  <p class="info-item">
-                    <span class="ttl01">チェックイン</span>
-                    <span class="time01">15:00</span>
-                  </p>
-                  <span class="slash sp">/</span>
-                  <p class="info-item">
-                    <span class="ttl01">チェックアウト</span>
-                    <span class="time01">11:00</span>
-                  </p>
+                  <p class="txt">別府湾の美しい眺めを楽しみながら、心身の疲れを癒せる温泉をご用意。地元の天然温泉の恵みを存分に感じられる、贅沢なリラクゼーション体験をお届けします。</p>
                 </div>
                 <a class="c-btn04" href="#"><span>もっと見る</span></a>
               </div>
             </div>
-          </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="sec-cuisine">
+        <div class="c-wcm01">
+          <h2 class="c-ttl04 sp">
+            <span class="c-ttl04__jp">お食事</span>
+            <span class="c-ttl04__en">Cuisine</span>
+          </h2>
+          <section class="c-secwrap wrap-right">
+            <div class="c-secwrap__colslide">
+              <div class="c-gallery__main">
+                <div class="gallery-wrapper js-slider-gallery03">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine01.jpg" width="625" height="440" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine02.jpg" width="625" height="440" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine03.jpg" width="625" height="440" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="c-cursor__slide js-cursor__slide">
+                    <span class="txt">Prev</span>
+                  </p>
+                  <div class="gallerySwiper-prev swiper03-prev">
+                  </div>
+                  <div class="gallerySwiper-next swiper03-next">
+                  </div>
+                </div>
+                <div class="swiper-group">
+                  <div class="gallerySwiper-pagination swiper03-pagination"></div>
+                  <div class="gallerySwiper-progress-bar swiper03-progress-bar pc">
+                    <span class="slide-progress-bar"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="c-gallery__thumb">
+                <div class="slider-thumb-gallery js-slider-thumb03">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine01.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine02.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine03.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-secwrap__colctn">
+              <div class="colctn-inner">
+                <h2 class="c-ttl04 pc">
+                  <span class="c-ttl04__jp">お食事</span>
+                  <span class="c-ttl04__en">Cuisine</span>
+                </h2>
+                <p class="colctn-ttl">地元の恵みを味わい尽くす<br>心も体も温まる食体験を</p>
+                <div class="colctn-desc">
+                  <p class="txt">別府湾の新鮮な海の幸、地元で採れた旬の食材をふんだんに使用したお料理をご提供します。<br>朝食からディナーまで、心も体も温まるメニューでおもてなしいたします。</p>
+                </div>
+                <a class="c-btn04" href="#"><span>もっと見る</span></a>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

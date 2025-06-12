@@ -8,6 +8,8 @@ $(function () {
   toggleDropdown();
   modtabs();
   jsSliderNews();
+  jsSlideGallery();
+  initCustomCursor();
 });
 $(window).on("load", function () {
   initAos();
@@ -59,11 +61,11 @@ $(window).bind("ready resize scroll", function () {
 $(function () {
   if ($(".is-ipad").length) {
     $(".js-header-menu-drop .has-sub .menu-link").on("click", function () {
-      if (!$(this).parent('.has-sub').hasClass("is-current")) {
+      if (!$(this).parent(".has-sub").hasClass("is-current")) {
         $(".js-header-menu-drop .has-sub.is-current").removeClass("is-current");
-        $(this).parent('.has-sub').addClass("is-current");
+        $(this).parent(".has-sub").addClass("is-current");
       } else {
-        $(this).parent('.has-sub').removeClass("is-current");
+        $(this).parent(".has-sub").removeClass("is-current");
       }
     });
   }

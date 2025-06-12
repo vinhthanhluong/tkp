@@ -322,7 +322,173 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </section>
 
+
+
         </div>
+      </div>
+    </div>
+    <div class="section-demo">
+      <div class="inner1170">
+        <p class="demo-ttl">.c-secwrap.wrap-right</p>
+      </div>
+      <div class="c-wcm01">
+        <h2 class="c-ttl04 sp">
+          <span class="c-ttl04__jp">お部屋</span>
+          <span class="c-ttl04__en pc">Rooms</span>
+          <span class="c-ttl04__en sp">Room</span>
+        </h2>
+        <section class="c-secwrap wrap-right">
+          <div class="c-secwrap__colslide">
+            <div class="c-gallery__main">
+              <div class="gallery-wrapper js-slider-gallery01">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room01.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room02.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room03.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                </div>
+                <p class="c-cursor__slide js-cursor__slide">
+                  <span class="txt">Prev</span>
+                </p>
+                <div class="gallerySwiper-prev swiper01-prev">
+                </div>
+                <div class="gallerySwiper-next swiper01-next">
+                </div>
+              </div>
+              <div class="swiper-group">
+                <div class="gallerySwiper-pagination swiper01-pagination"></div>
+                <div class="gallerySwiper-progress-bar swiper01-progress-bar pc">
+                  <span class="slide-progress-bar"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-gallery__thumb">
+              <div class="slider-thumb-gallery js-slider-thumb01">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room01.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room02.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room03.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-secwrap__colctn">
+            <div class="colctn-inner">
+              <h2 class="c-ttl04 pc">
+                <span class="c-ttl04__jp">お部屋</span>
+                <span class="c-ttl04__en">Rooms</span>
+              </h2>
+              <p class="colctn-ttl">別府の大自然に囲まれたここでしかない空間</p>
+              <div class="colctn-desc">
+                <p class="txt">全7種 23室の様々なお部屋タイプがあり、露天風呂付客室では、プライベートな時間と別府温泉の源泉をひとり占め。非日常に囲まれた空間で、贅沢なひとときをお過ごしください。</p>
+              </div>
+              <div class="colctn-info">
+                <p class="info-item">
+                  <span class="ttl01">チェックイン</span>
+                  <span class="time01">15:00</span>
+                </p>
+                <span class="slash sp">/</span>
+                <p class="info-item">
+                  <span class="ttl01">チェックアウト</span>
+                  <span class="time01">11:00</span>
+                </p>
+              </div>
+              <a class="c-btn04" href="#"><span>もっと見る</span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="inner1170">
+        <p class="demo-ttl">.c-secwrap.wrap-left</p>
+      </div>
+      <div class="c-wcm01">
+        <h2 class="c-ttl04 sp">
+          <span class="c-ttl04__jp">温泉・砂湯</span>
+          <span class="c-ttl04__en">Spa</span>
+        </h2>
+        <section class="c-secwrap wrap-left">
+          <div class="c-secwrap__colslide">
+            <div class="c-gallery__main">
+              <div class="gallery-wrapper js-slider-gallery02">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa01.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa02.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="gallery-pic c-img">
+                      <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa03.jpg" width="625" height="440" alt="">
+                    </div>
+                  </div>
+                </div>
+                <p class="c-cursor__slide js-cursor__slide">
+                  <span class="txt">Prev</span>
+                </p>
+                <div class="gallerySwiper-prev swiper02-prev">
+                </div>
+                <div class="gallerySwiper-next swiper02-next">
+                </div>
+              </div>
+              <div class="swiper-group">
+                <div class="gallerySwiper-pagination swiper02-pagination"></div>
+                <div class="gallerySwiper-progress-bar swiper02-progress-bar pc">
+                  <span class="slide-progress-bar"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-gallery__thumb">
+              <div class="slider-thumb-gallery js-slider-thumb02">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa01.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa03.jpg" width="140" height="100" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-secwrap__colctn">
+            <div class="colctn-inner">
+              <h2 class="c-ttl04 pc">
+                <span class="c-ttl04__jp">温泉・砂湯</span>
+                <span class="c-ttl04__en">Spa</span>
+              </h2>
+              <p class="colctn-ttl">自然と一体化する癒しの湯</p>
+              <div class="colctn-desc">
+                <p class="txt">別府湾の美しい眺めを楽しみながら、心身の疲れを癒せる温泉をご用意。地元の天然温泉の恵みを存分に感じられる、贅沢なリラクゼーション体験をお届けします。</p>
+              </div>
+              <a class="c-btn04" href="#"><span>もっと見る</span></a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
