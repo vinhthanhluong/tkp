@@ -38,10 +38,18 @@
         <div class="f-social pc">
           <p class="ttl">Official SNS</p>
           <ul class="social-lst">
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+            <li class="item">
+              <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -53,10 +61,18 @@
     </ul>
     <div class="f-social sp">
       <ul class="social-lst">
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+        <li class="item">
+          <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+        </li>
       </ul>
     </div>
     <ul class="f-copyright">

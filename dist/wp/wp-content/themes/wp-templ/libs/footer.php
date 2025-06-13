@@ -1,4 +1,4 @@
-<footer id="footer" class="footer<?php if(($thisPageName == 'guide-spa')): ?> footer03<?php endif ?>">
+<footer id="footer" class="footer<?php if (($thisPageName == 'guide-spa')): ?> footer03<?php endif ?>">
   <div class="f-wcm01">
     <div class="f-wrap">
       <div class="col01">
@@ -9,7 +9,7 @@
         </div>
         <div class="f-info">
           <p class="txt">〒874-0023 大分県別府市上人ケ浜町795-1</p>
-          <p class="txt">TEL <?php if(($thisPageName == 'guide-spa')): ?><a href="tel:03-5227-8262">03-5227-8262</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
+          <p class="txt">TEL <?php if (($thisPageName == 'guide-spa')): ?><a href="tel:03-5227-8262">03-5227-8262</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
         </div>
       </div>
       <div class="col02">
@@ -34,15 +34,15 @@
             <li class="item"><a href="<?php if ($thisPageName != 'info') {
                                         echo APP_URL . 'info/';
                                       } ?>#info03">周辺観光</a></li>
-            <?php if(($thisPageName == 'guide-spa')): ?><li class="item sp"><a href="<?php if ($thisPageName != 'info') {
-                                        echo APP_URL . 'info/';
-                                      } ?>#info04">よくあるご質問</a></li><?php endif; ?>
+            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a href="<?php if ($thisPageName != 'info') {
+                                                                                        echo APP_URL . 'info/';
+                                                                                      } ?>#info04">よくあるご質問</a></li><?php endif; ?>
           </ul>
           <ul class="f-navi02">
-            <?php if(($thisPageName == 'guide-spa')): ?><li class="item sp"><a class="is-blank" href="#" target="_blank" rel="noopener nofollow">採用情報</a></li><?php endif; ?>
-            <li class="item<?php if(($thisPageName == 'guide-spa')): ?> pc<?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
-                                        echo APP_URL . 'info/';
-                                      } ?>#info04">よくあるご質問</a></li>
+            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a class="is-blank" href="#" target="_blank" rel="noopener nofollow">採用情報</a></li><?php endif; ?>
+            <li class="item<?php if (($thisPageName == 'guide-spa')): ?> pc<?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
+                                                                                                        echo APP_URL . 'info/';
+                                                                                                      } ?>#info04">よくあるご質問</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
           </ul>
         </div>
@@ -50,10 +50,18 @@
         <div class="f-social pc">
           <p class="ttl">Official SNS</p>
           <ul class="social-lst">
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
-            <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+            <li class="item">
+              <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href="https://www.youtube.com/@tkp1727" target="_blrank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
+            </li>
+            <li class="item">
+              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -65,10 +73,18 @@
     </ul>
     <div class="f-social sp">
       <ul class="social-lst">
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a></li>
-        <li class="item"><a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a></li>
+        <li class="item">
+          <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href="https://www.youtube.com/@tkp1727" target="_blrank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
+        </li>
+        <li class="item">
+          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+        </li>
       </ul>
     </div>
     <ul class="f-copyright">

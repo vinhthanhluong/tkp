@@ -65,6 +65,13 @@
   }
 }
 
+.c-nophoto {
+  background-color: #fef5e4 !important;
+  img {
+    object-fit: contain !important;
+  }
+}
+
 /* ===================== MAINVISUAL ===================== */
 .c-mainvisual {
   @include PC {

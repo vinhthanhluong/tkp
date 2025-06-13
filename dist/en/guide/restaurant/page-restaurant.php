@@ -158,7 +158,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
                 <li>
                   <div class="menu-item aos-init" data-aos="fade-up">
                     <div class="menu-info">
-                      <figure class="menu-img c-img">
+                      <figure class="menu-img c-img <?php echo $food_pic == APP_NOIMG ? "c-nophoto" : ""; ?>">
                         <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $food_pic; ?>" rel="js-lazy" width="345" height="250" alt="">
                       </figure>
                       <div class="menu-head">
@@ -215,7 +215,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
             ?>
               <li class="aos-init" data-aos="fade-up">
                 <a class="news-item" href="<?php echo $news_url; ?>">
-                  <figure class="news-img c-img">
+                  <figure class="news-img c-img <?php echo $news_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
                     <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="">
                   </figure>
                   <div class="news-info">

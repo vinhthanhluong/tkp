@@ -119,7 +119,7 @@ include(APP_PATH . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($previd)) { ?>
-              <p class="prev__thumb">
+              <p class="prev__thumb <?php echo $prev_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
                 <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $prev_thumb; ?>" rel="js-lazy" alt="">
               </p>
               <?php if (!empty($prev_ttl)) { ?>
@@ -138,7 +138,7 @@ include(APP_PATH . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($nextid)) { ?>
-              <p class="next__thumb">
+              <p class="next__thumb <?php echo $next_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
                 <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $next_thumb; ?>" rel="js-lazy" alt="">
               </p>
               <?php if (!empty($next_ttl)) { ?>

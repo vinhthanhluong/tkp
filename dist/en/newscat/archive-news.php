@@ -130,6 +130,9 @@ include(APP_PATH_EN . 'libs/head.php');
               $query_news->the_post();
               $n_id    = $post->ID;
               $n_url   = get_the_permalink($n_id);
+              if ($lang != 'jp') {
+                $n_url = insertLangInUrl($n_url, 'news', $lang);
+              }
               $n_ttl   = get_the_title($n_id);
               $n_date  = get_the_date('Y.m.d');
               $n_terms = get_the_terms($n_id, 'newscat');
@@ -139,7 +142,9 @@ include(APP_PATH_EN . 'libs/head.php');
               <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                 <a class="lstpost01-link" href="<?php echo $n_url; ?>">
                   <div class="lstpost01-ctn01">
-                    <figure class="lstpost01-img"><img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($n_ttl); ?>"></figure>
+                    <figure class="lstpost01-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                      <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($n_ttl); ?>">
+                    </figure>
                     <?php if (!empty($n_terms)) { ?>
                       <p class="cate">
                         <?php

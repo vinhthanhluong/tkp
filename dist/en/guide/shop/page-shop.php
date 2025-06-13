@@ -118,7 +118,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
                 <li class="aos-init" data-aos="fade-up">
                   <div class="shop-item">
                     <div class="shop-group">
-                      <figure class="shop-img c-img">
+                      <figure class="shop-img c-img <?php echo $shop_pic == APP_NOIMG ? "c-nophoto" : ""; ?>">
                         <img src="<?php echo createSVG(345, 250); ?>" data-src="<?php echo $shop_pic; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($shop_name); ?>">
                       </figure>
                       <div class="shop-info">
@@ -174,7 +174,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
             ?>
               <li class="aos-init" data-aos="fade-up">
                 <a class="news-item" href="<?php echo $news_url; ?>">
-                  <figure class="news-img c-img">
+                  <figure class="news-img c-img <?php echo $news_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
                     <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="<?php echo strip_tags($news_ttl); ?>">
                   </figure>
                   <div class="news-info">

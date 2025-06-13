@@ -109,7 +109,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                 <a class="lstpost01-link" href="<?php echo $n_url; ?>">
                   <div class="lstpost01-ctn01">
-                    <div class="lstpost01-img">
+                    <div class="lstpost01-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
                       <img src="<?php echo createSVG(345, 250) ?>" data-src="<?php echo $n_photo; ?>" rel="js-lazy" width="345" height="250" alt="<?php echo strip_tags($n_ttl); ?>">
                     </div>
                     <?php if (!empty($n_terms)) { ?>

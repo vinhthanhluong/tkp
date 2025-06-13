@@ -52,12 +52,12 @@
     @include flexbox;
     @include align-items(center);
     @include PC {
-      max-width: calc(300/900*100%);
+      max-width: calc(300 / 900 * 100%);
     }
     @include SP {
       @include flex-direction(column);
       @include justify-content(center);
-      padding: 0 calc(32/375 * 100vw);
+      padding: 0 calc(32 / 375 * 100vw);
     }
     &.disable {
       opacity: 0;
@@ -66,8 +66,17 @@
     }
     &__thumb {
       @include aspect-ratio(100, 100);
+      -webkit-mask-image: url($img_url + "img/common/mask_bg04.png");
+      mask-image: url($img_url + "img/common/mask_bg04.png");
+      object-fit: cover;
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
       @include PC {
-        width: calc(100.02/300*100%);
+        width: calc(100.02 / 300 * 100%);
         max-width: 100px;
         margin-right: 20px;
       }
@@ -85,7 +94,8 @@
           width: 20px;
           height: 20px;
           z-index: 1;
-          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>') center no-repeat;
+          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>')
+            center no-repeat;
         }
       }
       img {
@@ -94,15 +104,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        -webkit-mask-image: url($img_url + "img/common/mask_bg04.png");
-        mask-image: url($img_url + "img/common/mask_bg04.png");
-        -webkit-mask-position: center;
-        mask-position: center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 100% 100%;
-        mask-size: 100% 100%;
       }
     }
     &__ttl {
@@ -112,7 +113,7 @@
         @include multiLineEllipsis(2);
       }
       @include SP {
-        @include font(11,19);
+        @include font(11, 19);
         text-align: center;
         @include multiLineEllipsis(3);
       }

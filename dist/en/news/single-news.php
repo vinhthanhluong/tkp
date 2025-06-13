@@ -101,6 +101,9 @@ include(APP_PATH_EN . 'libs/head.php');
         if (isset($ids[$thisindex + 1])) {
           $previd = $ids[$thisindex + 1];
           $prev_link = get_the_permalink($previd);
+          if ($lang != 'jp') {
+            $prev_link = insertLangInUrl($prev_link, 'news', $lang);
+          }
           $prev_ttl = get_the_title($previd);
           $prev_thumb = wp_get_attachment_url(get_post_thumbnail_id($previd), 'thumbnail');
           $prev_thumb = $prev_thumb ? $prev_thumb : APP_NOIMG;
@@ -108,6 +111,9 @@ include(APP_PATH_EN . 'libs/head.php');
         if (isset($ids[$thisindex - 1])) {
           $nextid = $ids[$thisindex - 1];
           $next_link = get_the_permalink($nextid);
+          if ($lang != 'jp') {
+            $next_link = insertLangInUrl($next_link, 'news', $lang);
+          }
           $next_ttl = get_the_title($nextid);
           $next_thumb = wp_get_attachment_url(get_post_thumbnail_id($nextid), 'thumbnail');
           $next_thumb = $next_thumb ? $next_thumb : APP_NOIMG;
@@ -120,7 +126,7 @@ include(APP_PATH_EN . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($previd)) { ?>
-              <p class="prev__thumb">
+              <p class="prev__thumb <?php echo $prev_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
                 <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $prev_thumb; ?>" rel="js-lazy" alt="">
               </p>
               <?php if (!empty($prev_ttl)) { ?>
@@ -139,7 +145,7 @@ include(APP_PATH_EN . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($nextid)) { ?>
-              <p class="next__thumb">
+              <p class="next__thumb <?php echo $next_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
                 <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $next_thumb; ?>" rel="js-lazy" alt="">
               </p>
               <?php if (!empty($next_ttl)) { ?>

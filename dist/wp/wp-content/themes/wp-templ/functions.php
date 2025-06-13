@@ -45,12 +45,12 @@ function search_ajax()
       $n_terms = get_the_terms($n_id, 'newscat');
       $n_thumb = get_the_post_thumbnail_url($n_id);
       $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;
-
+      $n_photo_class = $n_photo == APP_NOIMG ? "c-nophoto" : "";
       $html = $html . '
       <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="' . $delay . '">
         <a class="lstpost01-link" href="' . $n_url . '">
           <div class="lstpost01-ctn01">
-            <div class="lstpost01-img">
+            <div class="lstpost01-img ' . $n_photo_class . '">
               <img src="' . $n_photo . '" width="345" height="250" alt="">
             </div>';
       if (!empty($n_terms)) {
@@ -353,3 +353,11 @@ add_action('template_redirect', 'wpc_redirect_pagenum');
 
 // Disable auto redirect with same post_name
 remove_action('template_redirect', 'redirect_canonical');
+
+function insertLangInUrl($url, $name, $lang)
+{
+  if (!empty($lang)) {
+    $url = preg_replace('/(\/)(' . $name . '\/)/', '$1' . $lang . '/$2', $url);
+  }
+  return $url;
+}
