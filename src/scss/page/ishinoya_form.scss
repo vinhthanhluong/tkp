@@ -1,0 +1,88 @@
+@charset "utf-8";
+@import "../utility/*";
+
+// Common
+.form-ttl {
+  @include font(35, 45, 0.1, 700);
+  text-align: center;
+  color: $brown02;
+  @include PC {
+    margin-top: 73px;
+  }
+  @include SP {
+    @include font(26, 36);
+    margin-top: 37px;
+  }
+}
+.form-step {
+  text-align: center;
+  @include PC {
+    margin-top: 42px;
+  }
+  @include SP {
+    margin-top: 25px;
+  }
+}
+.form-inner {
+  @include PC {
+    margin: 40px auto 0;
+    max-width: 840px;
+  }
+  @include SP {
+    margin-top: 24px;
+  }
+}
+.short-desc {
+  text-align: center;
+  margin-top: 39px;
+  @include font(16, 28, 0.1, 500);
+  color: $brown02;
+  @include SP {
+    margin-top: -31px;
+    padding: 0 10px;
+    @include font(14);
+    line-height: 28px;
+    letter-spacing: 1.6px;
+    margin-bottom: 77px;
+  }
+}
+
+// Common
+// Section Form
+.page-form {
+  .sec-form {
+    @include PC {
+      padding: 15px 0 100px;
+    }
+    @include SP {
+      padding: 14px 0 64px;
+    }
+    .c-breadcrumb {
+      padding: 0;
+      @include SP {
+        margin-top: 0;
+      }
+    }
+  }
+}
+// Section Form
+// Section Form Confirm
+.page-form {
+  .sec-formconfirm {
+    padding: 15px 0 100px;
+    .form-step {
+      @include PC {
+        margin-top: 75px;
+      }
+      @include SP {
+        margin-top: 25px;
+      }
+    }
+    .form-inner {
+      @include PC {
+        margin: 16px auto 0;
+      }
+    }
+  }
+}
+// Section Form Confirm

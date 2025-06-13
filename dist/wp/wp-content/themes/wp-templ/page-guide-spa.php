@@ -1,7 +1,8 @@
 <?php
+
 /**
  * Template Name: Page GUIDE SPA
-**/
+ **/
 $thisPageName = 'guide-spa';
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
@@ -315,7 +316,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </section>
   </main>
-  <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
 

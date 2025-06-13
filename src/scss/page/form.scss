@@ -379,7 +379,7 @@
   }
 
   // for step 2
-  &.form-confirm {
+  &.contact.form-confirm {
     header {
       #logo a {
         pointer-events: none;
@@ -715,4 +715,563 @@
       }
     }
   }
+
+  //************************ TABLE CONTACT 02 ************************//
+  .tableContact02 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 6px;
+    @include SP {
+      margin-bottom: -9px;
+    }
+    td,
+    th {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 25px;
+      @include SP {
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+    th {
+      width: 220px;
+      @include font(15);
+      line-height: 24px;
+      letter-spacing: 1.8px;
+      font-weight: 700;
+      padding-top: 15px;
+      color: $brown02;
+      @include SP {
+        width: 100%;
+        @include font(14);
+        line-height: 22px;
+        margin-bottom: 8px;
+        padding-top: 0;
+      }
+      &.is-padd {
+        padding-top: 0;
+      }
+    }
+    td {
+      position: relative;
+      width: calc(100% - 220px);
+      @include SP {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"] {
+      width: 100%;
+      height: 54px;
+      background: #fff;
+      border: solid 1px #dcdcdc;
+      color: #000000;
+      padding: 26px 19px;
+      letter-spacing: 1.7px;
+      &::-webkit-input-placeholder,
+      &::placeholder {
+        color: #bbbbbb;
+      }
+      @include SP {
+        height: 40px;
+        @include font(12);
+        padding: 10px 15px;
+        letter-spacing: 1.5px;
+      }
+      &.is-letterspace {
+        letter-spacing: 0;
+      }
+    }
+
+    textarea {
+      width: 100%;
+    }
+    textarea {
+      height: 140px;
+      @include SP {
+        height: 120px;
+      }
+    }
+
+    .checkbox-list {
+      @include flexbox;
+      @include PC {
+        margin-top: -1px;
+      }
+      @include SP {
+        @include flex-wrap(wrap);
+        padding-top: 2px;
+      }
+      .check-item {
+        position: relative;
+        @include PC {
+          &:not(:last-child) {
+            margin-right: 28px;
+            @include PC {
+              @include max-screen(1000px) {
+                margin-right: calc(28 / 1000 * 100vw);
+              }
+            }
+          }
+        }
+        @include SP {
+          width: 52%;
+          margin-top: 4px;
+          &:nth-child(2n) {
+            width: 48%;
+          }
+        }
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          &:checked {
+            ~ label {
+              .ske {
+                &::before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+        label {
+          @include font(15, "", 0.12, 500);
+          @include SP {
+            @include font(14);
+          }
+          .ske {
+            position: relative;
+            top: 4px;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: solid 1px #dcdcdc;
+            margin-right: 10px;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 12px;
+              height: 12px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: $yellow04;
+              opacity: 0;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .txt-hint {
+      @include font(13);
+      line-height: 21px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      margin-top: 10px;
+      @include SP {
+        @include font(12);
+        line-height: 19px;
+        margin-top: 7px;
+      }
+    }
+
+    button {
+      height: 60px;
+      margin: 20px auto;
+      padding: 0 100px;
+      background: #eee;
+    }
+
+    em {
+      display: inline-block;
+      text-align: center;
+      @include font(12, 18, 0.12, 700);
+      width: 40px;
+      height: 20px;
+      font-style: normal;
+      border: solid 1px #bbbbbb;
+      margin-right: 12px;
+      color: #bbbbbb;
+    }
+    .is-required {
+      em {
+        color: $brown02;
+        border: solid 1px $yellow04;
+      }
+    }
+  }
+
+  .txtContact02 {
+    @include SP {
+      max-width: 295px;
+      margin: 0 auto;
+    }
+    ul {
+      text-align: center;
+      li {
+        @include font(15, "", 0.12, 500);
+        color: $brown02;
+        @include SP {
+          @include font(13, 21);
+        }
+        a {
+          color: $blue01;
+          text-decoration: underline;
+          margin-right: 6px;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "";
+            background: url($img_url + "img/contact/ico_blank.svg") no-repeat
+              center center/100% auto;
+            width: 8px;
+            height: 8px;
+            top: -5px;
+            right: -8px;
+            @include SP {
+              top: -3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .box-confirm02 {
+    margin-top: 28px;
+    @include SP {
+      margin-top: 22px;
+    }
+    .check-confirm {
+      text-align: center;
+      label {
+        position: relative;
+        @include font(15, 24, 0.12, 500);
+        color: $brown02;
+        @include SP {
+          @include font(14);
+          line-height: 22px;
+          letter-spacing: 1.7px;
+        }
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          &:checked {
+            ~ span {
+              &:after {
+                display: block;
+              }
+            }
+          }
+        }
+        span {
+          position: relative;
+          padding-left: 35px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: solid 1px #dcdcdc;
+            left: 4px;
+            top: 50%;
+            transform: translate(0, -50%);
+            @include PC {
+              @include Safari {
+                top: 52%;
+              }
+            }
+            @include SP {
+              left: 3px;
+            }
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: $yellow04;
+            left: 8px;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: none;
+            @include PC {
+              @include Safari {
+                top: 52%;
+              }
+            }
+            @include SP {
+              left: 7px;
+            }
+          }
+        }
+      }
+    }
+    .btn-confirm {
+      #btnConfirm {
+        width: 100%;
+        @include font(18, 30, 0.12, 700);
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        text-align: center;
+        color: $brown02;
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s ease;
+        border: none;
+        @include PC {
+          max-width: 300px;
+          margin: -1px auto 0;
+          min-height: 60px;
+          padding: 11px 10px;
+        }
+        @include SP {
+          @include font(14, 24);
+          max-width: 327px;
+          margin: 26px auto 0;
+          min-height: 50px;
+          padding: 10px 10px;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transition: 0.5s ease;
+        }
+        &::after {
+          border: 1px solid $brown02;
+          background: #fff;
+        }
+        &::before {
+          @include PC {
+            background: #b2a46f;
+            transform: translateX(-110%);
+            z-index: 1;
+          }
+        }
+        & > span {
+          position: relative;
+          z-index: 2;
+          color: $brown02;
+        }
+        @include HOVER {
+          opacity: 1;
+          color: #fff;
+          &::before {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+  // for step 2
+  &.ishinoya-form.form-confirm {
+    header {
+      #logo a {
+        pointer-events: none;
+      }
+    }
+    .c-breadcrumb {
+      a {
+        pointer-events: none;
+      }
+    }
+    .sec-formconfirm {
+      .tableContact02 {
+        margin-bottom: 20px;
+        @include SP {
+          margin-bottom: 15px;
+        }
+        tr {
+          &:last-child {
+            th,
+            td {
+              &:before,
+              &:after {
+                display: none;
+              }
+            }
+          }
+          @include SP {
+            display: block;
+            padding: 15px 0;
+            position: relative;
+            &:last-child {
+              &:before,
+              &:after {
+                display: none;
+              }
+            }
+            &:before {
+              position: absolute;
+              content: "";
+              width: 80px;
+              height: 1px;
+              background: $blue01;
+              bottom: 0;
+              left: 0;
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              width: calc(100% - 85px);
+              height: 1px;
+              background: #dcdcdc;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+        th,
+        td {
+          position: relative;
+          padding: 15px 20px 16px;
+          margin-bottom: 0;
+          @include font(15);
+          line-height: 24px;
+          color: $brown02;
+          @include SP {
+            padding: 0;
+            @include font(14);
+          }
+        }
+        th {
+          width: 250px;
+          @include SP {
+            width: 100%;
+            margin-bottom: 4px;
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $yellow04;
+            bottom: 0;
+            left: 0;
+            @include SP {
+              display: none;
+            }
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 1px;
+            background: #fff;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            @include SP {
+              display: none;
+            }
+          }
+        }
+        td {
+          width: calc(100% - 250px);
+          padding-left: 20px;
+          letter-spacing: 1.7px;
+          @include SP {
+            width: 100%;
+            padding-left: 0;
+            margin-bottom: 2px;
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #dcdcdc;
+            bottom: 0;
+            left: 0;
+            @include SP {
+              display: none;
+            }
+          }
+        }
+      }
+      .list-btn {
+        @include PC {
+          @include flexbox;
+          justify-content: center;
+        }
+        .btn-back {
+          margin-right: 20px;
+          @include SP {
+            margin-bottom: 16px;
+            margin-right: 0;
+          }
+          .txt-back {
+            cursor: pointer;
+            transition: all 0.4s;
+            width: 300px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50px;
+            background: #cccccc;
+            color: #fff;
+            @include font(18);
+            font-weight: 700;
+            letter-spacing: 2px;
+            @include HOVER {
+              background: $black01;
+            }
+            @include SP {
+              width: 100%;
+              @include font(14);
+              letter-spacing: 1.6px;
+              height: 50px;
+              line-height: 50px;
+            }
+          }
+        }
+        #btnSend {
+          max-width: 300px;
+          width: 300px;
+          height: 60px;
+          border-radius: 50px;
+          &:before {
+            display: none;
+          }
+          @include HOVER {
+            color: $blue01;
+          }
+          @include SP {
+            height: 50px;
+            max-width: 100%;
+            width: 100%;
+          }
+          span {
+            transform: none;
+            @include font(18);
+            letter-spacing: 2px;
+            left: 6px;
+            @include SP {
+              @include font(14);
+            }
+          }
+        }
+      }
+    }
+  }
+  //************************ TABLE CONTACT 02 ************************//
 }

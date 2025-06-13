@@ -1,6 +1,9 @@
 <?php
+
+/**
+ * Template Name: Page GUIDE ISHINOYA CONTACT
+ **/
 $thisPageName = 'ishinoya-contact';
-include(dirname(__DIR__) . '/../../../app_config.php');
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_contact.min.css?v=<?php echo APP_VER ?>">
 </head>
