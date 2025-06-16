@@ -238,6 +238,14 @@ function jsSlideGallery() {
       pagination: ".swiper03-pagination",
       progress: ".swiper03-progress-bar",
     },
+    {
+      gallery: ".js-slider-gallerysingle",
+      thumb: ".js-slider-thumbsingle",
+      next: ".swipersingle-next",
+      prev: ".swipersingle-prev",
+      pagination: ".swipersingle-pagination",
+      progress: ".swipersingle-progress-bar",
+    },
   ];
 
   configs.forEach((cfg) => {

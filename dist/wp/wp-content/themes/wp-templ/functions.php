@@ -361,3 +361,44 @@ function insertLangInUrl($url, $name, $lang)
   }
   return $url;
 }
+
+
+// add_filter('acf/load_value/key=field_684fb12d3060c',  'acf_load_my_defaults', 10, 3);
+// function acf_load_my_defaults($value, $post_id, $field)
+// {
+//   if ($value === false) {
+
+//     $value = array();
+
+//     $value[] = array(
+//       'field_684fb13a3060d' => '定員',
+//       'field_684fb19b3060e' => ''
+//     );
+//     $value[] = array(
+//       'field_684fb13a3060d' => '広さ',
+//       'field_684fb19b3060e' => ''
+//     );
+
+//     return $value;
+//   }
+// }
+
+add_filter('acf/load_value/key=field_684fb12d3060c',  'acf_load_my_defaults', 10, 3);
+function acf_load_my_defaults($value, $post_id, $field)
+{
+  if ($value === false) {
+
+    $value = array();
+
+    $value[] = array(
+      'field_684fb13a3060d' => '定員',
+      'field_684fb19b3060e' => ''
+    );
+    $value[] = array(
+      'field_684fb13a3060d' => '広さ',
+      'field_684fb19b3060e' => ''
+    );
+  }
+
+  return $value;
+}

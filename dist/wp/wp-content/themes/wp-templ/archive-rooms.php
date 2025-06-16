@@ -24,199 +24,192 @@ include(APP_PATH . 'libs/head.php');
         </div>
       </div>
     </section>
-    <section class="sec-rooms">
-      <div class="inner">
-        <ul class="anchor-list aos-init" data-aos="fade-up">
-          <li>
-            <a class="anchor-item" href="#anchor01">
-              <span class="anchor-inner">
-                <span class="anchor-txt">スタンダードキング</span>
-                <ul class="c-txt-list">
-                  <li class="icn icn01">2名</li>
-                  <li class="icn icn02">26.96㎡</li>
-                </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor02">
-              <span class="anchor-inner">
-                <span class="anchor-txt">スーペリアトリプル</span>
+    <?php
+    $rooms_param_all = array(
+      'post_type'      => 'rooms',
+      'order'          => 'DESC',
+      'orderby'        => 'post_date',
+      'post_status'    => 'publish',
+      'posts_per_page' =>  -1,
+    );
+    $rooms_post_all = new WP_Query($rooms_param_all);
+    if ($rooms_post_all->have_posts()) {
+    ?>
+      <section class="sec-rooms">
+        <div class="inner">
+          <ul class="anchor-list aos-init" data-aos="fade-up">
+            <?php
+            while ($rooms_post_all->have_posts()) {
+              $rooms_post_all->the_post();
+              $rooms_id = get_the_ID();
+              $rooms_ttl = get_the_title($rooms_id);
+              $room_info = get_field('room_info', $rooms_id);
+              $room_info_num = $room_info[0];
+              $room_info_num = !empty($room_info_num['detail']) ? $room_info_num['detail'] : "";
+              $room_info_area = $room_info[1];
+              $room_info_area = !empty($room_info_area['detail']) ? $room_info_area['detail'] : "";
+              $room_bath = get_field('room_bath', $rooms_id);
+            ?>
+              <li>
+                <a class="anchor-item" href="#anchor<?php echo $rooms_id; ?>">
+                  <span class="anchor-inner">
+                    <span class="anchor-txt"><?php echo $rooms_ttl; ?></span>
+                    <ul class="c-txt-list">
+                      <?php if (!empty($room_info_num)) { ?>
+                        <li class="icn icn01"><?php echo $room_info_num; ?></li>
+                      <?php } ?>
+                      <?php if (!empty($room_info_num)) { ?>
+                        <li class="icn icn02"><?php echo $room_info_area; ?></li>
+                      <?php } ?>
+                      <?php if ($room_bath == 'outside') { ?>
+                        <li class="icn icn04">露天風呂付</li>
+                      <?php } ?>
+                    </ul>
+                  </span>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <ul class="rooms-list">
+            <?php
+            while ($rooms_post_all->have_posts()) {
+              $rooms_post_all->the_post();
+              $rooms_id = get_the_ID();
+              $rooms_ttl = get_the_title($rooms_id);
+              $rooms_link = get_the_permalink($rooms_id);
+              $room_slide = get_field('room_slide', $rooms_id);
+              $room_slide = !empty($room_slide) ? $room_slide[0] : "";
+              $room_slide = !empty($room_slide) ? $room_slide['url'] : APP_NOIMG;
+              $room_desc = get_field('room_desc', $rooms_id);
+              $room_info = get_field('room_info', $rooms_id);
+              $room_info_num = $room_info[0];
+              $room_info_num = !empty($room_info_num['detail']) ? $room_info_num['detail'] : "";
+              $room_info_area = $room_info[1];
+              $room_info_area = !empty($room_info_area['detail']) ? $room_info_area['detail'] : "";
+              $room_bath = get_field('room_bath', $rooms_id);
+            ?>
+              <li class="rooms-item aos-init" data-aos="fade-up" id="anchor<?php echo $rooms_id; ?>">
+                <figure class="rooms-img c-img <?php echo $room_slide == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                  <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo $room_slide; ?>" rel="js-lazy" width="590" height="350" alt="">
+                </figure>
+                <div class="rooms-info">
+                  <h2 class="rooms-ttl"><?php echo $rooms_ttl; ?></h2>
+                  <?php if (!empty($room_desc)) { ?>
+                    <p class="rooms-desc"><?php echo $room_desc; ?></p>
+                  <?php } ?>
+                  <ul class="c-txt-list">
+                    <?php if (!empty($room_info_num)) { ?>
+                      <li class="icn icn01"><?php echo $room_info_num; ?></li>
+                    <?php } ?>
+                    <?php if (!empty($room_info_area)) { ?>
+                      <li class="icn icn02"><?php echo $room_info_area; ?></li>
+                    <?php } ?>
+                    <?php if ($room_bath == 'inside') { ?>
+                      <li class="icn icn03">客室内温泉</li>
+                    <?php } else if ($room_bath == 'outside') { ?>
+                      <li class="icn icn04">露天風呂付</li>
+                    <?php } ?>
+                  </ul>
+                  <a class="c-btn04" href="<?php echo $rooms_link; ?>"><span>詳しく見る</span></a>
+                </div>
+              </li>
+            <?php } ?>
+            <!-- <li class="rooms-item aos-init" data-aos="fade-up" id="anchor02">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img02.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">スーペリアトリプル</h2>
+                <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">3名</li>
                   <li class="icn icn02">48.84㎡</li>
+                  <li class="icn icn03">客室内温泉</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor03">
-              <span class="anchor-inner">
-                <span class="anchor-txt">スーペリアツイン</span>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li>
+            <li class="rooms-item aos-init" data-aos="fade-up" id="anchor03">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img03.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">スーペリアツイン</h2>
+                <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">4名</li>
                   <li class="icn icn02">48.84㎡</li>
+                  <li class="icn icn03">客室内温泉</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor04">
-              <span class="anchor-inner">
-                <span class="anchor-txt">スーペリアバンクフォース</span>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li>
+            <li class="rooms-item aos-init" data-aos="fade-up" id="anchor04">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img04.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">スーペリアバンクフォース</h2>
+                <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">6名</li>
                   <li class="icn icn02">48.84㎡</li>
+                  <li class="icn icn03">客室内温泉</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor05">
-              <span class="anchor-inner">
-                <span class="anchor-txt">プレミアムバンクフォース</span>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li>
+            <li class="rooms-item aos-init" data-aos="fade-up" id="anchor05">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img05.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">プレミアムバンクフォース</h2>
+                <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">6名</li>
                   <li class="icn icn02">56.59㎡</li>
                   <li class="icn icn04">露天風呂付</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor06">
-              <span class="anchor-inner">
-                <span class="anchor-txt">プレミアムトリプル</span>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li>
+            <li class="rooms-item aos-init" data-aos="fade-up" id="anchor06">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img06.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">プレミアムトリプル</h2>
+                <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">3名</li>
                   <li class="icn icn02">61.23㎡</li>
                   <li class="icn icn04">露天風呂付</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="anchor-item" href="#anchor07">
-              <span class="anchor-inner">
-                <span class="anchor-txt">プレミアムツイン</span>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li>
+            <li class="rooms-item aos-init" data-aos="fade-up" id="anchor07">
+              <figure class="rooms-img c-img">
+                <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img07.jpg" rel="js-lazy" width="590" height="350" alt="">
+              </figure>
+              <div class="rooms-info">
+                <h2 class="rooms-ttl">プレミアムツイン</h2>
+                <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
                 <ul class="c-txt-list">
                   <li class="icn icn01">3名</li>
                   <li class="icn icn02">61.23㎡</li>
                   <li class="icn icn04">露天風呂付</li>
                 </ul>
-              </span>
-            </a>
-          </li>
-        </ul>
-        <ul class="rooms-list">
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor01">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img01.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">スタンダードキング</h2>
-              <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">2名</li>
-                <li class="icn icn02">26.96㎡</li>
-                <li class="icn icn03">客室内温泉</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor02">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img02.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">スーペリアトリプル</h2>
-              <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">3名</li>
-                <li class="icn icn02">48.84㎡</li>
-                <li class="icn icn03">客室内温泉</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor03">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img03.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">スーペリアツイン</h2>
-              <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">4名</li>
-                <li class="icn icn02">48.84㎡</li>
-                <li class="icn icn03">客室内温泉</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor04">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img04.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">スーペリアバンクフォース</h2>
-              <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">6名</li>
-                <li class="icn icn02">48.84㎡</li>
-                <li class="icn icn03">客室内温泉</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor05">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img05.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">プレミアムバンクフォース</h2>
-              <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">6名</li>
-                <li class="icn icn02">56.59㎡</li>
-                <li class="icn icn04">露天風呂付</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor06">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img06.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">プレミアムトリプル</h2>
-              <p class="rooms-desc">ご家族やご友人同士のグループ旅行にぴったりな広さと設備が整ったお部屋です。快適なベッドと温かみのあるインテリアで、ゆったりとくつろげます。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">3名</li>
-                <li class="icn icn02">61.23㎡</li>
-                <li class="icn icn04">露天風呂付</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-          <li class="rooms-item aos-init" data-aos="fade-up" id="anchor07">
-            <figure class="rooms-img c-img">
-              <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/cms/room_img07.jpg" rel="js-lazy" width="590" height="350" alt="">
-            </figure>
-            <div class="rooms-info">
-              <h2 class="rooms-ttl">プレミアムツイン</h2>
-              <p class="rooms-desc">自然に囲まれた静かな空間で、アウトドア気分を満喫できます。シンプルで機能的なデザインが特徴です。</p>
-              <ul class="c-txt-list">
-                <li class="icn icn01">3名</li>
-                <li class="icn icn02">61.23㎡</li>
-                <li class="icn icn04">露天風呂付</li>
-              </ul>
-              <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+                <a class="c-btn04" href="<?php echo APP_URL; ?>page/guide/ishinoya/rooms/room_detail/"><span>詳しく見る</span></a>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    <?php } else { ?>
+      <p class="c-text-nonpost">表示する記事がありません。</p>
+    <?php } ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
 </body>

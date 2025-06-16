@@ -23,7 +23,7 @@
     }
   }
   .rooms-list {
-    &>li {
+    & > li {
       @include PC {
         margin-bottom: 20px;
       }
@@ -69,7 +69,7 @@
     @include justify-content(space-between);
     margin: 0 -8px 36px;
   }
-  &>li {
+  & > li {
     @include PC {
       width: 25%;
       padding: 10px;
@@ -104,7 +104,7 @@
     }
     @include HOVER {
       opacity: 1;
-      background: #B2A46F;
+      background: #b2a46f;
       color: #fff;
       &::after {
         border-right-color: #fff;
@@ -127,7 +127,7 @@
       content: "";
       position: absolute;
       transform: rotate(-135deg);
-      border-right: 8px solid #B2A46F;
+      border-right: 8px solid #b2a46f;
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent;
       @include PC {
@@ -153,14 +153,14 @@
     text-align: center;
     @include PC {
       margin-bottom: 1px;
-      @include font(16,26,100);
+      @include font(16, 26, 100);
       @include max-screen(1200px) {
         @include font(14);
       }
     }
     @include SP {
       margin-bottom: 3px;
-      @include font(12,19);
+      @include font(12, 19);
     }
     @include ANDR {
       @include font(10);
@@ -170,20 +170,20 @@
     letter-spacing: 0;
     @include justify-content(center);
     @include PC {
-      @include font(12,19);
+      @include font(12, 19);
       margin-bottom: -3px;
       @include max-screen(1200px) {
         @include font(10);
       }
     }
     @include SP {
-      @include font(10,14);
+      @include font(10, 14);
       margin: 0 -2px;
     }
     @include ANDR {
       @include font(8);
     }
-    &>li {
+    & > li {
       @include PC {
         margin: 0 7px 3px 6px;
         @include max-screen(1200px) {
@@ -281,24 +281,24 @@
     @include justify-content(space-between);
     padding: 60px;
     @include max-screen(1040px) {
-      padding: vw-pc(50px,1040);
+      padding: vw-pc(50px, 1040);
     }
   }
   @include SP {
     padding: 24px 24px 32px;
   }
   .rooms-ttl {
-    @include font("","",50,700);
+    @include font("", "", 50, 700);
     @include PC {
       margin-bottom: 15px;
-      @include font(35,1.6);
+      @include font(35, 1.6);
       @include max-screen(1040px) {
-        font-size: vw-pc(34px,1023);
+        font-size: vw-pc(34px, 1023);
       }
     }
     @include SP {
       margin-bottom: 15px;
-      @include font(22,35);
+      @include font(22, 35);
     }
     @include ANDR {
       @include font(18);
@@ -306,23 +306,23 @@
   }
   .rooms-desc {
     color: $brown02;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     @include PC {
       margin-bottom: 19px;
-      @include font(16,28);
+      @include font(16, 28);
     }
     @include SP {
       margin-bottom: 12px;
-      @include font(13,25);
+      @include font(13, 25);
     }
   }
   .rooms-img {
     @include PC {
-      width: calc(590/1170*100%);
-      padding-top: calc(350/1170*100%);
+      width: calc(590 / 1170 * 100%);
+      padding-top: calc(350 / 1170 * 100%);
     }
     @include SP {
-      @include aspect-ratio(279,196);
+      @include aspect-ratio(279, 196);
       margin-bottom: 24px;
     }
   }
@@ -346,21 +346,21 @@
     }
   }
   .c-txt-list {
-    @include font("","",100);
+    @include font("", "", 100);
     @include PC {
-      @include font(16,28);
+      @include font(16, 28);
       @include max-screen(980px) {
         @include font(13);
       }
     }
     @include SP {
-      @include font(13,21);
+      @include font(13, 21);
       margin-left: -2px;
     }
     @include ANDR {
       @include font(11);
     }
-    &>li {
+    & > li {
       @include PC {
         margin-right: 28px;
         @include max-screen(1023px) {
@@ -439,10 +439,10 @@
 // Detail
 .sec-rooms-archive {
   @include PC {
-    padding: 15px 0 114px;
+    padding: 15px 0 100px;
   }
   @include SP {
-    padding: 50px 0 64px;
+    padding: 14px 0 64px;
   }
   .inner1170 {
     @include PC {
@@ -469,14 +469,21 @@
   }
   .archive-left {
     @include PC {
-      width: calc(665/1280*100%);
+      width: calc(665 / 1280 * 100%);
       padding-right: 40px;
       @include max-screen(1200px) {
-        padding-right: vw-pc(40px,980)
+        padding-right: vw-pc(40px, 980);
       }
     }
     @include SP {
       margin-bottom: 25px;
+    }
+    .c-gallery__thumb {
+      @include PC {
+        max-width: 460px;
+        width: calc(100% - 165px);
+        margin: -90px -40px 0 auto;
+      }
     }
   }
   .archive-right {
@@ -493,32 +500,34 @@
     }
   }
   .archive-ttl {
-    @include font("","",50,700);
+    @include font("", "", 50, 700);
+    color: $brown02;
+
     @include PC {
       margin-bottom: 30px;
-      @include font(36,50);
+      @include font(36, 50);
       @include max-screen(980px) {
-        font-size: vw-pc(32px,980)
+        font-size: vw-pc(32px, 980);
       }
     }
     @include SP {
-      @include font(26,36);
+      @include font(26, 36);
       margin-bottom: 24px;
     }
   }
   .archive-desc {
-    @include font("","",100);
+    @include font("", "", 100);
     @include PC {
-      @include font(16,28);
+      @include font(16, 28);
       margin-bottom: 15px;
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
       margin-bottom: 11px;
     }
   }
   .archive-data {
-    @include font(15,24,120);
+    @include font(15, 24, 120);
     @include PC {
       @include flexbox;
       @include flex-wrap;
@@ -576,7 +585,7 @@
     @include PC {
       padding-bottom: 65px;
       @include max-screen(1200px) {
-        padding-bottom: vw-pc(65px,1200);
+        padding-bottom: vw-pc(65px, 1200);
       }
     }
     @include SP {
@@ -597,7 +606,7 @@
       @include PC {
         margin-left: 365px;
         @include max-screen(1200px) {
-          margin-left: vw-pc(365px,1200);
+          margin-left: vw-pc(365px, 1200);
         }
       }
       @include SP {
@@ -607,19 +616,19 @@
   }
   .gallery-pic {
     @include PC {
-      padding-top: calc(440/625*100%);
+      padding-top: calc(440 / 625 * 100%);
     }
     @include SP {
-      @include aspect-ratio(327,230);
+      @include aspect-ratio(327, 230);
     }
   }
   .thumb-pic {
     @include PC {
-      padding-top: calc(100/140*100%);
+      padding-top: calc(100 / 140 * 100%);
       cursor: pointer;
     }
     @include SP {
-      @include aspect-ratio(84,60);
+      @include aspect-ratio(84, 60);
     }
   }
   .slider-thumb-wrapper {
@@ -627,7 +636,7 @@
     @include PC {
       margin: -91px -40px 0 205px;
       @include max-screen(1200px) {
-        margin: vw-pc(-91px,1200) vw-pc(-40px,1200) 0 vw-pc(205px,1200);
+        margin: vw-pc(-91px, 1200) vw-pc(-40px, 1200) 0 vw-pc(205px, 1200);
       }
     }
     @include SP {
@@ -648,12 +657,8 @@
       bottom: 0;
       padding: 0 0 20px 78px;
       @include max-screen(1200px) {
-        width: vw-pc(178px,1200);
+        width: vw-pc(178px, 1200);
       }
-    }
-    @include SP {
-      bottom: 14px;
-      width: 85px;
     }
   }
   .swiper-pagination {
@@ -662,15 +667,15 @@
     top: -13px;
     bottom: auto;
     @include ffGT;
-    @include font(12,1.5,100,400);
+    @include font(12, 1.5, 100, 400);
     color: #9f9b9a;
     width: auto;
     transform: none;
     white-space: nowrap;
-    text-align: left
+    text-align: left;
   }
   .swiper-pagination-current {
-    @include font(20,28,100);
+    @include font(20, 28, 100);
     color: $brown02;
     min-width: 30px;
     padding-right: 2px;
@@ -685,7 +690,7 @@
     .slide-progress-bar {
       position: absolute;
       height: 1px;
-      background: #DDD;
+      background: #ddd;
       width: auto;
       clear: both;
       opacity: 0;

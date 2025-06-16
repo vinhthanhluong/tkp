@@ -20,7 +20,7 @@ function create_custom_post_type_rooms()
     'public'                  => true,
     'rewrite'                 => array('slug' => 'guide/ishinoya/rooms',),
     'show_ui'                 => true,
-    'supports'                => array('title', 'editor', 'thumbnail', 'revisions'),
+    'supports'                => array('title', 'revisions'),
     'query_var'               => true,
     'menu_icon'               => 'dashicons-welcome-write-blog',
     'has_archive'             => true,

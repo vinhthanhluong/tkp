@@ -3,29 +3,29 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <a class="link" href="">
+          <p class="link">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo01.svg" alt="logo">
-          </a>
+          </p>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">ISHINOYA 別府 TOP</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/">ISHINOYA 別府 TOP</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">温泉・砂湯</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/spa/">温泉・砂湯</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">お問い合わせ</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/contact/">お問い合わせ</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">お部屋</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/roooms/">お部屋</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">お食事</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">宿泊予約</a>
+              <a class="link" href="<?php echo APP_URL ?>">宿泊予約</a>
             </li>
           </ul>
         </div>
@@ -36,29 +36,29 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <a class="link" href="">
+          <p class="link">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo02.svg" alt="logo">
-          </a>
+          </p>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">SHONIN PARK TOP</a>
+              <a class="link" href="<?php echo APP_URL ?>">SHONIN PARK TOP</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">楽しみ方</a>
+              <a class="link" href="<?php echo APP_URL ?>ways/">楽しみ方</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">施設情報</a>
+              <a class="link" href="<?php echo APP_URL ?>">施設情報</a>
             </li>
             <li class="col-menu__item">
               <a class="link" href="<?php echo APP_URL ?>guide/">施設案内</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">ニュース</a>
+              <a class="link" href="<?php echo APP_URL ?>news/">ニュース</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/">総合お問い合わせ</a>
+              <a class="link" href="<?php echo APP_URL ?>">総合お問い合わせ</a>
             </li>
           </ul>
         </div>
@@ -69,9 +69,9 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <a class="link" href="">
+          <p class="link">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo03.svg" alt="logo">
-          </a>
+          </p>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
@@ -117,17 +117,17 @@
         <div class="col-social">
           <ul class="solcial-btn">
             <li class="solcial-btn__item">
-              <a class="link" href="">
+              <a class="link" href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener">
                 <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_tiktok.svg" alt="logo">
               </a>
             </li>
             <li class="solcial-btn__item">
-              <a class="link" href="">
+              <a class="link" href="" target="_blank" rel="noopener">
                 <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_instagram.svg" alt="logo">
               </a>
             </li>
             <li class="solcial-btn__item">
-              <a class="link" href="">
+              <a class="link" href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener">
                 <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_youtube.svg" alt="logo">
               </a>
             </li>
@@ -143,12 +143,12 @@
               </a>
             </li>
             <li class="social-external__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>">
+              <a class="link is-exter" href="https://www.tkp.jp/privacy/" target="_blank" rel="noopener">
                 <span class="txt">プライバシーポリシー</span>
               </a>
             </li>
             <li class="social-external__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>">
+              <a class="link is-exter" href="<?php echo APP_URL ?>terms/">
                 <span class="txt">運営会社</span>
               </a>
             </li>
