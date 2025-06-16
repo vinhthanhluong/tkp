@@ -46,8 +46,14 @@ include(APP_PATH . 'libs/head.php');
               $room_info = get_field('room_info', $rooms_id);
               $room_info_num = $room_info[0];
               $room_info_num = !empty($room_info_num['detail']) ? $room_info_num['detail'] : "";
+              $room_info_num = !empty($room_info_num) ? explode("\n", $room_info_num) : [];
+              $room_info_num = implode('</br>', $room_info_num);
+
               $room_info_area = $room_info[1];
               $room_info_area = !empty($room_info_area['detail']) ? $room_info_area['detail'] : "";
+              $room_info_area = !empty($room_info_area) ? explode("\n", $room_info_area) : [];
+              $room_info_area = implode('</br>', $room_info_area);
+
               $room_bath = get_field('room_bath', $rooms_id);
             ?>
               <li>

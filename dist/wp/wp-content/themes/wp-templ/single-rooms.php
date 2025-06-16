@@ -97,6 +97,8 @@ include(APP_PATH . 'libs/head.php');
                   foreach ($room_info as $info) {
                     $info_head = $info['head'];
                     $info_detail = $info['detail'];
+                    $info_detail = !empty($info_detail) ? explode("\n", $info_detail) : [];
+                    $info_detail = implode('</br>', $info_detail);
                     if (!empty($info_head) && !empty($info_detail)) {
                   ?>
                       <dt><?php echo $info_head; ?></dt>
