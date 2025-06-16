@@ -38,12 +38,8 @@
   @include font(16, 28, 0.1, 500);
   color: $brown02;
   @include SP {
-    margin-top: -31px;
-    padding: 0 10px;
-    @include font(14);
-    line-height: 28px;
-    letter-spacing: 1.6px;
-    margin-bottom: 77px;
+    @include font(15, 26, 0.1, 500);
+    margin-top: 24px;
   }
 }
 
@@ -69,20 +65,89 @@
 // Section Form Confirm
 .page-form {
   .sec-formconfirm {
-    padding: 15px 0 100px;
+    @include PC {
+      padding: 15px 0 100px;
+    }
+    @include SP {
+      padding: 14px 0 64px;
+    }
     .form-step {
       @include PC {
         margin-top: 75px;
       }
       @include SP {
-        margin-top: 25px;
+        margin-top: 38px;
       }
     }
     .form-inner {
       @include PC {
         margin: 16px auto 0;
       }
+      @include SP {
+        margin-top: 12px;
+      }
+    }
+    .c-breadcrumb {
+      @include SP {
+        margin-top: 0;
+      }
     }
   }
 }
 // Section Form Confirm
+// Section Form Complete
+.page-form {
+  .sec-formcomplete {
+    @include PC {
+      padding: 15px 0 100px;
+    }
+    @include SP {
+      padding: 14px 0 64px;
+    }
+    .form-step {
+      @include PC {
+        margin-top: 75px;
+      }
+      @include SP {
+        margin-top: 40px;
+      }
+    }
+    .form-inner {
+      @include PC {
+        margin: 48px auto 0;
+        max-width: 850px;
+      }
+      @include SP {
+        margin-top: 23px;
+      }
+    }
+    .c-breadcrumb {
+      padding: 0;
+      @include SP {
+        margin-top: 0;
+      }
+      li {
+        &:not(:last-child) {
+          &:after {
+            @include SP {
+              margin: auto 2px 3px 8px;
+            }
+          }
+        }
+      }
+    }
+    .thanks-main__txt {
+      @include PC {
+        margin-bottom: 32px;
+      }
+      @include SP {
+        margin-bottom: 15px;
+        letter-spacing: 0.1em;
+      }
+    }
+    .thanks-main__back {
+      border-radius: 0;
+    }
+  }
+}
+// Section Form Complete

@@ -18,12 +18,16 @@ $reg_url          = (!empty($_POST['url'])) ? sanitize_form_value($_POST['url'])
 //end always keep this
 
 //お問い合わせフォーム内容
-$reg_name         = (!empty($_POST['nameuser'])) ? sanitize_form_value($_POST['nameuser']) : '';
-$reg_namekata     = (!empty($_POST['namekata'])) ? sanitize_form_value($_POST['namekata']) : '';
-$reg_email        = (!empty($_POST['email'])) ? sanitize_form_value($_POST['email']) : '';
-$reg_tel          = (!empty($_POST['tel'])) ? sanitize_form_value($_POST['tel']) : '';
-$reg_content      = (!empty($_POST['content'])) ? sanitize_form_value($_POST['content']) : '';
-$br_reg_content   = nl2br($reg_content);
+$reg_name           = (!empty($_POST['nameuser'])) ? sanitize_form_value($_POST['nameuser']) : '';
+$reg_namekata       = (!empty($_POST['namekata'])) ? sanitize_form_value($_POST['namekata']) : '';
+$reg_email          = (!empty($_POST['email'])) ? sanitize_form_value($_POST['email']) : '';
+$reg_tel            = (!empty($_POST['tel'])) ? sanitize_form_value($_POST['tel']) : '';
+$reg_checkstatus    = (!empty($_POST['checkstatus'])) ? sanitize_form_value($_POST['checkstatus']) : array();
+$reg_checkAllStatus = (!empty($_POST['checkAllStatus'])) ? sanitize_form_value($_POST['checkAllStatus']) : '';
+$reg_namereser      = (!empty($_POST['namereser'])) ? sanitize_form_value($_POST['namereser']) : '';
+$reg_schedule       = (!empty($_POST['schedule'])) ? sanitize_form_value($_POST['schedule']) : '';
+$reg_content        = (!empty($_POST['content'])) ? sanitize_form_value($_POST['content']) : '';
+$br_reg_content     = nl2br($reg_content);
 
 if ($actionFlag == "confirm") {
   $thisPageName = 'contact';
@@ -54,7 +58,7 @@ if ($actionFlag == "confirm") {
             <img class="pc" src="<?php echo createSVG(518, 150) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/contact/form/img_step02.png" rel="js-lazy" width="518" height="150" alt="内容確認">
             <img class="sp" src="<?php echo createSVG(327, 95) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/contact/form/img_step02_sp.png" rel="js-lazy" width="327" height="95" alt="内容確認">
           </div>
-          <p class="short-desc">ご入力いただいた内容をご確認ください。<br class="pc">こちらの内容で宜しければ、送信ボタンを押してください。</p>
+          <p class="short-desc">ご入力いただいた内容をご確認ください。<br class="pc">こちらの内容で宜しければ、送信ボタンを<br class="sp">押してください。</p>
 
           <div class="form-inner">
             <form method="post" class="confirmform" action="../complete/?g=<?php echo $gtime ?>" name="confirmform" id="confirmform">
@@ -78,24 +82,35 @@ if ($actionFlag == "confirm") {
                     <th>お電話番号</th>
                     <td><?php echo $reg_tel ?></td>
                   </tr>
-
                   <tr>
                     <th>ご予約状況</th>
-                    <td><?php echo $reg_tel ?></td>
+                    <td>
+                      <ul class="ctn-checkbox">
+                        <?php
+                        $reg_checkAllStatus = "";
+                        foreach ($reg_checkstatus as $row) {
+                          $reg_checkAllStatus = $reg_checkAllStatus . "・" . $row . "\n";
+                        ?>
+                          <li><?php echo $row; ?></li>
+                        <?php } ?>
+                      </ul>
+                    </td>
                   </tr>
-
-                  <tr>
-                    <th>ご予約者様のお名前</th>
-                    <td><?php echo $reg_tel ?></td>
-                  </tr>
-                  <tr>
-                    <th>日程</th>
-                    <td><?php echo $reg_tel ?></td>
-                  </tr>
-
+                  <?php if (!empty($reg_namereser) && trim($reg_namereser) != '') { ?>
+                    <tr>
+                      <th>ご予約者様のお名前</th>
+                      <td><?php echo $reg_namereser ?></td>
+                    </tr>
+                  <?php } ?>
+                  <?php if (!empty($reg_schedule) && trim($reg_schedule) != '') { ?>
+                    <tr>
+                      <th>日程</th>
+                      <td><?php echo $reg_schedule ?></td>
+                    </tr>
+                  <?php } ?>
                   <tr>
                     <th>お問い合わせ内容</th>
-                    <td><?php echo $br_reg_content ?></td>
+                    <td class="inq-ctn"><?php echo $br_reg_content ?></td>
                   </tr>
                 </table>
               </div>
@@ -103,6 +118,10 @@ if ($actionFlag == "confirm") {
               <input type="hidden" name="namekata" value="<?php echo $reg_namekata ?>">
               <input type="hidden" name="email" value="<?php echo $reg_email ?>">
               <input type="hidden" name="tel" value="<?php echo $reg_tel ?>">
+              <input type="hidden" name="checkstatus" value="<?php echo $reg_checkstatus ?>">
+              <input type="hidden" name="checkAllStatus" value="<?php echo $reg_checkAllStatus ?>">
+              <input type="hidden" name="namereser" value="<?php echo $reg_namereser ?>">
+              <input type="hidden" name="schedule" value="<?php echo $reg_schedule ?>">
               <input type="hidden" name="content" value="<?php echo $br_reg_content ?>">
               <!-- always keep this -->
               <input type="hidden" name="url" value="<?php echo $reg_url ?>">
@@ -110,10 +129,10 @@ if ($actionFlag == "confirm") {
 
               <div class="list-btn">
                 <div class="btn-back">
-                  <p rel="js-back" class="txt-back">入力内容を変更する</p>
+                  <p rel="js-back" class="txt-back"><span>入力内容を変更する</span></p>
                 </div>
                 <div class="btn-send">
-                  <button class="c-btn02" id="btnSend"><span>この内容で送信する</span></button>
+                  <button id="btnSend"><span>この内容で送信する</span></button>
                   <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
                   <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('send') ?>">
                 </div>

@@ -419,6 +419,9 @@
             margin-top: 0;
             padding: 0;
             line-height: 24px;
+            @include max-screen(375px) {
+              font-size: calc(15 / 375 * 100vw);
+            }
           }
         }
       }
@@ -623,6 +626,9 @@
           line-height: 36px;
           letter-spacing: 2.8px;
           margin-bottom: 17px;
+          @include max-screen(375px) {
+            font-size: calc(24 / 375 * 100vw);
+          }
         }
       }
       &__txt {
@@ -636,6 +642,22 @@
           line-height: 26px;
           letter-spacing: 1.7px;
           margin-bottom: 32px;
+          @include max-screen(375px) {
+            font-size: calc(14 / 375 * 100vw);
+          }
+        }
+      }
+      &__txt02 {
+        @include font(15, 26, 0.12, 500);
+        @include PC {
+          margin-bottom: 40px;
+        }
+        @include SP {
+          @include font(12, 24, 0.1);
+          margin-bottom: 33px;
+          @include max-screen(375px) {
+            font-size: calc(12 / 375 * 100vw);
+          }
         }
       }
 
@@ -707,6 +729,97 @@
             top: 6px;
             opacity: 0;
             transition: all 0.3s;
+            @include SP {
+              display: none;
+            }
+          }
+        }
+      }
+      &__back02 {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        margin: 0 auto;
+        @include font(18, 58, 0, 700);
+        border: solid 1px $brown02;
+        color: $brown02;
+        text-align: center;
+        @include PC {
+          max-width: 300px;
+        }
+        @include SP {
+          max-width: 327px;
+          height: 50px;
+          line-height: 48px;
+          @include font(16);
+        }
+        @include HOVER {
+          opacity: 1;
+          color: #fff;
+          border-color: #b2a46f;
+          &::before {
+            transform: translateX(0);
+          }
+          span {
+            &:before {
+              opacity: 0;
+            }
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transition: 0.5s ease;
+          background: #b2a46f;
+          transform: translateX(-110%);
+          z-index: 1;
+        }
+        span {
+          position: relative;
+          z-index: 2;
+          transform: none;
+          transition: 0.5s ease;
+          @include PC {
+            padding-left: 27px;
+          }
+          @include SP {
+            padding-left: 8px;
+            letter-spacing: 0;
+          }
+          &:before,
+          &:after {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            left: -1px;
+            top: 1px;
+            transition: all 0.3s;
+            @include SP {
+              width: 16px;
+              height: 16px;
+              left: -21px;
+              top: 0;
+            }
+          }
+          &:before {
+            background: url($img_url + "img/ishinoya/contact/form/ico_home.svg")
+              no-repeat center center/100% auto;
+          }
+          &:after {
+            background: url($img_url + "img/ishinoya/contact/form/ico_home_w.svg")
+              no-repeat center center/100% auto;
+            opacity: 0;
             @include SP {
               display: none;
             }
@@ -1070,10 +1183,13 @@
           position: relative;
           z-index: 2;
           color: $brown02;
+          transition: 0.5s ease;
         }
         @include HOVER {
           opacity: 1;
-          color: #fff;
+          span {
+            color: #fff;
+          }
           &::before {
             transform: translateX(0);
           }
@@ -1096,11 +1212,15 @@
     }
     .sec-formconfirm {
       .tableContact02 {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         @include SP {
-          margin-bottom: 15px;
+          margin-bottom: 13px;
         }
+
         tr {
+          @include PC {
+            display: flex;
+          }
           &:last-child {
             th,
             td {
@@ -1112,7 +1232,7 @@
           }
           @include SP {
             display: block;
-            padding: 15px 0;
+            padding: 11px 0 8px;
             position: relative;
             &:last-child {
               &:before,
@@ -1123,7 +1243,7 @@
             &:before {
               position: absolute;
               content: "";
-              width: 80px;
+              width: 150px;
               height: 1px;
               background: $blue01;
               bottom: 0;
@@ -1132,7 +1252,7 @@
             &:after {
               position: absolute;
               content: "";
-              width: calc(100% - 85px);
+              width: calc(100% - 155px);
               height: 1px;
               background: #dcdcdc;
               bottom: 0;
@@ -1148,9 +1268,17 @@
           @include font(15);
           line-height: 24px;
           color: $brown02;
+          display: flex;
+          align-items: stretch;
           @include SP {
             padding: 0;
             @include font(14);
+          }
+          &.inq-ctn {
+            @include font(15, 28, 0.12, 500);
+            @include SP {
+              @include font(14, 22);
+            }
           }
         }
         th {
@@ -1209,64 +1337,128 @@
         }
       }
       .list-btn {
+        @include flexbox;
         @include PC {
-          @include flexbox;
           justify-content: center;
         }
+        @include SP {
+          @include flex-direction(column);
+        }
         .btn-back {
-          margin-right: 20px;
+          margin-right: 40px;
           @include SP {
-            margin-bottom: 16px;
             margin-right: 0;
+            order: 2;
           }
           .txt-back {
+            position: relative;
+            overflow: hidden;
             cursor: pointer;
             transition: all 0.4s;
-            width: 300px;
-            height: 60px;
             text-align: center;
-            line-height: 60px;
-            border-radius: 50px;
-            background: #cccccc;
-            color: #fff;
-            @include font(18);
-            font-weight: 700;
-            letter-spacing: 2px;
-            @include HOVER {
-              background: $black01;
+            background: #fff;
+            color: $brown02;
+            @include font(18, 60, 0.12, 700);
+            @include PC {
+              width: 300px;
+              height: 60px;
             }
             @include SP {
               width: 100%;
-              @include font(14);
-              letter-spacing: 1.6px;
+              max-width: 327px;
               height: 50px;
-              line-height: 50px;
+              margin: 0 auto;
+              @include font(14, 48);
+            }
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              transition: 0.5s ease;
+            }
+            &::after {
+              border: 1px solid $brown02;
+              background: #fff;
+            }
+            &::before {
+              @include PC {
+                background: $brown02;
+                transform: translateX(-110%);
+                z-index: 1;
+              }
+            }
+            & > span {
+              position: relative;
+              z-index: 2;
+            }
+            @include HOVER {
+              opacity: 1;
+              color: #fff;
+              &::before {
+                transform: translateX(0);
+              }
             }
           }
         }
         #btnSend {
-          max-width: 300px;
-          width: 300px;
-          height: 60px;
-          border-radius: 50px;
-          &:before {
-            display: none;
-          }
-          @include HOVER {
-            color: $blue01;
+          position: relative;
+          overflow: hidden;
+          @include font(18, 58, 0.12, 700);
+          @include flexbox;
+          @include justify-content(center);
+          @include align-items(center);
+          text-align: center;
+          border: none;
+          color: #fff;
+          transition: 0.5s ease;
+          @include PC {
+            width: 300px;
+            min-height: 60px;
           }
           @include SP {
-            height: 50px;
-            max-width: 100%;
             width: 100%;
+            min-height: 50px;
+            max-width: 327px;
+            margin: 0 auto 16px;
+            order: 1;
+            @include font(14, 48);
           }
-          span {
-            transform: none;
-            @include font(18);
-            letter-spacing: 2px;
-            left: 6px;
-            @include SP {
-              @include font(14);
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition: 0.5s ease;
+          }
+          &::after {
+            border: 1px solid $brown02;
+            background: #fff;
+          }
+          &::before {
+            transform: translateX(0);
+            background: $yellow04;
+            background: #b2a46f;
+            z-index: 1;
+          }
+          & > span {
+            position: relative;
+            z-index: 2;
+          }
+          @include HOVER {
+            opacity: 1;
+            color: $yellow04;
+            &::before {
+              transform: translateX(110%);
+            }
+            &::after {
+              border-color: $yellow04;
             }
           }
         }

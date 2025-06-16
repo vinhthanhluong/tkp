@@ -157,6 +157,7 @@
       </div>
       <p class="f2-copyright">©2025 ISHINOYA 別府 / 石のや 別府</p>
     </div>
+  </div>
 </footer>
 
 <p class="f-scrolltop" id="gototop">

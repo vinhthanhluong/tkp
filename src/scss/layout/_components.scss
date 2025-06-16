@@ -996,6 +996,23 @@ a.c-btn04 {
       z-index: 1;
     }
   }
+  &.is-btn-reverse02 {
+    color: #fff;
+    @include HOVER {
+      color: $yellow04;
+      &::before {
+        transform: translateX(110%);
+      }
+      &::after {
+        border-color: $yellow04;
+      }
+    }
+    &::before {
+      background: $yellow04;
+      transform: translateX(0);
+      z-index: 1;
+    }
+  }
 }
 
 /* ===================== TITLE ===================== */
