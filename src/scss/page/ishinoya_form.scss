@@ -42,7 +42,22 @@
     margin-top: 24px;
   }
 }
-
+.page-form {
+  .c-breadcrumb {
+    @include SP {
+      margin-top: 0;
+    }
+    li {
+      &:not(:last-child) {
+        &:after {
+          @include SP {
+            margin: auto 2px 3px 8px;
+          }
+        }
+      }
+    }
+  }
+}
 // Common
 // Section Form
 .page-form {
@@ -55,9 +70,6 @@
     }
     .c-breadcrumb {
       padding: 0;
-      @include SP {
-        margin-top: 0;
-      }
     }
   }
 }
@@ -85,11 +97,6 @@
       }
       @include SP {
         margin-top: 12px;
-      }
-    }
-    .c-breadcrumb {
-      @include SP {
-        margin-top: 0;
       }
     }
   }
@@ -123,9 +130,6 @@
     }
     .c-breadcrumb {
       padding: 0;
-      @include SP {
-        margin-top: 0;
-      }
       li {
         &:not(:last-child) {
           &:after {

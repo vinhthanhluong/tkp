@@ -59,7 +59,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <span class="c-ttl04__en">Spa Area</span>
         </h2>
         <div class="area-img">
-          <img src="<?php echo createSVG(1170, 508); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/area_map.jpg" rel="js-lazy" width="1170" height="508" alt="">
+          <img src="<?php echo createSVG(1170, 508); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/area_map.png" rel="js-lazy" width="1170" height="508" alt="">
         </div>
       </div>
       <div class="c-intro">
@@ -246,75 +246,83 @@ include(APP_PATH . 'libs/head.php'); ?>
         </ul>
       </div>
     </section>
-    <section class="c-sec-news" id="news">
-      <div class="inner1170">
-        <h2 class="c-ttl04">
-          <span class="c-ttl04__jp">お知らせ</span>
-          <span class="c-ttl04__en">News</span>
-        </h2>
-        <div class="news-content">
-          <div class="news-slider js-slider-news">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a class="news-item" href="#">
-                  <figure class="news-img c-img">
-                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img01.jpg" width="260" height="260" alt="">
-                  </figure>
-                  <div class="news-head">
-                    <span class="news-time">2025.03.20</span>
-                    <span class="news-cate">お知らせ</span>
+    <?php
+    $spaTermId = 7;
+
+    $args_news = array(
+      'post_type'           => 'news',
+      'order'               => 'DESC',
+      'orderby'             => 'post_date',
+      'posts_status'        => 'publish',
+      'posts_per_page'      => 6,
+      'tax_query'           => array(
+        array(
+          'taxonomy' => 'newscat',
+          'field'    => 'term_id',
+          'terms'    => $spaTermId,
+        ),
+      ),
+    );
+    $query_news = new WP_Query($args_news);
+    if ($query_news->have_posts()) {
+    ?>
+
+      <section class="c-sec-news" id="news">
+        <div class="inner1170">
+          <h2 class="c-ttl04">
+            <span class="c-ttl04__jp">お知らせ</span>
+            <span class="c-ttl04__en">News</span>
+          </h2>
+          <div class="news-content">
+            <div class="news-slider js-slider-news">
+              <div class="swiper-wrapper">
+                <?php
+                while ($query_news->have_posts()) {
+                  $query_news->the_post();
+                  $n_id    = $post->ID;
+                  $n_url   = get_the_permalink($n_id);
+                  $n_ttl   = get_the_title($n_id);
+                  $n_date  = get_the_date('Y.m.d');
+                  $n_terms = get_the_terms($n_id, 'newscat');
+                  $n_thumb = get_the_post_thumbnail_url($n_id);
+                  $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;
+                ?>
+                  <div class="swiper-slide">
+                    <a class="news-item" href="<?php echo $n_url; ?>">
+                      <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                        <img src="<?php echo $n_photo; ?>" width="260" height="260" alt="">
+                      </figure>
+                      <div class="news-head">
+                        <span class="news-time"><?php echo $n_date; ?></span>
+                        <?php if (!empty($n_terms)) { ?>
+                          <span class="news-cate">
+                            <?php
+                            foreach ($n_terms as $nterm) {
+                              $cat_name = $nterm->name;
+                              $cat_class = $cat_name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                            ?>
+                              <span class="item <?php echo $cat_class; ?>"><?php echo $cat_name; ?></span>
+                            <?php } ?>
+                          </span>
+                        <?php } ?>
+                      </div>
+                      <p class="news-ttl"><?php echo $n_ttl; ?></p>
+                    </a>
                   </div>
-                  <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-                </a>
+                <?php } ?>
               </div>
-              <div class="swiper-slide">
-                <a class="news-item" href="#">
-                  <figure class="news-img c-img">
-                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
-                  </figure>
-                  <div class="news-head">
-                    <span class="news-time">2025.03.20</span>
-                    <span class="news-cate">お知らせ</span>
-                  </div>
-                  <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a class="news-item" href="#">
-                  <figure class="news-img c-img">
-                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img03.jpg" width="260" height="260" alt="">
-                  </figure>
-                  <div class="news-head">
-                    <span class="news-time">2025.03.20</span>
-                    <span class="news-cate">お知らせ</span>
-                  </div>
-                  <p class="news-ttl">最大3,480円もお得。高速道路のお得なセットプラン。</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a class="news-item" href="#">
-                  <figure class="news-img c-img">
-                    <img src="<?php echo APP_ASSETS ?>img/guide/spa/news_img02.jpg" width="260" height="260" alt="">
-                  </figure>
-                  <div class="news-head">
-                    <span class="news-time">2025.03.20</span>
-                    <span class="news-cate">お知らせ</span>
-                  </div>
-                  <p class="news-ttl">7月22日～「むらごとマル<br class="pc">シェ」がスタート！</p>
-                </a>
-              </div>
-            </div>
-            <div class="swiper-group">
-              <div class="swiper-pagination"></div>
-              <div class="swiper-progress-bar">
-                <span class="slide-progress-bar"></span>
+              <div class="swiper-group">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-progress-bar">
+                  <span class="slide-progress-bar"></span>
+                </div>
               </div>
             </div>
           </div>
+          <a class="c-btn04" href="<?php echo get_term_link($spaTermId,'newscat');?>"><span>もっと見る</span></a>
         </div>
-        <a class="c-btn04" href="#"><span>もっと見る</span></a>
-      </div>
-    </section>
+      </section>
+    <?php } ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>

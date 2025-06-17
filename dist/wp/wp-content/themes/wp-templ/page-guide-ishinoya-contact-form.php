@@ -100,19 +100,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <td>
                   <div class="checkbox-list">
                     <p class="check-item">
-                      <input type="checkbox" id="checkstatus01" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約検討中') ?>" class="">
+                      <input type="checkbox" id="checkstatus01" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約検討中') ?>" class="validate[required]">
                       <label for="checkstatus01"><i class="ske"></i>ご予約検討中</label>
                     </p>
                     <p class="check-item">
-                      <input type="checkbox" id="checkstatus02" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約済み') ?>" class="">
+                      <input type="checkbox" id="checkstatus02" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約済み') ?>" class="validate[required]">
                       <label for="checkstatus02"><i class="ske"></i>ご予約済み</label>
                     </p>
                     <p class="check-item">
-                      <input type="checkbox" id="checkstatus03" name="checkstatus[]" value="<?php echo sanitize_form_value('ご利用済み') ?>" class="">
+                      <input type="checkbox" id="checkstatus03" name="checkstatus[]" value="<?php echo sanitize_form_value('ご利用済み') ?>" class="validate[required]">
                       <label for="checkstatus03"><i class="ske"></i>ご利用済み</label>
                     </p>
                     <p class="check-item">
-                      <input type="checkbox" id="checkstatus04" name="checkstatus[]" value="<?php echo sanitize_form_value('その他') ?>" class="">
+                      <input type="checkbox" id="checkstatus04" name="checkstatus[]" value="<?php echo sanitize_form_value('その他') ?>" class="validate[required]">
                       <label for="checkstatus04"><i class="ske"></i>その他</label>
                     </p>
                   </div>
@@ -123,7 +123,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <em>任意</em>ご予約者様のお名前
                 </th>
                 <td>
-                  <input type="text" name="namereser" id="namereser" class="">
+                  <input placeholder="フルネームでご記入ください" type="text" name="namereser" id="namereser" class="">
                   <p class="txt-hint">※ご予約者様とお問い合わせ主様のお名前が異なる場合のみご記入ください。</p>
                 </td>
               </tr>

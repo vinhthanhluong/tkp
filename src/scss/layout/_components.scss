@@ -3225,7 +3225,7 @@ a.c-btn04 {
       @include PC {
         margin: -90px 0 0 auto;
         @include max-screen(1200px) {
-          margin: calc(-90 / 1200 * 100vw) 0 0 auto;
+          margin: calc(-76 / 1200 * 100vw) 0 0 auto;
         }
       }
     }
@@ -3607,7 +3607,7 @@ a.c-btn04 {
     border: solid 1px rgba(255, 255, 255, 0.6);
     border-radius: 100%;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(5px);
     top: -100px;
     pointer-events: none;
     .txt {
@@ -3750,6 +3750,9 @@ a.c-btn04 {
     @include SP {
       @include aspect-ratio(84, 60);
     }
+  }
+  .swiper-slide {
+    cursor: pointer;
   }
 }
 /* ===================== SECTION WRAPCONTENT ===================== */

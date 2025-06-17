@@ -27,16 +27,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <?php
-    $news_categories = get_terms(
-      array(
-        'post_type'   => 'news',
-        'taxonomy'    => 'newscat',
-        'hide_empty'  => true,
-        'pad_counts'  => false,
-        'orderby'     => 'menu_order',
-        'order'       => 'ASC',
-      )
-    );
+    $ishinoyaTermId = 10;
 
     $args_news = array(
       'post_type'           => 'news',
@@ -44,6 +35,13 @@ include(APP_PATH . 'libs/head.php'); ?>
       'orderby'             => 'post_date',
       'posts_status'        => 'publish',
       'posts_per_page'      => 6,
+      'tax_query'           => array(
+        array(
+          'taxonomy' => 'newscat',
+          'field'    => 'term_id',
+          'terms'    => $ishinoyaTermId,
+        ),
+      )
     );
     $query_news = new WP_Query($args_news);
     ?>
@@ -103,7 +101,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   </div>
                 </div>
               </div>
-              <a class="c-btn04" href="<?php echo APP_URL ?>news/"><span>もっと見る</span></a>
+              <a class="c-btn04" href="<?php echo get_term_link($ishinoyaTermId,'newscat');?>"><span>もっと見る</span></a>
             </div>
           </section>
         </div>

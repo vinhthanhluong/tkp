@@ -105,7 +105,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <li>お客様の故意又は過失により建物や備品を壊してしまった場合は、お客様にご負担いただきますことを予めご了承下さい。</li>
             </ul>
             <p class="desc">何卒ご理解を賜りますよう宜しくお願い申し上げます。</p>
-            <p>TKPホテル&リゾートの宿泊約款に関しましては<a href="#">こちら</a>にてご確認をお願いいたします。</p>
+            <p>TKPホテル&リゾートの宿泊約款に関しましては<a href="<?php echo APP_URL ?>terms/">こちら</a>にてご確認をお願いいたします。</p>
           </div>
         </div>
         <div class="sec-rule" id="rule03">

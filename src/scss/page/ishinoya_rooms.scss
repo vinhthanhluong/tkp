@@ -107,7 +107,7 @@
       background: #b2a46f;
       color: #fff;
       &::after {
-        border-right-color: #fff;
+        border-right-color: $brown02;
         right: -1px;
         bottom: -5px;
       }
@@ -121,6 +121,9 @@
         .icn04::before {
           background-image: url($img_url + "img/ishinoya/rooms/a_icon04_on.svg");
         }
+      }
+      li {
+        color: #fff;
       }
     }
     &::after {
@@ -142,6 +145,9 @@
         border-top-width: 7px;
         border-bottom-width: 7px;
       }
+    }
+    li {
+      transition: 0.3s ease;
     }
   }
   .anchor-inner {
@@ -404,7 +410,7 @@
         @include SP {
           width: 24px;
           height: 24px;
-          margin-top: -10px;
+          margin-top: -12px;
         }
         @include ANDR {
           width: 20px;
@@ -443,6 +449,14 @@
   }
   @include SP {
     padding: 14px 0 64px;
+  }
+  .c-breadcrumb.is-breadcrumb-dis li {
+    @include SP {
+      display: inline;
+      &:before {
+        top: -3px;
+      }
+    }
   }
   .inner1170 {
     @include PC {
@@ -483,6 +497,11 @@
         max-width: 460px;
         width: calc(100% - 165px);
         margin: -90px -40px 0 auto;
+        @include max-screen(1200px) {
+          max-width: vw-pc(460px, 1200);
+          width: calc(100% - (165 / 1200 * 100vw));
+          margin: vw-pc(-70px, 1200) vw-pc(-40px, 1200) 0 auto;
+        }
       }
     }
   }

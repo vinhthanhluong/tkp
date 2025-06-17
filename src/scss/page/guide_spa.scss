@@ -11,7 +11,7 @@
 .c-ttl04 {
   color: $brown02;
   .c-ttl04__jp {
-    color: #928DAB;
+    color: #928dab;
   }
 }
 .sec-spa-keyvisual {
@@ -39,7 +39,14 @@
     }
   }
   .anchor-container {
-    background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, 0.6) 24.52%, rgba(#fff, 0.6) 50%, rgba(#fff, 0.6) 74.52%, rgba(#fff, 0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(#fff, 0) 0%,
+      rgba(#fff, 0.6) 24.52%,
+      rgba(#fff, 0.6) 50%,
+      rgba(#fff, 0.6) 74.52%,
+      rgba(#fff, 0) 100%
+    );
     @include PC {
       max-width: 1440px;
       margin: 0 auto;
@@ -54,24 +61,24 @@
     }
   }
   .anchor-list {
-    @include font("","",100,700);
+    @include font("", "", 100, 700);
     @include flexbox;
     @include flex-wrap;
     @include PC {
       @include justify-content(center);
-      @include font(15,24);
+      @include font(15, 24);
     }
     @include SP {
       @include justify-content(space-between);
       padding: 14px 48px;
-      @include font(13,18);
+      @include font(13, 18);
       max-width: 375px;
       margin: 0 auto;
     }
     @include ANDR {
       @include font(11);
     }
-    &>li {
+    & > li {
       @include PC {
         margin: 0 40.5px;
         @include max-screen(1023px) {
@@ -104,7 +111,8 @@
         position: absolute;
         top: 50%;
         right: 0;
-        background: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.04152 1.58312L7.04152 11.1089L9.90856 8.24183C9.95853 8.1901 10.0183 8.14883 10.0844 8.12044C10.1505 8.09205 10.2215 8.07711 10.2935 8.07649C10.3654 8.07586 10.4367 8.08957 10.5033 8.1168C10.5699 8.14404 10.6303 8.18426 10.6812 8.23512C10.7321 8.28598 10.7723 8.34645 10.7995 8.41302C10.8267 8.47959 10.8404 8.55092 10.8398 8.62284C10.8392 8.69476 10.8243 8.76584 10.7959 8.83193C10.7675 8.89801 10.7262 8.95778 10.6745 9.00775L6.88281 12.7994C6.78123 12.901 6.64348 12.958 6.49985 12.958C6.35622 12.958 6.21847 12.901 6.1169 12.7994L2.32523 9.00775C2.22656 8.90559 2.17196 8.76876 2.1732 8.62674C2.17443 8.48472 2.2314 8.34886 2.33183 8.24843C2.43226 8.148 2.56811 8.09103 2.71014 8.0898C2.85216 8.08857 2.98899 8.14316 3.09115 8.24183L5.95819 11.1089L5.95819 1.58312C5.95819 1.43946 6.01526 1.30169 6.11684 1.20011C6.21842 1.09852 6.3562 1.04146 6.49985 1.04146C6.64351 1.04146 6.78129 1.09852 6.88287 1.20011C6.98445 1.30169 7.04152 1.43946 7.04152 1.58312Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+        background: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.04152 1.58312L7.04152 11.1089L9.90856 8.24183C9.95853 8.1901 10.0183 8.14883 10.0844 8.12044C10.1505 8.09205 10.2215 8.07711 10.2935 8.07649C10.3654 8.07586 10.4367 8.08957 10.5033 8.1168C10.5699 8.14404 10.6303 8.18426 10.6812 8.23512C10.7321 8.28598 10.7723 8.34645 10.7995 8.41302C10.8267 8.47959 10.8404 8.55092 10.8398 8.62284C10.8392 8.69476 10.8243 8.76584 10.7959 8.83193C10.7675 8.89801 10.7262 8.95778 10.6745 9.00775L6.88281 12.7994C6.78123 12.901 6.64348 12.958 6.49985 12.958C6.35622 12.958 6.21847 12.901 6.1169 12.7994L2.32523 9.00775C2.22656 8.90559 2.17196 8.76876 2.1732 8.62674C2.17443 8.48472 2.2314 8.34886 2.33183 8.24843C2.43226 8.148 2.56811 8.09103 2.71014 8.0898C2.85216 8.08857 2.98899 8.14316 3.09115 8.24183L5.95819 11.1089L5.95819 1.58312C5.95819 1.43946 6.01526 1.30169 6.11684 1.20011C6.21842 1.09852 6.3562 1.04146 6.49985 1.04146C6.64351 1.04146 6.78129 1.09852 6.88287 1.20011C6.98445 1.30169 7.04152 1.43946 7.04152 1.58312Z" fill="%23231816"/></svg>')
+          no-repeat center center/100% auto;
         @include PC {
           margin-top: -6.5px;
           width: 13px;
@@ -135,7 +143,8 @@
     right: 0;
     z-index: -1;
     pointer-events: none;
-    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+      auto;
     @include PC {
       top: -525px;
       bottom: 112px;
@@ -199,23 +208,23 @@
     @include SP {
       @include aspect-ratio(157, 100);
       width: vw-sp(157px);
-      margin: calc(-92/375*100vw) -24px 24px auto;
+      margin: calc(-92 / 375 * 100vw) -24px 24px auto;
       @include max-screen(375px) {
         margin-right: calc(-24 / 375 * 100vw);
       }
     }
   }
   .about-ttl {
-    @include font("","",100,700);
+    @include font("", "", 100, 700);
     @include PC {
-      @include font(35,60);
+      @include font(35, 60);
       margin-bottom: 40px;
       @include max-screen(1023px) {
-        font-size: vw-pc(35px,1023);
+        font-size: vw-pc(35px, 1023);
       }
     }
     @include SP {
-      @include font(26,40);
+      @include font(26, 40);
       margin-bottom: 16px;
     }
     @include ANDR {
@@ -225,10 +234,10 @@
   .about-desc {
     letter-spacing: 0.1em;
     @include PC {
-      @include font(16,36);
+      @include font(16, 36);
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
     }
   }
 }
@@ -248,7 +257,8 @@
     left: 0;
     z-index: -1;
     pointer-events: none;
-    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+      auto;
     @include PC {
       top: 423px;
       bottom: 594px;
@@ -334,11 +344,11 @@
       padding-bottom: 1px;
     }
     &::before {
-      border-left-color: #928DAB;
+      border-left-color: #928dab;
     }
   }
   .intro-efficacy {
-    border: 1px solid #928DAB;
+    border: 1px solid #928dab;
     background: #fff;
     @include PC {
       padding-right: 18px;
@@ -402,13 +412,13 @@
     }
     dl {
       @include PC {
-        border-bottom: 1px solid #928DAB;
+        border-bottom: 1px solid #928dab;
         margin-bottom: 25px;
         padding-bottom: 25px;
         @include flexbox;
       }
       @include SP {
-        border-top: 1px solid #928DAB;
+        border-top: 1px solid #928dab;
         padding: 18px 0 16px;
       }
       &:last-child {
@@ -425,16 +435,16 @@
       }
     }
     dt {
-      @include font("",1.5,100,700);
+      @include font("", 1.5, 100, 700);
       @include PC {
         padding: 0 20px;
         width: 230px;
         @include font(18);
         @include max-screen(1023px) {
-          width: vw-pc(150px,1023);
-          font-size: vw-pc(18px,1023);
-          padding-left: vw-pc(15px,1023);
-          padding-right: vw-pc(15px,1023);
+          width: vw-pc(150px, 1023);
+          font-size: vw-pc(18px, 1023);
+          padding-left: vw-pc(15px, 1023);
+          padding-right: vw-pc(15px, 1023);
         }
       }
       @include SP {
@@ -446,13 +456,13 @@
       letter-spacing: 0.1em;
       @include PC {
         @include flex(1);
-        @include font(16,30);
+        @include font(16, 30);
         @include max-screen(1023px) {
-          font-size: vw-pc(16px,1023)
+          font-size: vw-pc(16px, 1023);
         }
       }
       @include SP {
-        @include font(15,28);
+        @include font(15, 28);
       }
     }
   }
@@ -461,15 +471,15 @@
     @include flex-wrap;
     letter-spacing: 0.1em;
     @include PC {
-      @include font(16,30);
+      @include font(16, 30);
       @include max-screen(1023px) {
-        font-size: vw-pc(16px,1023)
+        font-size: vw-pc(16px, 1023);
       }
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
     }
-    &>li {
+    & > li {
       position: relative;
       @include PC {
         padding-left: 18px;
@@ -495,11 +505,9 @@
   background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
   @include PC {
     padding: 118px 0 120px;
-    margin-bottom: 120px;
   }
   @include SP {
     padding: 67px 0 64px;
-    margin-bottom: 66px;
   }
   .c-ttl04 {
     @include PC {
@@ -511,14 +519,14 @@
         margin-bottom: 6px;
       }
       .c-ttl04__en {
-        line-height: calc(43/36);
+        line-height: calc(43 / 36);
       }
     }
   }
   .step-item {
-    background: rgba(#fff,0.8);
+    background: rgba(#fff, 0.8);
     color: $brown02;
-    line-height: calc(26/14);
+    line-height: calc(26 / 14);
     letter-spacing: 0.1em;
     @include PC {
       margin-bottom: 20px;
@@ -550,7 +558,7 @@
       align-self: center;
       padding: 10px 30px 10px 61px;
       @include max-screen(1023px) {
-        padding-left: vw-pc(50px,1023);
+        padding-left: vw-pc(50px, 1023);
       }
     }
     @include SP {
@@ -568,12 +576,13 @@
   }
   .step-number {
     white-space: nowrap;
-    color: #928DAB;
-    @include font(20,1.5,0,500);
+    color: #928dab;
+    @include font(20, 1.5, 0, 500);
     @include ffGT;
     min-width: 80px;
     @include PC {
       margin-right: 10px;
+      padding-top: 2px;
     }
     @include SP {
       margin-right: 11px;
@@ -585,7 +594,7 @@
   }
   .step-ttl {
     @include flex(1);
-    @include font("",1.6,100,700);
+    @include font("", 1.6, 100, 700);
     @include PC {
       @include font(20);
     }
@@ -602,9 +611,11 @@
 }
 .c-sec-news {
   @include PC {
+    padding-top: 120px;
     margin-bottom: 132px;
   }
   @include SP {
+    padding-top: 66px;
     margin-bottom: 62px;
   }
 }
