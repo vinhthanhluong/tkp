@@ -203,8 +203,18 @@
       }
       @include HOVER {
         opacity: 1;
+        color: #fff;
         background: $yellow04;
         border-color: $yellow04;
+        .txt {
+          color: #fff;
+          &::after {
+            background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="white"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="white"/></svg>');
+          }
+          &::before {
+            background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="white"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="white"/></svg>');
+          }
+        }
       }
       .txt {
         display: block;
@@ -537,6 +547,7 @@
               opacity: 1;
               background: $yellow04;
               border-color: $yellow04;
+              color: #fff;
             }
           }
         }

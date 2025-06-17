@@ -282,6 +282,10 @@
     @include PC {
       @include flexbox;
       @include align-items(flex-start);
+      margin-top: 40px;
+    }
+    @include SP {
+      margin-top: 32px;
     }
   }
   .cuisine-time {
@@ -329,23 +333,41 @@
       margin: 0 auto;
     }
   }
-  .gallery-container {
-    width: 100%;
+
+  .c-gallery__main {
     @include PC {
-      overflow: hidden;
-      padding-bottom: 41px;
+      padding-bottom: 66px;
+      @include max-screen(1200px) {
+        padding-bottom: calc(66 / 1200 * 100vw);
+      }
     }
     @include SP {
-      margin-bottom: 32px;
+      padding-bottom: 25px;
     }
   }
-  .slider-gallery {
-    position: relative;
+  .swiper-group {
     @include PC {
-      padding-bottom: 67px;
-      @include max-screen(980px) {
-        padding-bottom: vw-pc(67px, 980);
+      right: 0;
+      left: auto;
+    }
+    @include SP {
+      bottom: 0;
+    }
+  }
+  .c-gallery__thumb {
+    @include PC {
+      max-width: 620px;
+      width: calc(100% - 380px);
+      margin: -106px 0 auto 40px;
+      @include max-screen(1200px) {
+        width: calc(100% - 380 / 1200 * 100vw);
+        margin: calc(-106 / 1200 * 100vw) 0 auto calc(40 / 1200 * 100vw);
       }
+    }
+    @include SP {
+      max-width: 620px;
+      width: calc(100% - 61px);
+      margin: -44px -24px 0 auto;
     }
   }
   .gallery-pic {
@@ -364,59 +386,7 @@
       @include aspect-ratio(84, 60);
     }
   }
-  .slider-thumb-wrapper {
-    overflow: hidden;
-    @include PC {
-      max-width: 622px;
-      margin: -107px 0 0 39px;
-      @include max-screen(980px) {
-        margin-right: 231px;
-        margin-top: vw-pc(-107px, 980);
-      }
-    }
-    @include SP {
-      margin: vw-sp(-19px) -24px 0 85px;
-      @include max-screen(375px) {
-        margin-right: calc(-24 / 375 * 100vw);
-      }
-    }
-  }
-  .swiper-wrapper {
-    height: auto;
-  }
-  .swiper-group {
-    position: absolute;
-    @include PC {
-      width: 178px;
-      right: 0;
-      bottom: 0;
-      padding: 0 0 20px 78px;
-    }
-    @include SP {
-      left: -8px;
-      bottom: vw-sp(-25px);
-      width: 85px;
-    }
-  }
-  .swiper-pagination {
-    position: absolute;
-    left: 0;
-    top: -13px;
-    bottom: auto;
-    @include ffGT;
-    @include font(12, 1.5, 100, 400);
-    color: #9f9b9a;
-    width: auto;
-    transform: none;
-    white-space: nowrap;
-  }
-  .swiper-pagination-current {
-    @include font(20, 28, 100);
-    color: $brown02;
-    min-width: 32px;
-    padding-right: 2px;
-    display: inline-block;
-  }
+
   .tab-wrapper {
     position: relative;
   }

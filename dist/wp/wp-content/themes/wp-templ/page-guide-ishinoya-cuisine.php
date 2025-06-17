@@ -41,7 +41,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <section class="sec-cuisine" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg.png" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg_sp.png">
-      <div class="inner1170 aos-init" data-aos="fade-up">
+      <div class="inner1170">
         <div class="tab-wrapper js-tab-content">
           <div class="tab-content is-current" id="tab01">
             <h3 class="cuisine-ttl">海を望む特等席で堪能する<br>本格ハワイアングリル</h3>
@@ -85,7 +85,8 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <p class="cuisine-summary">別府湾の美しい景色を望むカフェレストラン。テラス席からは大海原を一望でき、自然の息吹を感じながら食事を楽しむことができます。別府の豊かな自然と共に、贅沢な時間をお楽しみください。</p>
               </div>
-              <div class="gallery-container">
+
+              <!-- <div class="gallery-container">
                 <div class="slider-gallery">
                   <div class="gallery-wrapper js-slider-gallery">
                     <div class="swiper-wrapper">
@@ -136,7 +137,66 @@ include(APP_PATH . 'libs/head.php'); ?>
                     </div>
                   </div>
                 </div>
+              </div> -->
+
+              <div class="c-gallery__main">
+                <div class="gallery-wrapper js-slider-gallerycuisine">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img01.jpg" width="1000" height="450" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img03.jpg" width="1000" height="450" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gallery-pic c-img">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img04.jpg" width="1000" height="450" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="c-cursor__slide js-cursor__slide">
+                    <span class="txt">Prev</span>
+                  </p>
+                  <div class="gallerySwiper-prev cuisine-prev">
+                  </div>
+                  <div class="gallerySwiper-next cuisine-next">
+                  </div>
+                </div>
+                <div class="swiper-group">
+                  <div class="gallerySwiper-pagination cuisine-pagination"></div>
+                  <div class="gallerySwiper-progress-bar cuisine-progress-bar pc">
+                    <span class="slide-progress-bar"></span>
+                  </div>
+                </div>
               </div>
+              <div class="c-gallery__thumb">
+                <div class="slider-thumb-gallery js-slider-thumbcuisine">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img01.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img02.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img03.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img04.jpg" width="140" height="100" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="cuisine-group">
                 <dl class="cuisine-time">
                   <dt>ご夕食</dt>
@@ -191,78 +251,90 @@ include(APP_PATH . 'libs/head.php'); ?>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
   <script>
-    if ($('.js-slider-gallery').length) {
-      var sliderThumbnail = new Swiper('.js-slider-thumb', {
-        slidesPerView: 3,
-        spaceBetween: 8,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-        },
-      });
-      new Swiper('.js-slider-gallery', {
-        loop: true,
-        spaceBetween: 24,
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        threshold: 30,
-        lazy: true,
-        speed: 500,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
-        thumbs: {
-          swiper: sliderThumbnail
-        },
-        // pagination: {
-        //   el: ".swiper-pagination",
-        //   type: "custom",
-        //   renderCustom: function (swiper, current, total) {
-        //     return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
-        //   }
-        // },
-        pagination: {
-          el: ".swiper-pagination",
-          type: "custom",
-          renderCustom: function(swiper, current, total) {
-            if (total > 9) {
-              var contentCurrent;
-              if (current < 10) {
-                contentCurrent = '<span class="swiper-pagination-current">0';
-              } else {
-                contentCurrent = '<span class="swiper-pagination-current">';
-              }
-              return contentCurrent + current + '</span>/ ' + total;
-            } else {
-              return '<span class="swiper-pagination-current">0' + current + '</span>/ ' + '0' + total;
-            }
-          }
-        },
-        on: {
-          init: function() {
-            $(".swiper-progress-bar").removeClass("animate");
-            $(".swiper-progress-bar").removeClass("active");
-            $(".swiper-progress-bar").eq(0).addClass("animate");
-            $(".swiper-progress-bar").eq(0).addClass("active");
-          },
-          slideChangeTransitionStart: function() {
-            $(".swiper-progress-bar").removeClass("animate");
-            $(".swiper-progress-bar").removeClass("active");
-            $(".swiper-progress-bar").eq(0).addClass("active");
-          },
-          slideChangeTransitionEnd: function() {
-            $(".swiper-progress-bar").eq(0).addClass("animate");
-          }
+    function jsSlideGallery() {
+      const configs = [{
+        gallery: ".js-slider-gallerycuisine",
+        thumb: ".js-slider-thumbcuisine",
+        next: ".cuisine-next",
+        prev: ".cuisine-prev",
+        pagination: ".cuisine-pagination",
+        progress: ".cuisine-progress-bar",
+      }];
+
+      configs.forEach((cfg) => {
+        if ($(cfg.gallery).length) {
+          const sliderThumbnail = new Swiper(cfg.thumb, {
+            slidesPerView: 3,
+            spaceBetween: 8,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            },
+          });
+
+          new Swiper(cfg.gallery, {
+            loop: true,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            threshold: 30,
+            lazy: true,
+            speed: 500,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            thumbs: {
+              swiper: sliderThumbnail,
+            },
+            navigation: {
+              nextEl: cfg.next,
+              prevEl: cfg.prev,
+            },
+            pagination: {
+              el: cfg.pagination,
+              type: "custom",
+              renderCustom: function(swiper, current, total) {
+                if (total > 9) {
+                  var contentCurrent =
+                    current < 10 ?
+                    '<span class="swiper-pagination-current">0' :
+                    '<span class="swiper-pagination-current">';
+                  return contentCurrent + current + "</span>/ " + total;
+                } else {
+                  return (
+                    '<span class="swiper-pagination-current">0' +
+                    current +
+                    "</span>/ " +
+                    "0" +
+                    total
+                  );
+                }
+              },
+            },
+            on: {
+              init: function() {
+                $(cfg.progress).removeClass("animate active");
+                $(cfg.progress).eq(0).addClass("animate active");
+              },
+              slideChangeTransitionStart: function() {
+                $(cfg.progress).removeClass("animate active");
+                $(cfg.progress).eq(0).addClass("active");
+              },
+              slideChangeTransitionEnd: function() {
+                $(cfg.progress).eq(0).addClass("animate");
+              },
+            },
+          });
         }
       });
     }
+
     $('.js-tabs li').click(function() {
       var t = $(this).attr('data-tab');
       $('.js-tabs li').removeClass('is-current');
