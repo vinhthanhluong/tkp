@@ -10,10 +10,10 @@ include(APP_PATH . 'libs/head.php');
   <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/rooms/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/rooms/mv_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-ttl">
+        <div class="keyvisual-ttl">
           <span class="ttl-en">Rooms</span>
-          <span class="ttl-jp">お部屋</span>
-        </h1>
+          <h1 class="ttl-jp">お部屋</h1>
+        </div>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
             <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
@@ -96,7 +96,7 @@ include(APP_PATH . 'libs/head.php');
             ?>
               <li class="rooms-item aos-init" data-aos="fade-up" id="anchor<?php echo $rooms_id; ?>">
                 <figure class="rooms-img c-img <?php echo $room_slide == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                  <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo $room_slide; ?>" rel="js-lazy" width="590" height="350" alt="">
+                  <img src="<?php echo createSVG(590, 350); ?>" data-src="<?php echo $room_slide; ?>" rel="js-lazy" width="590" height="350" alt="<?php echo $rooms_ttl; ?>">
                 </figure>
                 <div class="rooms-info">
                   <h2 class="rooms-ttl"><?php echo $rooms_ttl; ?></h2>

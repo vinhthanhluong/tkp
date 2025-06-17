@@ -885,7 +885,7 @@
       background: #fff;
       border: solid 1px #dcdcdc;
       color: #000000;
-      padding: 26px 19px;
+      padding: 19px;
       letter-spacing: 1.7px;
       border-radius: 0;
       &::-webkit-input-placeholder,
@@ -1020,6 +1020,11 @@
       border: solid 1px #bbbbbb;
       margin-right: 12px;
       color: #bbbbbb;
+      .is-windows & {
+        position: relative;
+        top: -1px;
+        line-height: 19px;
+      }
     }
     .is-required {
       em {

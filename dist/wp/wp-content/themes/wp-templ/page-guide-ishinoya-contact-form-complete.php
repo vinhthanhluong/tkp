@@ -16,7 +16,7 @@ if ($actionFlag == 'send') {
   $aMailto = $aMailtoContact;
   $aBccTo = isset($aBccToContact) && count($aBccToContact) > 0 ? $aBccToContact : array('');
   $from = $fromContact;
-  $mailFromName = $fromName;
+  $mailFromName = $fromName02;
   $subject_admin = "ホームページからお問い合わせがありました";
   $subject_user = "お問い合わせありがとうございました";
   $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
@@ -27,10 +27,10 @@ if ($actionFlag == 'send') {
 以下、お問い合わせ内容となっております。
 ご確認くださいませ。";
   $email_body_footer = "
-SHONIN PARK
-https://www.shoninpark.jp/
+ISHINOYA 別府
+https://www.shoninpark.jp/guide/ishinoya/
 〒874-0023 大分県別府市上人ケ浜町795-1
-TEL 0977-75-6363（代表番号）
+TEL 0977-75-6363
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);
@@ -255,7 +255,7 @@ unset($_SESSION['ses_step3']);
         </div>
         <div class="form-inner">
           <div class="thanks-main">
-            <p class="thanks-main__ttl"><strong>お問い合わせありがとう<br class="sp">ございました</strong></p>
+            <h1 class="thanks-main__ttl"><strong>お問い合わせありがとう<br class="sp">ございました</strong></h1>
             <p class="thanks-main__txt">ご入力頂いたメールアドレス宛へ、ご確認メー<br class="sp">ルをお送りしておりますのでご確認ください。<br class="pc">内容を確認次第、担当者より折り返しご連絡さ<br class="sp">せていただきます。</p>
             <p class="thanks-main__txt02">※しばらく経ってもメールが届かない場合は、<br class="sp">入力頂いたメールアドレスの誤り、<br class="pc">システムの不具 <br class="sp">合、迷惑メールフォルダに振り分けられている可能性<br class="sp">がございます。<br>その際にはお手数ですがもう一度フォームよりお問い<br class="sp">合わせ頂くか、<br class="pc">お電話にてお問い合わせください。</p>
             <a class="thanks-main__back02" href="<?php echo APP_URL; ?>guide/ishinoya/"><span>ISHINOYA 別府 TOP</span></a>

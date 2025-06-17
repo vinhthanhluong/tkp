@@ -378,21 +378,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 foreach ($faq01 as $item) {
                   $question = !empty($item['question']) ? $item['question'] : '';
                   $answer = !empty($item['answer']) ? $item['answer'] : '';
+                  if (!empty($question)  && !empty($answer)) {
               ?>
-                  <div class="qa">
-                    <?php if (!empty($question)) { ?>
+                    <div class="qa">
                       <div class="qa__ques js-accordion">
                         <p><?php echo $question; ?></p>
                       </div>
-                    <?php } ?>
-                    <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
                         <?php echo $answer; ?>
                       </div>
-                    <?php } ?>
-                  </div>
-                <?php } ?>
-              <?php } else { ?>
+                    </div>
+                <?php }
+                }
+              } else { ?>
                 <p class="comming">表示する記事がありません。</p>
               <?php } ?>
             </div>
@@ -403,21 +401,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 foreach ($faq02 as $item) {
                   $question = !empty($item['question']) ? $item['question'] : '';
                   $answer = !empty($item['answer']) ? $item['answer'] : '';
+                  if (!empty($question) && !empty($answer)) {
               ?>
-                  <div class="qa">
-                    <?php if (!empty($question)) { ?>
+                    <div class="qa">
                       <div class="qa__ques js-accordion">
                         <p><?php echo $question; ?></p>
                       </div>
-                    <?php } ?>
-                    <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
                         <?php echo $answer; ?>
                       </div>
-                    <?php } ?>
-                  </div>
-                <?php } ?>
-              <?php } else { ?>
+                    </div>
+                <?php }
+                }
+              } else { ?>
                 <p class="comming">表示する記事がありません。</p>
               <?php } ?>
             </div>
@@ -427,21 +423,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 foreach ($faq03 as $item) {
                   $question = !empty($item['question']) ? $item['question'] : '';
                   $answer = !empty($item['answer']) ? $item['answer'] : '';
+                  if (!empty($question) && !empty($answer)) {
               ?>
-                  <div class="qa">
-                    <?php if (!empty($question)) { ?>
+                    <div class="qa">
                       <div class="qa__ques js-accordion">
                         <p><?php echo $question; ?></p>
                       </div>
-                    <?php } ?>
-                    <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
                         <?php echo $answer; ?>
                       </div>
-                    <?php } ?>
-                  </div>
-                <?php } ?>
-              <?php } else { ?>
+                    </div>
+                <?php }
+                }
+              } else { ?>
                 <p class="comming">表示する記事がありません。</p>
               <?php } ?>
             </div>
@@ -451,21 +445,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 foreach ($faq04 as $item) {
                   $question = !empty($item['question']) ? $item['question'] : '';
                   $answer = !empty($item['answer']) ? $item['answer'] : '';
+                  if (!empty($question)  && !empty($answer)) {
               ?>
-                  <div class="qa">
-                    <?php if (!empty($question)) { ?>
+                    <div class="qa">
                       <div class="qa__ques js-accordion">
                         <p><?php echo $question; ?></p>
                       </div>
-                    <?php } ?>
-                    <?php if (!empty($answer)) { ?>
                       <div class="qa__ans js-accordion-content">
                         <?php echo $answer; ?>
                       </div>
-                    <?php } ?>
-                  </div>
-                <?php } ?>
-              <?php } else { ?>
+                    </div>
+                <?php }
+                }
+              } else { ?>
                 <p class="comming">表示する記事がありません。</p>
               <?php } ?>
             </div>

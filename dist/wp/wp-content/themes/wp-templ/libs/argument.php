@@ -28,6 +28,48 @@ switch ($pagename) {
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
+  case 'guide-spa':
+    if (empty($titlepage)) $titlepage = '砂湯・温泉｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '別府唯一の海浜砂湯・温泉「Sand SPA」日帰りでも楽しめる癒しの空間は、夜のライトアップで幻想的な雰囲気に包まれます。海風を感じながら、ここでしか味わえない贅沢なリラクゼーションを。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'ishinoya':
+    if (empty($titlepage)) $titlepage = 'ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '緑豊かな森林と別府湾の美しい景色に囲まれた宿泊コテージ。地元食材にこだわったお料理や砂湯・温泉、快眠を追求したベッドで、寛ぎのひとときを提供いたします。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'rooms':
+    if (empty($titlepage)) $titlepage = 'お部屋｜ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '全7種・23室のお部屋タイプをご用意。露天風呂付客室では、プライベートな時間と別府温泉の源泉をひとり占め。家族や友人、カップルで贅沢なひとときをお過ごしください。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'ishinoya-cuisine':
+    if (empty($titlepage)) $titlepage = 'お食事｜ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '宿泊者限定の朝食・夕食をご用意。地元の新鮮な食材を使ったお料理で、別府旅行の思い出に彩りを添えます。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'ishinoya-spa':
+    if (empty($titlepage)) $titlepage = '温泉・砂湯｜ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '別府ならではの伝統的な砂湯と天然温泉で、心も体も癒される贅沢なひとときを。「ISHINOYA 別府 / 石のや 別府」でしか味わえない、上質な湯浴体験をお楽しみください。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'ishinoya-contact':
+    if (empty($titlepage)) $titlepage = 'お問い合わせ｜ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '「ISHINOYA 別府 / 石のや 別府」へのご宿泊に関するご質問・ご相談はこちら。個人・法人問わず、お気軽にお問い合わせください。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'ishinoya-form':
+    if (empty($titlepage)) $titlepage = '個人のお客様のお問い合わせ｜ISHINOYA 別府 / 石のや 別府';
+    if (empty($desPage)) $desPage = '個人のお客様の「ISHINOYA 別府 / 石のや 別府」へのご宿泊に関するお問い合わせはこちら。ご予約前のご相談やご不明点もお気軽にご連絡ください。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
   case 'shop':
     if (empty($titlepage)) $titlepage = 'ショップ｜SHONIN PARK';
     if (empty($desPage)) $desPage = '別府・大分の特産品やグルメを楽しめるショップエリア。お土産にぴったりのアイテムも取り揃えています。';
@@ -61,6 +103,12 @@ switch ($pagename) {
   case 'contact':
     if (empty($titlepage)) $titlepage = 'お問い合わせ｜SHONIN PARK';
     if (empty($desPage)) $desPage = '「SHONIN PARK」の日帰り利用からご宿泊まで、ご不明点やご質問がございましたら、お気軽にお問い合わせください。';
+    if (empty($keyPage)) $keyPage = '';
+    if (empty($txtH1)) $txtH1 = '';
+    break;
+  case 'rule':
+    if (empty($titlepage)) $titlepage = '利用規約｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '「SHONIN PARK」を安全に楽しんでいただくための利用規約をご案内。ご来園前にご確認をお願いいたします。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;

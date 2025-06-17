@@ -4,6 +4,11 @@
  * Template Name: Page GUIDE ISHINOYA CONTACT
  **/
 $thisPageName = 'ishinoya-contact';
+
+
+$post_id = 202; //id page info
+$faq03 = get_field('faq03', $post_id);
+
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_contact.min.css?v=<?php echo APP_VER ?>">
 </head>
@@ -13,10 +18,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-ttl">
+        <div class="keyvisual-ttl">
           <span class="ttl-en">Contact</span>
-          <span class="ttl-jp">お問い合わせ</span>
-        </h1>
+          <h1 class="ttl-jp">お問い合わせ</h1>
+        </div>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
             <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
@@ -31,76 +36,44 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <p class="c-contact-desc">下記の「<a class="contact-link" href="#faq">よくあるご質問</a>」で解決しない場合は、下記フォームよりお問い合わせください。</p>
         <ul class="btn-list">
-          <li><a href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/"><span class="icn icn01">個人のお客様</span></a></li>
-          <li><a href="https://reg34.smp.ne.jp/regist/is?SMPFORM=qc-sinjs-2237e2e2d56727399f186f7c0c9bcea4&f000607785=SHONIN%20PARK" target="_blank" rel="noopener"><span class="icn icn02">法人のお客様</span></a></li>
+          <li><a href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/">
+              <h2><span class="icn icn01">個人のお客様</span></h2>
+            </a></li>
+          <li><a href="https://reg34.smp.ne.jp/regist/is?SMPFORM=qc-sinjs-2237e2e2d56727399f186f7c0c9bcea4&f000607785=SHONIN%20PARK" target="_blank" rel="noopener">
+              <h2><span class="icn icn02">法人のお客様</span></h2>
+            </a></li>
         </ul>
       </div>
     </div>
     <section class="sec-contact-faq" id="faq" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/pattern_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/pattern_bg_sp.jpg">
       <div class="inner1170">
-        <h3 class="c-ttl04 aos-init" data-aos="fade-up">
-          <span class="c-ttl04__jp">よくあるご質問</span>
+        <div class="c-ttl04 aos-init" data-aos="fade-up">
+          <h2 class="c-ttl04__jp">よくあるご質問</h2>
           <span class="c-ttl04__en">Q&A</span>
-        </h3>
+        </div>
         <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 別府の利⽤についてよくあるご質問をまとめています。<br>こちらで確認できない内容は<a class="contact-link" href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/">お問い合わせフォーム</a>よりご質問ください。</p>
-        <ul class="faq-list">
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>キャンセル規定について教えてください</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>ドローンは使用できますか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>定休日はありますか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>ペットは同伴可能ですか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>赤ちゃん用のおむつ替えスペースはありますか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>Wifiはありますか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-          <li class="faq-item aos-init" data-aos="fade-up">
-            <h3 class="faq-question js-accordion"><span>海水浴はできますか？</span></h3>
-            <div class="faq-accordion js-accordion-content">
-              <div class="faq-answer">
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <?php if (!empty($faq03)) {  ?>
+          <ul class="faq-list">
+            <?php
+            foreach ($faq03 as $item) {
+              $question = !empty($item['question']) ? $item['question'] : '';
+              $answer = !empty($item['answer']) ? $item['answer'] : '';
+              if (!empty($question) && !empty($answer)) {
+            ?>
+                <li class="faq-item aos-init" data-aos="fade-up">
+                  <h3 class="faq-question js-accordion"><span><?php echo $question; ?></span></h3>
+                  <div class="faq-accordion js-accordion-content">
+                    <div class="faq-answer">
+                      <p><?php echo $answer; ?></p>
+                    </div>
+                  </div>
+                </li>
+            <?php }
+            } ?>
+          </ul>
+        <?php } else { ?>
+          <p class="comming">表示する記事がありません。</p>
+        <?php } ?>
       </div>
     </section>
   </main>

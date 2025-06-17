@@ -3,9 +3,9 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <p class="link">
+          <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo01.svg" alt="logo">
-          </p>
+          </a>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
@@ -36,9 +36,9 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <p class="link">
+          <a class="link" href="<?php echo APP_URL ?>">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo02.svg" alt="logo">
-          </p>
+          </a>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
@@ -69,38 +69,36 @@
     <div class="f-wcm01">
       <div class="f2-wrap">
         <div class="col-logo">
-          <p class="link">
+          <a class="link" href="https://www.tkp-resort.net/" target="_blank" rel="noopener">
             <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_logo03.svg" alt="logo">
-          </p>
+          </a>
         </div>
         <div class="col-menu">
           <ul class="col-menu__lst">
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">石のや</a>
+              <a class="link is-exter" href="https://www.ishinoya.jp/izunagaoka/" target="_blank" rel="noopener">石のや 伊豆長岡</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ</a>
+              <a class="link is-exter" href="https://lectore-atami-koarashi.jp/" target="_blank" rel="noopener">レクトーレ 熱海小嵐</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ箱根強羅</a>
+              <a class="link is-exter" href="https://www.ishinoya.jp/atami/" target="_blank" rel="noopener">石のや 熱海</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">石のや 伊豆長岡</a>
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/yugawara/" target="_blank" rel="noopener">グラントーレ 湯河原</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ熱海小嵐</a>
+              <a class="link is-exter" href="https://lectore-atami-momoyama.jp/" target="_blank" rel="noopener">レクトーレ 熱海桃山</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ湯河原</a>
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hayama/" target="_blank" rel="noopener">レクトーレ 葉山湘南国際村</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">石のや 熱海</a>
+              <a class="link is-exter" href="https://lectore-hakone-gora.jp/" target="_blank" rel="noopener">レクトーレ 箱根強羅</a>
             </li>
+            <li class="col-menu__item"></li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ熱海桃山</a>
-            </li>
-            <li class="col-menu__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>guide/">レクトーレ葉山 湘南国際村</a>
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hanyu/" target="_blank" rel="noopener">レクトーレ 羽生TERRACE</a>
             </li>
           </ul>
         </div>
@@ -112,7 +110,7 @@
       <div class="f2-wrap02">
         <div class="col-info">
           <p class="f2-add">〒874-0023 大分県別府市上人ケ浜町795-1</p>
-          <p class="f2-phone">TEL <a href="tel:0977-75-6363">0977-75-6363</a>（ISHINOYA 別府 代表番号）</p>
+          <p class="f2-phone">TEL <a href="tel:0977-75-6363">0977-75-6363</a></p>
         </div>
         <div class="col-social">
           <ul class="solcial-btn">
@@ -138,7 +136,7 @@
           </ul>
           <ul class="social-external">
             <li class="social-external__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>">
+              <a class="link is-exter" href="https://www.tkp-resort.net/agreement.html" target="_blank" rel="noopener">
                 <span class="txt">宿泊約款</span>
               </a>
             </li>
@@ -148,7 +146,7 @@
               </a>
             </li>
             <li class="social-external__item">
-              <a class="link is-exter" href="<?php echo APP_URL ?>terms/">
+              <a class="link is-exter" href="https://www.tkp.jp/" target="_blank" rel="noopener">
                 <span class="txt">運営会社</span>
               </a>
             </li>

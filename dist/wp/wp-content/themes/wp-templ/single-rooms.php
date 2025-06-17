@@ -15,6 +15,10 @@ if (!empty($room_slide)) {
 $room_desc = get_field('room_desc', $post_id);
 $room_info = get_field('room_info', $post_id);
 
+$titlepage = strip_tags($ttlpost) . '｜ISHINOYA 別府 / 石のや 別府';
+$desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($room_desc)), 0, 120);
+$desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
+
 include(APP_PATH . 'libs/head.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
@@ -48,7 +52,7 @@ include(APP_PATH . 'libs/head.php');
                     ?>
                       <div class="swiper-slide">
                         <div class="gallery-pic c-img">
-                          <img src="<?php echo $slide_gallery; ?>" width="625" height="440" alt="">
+                          <img src="<?php echo $slide_gallery; ?>" width="625" height="440" alt="<?php echo $ttlpost; ?>">
                         </div>
                       </div>
                     <?php } ?>
@@ -77,7 +81,7 @@ include(APP_PATH . 'libs/head.php');
                       $slide_thumb =  $slide_thumb ? $slide_thumb['thumbnail'] : '';
                     ?>
                       <div class="swiper-slide">
-                        <div class="thumb-pic c-img"><img src="<?php echo $slide_thumb; ?>" width="140" height="100" alt=""></div>
+                        <div class="thumb-pic c-img"><img src="<?php echo $slide_thumb; ?>" width="140" height="100" alt="<?php echo $ttlpost; ?>"></div>
                       </div>
                     <?php } ?>
                   </div>
@@ -87,7 +91,7 @@ include(APP_PATH . 'libs/head.php');
           </div>
           <div class="archive-right">
             <div class="archive-content">
-              <h2 class="archive-ttl pc"><?php echo $ttlpost; ?></h2>
+              <h1 class="archive-ttl pc"><?php echo $ttlpost; ?></h1>
               <?php if (!empty($room_desc)) { ?>
                 <p class="archive-desc"><?php echo $room_desc; ?></p>
               <?php } ?>
@@ -101,7 +105,9 @@ include(APP_PATH . 'libs/head.php');
                     $info_detail = implode('</br>', $info_detail);
                     if (!empty($info_head) && !empty($info_detail)) {
                   ?>
-                      <dt><?php echo $info_head; ?></dt>
+                      <dt>
+                        <h2><?php echo $info_head; ?></h2>
+                      </dt>
                       <dd><?php echo $info_detail; ?></dd>
                   <?php }
                   } ?>

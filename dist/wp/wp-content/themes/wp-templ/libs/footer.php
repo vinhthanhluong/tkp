@@ -54,13 +54,13 @@
               <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
             </li>
             <li class="item">
-              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+              <a href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
             </li>
             <li class="item">
               <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
             </li>
             <li class="item">
-              <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+              <a href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
             </li>
           </ul>
         </div>
@@ -77,24 +77,24 @@
           <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" alt="logo"></a>
         </li>
         <li class="item">
-          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
+          <a href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" alt="logo"></a>
         </li>
         <li class="item">
           <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" alt="logo"></a>
         </li>
         <li class="item">
-          <a href=""><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
+          <a href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener"><img src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" alt="logo"></a>
         </li>
       </ul>
     </div>
     <ul class="f-copyright">
       <li class="item">
-        <a class="link" href="<?php echo APP_URL ?>">利用規約</a>
+        <a class="link" href="<?php echo APP_URL ?>rule/">利用規約</a>
         <a class="link is-exter" href="https://www.tkp.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
       </li>
       <li class="item">
         <p class="ttl01">運営会社</p>
-        <a class="link" href="<?php echo APP_URL ?>terms/">株式会社ティーケーピー</a>
+        <a class="link" href="https://www.tkp.jp/" target="_blank" rel="noopener">株式会社ティーケーピー</a>
       </li>
       <li class="item">
         <p class="ttl02">COPYRIGHT©2025 SHONIN PARK</p>

@@ -26,7 +26,7 @@
   @include SP {
     @include justify-content(space-between);
   }
-  &>li {
+  & > li {
     @include PC {
       width: 320px;
       margin: 10px 20px;
@@ -38,7 +38,7 @@
   }
   .tab-item {
     background: #fff;
-    @include font("","",100,700);
+    @include font("", "", 100, 700);
     @include flexbox;
     @include align-items(center);
     @include justify-content(center);
@@ -49,11 +49,11 @@
     overflow: hidden;
     @include PC {
       min-height: 60px;
-      @include font(18,20);
+      @include font(18, 20);
     }
     @include SP {
       min-height: 50px;
-      @include font(16,20);
+      @include font(16, 20);
     }
     &.is-current {
       color: #fff;
@@ -81,7 +81,7 @@
       background: #fff;
     }
     &::before {
-      background: #B2A46F;
+      background: #b2a46f;
       z-index: 1;
       @include PC {
         transform: translateX(-110%);
@@ -90,7 +90,7 @@
         opacity: 0;
       }
     }
-    &>span {
+    span {
       position: relative;
       z-index: 2;
     }
@@ -116,28 +116,28 @@
   }
   .cuisine-ttl {
     text-align: center;
-    @include font("","",100,700);
+    @include font("", "", 100, 700);
     @include PC {
       margin-bottom: 30px;
-      @include font(35,50);
+      @include font(35, 50);
     }
     @include SP {
       margin-bottom: 16px;
-      @include font(24,36);
+      @include font(24, 36);
     }
     @include ANDR {
       @include font(20);
     }
   }
   .cuisine-desc {
-    @include font("","",100);
+    @include font("", "", 100);
     text-align: center;
     @include PC {
       margin-bottom: 80px;
-      @include font(18,34);
+      @include font(18, 34);
     }
     @include SP {
-      @include font(15,26);
+      @include font(15, 26);
       margin: 0 -2px 57px;
     }
     @include ANDR {
@@ -161,15 +161,15 @@
     }
   }
   .cuisine-item {
-    @include font("","",100);
+    @include font("", "", 100);
     @include PC {
       margin-top: -79px;
       @include flexbox;
       @include justify-content(space-between);
-      @include font(16,28);
+      @include font(16, 28);
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
       margin-bottom: 49px;
     }
     &:first-child {
@@ -271,11 +271,11 @@
     @include PC {
       width: 600px;
       max-width: 600px;
-      @include font(16,28);
+      @include font(16, 28);
       margin-left: 30px;
     }
     @include SP {
-      @include font(15,28);
+      @include font(15, 28);
     }
   }
   .cuisine-group {
@@ -285,7 +285,7 @@
     }
   }
   .cuisine-time {
-    @include font(15,24,120);
+    @include font(15, 24, 120);
     @include PC {
       @include flexbox;
       @include flex-wrap;
@@ -344,24 +344,24 @@
     @include PC {
       padding-bottom: 67px;
       @include max-screen(980px) {
-        padding-bottom: vw-pc(67px,980);
+        padding-bottom: vw-pc(67px, 980);
       }
     }
   }
   .gallery-pic {
     @include PC {
-      padding-top: calc(450/1000*100%);
+      padding-top: calc(450 / 1000 * 100%);
     }
     @include SP {
-      @include aspect-ratio(327,230);
+      @include aspect-ratio(327, 230);
     }
   }
   .thumb-pic {
     @include PC {
-      padding-top: calc(100/140*100%);
+      padding-top: calc(100 / 140 * 100%);
     }
     @include SP {
-      @include aspect-ratio(84,60);
+      @include aspect-ratio(84, 60);
     }
   }
   .slider-thumb-wrapper {
@@ -371,7 +371,7 @@
       margin: -107px 0 0 39px;
       @include max-screen(980px) {
         margin-right: 231px;
-        margin-top: vw-pc(-107px,980);
+        margin-top: vw-pc(-107px, 980);
       }
     }
     @include SP {
@@ -404,14 +404,14 @@
     top: -13px;
     bottom: auto;
     @include ffGT;
-    @include font(12,1.5,100,400);
+    @include font(12, 1.5, 100, 400);
     color: #9f9b9a;
     width: auto;
     transform: none;
-    white-space: nowrap
+    white-space: nowrap;
   }
   .swiper-pagination-current {
-    @include font(20,28,100);
+    @include font(20, 28, 100);
     color: $brown02;
     min-width: 32px;
     padding-right: 2px;
@@ -440,7 +440,7 @@
     .slide-progress-bar {
       position: absolute;
       height: 1px;
-      background: #DDD;
+      background: #ddd;
       width: auto;
       clear: both;
       opacity: 0;

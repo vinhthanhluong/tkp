@@ -295,6 +295,7 @@
   }
   .rooms-ttl {
     @include font("", "", 50, 700);
+    color: $brown02;
     @include PC {
       margin-bottom: 15px;
       @include font(35, 1.6);

@@ -6,10 +6,19 @@
 <header id="header02" class="header02">
   <div class="inHeader">
     <div id="logo">
-      <a class="logo-link" href="<?php echo APP_URL ?>guide/ishinoya/">
-        <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo02.svg" alt="logo">
-        <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="logo">
-      </a>
+      <?php if ($thisPageName == 'ishinoya') { ?>
+        <h1>
+          <a class="logo-link" href="<?php echo APP_URL ?>guide/ishinoya/">
+            <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo02.svg" alt="ISHINOYA 別府 / 石のや 別府">
+            <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="ISHINOYA 別府 / 石のや 別府">
+          </a>
+        </h1>
+      <?php } else { ?>
+        <a class="logo-link" href="<?php echo APP_URL ?>guide/ishinoya/">
+          <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo02.svg" alt="ISHINOYA 別府 / 石のや 別府">
+          <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="ISHINOYA 別府 / 石のや 別府">
+        </a>
+      <?php } ?>
       <a class="home-link" href="<?php echo APP_URL; ?>">
         <span class="txt">SHONIN PARK</span>
       </a>
@@ -20,7 +29,7 @@
       <div class="inLayer">
         <p class="close_layer sp"></p>
         <a class="gLogo sp" href="<?php echo APP_URL ?>guide/ishinoya/">
-          <img src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="logo">
+          <img src="<?php echo APP_ASSETS ?>img/common/logo02_black.svg" alt="ISHINOYA 別府 / 石のや 別府">
         </a>
         <ul class="gNavi">
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/rooms/"><span>お部屋</span></a></li>

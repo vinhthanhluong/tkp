@@ -14,7 +14,7 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap">
     <div class="sec-spa-keyvisual" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-logo"><img src="<?php echo createSVG(216, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="216" height="220" alt=""></h1>
+        <h1 class="keyvisual-logo"><img src="<?php echo createSVG(216, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="216" height="220" alt="Sand SPA"></h1>
       </div>
       <div class="anchor-container">
         <ul class="anchor-list">
@@ -30,11 +30,11 @@ include(APP_PATH . 'libs/head.php'); ?>
         <ul class="about-list">
           <li class="about-item">
             <figure class="about-img c-img">
-              <img src="<?php echo createSVG(500, 560); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img01.jpg" rel="js-lazy" width="500" height="560" alt="">
+              <img src="<?php echo createSVG(500, 560); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img01.jpg" rel="js-lazy" width="500" height="560" alt="Sand SPA画像1">
             </figure>
             <div class="about-info">
               <figure class="about-pic c-img">
-                <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img.jpg" rel="js-lazy" width="250" height="160" alt="">
+                <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img.jpg" rel="js-lazy" width="250" height="160" alt="Sand SPA画像2">
               </figure>
               <h2 class="about-ttl">100年の歴史が息づく<br>別府唯一の海浜砂湯</h2>
               <p class="about-desc">別府温泉は日本を代表する温泉地で、その中でも「砂湯」は砂に埋もれて温泉の効果を全身に感じる療法で、100年以上の歴史を誇ります。<br>特に「別府海浜砂湯」は、海を眺めながら砂湯を楽しめる別府唯一の温泉施設です。</p>
@@ -42,7 +42,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="about-item is-reverse">
             <figure class="about-img c-img">
-              <img src="<?php echo createSVG(500, 560); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img02.jpg" rel="js-lazy" width="500" height="560" alt="">
+              <img src="<?php echo createSVG(500, 560); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img02.jpg" rel="js-lazy" width="500" height="560" alt="Sand SPA画像3">
             </figure>
             <div class="about-info">
               <h2 class="about-ttl">別府の伝統と新しさが<br>融合する極上の<br>リラクゼーション空間</h2>
@@ -54,12 +54,12 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
     <section class="sec-spa-area" id="area">
       <div class="inner1170">
-        <h2 class="c-ttl04">
-          <span class="c-ttl04__jp">エリア案内</span>
+        <div class="c-ttl04">
+          <h2 class="c-ttl04__jp">エリア案内</h2>
           <span class="c-ttl04__en">Spa Area</span>
-        </h2>
+        </div>
         <div class="area-img">
-          <img src="<?php echo createSVG(1170, 508); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/area_map.png" rel="js-lazy" width="1170" height="508" alt="">
+          <img src="<?php echo createSVG(1170, 508); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/area_map.png" rel="js-lazy" width="1170" height="508" alt="エリア案内マップ">
         </div>
       </div>
       <div class="c-intro">
@@ -67,14 +67,14 @@ include(APP_PATH . 'libs/head.php'); ?>
           <ul class="intro-list">
             <li class="intro-item aos-init" data-aos="fade-up">
               <figure class="intro-img c-img">
-                <img src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img01.jpg" rel="js-lazy" width="655" height="535" alt="">
+                <img src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img01.jpg" rel="js-lazy" width="655" height="535" alt="砂湯画像1">
               </figure>
               <div class="intro-info">
                 <figure class="intro-photo c-img">
-                  <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img.jpg" rel="js-lazy" width="250" height="160" alt="">
+                  <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img.jpg" rel="js-lazy" width="250" height="160" alt="砂湯画像2">
                 </figure>
-                <h2 class="intro-ttl is-mb">砂湯</h2>
-                <h3 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h3>
+                <h3 class="intro-ttl is-mb">砂湯</h3>
+                <h4 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h4>
                 <p class="intro-desc">温かな砂に包まれながら、別府湾の美しい眺めも楽しめる砂湯。日頃の疲れを解きほぐし、心も体も芯から温まる、極上のリラックス体験をお届けします。</p>
                 <h4 class="intro-txt">効能</h4>
                 <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
@@ -82,11 +82,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             </li>
             <li class="intro-item is-reverse aos-init" data-aos="fade-up">
               <figure class="intro-img c-img">
-                <img src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img02.jpg" rel="js-lazy" width="655" height="535" alt="">
+                <img src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img02.jpg" rel="js-lazy" width="655" height="535" alt="大浴場画像">
               </figure>
               <div class="intro-info">
-                <h2 class="intro-ttl is-mb">大浴場</h2>
-                <h3 class="intro-ttls">心と体を癒す広々とした温泉空間</h3>
+                <h3 class="intro-ttl is-mb">大浴場</h3>
+                <h4 class="intro-ttls">心と体を癒す広々とした温泉空間</h4>
                 <p class="intro-desc">竹を使用した地域の伝統を感じる空間で、ゆったりと温泉に浸かり、心と体の疲れを癒せます。</p>
                 <h4 class="intro-txt">効能</h4>
                 <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
@@ -96,18 +96,18 @@ include(APP_PATH . 'libs/head.php'); ?>
           <ul class="intro-lst">
             <li class="intro-col aos-init" data-aos="fade-up">
               <figure class="intro-pic c-img">
-                <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img03.jpg" rel="js-lazy" width="450" height="550" alt="">
-                <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+                <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img03.jpg" rel="js-lazy" width="450" height="550" alt="足湯画像">
+                <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="足湯画像">
               </figure>
-              <h2 class="intro-ttl">足湯</h2>
+              <h3 class="intro-ttl">足湯</h3>
               <p class="intro-desc">無料で利用できる集いの場としての足湯を設けています。温泉街別府を気軽に体現できるリラックス空間となっています。</p>
             </li>
             <li class="intro-col aos-init" data-aos="fade-up">
               <figure class="intro-pic c-img">
-                <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img04.jpg" rel="js-lazy" width="450" height="550" alt="">
-                <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+                <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img04.jpg" rel="js-lazy" width="450" height="550" alt="Bar画像">
+                <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="Bar画像">
               </figure>
-              <h2 class="intro-ttl">Bar</h2>
+              <h3 class="intro-ttl">Bar</h3>
               <p class="intro-desc">風呂上がりのくつろぎ空間として Bar スペースも完備しております。ドリンク片手に、リラックスした時間をお楽しみいただけます。</p>
             </li>
           </ul>
@@ -116,21 +116,27 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
     <section class="sec-spa-info" id="information">
       <div class="inner1170">
-        <h2 class="c-ttl04">
-          <span class="c-ttl04__jp">入浴時間・料金</span>
+        <div class="c-ttl04">
+          <h2 class="c-ttl04__jp">入浴時間・料金</h2>
           <span class="c-ttl04__en">Information</span>
-        </h2>
+        </div>
         <div class="info-data">
           <dl>
-            <dt>営業時間</dt>
+            <dt>
+              <h3>営業時間</h3>
+            </dt>
             <dd>8:00~22:00（最終入浴受付20:30）</dd>
           </dl>
           <dl>
-            <dt>料金</dt>
+            <dt>
+              <h3>料金</h3>
+            </dt>
             <dd>大人　￥2,000<br>小人(6歳〜12歳)　￥1,000</dd>
           </dl>
           <dl>
-            <dt>アメニティ</dt>
+            <dt>
+              <h3>アメニティ</h3>
+            </dt>
             <dd>
               <ul class="txt-list">
                 <li>シャンプー</li>
@@ -143,7 +149,9 @@ include(APP_PATH . 'libs/head.php'); ?>
             </dd>
           </dl>
           <dl>
-            <dt>レンタル品</dt>
+            <dt>
+              <h3>レンタル品</h3>
+            </dt>
             <dd>
               <ul class="txt-list">
                 <li>館内着</li>
@@ -152,7 +160,9 @@ include(APP_PATH . 'libs/head.php'); ?>
             </dd>
           </dl>
           <dl class="pc">
-            <dt>TEL</dt>
+            <dt>
+              <h3>TEL</h3>
+            </dt>
             <dd><a href="tel:0977756360">0977-75-6360</a></dd>
           </dl>
         </div>
@@ -160,15 +170,15 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
     <section class="sec-spa-step" id="step">
       <div class="inner1170">
-        <h2 class="c-ttl04">
-          <span class="c-ttl04__jp">砂湯の利用方法</span>
+        <div class="c-ttl04">
+          <h2 class="c-ttl04__jp">砂湯の利用方法</h2>
           <span class="c-ttl04__en">How to <br class="sp">Use SUNAYU</span>
-        </h2>
+        </div>
         <ul class="step-list">
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img01.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img01_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img01.jpg" rel="js-lazy" width="280" height="150" alt="ご予約">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img01_sp.jpg" rel="js-lazy" width="327" height="175" alt="ご予約">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -180,8 +190,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img02.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img02_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img02.jpg" rel="js-lazy" width="280" height="150" alt="専用の浴衣に着替え">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img02_sp.jpg" rel="js-lazy" width="327" height="175" alt="専用の浴衣に着替え">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -193,8 +203,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="砂湯を楽しむ">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="砂湯を楽しむ">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -206,8 +216,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="シャワー">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="シャワー">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -219,8 +229,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="大浴場でゆっくりと">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="大浴場でゆっくりと">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -232,8 +242,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="">
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="着替え">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="着替え">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -269,10 +279,10 @@ include(APP_PATH . 'libs/head.php'); ?>
 
       <section class="c-sec-news" id="news">
         <div class="inner1170">
-          <h2 class="c-ttl04">
-            <span class="c-ttl04__jp">お知らせ</span>
+          <div class="c-ttl04">
+            <h2 class="c-ttl04__jp">お知らせ</h2>
             <span class="c-ttl04__en">News</span>
-          </h2>
+          </div>
           <div class="news-content">
             <div class="news-slider js-slider-news">
               <div class="swiper-wrapper">
@@ -290,7 +300,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="swiper-slide">
                     <a class="news-item" href="<?php echo $n_url; ?>">
                       <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                        <img src="<?php echo $n_photo; ?>" width="260" height="260" alt="">
+                        <img src="<?php echo $n_photo; ?>" width="260" height="260" alt="<?php echo $n_ttl; ?>">
                       </figure>
                       <div class="news-head">
                         <span class="news-time"><?php echo $n_date; ?></span>
@@ -306,7 +316,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                           </span>
                         <?php } ?>
                       </div>
-                      <p class="news-ttl"><?php echo $n_ttl; ?></p>
+                      <h3 class="news-ttl"><?php echo $n_ttl; ?></h3>
                     </a>
                   </div>
                 <?php } ?>
@@ -319,7 +329,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </div>
           </div>
-          <a class="c-btn04" href="<?php echo get_term_link($spaTermId,'newscat');?>"><span>もっと見る</span></a>
+          <a class="c-btn04" href="<?php echo get_term_link($spaTermId, 'newscat'); ?>"><span>もっと見る</span></a>
         </div>
       </section>
     <?php } ?>

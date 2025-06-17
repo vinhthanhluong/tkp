@@ -4,11 +4,8 @@
   background: #fff;
   // Common
   .f2-bg {
-    background: url($img_url + "img/common/footer02/f02_bg.png");
-    background-repeat: repeat;
-    background-color: transparent;
-    background-position: center;
-    background-size: 135px 93px;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+      auto;
   }
   .f2-wrap {
     @include PC {

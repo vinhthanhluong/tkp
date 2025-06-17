@@ -15,14 +15,14 @@ include(APP_PATH . 'libs/head.php'); ?>
 
     <div class="sec-mv">
       <div class="mv-bg">
-        <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv.jpg" rel="js-lazy" width="1440" height="900" alt="">
-        <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_sp.jpg" rel="js-lazy" width="375" height="667" alt="">
+        <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+        <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
       </div>
       <div class="mv-ctn">
-        <h1 class="mv-ttl">
+        <p class="mv-ttl">
           <span class="row">自然と一体化する</span>
           <span class="row">癒しのひとときを</span>
-        </h1>
+        </p>
         <p class="mv-scrolldown">Scroll down<i class="circle"></i></p>
       </div>
     </div>
@@ -51,10 +51,10 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="sec-news">
           <section class="c-sec-news" id="news">
             <div class="inner1170">
-              <h2 class="c-ttl04">
-                <span class="c-ttl04__jp">お知らせ</span>
+              <div class="c-ttl04">
+                <h2 class="c-ttl04__jp">お知らせ</h2>
                 <span class="c-ttl04__en">News</span>
-              </h2>
+              </div>
               <div class="news-content">
                 <div class="news-slider js-slider-news">
                   <div class="swiper-wrapper">
@@ -72,7 +72,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                       <div class="swiper-slide">
                         <a class="news-item" href="<?php echo $n_url; ?>">
                           <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                            <img src="<?php echo $n_photo; ?>" width="260" height="260" alt="">
+                            <img src="<?php echo $n_photo; ?>" width="260" height="260" alt="<?php echo $n_ttl; ?>">
                           </figure>
                           <div class="news-head">
                             <span class="news-time"><?php echo $n_date; ?></span>
@@ -88,7 +88,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                               </span>
                             <?php } ?>
                           </div>
-                          <p class="news-ttl"><?php echo $n_ttl; ?></p>
+                          <h3 class="news-ttl"><?php echo $n_ttl; ?></h3>
                         </a>
                       </div>
                     <?php } ?>
@@ -101,7 +101,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   </div>
                 </div>
               </div>
-              <a class="c-btn04" href="<?php echo get_term_link($ishinoyaTermId,'newscat');?>"><span>もっと見る</span></a>
+              <a class="c-btn04" href="<?php echo get_term_link($ishinoyaTermId, 'newscat'); ?>"><span>もっと見る</span></a>
             </div>
           </section>
         </div>
@@ -109,11 +109,11 @@ include(APP_PATH . 'libs/head.php'); ?>
 
       <div class="sec-room">
         <div class="c-wcm01">
-          <h2 class="c-ttl04 sp">
-            <span class="c-ttl04__jp">お部屋</span>
+          <div class="c-ttl04 sp">
+            <h2 class="c-ttl04__jp">お部屋</h2>
             <span class="c-ttl04__en pc">Rooms</span>
             <span class="c-ttl04__en sp">Room</span>
-          </h2>
+          </div>
           <section class="c-secwrap wrap-right">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
@@ -121,17 +121,17 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room01.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room01.jpg" width="625" height="440" alt="お部屋画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room02.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room02.jpg" width="625" height="440" alt="お部屋画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room03.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room03.jpg" width="625" height="440" alt="お部屋画像">
                       </div>
                     </div>
                   </div>
@@ -154,13 +154,13 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <div class="slider-thumb-gallery js-slider-thumb01">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room01.jpg" width="140" height="100" alt="お部屋画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room02.jpg" width="140" height="100" alt="お部屋画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room03.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_room03.jpg" width="140" height="100" alt="お部屋画像"></div>
                     </div>
                   </div>
                 </div>
@@ -168,11 +168,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <div class="c-secwrap__colctn">
               <div class="colctn-inner">
-                <h2 class="c-ttl04 pc">
-                  <span class="c-ttl04__jp">お部屋</span>
+                <div class="c-ttl04 pc">
+                  <h2 class="c-ttl04__jp">お部屋</h2>
                   <span class="c-ttl04__en">Rooms</span>
-                </h2>
-                <p class="colctn-ttl">別府の大自然に囲まれたここでしかない空間</p>
+                </div>
+                <h3 class="colctn-ttl">別府の大自然に囲まれたここでしかない空間</h3>
                 <div class="colctn-desc">
                   <p class="txt">全7種 23室の様々なお部屋タイプがあり、露天風呂付客室では、プライベートな時間と別府温泉の源泉をひとり占め。非日常に囲まれた空間で、贅沢なひとときをお過ごしください。</p>
                 </div>
@@ -196,10 +196,10 @@ include(APP_PATH . 'libs/head.php'); ?>
 
       <div class="sec-spa">
         <div class="c-wcm01">
-          <h2 class="c-ttl04 sp">
-            <span class="c-ttl04__jp">温泉・砂湯</span>
+          <div class="c-ttl04 sp">
+            <h2 class="c-ttl04__jp">温泉・砂湯</h2>
             <span class="c-ttl04__en">Spa</span>
-          </h2>
+          </div>
           <section class="c-secwrap wrap-left">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
@@ -207,17 +207,17 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa01.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa01.jpg" width="625" height="440" alt="温泉・砂湯画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa02.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa02.jpg" width="625" height="440" alt="温泉・砂湯画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa03.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa03.jpg" width="625" height="440" alt="温泉・砂湯画像">
                       </div>
                     </div>
                   </div>
@@ -240,13 +240,13 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <div class="slider-thumb-gallery js-slider-thumb02">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa01.jpg" width="140" height="100" alt="温泉・砂湯画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa02.jpg" width="140" height="100" alt="温泉・砂湯画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa03.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_spa03.jpg" width="140" height="100" alt="温泉・砂湯画像"></div>
                     </div>
                   </div>
                 </div>
@@ -254,11 +254,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <div class="c-secwrap__colctn">
               <div class="colctn-inner">
-                <h2 class="c-ttl04 pc">
-                  <span class="c-ttl04__jp">温泉・砂湯</span>
+                <div class="c-ttl04 pc">
+                  <h2 class="c-ttl04__jp">温泉・砂湯</h2>
                   <span class="c-ttl04__en">Spa</span>
-                </h2>
-                <p class="colctn-ttl">自然と一体化する癒しの湯</p>
+                </div>
+                <h3 class="colctn-ttl">自然と一体化する癒しの湯</h3>
                 <div class="colctn-desc">
                   <p class="txt">別府湾の美しい眺めを楽しみながら、心身の疲れを癒せる温泉をご用意。地元の天然温泉の恵みを存分に感じられる、贅沢なリラクゼーション体験をお届けします。</p>
                 </div>
@@ -271,10 +271,10 @@ include(APP_PATH . 'libs/head.php'); ?>
 
       <div class="sec-cuisine">
         <div class="c-wcm01">
-          <h2 class="c-ttl04 sp">
-            <span class="c-ttl04__jp">お食事</span>
+          <div class="c-ttl04 sp">
+            <h2 class="c-ttl04__jp">お食事</h2>
             <span class="c-ttl04__en">Cuisine</span>
-          </h2>
+          </div>
           <section class="c-secwrap wrap-right">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
@@ -282,17 +282,17 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine01.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine01.jpg" width="625" height="440" alt="お食事画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine02.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine02.jpg" width="625" height="440" alt="お食事画像">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine03.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine03.jpg" width="625" height="440" alt="お食事画像">
                       </div>
                     </div>
                   </div>
@@ -315,13 +315,13 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <div class="slider-thumb-gallery js-slider-thumb03">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine01.jpg" width="140" height="100" alt="お食事画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine02.jpg" width="140" height="100" alt="お食事画像"></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine03.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/thumb_cuisine03.jpg" width="140" height="100" alt="お食事画像"></div>
                     </div>
                   </div>
                 </div>
@@ -329,11 +329,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <div class="c-secwrap__colctn">
               <div class="colctn-inner">
-                <h2 class="c-ttl04 pc">
-                  <span class="c-ttl04__jp">お食事</span>
+                <div class="c-ttl04 pc">
+                  <h2 class="c-ttl04__jp">お食事</h2>
                   <span class="c-ttl04__en">Cuisine</span>
-                </h2>
-                <p class="colctn-ttl">地元の恵みを味わい尽くす<br>心も体も温まる食体験を</p>
+                </div>
+                <h3 class="colctn-ttl">地元の恵みを味わい尽くす<br>心も体も温まる食体験を</h3>
                 <div class="colctn-desc">
                   <p class="txt">別府湾の新鮮な海の幸、地元で採れた旬の食材をふんだんに使用したお料理をご提供します。<br>朝食からディナーまで、心も体も温まるメニューでおもてなしいたします。</p>
                 </div>

@@ -117,5 +117,6 @@ $aMailtoContact = array('alivetestmail@alive-web.co.jp');
 $aBccToContact = array('');
 $fromContact = "alivetestmail@alive-web.biz";
 $fromName = "SHONIN PARK";
+$fromName02 = "ISHINOYA 別府";
 
 include(APP_PATH . 'libs/security.php');

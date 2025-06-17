@@ -11,7 +11,7 @@ $editor = get_field('editor', $sg_id);
 if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post->post_content, false);
 
 $titlepage = $sg_title_strip . '｜SHONIN PARK';
-$desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($post->post_content)), 0, 120);
+$desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($editor)), 0, 120);
 $desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
 
 include(APP_PATH . 'libs/head.php');

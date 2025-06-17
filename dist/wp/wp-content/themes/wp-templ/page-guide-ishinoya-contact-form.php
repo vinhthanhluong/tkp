@@ -19,6 +19,7 @@ if (!empty($_POST['actionFlag'])) {
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/validationEngine.jquery.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
+<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/jquery-ui.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_form.min.css?v=<?php echo APP_VER ?>">
 
 <?php if (GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
@@ -132,7 +133,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <em>任意</em>日程
                 </th>
                 <td>
-                  <input type="text" name="schedule" id="schedule" class="">
+                  <input type="text" name="schedule" id="schedule" class="datepicker">
                 </td>
               </tr>
 
@@ -173,6 +174,21 @@ include(APP_PATH . 'libs/head.php'); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <?php include(APP_PATH . 'libs/form-scripts.php'); ?>
+  <script src="<?php echo APP_ASSETS ?>js/lib/jquery-ui.min.js?v=<?php echo APP_VER ?>"></script>
+  <script src="<?php echo APP_ASSETS ?>js/lib/datepicker-ja.min.js?v=<?php echo APP_VER ?>"></script>
+  <script>
+    $(function() {
+      $.datepicker.setDefaults($.datepicker.regional["ja"]);
+      var dateToday = new Date();
+      if ($(".datepicker").length) {
+        $(".datepicker").datepicker({
+          dateFormat: 'yy年m月d日（D）',
+          minDate: dateToday
+        });
+      }
+    });
+  </script>
+
 </body>
 
 </html>

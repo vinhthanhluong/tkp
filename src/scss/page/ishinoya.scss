@@ -240,21 +240,17 @@
     top: 0;
     right: 0;
     height: 100%;
-    background-repeat: repeat;
-    background-color: transparent;
-    background-position: center;
-    background-size: 887px 693px;
     z-index: 1;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+      auto;
     @include PC {
       width: calc(50% + 167px);
-      background: url($img_url + "img/ishinoya/news_bg.jpg");
       @include max-screen(1440px) {
         width: calc(50% + (167 / 1440 * 100vw));
       }
     }
     @include SP {
       width: 100%;
-      background: url($img_url + "img/ishinoya/news_bg_sp.jpg");
     }
   }
   .inner1170 {
@@ -308,21 +304,17 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-repeat: repeat;
-    background-color: transparent;
-    background-position: center;
-    background-size: 887px 693px;
     z-index: 1;
+    background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
+      auto;
     @include PC {
       width: calc(50% + 500px);
-      background: url($img_url + "img/ishinoya/news_bg.jpg");
       @include max-screen(1440px) {
         width: calc(50% + (500 / 1440 * 100vw));
       }
     }
     @include SP {
       width: 100%;
-      background: url($img_url + "img/ishinoya/news_bg_sp.jpg");
     }
   }
   .c-wcm01 {

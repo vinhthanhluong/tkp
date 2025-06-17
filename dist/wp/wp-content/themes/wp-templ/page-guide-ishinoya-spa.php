@@ -13,10 +13,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/spa/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/spa/mv_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-ttl">
+        <div class="keyvisual-ttl">
           <span class="ttl-en">Spa</span>
-          <span class="ttl-jp">温泉・砂湯</span>
-        </h1>
+          <h1 class="ttl-jp">温泉・砂湯</h1>
+        </div>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
             <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
@@ -33,8 +33,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li class="intro-item aos-init" data-aos="fade-up">
             <h2 class="intro-ttl sp">砂湯</h2>
             <figure class="intro-img c-img">
-              <img class="pc" src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img01.jpg" rel="js-lazy" width="655" height="535" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img01_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+              <img class="pc" src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img01.jpg" rel="js-lazy" width="655" height="535" alt="砂湯画像">
+              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img01_sp.jpg" rel="js-lazy" width="327" height="267" alt="砂湯画像">
             </figure>
             <div class="intro-info">
               <h2 class="intro-ttl pc">砂湯</h2>
@@ -47,8 +47,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           <li class="intro-item is-reverse aos-init" data-aos="fade-up">
             <h2 class="intro-ttl sp">大浴場</h2>
             <figure class="intro-img c-img">
-              <img class="pc" src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img02.jpg" rel="js-lazy" width="655" height="535" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+              <img class="pc" src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img02.jpg" rel="js-lazy" width="655" height="535" alt="大浴場画像">
+              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="大浴場画像">
             </figure>
             <div class="intro-info">
               <h2 class="intro-ttl pc">大浴場</h2>
@@ -62,16 +62,16 @@ include(APP_PATH . 'libs/head.php'); ?>
         <ul class="intro-lst">
           <li class="intro-col aos-init" data-aos="fade-up">
             <figure class="intro-pic c-img">
-              <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img03.jpg" rel="js-lazy" width="450" height="550" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+              <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img03.jpg" rel="js-lazy" width="450" height="550" alt="足湯画像">
+              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="足湯画像">
             </figure>
             <h2 class="intro-ttl">足湯</h2>
             <p class="intro-desc">無料で利用できる集いの場としての足湯を設けています。温泉街別府を気軽に体現できるリラックス空間となっています。</p>
           </li>
           <li class="intro-col aos-init" data-aos="fade-up">
             <figure class="intro-pic c-img">
-              <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img04.jpg" rel="js-lazy" width="450" height="550" alt="">
-              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
+              <img class="pc" src="<?php echo createSVG(450, 550); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img04.jpg" rel="js-lazy" width="450" height="550" alt="Bar画像">
+              <img class="sp" src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/spa/intro_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="Bar画像">
             </figure>
             <h2 class="intro-ttl">Bar</h2>
             <p class="intro-desc">風呂上がりのくつろぎ空間としてBarスペースも完備しております。ドリンク片手に、リラックスした時間をお楽しみいただけます。</p>

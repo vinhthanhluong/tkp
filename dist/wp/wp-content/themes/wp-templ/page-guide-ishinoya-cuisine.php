@@ -14,10 +14,10 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-ttl">
-          <span class="ttl-en">Cuisine</span>
+        <div class="keyvisual-ttl">
+          <h1 class="ttl-en">Cuisine</h1>
           <span class="ttl-jp">お食事</span>
-        </h1>
+        </div>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
             <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
@@ -31,8 +31,12 @@ include(APP_PATH . 'libs/head.php'); ?>
     <div class="sec-tabs">
       <div class="inner1170">
         <ul class="tabs-list js-tabs aos-init" data-aos="fade-up">
-          <li class="tab-item is-current" data-tab="tab01"><span>レストラン</span></li>
-          <li class="tab-item" data-tab="tab02"><span>部屋食</span></li>
+          <li class="tab-item is-current" data-tab="tab01">
+            <h2><span>レストラン</span></h2>
+          </li>
+          <li class="tab-item" data-tab="tab02">
+            <h2><span>部屋食</span></h2>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,37 +44,37 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170 aos-init" data-aos="fade-up">
         <div class="tab-wrapper js-tab-content">
           <div class="tab-content is-current" id="tab01">
-            <h2 class="cuisine-ttl">海を望む特等席で堪能する<br>本格ハワイアングリル</h2>
+            <h3 class="cuisine-ttl">海を望む特等席で堪能する<br>本格ハワイアングリル</h3>
             <p class="cuisine-desc">別府湾を一望する大分風ハワイアングリル<br class="sp">レストラン「Grill Takka」。<br>心地よい海風と陽気な雰囲気に包まれなが<br class="sp">ら、本格グリル料理をお楽しみください。</p>
             <ul class="cuisine-list">
               <li class="cuisine-item">
                 <div class="cuisine-info">
-                  <h3 class="c-ttl04">
-                    <span class="c-ttl04__jp">ご夕食</span>
+                  <div class="c-ttl04">
+                    <h3 class="c-ttl04__jp">ご夕食</h3>
                     <span class="c-ttl04__en">Dinner</span>
-                  </h3>
+                  </div>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
                   <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しい和食のコースをご用意しています。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01.jpg" rel="js-lazy" width="530" height="420" alt="">
+                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01.jpg" rel="js-lazy" width="530" height="420" alt="ご夕食画像">
                 </figure>
               </li>
               <li class="cuisine-item">
                 <div class="cuisine-info">
-                  <h3 class="c-ttl04">
-                    <span class="c-ttl04__jp">ご朝食</span>
+                  <div class="c-ttl04">
+                    <h3 class="c-ttl04__jp">ご朝食</h3>
                     <span class="c-ttl04__en">Breakfast</span>
-                  </h3>
+                  </div>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
                   <p class="cuisine-txt">豊かな自然に囲まれた朝、地元の新鮮な食材を使った朝食で一日の始まりをお迎えください。和食と洋食をバランスよく取り入れたメニューをお楽しみいただけます。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02.jpg" rel="js-lazy" width="530" height="420" alt="">
+                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">
                 </figure>
               </li>
             </ul>
@@ -87,22 +91,22 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <div class="gallery-pic c-img">
-                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img01.jpg" width="1000" height="450" alt="">
+                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img01.jpg" width="1000" height="450" alt="Grill Takkaの画像">
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="gallery-pic c-img">
-                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="">
+                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="Grill Takkaの画像">
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="gallery-pic c-img">
-                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img03.jpg" width="1000" height="450" alt="">
+                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img03.jpg" width="1000" height="450" alt="Grill Takkaの画像">
                         </div>
                       </div>
                       <div class="swiper-slide">
                         <div class="gallery-pic c-img">
-                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img04.jpg" width="1000" height="450" alt="">
+                          <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img04.jpg" width="1000" height="450" alt="Grill Takkaの画像">
                         </div>
                       </div>
                     </div>
@@ -118,16 +122,16 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <div class="slider-thumb-gallery js-slider-thumb">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img01.jpg" width="140" height="100" alt=""></div>
+                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img01.jpg" width="140" height="100" alt="Grill Takkaの画像"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img02.jpg" width="140" height="100" alt=""></div>
+                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img02.jpg" width="140" height="100" alt="Grill Takkaの画像"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img03.jpg" width="140" height="100" alt=""></div>
+                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img03.jpg" width="140" height="100" alt="Grill Takkaの画像"></div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img04.jpg" width="140" height="100" alt=""></div>
+                        <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img04.jpg" width="140" height="100" alt="Grill Takkaの画像"></div>
                       </div>
                     </div>
                   </div>
@@ -145,37 +149,37 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
           <div class="tab-content" id="tab02">
-            <h2 class="cuisine-ttl">お部屋でゆったり楽しむ<br>本格ハワイアングリル</h2>
+            <h3 class="cuisine-ttl">お部屋でゆったり楽しむ<br>本格ハワイアングリル</h3>
             <p class="cuisine-desc">こだわりの大分風ハワイアングリルを、<br class="sp">お部屋でゆっくりと。<br>プライベートな空間で、本格的な味わいを<br class="sp">心ゆくまでお楽しみください。</p>
             <ul class="cuisine-list">
               <li class="cuisine-item">
                 <div class="cuisine-info">
-                  <h3 class="c-ttl04">
-                    <span class="c-ttl04__jp">ご夕食</span>
+                  <div class="c-ttl04">
+                    <h3 class="c-ttl04__jp">ご夕食</h3>
                     <span class="c-ttl04__en">Dinner</span>
-                  </h3>
+                  </div>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
                   <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しい和食のコースをご用意しています。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img03.jpg" rel="js-lazy" width="530" height="420" alt="">
+                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img03.jpg" rel="js-lazy" width="530" height="420" alt="ご夕食画像">
                 </figure>
               </li>
               <li class="cuisine-item">
                 <div class="cuisine-info">
-                  <h3 class="c-ttl04">
-                    <span class="c-ttl04__jp">ご朝食</span>
+                  <div class="c-ttl04">
+                    <h3 class="c-ttl04__jp">ご朝食</h3>
                     <span class="c-ttl04__en">Breakfast</span>
-                  </h3>
+                  </div>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
                   <p class="cuisine-txt">豊かな自然に囲まれた朝、地元の新鮮な食材を使った朝食で一日の始まりをお迎えください。和食と洋食をバランスよく取り入れたメニューをお楽しみいただけます。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img04.jpg" rel="js-lazy" width="530" height="420" alt="">
+                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img04.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">
                 </figure>
               </li>
             </ul>
