@@ -165,8 +165,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-how">
-      <div class="how-inner">
-
+      <!-- <div class="how-inner">
         <div class="how-ctn">
           <div class="how-circle aos-init" data-aos=""></div>
           <div class="how-box">
@@ -242,7 +241,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="sec-sight">

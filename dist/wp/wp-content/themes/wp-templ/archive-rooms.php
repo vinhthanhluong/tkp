@@ -27,8 +27,8 @@ include(APP_PATH . 'libs/head.php');
     <?php
     $rooms_param_all = array(
       'post_type'      => 'rooms',
-      'order'          => 'DESC',
-      'orderby'        => 'post_date',
+      'order'          => 'ASC',
+      'orderby'        => 'menu_order',
       'post_status'    => 'publish',
       'posts_per_page' =>  -1,
     );

@@ -37,8 +37,8 @@ include(APP_PATH . 'libs/head.php'); ?>
         </h1>
       </div>
       <div class="mv-img c-img aos-init" data-aos="fade-up">
-        <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="">
-        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="">
+        <!-- <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="">
+        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt=""> -->
       </div>
     </div>
     <section class="c-about-block">
@@ -184,11 +184,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             $file_pdf_size = round($file_pdf_size / (1024 * 1024), 2);
             $file_pdf_url = $file_pdf['url'];
           ?>
-            <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
+            <!-- <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
               <i class="arr01"></i>
               <span>その他のメニューはこちら<small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
               <i class="arr02"></i>
-            </a>
+            </a> -->
           <?php } ?>
         </div>
       <?php } ?>

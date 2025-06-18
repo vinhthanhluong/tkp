@@ -37,7 +37,7 @@
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/cuisine/"><span>お食事</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/contact/"><span>お問い合わせ</span></a></li>
         </ul>
-        <div class="gLang pc">
+        <!-- <div class="gLang pc">
           <div class="gLang-item hasSub">
             <p class="gLang-item__link">
               <span>Language</span>
@@ -51,7 +51,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
         <ul class="gBtn">
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>予約確認</span></a></li>
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>宿泊予約</span></a></li>

@@ -20,19 +20,21 @@ $(window).on("resize", function () {
 });
 
 $(window).on("scroll load", function () {
-  if ($("body").hasClass("top")) {
-    if (
-      $(window).scrollTop() >=
-      $(".sec-mv").offset().top + $(".sec-mv").outerHeight() - 60
-    ) {
-      $("body").addClass("fixHeader");
+  let lastFixHeader = false;
+  $(window).on("scroll load", function () {
+    let isFix = false;
+    if ($("body").hasClass("top")) {
+      isFix =
+        $(window).scrollTop() >=
+        $(".sec-mv").offset().top + $(".sec-mv").outerHeight() - 60;
     } else {
-      $("body").removeClass("fixHeader");
+      isFix = $(window).scrollTop() > 60;
     }
-  } else {
-    if ($(window).scrollTop() > 60) $("body").addClass("fixHeader");
-    else $("body").removeClass("fixHeader");
-  }
+    if (isFix !== lastFixHeader) {
+      $("body").toggleClass("fixHeader", isFix);
+      lastFixHeader = isFix;
+    }
+  });
 });
 
 function btnTop() {

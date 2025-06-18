@@ -116,22 +116,22 @@
           <ul class="solcial-btn">
             <li class="solcial-btn__item">
               <a class="link" href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener">
-                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_tiktok.svg" alt="logo">
+                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_tiktok.svg" alt="Tiktok">
               </a>
             </li>
             <li class="solcial-btn__item">
               <a class="link" href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener">
-                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_instagram.svg" alt="logo">
+                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_instagram.svg" alt="Instagram">
               </a>
             </li>
             <li class="solcial-btn__item">
               <a class="link" href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener">
-                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_youtube.svg" alt="logo">
+                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_youtube.svg" alt="Youtube">
               </a>
             </li>
             <li class="solcial-btn__item">
               <a class="link" href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener">
-                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_facebook.svg" alt="logo">
+                <img src="<?php echo APP_ASSETS ?>img/common/footer02/f_facebook.svg" alt="Facebook">
               </a>
           </ul>
           <ul class="social-external">

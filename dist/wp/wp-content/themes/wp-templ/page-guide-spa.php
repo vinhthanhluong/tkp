@@ -33,9 +33,9 @@ include(APP_PATH . 'libs/head.php'); ?>
               <img src="<?php echo createSVG(500, 560); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img01.jpg" rel="js-lazy" width="500" height="560" alt="Sand SPA画像1">
             </figure>
             <div class="about-info">
-              <figure class="about-pic c-img">
+              <!-- <figure class="about-pic c-img">
                 <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img.jpg" rel="js-lazy" width="250" height="160" alt="Sand SPA画像2">
-              </figure>
+              </figure> -->
               <h2 class="about-ttl">100年の歴史が息づく<br>別府唯一の海浜砂湯</h2>
               <p class="about-desc">別府温泉は日本を代表する温泉地で、その中でも「砂湯」は砂に埋もれて温泉の効果を全身に感じる療法で、100年以上の歴史を誇ります。<br>特に「別府海浜砂湯」は、海を眺めながら砂湯を楽しめる別府唯一の温泉施設です。</p>
             </div>
@@ -70,9 +70,9 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <img src="<?php echo createSVG(655, 535); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img01.jpg" rel="js-lazy" width="655" height="535" alt="砂湯画像1">
               </figure>
               <div class="intro-info">
-                <figure class="intro-photo c-img">
+                <!-- <figure class="intro-photo c-img">
                   <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/intro_img.jpg" rel="js-lazy" width="250" height="160" alt="砂湯画像2">
-                </figure>
+                </figure> -->
                 <h3 class="intro-ttl is-mb">砂湯</h3>
                 <h4 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h4>
                 <p class="intro-desc">温かな砂に包まれながら、別府湾の美しい眺めも楽しめる砂湯。日頃の疲れを解きほぐし、心も体も芯から温まる、極上のリラックス体験をお届けします。</p>
@@ -203,8 +203,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="砂湯を楽しむ">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="砂湯を楽しむ">
+              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="砂湯を楽しむ">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="砂湯を楽しむ"> -->
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -216,8 +216,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="シャワー">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="シャワー">
+              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="シャワー">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="シャワー"> -->
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -229,8 +229,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="大浴場でゆっくりと">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="大浴場でゆっくりと">
+              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="大浴場でゆっくりと">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="大浴場でゆっくりと"> -->
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -242,8 +242,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="着替え">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="着替え">
+              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="着替え">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="着替え"> -->
             </figure>
             <div class="step-info">
               <div class="step-head">

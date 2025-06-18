@@ -55,9 +55,9 @@ include(APP_PATH . 'libs/head.php'); ?>
           <div class="box-detail">
             <div class="tit-box">
               <h2 class="ttl01">砂湯・温泉</h2>
-              <strong>Spa Sand</strong>
+              <strong>Sand SPA</strong>
             </div>
-            <p class="desc">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供するサンドスパ。広大な砂湯施設の中にBarや無料で利用できる足湯も設置。別府の新名所として、極上のリラックス体験を提供します。</p>
+            <p class="desc">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
             <a href="<?php echo APP_URL ?>" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>

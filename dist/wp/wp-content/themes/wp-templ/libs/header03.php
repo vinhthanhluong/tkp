@@ -17,10 +17,10 @@
           </span>
           <div class="header-mega">
             <ul class="menu-list">
-              <li><a href="<?php echo APP_URL ?>">砂湯・温泉</a></li>
+              <li><a href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a></li>
               <li><a href="<?php echo APP_URL ?>guide/shop/">ショップ</a></li>
               <li><a href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a></li>
-              <li><a href="<?php echo APP_URL ?>">宿泊コテージ</a></li>
+              <li><a href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a></li>
             </ul>
           </div>
         </li>
@@ -50,7 +50,7 @@
             </span>
           </a>
         </li>
-        <li class="language has-sub">
+        <!-- <li class="language has-sub">
           <span class="menu-link c-txt-hover">
             <span class="txt-wrap">
               <span class="txt-default">Language</span>
@@ -65,7 +65,7 @@
               <li><a href="<?php echo APP_URL_ZH ?><?php echo $curr_path; ?>">中文簡体</a></li>
             </ul>
           </div>
-        </li>
+        </li> -->
       </ul>
       <a class="header-btn c-txt-hover pc" href="<?php echo APP_URL ?>">
         <span class="txt-wrap">
@@ -123,10 +123,26 @@
           <div class="navigation-row">
             <p class="navigation-ttl is-space pc">Official SNS</p>
             <ul class="navigation-sns">
-              <li><a href="<?php echo APP_URL ?>" target="_blank" rel="noopener nofollow"><img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" rel="js-lazy" width="40" height="40" alt="Tiktok"></a></li>
-              <li><a href="<?php echo APP_URL ?>" target="_blank" rel="noopener nofollow"><img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" rel="js-lazy" width="40" height="40" alt="Instagram"></a></li>
-              <li><a href="<?php echo APP_URL ?>" target="_blank" rel="noopener nofollow"><img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" rel="js-lazy" width="40" height="40" alt="Youtube"></a></li>
-              <li><a href="<?php echo APP_URL ?>" target="_blank" rel="noopener nofollow"><img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" rel="js-lazy" width="40" height="40" alt="Facebook"></a></li>
+              <li>
+                <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener nofollow">
+                  <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" rel="js-lazy" width="40" height="40" alt="Tiktok">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener nofollow">
+                  <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" rel="js-lazy" width="40" height="40" alt="Instagram">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener nofollow">
+                  <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" rel="js-lazy" width="40" height="40" alt="Youtube">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener nofollow">
+                  <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" rel="js-lazy" width="40" height="40" alt="Facebook">
+                </a>
+              </li>
             </ul>
             <ul class="language-list sp">
               <li><a class="is-active" href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>

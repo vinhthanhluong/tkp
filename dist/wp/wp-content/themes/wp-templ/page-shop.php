@@ -41,8 +41,8 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <div class="mv-img c-img aos-init" data-aos="fade-up">
-        <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="ショップのヘッダー画像">
-        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="ショップのヘッダー画像">
+        <!-- <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="ショップのヘッダー画像">
+        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="ショップのヘッダー画像"> -->
       </div>
     </div>
     <div class="c-about-block">

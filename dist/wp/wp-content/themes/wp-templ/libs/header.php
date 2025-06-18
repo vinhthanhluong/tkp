@@ -72,23 +72,23 @@
           <p class="gOfficia-ttl pc">OFFICIAL SNS</p>
           <ul class="gOfficial">
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_tiktok.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_tiktok.svg" rel="js-lazy" width="40" height="40" alt="Tiktok">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_instagram.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_instagram.svg" rel="js-lazy" width="40" height="40" alt="Instagram">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_youtube.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_youtube.svg" rel="js-lazy" width="40" height="40" alt="Youtube">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_facebook.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_facebook.svg" rel="js-lazy" width="40" height="40" alt="Facebook">
               </a>
             </li>
           </ul>
@@ -113,10 +113,10 @@
           </a>
           <div class="navSub">
             <ul class="navSub-lst">
-              <li class="item"><a href="<?php echo APP_URL ?>">砂湯・温泉</a></li>
+              <li class="item"><a href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>guide/shop/">ショップ</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a></li>
-              <li class="item"><a href="<?php echo APP_URL ?>">宿泊コテージ</a></li>
+              <li class="item"><a href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a></li>
             </ul>
           </div>
         </li>

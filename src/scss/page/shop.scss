@@ -1,6 +1,10 @@
 @charset 'UTF-8';
 @import "../utility/*";
 
+.c-mainvisual .mv-img {
+  height: 60px;
+}
+
 .c-about-block {
   overflow: hidden;
   @include PC {
