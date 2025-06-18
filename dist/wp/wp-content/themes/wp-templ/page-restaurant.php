@@ -4,7 +4,24 @@ $thisPageName = 'restaurant';
 $post_id = get_the_ID();
 $food_list = get_field('food_list', $post_id);
 $file_pdf = get_field('file_pdf', $post_id);
-$news_relate = get_field('news_relate', $post_id);
+
+$parkTermId = 8;
+$restaurantTermId = 9;
+$args_news = array(
+  'post_type'           => 'news',
+  'order'               => 'DESC',
+  'orderby'             => 'post_date',
+  'posts_status'        => 'publish',
+  'posts_per_page'      =>  4,
+  'tax_query'           => array(
+    array(
+      'taxonomy'        => 'newscat',
+      'field'           => 'term_id',
+      'terms'           => array($parkTermId, $restaurantTermId),
+    )
+  )
+);
+$news_relate = new WP_Query($args_news);
 
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
@@ -201,10 +218,10 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="c-ttl02__jp">ニュース</span>
             <span class="c-ttl02__en">News</span>
           </h2>
-
           <ul class="news-list">
             <?php
-            foreach ($news_relate as $news) {
+            while ($news_relate->have_posts()) {
+              $news_relate->the_post();
               $news_id = $news->ID;
               $news_url = get_the_permalink($news_id);
               $news_ttl = get_the_title($news_id);
@@ -245,7 +262,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <?php } ?>
           </ul>
           <div class="aos-init" data-aos="fade-up">
-            <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
+            <a href="<?php echo get_term_link($restaurantTermId, 'newscat'); ?>" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>

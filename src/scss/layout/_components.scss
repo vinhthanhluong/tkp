@@ -1666,6 +1666,18 @@ a.c-btn04 {
         height: calc(8 / 375 * 100vw);
       }
     }
+    .is-lineheight {
+      display: inline-block;
+      position: relative;
+      @include PC {
+        line-height: 20px;
+        top: 3px;
+      }
+      @include SP {
+        line-height: 8px;
+        top: 1px;
+      }
+    }
   }
 }
 /* ===================== MODULE PARK ===================== */

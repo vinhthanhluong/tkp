@@ -5,11 +5,39 @@ $post_id = get_the_ID();
 $shop_list = get_field('shop_list', $post_id);
 $shop_list_name = [];
 if (!empty($shop_list)) {
+  $is_all_empty = true;
   foreach ($shop_list as $shop) {
     $shop_list_name[] = $shop['shop_name'];
+    $is_empty = empty($shop['shop_name'])
+      && empty($shop['shop_pic'])
+      && empty($shop['shop_desc'])
+      && empty($shop['shop_time'])
+      && empty($shop['shop_web'])
+      && empty($shop['shop_instagram']);
+    if (!$is_empty) {
+      $is_all_empty = false;
+    }
   }
 }
-$news_relate = get_field('news_relate', $post_id);
+
+$parkTermId = 8;
+$shopTermId = 5;
+$args_news = array(
+  'post_type'           => 'news',
+  'order'               => 'DESC',
+  'orderby'             => 'post_date',
+  'posts_status'        => 'publish',
+  'posts_per_page'      =>  4,
+  'tax_query'           => array(
+    array(
+      'taxonomy'        => 'newscat',
+      'field'           => 'term_id',
+      'terms'           => array($parkTermId, $shopTermId),
+    )
+  )
+);
+$news_relate = new WP_Query($args_news);
+
 
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/shop.min.css?v=<?php echo APP_VER ?>">
@@ -96,7 +124,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <?php } ?>
         </div>
 
-        <?php if (!empty($shop_list)) { ?>
+        <?php if (!$is_all_empty) { ?>
           <div class="c-ttl02 aos-init" data-aos="fade-up">
             <h2 class="c-ttl02__jp">エリア案内</h2>
             <span class="c-ttl02__en">Shop Area</span>
@@ -163,7 +191,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
           <ul class="news-list">
             <?php
-            foreach ($news_relate as $news) {
+            while ($news_relate->have_posts()) {
+              $news_relate->the_post();
               $news_id = $news->ID;
               $news_url = get_the_permalink($news_id);
               $news_ttl = get_the_title($news_id);
@@ -204,7 +233,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <?php } ?>
           </ul>
           <div class="aos-init" data-aos="fade-up">
-            <a href="<?php echo APP_URL; ?>news/" class="c-btn01 is-center">
+            <a href="<?php echo get_term_link($shopTermId, 'newscat'); ?>" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>

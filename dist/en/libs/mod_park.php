@@ -6,12 +6,12 @@
     </div>
     <div class="mod-park__btn bnt01 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
       <h3 class="btn-link js-btnpopup" data-popup="modal01">
-        <span class="txt">レストラン</span>
+        <span class="txt"><span class="is-lineheight">レストラン<br>Grill Takka</span></span>
       </h3>
     </div>
     <div class="mod-park__btn bnt02 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
       <h3 class="btn-link js-btnpopup" data-popup="modal02">
-        <span class="txt">砂湯・温泉</span>
+        <span class="txt"><span class="is-lineheight">別府海浜砂湯<br>Sand SPA</span></span>
       </h3>
     </div>
     <div class="mod-park__btn bnt03 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
@@ -21,7 +21,7 @@
     </div>
     <div class="mod-park__btn bnt04 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
       <h3 class="btn-link js-btnpopup" data-popup="modal04">
-        <span class="txt">宿泊コテージ</span>
+        <span class="txt"><span class="is-lineheight">宿泊コテージ<br>ISHINOYA 別府</span></span>
       </h3>
     </div>
   </div>
@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="popup-ctn02">
-              <h3 class="popup-ttl">レストラン</h3>
+              <h3 class="popup-ttl">Grill Takka</h3>
               <div class="popup-desc">
                 <p class="txt">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を堪能できます。</p>
               </div>
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="popup-ctn02">
-              <h3 class="popup-ttl">砂湯・温泉</h3>
+              <h3 class="popup-ttl">Sand SPA（別府海浜砂湯）</h3>
               <div class="popup-desc">
                 <p class="txt">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
               </div>
@@ -134,7 +134,7 @@
               </div>
             </div>
             <div class="popup-ctn02">
-              <h3 class="popup-ttl">宿泊コテージ</h3>
+              <h3 class="popup-ttl">ISHINOYA 別府</h3>
               <div class="popup-desc">
                 <p class="txt">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
               </div>

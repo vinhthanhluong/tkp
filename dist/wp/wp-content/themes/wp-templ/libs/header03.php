@@ -9,15 +9,15 @@
     <nav class="header-info">
       <ul class="header-menu pc js-header-menu-drop">
         <li class="has-sub">
-          <span class="menu-link c-txt-hover">
+          <a class="menu-link c-txt-hover" href="<?php echo APP_URL ?>guide/">
             <span class="txt-wrap">
               <span class="txt-default">施設案内</span>
               <span class="txt-on">施設案内</span>
             </span>
-          </span>
+          </a>
           <div class="header-mega">
             <ul class="menu-list">
-              <li><a href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a></li>
+              <li><a href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯</a></li>
               <li><a href="<?php echo APP_URL ?>guide/shop/">ショップ</a></li>
               <li><a href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a></li>
               <li><a href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a></li>

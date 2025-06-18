@@ -257,8 +257,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </section>
     <?php
+    $parkTermId = 8;
     $spaTermId = 7;
-
     $args_news = array(
       'post_type'           => 'news',
       'order'               => 'DESC',
@@ -269,7 +269,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         array(
           'taxonomy' => 'newscat',
           'field'    => 'term_id',
-          'terms'    => $spaTermId,
+          'terms'    => array($parkTermId, $spaTermId),
         ),
       ),
     );

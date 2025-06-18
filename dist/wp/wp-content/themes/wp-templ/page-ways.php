@@ -91,7 +91,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">12:00</p>
                 <h3 class="ways-ttl">Grill Takkaで昼食</h3>
                 <p class="ways-desc">10種類以上のメニューからお選びいただける自慢のランチ。<br>レストラン横に広がる海を眺めながら、シェフが腕をかけたお料理をご堪能ください。</p>
-                <a class="c-link" href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/restaurant/">レストラン「Grill Takka」</a>
               </div>
             </li>
             <li class="ways-item" id="anchor-time04">
@@ -149,7 +149,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">14:00</p>
                 <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">名物でもある砂湯を「Sand SPA」で体験。目の前に広がる海を見ながら温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
-                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯「Sand SPA」</a>
               </div>
             </li>
             <li class="ways-item" id="time03">
@@ -158,7 +158,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">15:00</p>
                 <h3 class="ways-ttl">バーでひと息</h3>
                 <p class="ways-desc">スパエリア内にあるバーで、湯上りに一杯。<br>まったりと時間が流れるような、贅沢なひとときを。</p>
-                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯「Sand SPA」</a>
               </div>
             </li>
             <li class="ways-item" id="time04">
@@ -167,7 +167,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">17:00</p>
                 <h3 class="ways-ttl">チェックイン</h3>
                 <p class="ways-desc">体が温まった後は、お部屋にチェックイン。<br>全室オーシャンビューが望めるお部屋で、ご夕食時間までゆっくりとお寛ぎください。</p>
-                <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ「ISHINOYA 別府」</a>
               </div>
             </li>
             <li class="ways-item" id="time05">

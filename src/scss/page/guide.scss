@@ -6,6 +6,18 @@ body {
     width: 0;
   }
 }
+.g-wcm01 {
+  // 1170px
+  width: 100%;
+  max-width: 1218px;
+  padding: 0 24px;
+  margin: 0 auto;
+  @include SP {
+    @include max-screen(375px) {
+      padding: 0 calc(24 / 375 * 100vw);
+    }
+  }
+}
 .tit-box {
   margin-bottom: 42px;
   @include SP {
@@ -474,61 +486,61 @@ body {
     padding-top: 63px;
     padding-bottom: 71px;
   }
-  .mod-park__inner {
-    max-width: 1480px;
-    padding: 0 20px;
-    margin: 0 auto;
-    @include SP {
-      padding: 0 7px;
-    }
-  }
-  .bnt01 {
-    @include PC {
-      @include min-screen(1300px) {
-        top: 70px;
-        left: 196px;
-      }
-    }
-    @include SP {
-      top: 206px;
-      left: 20px;
-    }
-  }
-  .bnt02 {
-    @include PC {
-      @include min-screen(1300px) {
-        top: 70px;
-        left: 439px;
-      }
-    }
-    @include SP {
-      top: 206px;
-      left: 96px;
-    }
-  }
-  .bnt03 {
-    @include PC {
-      @include min-screen(1300px) {
-        top: 66px;
-        left: 913px;
-      }
-    }
-    @include SP {
-      top: 196px;
-      left: 240px;
-    }
-  }
-  .bnt04 {
-    @include PC {
-      @include min-screen(1300px) {
-        top: 424px;
-        left: 695px;
-      }
-    }
-    @include SP {
-      top: 310px;
-    }
-  }
+  // .mod-park__inner {
+  //   max-width: 1480px;
+  //   padding: 0 20px;
+  //   margin: 0 auto;
+  //   @include SP {
+  //     padding: 0 7px;
+  //   }
+  // }
+  // .bnt01 {
+  //   @include PC {
+  //     @include min-screen(1300px) {
+  //       top: 70px;
+  //       left: 196px;
+  //     }
+  //   }
+  //   @include SP {
+  //     top: 206px;
+  //     left: 20px;
+  //   }
+  // }
+  // .bnt02 {
+  //   @include PC {
+  //     @include min-screen(1300px) {
+  //       top: 70px;
+  //       left: 439px;
+  //     }
+  //   }
+  //   @include SP {
+  //     top: 206px;
+  //     left: 96px;
+  //   }
+  // }
+  // .bnt03 {
+  //   @include PC {
+  //     @include min-screen(1300px) {
+  //       top: 66px;
+  //       left: 913px;
+  //     }
+  //   }
+  //   @include SP {
+  //     top: 196px;
+  //     left: 240px;
+  //   }
+  // }
+  // .bnt04 {
+  //   @include PC {
+  //     @include min-screen(1300px) {
+  //       top: 424px;
+  //       left: 695px;
+  //     }
+  //   }
+  //   @include SP {
+  //     top: 310px;
+  //   }
+  // }
   .content-mod {
     max-width: 1170px;
     margin: 0 auto;

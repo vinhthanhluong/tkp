@@ -113,7 +113,7 @@
           </a>
           <div class="navSub">
             <ul class="navSub-lst">
-              <li class="item"><a href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a></li>
+              <li class="item"><a href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>guide/shop/">ショップ</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>guide/restaurant/">レストラン</a></li>
               <li class="item"><a href="<?php echo APP_URL ?>guide/ishinoya/">宿泊コテージ</a></li>

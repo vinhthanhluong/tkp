@@ -27,8 +27,8 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
       <?php
+      $parkTermId = 8;
       $ishinoyaTermId = 10;
-
       $args_news = array(
         'post_type'           => 'news',
         'order'               => 'DESC',
@@ -39,7 +39,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           array(
             'taxonomy' => 'newscat',
             'field'    => 'term_id',
-            'terms'    => $ishinoyaTermId,
+            'terms'    => array($parkTermId, $ishinoyaTermId),
           ),
         )
       );
