@@ -165,7 +165,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-how">
-      <!-- <div class="how-inner">
+      <div class="how-inner">
         <div class="how-ctn">
           <div class="how-circle aos-init" data-aos=""></div>
           <div class="how-box">
@@ -188,7 +188,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <i class="arr02"></i>
                 </a>
               </div>
-              <div class="how-img img01 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
+              <!-- <div class="how-img img01 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像1">
               </div>
               <div class="how-img img02 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
@@ -211,7 +211,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
               <div class="how-img img08 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像5">
-              </div>
+              </div> -->
 
               <div class="how-cloud cloud01 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud01.png" rel="js-lazy" width="56" height="18" alt="">
@@ -241,7 +241,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 
     <div class="sec-sight">

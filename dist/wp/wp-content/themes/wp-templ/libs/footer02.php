@@ -82,23 +82,22 @@
               <a class="link is-exter" href="https://lectore-atami-koarashi.jp/" target="_blank" rel="noopener">レクトーレ 熱海小嵐</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="https://www.ishinoya.jp/atami/" target="_blank" rel="noopener">石のや 熱海</a>
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hayama/" target="_blank" rel="noopener">レクトーレ 葉山湘南国際村</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/yugawara/" target="_blank" rel="noopener">グラントーレ 湯河原</a>
+              <a class="link is-exter" href="https://www.ishinoya.jp/atami/" target="_blank" rel="noopener">石のや 熱海</a>
             </li>
             <li class="col-menu__item">
               <a class="link is-exter" href="https://lectore-atami-momoyama.jp/" target="_blank" rel="noopener">レクトーレ 熱海桃山</a>
             </li>
             <li class="col-menu__item">
-              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hayama/" target="_blank" rel="noopener">レクトーレ 葉山湘南国際村</a>
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hanyu/" target="_blank" rel="noopener">レクトーレ 羽生TERRACE</a>
+            </li>
+            <li class="col-menu__item">
+              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/yugawara/" target="_blank" rel="noopener">グラントーレ 湯河原</a>
             </li>
             <li class="col-menu__item">
               <a class="link is-exter" href="https://lectore-hakone-gora.jp/" target="_blank" rel="noopener">レクトーレ 箱根強羅</a>
-            </li>
-            <li class="col-menu__item"></li>
-            <li class="col-menu__item">
-              <a class="link is-exter" href="https://www.tkp-resort.net/lectore/hanyu/" target="_blank" rel="noopener">レクトーレ 羽生TERRACE</a>
             </li>
           </ul>
         </div>

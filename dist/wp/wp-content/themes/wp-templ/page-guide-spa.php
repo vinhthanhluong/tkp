@@ -203,8 +203,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="砂湯を楽しむ">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="砂湯を楽しむ"> -->
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03.jpg" rel="js-lazy" width="280" height="150" alt="砂湯を楽しむ">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img03_sp.jpg" rel="js-lazy" width="327" height="175" alt="砂湯を楽しむ">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -216,8 +216,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="シャワー">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="シャワー"> -->
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04.jpg" rel="js-lazy" width="280" height="150" alt="シャワー">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img04_sp.jpg" rel="js-lazy" width="327" height="175" alt="シャワー">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -229,8 +229,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="大浴場でゆっくりと">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="大浴場でゆっくりと"> -->
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05.jpg" rel="js-lazy" width="280" height="150" alt="大浴場でゆっくりと">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img05_sp.jpg" rel="js-lazy" width="327" height="175" alt="大浴場でゆっくりと">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -242,8 +242,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
           <li class="step-item">
             <figure class="step-img c-img">
-              <!-- <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="着替え">
-              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="着替え"> -->
+              <img class="pc" src="<?php echo createSVG(280, 150); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06.jpg" rel="js-lazy" width="280" height="150" alt="着替え">
+              <img class="sp" src="<?php echo createSVG(327, 175); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/step_img06_sp.jpg" rel="js-lazy" width="327" height="175" alt="着替え">
             </figure>
             <div class="step-info">
               <div class="step-head">
@@ -334,7 +334,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </section>
     <?php } ?>
   </main>
-  <?php include(APP_PATH . 'libs/footer02.php'); ?>
+  <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
 </body>
 

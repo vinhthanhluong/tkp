@@ -242,7 +242,7 @@ include(APP_PATH_EN . 'libs/head.php');
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL_EN ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>guide/spa/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
@@ -304,7 +304,7 @@ include(APP_PATH_EN . 'libs/head.php');
         </div>
       </div>
       <div class="popup-btn">
-        <a href="<?php echo APP_URL_EN ?>" class="c-btn02 is-center">
+        <a href="<?php echo APP_URL_EN ?>guide/ishinoya/" class="c-btn02 is-center">
           <i class="arr01"></i>
           <span>もっと見る</span>
           <i class="arr02"></i>
