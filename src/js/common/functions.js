@@ -23,7 +23,7 @@ function handleGoogleFontLoader() {
           // Add "i" after font-weight number when you want to load ITALIC, ex: 500,500i (medium AND medium italic)
           // Always check <html> class to ensure the font-family and font-weight
           // https://github.com/theprojectsomething/webfontloader/tree/feature/google-fonts-v2#google
-          "Noto Sans JP:400,700",
+          "Noto Sans JP:400,600,700",
           // "Noto Serif JP:400,700",
           "Gantari:200,400,500,600",
         ],
@@ -322,37 +322,39 @@ function jsSlideGallery() {
   });
 }
 function initCustomCursor() {
-  var $curs = $(".js-cursor__slide").hide();
-  var $galleryWrapper = $(".gallery-wrapper");
-  var $prevBtn = $(".gallerySwiper-prev");
-  var $nextBtn = $(".gallerySwiper-next");
+  if (window.innerWidth > 767) {
+    var $curs = $(".js-cursor__slide").hide();
+    var $galleryWrapper = $(".gallery-wrapper");
+    var $prevBtn = $(".gallerySwiper-prev");
+    var $nextBtn = $(".gallerySwiper-next");
 
-  if ($galleryWrapper.length) {
-    $galleryWrapper.on("mouseenter", () => $curs.show());
-    $galleryWrapper.on("mouseleave", () => {
-      $curs.hide().html("");
+    if ($galleryWrapper.length) {
+      $galleryWrapper.on("mouseenter", () => $curs.show());
+      $galleryWrapper.on("mouseleave", () => {
+        $curs.hide().html("");
+      });
+    }
+
+    $(document).on("mousemove", (e) => {
+      $curs.css({
+        left: e.clientX - 30 + "px",
+        top: e.clientY - 30 + "px",
+      });
     });
-  }
 
-  $(document).on("mousemove", (e) => {
-    $curs.css({
-      left: e.clientX - 30 + "px",
-      top: e.clientY - 30 + "px",
-    });
-  });
+    if ($prevBtn.length) {
+      $prevBtn.on("mouseenter", () =>
+        $curs.html('<span class="txt">Prev</span>')
+      );
+      $prevBtn.on("mouseleave", () => $curs.html(""));
+    }
 
-  if ($prevBtn.length) {
-    $prevBtn.on("mouseenter", () =>
-      $curs.html('<span class="txt">Prev</span>')
-    );
-    $prevBtn.on("mouseleave", () => $curs.html(""));
-  }
-
-  if ($nextBtn.length) {
-    $nextBtn.on("mouseenter", () =>
-      $curs.html('<span class="txt">Next</span>')
-    );
-    $nextBtn.on("mouseleave", () => $curs.html(""));
+    if ($nextBtn.length) {
+      $nextBtn.on("mouseenter", () =>
+        $curs.html('<span class="txt">Next</span>')
+      );
+      $nextBtn.on("mouseleave", () => $curs.html(""));
+    }
   }
 }
 /* ===================== SECTION WRAPCONTENT ===================== */

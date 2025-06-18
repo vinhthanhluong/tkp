@@ -140,10 +140,13 @@
       left: -4px;
       top: 12px;
       height: 40px;
+      width: calc(100% - 40px);
+      @include justify-content(space-between);
       @include max-screen(375px) {
         left: calc(-4 / 375 * 100vw);
         top: calc(12 / 375 * 100vw);
         height: 40px;
+        width: calc(100% - (40 / 375 * 100vw));
       }
     }
     img {
@@ -157,8 +160,8 @@
       }
       @include SP {
         width: 162px;
-        @include max-screen(375px) {
-          width: calc(162 / 375 * 100vw);
+        @include max-screen(374px) {
+          width: calc(158 / 375 * 100vw);
         }
       }
     }

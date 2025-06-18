@@ -58,7 +58,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Sand SPA</strong>
             </div>
             <p class="desc">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/spa/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>
@@ -125,7 +125,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <strong>Stay</strong>
             </div>
             <p class="desc">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
-            <a href="<?php echo APP_URL ?>" class="c-btn01">
+            <a href="<?php echo APP_URL ?>guide/ishinoya/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
               <i class="arr02"></i>

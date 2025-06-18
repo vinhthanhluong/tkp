@@ -56,12 +56,12 @@
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>予約確認</span></a></li>
           <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>宿泊予約</span></a></li>
         </ul>
-        <ul class="gLangSp sp">
+        <!-- <ul class="gLangSp sp">
           <li class="gLangSp-item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">English</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">한국어</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">中文簡体</a></li>
-        </ul>
+        </ul> -->
         <a class="gLinkSp sp" href="<?php echo APP_URL; ?>">
           <span class="txt">SHONIN PARK</span>
         </a>
