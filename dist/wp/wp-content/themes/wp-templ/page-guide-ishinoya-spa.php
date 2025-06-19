@@ -41,7 +41,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <h3 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h3>
               <p class="intro-desc">温かな砂に包まれながら、別府湾の美しい眺めも楽しめる砂湯。日頃の疲れを解きほぐし、心も体も芯から温まる、極上のリラックス体験をお届けします。</p>
               <h4 class="intro-txt">効能</h4>
-              <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
+              <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
             </div>
           </li>
           <li class="intro-item is-reverse aos-init" data-aos="fade-up">
@@ -55,7 +55,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <h3 class="intro-ttls">心と体を癒す広々とした温泉空間</h3>
               <p class="intro-desc">竹を使用した地域の伝統を感じる空間で、ゆったりと温泉に浸かり、心と体の疲れを癒せます。</p>
               <h4 class="intro-txt">効能</h4>
-              <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
+              <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
             </div>
           </li>
         </ul>

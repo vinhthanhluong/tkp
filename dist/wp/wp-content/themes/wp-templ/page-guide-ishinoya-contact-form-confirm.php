@@ -22,8 +22,7 @@ $reg_name           = (!empty($_POST['nameuser'])) ? sanitize_form_value($_POST[
 $reg_namekata       = (!empty($_POST['namekata'])) ? sanitize_form_value($_POST['namekata']) : '';
 $reg_email          = (!empty($_POST['email'])) ? sanitize_form_value($_POST['email']) : '';
 $reg_tel            = (!empty($_POST['tel'])) ? sanitize_form_value($_POST['tel']) : '';
-$reg_checkstatus    = (!empty($_POST['checkstatus'])) ? sanitize_form_value($_POST['checkstatus']) : array();
-$reg_checkAllStatus = (!empty($_POST['checkAllStatus'])) ? sanitize_form_value($_POST['checkAllStatus']) : '';
+$reg_radiostatus    = (!empty($_POST['radiostatus'])) ? sanitize_form_value($_POST['radiostatus']) : '';
 $reg_namereser      = (!empty($_POST['namereser'])) ? sanitize_form_value($_POST['namereser']) : '';
 $reg_schedule       = (!empty($_POST['schedule'])) ? sanitize_form_value($_POST['schedule']) : '';
 $reg_content        = (!empty($_POST['content'])) ? sanitize_form_value($_POST['content']) : '';
@@ -84,17 +83,7 @@ if ($actionFlag == "confirm") {
                   </tr>
                   <tr>
                     <th>ご予約状況</th>
-                    <td>
-                      <ul class="ctn-checkbox">
-                        <?php
-                        $reg_checkAllStatus = "";
-                        foreach ($reg_checkstatus as $row) {
-                          $reg_checkAllStatus = $reg_checkAllStatus . "・" . $row . "\n";
-                        ?>
-                          <li><?php echo $row; ?></li>
-                        <?php } ?>
-                      </ul>
-                    </td>
+                    <td><?php echo $reg_radiostatus ?></td>
                   </tr>
                   <?php if (!empty($reg_namereser) && trim($reg_namereser) != '') { ?>
                     <tr>
@@ -118,8 +107,7 @@ if ($actionFlag == "confirm") {
               <input type="hidden" name="namekata" value="<?php echo $reg_namekata ?>">
               <input type="hidden" name="email" value="<?php echo $reg_email ?>">
               <input type="hidden" name="tel" value="<?php echo $reg_tel ?>">
-              <input type="hidden" name="checkstatus" value="<?php echo $reg_checkstatus ?>">
-              <input type="hidden" name="checkAllStatus" value="<?php echo $reg_checkAllStatus ?>">
+              <input type="hidden" name="radiostatus" value="<?php echo $reg_radiostatus ?>">
               <input type="hidden" name="namereser" value="<?php echo $reg_namereser ?>">
               <input type="hidden" name="schedule" value="<?php echo $reg_schedule ?>">
               <input type="hidden" name="content" value="<?php echo $br_reg_content ?>">

@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="popup-ctn02">
-              <h3 class="popup-ttl">Sand SPA（別府海浜砂湯）</h3>
+              <h3 class="popup-ttl">Sand SPA<br>（別府海浜砂湯）</h3>
               <div class="popup-desc">
                 <p class="txt">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
               </div>

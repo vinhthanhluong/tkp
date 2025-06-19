@@ -913,7 +913,7 @@
       }
     }
 
-    .checkbox-list {
+    .radio-list {
       @include flexbox;
       @include PC {
         margin-top: -1px;
@@ -922,7 +922,7 @@
         @include flex-wrap(wrap);
         padding-top: 2px;
       }
-      .check-item {
+      .radio-item {
         position: relative;
         @include PC {
           &:not(:last-child) {
@@ -972,6 +972,7 @@
             height: 18px;
             border: solid 1px #dcdcdc;
             margin-right: 10px;
+            border-radius: 100%;
             &::before {
               content: "";
               position: absolute;
@@ -981,6 +982,7 @@
               left: 50%;
               transform: translate(-50%, -50%);
               background: $yellow04;
+              border-radius: 100%;
               opacity: 0;
               transition: all 0.3s ease;
             }

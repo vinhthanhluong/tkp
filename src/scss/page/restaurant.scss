@@ -110,6 +110,22 @@
       margin: 0 auto 24px;
     }
   }
+  .grill-thumb {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-image: url($img_url + "img/guide/restaurant/mask_bg02.png");
+    mask-image: url($img_url + "img/guide/restaurant/mask_bg02.png");
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 102px;
+    @include SP {
+      margin-bottom: 30px;
+    }
+  }
   .grill-data {
     @include PC {
       max-width: 798px;

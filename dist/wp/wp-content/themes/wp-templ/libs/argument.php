@@ -12,31 +12,31 @@ switch ($pagename) {
     break;
   case 'top':
     if (empty($titlepage)) $titlepage = 'SHONIN PARK｜別府上人ヶ浜公園';
-    if (empty($desPage)) $desPage = '日帰りでも楽しめるおしゃれな海浜砂湯・温泉やレストラン、ショップ、宿泊コテージなど多彩な体験ができる大分・別府観光の新名所「SHONIN PARK」。家族や友人、カップルで訪れ、朝昼夜で異なる楽しみ方ができるパーク＆リゾートです。';
+    if (empty($desPage)) $desPage = '日帰りでも楽しめるおしゃれな別府海浜砂湯・温泉やレストラン、ショップ、宿泊コテージなど多彩な体験ができる大分・別府観光の新名所「SHONIN PARK」。家族や友人、カップルで訪れ、朝昼夜で異なる楽しみ方ができるパーク＆リゾートです。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'guide':
     if (empty($titlepage)) $titlepage = '施設案内｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '日帰りでも楽しめる砂湯・温泉、おしゃれなレストランやショップ、宿泊コテージなど、大分・別府の魅力を詰め込んだ「SHONIN PARK」の施設をご紹介します。';
+    if (empty($desPage)) $desPage = '日帰りでも楽しめる別府海浜砂湯・温泉、おしゃれなレストランやショップ、宿泊コテージなど、大分・別府の魅力を詰め込んだ「SHONIN PARK」の施設をご紹介します。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'restaurant':
-    if (empty($titlepage)) $titlepage = 'レストラン｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '別府湾を一望する絶好のロケーションで、本格ハワイアングリルを大分風にアレンジしたお料理を楽しめるレストラン。海風と陽気なハワイの雰囲気に包まれながら、特別なひとときをお過ごしください。';
+    if (empty($titlepage)) $titlepage = 'レストラン（Grill Takka）｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '別府湾を一望する絶好のロケーションで、本格ハワイアングリルを大分風にアレンジしたお料理を楽しめるレストラン「Grill Takka」。海風と陽気なハワイの雰囲気に包まれながら、特別なひとときをお過ごしください。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'guide-spa':
-    if (empty($titlepage)) $titlepage = '砂湯・温泉｜SHONIN PARK';
+    if (empty($titlepage)) $titlepage = '別府海浜砂湯（Sand SPA）｜SHONIN PARK';
     if (empty($desPage)) $desPage = '別府唯一の海浜砂湯・温泉「Sand SPA」日帰りでも楽しめる癒しの空間は、夜のライトアップで幻想的な雰囲気に包まれます。海風を感じながら、ここでしか味わえない贅沢なリラクゼーションを。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya':
     if (empty($titlepage)) $titlepage = 'ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '緑豊かな森林と別府湾の美しい景色に囲まれた宿泊コテージ。地元食材にこだわったお料理や砂湯・温泉、快眠を追求したベッドで、寛ぎのひとときを提供いたします。';
+    if (empty($desPage)) $desPage = '緑豊かな森林と別府湾の美しい景色に囲まれた宿泊コテージ「ISHINOYA 別府 / 石のや 別府」。地元食材にこだわったお料理や砂湯・温泉、快眠を追求したベッドで、寛ぎのひとときを提供いたします。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;

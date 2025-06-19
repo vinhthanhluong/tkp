@@ -626,6 +626,21 @@
         }
       }
     }
+    .navigation-sns {
+      @include flexbox;
+      @include flex-wrap;
+      @include justify-content(center);
+      @include PC {
+        margin-top: 28px;
+      }
+      @include SP {
+        margin-top: 21px;
+      }
+      & > li {
+        width: 40px;
+        margin: 0 10px;
+      }
+    }
   }
 }
 

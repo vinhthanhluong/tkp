@@ -1,5 +1,12 @@
 @charset 'UTF-8';
 @import "../utility/*";
+
+.cui-thumb01 {
+  img {
+    width: 100%;
+  }
+}
+
 .c-keyvisual {
   @include PC {
     margin-bottom: 50px;

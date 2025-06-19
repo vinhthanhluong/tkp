@@ -99,22 +99,22 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <em>必須</em>ご予約状況
                 </th>
                 <td>
-                  <div class="checkbox-list">
-                    <p class="check-item">
-                      <input type="checkbox" id="checkstatus01" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約検討中') ?>" class="validate[required]">
-                      <label for="checkstatus01"><i class="ske"></i>ご予約検討中</label>
+                  <div class="radio-list">
+                    <p class="radio-item">
+                      <input type="radio" id="radiostatus01" name="radiostatus" value="<?php echo sanitize_form_value('ご予約検討中') ?>" class="validate[required]">
+                      <label for="radiostatus01"><i class="ske"></i>ご予約検討中</label>
                     </p>
-                    <p class="check-item">
-                      <input type="checkbox" id="checkstatus02" name="checkstatus[]" value="<?php echo sanitize_form_value('ご予約済み') ?>" class="validate[required]">
-                      <label for="checkstatus02"><i class="ske"></i>ご予約済み</label>
+                    <p class="radio-item">
+                      <input type="radio" id="radiostatus02" name="radiostatus" value="<?php echo sanitize_form_value('ご予約済み') ?>" class="validate[required]">
+                      <label for="radiostatus02"><i class="ske"></i>ご予約済み</label>
                     </p>
-                    <p class="check-item">
-                      <input type="checkbox" id="checkstatus03" name="checkstatus[]" value="<?php echo sanitize_form_value('ご利用済み') ?>" class="validate[required]">
-                      <label for="checkstatus03"><i class="ske"></i>ご利用済み</label>
+                    <p class="radio-item">
+                      <input type="radio" id="radiostatus03" name="radiostatus" value="<?php echo sanitize_form_value('ご利用済み') ?>" class="validate[required]">
+                      <label for="radiostatus03"><i class="ske"></i>ご利用済み</label>
                     </p>
-                    <p class="check-item">
-                      <input type="checkbox" id="checkstatus04" name="checkstatus[]" value="<?php echo sanitize_form_value('その他') ?>" class="validate[required]">
-                      <label for="checkstatus04"><i class="ske"></i>その他</label>
+                    <p class="radio-item">
+                      <input type="radio" id="radiostatus04" name="radiostatus" value="<?php echo sanitize_form_value('その他') ?>" class="validate[required]">
+                      <label for="radiostatus04"><i class="ske"></i>その他</label>
                     </p>
                   </div>
                 </td>

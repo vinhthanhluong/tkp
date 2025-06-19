@@ -84,7 +84,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
     <div class="sec-grill">
       <div class="grill-logo aos-init" data-aos="fade-up"><img src="<?php echo createSVG(253, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/grill_txt.svg" rel="js-lazy" width="253" height="100" alt=""></div>
-      <div class="slider-container aos-init" data-aos="fade-up">
+      <!-- <div class="slider-container aos-init" data-aos="fade-up">
         <div class="slider-gallery">
           <div class="gallery-wrapper js-swiper-gallery">
             <div class="swiper-wrapper">
@@ -129,23 +129,28 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
         </div>
+      </div> -->
+      <div class="inner1170">
+        <div class="grill-thumb">
+          <img src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01.jpg" width="1000" height="490" alt="">
+        </div>
       </div>
       <div class="grill-data aos-init" data-aos="fade-up">
         <dl>
           <dt>営業時間</dt>
-          <dd>ランチ：11:00~14:00（Lo. 13:30）<br>ディナー：17:00~22:00（Lo. 21:30）</dd>
+          <dd>モーニング：7:00-10:00（L.O 9:30）<br>ランチ：11:00-15:00（L.O 14:30）<br>ディナー：15:00-22:00（L.O 21:30）</dd>
         </dl>
         <dl>
           <dt>座席数</dt>
-          <dd>店内: 98<br>テラス: 120</dd>
+          <dd>店内：40<br>テラス：46</dd>
         </dl>
         <dl>
           <dt>定休日</dt>
-          <dd>不定休</dd>
+          <dd>SHONIN PARKの休業日に準ずる</dd>
         </dl>
         <dl>
           <dt>ご予約</dt>
-          <dd>ご予約は<a class="txt-link" href="#">こちら</a></dd>
+          <dd>ご予約は<a class="txt-link" href="https://www.hotpepper.jp/strJ004067470/?vos=aphpphpglnksnsm20241022001" target="_blank" rel="noopener nofollow">こちら</a></dd>
         </dl>
         <dl>
           <dt>TEL</dt>

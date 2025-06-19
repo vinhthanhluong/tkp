@@ -53,8 +53,12 @@
           </div>
         </div> -->
         <ul class="gBtn">
-          <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>予約確認</span></a></li>
-          <li class="gBtn-item"><a href="<?php echo APP_URL ?>"><span>宿泊予約</span></a></li>
+          <li class="gBtn-item">
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/booked/login" target="_blank" rel="noopener nofollow"><span>予約確認</span></a>
+          </li>
+          <li class="gBtn-item">
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener nofollow"><span>宿泊予約</span></a>
+          </li>
         </ul>
         <!-- <ul class="gLangSp sp">
           <li class="gLangSp-item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
@@ -65,6 +69,28 @@
         <a class="gLinkSp sp" href="<?php echo APP_URL; ?>">
           <span class="txt">SHONIN PARK</span>
         </a>
+        <ul class="navigation-sns sp">
+          <li>
+            <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener nofollow">
+              <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_tiktok.svg" rel="js-lazy" width="40" height="40" alt="Tiktok">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ishinoya_beppu_official/" target="_blank" rel="noopener nofollow">
+              <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_instagram.svg" rel="js-lazy" width="40" height="40" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener nofollow">
+              <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_youtube.svg" rel="js-lazy" width="40" height="40" alt="Youtube">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61577749102309" target="_blank" rel="noopener nofollow">
+              <img src="<?php echo createSVG(40, 40); ?>" data-src="<?php echo APP_ASSETS ?>img/common/footer/f_facebook.svg" rel="js-lazy" width="40" height="40" alt="Facebook">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

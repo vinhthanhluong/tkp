@@ -50,7 +50,7 @@ $reg_email
 $reg_tel
 
 ■ご予約状況
-$reg_checkAllStatus
+$reg_radiostatus
 ";
 
   if (isset($reg_namereser) && $reg_namereser != '') $msgBody .= "

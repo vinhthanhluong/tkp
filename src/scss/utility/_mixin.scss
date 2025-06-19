@@ -20,6 +20,7 @@ $brown02: #231816;
 
 $font_feature_settings_palt: false;
 $font_smooth: true;
+
 $img_url: "/wp/wp-content/themes/wp-templ/assets/";
 
 $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
@@ -28,8 +29,6 @@ $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
     #{$prefix}$key: $value;
   }
 }
-
-$img_url: "/wp/wp-content/themes/wp-templ/assets/";
 
 $hiraGothic: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro",
   "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴ W3", "メイリオ", "Osaka",

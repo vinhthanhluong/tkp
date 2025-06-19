@@ -77,7 +77,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <h4 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h4>
                 <p class="intro-desc">温かな砂に包まれながら、別府湾の美しい眺めも楽しめる砂湯。日頃の疲れを解きほぐし、心も体も芯から温まる、極上のリラックス体験をお届けします。</p>
                 <h4 class="intro-txt">効能</h4>
-                <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
+                <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
               </div>
             </li>
             <li class="intro-item is-reverse aos-init" data-aos="fade-up">
@@ -89,7 +89,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <h4 class="intro-ttls">心と体を癒す広々とした温泉空間</h4>
                 <p class="intro-desc">竹を使用した地域の伝統を感じる空間で、ゆったりと温泉に浸かり、心と体の疲れを癒せます。</p>
                 <h4 class="intro-txt">効能</h4>
-                <p class="intro-efficacy">リウマチ、関節症、腰痛、神経痛、五十肩、打撲、冷え性、胃腸機能の低下、高血圧、糖尿病、喘息、肺気腫、痔、睡眠障害、うつ状態、切り傷、皮膚乾燥症、疲労回復</p>
+                <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
               </div>
             </li>
           </ul>
@@ -125,13 +125,13 @@ include(APP_PATH . 'libs/head.php'); ?>
             <dt>
               <h3>営業時間</h3>
             </dt>
-            <dd>8:00~22:00（最終入浴受付20:30）</dd>
+            <dd>8:00～22:00（最終受付 21:00）</dd>
           </dl>
           <dl>
             <dt>
               <h3>料金</h3>
             </dt>
-            <dd>大人　￥2,000<br>小人(6歳〜12歳)　￥1,000</dd>
+            <dd>大人：2,500円<br>小人（6歳～12歳）：1,800円</dd>
           </dl>
           <dl>
             <dt>
@@ -154,16 +154,22 @@ include(APP_PATH . 'libs/head.php'); ?>
             </dt>
             <dd>
               <ul class="txt-list">
-                <li>館内着</li>
+                <li>砂湯専用浴衣</li>
                 <li>ドライヤー</li>
               </ul>
             </dd>
+          </dl>
+          <dl>
+            <dt>
+              <h3>定休日</h3>
+            </dt>
+            <dd>不定休（月2回）</dd>
           </dl>
           <dl class="pc">
             <dt>
               <h3>TEL</h3>
             </dt>
-            <dd><a href="tel:0977756360">0977-75-6360</a></dd>
+            <dd><a href="tel:0977756360" class="txt-link">0977-75-6360</a></dd>
           </dl>
         </div>
       </div>

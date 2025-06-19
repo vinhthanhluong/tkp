@@ -67,7 +67,7 @@
           </div>
         </li> -->
       </ul>
-      <a class="header-btn c-txt-hover pc" href="<?php echo APP_URL ?>">
+      <a class="header-btn c-txt-hover pc" href="https://www.asoview.com/channel/ticket/KfG8g2DPlR/ticket0000041562/" target="_blank" rel="noopener nofollow">
         <span class="txt-wrap">
           <span class="txt-default">砂湯・温泉予約</span>
           <span class="txt-on">砂湯・温泉予約</span>
@@ -104,17 +104,17 @@
             <p class="navigation-ttl">Reservation</p>
             <ul class="navigation-btn">
               <li>
-                <a class="c-btn04" href="<?php echo APP_URL ?>">
+                <a class="c-btn04" href="https://www.asoview.com/channel/ticket/KfG8g2DPlR/ticket0000041562/" target="_blank" rel="noopener nofollow">
                   <span>砂湯・温泉予約</span>
                 </a>
               </li>
               <li>
-                <a class="c-btn04" href="<?php echo APP_URL ?>">
+                <a class="c-btn04" href="https://www.hotpepper.jp/strJ004067470/?vos=aphpphpglnksnsm20241022001" target="_blank" rel="noopener nofollow">
                   <span>レストラン予約</span>
                 </a>
               </li>
               <li>
-                <a class="c-btn04" href="<?php echo APP_URL ?>">
+                <a class="c-btn04" href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener nofollow">
                   <span>宿泊コテージ予約</span>
                 </a>
               </li>

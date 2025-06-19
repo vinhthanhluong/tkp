@@ -67,9 +67,21 @@
       </div>
     </div>
     <ul class="f-btn">
-      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i></a></li>
-      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i></a></li>
-      <li class="item"><a href="<?php echo APP_URL ?>" class="c-btn03 is-center"><i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i></a></li>
+      <li class="item">
+        <a href="https://www.asoview.com/channel/ticket/KfG8g2DPlR/ticket0000041562/" target="_blank" rel="noopener" class="c-btn03 is-center">
+          <i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.hotpepper.jp/strJ004067470/?vos=aphpphpglnksnsm20241022001" target="_blank" rel="noopener" class="c-btn03 is-center">
+          <i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn03 is-center">
+          <i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i>
+        </a>
+      </li>
     </ul>
     <div class="f-social sp">
       <ul class="social-lst">

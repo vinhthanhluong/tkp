@@ -464,6 +464,10 @@
       @include SP {
         @include font(15, 28);
       }
+      .txt-link {
+        color: $blue01;
+        text-decoration: underline;
+      }
     }
   }
   .txt-list {

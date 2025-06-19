@@ -116,7 +116,8 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <section class="c-secwrap wrap-right">
               <div class="c-secwrap__colslide">
-                <div class="c-gallery__main">
+
+                <!-- <div class="c-gallery__main">
                   <div class="gallery-wrapper js-slider-gallery01">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -164,6 +165,10 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     </div>
                   </div>
+                </div> -->
+                <div class="i-thumb01">
+                  <img class="pc" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room02.jpg" width="625" height="440" alt="">
+                  <img class="sp" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_room02_sp.jpg" width="327" height="230" alt="">
                 </div>
               </div>
               <div class="c-secwrap__colctn">
@@ -202,7 +207,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <section class="c-secwrap wrap-left">
               <div class="c-secwrap__colslide">
-                <div class="c-gallery__main">
+                <!-- <div class="c-gallery__main">
                   <div class="gallery-wrapper js-slider-gallery02">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -250,6 +255,10 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     </div>
                   </div>
+                </div> -->
+                <div class="i-thumb01">
+                  <img class="pc" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa02.jpg" width="625" height="440" alt="">
+                  <img class="sp" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_spa02_sp.jpg" width="327" height="230" alt="">
                 </div>
               </div>
               <div class="c-secwrap__colctn">
@@ -277,7 +286,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
             <section class="c-secwrap wrap-right">
               <div class="c-secwrap__colslide">
-                <div class="c-gallery__main">
+                <!-- <div class="c-gallery__main">
                   <div class="gallery-wrapper js-slider-gallery03">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -325,6 +334,10 @@ include(APP_PATH . 'libs/head.php'); ?>
                       </div>
                     </div>
                   </div>
+                </div> -->
+                <div class="i-thumb01">
+                  <img class="pc" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine02.jpg" width="625" height="440" alt="">
+                  <img class="sp" src="<?php echo APP_ASSETS ?>img/ishinoya/slide_cuisine02_sp.jpg" width="327" height="230" alt="">
                 </div>
               </div>
               <div class="c-secwrap__colctn">

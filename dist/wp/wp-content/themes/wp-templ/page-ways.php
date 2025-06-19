@@ -100,7 +100,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="ways-time">14:00</p>
                 <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
                 <p class="ways-desc">事前に予約しておいた砂湯を「Sand SPA」で体験。<br>目の前に広がる海を見ながら温かな砂に包まれて、体の芯から温まる砂湯や、お肌に優しい温泉をお楽しみください。</p>
-                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">砂湯・温泉</a>
+                <a class="c-link" href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯「Sand SPA」</a>
               </div>
             </li>
           </ul>
