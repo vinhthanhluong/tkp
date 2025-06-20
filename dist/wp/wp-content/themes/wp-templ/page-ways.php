@@ -136,7 +136,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="time01">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">13:00</p>
                 <h3 class="ways-ttl">到着</h3>
@@ -144,7 +144,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time02">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img06.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">14:00</p>
                 <h3 class="ways-ttl">スパエリアで砂湯体験</h3>
@@ -153,7 +153,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time03">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img07.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">15:00</p>
                 <h3 class="ways-ttl">バーでひと息</h3>
@@ -162,7 +162,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time04">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img04.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img08.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">17:00</p>
                 <h3 class="ways-ttl">チェックイン</h3>
@@ -171,7 +171,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time05">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img05.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img09.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">19:00</p>
                 <h3 class="ways-ttl">夕食</h3>
@@ -186,7 +186,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <div class="ways-inner">
           <ul class="ways-list">
             <li class="ways-item" id="time06">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img01.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img10.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">6:00</p>
                 <h3 class="ways-ttl">朝日を眺める贅沢な朝</h3>
@@ -194,7 +194,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time07">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img02.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img11.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">8:00</p>
                 <h3 class="ways-ttl">朝食</h3>
@@ -203,7 +203,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </li>
             <li class="ways-item" id="time08">
-              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img03.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
+              <figure class="ways-img c-img"><img src="<?php echo createSVG(620, 400); ?>" data-src="<?php echo APP_ASSETS ?>img/ways/ways_img12.jpg" rel="js-lazy" width="620" height="400" alt=""></figure>
               <div class="ways-info">
                 <p class="ways-time">10:00</p>
                 <h3 class="ways-ttl">チェックアウト</h3>

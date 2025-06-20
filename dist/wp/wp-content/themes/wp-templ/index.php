@@ -376,7 +376,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <span class="anim-inner">公式インスタグラム</span>
             </h2>
           </div>
-          <ul class="instagram-lst aos-init" data-aos="fade-up">
+          <!-- <ul class="instagram-lst aos-init" data-aos="fade-up">
             <li class="item">
               <img src="<?php echo createSVG(276, 276) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/instagram_thumb01.png" rel="js-lazy" width="276" height="276" alt="">
             </li>
@@ -401,13 +401,17 @@ include(APP_PATH . 'libs/head.php'); ?>
             <li class="item">
               <img src="<?php echo createSVG(276, 276) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/cms/instagram_thumb08.png" rel="js-lazy" width="276" height="276" alt="">
             </li>
-          </ul>
+          </ul> -->
+          <div class="instagram-embed">
+            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+          </div>
         </div>
       </div>
     </div>
 
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php wp_footer(); ?>
   <script src="<?php echo APP_ASSETS ?>js/page/top.min.js?v=<?php echo APP_VER ?>"></script>
   <script>
     $('.news-cate input').on("change", function() {

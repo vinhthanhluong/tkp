@@ -132,7 +132,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div> -->
       <div class="inner1170">
         <div class="grill-thumb">
-          <img src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01.jpg" width="1000" height="490" alt="">
+          <img class="pc" src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01.jpg" width="1000" height="490" alt="">
+          <img class="sp" src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01_sp.jpg" width="1000" height="490" alt="">
         </div>
       </div>
       <div class="grill-data aos-init" data-aos="fade-up">
