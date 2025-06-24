@@ -352,8 +352,9 @@ body {
 }
 .news-cate {
   @include PC {
-    margin-top: -55px;
     text-align: right;
+    width: calc(100% - 250px);
+    margin: -55px 0 0 auto;
   }
   @include SP {
     margin: 31px 0 0 -4px;
@@ -1078,6 +1079,26 @@ body {
     @include PC {
       max-width: 200px;
       line-height: 0;
+      @include max-screen(1440px) {
+        max-width: calc(200 / 1440 * 100vw);
+        padding: calc(9 / 1440 * 100vw) calc(31 / 1440 * 100vw)
+          calc(9 / 1440 * 100vw) calc(21 / 1440 * 100vw);
+        .arr01,
+        .arr02 {
+          top: calc(50% - calc(10 / 1440 * 100vw));
+          width: calc(20 / 1440 * 100vw);
+          height: calc(20 / 1440 * 100vw);
+        }
+        .arr01 {
+          left: calc(14 / 1440 * 100vw);
+        }
+        .arr02 {
+          right: calc(14 / 1440 * 100vw);
+        }
+        span {
+          font-size: calc(16 / 1440 * 100vw);
+        }
+      }
     }
     @include SP {
       max-width: 180px;

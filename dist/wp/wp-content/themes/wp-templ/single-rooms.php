@@ -5,6 +5,7 @@ $post_id = get_the_ID();
 $ttlpost = get_the_title();
 
 $room_slide = get_field('room_slide', $post_id);
+
 if (!empty($room_slide)) {
   foreach ($room_slide as $slide) {
     $slide_gallery =  $slide['url'];
@@ -42,7 +43,7 @@ include(APP_PATH . 'libs/head.php');
         <div class="archive-row">
           <h2 class="archive-ttl sp"><?php echo $ttlpost; ?></h2>
           <div class="archive-left">
-            <?php if (!empty($room_slide)) { ?>
+            <?php if (!empty($room_slide) && count($room_slide) > 1) { ?>
               <div class="c-gallery__main">
                 <div class="gallery-wrapper js-slider-gallerysingle">
                   <div class="swiper-wrapper">
@@ -87,6 +88,17 @@ include(APP_PATH . 'libs/head.php');
                   </div>
                 </div>
               </div>
+            <?php } else { ?>
+              <?php
+              foreach ($room_slide as $slide) {
+                $slide_gallery =  $slide['url'];
+              ?>
+                <div class="swiper-slide">
+                  <div class="gallery-pic c-img">
+                    <img src="<?php echo $slide_gallery; ?>" width="625" height="440" alt="<?php echo $ttlpost; ?>">
+                  </div>
+                </div>
+              <?php } ?>
             <?php } ?>
           </div>
           <div class="archive-right">

@@ -73,7 +73,7 @@
         </a>
       </li>
       <li class="item">
-        <a href="https://www.hotpepper.jp/strJ004067470/?vos=aphpphpglnksnsm20241022001" target="_blank" rel="noopener" class="c-btn03 is-center">
+        <a href="https://www.hotpepper.jp/strJ004067470/yoyaku/request/hpds/" target="_blank" rel="noopener" class="c-btn03 is-center">
           <i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i>
         </a>
       </li>

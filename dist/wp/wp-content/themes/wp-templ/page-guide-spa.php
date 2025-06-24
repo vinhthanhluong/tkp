@@ -14,7 +14,7 @@ include(APP_PATH . 'libs/head.php'); ?>
   <main id="wrap">
     <div class="sec-spa-keyvisual" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/spa/bg_keyvisual_sp.jpg">
       <div class="inner1170">
-        <h1 class="keyvisual-logo"><img src="<?php echo createSVG(216, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="216" height="220" alt="Sand SPA"></h1>
+        <h1 class="keyvisual-logo"><img src="<?php echo createSVG(227, 306); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/txt_spa.svg" rel="js-lazy" width="227" height="306" alt="Sand SPA"></h1>
       </div>
       <div class="anchor-container">
         <ul class="anchor-list">
@@ -145,17 +145,19 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <li>化粧水</li>
                 <li>ボディソープ</li>
                 <li>乳液</li>
+                <li>ドライヤー</li>
+                <li>ヘアブラシ</li>
               </ul>
             </dd>
           </dl>
           <dl>
             <dt>
-              <h3>レンタル品</h3>
+              <h3>レンタル品（無料）</h3>
             </dt>
             <dd>
               <ul class="txt-list">
                 <li>砂湯専用浴衣</li>
-                <li>ドライヤー</li>
+                <li>タオル</li>
               </ul>
             </dd>
           </dl>

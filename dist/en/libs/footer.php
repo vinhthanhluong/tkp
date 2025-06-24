@@ -55,9 +55,21 @@
       </div>
     </div>
     <ul class="f-btn">
-      <li class="item"><a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center"><i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i></a></li>
-      <li class="item"><a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center"><i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i></a></li>
-      <li class="item"><a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center"><i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i></a></li>
+      <li class="item">
+        <a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center">
+          <i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center">
+          <i class="arr01"></i><span>レストラン予約</span><i class="arr02"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="<?php echo APP_URL_EN ?>" class="c-btn03 is-center">
+          <i class="arr01"></i><span>宿泊コテージ予約</span><i class="arr02"></i>
+        </a>
+      </li>
     </ul>
     <div class="f-social sp">
       <ul class="social-lst">

@@ -151,7 +151,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </dl>
         <dl>
           <dt>ご予約</dt>
-          <dd>ご予約は<a class="txt-link" href="https://www.hotpepper.jp/strJ004067470/?vos=aphpphpglnksnsm20241022001" target="_blank" rel="noopener nofollow">こちら</a></dd>
+          <dd>ご予約は<a class="txt-link" href="https://www.hotpepper.jp/strJ004067470/yoyaku/request/hpds/" target="_blank" rel="noopener nofollow">こちら</a></dd>
         </dl>
         <dl>
           <dt>TEL</dt>

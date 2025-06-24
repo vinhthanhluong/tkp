@@ -54,7 +54,7 @@
             </a>
           </li>
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL_EN ?>" class="c-btn01 is-center">
+            <a href="https://www.hotpepper.jp/strJ004067470/yoyaku/request/hpds/" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>レストラン予約</span>
               <i class="arr02"></i>
