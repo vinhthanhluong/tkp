@@ -28,7 +28,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </div>
     </section>
-    <div class="sec-tabs">
+    <!-- <div class="sec-tabs">
       <div class="inner1170">
         <ul class="tabs-list js-tabs aos-init" data-aos="fade-up">
           <li class="tab-item is-current" data-tab="tab01">
@@ -39,7 +39,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <section class="sec-cuisine" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg.png" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg_sp.png">
       <div class="inner1170">
         <div class="tab-wrapper js-tab-content">
@@ -56,7 +56,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
-                  <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しい和食のコースをご用意しています。</p>
+                  <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しいコース料理をご用意しています。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
                   <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01.jpg" rel="js-lazy" width="530" height="420" alt="ご夕食画像">
@@ -71,7 +71,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
-                  <p class="cuisine-txt">豊かな自然に囲まれた朝、地元の新鮮な食材を使った朝食で一日の始まりをお迎えください。和食と洋食をバランスよく取り入れたメニューをお楽しみいただけます。</p>
+                  <p class="cuisine-txt">選べる3種のメイン料理と、サラダやドリンクを楽しめるハーフビュッフェ。目の前に広がる海を眺めながら、贅沢な朝のひとときをお過ごしください。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
                   <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">
@@ -160,7 +160,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
             </div>
           </div>
-          <div class="tab-content" id="tab02">
+          <!-- <div class="tab-content" id="tab02">
             <h3 class="cuisine-ttl">お部屋でゆったり楽しむ<br>本格ハワイアングリル</h3>
             <p class="cuisine-desc">こだわりの大分風ハワイアングリルを、<br class="sp">お部屋でゆっくりと。<br>プライベートな空間で、本格的な味わいを<br class="sp">心ゆくまでお楽しみください。</p>
             <ul class="cuisine-list">
@@ -195,7 +195,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </figure>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
