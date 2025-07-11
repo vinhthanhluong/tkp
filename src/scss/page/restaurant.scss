@@ -377,7 +377,7 @@
   }
   .menu-head {
     @include PC {
-      @include flexbox;
+      // @include flexbox;
     }
     @include SP {
       @include flex(1);
@@ -392,25 +392,23 @@
   .menu-price {
     @include font("", "", 120, bold);
     @include PC {
-      text-align: right;
+      // text-align: right;
       @include font(18, 24);
-      width: 160px;
       @include max-screen(1100px) {
-        width: vw-pc(150px, 1100);
         font-size: vw-pc(18px, 1100);
       }
     }
     @include SP {
       @include font(15, 24);
     }
-    small {
-      @include font(12, 24, 120);
-      @include PC {
-        @include max-screen(1100px) {
-          font-size: vw-pc(12px, 1100);
-        }
-      }
-    }
+    // small {
+    //   @include font(12, 24, 120);
+    //   @include PC {
+    //     @include max-screen(1100px) {
+    //       font-size: vw-pc(12px, 1100);
+    //     }
+    //   }
+    // }
     .number {
       @include font("", "", 50, 500);
       @include ffGT;
