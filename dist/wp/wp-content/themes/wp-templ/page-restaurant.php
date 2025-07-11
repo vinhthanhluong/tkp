@@ -189,15 +189,9 @@ include(APP_PATH . 'libs/head.php'); ?>
                         <?php if (!empty($food_name)) { ?>
                           <p class="menu-ttl"><?php echo $food_name; ?></p>
                         <?php } ?>
-                        <?php if (!empty($food_halfprice) || !empty($food_price)) { ?>
+                        <?php if (!empty($food_price)) { ?>
                           <p class="menu-price">
-                            <?php if (!empty($food_halfprice)) { ?>
-                              <span class="number">Half ¥<?php echo $food_halfprice; ?></span>
-                            <?php } ?>
-                            <?php if (!empty($food_halfprice) && !empty($food_price)) { ?>/<?php } ?>
-                            <?php if (!empty($food_price)) { ?>
-                              <span class="number">Regular ¥<?php echo $food_price; ?></span>
-                            <?php } ?>
+                            <span class="number"><?php echo $food_price; ?></span>
                           </p>
                         <?php } ?>
                       </div>
