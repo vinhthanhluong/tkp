@@ -86,7 +86,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <p class="cuisine-summary">別府湾の美しい景色を望むカフェレストラン。テラス席からは大海原を一望でき、自然の息吹を感じながら食事を楽しむことができます。別府の豊かな自然と共に、贅沢な時間をお楽しみください。</p>
               </div>
 
-              <!-- <div class="c-gallery__main">
+              <div class="c-gallery__main">
                 <div class="gallery-wrapper js-slider-gallerycuisine">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -142,12 +142,12 @@ include(APP_PATH . 'libs/head.php'); ?>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
-              <div class="cui-thumb01">
+              <!-- <div class="cui-thumb01">
                 <img class="pc" src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="">
                 <img class="sp" src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02_sp.jpg" width="327" height="230" alt="">
-              </div>
+              </div> -->
 
               <div class="cuisine-group">
                 <dl class="cuisine-time">

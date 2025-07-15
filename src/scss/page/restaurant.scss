@@ -393,7 +393,8 @@
     @include font("", "", 120, bold);
     @include PC {
       // text-align: right;
-      @include font(18, 24);
+      @include font(19, 24);
+      margin-top: 5px;
       @include max-screen(1100px) {
         font-size: vw-pc(18px, 1100);
       }
@@ -409,19 +410,19 @@
     //     }
     //   }
     // }
-    .number {
-      @include font("", "", 50, 500);
-      @include ffGT;
-      @include PC {
-        @include font(23, 26);
-        @include max-screen(1100px) {
-          font-size: vw-pc(23px, 1100);
-        }
-      }
-      @include SP {
-        @include font(19, 26);
-      }
-    }
+    // .number {
+    //   @include font("", "", 50, 500);
+    //   @include ffGT;
+    //   @include PC {
+    //     @include font(23, 26);
+    //     @include max-screen(1100px) {
+    //       font-size: vw-pc(23px, 1100);
+    //     }
+    //   }
+    //   @include SP {
+    //     @include font(19, 26);
+    //   }
+    // }
   }
   .menu-ttl {
     @include font("", "", 120, bold);

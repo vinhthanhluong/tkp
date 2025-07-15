@@ -84,7 +84,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </section>
     <div class="sec-grill">
       <div class="grill-logo aos-init" data-aos="fade-up"><img src="<?php echo createSVG(253, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/grill_txt.svg" rel="js-lazy" width="253" height="100" alt=""></div>
-      <!-- <div class="slider-container aos-init" data-aos="fade-up">
+      <div class="slider-container aos-init" data-aos="fade-up">
         <div class="slider-gallery">
           <div class="gallery-wrapper js-swiper-gallery">
             <div class="swiper-wrapper">
@@ -129,13 +129,13 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
         </div>
-      </div> -->
-      <div class="inner1170">
+      </div>
+      <!-- <div class="inner1170">
         <div class="grill-thumb">
           <img class="pc" src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01.jpg" width="1000" height="490" alt="">
           <img class="sp" src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img01_sp.jpg" width="1000" height="490" alt="">
         </div>
-      </div>
+      </div> -->
       <div class="grill-data aos-init" data-aos="fade-up">
         <dl>
           <dt>営業時間</dt>
@@ -210,11 +210,11 @@ include(APP_PATH . 'libs/head.php'); ?>
             $file_pdf_size = round($file_pdf_size / (1024 * 1024), 2);
             $file_pdf_url = $file_pdf['url'];
           ?>
-            <!-- <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
+            <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
               <i class="arr01"></i>
               <span>その他のメニューはこちら<small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
               <i class="arr02"></i>
-            </a> -->
+            </a>
           <?php } ?>
         </div>
       <?php } ?>
