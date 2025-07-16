@@ -179,7 +179,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </h2>
               </div>
               <div class="t-desc01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
-                <p class="txt anim-inner">日帰りから宿泊、夜の利用まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
+                <p class="txt anim-inner">日帰りから宿泊まで<br>SHONIN PARKの様々な楽しみ方を<br>ご提案いたします。</p>
               </div>
               <div class="how-btn aos-init" data-aos="fade-up" data-aos-anchor=".how-circle" data-aos-delay="300">
                 <a href="<?php echo APP_URL ?>ways/" class="c-btn01 is-center">
@@ -188,7 +188,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <i class="arr02"></i>
                 </a>
               </div>
-              <!-- <div class="how-img img01 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
+              <div class="how-img img01 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img01.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像1">
               </div>
               <div class="how-img img02 aos-init" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
@@ -211,7 +211,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </div>
               <div class="how-img img08 aos-init pc" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(130, 86) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_img08.png" rel="js-lazy" width="130" height="86" alt="楽しみ方画像5">
-              </div> -->
+              </div>
 
               <div class="how-cloud cloud01 aos-init" data-aos="fade" data-aos-anchor=".how-circle" data-aos-delay="600">
                 <img src="<?php echo createSVG(56, 18) ?>" data-src="<?php echo APP_ASSETS; ?>img/top/how_cloud01.png" rel="js-lazy" width="56" height="18" alt="">

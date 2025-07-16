@@ -103,11 +103,11 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <img src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img03.jpg" width="1000" height="490" alt="">
                 </div>
               </div>
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="gallery-pic c-img">
                   <img src="<?php echo APP_ASSETS ?>img/guide/restaurant/slide_img04.jpg" width="1000" height="490" alt="">
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -123,9 +123,9 @@ include(APP_PATH . 'libs/head.php'); ?>
               <div class="swiper-slide">
                 <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/guide/restaurant/thumb_img03.jpg" width="176" height="120" alt=""></div>
               </div>
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/guide/restaurant/thumb_img04.jpg" width="176" height="120" alt=""></div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -286,7 +286,7 @@ include(APP_PATH . 'libs/head.php'); ?>
   <script>
     if ($('.js-swiper-gallery').length) {
       var sliderThumbnail = new Swiper('.js-swiper-thumb', {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 8,
         freeMode: true,
         watchSlidesVisibility: true,

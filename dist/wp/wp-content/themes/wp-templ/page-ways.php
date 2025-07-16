@@ -198,7 +198,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <div class="ways-info">
                 <p class="ways-time">8:00</p>
                 <h3 class="ways-ttl">朝食</h3>
-                <p class="ways-desc">夕食に続き、大分の食材を使った栄養バランスの整ったご朝食をご用意。</p>
+                <p class="ways-desc">選べる3種のメイン料理に、サラダやドリンクを楽しめるハーフビュッフェ。朝の海を眺めながら、心満たされる贅沢な時間を。</p>
                 <a class="c-link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>
               </div>
             </li>

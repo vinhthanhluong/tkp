@@ -104,11 +104,6 @@ include(APP_PATH . 'libs/head.php'); ?>
                         <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img03.jpg" width="1000" height="450" alt="">
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img04.jpg" width="1000" height="450" alt="">
-                      </div>
-                    </div>
                   </div>
                   <p class="c-cursor__slide js-cursor__slide">
                     <span class="txt">Prev</span>
@@ -137,17 +132,10 @@ include(APP_PATH . 'libs/head.php'); ?>
                     <div class="swiper-slide">
                       <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img03.jpg" width="140" height="100" alt=""></div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img04.jpg" width="140" height="100" alt=""></div>
-                    </div>
+
                   </div>
                 </div>
               </div>
-
-              <!-- <div class="cui-thumb01">
-                <img class="pc" src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="">
-                <img class="sp" src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02_sp.jpg" width="327" height="230" alt="">
-              </div> -->
 
               <div class="cuisine-group">
                 <dl class="cuisine-time">
@@ -223,7 +211,6 @@ include(APP_PATH . 'libs/head.php'); ?>
             watchSlidesProgress: true,
             breakpoints: {
               768: {
-                slidesPerView: 4,
                 spaceBetween: 20,
               },
             },
