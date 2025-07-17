@@ -353,7 +353,7 @@
     }
   }
   .c-txt-list {
-    @include font("", "", 100);
+    @include font("", "", 100, 500);
     @include PC {
       @include font(16, 28);
       @include max-screen(980px) {
