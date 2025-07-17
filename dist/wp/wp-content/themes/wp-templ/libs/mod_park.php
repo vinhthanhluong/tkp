@@ -105,7 +105,7 @@
             <div class="popup-ctn02">
               <h3 class="popup-ttl">ショップ</h3>
               <div class="popup-desc">
-                <p class="txt">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
+                <p class="txt">別府・大分の特産品やグルメを気軽に楽しめるエリアです。</p>
               </div>
             </div>
           </li>

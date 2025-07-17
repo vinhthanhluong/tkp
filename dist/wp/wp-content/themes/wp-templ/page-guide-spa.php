@@ -87,7 +87,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <div class="intro-info">
                 <h3 class="intro-ttl is-mb">大浴場</h3>
                 <h4 class="intro-ttls">心と体を癒す広々とした温泉空間</h4>
-                <p class="intro-desc">竹を使用した地域の伝統を感じる空間で、ゆったりと温泉に浸かり、心と体の疲れを癒せます。</p>
+                <p class="intro-desc">海を望める大きな湯船で、手足を伸ばしながらゆったりと温泉に浸かり、心と体の疲れを癒せます。</p>
                 <h4 class="intro-txt">効能</h4>
                 <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
               </div>

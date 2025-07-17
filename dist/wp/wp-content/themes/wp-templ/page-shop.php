@@ -82,8 +82,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
       <div class="about-right aos-init" data-aos="fade-up">
         <div class="about-content cloud-decor">
-          <h2 class="about-ttl">別府の魅力を一堂に<br>ここにしかない<br class="sp">ショッピング体験</h2>
-          <p class="about-desc">別府の特産品や特産品やグルメを楽しめるショップエリア。<br>別府の魅力を体験いただけるショップや、ここでしか手に入らない特別なアイテムを取り揃えています。</p>
+          <h2 class="about-ttl">グルメからお土産まで<br>別府の魅力を気軽に満喫</h2>
+          <p class="about-desc">別府・大分の特産品やグルメを楽しめるショップエリア。<br>大分グルメをはじめとした多様な飲食店や、別府の工芸品・お土産を取り揃えたショップなどがございます。</p>
           <div class="about-group dot-decor">
             <figure class="about-img c-img sp">
               <img src="<?php echo createSVG(220, 207); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img01_sp.jpg" rel="js-lazy" width="220" height="207" alt="">

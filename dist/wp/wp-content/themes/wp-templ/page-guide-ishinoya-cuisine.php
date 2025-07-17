@@ -71,7 +71,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <figure class="cuisine-img c-img sp">
                     <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
                   </figure>
-                  <p class="cuisine-txt">選べる3種のメイン料理と、サラダやドリンクを楽しめるハーフビュッフェ。目の前に広がる海を眺めながら、贅沢な朝のひとときをお過ごしください。</p>
+                  <p class="cuisine-txt">3種類から選べるメイン料理と、サラダやドリンクを楽しめるハーフビュッフェ。目の前に広がる海を眺めながら、贅沢な朝のひとときをお過ごしください。</p>
                 </div>
                 <figure class="cuisine-img c-img pc">
                   <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">

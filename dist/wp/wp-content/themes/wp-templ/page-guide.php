@@ -80,7 +80,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <h2 class="ttl01">ショップ</h2>
               <strong>Shop</strong>
             </div>
-            <p class="desc">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
+            <p class="desc">別府・大分の特産品やグルメを気軽に楽しめるエリアです。</p>
             <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn01">
               <i class="arr01"></i>
               <span>もっと見る</span>
@@ -264,7 +264,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <div class="popup-ctn02">
                   <h3 class="popup-ttl">ショップ</h3>
                   <div class="popup-desc">
-                    <p class="txt">別府・大分の特産品やグルメを一堂に楽しめるショッピングエリア。ライフスタイルショップも楽しめる賑やかなエリアです。</p>
+                    <p class="txt">別府・大分の特産品やグルメを気軽に楽しめるエリアです。</p>
                   </div>
                 </div>
               </li>
