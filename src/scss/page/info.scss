@@ -469,7 +469,7 @@
     height: 1375px;
     background-size: cover;
     @include SP {
-      background-image: url($img_url + "img/common/bg_wp01_sp.png");
+      background-image: url($img_url + "img/info/bg_wp01_sp.png");
       height: 815px;
     }
   }
