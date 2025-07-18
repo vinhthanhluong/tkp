@@ -121,23 +121,23 @@ include(APP_PATH . 'libs/head.php'); ?>
           <span class="c-ttl04__en">Information</span>
         </div>
         <div class="info-data">
-          <dl>
-            <dt>
+          <div class="infor-dl">
+            <div class="infor-dt">
               <h3>営業時間</h3>
-            </dt>
-            <dd>8:00～22:00（最終受付 21:00）</dd>
-          </dl>
-          <dl>
-            <dt>
+            </div>
+            <div class="infor-dd">8:00～22:00（最終受付 21:00）</div>
+          </div>
+          <div class="infor-dl">
+            <div class="infor-dt">
               <h3>料金</h3>
-            </dt>
-            <dd>大人：2,500円<br>小人（6歳～12歳）：1,800円</dd>
-          </dl>
-          <dl>
-            <dt>
+            </div>
+            <div class="infor-dd">大人：2,500円<br>小人（6歳～12歳）：1,800円</div>
+          </div>
+          <div class="infor-dl">
+            <div class="infor-dt">
               <h3>アメニティ</h3>
-            </dt>
-            <dd>
+            </div>
+            <div class="infor-dd">
               <ul class="txt-list">
                 <li>シャンプー</li>
                 <li>クレンジング</li>
@@ -148,31 +148,31 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <li>ドライヤー</li>
                 <li>ヘアブラシ</li>
               </ul>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
+            </div>
+          </div>
+          <div class="infor-dl">
+            <div class="infor-dt">
               <h3>レンタル品（無料）</h3>
-            </dt>
-            <dd>
+            </div>
+            <div class="infor-dd">
               <ul class="txt-list">
                 <li>砂湯専用浴衣</li>
                 <li>タオル</li>
               </ul>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
+            </div>
+          </div>
+          <div class="infor-dl">
+            <div class="infor-dt">
               <h3>定休日</h3>
-            </dt>
-            <dd>不定休（月2回）</dd>
-          </dl>
-          <dl class="pc">
-            <dt>
+            </div>
+            <div class="infor-dd">不定休（月2回）</div>
+          </div>
+          <div class="infor-dl pc">
+            <div class="infor-dt">
               <h3>TEL</h3>
-            </dt>
-            <dd><a href="tel:0977756360" class="txt-link">0977-75-6360</a></dd>
-          </dl>
+            </div>
+            <div class="infor-dd"><a href="tel:0977756360" class="txt-link">0977-75-6360</a></div>
+          </div>
         </div>
       </div>
     </section>

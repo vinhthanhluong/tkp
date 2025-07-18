@@ -46,6 +46,32 @@
     padding-top: 24px;
     padding-bottom: 65px;
   }
+  .thumb-ctn {
+    position: relative;
+    @include PC {
+      max-width: 100px;
+      margin-right: 20px;
+      width: calc(100.02 / 300 * 100%);
+    }
+    @include SP {
+      width: 100%;
+      margin-bottom: 11px;
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: -32px;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>')
+          center no-repeat;
+      }
+    }
+  }
   .prev,
   .next {
     @include flex(1);
@@ -75,29 +101,6 @@
       mask-repeat: no-repeat;
       -webkit-mask-size: 100% 100%;
       mask-size: 100% 100%;
-      @include PC {
-        width: calc(100.02 / 300 * 100%);
-        max-width: 100px;
-        margin-right: 20px;
-      }
-      @include SP {
-        width: 100%;
-        margin-bottom: 11px;
-        &:after {
-          position: absolute;
-          content: "";
-          display: block;
-          top: 0;
-          bottom: 0;
-          left: -32px;
-          margin: auto;
-          width: 20px;
-          height: 20px;
-          z-index: 1;
-          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.74063 10.8035L16.25 10.8035L16.25 9.19645L6.74063 9.19645L10.9313 4.88622L9.82656 3.75L3.75 10L9.82656 16.25L10.9312 15.1138L6.74063 10.8035Z" fill="%2365B0D4"/></svg>')
-            center no-repeat;
-        }
-      }
       img {
         position: absolute;
         top: 0;
@@ -128,7 +131,7 @@
         text-align: right;
       }
     }
-    &__thumb {
+    .thumb-ctn {
       @include PC {
         margin-left: 18px;
         margin-right: 0;

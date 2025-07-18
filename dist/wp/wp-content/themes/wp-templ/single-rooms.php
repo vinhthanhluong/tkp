@@ -109,22 +109,22 @@ include(APP_PATH . 'libs/head.php');
                 <p class="archive-desc"><?php echo $room_desc; ?></p>
               <?php } ?>
               <?php if (!empty($room_info)) { ?>
-                <dl class="archive-data">
+                <div class="archive-data">
                   <?php
                   foreach ($room_info as $info) {
                     $info_head = $info['head'];
                     $info_detail = $info['detail'];
                     $info_detail = !empty($info_detail) ? explode("\n", $info_detail) : [];
-                    $info_detail = implode('</br>', $info_detail);
+                    $info_detail = implode('<br>', $info_detail);
                     if (!empty($info_head) && !empty($info_detail)) {
                   ?>
-                      <dt>
+                      <div class="date-dt">
                         <h2><?php echo $info_head; ?></h2>
-                      </dt>
-                      <dd><?php echo $info_detail; ?></dd>
+                      </div>
+                      <div class="data-dd"><?php echo $info_detail; ?></div>
                   <?php }
                   } ?>
-                </dl>
+                </div>
               <?php } ?>
               <?php if (!empty($room_japan_link)) { ?>
                 <a class="c-btn04 is-btn-reverse" href="<?php echo $room_japan_link; ?>" target="_blank" rel="noopener"><span>ご予約はこちら</span></a>

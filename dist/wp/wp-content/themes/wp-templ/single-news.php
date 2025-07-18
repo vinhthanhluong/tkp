@@ -119,9 +119,11 @@ include(APP_PATH . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($previd)) { ?>
-              <p class="prev__thumb <?php echo $prev_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $prev_thumb; ?>" rel="js-lazy" alt="">
-              </p>
+              <div class="thumb-ctn">
+                <p class="prev__thumb <?php echo $prev_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                  <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $prev_thumb; ?>" rel="js-lazy" alt="">
+                </p>
+              </div>
               <?php if (!empty($prev_ttl)) { ?>
                 <p class="prev__ttl"><?php echo $prev_ttl; ?></p>
               <?php } ?>
@@ -138,9 +140,11 @@ include(APP_PATH . 'libs/head.php');
                                         echo "disable";
                                       } ?>">
             <?php if (!empty($nextid)) { ?>
-              <p class="next__thumb <?php echo $next_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $next_thumb; ?>" rel="js-lazy" alt="">
-              </p>
+              <div class="thumb-ctn">
+                <p class="next__thumb <?php echo $next_thumb == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                  <img width="100" height="100" src="<?php echo createSVG(100, 100); ?>" data-src="<?php echo $next_thumb; ?>" rel="js-lazy" alt="">
+                </p>
+              </div>
               <?php if (!empty($next_ttl)) { ?>
                 <p class="next__ttl"><?php echo $next_ttl; ?></p>
               <?php } ?>

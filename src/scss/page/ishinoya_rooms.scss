@@ -558,13 +558,13 @@
         @include font(12);
       }
     }
-    dt,
-    dd {
+    .date-dt,
+    .data-dd {
       @include PC {
         margin-bottom: 6px;
       }
     }
-    dt {
+    .date-dt {
       font-weight: 700;
       @include PC {
         width: 176px;
@@ -577,8 +577,11 @@
       @include SP {
         margin-bottom: 4px;
       }
+      h2 {
+        font-weight: inherit;
+      }
     }
-    dd {
+    .data-dd {
       @include PC {
         width: calc(100% - 176px);
         @include max-screen(1023px) {

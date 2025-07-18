@@ -410,7 +410,7 @@
         width: calc(100% - 360px);
       }
     }
-    dl {
+    .infor-dl {
       @include PC {
         border-bottom: 1px solid #928dab;
         margin-bottom: 25px;
@@ -434,7 +434,7 @@
         }
       }
     }
-    dt {
+    .infor-dt {
       @include font("", 1.5, 100, 700);
       @include PC {
         padding: 0 20px;
@@ -452,7 +452,7 @@
         margin-bottom: 8px;
       }
     }
-    dd {
+    .infor-dd {
       letter-spacing: 0.1em;
       @include PC {
         @include flex(1);

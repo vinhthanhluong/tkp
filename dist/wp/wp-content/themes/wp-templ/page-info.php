@@ -8,8 +8,8 @@ $faq03 = get_field('faq03', $post_id);
 $faq04 = get_field('faq04', $post_id);
 
 include(APP_PATH . 'libs/head.php'); ?>
-</head>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/info.min.css?v=<?php echo APP_VER ?>">
+</head>
 
 <body id="info">
   <?php include(APP_PATH . 'libs/header.php'); ?>
@@ -109,42 +109,42 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
           <div class="block__info aos-init" data-aos="fade-up">
             <div class="c-table01">
-              <dl>
-                <dt>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>SHONIN PARK園内</h3>
-                </dt>
-                <dd>7:00～22:00</dd>
-              </dl>
-              <dl>
-                <dt>
+                </div>
+                <div class="c-table01__dd">7:00～22:00</div>
+              </div>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>フロント</h3>
-                </dt>
-                <dd>7:00～22:00</dd>
-              </dl>
-              <dl>
-                <dt>
+                </div>
+                <div class="c-table01__dd">7:00～22:00</div>
+              </div>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>Sand SPA<br class="pc">(砂湯・温泉)</h3>
-                </dt>
-                <dd>8:00～22:00（最終受付 21:00）</dd>
-              </dl>
-              <dl>
-                <dt>
+                </div>
+                <div class="c-table01__dd">8:00～22:00（最終受付 21:00）</div>
+              </div>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>ショップ</h3>
-                </dt>
-                <dd>10:00～20:00</dd>
-              </dl>
-              <dl>
-                <dt>
+                </div>
+                <div class="c-table01__dd">10:00～20:00</div>
+              </div>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>宿泊</h3>
-                </dt>
-                <dd>チェックイン 15:00　チェックアウト 10:00</dd>
-              </dl>
-              <dl>
-                <dt>
+                </div>
+                <div class="c-table01__dd">チェックイン 15:00　チェックアウト 10:00</div>
+              </div>
+              <div class="c-table01__row">
+                <div class="c-table01__dt">
                   <h3>レストラン</h3>
-                </dt>
-                <dd>7:00~22:00</dd>
-              </dl>
+                </div>
+                <div class="c-table01__dd">7:00~22:00</div>
+              </div>
             </div>
           </div>
         </div>

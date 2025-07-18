@@ -3,7 +3,7 @@ $thisPageName = 'restaurant';
 
 $post_id = get_the_ID();
 $food_list = get_field('food_list', $post_id);
-$file_pdf = get_field('file_pdf', $post_id);
+$file_repeater = get_field('file_repeater', $post_id);
 
 $parkTermId = 8;
 $restaurantTermId = 9;
@@ -161,7 +161,7 @@ include(APP_PATH . 'libs/head.php'); ?>
     </div>
 
     <section class="sec-menu">
-      <?php if (!empty($food_list) || !empty($file_pdf)) { ?>
+      <?php if (!empty($food_list) || !empty($file_repeater)) { ?>
         <div class="inner1170">
           <h2 class="c-ttl02 aos-init" data-aos="fade-up">
             <span class="c-ttl02__jp">メニュー</span>
@@ -204,17 +204,31 @@ include(APP_PATH . 'libs/head.php'); ?>
               <?php } ?>
             </ul>
           <?php } ?>
+
           <?php
-          if (!empty($file_pdf)) {
-            $file_pdf_size = $file_pdf['filesize'];
-            $file_pdf_size = round($file_pdf_size / (1024 * 1024), 2);
-            $file_pdf_url = $file_pdf['url'];
+          if (!empty($file_repeater)) {
+
           ?>
-            <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
-              <i class="arr01"></i>
-              <span>その他のメニューはこちら<small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
-              <i class="arr02"></i>
-            </a>
+            <ul class="button-list">
+              <?php
+              foreach ($file_repeater as $file) {
+                $file_name = $file['file_name'];
+                $file_pdf = $file['file_pdf'];
+                if (!empty($file_pdf)) {
+                  $file_pdf_size = $file_pdf['filesize'];
+                  $file_pdf_size = round($file_pdf_size / (1024 * 1024), 2);
+                  $file_pdf_url = $file_pdf['url'];
+                }
+              ?>
+                <li class="button-list__item">
+                  <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
+                    <i class="arr01"></i>
+                    <span><?php echo $file_name; ?><small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
+                    <i class="arr02"></i>
+                  </a>
+                </li>
+              <?php } ?>
+            </ul>
           <?php } ?>
         </div>
       <?php } ?>

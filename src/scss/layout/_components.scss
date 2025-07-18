@@ -2467,7 +2467,7 @@ a.c-btn04 {
   }
 }
 .c-table01 {
-  dl {
+  .c-table01__row {
     background: url($img_url + "img/common/ico_line01.png") repeat-x center
       bottom;
     background-size: 15px 1px;
@@ -2478,7 +2478,7 @@ a.c-btn04 {
         url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
       background-size: 15px 1px;
     }
-    dt {
+    .c-table01__dt {
       @include font(18, 30, 0.12, 700);
       @include PC {
         @include max-screen(1099px) {
@@ -2489,7 +2489,7 @@ a.c-btn04 {
         font-weight: inherit;
       }
     }
-    dd {
+    .c-table01__dd {
       @include font(16, 26, 0.12, 500);
       @include PC {
         @include max-screen(1099px) {
@@ -2501,16 +2501,16 @@ a.c-btn04 {
       display: table;
       width: 100%;
       table-layout: fixed;
-      dt,
-      dd {
+      .c-table01__dt,
+      .c-table01__dd {
         display: table-cell;
         vertical-align: middle;
       }
-      dt {
+      .c-table01__dt {
         width: 37%;
         padding: 0 10px 0 0;
       }
-      dd {
+      .c-table01__dd {
         width: 63%;
       }
     }
@@ -2523,11 +2523,11 @@ a.c-btn04 {
           url($img_url + "img/common/ico_line01_sp.png") repeat-x center bottom;
         background-size: 6px 1px;
       }
-      dt {
+      .c-table01__dt {
         @include font(16, 24);
         width: 100%;
       }
-      dd {
+      .c-table01__dd {
         @include font(14, 24);
         width: 100%;
         margin: 7px 0 0;

@@ -64,7 +64,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                   <h3 class="faq-question js-accordion"><span><?php echo $question; ?></span></h3>
                   <div class="faq-accordion js-accordion-content">
                     <div class="faq-answer">
-                      <p><?php echo $answer; ?></p>
+                      <div><?php echo $answer; ?></div>
                     </div>
                   </div>
                 </li>
