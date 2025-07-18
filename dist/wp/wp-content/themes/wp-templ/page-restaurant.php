@@ -50,7 +50,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <h1 class="mv-ttl aos-init" data-aos="fade-up">
           <span class="mv-ttl-jp">レストラン</span>
-          <span class="mv-ttl-en">Restaurant Grill Takka</span>
+          <span class="mv-ttl-en">RESTAURANT Grill Takka</span>
         </h1>
       </div>
       <div class="mv-img c-img aos-init" data-aos="fade-up">

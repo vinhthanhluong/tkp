@@ -6,6 +6,7 @@
 }
 
 .c-mainvisual .mv-ttl-en {
+  text-transform: none;
   @include ANDR {
     @include font(30);
   }
