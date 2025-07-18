@@ -104,14 +104,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <p class="check-confirm"><label><input id="check1" type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
 
             <div class="btn-confirm">
-              <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
-                <!-- <div class="capcha">
-                  <div class="g-recaptcha" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API; ?>"></div>
-                </div> -->
-                <button id="btnConfirm" class="g-recaptcha c-btn02" data-size="invisible" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API ?>" data-callback="onSubmit"><span>入力内容を確認する</span></button>
-              <?php } else { ?>
-                <button id="btnConfirm" class="c-btn02"><span>入力内容を確認する</span></button>
-              <?php } ?>
+              <button id="btnConfirm" class="c-btn02"><span>入力内容を確認する</span></button>
               <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
               <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('confirm') ?>">
             </div>

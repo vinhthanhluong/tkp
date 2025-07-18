@@ -73,7 +73,7 @@ define('APP_DUMMY_IMG', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAA
 
 define('GOOGLE_MAP_API_KEY', '');
 define('GOOGLE_RECAPTCHA_KEY_API', '6LeCL4crAAAAAJF7pUPjnH_yyc8RKD6PZoRGqgDG');
-define('GOOGLE_RECAPTCHA_KEY_SECRET', '6LeCL4crAAAAAJF7pUPjnH_yyc8RKD6PZoRGqgDG');
+define('GOOGLE_RECAPTCHA_KEY_SECRET', '6LeCL4crAAAAADHYhWxZfHRke7j4Ggj4CBsgbw9k');
 
 define('SMTP_ENABLED', false);
 define('SMTP_HOST', "smtp.gmail.com");
@@ -115,7 +115,7 @@ if (in_array($matches[1], $supported_languages)) {
 //contact
 $aMailtoContact = array('alivetestmail@alive-web.co.jp');
 $aBccToContact = array('');
-$fromContact = "alivetestmail@alive-web.biz";
+$fromContact = "tkpresort@tkp.jp";
 $fromName = "SHONIN PARK";
 $fromName02 = "ISHINOYA 別府";
 

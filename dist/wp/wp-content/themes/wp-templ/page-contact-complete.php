@@ -86,18 +86,18 @@ $msgBody
   try {
     $allow_send_email = 1;
     // Anti spam advanced version 3 start: Verify by google invisible reCaptcha
-    // if (defined('GOOGLE_RECAPTCHA_KEY_SECRET') && GOOGLE_RECAPTCHA_KEY_SECRET != '') {
-    //   $response = $_POST['g-recaptcha-response'];
-    //   $ch = curl_init();
-    //   curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-    //   curl_setopt($ch, CURLOPT_POST, 1);
-    //   curl_setopt($ch, CURLOPT_POSTFIELDS, "secret=" . GOOGLE_RECAPTCHA_KEY_SECRET . "&response={$response}");
-    //   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //   $returnJson = json_decode(curl_exec($ch));
-    //   curl_close($ch);
-    //   if (!empty($returnJson->success) && $returnJson->score > 0.4) {
-    //   } else throw new Exception('Protect by Google Invisible Recaptcha');
-    // }
+    if (defined('GOOGLE_RECAPTCHA_KEY_SECRET') && GOOGLE_RECAPTCHA_KEY_SECRET != '') {
+      $response = $_POST['g-recaptcha-response'];
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, "secret=" . GOOGLE_RECAPTCHA_KEY_SECRET . "&response={$response}");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $returnJson = json_decode(curl_exec($ch));
+      curl_close($ch);
+      if (!empty($returnJson->success) && $returnJson->score > 0.4) {
+      } else throw new Exception('Protect by Google Invisible Recaptcha');
+    }
 
     // Anti spam advanced version 3 start: Verify by google invisible reCaptcha
     if (empty($_SESSION['ses_from_step2'])) throw new Exception('Step confirm must be display');
@@ -148,32 +148,32 @@ $msgBody
 
 
   if ($allow_send_email) {
-  //////// お客様受け取りメール送信
-  $email = new PHPMailer\PHPMailer\PHPmailer();
+    //////// お客様受け取りメール送信
+    $email = new PHPMailer\PHPMailer\PHPmailer();
 
-  //////// send mail via SMTP
-  if (defined('SMTP_ENABLED') && SMTP_ENABLED) {
-    $email->isSMTP();
-    $email->Host = SMTP_HOST;
-    $email->SMTPAuth = SMTP_AUTH;
-    $email->SMTPDebug = SMTP_DEBUG;
-    $email->SMTPSecure = SMTP_SECURE;
-    $email->Username = SMTP_USERNAME;
-    $email->Password = SMTP_PASSWORD;
-    $email->Port = SMTP_PORT;
-  }
+    //////// send mail via SMTP
+    if (defined('SMTP_ENABLED') && SMTP_ENABLED) {
+      $email->isSMTP();
+      $email->Host = SMTP_HOST;
+      $email->SMTPAuth = SMTP_AUTH;
+      $email->SMTPDebug = SMTP_DEBUG;
+      $email->SMTPSecure = SMTP_SECURE;
+      $email->Username = SMTP_USERNAME;
+      $email->Password = SMTP_PASSWORD;
+      $email->Port = SMTP_PORT;
+    }
 
-  // メール送信 USER
-  $email->CharSet = 'utf-8';
-  $email->setFrom($from, $mailFromName);
-  $email->addAddress($reg_email);
-  $email->Sender = $from;
-  $email->Subject = $subject_user;
-  $email->Body = $body_user;
+    // メール送信 USER
+    $email->CharSet = 'utf-8';
+    $email->setFrom($from, $mailFromName);
+    $email->addAddress($reg_email);
+    $email->Sender = $from;
+    $email->Subject = $subject_user;
+    $email->Body = $body_user;
 
-  $email->DKIM_domain = 'tkp.jp';
-  $email->DKIM_selector = 'tkpselector';
-  $email->DKIM_private_string = '-----BEGIN RSA PRIVATE KEY-----
+    $email->DKIM_domain = 'tkp.jp';
+    $email->DKIM_selector = 'tkpselector';
+    $email->DKIM_private_string = '-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAl6qYRgTbswci1799HYxMqMJStGsvEjPuhgqk058gpJ13IgB8
 5ThkzkY0cQcNskbcspxDKoiI3KkM6joEtGYQKFO584ez7k5AdFUXIS0FM+fjNEDS
 64wEQv9TlsefOyZdaIImeSA/MbxEexRGNilqoQwgnib7rfsl4XxKCAclu6Y3mELq
@@ -200,24 +200,24 @@ qdBgTgtRJELjxwYM7hysddfii7txHvfXD+U9J592DSCx0fEnmMS5CSHW5LSU7SFx
 +sZGhWVX+p7mmhRwj42qSU2NLLEmXHJ60mp10pXA/Fry6VjR6wZFXc4seKLlUJli
 BfxvW+ysOWwPTCv+Hq1S1fGfdTw0tpS+5P5MJviHt8SK9DhciQILhg==
 -----END RSA PRIVATE KEY-----';
-  $email->DKIM_identity = $email->From;
+    $email->DKIM_identity = $email->From;
 
-  if ($email->send()) {
-    /*Do you want to debug something?*/
-  }
+    if ($email->send()) {
+      /*Do you want to debug something?*/
+    }
 
-  // メール送信 ADMIN
-  $email->clearAddresses();
-  foreach ($aMailto as $mailAddr) $email->addAddress($mailAddr);
-  if ($aBccTo) foreach ($aBccTo as $mailAddr) $email->addBcc($mailAddr);
-  if (!empty($reg_email) && !empty($reg_name)) $email->addReplyTo($reg_email, $reg_name);
-  $email->Sender = $from;
-  $email->Subject = $subject_admin;
-  $email->Body = $body_admin;
+    // メール送信 ADMIN
+    $email->clearAddresses();
+    foreach ($aMailto as $mailAddr) $email->addAddress($mailAddr);
+    if ($aBccTo) foreach ($aBccTo as $mailAddr) $email->addBcc($mailAddr);
+    if (!empty($reg_email) && !empty($reg_name)) $email->addReplyTo($reg_email, $reg_name);
+    $email->Sender = $from;
+    $email->Subject = $subject_admin;
+    $email->Body = $body_admin;
 
-  $email->DKIM_domain = 'tkp.jp';
-  $email->DKIM_selector = 'tkpselector';
-  $email->DKIM_private_string = '-----BEGIN RSA PRIVATE KEY-----
+    $email->DKIM_domain = 'tkp.jp';
+    $email->DKIM_selector = 'tkpselector';
+    $email->DKIM_private_string = '-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAl6qYRgTbswci1799HYxMqMJStGsvEjPuhgqk058gpJ13IgB8
 5ThkzkY0cQcNskbcspxDKoiI3KkM6joEtGYQKFO584ez7k5AdFUXIS0FM+fjNEDS
 64wEQv9TlsefOyZdaIImeSA/MbxEexRGNilqoQwgnib7rfsl4XxKCAclu6Y3mELq
@@ -244,13 +244,13 @@ qdBgTgtRJELjxwYM7hysddfii7txHvfXD+U9J592DSCx0fEnmMS5CSHW5LSU7SFx
 +sZGhWVX+p7mmhRwj42qSU2NLLEmXHJ60mp10pXA/Fry6VjR6wZFXc4seKLlUJli
 BfxvW+ysOWwPTCv+Hq1S1fGfdTw0tpS+5P5MJviHt8SK9DhciQILhg==
 -----END RSA PRIVATE KEY-----';
-  $email->DKIM_identity = $email->From;
+    $email->DKIM_identity = $email->From;
 
-  if ($email->send()) {
-    /*Do you want to debug something?*/
-  }
+    if ($email->send()) {
+      /*Do you want to debug something?*/
+    }
 
-  $_SESSION['ses_step3'] = true;
+    $_SESSION['ses_step3'] = true;
   }
 
   $_SESSION['statusFlag'] = 1;
