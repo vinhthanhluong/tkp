@@ -50,7 +50,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <h1 class="mv-ttl aos-init" data-aos="fade-up">
           <span class="mv-ttl-jp">レストラン</span>
-          <span class="mv-ttl-en">Restaurant</span>
+          <span class="mv-ttl-en">Restaurant Grill Takka</span>
         </h1>
       </div>
       <div class="mv-img c-img aos-init" data-aos="fade-up">
@@ -68,7 +68,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
       <div class="about-right">
         <div class="about-content dot-decor">
-          <p class="about-desc aos-init" data-aos="fade-up">別府湾を一望する絶好のロケーションで、本格ハワイアングリルをベースに、大分風にアレンジしたお料理を楽しめるレストラン。<br>ポキボウルやオニオンブロッサムなどの定番メニューに加え、地元食材を活かしたオリジナルメニューもご用意しています。<br>海風と陽気なハワイの雰囲気に包まれながら、特別なひとときをお過ごしください。</p>
+          <p class="about-desc aos-init" data-aos="fade-up">別府湾を一望する絶好のロケーションで、本格ハワイアングリルをベースに、大分風にアレンジしたお料理を楽しめるレストラン「Grill Takka」。<br>ポキボウルやオニオンブロッサムなどの定番メニューに加え、地元食材を活かしたオリジナルメニューもご用意しています。<br>海風と陽気なハワイの雰囲気に包まれながら、特別なひとときをお過ごしください。</p>
           <div class="about-group">
             <figure class="about-img c-img sp aos-init" data-aos="fade-up">
               <img src="<?php echo createSVG(546, 514); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/restaurant/about_img01.jpg" rel="js-lazy" width="546" height="514" alt="">

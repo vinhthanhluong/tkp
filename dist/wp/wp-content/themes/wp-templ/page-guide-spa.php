@@ -56,7 +56,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <div class="c-ttl04">
           <h2 class="c-ttl04__jp">エリア案内</h2>
-          <span class="c-ttl04__en">Spa Area</span>
+          <span class="c-ttl04__en">Sand SPA Area</span>
         </div>
         <div class="area-img">
           <img src="<?php echo createSVG(1170, 508); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/area_map.png" rel="js-lazy" width="1170" height="508" alt="エリア案内マップ">
@@ -180,7 +180,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <div class="c-ttl04">
           <h2 class="c-ttl04__jp">砂湯の利用方法</h2>
-          <span class="c-ttl04__en">How to <br class="sp">Use SUNAYU</span>
+          <span class="c-ttl04__en">How to <br class="sp">Use Sand Spa</span>
         </div>
         <ul class="step-list">
           <li class="step-item">

@@ -19,7 +19,7 @@
               <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/contact/">お問い合わせ</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/roooms/">お部屋</a>
+              <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/rooms/">お部屋</a>
             </li>
             <li class="col-menu__item">
               <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>

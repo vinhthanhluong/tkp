@@ -551,6 +551,9 @@ body:not(.fixHeader) {
         }
         &.hasSub {
           .gNaviPC-item__link {
+            @include screen(768px, 1024px) {
+              pointer-events: none;
+            }
             @include HOVER {
               span {
                 &:before {

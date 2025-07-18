@@ -10,10 +10,9 @@ $(function () {
   jsSliderNews();
   jsSlideGallery();
   initCustomCursor();
-});
-$(window).on("load", function () {
   initAos();
 });
+// $(window).on("load", function () {});
 $(window).on("resize", function () {
   $(".navSub").css("display", "none");
   $(".gNavi .hasSub").removeClass("active");

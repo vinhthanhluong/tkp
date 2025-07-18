@@ -56,16 +56,16 @@ function appIsMobile() {
 }
 
 function initAos() {
-  if ($(".aos-init").length) {
-    setTimeout(function () {
-      AOS.init({
-        once: true,
-        duration: 1000,
-        // delay: 200,
-        // offset: 0,
-      });
-    }, 500);
-  }
+  AOS.init({
+    once: true,
+    duration: 1000,
+    // delay: 200,
+    // offset: 0,
+  });
+  // if ($(".aos-init").length) {
+  // setTimeout(function () {
+  // }, 500);
+  // }
 }
 
 function jsPopup() {
