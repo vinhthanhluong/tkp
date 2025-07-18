@@ -21,20 +21,6 @@ include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/jquery-ui.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_form.min.css?v=<?php echo APP_VER ?>">
-
-<?php if (GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
-  <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
-  <script>
-    function onSubmit(token) {
-      document.getElementsByClassName("contactform").submit();
-    }
-  </script>
-  <style>
-    .grecaptcha-badge {
-      display: none
-    }
-  </style>
-<?php } ?>
 </head>
 
 <body id="ishinoya-form" class="ishinoya-form page-form">
@@ -155,14 +141,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <div class="box-confirm02">
               <p class="check-confirm"><label><input id="check1" type="checkbox" name="check1" value="<?php echo sanitize_form_value('agree') ?>"><span> プライバシーポリシーに同意する</span></label></p>
               <div class="btn-confirm">
-                <?php if (defined('GOOGLE_RECAPTCHA_KEY_API') && GOOGLE_RECAPTCHA_KEY_API != '') { ?>
-                  <div class="capcha">
-                    <div class="g-recaptcha" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API; ?>"></div>
-                  </div>
-                  <button id="btnConfirm" class="g-recaptcha" data-size="invisible" data-sitekey="<?php echo GOOGLE_RECAPTCHA_KEY_API ?>" data-callback="onSubmit"><span>入力内容を確認する</span></button>
-                <?php } else { ?>
-                  <button id="btnConfirm" class=""><span>入力内容を確認する</span></button>
-                <?php } ?>
+                <button id="btnConfirm" class=""><span>入力内容を確認する</span></button>
                 <input type="hidden" name="_csrf" value="<?php echo generate_csrf_token() ?>">
                 <input type="hidden" name="actionFlag" value="<?php echo sanitize_form_value('confirm') ?>">
               </div>

@@ -100,18 +100,18 @@ $msgBody
   try {
     $allow_send_email = 1;
     // Anti spam advanced version 3 start: Verify by google invisible reCaptcha
-    // if (defined('GOOGLE_RECAPTCHA_KEY_SECRET') && GOOGLE_RECAPTCHA_KEY_SECRET != '') {
-    //   $response = $_POST['g-recaptcha-response'];
-    //   $ch = curl_init();
-    //   curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-    //   curl_setopt($ch, CURLOPT_POST, 1);
-    //   curl_setopt($ch, CURLOPT_POSTFIELDS, "secret=" . GOOGLE_RECAPTCHA_KEY_SECRET . "&response={$response}");
-    //   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //   $returnJson = json_decode(curl_exec($ch));
-    //   curl_close($ch);
-    //   if (!empty($returnJson->success) && $returnJson->score > 0.4) {
-    //   } else throw new Exception('Protect by Google Invisible Recaptcha');
-    // }
+    if (defined('GOOGLE_RECAPTCHA_KEY_SECRET') && GOOGLE_RECAPTCHA_KEY_SECRET != '') {
+      $response = $_POST['g-recaptcha-response'];
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, "secret=" . GOOGLE_RECAPTCHA_KEY_SECRET . "&response={$response}");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $returnJson = json_decode(curl_exec($ch));
+      curl_close($ch);
+      if (!empty($returnJson->success) && $returnJson->score > 0.4) {
+      } else throw new Exception('Protect by Google Invisible Recaptcha');
+    }
 
     // Anti spam advanced version 3 start: Verify by google invisible reCaptcha
     if (empty($_SESSION['ses_from_step2'])) throw new Exception('Step confirm must be display');
@@ -268,14 +268,14 @@ BfxvW+ysOWwPTCv+Hq1S1fGfdTw0tpS+5P5MJviHt8SK9DhciQILhg==
   }
 
   $_SESSION['statusFlag'] = 1;
-  header("Location: " . APP_URL . "contact/complete/");
+  header("Location: " . APP_URL . "guide/ishinoya/contact/form/complete/");
   exit;
 }
 
 if (!empty($_SESSION['statusFlag'])) unset($_SESSION['statusFlag']);
 else header('location: ' . APP_URL);
 
-$thisPageName = 'contact';
+$thisPageName = 'ishinoya-form';
 include(APP_PATH . "libs/head.php");
 
 unset($_SESSION['ses_gtime_step2']);
