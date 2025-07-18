@@ -1433,8 +1433,6 @@ body {
           }
         }
         @include SP {
-          width: calc(156 / 327 * 100%);
-          margin-right: calc(15 / 327 * 100%);
           margin-bottom: 15px;
           &:nth-child(2n) {
             margin-right: 0;
