@@ -152,7 +152,7 @@ include(APP_PATH . 'libs/head.php');
             <?php } ?>
           </ul>
         <?php } else { ?>
-          <p class="comming">表示する記事がありません。</p>
+          <p class="c-text-nonpost">表示する記事がありません。</p>
         <?php }
         wp_reset_postdata(); ?>
       </div>

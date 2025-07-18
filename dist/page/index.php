@@ -149,6 +149,8 @@ include(APP_PATH . 'libs/head.php'); ?>
           <a href="" class="c-cate01">すべて</a>
           <p class="demo-ttl">.c-cate01.is-active</p>
           <a href="" class="c-cate01 is-active">すべて</a>
+          <p class="demo-ttl">.c-text-nonpost</p>
+          <p class="c-text-nonpost">表示する記事がありません。</p>
           <p class="demo-ttl">.c-lstpost01</p>
           <ul class="c-lstpost01">
             <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="0">

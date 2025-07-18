@@ -391,7 +391,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="comming">表示する記事がありません。</p>
+                <p class="c-text-nonpost">表示する記事がありません。</p>
               <?php } ?>
             </div>
 
@@ -414,7 +414,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="comming">表示する記事がありません。</p>
+                <p class="c-text-nonpost">表示する記事がありません。</p>
               <?php } ?>
             </div>
             <div class="tab-content" id="tab03">
@@ -436,7 +436,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="comming">表示する記事がありません。</p>
+                <p class="c-text-nonpost">表示する記事がありません。</p>
               <?php } ?>
             </div>
             <div class="tab-content" id="tab04">
@@ -458,7 +458,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="comming">表示する記事がありません。</p>
+                <p class="c-text-nonpost">表示する記事がありません。</p>
               <?php } ?>
             </div>
           </div>

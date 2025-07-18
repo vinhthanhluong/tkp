@@ -71,6 +71,10 @@
     object-fit: contain !important;
   }
 }
+.c-text-nonpost {
+  @include font(16, 30, 80, 400);
+  text-align: center;
+}
 
 /* ===================== MAINVISUAL ===================== */
 .c-mainvisual {

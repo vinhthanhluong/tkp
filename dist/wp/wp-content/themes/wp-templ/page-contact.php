@@ -7,20 +7,6 @@ include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/validationEngine.jquery.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/contact.min.css?v=<?php echo APP_VER ?>">
-
-<?php if (GOOGLE_RECAPTCHA_KEY_API != '' && GOOGLE_RECAPTCHA_KEY_SECRET != '') { ?>
-  <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
-  <script>
-    function onSubmit(token) {
-      document.getElementsByClassName("contactform").submit();
-    }
-  </script>
-  <style>
-    .grecaptcha-badge {
-      display: none
-    }
-  </style>
-<?php } ?>
 </head>
 
 <body id="contact" class="contact page-form">
