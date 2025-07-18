@@ -72,8 +72,8 @@ define('APP_NOIMG', APP_ASSETS . 'img/common/img_nophoto.jpg');
 define('APP_DUMMY_IMG', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 
 define('GOOGLE_MAP_API_KEY', '');
-define('GOOGLE_RECAPTCHA_KEY_API', '6LdZEzkrAAAAADcAENwYl0UdZz29x_Xr9tZjgm6r');
-define('GOOGLE_RECAPTCHA_KEY_SECRET', '6LdZEzkrAAAAAPR2xlpECDnPMrEQIyFDY84nj530');
+define('GOOGLE_RECAPTCHA_KEY_API', '6LeCL4crAAAAAJF7pUPjnH_yyc8RKD6PZoRGqgDG');
+define('GOOGLE_RECAPTCHA_KEY_SECRET', '6LeCL4crAAAAAJF7pUPjnH_yyc8RKD6PZoRGqgDG');
 
 define('SMTP_ENABLED', false);
 define('SMTP_HOST', "smtp.gmail.com");
