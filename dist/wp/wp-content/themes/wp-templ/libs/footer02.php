@@ -25,7 +25,7 @@
               <a class="link" href="<?php echo APP_URL ?>guide/ishinoya/cuisine/">お食事</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>">宿泊予約</a>
+              <a class="link" href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener">宿泊予約</a>
             </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@
               <a class="link" href="<?php echo APP_URL ?>ways/">楽しみ方</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>">施設情報</a>
+              <a class="link" href="<?php echo APP_URL ?>info/">施設情報</a>
             </li>
             <li class="col-menu__item">
               <a class="link" href="<?php echo APP_URL ?>guide/">施設案内</a>
@@ -58,7 +58,7 @@
               <a class="link" href="<?php echo APP_URL ?>news/">ニュース</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL ?>">総合お問い合わせ</a>
+              <a class="link" href="<?php echo APP_URL ?>contact/">総合お問い合わせ</a>
             </li>
           </ul>
         </div>

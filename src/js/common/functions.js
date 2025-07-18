@@ -85,12 +85,19 @@ function jsPopup() {
     $(".js-modaloverlay").toggleClass("is-active");
     $(".js-modalpopup").removeClass("is-active");
   });
-  $(window).on("load", function () {
+
+  // Set popup max-height after DOM is ready
+  function setPopupHeight() {
     $(".js-modalpopup").each(function (index) {
-      var popup_height =
-        $(this).find(".modal-popup__inner").outerHeight() + "px";
-      $(this).css("--maxheight", popup_height);
+      var popup_height = $(this).find(".modal-popup__inner").outerHeight();
+      // Use max-height instead of CSS variables for better browser compatibility
+      $(this).css("max-height", popup_height + "px");
     });
+  }
+
+  // Set height on load and resize for responsive behavior
+  $(window).on("load resize", function () {
+    setPopupHeight();
   });
 }
 

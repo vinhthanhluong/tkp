@@ -1,4 +1,10 @@
-handleGoogleFontLoader();
+if ($(window).width() > 768) {
+  handleGoogleFontLoader();
+} else {
+  setTimeout(() => {
+    handleGoogleFontLoader();
+  }, 2000);
+}
 handleAntiSpamMailContact();
 $(function () {
   // DOCUMENT READY
