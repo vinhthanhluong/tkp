@@ -4,7 +4,7 @@
  * Template Name: Page GUIDE ISHINOYA SPA
  **/
 $thisPageName = 'ishinoya-spa';
-include(APP_PATH . 'libs/head.php'); ?>
+include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_spa.min.css?v=<?php echo APP_VER ?>">
 </head>
 

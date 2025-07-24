@@ -21,7 +21,7 @@ $titlepage = strip_tags($ttlpost) . '｜ISHINOYA 別府 / 石のや 別府';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($room_desc)), 0, 120);
 $desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
 
-include(APP_PATH . 'libs/head.php');
+include(APP_PATH . 'libs/head02.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_rooms.min.css?v=<?php echo APP_VER ?>">

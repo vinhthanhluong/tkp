@@ -30,7 +30,7 @@ $br_reg_content     = nl2br($reg_content);
 
 if ($actionFlag == "confirm") {
   $thisPageName = 'ishinoya-form';
-  include(APP_PATH . 'libs/head.php');
+  include(APP_PATH . 'libs/head02.php');
   $_SESSION['ses_from_step2'] = true;
   if (!isset($_SESSION['ses_gtime_step2'])) $_SESSION['ses_gtime_step2'] = $gtime;
 ?>

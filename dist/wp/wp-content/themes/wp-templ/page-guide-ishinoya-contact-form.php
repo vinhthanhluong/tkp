@@ -16,7 +16,7 @@ if (!empty($_POST['actionFlag'])) {
     exit();
   } else header('location: ' . get_the_permalink());
 }
-include(APP_PATH . 'libs/head.php'); ?>
+include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/validationEngine.jquery.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/form.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/jquery-ui.min.css?v=<?php echo APP_VER ?>">

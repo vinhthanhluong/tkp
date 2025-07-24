@@ -276,7 +276,7 @@ if (!empty($_SESSION['statusFlag'])) unset($_SESSION['statusFlag']);
 else header('location: ' . APP_URL);
 
 $thisPageName = 'ishinoya-form';
-include(APP_PATH . "libs/head.php");
+include(APP_PATH . "libs/head02.php");
 
 unset($_SESSION['ses_gtime_step2']);
 unset($_SESSION['ses_from_step2']);

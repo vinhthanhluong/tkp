@@ -4,7 +4,7 @@
  * Template Name: Page GUIDE ISHINOYA CUISINE
  **/
 $thisPageName = 'ishinoya-cuisine';
-include(APP_PATH . 'libs/head.php'); ?>
+include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_cuisine.min.css?v=<?php echo APP_VER ?>">
 </head>

@@ -1,6 +1,6 @@
 <?php
 $thisPageName = 'rooms';
-include(APP_PATH . 'libs/head.php');
+include(APP_PATH . 'libs/head02.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_rooms.min.css?v=<?php echo APP_VER ?>">
 </head>

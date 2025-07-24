@@ -9,7 +9,7 @@ $thisPageName = 'ishinoya-contact';
 $post_id = 202; //id page info
 $faq03 = get_field('faq03', $post_id);
 
-include(APP_PATH . 'libs/head.php'); ?>
+include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_contact.min.css?v=<?php echo APP_VER ?>">
 </head>
 
