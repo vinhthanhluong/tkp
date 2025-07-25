@@ -1717,13 +1717,19 @@ a.c-btn04 {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  max-height: var(--maxheight);
+  // max-height: var(--maxheight);
+  @include flexbox;
+  @include align-items(center);
   @include SP {
     bottom: 108px;
   }
   &.is-active {
     opacity: 1;
     pointer-events: auto;
+  }
+  .modal-ctn {
+    position: relative;
+    height: auto;
   }
   .modal-inner {
     position: relative;

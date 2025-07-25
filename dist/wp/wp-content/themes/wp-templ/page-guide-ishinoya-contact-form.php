@@ -111,7 +111,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
                 </th>
                 <td>
                   <input placeholder="フルネームでご記入ください" type="text" name="namereser" id="namereser" class="">
-                  <p class="txt-hint">※ご予約者様とお問い合わせ主様のお名前が異なる場合のみご記入ください。</p>
+                  <p class="txt-hint">※ご予約者様とお問い合わせ主様のお名前が異なる場合のみご記入ください</p>
                 </td>
               </tr>
               <tr>

@@ -158,7 +158,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
         <div class="block01 aos-init" data-aos="fade-up">
           <div class="block01__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5296.497497479467!2d131.5012107!3d33.3138848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a94de4fdd5%3A0x5e4099a53d0100aa!2sSHONIN%20PARK!5e1!3m2!1sen!2s!4v1748589203279!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5296.497499092876!2d131.4986357770873!3d33.31388477344385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a94de4fdd5%3A0x5e4099a53d0100aa!2sSHONIN%20PARK!5e1!3m2!1sja!2sjp!4v1753412184171!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="block01_info">
             <div class="info01">

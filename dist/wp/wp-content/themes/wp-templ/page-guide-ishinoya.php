@@ -15,8 +15,26 @@ include(APP_PATH . 'libs/head02.php'); ?>
     <div class="i-overflow">
       <div class="sec-mv">
         <div class="mv-bg">
-          <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
-          <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+          <div class="bg-swiper js-bg-swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide01.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+                <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide01_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+              </li>
+              <li class="swiper-slide">
+                <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide02.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+                <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide02_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+              </li>
+              <li class="swiper-slide">
+                <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide03.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+                <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide03_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+              </li>
+              <li class="swiper-slide">
+                <img class="pc" src="<?php echo createSVG(1440, 900) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide04.jpg" rel="js-lazy" width="1440" height="900" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+                <img class="sp" src="<?php echo createSVG(375, 667) ?>" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/mv_slide04_sp.jpg" rel="js-lazy" width="375" height="667" alt="ISHINOYA 別府 / 石のや 別府 メインビジュアル画像">
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="mv-ctn">
           <p class="mv-ttl">

@@ -64,14 +64,14 @@ include(APP_PATH . 'libs/head.php'); ?>
             <tr>
               <th><em>必須</em>メールアドレス</th>
               <td>
-                <input type="email" name="email" id="email" class="validate[required,custom[email]]">
+                <input placeholder="info@shoninpark.jp" type="email" name="email" id="email" class="validate[required,custom[email]]">
                 <p class="txt-hint">※半角英数字で入力してください</p>
               </td>
             </tr>
             <tr>
               <th><em>必須</em>お電話番号</th>
               <td>
-                <input type="tel" name="tel" id="tel" class="validate[required,custom[phone]]">
+                <input placeholder="0123456789" type="tel" name="tel" id="tel" class="validate[required,custom[phone]]">
                 <p class="txt-hint">※半角英数字（「-」ハイフン無し）で入力してください</p>
               </td>
             </tr>

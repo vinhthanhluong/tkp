@@ -152,7 +152,7 @@
       }
     }
   }
-  .ways-list {
+  .ways-ctn {
     @include PC {
       padding-left: 200px;
       @include max-screen(1440px) {
@@ -165,6 +165,9 @@
     @include ANDR {
       padding-left: 70px;
     }
+  }
+
+  .ways-list {
   }
   .ways-item {
     @include PC {

@@ -30,127 +30,135 @@
 <!-- Popup -->
 <div class="modal-overlay js-modaloverlay"></div>
 <div class="modal-popup js-modalpopup" id="modal01">
-  <div class="modal-inner">
-    <div class="modal-window">
-      <div class="modal-popup__inner">
-        <ul class="popup-lst">
-          <li class="popup-lst__item">
-            <div class="popup-ctn01">
-              <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup01.jpg" width="280" height="190" rel="js-lazy" alt="レストラン">
+  <div class="modal-ctn">
+    <div class="modal-inner">
+      <div class="modal-window">
+        <div class="modal-popup__inner">
+          <ul class="popup-lst">
+            <li class="popup-lst__item">
+              <div class="popup-ctn01">
+                <div class="popup-thumb">
+                  <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup01.jpg" width="280" height="190" rel="js-lazy" alt="レストラン">
+                </div>
               </div>
-            </div>
-            <div class="popup-ctn02">
-              <h3 class="popup-ttl">Grill Takka</h3>
-              <div class="popup-desc">
-                <p class="txt">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を堪能できます。</p>
+              <div class="popup-ctn02">
+                <h3 class="popup-ttl">Grill Takka</h3>
+                <div class="popup-desc">
+                  <p class="txt">別府湾を眺めながら、別府の恵みを味わえるハワイアンレストラン。開放感あふれる空間で朝食のビュッフェやグリル料理を堪能できます。</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="popup-btn">
+      <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn02 is-center">
+        <i class="arr01"></i>
+        <span>もっと見る</span>
+        <i class="arr02"></i>
+      </a>
+    </div>
+    <p class="popup-close js-popupclose"><span class="btn"></span></p>
   </div>
-  <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>guide/restaurant/" class="c-btn02 is-center">
-      <i class="arr01"></i>
-      <span>もっと見る</span>
-      <i class="arr02"></i>
-    </a>
-  </div>
-  <p class="popup-close js-popupclose"><span class="btn"></span></p>
 </div>
 <div class="modal-popup js-modalpopup" id="modal02">
-  <div class="modal-inner">
-    <div class="modal-window">
-      <div class="modal-popup__inner">
-        <ul class="popup-lst">
-          <li class="popup-lst__item">
-            <div class="popup-ctn01">
-              <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup02.jpg" width="280" height="190" rel="js-lazy" alt="砂湯・温泉">
+  <div class="modal-ctn">
+    <div class="modal-inner">
+      <div class="modal-window">
+        <div class="modal-popup__inner">
+          <ul class="popup-lst">
+            <li class="popup-lst__item">
+              <div class="popup-ctn01">
+                <div class="popup-thumb">
+                  <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup02.jpg" width="280" height="190" rel="js-lazy" alt="砂湯・温泉">
+                </div>
               </div>
-            </div>
-            <div class="popup-ctn02">
-              <h3 class="popup-ttl">Sand SPA<br>（別府海浜砂湯）</h3>
-              <div class="popup-desc">
-                <p class="txt">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
+              <div class="popup-ctn02">
+                <h3 class="popup-ttl">Sand SPA<br>（別府海浜砂湯）</h3>
+                <div class="popup-desc">
+                  <p class="txt">別府の海浜砂湯の歴史と文化を継承しつつ、新たな温泉体験を提供する「Sand SPA」。広大な施設の中には砂湯温泉だけでなく、Barや無料で利用できる足湯もお楽しみいただけます。</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="popup-btn">
+      <a href="<?php echo APP_URL ?>guide/spa/" class="c-btn02 is-center">
+        <i class="arr01"></i>
+        <span>もっと見る</span>
+        <i class="arr02"></i>
+      </a>
+    </div>
+    <p class="popup-close js-popupclose"><span class="btn"></span></p>
   </div>
-  <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>guide/spa/" class="c-btn02 is-center">
-      <i class="arr01"></i>
-      <span>もっと見る</span>
-      <i class="arr02"></i>
-    </a>
-  </div>
-  <p class="popup-close js-popupclose"><span class="btn"></span></p>
 </div>
 <div class="modal-popup js-modalpopup" id="modal03">
-  <div class="modal-inner">
-    <div class="modal-window">
-      <div class="modal-popup__inner">
-        <ul class="popup-lst">
-          <li class="popup-lst__item">
-            <div class="popup-ctn01">
-              <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup03.jpg" width="280" height="190" rel="js-lazy" alt="ショップ">
+  <div class="modal-ctn">
+    <div class="modal-inner">
+      <div class="modal-window">
+        <div class="modal-popup__inner">
+          <ul class="popup-lst">
+            <li class="popup-lst__item">
+              <div class="popup-ctn01">
+                <div class="popup-thumb">
+                  <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup03.jpg" width="280" height="190" rel="js-lazy" alt="ショップ">
+                </div>
               </div>
-            </div>
-            <div class="popup-ctn02">
-              <h3 class="popup-ttl">ショップ</h3>
-              <div class="popup-desc">
-                <p class="txt">別府・大分の特産品やグルメを気軽に楽しめるエリアです。</p>
+              <div class="popup-ctn02">
+                <h3 class="popup-ttl">ショップ</h3>
+                <div class="popup-desc">
+                  <p class="txt">別府・大分の特産品やグルメを気軽に楽しめるエリアです。</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="popup-btn">
+      <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn02 is-center">
+        <i class="arr01"></i>
+        <span>もっと見る</span>
+        <i class="arr02"></i>
+      </a>
+    </div>
+    <p class="popup-close js-popupclose"><span class="btn"></span></p>
   </div>
-  <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>guide/shop/" class="c-btn02 is-center">
-      <i class="arr01"></i>
-      <span>もっと見る</span>
-      <i class="arr02"></i>
-    </a>
-  </div>
-  <p class="popup-close js-popupclose"><span class="btn"></span></p>
 </div>
 <div class="modal-popup js-modalpopup" id="modal04">
-  <div class="modal-inner">
-    <div class="modal-window">
-      <div class="modal-popup__inner">
-        <ul class="popup-lst">
-          <li class="popup-lst__item">
-            <div class="popup-ctn01">
-              <div class="popup-thumb">
-                <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup04.jpg" width="280" height="190" rel="js-lazy" alt="宿泊コテージ">
+  <div class="modal-ctn">
+    <div class="modal-inner">
+      <div class="modal-window">
+        <div class="modal-popup__inner">
+          <ul class="popup-lst">
+            <li class="popup-lst__item">
+              <div class="popup-ctn01">
+                <div class="popup-thumb">
+                  <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup04.jpg" width="280" height="190" rel="js-lazy" alt="宿泊コテージ">
+                </div>
               </div>
-            </div>
-            <div class="popup-ctn02">
-              <h3 class="popup-ttl">ISHINOYA 別府</h3>
-              <div class="popup-desc">
-                <p class="txt">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
+              <div class="popup-ctn02">
+                <h3 class="popup-ttl">ISHINOYA 別府</h3>
+                <div class="popup-desc">
+                  <p class="txt">緑豊かな森林と別府湾の美しい景色に囲まれた全7種、23室の宿泊コテージ。地元食材にこだわったお料理や砂湯、快眠を追求したベッドで、寛ぎのひとときを提供いたします。</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="popup-btn">
+      <a href="<?php echo APP_URL ?>guide/ishinoya/" class="c-btn02 is-center">
+        <i class="arr01"></i>
+        <span>もっと見る</span>
+        <i class="arr02"></i>
+      </a>
+    </div>
+    <p class="popup-close js-popupclose"><span class="btn"></span></p>
   </div>
-  <div class="popup-btn">
-    <a href="<?php echo APP_URL ?>guide/ishinoya/" class="c-btn02 is-center">
-      <i class="arr01"></i>
-      <span>もっと見る</span>
-      <i class="arr02"></i>
-    </a>
-  </div>
-  <p class="popup-close js-popupclose"><span class="btn"></span></p>
 </div>
 <!-- Popup -->

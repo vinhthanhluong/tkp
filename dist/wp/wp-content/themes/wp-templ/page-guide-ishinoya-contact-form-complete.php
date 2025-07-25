@@ -30,7 +30,7 @@ if ($actionFlag == 'send') {
 ISHINOYA 別府
 https://www.shoninpark.jp/guide/ishinoya/
 〒874-0023 大分県別府市上人ケ浜町795-1
-TEL 0977-75-6363
+TEL 0977-75-6363（代表番号）
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);

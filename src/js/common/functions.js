@@ -87,18 +87,18 @@ function jsPopup() {
   });
 
   // Set popup max-height after DOM is ready
-  function setPopupHeight() {
-    $(".js-modalpopup").each(function (index) {
-      var popup_height = $(this).find(".modal-popup__inner").outerHeight();
-      // Use max-height instead of CSS variables for better browser compatibility
-      $(this).css("max-height", popup_height + "px");
-    });
-  }
+  // function setPopupHeight() {
+  //   $(".js-modalpopup").each(function (index) {
+  //     var popup_height = $(this).find(".modal-popup__inner").outerHeight();
+  //     // Use max-height instead of CSS variables for better browser compatibility
+  //     $(this).css("max-height", popup_height + "px");
+  //   });
+  // }
 
   // Set height on load and resize for responsive behavior
-  $(window).on("load resize", function () {
-    setPopupHeight();
-  });
+  // $(window).on("load resize", function () {
+  //   setPopupHeight();
+  // });
 }
 
 function modtabs() {

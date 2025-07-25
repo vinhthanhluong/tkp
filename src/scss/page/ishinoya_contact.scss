@@ -346,6 +346,13 @@
         margin-bottom: 0;
       }
     }
+    a {
+      text-decoration: underline;
+      @include HOVER {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
   }
   .faq-accordion {
     display: none;

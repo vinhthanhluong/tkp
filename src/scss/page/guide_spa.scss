@@ -21,12 +21,12 @@
   @include PC {
     padding: 240px 0 70px;
     min-height: 770px;
-    margin: 0 30px 110px;
+    margin: 0 30px;
   }
   @include SP {
     padding: 140px 0 48px;
     min-height: 563px;
-    margin: 0 16px 80px;
+    margin: 0 16px;
   }
   .keyvisual-logo {
     @include PC {
@@ -127,6 +127,15 @@
     }
   }
 }
+.c-breadcrumb {
+  @include PC {
+    margin: 10px 0 110px;
+  }
+  @include SP {
+    margin: 10px 0 80px;
+  }
+}
+
 .sec-spa-about {
   position: relative;
   color: $brown02;

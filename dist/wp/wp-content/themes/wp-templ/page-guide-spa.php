@@ -25,6 +25,13 @@ include(APP_PATH . 'libs/head.php'); ?>
         </ul>
       </div>
     </div>
+    <div class="c-breadcrumb aos-init" data-aos="fade-up">
+      <ul>
+        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
+        <li>別府海浜砂湯</li>
+      </ul>
+    </div>
     <section class="sec-spa-about">
       <div class="inner1170">
         <ul class="about-list">

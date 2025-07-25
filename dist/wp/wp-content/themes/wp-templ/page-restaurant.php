@@ -223,7 +223,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <li class="button-list__item">
                   <a href="<?php echo $file_pdf_url; ?>" class="c-btn01 is-center" target="_blank" rel="noopener">
                     <i class="arr01"></i>
-                    <span><?php echo $file_name; ?><small>（PDF：<?php echo $file_pdf_size; ?>MB）</small></span>
+                    <span class="txt"><?php echo $file_name; ?></span>
                     <i class="arr02"></i>
                   </a>
                 </li>

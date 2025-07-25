@@ -1,5 +1,6 @@
 $(document).ready(function () {
   mvLoad();
+  mvSlide();
 });
 
 function mvLoad() {
@@ -11,4 +12,19 @@ function mvLoad() {
       }, 2000);
     }
   });
+}
+
+function mvSlide() {
+  if ($(".js-bg-swiper").length) {
+    var swiperMv = new Swiper(".js-bg-swiper", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      allowTouchMove: false,
+      effect: "fade",
+      speed: 3000,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  }
 }
