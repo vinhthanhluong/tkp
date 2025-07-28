@@ -68,8 +68,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="ways-container c-bg-wave02">
         <div class="ways-inner">
           <div class="ways-ctn">
-            <h2 class="c-ttl01">
-              <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">Day 1</span></span>
+            <h2 class="way-ttl01 aos-init anim-ttl01" data-aos="">
+              <span class="anim-inner">Day 1</span>
             </h2>
             <ul class="ways-list">
               <li class="ways-item" id="anchor-time01">
@@ -140,8 +140,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="ways-container c-bg-wave02">
         <div class="ways-inner">
           <div class="ways-ctn">
-            <h2 class="c-ttl01">
-              <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">Day 1</span></span>
+            <h2 class="way-ttl01 aos-init anim-ttl01" data-aos="">
+              <span class="anim-inner">Day 1</span>
             </h2>
             <ul class="ways-list">
               <li class="ways-item" id="time01">
@@ -195,8 +195,8 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="ways-container">
         <div class="ways-inner">
           <div class="ways-ctn">
-            <h2 class="c-ttl01">
-              <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">Day 2</span></span>
+            <h2 class="way-ttl01 aos-init anim-ttl01" data-aos="">
+              <span class="anim-inner">Day 2</span>
             </h2>
             <ul class="ways-list">
               <li class="ways-item" id="time06">
