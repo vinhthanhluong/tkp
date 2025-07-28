@@ -164,7 +164,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <div class="infor-dd">
               <ul class="txt-list">
                 <li>砂湯専用浴衣</li>
-                <li>タオル</li>
+                <li>バスタオル</li>
               </ul>
             </div>
           </div>
