@@ -45,7 +45,6 @@ include(APP_PATH . 'libs/head02.php'); ?>
         </div>
       </div>
       <?php
-      $parkTermId = 8;
       $ishinoyaTermId = 10;
       $args_news = array(
         'post_type'           => 'news',
@@ -57,7 +56,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
           array(
             'taxonomy' => 'newscat',
             'field'    => 'term_id',
-            'terms'    => array($parkTermId, $ishinoyaTermId),
+            'terms'    => array($ishinoyaTermId),
           ),
         )
       );

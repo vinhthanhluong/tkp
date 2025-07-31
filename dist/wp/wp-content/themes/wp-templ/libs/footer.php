@@ -9,7 +9,7 @@
         </div>
         <div class="f-info">
           <p class="txt">〒874-0023 大分県別府市上人ケ浜町795-1</p>
-          <p class="txt">TEL <?php if (($thisPageName == 'guide-spa')): ?><a href="tel:03-5227-8262">03-5227-8262</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
+          <p class="txt">TEL <?php if (($thisPageName == 'guide-spa')): ?><a href="tel:0977-75-6363">0977-75-6363</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
         </div>
       </div>
       <div class="col02">
