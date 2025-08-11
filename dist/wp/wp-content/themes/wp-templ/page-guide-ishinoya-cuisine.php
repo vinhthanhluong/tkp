@@ -4,6 +4,12 @@
  * Template Name: Page GUIDE ISHINOYA CUISINE
  **/
 $thisPageName = 'ishinoya-cuisine';
+$post_id = get_the_ID();
+$the_content = get_the_content($post_id);
+$the_content = str_replace('<?php echo APP_ASSETS ?>', APP_ASSETS, $the_content);
+$the_content = str_replace('<?php echo APP_ASSETS; ?>', APP_ASSETS, $the_content);
+$the_content = str_replace('<?php echo APP_URL ?>', APP_URL, $the_content);
+$the_content = str_replace('<?php echo APP_URL; ?>', APP_URL, $the_content);
 include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_cuisine.min.css?v=<?php echo APP_VER ?>">
@@ -12,181 +18,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
 <body id="ishinoya-cuisine">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
   <main id="wrap02">
-    <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/mv_sp.jpg">
-      <div class="inner1170">
-        <div class="keyvisual-ttl">
-          <h1 class="ttl-en">Cuisine</h1>
-          <span class="ttl-jp">お食事</span>
-        </div>
-        <div class="c-breadcrumb is-breadcrumb-white">
-          <ul>
-            <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA 別府 / 石のや 別府</a></li>
-            <li>お食事</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- <div class="sec-tabs">
-      <div class="inner1170">
-        <ul class="tabs-list js-tabs aos-init" data-aos="fade-up">
-          <li class="tab-item is-current" data-tab="tab01">
-            <h2><span>レストラン</span></h2>
-          </li>
-          <li class="tab-item" data-tab="tab02">
-            <h2><span>部屋食</span></h2>
-          </li>
-        </ul>
-      </div>
-    </div> -->
-    <section class="sec-cuisine" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg.png" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/cuisine/pattern_bg_sp.png">
-      <div class="inner1170">
-        <div class="tab-wrapper js-tab-content">
-          <div class="tab-content is-current" id="tab01">
-            <h3 class="cuisine-ttl">海を望む特等席で堪能する<br>本格ハワイアングリル</h3>
-            <p class="cuisine-desc">別府湾を一望する大分風ハワイアングリル<br class="sp">レストラン「Grill Takka」。<br>心地よい海風と陽気な雰囲気に包まれなが<br class="sp">ら、本格グリル料理をお楽しみください。</p>
-            <ul class="cuisine-list">
-              <li class="cuisine-item">
-                <div class="cuisine-info">
-                  <div class="c-ttl04">
-                    <h3 class="c-ttl04__jp">ご夕食</h3>
-                    <span class="c-ttl04__en">Dinner</span>
-                  </div>
-                  <figure class="cuisine-img c-img sp">
-                    <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
-                  </figure>
-                  <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しいコース料理をご用意しています。</p>
-                </div>
-                <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img01.jpg" rel="js-lazy" width="530" height="420" alt="ご夕食画像">
-                </figure>
-              </li>
-              <li class="cuisine-item">
-                <div class="cuisine-info">
-                  <div class="c-ttl04">
-                    <h3 class="c-ttl04__jp">ご朝食</h3>
-                    <span class="c-ttl04__en">Breakfast</span>
-                  </div>
-                  <figure class="cuisine-img c-img sp">
-                    <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
-                  </figure>
-                  <p class="cuisine-txt">3種類から選べるメイン料理と、サラダやドリンクを楽しめるハーフビュッフェ。目の前に広がる海を眺めながら、贅沢な朝のひとときをお過ごしください。</p>
-                </div>
-                <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img02.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">
-                </figure>
-              </li>
-            </ul>
-            <div class="cuisine-wrapper">
-              <div class="cuisine-head">
-                <div class="cuisine-logo">
-                  <img src="<?php echo createSVG(253, 100); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/logo_res.svg" rel="js-lazy" width="253" height="100" alt="">
-                </div>
-                <p class="cuisine-summary">別府湾の美しい景色を望むカフェレストラン。テラス席からは大海原を一望でき、自然の息吹を感じながら食事を楽しむことができます。別府の豊かな自然と共に、贅沢な時間をお楽しみください。</p>
-              </div>
-
-              <div class="c-gallery__main">
-                <div class="gallery-wrapper js-slider-gallerycuisine">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img01.jpg" width="1000" height="450" alt="">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img02.jpg" width="1000" height="450" alt="">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/slide_img03.jpg" width="1000" height="450" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <p class="c-cursor__slide js-cursor__slide">
-                    <span class="txt">Prev</span>
-                  </p>
-                  <div class="gallerySwiper-prev cuisine-prev">
-                  </div>
-                  <div class="gallerySwiper-next cuisine-next">
-                  </div>
-                </div>
-                <div class="swiper-group">
-                  <div class="gallerySwiper-pagination cuisine-pagination"></div>
-                  <div class="gallerySwiper-progress-bar cuisine-progress-bar pc">
-                    <span class="slide-progress-bar"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="c-gallery__thumb">
-                <div class="slider-thumb-gallery js-slider-thumbcuisine">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img01.jpg" width="140" height="100" alt=""></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img02.jpg" width="140" height="100" alt=""></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/thumb_img03.jpg" width="140" height="100" alt=""></div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="cuisine-group">
-                <dl class="cuisine-time">
-                  <dt>ご夕食</dt>
-                  <dd>17:30~21:00（最終入場 19:30 / L.O. 20:30）</dd>
-                  <dt>ご朝食</dt>
-                  <dd>7:30~10:00（最終入場 9:00）</dd>
-                </dl>
-                <a class="c-btn04" href="<?php echo APP_URL; ?>guide/restaurant/"><span>詳しく見る</span></a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="tab-content" id="tab02">
-            <h3 class="cuisine-ttl">お部屋でゆったり楽しむ<br>本格ハワイアングリル</h3>
-            <p class="cuisine-desc">こだわりの大分風ハワイアングリルを、<br class="sp">お部屋でゆっくりと。<br>プライベートな空間で、本格的な味わいを<br class="sp">心ゆくまでお楽しみください。</p>
-            <ul class="cuisine-list">
-              <li class="cuisine-item">
-                <div class="cuisine-info">
-                  <div class="c-ttl04">
-                    <h3 class="c-ttl04__jp">ご夕食</h3>
-                    <span class="c-ttl04__en">Dinner</span>
-                  </div>
-                  <figure class="cuisine-img c-img sp">
-                    <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img03_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
-                  </figure>
-                  <p class="cuisine-txt">新鮮な地元の食材を活かした料理を、落ち着いた雰囲気の中でお楽しみいただけます。別府ならではの海の幸や山の幸を使った美味しい和食のコースをご用意しています。</p>
-                </div>
-                <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img03.jpg" rel="js-lazy" width="530" height="420" alt="ご夕食画像">
-                </figure>
-              </li>
-              <li class="cuisine-item">
-                <div class="cuisine-info">
-                  <div class="c-ttl04">
-                    <h3 class="c-ttl04__jp">ご朝食</h3>
-                    <span class="c-ttl04__en">Breakfast</span>
-                  </div>
-                  <figure class="cuisine-img c-img sp">
-                    <img src="<?php echo createSVG(327, 267); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img04_sp.jpg" rel="js-lazy" width="327" height="267" alt="">
-                  </figure>
-                  <p class="cuisine-txt">豊かな自然に囲まれた朝、地元の新鮮な食材を使った朝食で一日の始まりをお迎えください。和食と洋食をバランスよく取り入れたメニューをお楽しみいただけます。</p>
-                </div>
-                <figure class="cuisine-img c-img pc">
-                  <img src="<?php echo createSVG(530, 420); ?>" data-src="<?php echo APP_ASSETS ?>img/ishinoya/cuisine/cuisine_img04.jpg" rel="js-lazy" width="530" height="420" alt="ご朝食画像">
-                </figure>
-              </li>
-            </ul>
-          </div> -->
-        </div>
-      </div>
-    </section>
+    <?php echo $the_content ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>

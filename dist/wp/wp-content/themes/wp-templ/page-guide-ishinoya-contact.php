@@ -5,7 +5,6 @@
  **/
 $thisPageName = 'ishinoya-contact';
 
-
 $post_id = 202; //id page info
 $faq03 = get_field('faq03', $post_id);
 
