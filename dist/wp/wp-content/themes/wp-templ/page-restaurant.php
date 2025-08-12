@@ -139,7 +139,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="grill-data aos-init" data-aos="fade-up">
         <dl>
           <dt>営業時間</dt>
-          <dd>モーニング：7:00-10:00（L.O 9:30）<br>ランチ：11:00-15:00（L.O 14:30）<br>ディナー：15:00-22:00（L.O 21:30）</dd>
+          <dd>モーニング：7:00-10:00（L.O 9:30）<br>ランチ：11:00-15:00（L.O 14:30）<br>ディナー：16:30-22:00（料理L.O. 21:00 / ドリンクL.O 21:30）</dd>
         </dl>
         <dl>
           <dt>座席数</dt>

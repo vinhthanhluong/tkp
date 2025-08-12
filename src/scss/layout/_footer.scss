@@ -79,7 +79,7 @@
       margin-top: 23px;
     }
     .txt {
-      @include font(15, 26, 0.12, 700);
+      @include font(15, 26, 0.12, 500);
       @include PC {
         @include max-screen(1218px) {
           font-size: calc(15 / 1218 * 100vw);
@@ -586,7 +586,6 @@
   }
 }
 
-
 //.footer03
 .footer03 {
   background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
@@ -613,7 +612,7 @@
     @include SP {
       max-width: 250px;
     }
-    &>li {
+    & > li {
       @include PC {
         width: 250px;
         margin: 0 15px;
@@ -621,7 +620,7 @@
           width: calc(100% / 3);
           margin-left: 0;
           margin-right: 0;
-          padding: 0 vw-pc(10px,1023);
+          padding: 0 vw-pc(10px, 1023);
         }
       }
       @include SP {
@@ -653,14 +652,14 @@
           left: -1px;
           right: 105%;
           top: -1px;
-          bottom: -1px
+          bottom: -1px;
         }
       }
       span {
-        @include font(14,"",100);
+        @include font(14, "", 100);
         @include PC {
           @include max-screen(1218px) {
-            font-size: vw-pc(14px,1218);
+            font-size: vw-pc(14px, 1218);
           }
         }
       }
@@ -671,7 +670,7 @@
           transform: translateX(0);
         }
         &::before {
-          right: -1px
+          right: -1px;
         }
       }
     }
@@ -683,7 +682,7 @@
     @include PC {
       width: 253px;
       @include max-screen(1218px) {
-        width: vw-pc(253px,1218);
+        width: vw-pc(253px, 1218);
       }
     }
     @include SP {
@@ -695,14 +694,13 @@
     .f-info {
       @include PC {
         @include max-screen(1218px) {
-          margin-top: vw-pc(30px,1218);
+          margin-top: vw-pc(30px, 1218);
         }
       }
       @include SP {
         margin-top: 25px;
       }
       .txt {
-        font-weight: 500;
         &:not(:last-child) {
           @include PC {
             margin-bottom: 0;
@@ -734,7 +732,7 @@
             .item a {
               @include font(14);
               @include max-screen(1218px) {
-                font-size: vw-pc(14px,1218);
+                font-size: vw-pc(14px, 1218);
               }
             }
             &:nth-child(1) {
@@ -751,7 +749,7 @@
                 width: 60%;
               }
               .item:nth-child(3) {
-                @include flex(1)
+                @include flex(1);
               }
             }
           }
@@ -779,7 +777,7 @@
         @include PC {
           @include font(16);
           @include max-screen(1218px) {
-            font-size: vw-pc(16px,1218);
+            font-size: vw-pc(16px, 1218);
           }
         }
       }
@@ -800,12 +798,13 @@
         width: 16px;
         height: 16px;
         top: 3px;
-        background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+        background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>')
+          no-repeat center center/100% auto;
         @include PC {
           @include max-screen(1218px) {
-            width: vw-pc(16px,1218);
-            height: vw-pc(16px,1218);
-            top: vw-pc(3px,1218);
+            width: vw-pc(16px, 1218);
+            height: vw-pc(16px, 1218);
+            top: vw-pc(3px, 1218);
           }
         }
       }
@@ -825,7 +824,8 @@
       margin-top: -8px;
       width: 16px;
       height: 16px;
-      background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+      background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5.5" y="3.5" width="8" height="6" stroke="%23231816"/><path d="M4 6V7H3V12H10V11H11V13H2V6H4Z" fill="%23231816"/></svg>')
+        no-repeat center center/100% auto;
     }
   }
 }
