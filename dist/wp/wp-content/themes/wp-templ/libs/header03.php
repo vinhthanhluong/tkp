@@ -109,7 +109,7 @@
                 </a>
               </li>
               <li>
-                <a class="c-btn04" href="https://www.hotpepper.jp/strJ004067470/yoyaku/request/hpds/" target="_blank" rel="noopener nofollow">
+                <a class="c-btn04" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener nofollow">
                   <span>レストラン予約</span>
                 </a>
               </li>
