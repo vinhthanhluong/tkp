@@ -68,7 +68,7 @@
     </div>
     <ul class="f-btn">
       <li class="item">
-        <a href="https://www.asoview.com/channel/ticket/KfG8g2DPlR/ticket0000041562/" target="_blank" rel="noopener" class="c-btn03 is-center">
+        <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn03 is-center">
           <i class="arr01"></i><span>砂湯・温泉予約</span><i class="arr02"></i>
         </a>
       </li>
