@@ -43,8 +43,8 @@ include(APP_PATH . 'libs/head.php'); ?>
               <figure class="about-pic c-img">
                 <img src="<?php echo createSVG(250, 160); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/spa/about_img.jpg" rel="js-lazy" width="250" height="160" alt="Sand SPA画像2">
               </figure>
-              <h2 class="about-ttl">100年の歴史が息づく<br>別府唯一の海浜砂湯</h2>
-              <p class="about-desc">別府温泉は日本を代表する温泉地で、その中でも「砂湯」は砂に埋もれて温泉の効果を全身に感じる療法で、100年以上の歴史を誇ります。<br>特に「別府海浜砂湯」は、海を眺めながら砂湯を楽しめる別府唯一の温泉施設です。</p>
+              <h2 class="about-ttl">平安時代からの歴史が息づく<br>別府唯一の海浜砂湯</h2>
+              <p class="about-desc">昔から各所に温泉が湧く別府海岸の砂湯の歴史は古く、はじまりは平安時代まで遡ります。<br>当時の天然海浜砂湯から現在の別府海浜砂湯に至るまで、多くの別府市民や観光客に親しまれてきました。</p>
             </div>
           </li>
           <li class="about-item is-reverse">
@@ -83,6 +83,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <h3 class="intro-ttl is-mb">砂湯</h3>
                 <h4 class="intro-ttls">温かい砂に包まれる極上の癒し体験</h4>
                 <p class="intro-desc">温かな砂に包まれながら、別府湾の美しい眺めも楽しめる砂湯。日頃の疲れを解きほぐし、心も体も芯から温まる、極上のリラックス体験をお届けします。</p>
+                <p class="intro-desc">1日9回、約30〜40分かけて温泉をたっぷりと張り、不純物を取り除き、砂の加熱をしております。<br>また、同じ場所の砂を使わないよう、場所を変えてご案内しておりますので、常に清潔な状態でご利用いただけます。</p>
                 <h4 class="intro-txt">効能</h4>
                 <p class="intro-efficacy">関節リウマチ、変形性関節症、神経痛、五十肩、打撲、捻挫、筋肉のこわばり、胃腸機能の低下、軽症高血圧、耐糖能異常、自律神経不安定症、痔、睡眠障害、うつ状態、疲労回復、健康増進</p>
               </div>
