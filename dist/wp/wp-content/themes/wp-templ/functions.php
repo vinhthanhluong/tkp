@@ -402,3 +402,198 @@ function acf_load_my_defaults($value, $post_id, $field)
 
   return $value;
 }
+
+
+// shortcode for news
+function ishinoya_news_shortcode($atts) {
+    $atts = shortcode_atts(
+        array(
+            'termid'   => '',
+            'posts_per_page'   => '',
+        ),
+        $atts,
+        'ishinoya_news'
+    );
+    if (empty($atts['termid']) || empty($atts['posts_per_page'])) {
+        return '';
+    }
+    // multi category
+    $term_ids = array_map('intval', explode(',', $atts['termid']));
+    $posts_per_page = intval($atts['posts_per_page']);
+
+    ob_start();
+    $args_news = array(
+        'post_type'      => 'news',
+        'order'          => 'DESC',
+        'orderby'        => 'post_date',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_per_page,
+        'tax_query'      => array(
+            array(
+                'taxonomy' => 'newscat',
+                'field'    => 'term_id',
+                'terms'    => $term_ids,
+            ),
+        )
+    );
+    $query_news = new WP_Query($args_news);
+    if ($query_news->have_posts()) { ?>
+        <div class="sec-news">
+            <section class="c-sec-news" id="news">
+                <div class="inner1170">
+                    <div class="c-ttl04">
+                        <h2 class="c-ttl04__jp">お知らせ</h2>
+                        <span class="c-ttl04__en">News</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-slider js-slider-news">
+                            <div class="swiper-wrapper">
+                                <?php
+                                while ($query_news->have_posts()) {
+                                    $query_news->the_post();
+                                    $n_id    = get_the_ID();
+                                    $n_url   = get_permalink($n_id);
+                                    $n_ttl   = get_the_title($n_id);
+                                    $n_date  = get_the_date('Y.m.d');
+                                    $n_terms = get_the_terms($n_id, 'newscat');
+                                    $n_thumb = get_the_post_thumbnail_url($n_id);
+                                    $n_photo = (!empty($n_thumb)) ? $n_thumb : (defined('APP_NOIMG') ? APP_NOIMG : '');
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <a class="news-item" href="<?php echo esc_url($n_url); ?>">
+                                            <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                                                <img src="<?php echo esc_url($n_photo); ?>" width="260" height="260" alt="<?php echo esc_attr($n_ttl); ?>">
+                                            </figure>
+                                            <div class="news-head">
+                                                <span class="news-time"><?php echo esc_html($n_date); ?></span>
+                                                <?php if (!empty($n_terms)) { ?>
+                                                    <span class="news-cate">
+                                                        <?php
+                                                        foreach ($n_terms as $nterm) {
+                                                            $cat_name = $nterm->name;
+                                                            $cat_class = $cat_name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                                                            ?>
+                                                            <span class="item <?php echo esc_attr($cat_class); ?>"><?php echo esc_html($cat_name); ?></span>
+                                                        <?php } ?>
+                                                    </span>
+                                                <?php } ?>
+                                            </div>
+                                            <h3 class="news-ttl"><?php echo esc_html($n_ttl); ?></h3>
+                                        </a>
+                                    </div>
+                                <?php } wp_reset_postdata(); ?>
+                            </div>
+                            <div class="swiper-group">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-progress-bar">
+                                    <span class="slide-progress-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="c-btn04" href="<?php echo esc_url(get_term_link($term_ids[0], 'newscat')); ?>"><span>もっと見る</span></a>
+                </div>
+            </section>
+        </div>
+    <?php }
+    return ob_get_clean();
+}
+add_shortcode('ishinoya_news', 'ishinoya_news_shortcode');
+
+// shortcode shop news
+function shop_news_shortcode($atts) {
+    $atts = shortcode_atts(
+        array(
+            'termid'   => '',
+            'posts_per_page'   => '',
+        ),
+        $atts,
+        'shop_news_related'
+    );
+    if (empty($atts['termid']) || empty($atts['posts_per_page'])) {
+        return '';
+    }
+    // Multi category
+    $term_ids = array_map('intval', explode(',', $atts['termid']));
+    $posts_per_page = intval($atts['posts_per_page']);
+
+    ob_start();
+    $args_news = array(
+        'post_type'      => 'news',
+        'order'          => 'DESC',
+        'orderby'        => 'post_date',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_per_page,
+        'tax_query'      => array(
+            array(
+                'taxonomy' => 'newscat',
+                'field'    => 'term_id',
+                'terms'    => $term_ids,
+            ),
+        )
+    );
+    $query_news = new WP_Query($args_news);
+    if ($query_news->have_posts()) { ?>
+      <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
+        <div class="inner1170">
+          <div class="c-ttl02 is-white aos-init" data-aos="fade-up">
+            <h2 class="c-ttl02__jp">ニュース</h2>
+            <span class="c-ttl02__en">News</span>
+          </div>
+          <ul class="news-list">
+            <?php
+            while ($query_news->have_posts()) {
+              $query_news->the_post();
+              $news_id = $query_news->ID;
+              $news_url = get_the_permalink($news_id);
+              $news_ttl = get_the_title($news_id);
+              $news_date = get_the_date('Y.m.d', $news_id);
+              $news_terms = get_the_terms($news_id, 'newscat');
+              $news_thumb = get_the_post_thumbnail_url($news_id);
+              $news_photo = (!empty($news_thumb)) ? $news_thumb : APP_NOIMG;
+            ?>
+              <li class="aos-init" data-aos="fade-up">
+                <a class="news-item" href="<?php echo $news_url; ?>">
+                  <figure class="news-img c-img <?php echo $news_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="<?php echo strip_tags($news_ttl); ?>">
+                  </figure>
+                  <div class="news-info">
+                    <?php if (!empty($news_terms) || !empty($news_date)) { ?>
+                      <div class="news-head">
+                        <?php
+                        if (!empty($news_terms)) {
+                          foreach ($news_terms as $nterm) {
+                            $cat_name = $nterm->name;
+                        ?>
+                            <p class="news-cate"><?php echo $cat_name; ?></p>
+                        <?php }
+                        } ?>
+                        <?php
+                        if (!empty($news_date)) {
+                        ?>
+                          <p class="news-time"><?php echo $news_date; ?></p>
+                        <?php } ?>
+                      </div>
+                    <?php } ?>
+                    <?php if (!empty($news_ttl)) { ?>
+                      <h3 class="news-ttl"><?php echo $news_ttl; ?></h3>
+                    <?php } ?>
+                  </div>
+                </a>
+              </li>
+            <?php } ?>
+          </ul>
+          <div class="aos-init" data-aos="fade-up">
+            <a href="<?php echo get_term_link($term_ids[0], 'newscat'); ?>" class="c-btn01 is-center">
+              <i class="arr01"></i>
+              <span>もっと見る</span>
+              <i class="arr02"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    <?php }
+    return ob_get_clean();
+}
+add_shortcode('shop_news_related', 'shop_news_shortcode');
+// end shortcode
