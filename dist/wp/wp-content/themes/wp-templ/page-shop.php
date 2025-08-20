@@ -20,25 +20,6 @@ if (!empty($shop_list)) {
   }
 }
 
-$parkTermId = 8;
-$shopTermId = 5;
-$args_news = array(
-  'post_type'           => 'news',
-  'order'               => 'DESC',
-  'orderby'             => 'post_date',
-  'posts_status'        => 'publish',
-  'posts_per_page'      =>  4,
-  'tax_query'           => array(
-    array(
-      'taxonomy'        => 'newscat',
-      'field'           => 'term_id',
-      'terms'           => array($parkTermId, $shopTermId),
-    )
-  )
-);
-$news_relate = new WP_Query($args_news);
-
-
 include(APP_PATH . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/shop.min.css?v=<?php echo APP_VER ?>">
 </head>
@@ -46,57 +27,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="shop">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <div class="c-breadcrumb aos-init" data-aos="fade-up">
-      <ul>
-        <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-        <li><a href="<?php echo APP_URL; ?>guide/">施設案内</a></li>
-        <li>ショップ</li>
-      </ul>
-    </div>
-    <div class="c-mainvisual is-mainvisual">
-      <div class="mv-inner aos-init" data-aos="fade-up">
-        <div class="img-wave-blue">
-          <div class="wave-top">
-            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
-          </div>
-          <div class="wave-bottom">
-            <p class="c-mask" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png" data-bgsp="<?php echo APP_ASSETS; ?>img/common/ico_wave_blue.png"></p>
-          </div>
-        </div>
-        <div class="mv-ttl aos-init" data-aos="fade-up">
-          <h1 class="mv-ttl-jp">ショップ</h1>
-          <span class="mv-ttl-en">shop</span>
-        </div>
-      </div>
-      <div class="mv-img c-img aos-init" data-aos="fade-up">
-        <!-- <img class="pc" src="<?php echo createSVG(1340, 350); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img.jpg" rel="js-lazy" width="1340" height="350" alt="ショップのヘッダー画像">
-        <img class="sp" src="<?php echo createSVG(344, 220); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/mv_img_sp.jpg" rel="js-lazy" width="344" height="220" alt="ショップのヘッダー画像"> -->
-      </div>
-    </div>
-    <div class="c-about-block">
-      <div class="about-bg" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/about_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/guide/shop/about_bg_sp.png"></div>
-      <div class="about-left">
-        <figure class="about-img c-img pc aos-init" data-aos="fade-up">
-          <img src="<?php echo createSVG(546, 514); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img01.jpg" rel="js-lazy" width="546" height="514" alt="ショップ画像">
-        </figure>
-      </div>
-      <div class="about-right aos-init" data-aos="fade-up">
-        <div class="about-content cloud-decor">
-          <h2 class="about-ttl">グルメからお土産まで<br>別府の魅力を気軽に満喫</h2>
-          <p class="about-desc">別府・大分の特産品やグルメを楽しめるショップエリア。<br>大分グルメをはじめとした多様な飲食店や、別府の工芸品・お土産を取り揃えたショップなどがございます。</p>
-          <div class="about-group dot-decor">
-            <figure class="about-img c-img sp">
-              <img src="<?php echo createSVG(220, 207); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img01_sp.jpg" rel="js-lazy" width="220" height="207" alt="">
-            </figure>
-            <div class="cloud-decor">
-              <figure class="about-pic c-img">
-                <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/about_img02.jpg" rel="js-lazy" width="317" height="198" alt="">
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php the_content(); ?>
     <section class="sec-shop">
       <div class="inner1170">
         <div class="map-block aos-init" data-aos="fade-up">
@@ -182,66 +113,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <?php } ?>
       </div>
     </section>
-    <?php if (!empty($news_relate)) {  ?>
-      <section class="c-news-block" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/common/news_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/common/news_bg_sp.jpg">
-        <div class="inner1170">
-          <div class="c-ttl02 is-white aos-init" data-aos="fade-up">
-            <h2 class="c-ttl02__jp">ニュース</h2>
-            <span class="c-ttl02__en">News</span>
-          </div>
-          <ul class="news-list">
-            <?php
-            while ($news_relate->have_posts()) {
-              $news_relate->the_post();
-              $news_id = $news->ID;
-              $news_url = get_the_permalink($news_id);
-              $news_ttl = get_the_title($news_id);
-              $news_date = get_the_date('Y.m.d', $news_id);
-              $news_terms = get_the_terms($news_id, 'newscat');
-              $news_thumb = get_the_post_thumbnail_url($news_id);
-              $news_photo = (!empty($news_thumb)) ? $news_thumb : APP_NOIMG;
-            ?>
-              <li class="aos-init" data-aos="fade-up">
-                <a class="news-item" href="<?php echo $news_url; ?>">
-                  <figure class="news-img c-img <?php echo $news_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                    <img src="<?php echo createSVG(165, 120); ?>" data-src="<?php echo $news_photo; ?>" rel="js-lazy" width="165" height="120" alt="<?php echo strip_tags($news_ttl); ?>">
-                  </figure>
-                  <div class="news-info">
-                    <?php if (!empty($news_terms) || !empty($news_date)) { ?>
-                      <div class="news-head">
-                        <?php
-                        if (!empty($news_terms)) {
-                          foreach ($news_terms as $nterm) {
-                            $cat_name = $nterm->name;
-                        ?>
-                            <p class="news-cate"><?php echo $cat_name; ?></p>
-                        <?php }
-                        } ?>
-                        <?php
-                        if (!empty($news_date)) {
-                        ?>
-                          <p class="news-time"><?php echo $news_date; ?></p>
-                        <?php } ?>
-                      </div>
-                    <?php } ?>
-                    <?php if (!empty($news_ttl)) { ?>
-                      <h3 class="news-ttl"><?php echo $news_ttl; ?></h3>
-                    <?php } ?>
-                  </div>
-                </a>
-              </li>
-            <?php } ?>
-          </ul>
-          <div class="aos-init" data-aos="fade-up">
-            <a href="<?php echo get_term_link($shopTermId, 'newscat'); ?>" class="c-btn01 is-center">
-              <i class="arr01"></i>
-              <span>もっと見る</span>
-              <i class="arr02"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    <?php } ?>
+    <?php echo apply_filters('the_content', get_post_field('news_related', $post->ID)); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/jquery.matchHeight.min.js?v=<?php echo APP_VER ?>"></script>

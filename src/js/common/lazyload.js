@@ -976,6 +976,18 @@ function handleLazy(callback) {
     });
   callback();
 }
+function handleLazy2(callback) {
+  document
+    .querySelectorAll('[data-rel*="js-lazy"][data-bgpc]')
+    .forEach(function (elem) {
+      var bgUrl = elem.getAttribute("data-bgpc");
+      if (window.innerWidth < 768) bgUrl = elem.getAttribute("data-bgsp");
+      elem.setAttribute("data-bg", bgUrl);
+      if (elem.hasAttribute("data-ll-status"))
+        elem.removeAttribute("data-ll-status");
+    });
+  callback();
+}
 window.addEventListener("DOMContentLoaded", function () {
   handleLazy(function () {
     lazyloadInstance = new LazyLoad({
@@ -983,9 +995,18 @@ window.addEventListener("DOMContentLoaded", function () {
       elements_selector: '[rel*="js-lazy"]',
     });
   });
+  handleLazy2(function () {
+    lazyloadInstance = new LazyLoad({
+      unobserve_entered: true,
+      elements_selector: '[data-rel*="js-lazy"]',
+    });
+  });
 });
 window.addEventListener("resize", function () {
   handleLazy(function () {
+    lazyloadInstance.update();
+  });
+  handleLazy2(function () {
     lazyloadInstance.update();
   });
 });
