@@ -58,6 +58,7 @@
           }
         }
         span,
+        .txt-anchor,
         h2 {
           @include PC {
             padding: 0 5px 0 40px;

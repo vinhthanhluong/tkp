@@ -4,12 +4,6 @@
  * Template Name: Page GUIDE ISHINOYA CUISINE
  **/
 $thisPageName = 'ishinoya-cuisine';
-$post_id = get_the_ID();
-$the_content = get_the_content($post_id);
-$the_content = str_replace('<?php echo APP_ASSETS ?>', APP_ASSETS, $the_content);
-$the_content = str_replace('<?php echo APP_ASSETS; ?>', APP_ASSETS, $the_content);
-$the_content = str_replace('<?php echo APP_URL ?>', APP_URL, $the_content);
-$the_content = str_replace('<?php echo APP_URL; ?>', APP_URL, $the_content);
 include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_cuisine.min.css?v=<?php echo APP_VER ?>">
@@ -18,7 +12,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
 <body id="ishinoya-cuisine">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
   <main id="wrap02">
-    <?php echo $the_content ?>
+    <?php the_content(); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
