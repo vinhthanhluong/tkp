@@ -596,4 +596,120 @@ function shop_news_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode('shop_news_related', 'shop_news_shortcode');
+// shortcut top
+function homepage_news_shortcode($atts) {
+    $atts = shortcode_atts(
+        array(
+            'posts_per_page' => 6,
+        ),
+        $atts,
+        'homepage_news'
+    );
+    $posts_per_page = intval($atts['posts_per_page']);
+
+    // param get category
+    $news_categories = get_terms(array(
+        'post_type'   => 'news',
+        'taxonomy'    => 'newscat',
+        'hide_empty'  => true,
+        'pad_counts'  => false,
+        'orderby'     => 'menu_order',
+        'order'       => 'ASC',
+    ));
+
+    // param get post news
+    $args_news = array(
+        'post_type'      => 'news',
+        'order'          => 'DESC',
+        'orderby'        => 'post_date',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_per_page,
+    );
+    $query_news = new WP_Query($args_news);
+
+    ob_start();
+    if ($query_news->have_posts()) { ?>
+        <div class="sec-news">
+            <div class="t-wcm01">
+                <h2 class="c-ttl01">
+                    <span class="c-ttl01__en aos-init anim-ttl01" data-aos=""><span class="anim-inner">NEWS</span></span>
+                    <span class="c-ttl01__jp aos-init anim-ttl01" data-aos=""><span class="anim-inner">ニュース</span></span>
+                </h2>
+                <?php if (!empty($news_categories)) { ?>
+                    <form method="get" class="searchform" id="searchform" action="<?php echo APP_URL ?>" name="searchform">
+                        <ul class="news-cate aos-init" data-aos="fade-up">
+                            <li class="item is-active">
+                                <input type="radio" name="newscat" id="newscat00" value="">
+                                <label for="newscat00">すべて</label>
+                            </li>
+                            <?php
+                            $count_cat = 0;
+                            foreach ($news_categories as $catitem) {
+                                $count_cat++;
+                                $cat_id = $catitem->term_id;
+                                $cat_name = $catitem->name;
+                                ?>
+                                <li class="item">
+                                    <input type="radio" name="newscat" id="newscat0<?php echo $count_cat; ?>" value="<?php echo $cat_id; ?>">
+                                    <label for="newscat0<?php echo $count_cat; ?>"><?php echo $cat_name; ?></label>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </form>
+                <?php } ?>
+
+                <ul class="c-lstpost01">
+                    <?php
+                    $delay = 0;
+                    while ($query_news->have_posts()) {
+                        $delay += 200;
+                        $query_news->the_post();
+                        $n_id    = get_the_ID();
+                        $n_url   = get_permalink($n_id);
+                        $n_ttl   = get_the_title($n_id);
+                        $n_date  = get_the_date('Y.m.d');
+                        $n_terms = get_the_terms($n_id, 'newscat');
+                        $n_thumb = get_the_post_thumbnail_url($n_id);
+                        $n_photo = (!empty($n_thumb)) ? $n_thumb : (defined('APP_NOIMG') ? APP_NOIMG : '');
+                        ?>
+                        <li class="c-lstpost01__item aos-init" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
+                            <a class="lstpost01-link" href="<?php echo esc_url($n_url); ?>">
+                                <div class="lstpost01-ctn01">
+                                    <div class="lstpost01-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                                        <img src="<?php echo esc_attr(function_exists('createSVG') ? createSVG(345, 250) : ''); ?>" data-src="<?php echo esc_url($n_photo); ?>" rel="js-lazy" width="345" height="250" alt="<?php echo esc_attr(strip_tags($n_ttl)); ?>">
+                                    </div>
+                                    <?php if (!empty($n_terms)) { ?>
+                                        <p class="cate">
+                                            <?php
+                                            foreach ($n_terms as $nterm) {
+                                                $cat_name = $nterm->name;
+                                                $cat_class = $cat_name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                                                ?>
+                                                <span class="item <?php echo esc_attr($cat_class); ?>"><?php echo esc_html($cat_name); ?></span>
+                                            <?php } ?>
+                                        </p>
+                                    <?php } ?>
+                                </div>
+                                <div class="lstpost01-ctn02">
+                                    <p class="date"><?php echo esc_html($n_date); ?></p>
+                                    <h3 class="ttl"><?php echo esc_html($n_ttl); ?></h3>
+                                </div>
+                            </a>
+                        </li>
+                    <?php } wp_reset_postdata(); ?>
+                </ul>
+                <div class="news-btn aos-init" data-aos="fade-up">
+                    <a href="<?php echo APP_URL ?>news/" class="c-btn01 is-center">
+                        <i class="arr01"></i>
+                        <span>もっと見る</span>
+                        <i class="arr02"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <?php }
+    return ob_get_clean();
+}
+add_shortcode('homepage_news', 'homepage_news_shortcode');
+
 // end shortcode
