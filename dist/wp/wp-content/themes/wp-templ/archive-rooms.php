@@ -67,7 +67,9 @@ include(APP_PATH . 'libs/head02.php');
                       <?php if (!empty($room_info_num)) { ?>
                         <li class="icn icn02"><?php echo $room_info_area; ?></li>
                       <?php } ?>
-                      <?php if ($room_bath == 'outside') { ?>
+                      <?php if ($room_bath == 'inside') { ?>
+                        <li class="icn icn03">客室内温泉</li>
+                      <?php } else if ($room_bath == 'outside') { ?>
                         <li class="icn icn04">露天風呂付</li>
                       <?php } ?>
                     </ul>
