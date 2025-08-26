@@ -71,17 +71,17 @@
   }
   & > li {
     @include PC {
-      width: 25%;
+      min-width: 25%;
       padding: 10px;
       @include max-screen(1023px) {
-        width: calc(100% / 3);
+        min-width: calc(100% / 3);
       }
       @include max-screen(800px) {
-        width: 50%;
+        min-width: 50%;
       }
     }
     @include SP {
-      width: calc(50% - 4.5px);
+      min-width: calc(50% - 4.5px);
       margin: 4px 0 5px;
     }
   }
