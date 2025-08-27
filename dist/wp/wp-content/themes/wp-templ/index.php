@@ -172,7 +172,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <div class="how-box__inner">
               <div class="t-ttlbox01">
                 <span class="ttl01 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
-                  <span class="anim-inner">HOW TO ENJOY</span>
+                  <span class="anim-inner">WAYS TO ENJOY</span>
                 </span>
                 <h2 class="ttl02 aos-init anim-ttl01" data-aos="" data-aos-anchor=".how-circle" data-aos-delay="300">
                   <span class="anim-inner">楽しみ方</span>
