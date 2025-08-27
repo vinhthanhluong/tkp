@@ -5,7 +5,6 @@ function gNaviHover() {
   browserWidth = $(window).width();
   if (browserWidth > 767 && browserWidth <= 1024) {
     $(btn).on("click", function () {
-      event.preventDefault();
       var shownav = $(this).find(".navSub");
       browserWidth = $(window).width();
       if (browserWidth > 767 && browserWidth <= 1024) {
@@ -57,7 +56,7 @@ $(".hamberger").click(function () {
 });
 
 $(
-  ".close_layer, .gNavi li a, .gNavi02 li a, .gReservat li a, .menu_overlay"
+  ".close_layer, .layerMenu .gNavi li a, .layerMenu .gNavi02 li a, .gReservat li a, .menu_overlay"
 ).click(function () {
   $(".hamberger").removeClass("active");
   $("body").toggleClass("layerOn");

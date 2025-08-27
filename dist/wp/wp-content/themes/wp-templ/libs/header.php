@@ -105,12 +105,18 @@
     <div class="layerMenuPC">
       <ul class="gNaviPC">
         <li class="gNaviPC-item hasSub">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL ?>guide/">
+          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL ?>guide/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu01.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
             <span>施設案内</span>
           </a>
+          <p class="gNaviPC-item__link is-menu">
+            <i class="icon">
+              <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu01.svg" width="24" height="24" rel="js-lazy" alt="">
+            </i>
+            <span>施設案内</span>
+          </p>
           <div class="navSub">
             <ul class="navSub-lst">
               <li class="item"><a href="<?php echo APP_URL ?>guide/spa/">別府海浜砂湯</a></li>
