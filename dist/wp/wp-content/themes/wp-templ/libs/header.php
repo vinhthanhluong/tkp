@@ -154,7 +154,7 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="btnLang">
+    <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -174,7 +174,43 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+    <div class="btnReser">
+      <div class="gResert-overlay"></div>
+      <div class="gResert">
+        <div class="gResert-item hasSub">
+          <p class="gResert-item__link">
+            <span>ご予約はこちら</span>
+          </p>
+          <div class="navSub">
+            <ul class="navSub-lst">
+              <li class="item">
+                <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>砂湯・温泉予約</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+              <li class="item">
+                <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>レストラン予約</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+              <li class="item">
+                <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>宿泊コテージ予約</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="menu_overlay"></div>
   </div>
 </header>
