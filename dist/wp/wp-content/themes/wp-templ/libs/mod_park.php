@@ -24,6 +24,11 @@
         <span class="txt"><span class="is-lineheight">宿泊コテージ<br>ISHINOYA 別府</span></span>
       </h3>
     </div>
+    <div class="mod-park__btn bnt05 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
+      <h3 class="btn-link js-btnpopup" data-popup="modal05">
+        <span class="txt">足湯</span>
+      </h3>
+    </div>
   </div>
 </div>
 
@@ -59,7 +64,7 @@
         <i class="arr02"></i>
       </a>
     </div>
-    <p class="popup-close js-popupclose"><span class="btn"></span></p>
+    <p class="popup-close js-popupclose"><span class="btn"> </span></p>
   </div>
 </div>
 <div class="modal-popup js-modalpopup" id="modal02">
@@ -92,7 +97,7 @@
         <i class="arr02"></i>
       </a>
     </div>
-    <p class="popup-close js-popupclose"><span class="btn"></span></p>
+    <p class="popup-close js-popupclose"><span class="btn"> </span></p>
   </div>
 </div>
 <div class="modal-popup js-modalpopup" id="modal03">
@@ -125,7 +130,7 @@
         <i class="arr02"></i>
       </a>
     </div>
-    <p class="popup-close js-popupclose"><span class="btn"></span></p>
+    <p class="popup-close js-popupclose"><span class="btn"> </span></p>
   </div>
 </div>
 <div class="modal-popup js-modalpopup" id="modal04">
@@ -158,7 +163,40 @@
         <i class="arr02"></i>
       </a>
     </div>
-    <p class="popup-close js-popupclose"><span class="btn"></span></p>
+    <p class="popup-close js-popupclose"><span class="btn"> </span></p>
+  </div>
+</div>
+<div class="modal-popup js-modalpopup" id="modal05">
+  <div class="modal-ctn">
+    <div class="modal-inner">
+      <div class="modal-window">
+        <div class="modal-popup__inner">
+          <ul class="popup-lst">
+            <li class="popup-lst__item">
+              <div class="popup-ctn01">
+                <div class="popup-thumb">
+                  <img src="<?php echo createSVG(280, 190) ?>" data-src="<?php echo APP_ASSETS ?>img/common/mod_park/popup05.jpg" width="280" height="190" rel="js-lazy" alt="宿泊コテージ">
+                </div>
+              </div>
+              <div class="popup-ctn02">
+                <h3 class="popup-ttl">足湯</h3>
+                <div class="popup-desc">
+                  <p class="txt">無料で利用できる集いの場としての足湯を設けています。温泉街別府を気軽に体現できるリラックス空間となっています。</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="popup-btn">
+      <a href="<?php echo APP_URL ?>guide/ishinoya/" class="c-btn02 is-center">
+        <i class="arr01"></i>
+        <span>もっと見る</span>
+        <i class="arr02"></i>
+      </a>
+    </div> -->
+    <p class="popup-close js-popupclose"><span class="btn"> </span></p>
   </div>
 </div>
 <!-- Popup -->

@@ -1603,6 +1603,31 @@ a.c-btn04 {
       }
     }
   }
+  &.bnt05 {
+    @include PC {
+      top: 264px;
+      left: 290px;
+      @include max-screen(1218px) {
+        top: calc(264 / 668 * 100%);
+        left: calc(290 / 1170 * 100%);
+      }
+    }
+    @include SP {
+      top: calc(78 / 205.5 * 100%);
+      left: calc(87 / 360 * 100%);
+    }
+    .btn-link {
+      @include PC {
+        padding: 0 7px 0 9px;
+        @include max-screen(1218px) {
+          padding: 0 calc(7 / 1440 * 100vw) 0 calc(9 / 1440 * 100vw);
+        }
+      }
+      @include SP {
+        padding: calc(1 / 375 * 100vw) calc(3 / 375 * 100vw) 0;
+      }
+    }
+  }
   .btn-link {
     display: block;
     border: solid #fff;
