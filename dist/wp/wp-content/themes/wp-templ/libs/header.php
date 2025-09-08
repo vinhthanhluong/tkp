@@ -154,7 +154,7 @@
         </li>
       </ul>
     </div>
-    <div class="btnLang">
+    <!-- <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -174,7 +174,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="btnReser">
       <div class="gResert-overlay"></div>
       <div class="gResert">

@@ -1531,10 +1531,10 @@ a.c-btn04 {
   &.bnt02 {
     @include PC {
       top: 69px;
-      left: 303px;
+      left: 353px;
       @include max-screen(1218px) {
         top: calc(69 / 668 * 100%);
-        left: calc(304 / 1170 * 100%);
+        left: calc(353 / 1170 * 100%);
       }
     }
     @include SP {
