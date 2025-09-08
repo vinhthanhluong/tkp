@@ -1,7 +1,8 @@
 <div class="mod-park">
   <div class="mod-park__inner">
     <div class="park-bg aos-init" data-aos="fade-up" data-aos-delay="0">
-      <img src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="SHONIN PARK マップ">
+      <img class="pc" src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park.svg" rel="js-lazy" width="1170" height="668" alt="SHONIN PARK マップ">
+      <img class="sp" src="<?php echo createSVG(1170, 668) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/map_park_sp.png" rel="js-lazy" width="360" height="206" alt="SHONIN PARK マップ">
     </div>
     <div class="mod-park__btn bnt01 aos-init" data-aos="fade-up" data-aos-anchor=".park-bg" data-aos-delay="300">
       <h3 class="btn-link js-btnpopup" data-popup="modal01">
