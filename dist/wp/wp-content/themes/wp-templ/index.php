@@ -255,7 +255,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           </div>
           <div class="t-ttlbox01">
             <span class="ttl01 aos-init anim-ttl01" data-aos="">
-              <span class="anim-inner">SIGHTSEEING</span>
+              <span class="anim-inner">NEARBY ATTRACTIONS</span>
             </span>
             <h2 class="ttl02 aos-init anim-ttl01" data-aos="">
               <span class="anim-inner">周辺観光</span>

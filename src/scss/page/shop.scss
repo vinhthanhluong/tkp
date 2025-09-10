@@ -33,11 +33,22 @@
       }
     }
   }
+  .about-group .cloud-decor {
+    @include SP {
+      width: calc(100 / 375 * 100%);
+      margin: 63px 0 0 39px;
+    }
+  }
   .about-pic {
+    -webkit-mask-image: url($img_url + "img/guide/shop/mask_bg01.png");
+    mask-image: url($img_url + "img/guide/shop/mask_bg01.png");
     @include PC {
-      width: calc(317 / 590 * 100%);
-      padding-top: calc(198 / 590 * 100%);
+      width: calc(242 / 590 * 100%);
+      padding-top: calc(317 / 590 * 100%);
       margin: 0 43px 0 auto;
+    }
+    @include SP {
+      @include aspect-ratio(100, 130);
     }
   }
   .about-desc {
@@ -52,9 +63,9 @@
   .about-bg {
     @include PC {
       background-position: center 0;
-      bottom: 78px;
+      bottom: 168px;
       @include max-screen(1280px) {
-        bottom: vw-pc(78px, 1280);
+        bottom: vw-pc(168px, 1280);
       }
     }
     @include SP {
