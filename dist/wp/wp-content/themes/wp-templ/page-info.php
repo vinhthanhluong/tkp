@@ -1,7 +1,8 @@
 <?php
 $thisPageName = 'info';
 
-$post_id = get_the_ID();
+$post_id = '202';
+$editor = get_field('editor', $post_id);
 $faq01 = get_field('faq01', $post_id);
 $faq02 = get_field('faq02', $post_id);
 $faq03 = get_field('faq03', $post_id);
@@ -14,7 +15,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="info">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php the_content(); ?>
+    <?php echo $editor; ?>
     <div class="sec-info04" id="info04">
       <div class="inner1170">
         <div class="c-ttl02 is-white is-center aos-init" data-aos="fade-up">

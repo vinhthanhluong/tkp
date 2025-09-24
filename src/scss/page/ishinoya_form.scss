@@ -13,6 +13,10 @@
     @include font(26, 36);
     margin-top: 37px;
   }
+  .en & {
+    letter-spacing: 0;
+    font-weight: 600;
+  }
 }
 .form-step {
   text-align: center;
@@ -27,6 +31,9 @@
   @include PC {
     margin: 40px auto 0;
     max-width: 840px;
+    .en {
+      max-width: 878px;
+    }
   }
   @include SP {
     margin-top: 24px;
@@ -40,6 +47,9 @@
   @include SP {
     @include font(15, 26, 0.1, 500);
     margin-top: 24px;
+  }
+  .en & {
+    letter-spacing: 0;
   }
 }
 .page-form {

@@ -3,7 +3,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header id="header" class="header">
+<header id="header" class="header en">
   <div class="inHeader">
     <div id="logo">
       <a href="<?php echo APP_URL_EN ?>">
@@ -15,31 +15,31 @@
     <div class="layerMenu">
       <div class="inLayer">
         <ul class="gNavi">
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>guide/"><span>施設案内</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>ways/"><span>楽しみ方</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>news/"><span>ニュース</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>guide/"><span>Facilities</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>ways/"><span>Ways to Enjoy</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>news/"><span>News</span></a></li>
           <li class="gNavi-item"><a href="<?php if ($thisPageName != 'info') {
                                             echo APP_URL_EN . 'info/';
-                                          } ?>#info02"><span>アクセス</span></a></li>
+                                          } ?>#info02"><span>Access</span></a></li>
         </ul>
         <ul class="gNavi02">
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
                         echo APP_URL_EN . 'info/';
-                      } ?>#info01"><span>営業時間</span></a>
+                      } ?>#info01"><span>Opening Hours</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
                         echo APP_URL_EN . 'info/';
-                      } ?>#info03"><span>周辺観光</span></a>
+                      } ?>#info03"><span>Nearby Attractions</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
                         echo APP_URL_EN . 'info/';
-                      } ?>#info04"><span>よくあるご質問</span></a>
+                      } ?>#info04"><span>FAQs</span></a>
           </li>
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL_EN ?>contact/"><span>お問い合わせ</span></a>
+            <a href="<?php echo APP_URL_EN ?>contact/"><span>Contact</span></a>
           </li>
         </ul>
         <p class="gReservat-ttl">
@@ -47,48 +47,48 @@
         </p>
         <ul class="gReservat">
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL_EN ?>" class="c-btn01 is-center">
+            <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>砂湯・温泉予約</span>
+              <span>Sand SPA Reservation</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
             <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>レストラン予約</span>
+              <span>Restaurant Reservation</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
-            <a href="<?php echo APP_URL_EN ?>" class="c-btn01 is-center">
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>宿泊コテージ予約</span>
+              <span>Cottage Reservation</span>
               <i class="arr02"></i>
             </a>
           </li>
         </ul>
         <div class="gOfficial-ctn">
-          <p class="gOfficia-ttl pc">OFFICIAL SNS</p>
+          <p class="gOfficia-ttl pc">OFFICIAL ACCOUNTS</p>
           <ul class="gOfficial">
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL_EN ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_tiktok.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_tiktok.svg" rel="js-lazy" width="40" height="40" alt="Tiktok">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL_EN ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_instagram.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.instagram.com/shonin_park_official/" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_instagram.svg" rel="js-lazy" width="40" height="40" alt="Instagram">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL_EN ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_youtube.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.youtube.com/@tkp1727" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_youtube.svg" rel="js-lazy" width="40" height="40" alt="Youtube">
               </a>
             </li>
             <li class="gOfficial-item">
-              <a href="<?php echo APP_URL_EN ?>">
-                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_facebook.svg" rel="js-lazy" width="40" height="40" alt="">
+              <a href="https://www.facebook.com/profile.php?id=61576974527300" target="_blank" rel="noopener">
+                <img src="<?php echo createSVG(40, 40) ?>" data-src="<?php echo APP_ASSETS; ?>img/common/header/ico_facebook.svg" rel="js-lazy" width="40" height="40" alt="Facebook">
               </a>
             </li>
           </ul>
@@ -105,18 +105,18 @@
     <div class="layerMenuPC">
       <ul class="gNaviPC">
         <li class="gNaviPC-item hasSub">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL_EN ?>guide/">
+          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL_EN ?>guide/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu01.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>施設案内</span>
+            <span>Facilities</span>
           </a>
           <div class="navSub">
             <ul class="navSub-lst">
-              <li class="item"><a href="<?php echo APP_URL_EN ?>">別府海浜砂湯</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/shop/">ショップ</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/restaurant/">レストラン</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>">宿泊コテージ</a></li>
+              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/spa/">Sand SPA</a></li>
+              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/shop/">Shops</a></li>
+              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/restaurant/">Restaurant</a></li>
+              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/ishinoya/">Cottages</a></li>
             </ul>
           </div>
         </li>
@@ -125,7 +125,7 @@
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu02.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>楽しみ方</span>
+            <span>Ways to Enjoy</span>
           </a>
         </li>
         <li class="gNaviPC-item">
@@ -133,7 +133,7 @@
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu03.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>ニュース</span>
+            <span>News</span>
           </a>
         </li>
         <li class="gNaviPC-item">
@@ -143,12 +143,12 @@
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu04.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>アクセス</span>
+            <span>Access</span>
           </a>
         </li>
       </ul>
     </div>
-    <!-- <div class="btnLang">
+    <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -168,7 +168,43 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+    <div class="btnReser">
+      <div class="gResert-overlay"></div>
+      <div class="gResert">
+        <div class="gResert-item hasSub">
+          <p class="gResert-item__link">
+            <span>Book Now</span>
+          </p>
+          <div class="navSub">
+            <ul class="navSub-lst">
+              <li class="item">
+                <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>Sand SPA Reservation</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+              <li class="item">
+                <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>Restaurant Reservation</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+              <li class="item">
+                <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01">
+                  <i class="arr01"></i>
+                  <span>Cottage Reservation</span>
+                  <i class="arr02"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="menu_overlay"></div>
   </div>
 </header>

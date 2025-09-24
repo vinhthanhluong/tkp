@@ -232,6 +232,36 @@
     }
   }
 
+  &.en {
+    .tableContact {
+      th {
+        letter-spacing: 0;
+        @include SP {
+          font-weight: 600;
+        }
+      }
+      textarea,
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="url"] {
+        letter-spacing: 0;
+      }
+      .txt-hint {
+        letter-spacing: 0;
+        @include SP {
+          margin-right: -10px;
+        }
+      }
+      em {
+        width: 62px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+    }
+  }
+
   .txtContact01 {
     @include SP {
       padding-left: 5px;
@@ -273,6 +303,15 @@
       }
     }
   }
+  &.en {
+    .txtContact01 ul li {
+      letter-spacing: 0;
+      @include SP {
+        text-align: center;
+      }
+    }
+  }
+
   .btn-confirm {
     margin-top: 19px;
   }
@@ -377,6 +416,16 @@
             @include font(14);
           }
         }
+      }
+    }
+  }
+  &.en {
+    .box-confirm {
+      .check-confirm label {
+        letter-spacing: 0;
+      }
+      .btn-confirm #btnConfirm span {
+        letter-spacing: 0;
       }
     }
   }
@@ -604,6 +653,60 @@
         }
       }
     }
+    &.en {
+      .sec-form {
+        .form-block .short-desc {
+          @include PC {
+            letter-spacing: 0.02px;
+            line-height: 160%;
+          }
+          @include SP {
+            font-size: 14px;
+            letter-spacing: 0;
+            line-height: 140%;
+            text-align: center;
+            @include max-screen(375px) {
+              font-size: calc(14 / 375 * 100vw);
+            }
+          }
+        }
+        .tableContact {
+          td {
+            letter-spacing: 0;
+          }
+        }
+        .list-btn {
+          .btn-back .txt-back {
+            letter-spacing: 0.02px;
+            @include PC {
+              width: 374px;
+              max-width: 374px;
+              @include max-screen(850px) {
+                width: calc(374 / 850 * 100vw);
+                font-size: calc(18 / 850 * 100vw);
+              }
+            }
+          }
+          #btnSend {
+            @include PC {
+              width: 374px;
+              max-width: 374px;
+              @include max-screen(850px) {
+                width: calc(374 / 850 * 100vw);
+              }
+            }
+            span {
+              @include PC {
+                @include max-screen(850px) {
+                  font-size: calc(18 / 850 * 100vw);
+                  letter-spacing: 0.02px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   // for step 3
@@ -661,6 +764,9 @@
           @include max-screen(375px) {
             font-size: calc(12 / 375 * 100vw);
           }
+        }
+        .en & {
+          letter-spacing: 0;
         }
       }
 
@@ -775,6 +881,10 @@
             }
           }
         }
+        .en & {
+          letter-spacing: 0;
+          font-weight: 600;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -830,6 +940,22 @@
         }
       }
     }
+    &.en {
+      .thanks-main__ttl {
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+      .thanks-main__txt {
+        letter-spacing: 0;
+        @include PC {
+          max-width: 854px;
+          margin: 0 auto 52px;
+        }
+        @include SP {
+          padding: 0 8px;
+        }
+      }
+    }
   }
 
   //************************ TABLE CONTACT 02 ************************//
@@ -840,6 +966,7 @@
     @include SP {
       margin-bottom: -9px;
     }
+
     td,
     th {
       display: inline-block;
@@ -1035,6 +1162,87 @@
       em {
         color: $brown02;
         border: solid 1px $yellow04;
+      }
+    }
+  }
+
+  &.en {
+    .tableContact02 {
+      tr {
+        @include PC {
+          @include flexbox;
+        }
+      }
+      th {
+        @include flexbox;
+        letter-spacing: 0;
+        @include PC {
+          width: 258px;
+        }
+      }
+      textarea,
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="url"] {
+        letter-spacing: 0;
+      }
+      .txt-hint {
+        letter-spacing: 0;
+      }
+      .radio-list {
+        @include SP {
+          display: block;
+        }
+        .radio-item {
+          @include SP {
+            width: 100%;
+          }
+          &:not(:last-child) {
+            @include PC {
+              margin-right: 20px;
+              @include max-screen(1050px) {
+                margin-right: vw-pc(20px, 1050);
+              }
+            }
+          }
+          label {
+            letter-spacing: 0;
+            @include PC {
+              font-size: 13px;
+              @include max-screen(1050px) {
+                font-size: vw-pc(13px, 1050);
+              }
+            }
+          }
+        }
+      }
+      em {
+        width: 62px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+      .head {
+        display: inline-block;
+        flex: 1;
+        font-weight: 600;
+      }
+    }
+    .txtContact02 {
+      ul li {
+        letter-spacing: 0;
+      }
+    }
+    .box-confirm02 {
+      .check-confirm label {
+        letter-spacing: 0;
+      }
+      .btn-confirm {
+        #btnConfirm {
+          letter-spacing: 0;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -1475,6 +1683,25 @@
             &::after {
               border-color: $yellow04;
             }
+          }
+        }
+      }
+    }
+    &.en {
+      .sec-formconfirm {
+        .tableContact02 td {
+          letter-spacing: 0;
+        }
+        .list-btn {
+          .btn-back .txt-back {
+            width: 360px;
+            letter-spacing: 0;
+            font-weight: 600;
+          }
+          #btnSend {
+            width: 360px;
+            letter-spacing: 0;
+            font-weight: 600;
           }
         }
       }

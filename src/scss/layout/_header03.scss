@@ -28,7 +28,7 @@
     @include PC {
       width: 175px;
       @include max-screen(1140px) {
-        width: vw-pc(175px,1140)
+        width: vw-pc(175px, 1140);
       }
     }
     @include SP {
@@ -43,20 +43,20 @@
     @include PC {
       padding-left: 30px;
       @include max-screen(1140px) {
-        padding-left: vw-pc(15px,1140);
+        padding-left: vw-pc(15px, 1140);
       }
     }
   }
   .header-menu {
     @include flexbox;
-    &>li {
+    & > li {
       margin-right: 30px;
       padding: 0 10px;
       @include PC {
         @include max-screen(1140px) {
-          margin-right: vw-pc(15px,1140);
-          padding-right: vw-pc(8px,1140);
-          padding-left: vw-pc(8px,1140);
+          margin-right: vw-pc(15px, 1140);
+          padding-right: vw-pc(8px, 1140);
+          padding-left: vw-pc(8px, 1140);
         }
       }
       &:last-child {
@@ -65,13 +65,16 @@
     }
   }
   .menu-link {
-    @include font(14,20,100,700);
+    @include font(14, 20, 100, 700);
     display: block;
     color: $brown02;
     @include PC {
       @include max-screen(1140px) {
-        font-size: vw-pc(14px,1140);
+        font-size: vw-pc(14px, 1140);
       }
+    }
+    .en & {
+      @include font(15, "", 0, 600);
     }
   }
   .has-sub {
@@ -81,7 +84,7 @@
       padding-right: 18px;
       @include PC {
         @include max-screen(1140px) {
-          padding-right: vw-pc(18px,1140);
+          padding-right: vw-pc(18px, 1140);
         }
       }
       &::after {
@@ -92,10 +95,11 @@
         width: 10px;
         height: 6px;
         margin-top: -3px;
-        background: url('data:image/svg+xml,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="%23231816"/></svg>') no-repeat center center/100% auto;
+        background: url('data:image/svg+xml,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="%23231816"/></svg>')
+          no-repeat center center/100% auto;
         @include max-screen(1140px) {
-          width: vw-pc(10px,1140);
-          height: vw-pc(6px,1140);
+          width: vw-pc(10px, 1140);
+          height: vw-pc(6px, 1140);
         }
       }
     }
@@ -116,9 +120,9 @@
     background: #fff;
     box-shadow: 0 0 10px rgba(#888, 0.15);
     text-align: center;
-    @include font(14,20,100);
+    @include font(14, 20, 100);
     padding: 22px 20px;
-    &>li {
+    & > li {
       margin-bottom: 10px;
       &:last-child {
         margin-bottom: 0;
@@ -127,11 +131,11 @@
   }
   .language {
     .menu-link {
-      @include font(15,20,0,500);
+      @include font(15, 20, 0, 500);
       @include ffGT;
       @include PC {
         @include max-screen(1140px) {
-          font-size: vw-pc(15px,1140)
+          font-size: vw-pc(15px, 1140);
         }
       }
     }
@@ -151,22 +155,27 @@
     @include flexbox;
     @include justify-content(center);
     @include align-items(center);
-    @include font(14,20,100,700);
-    border: 1px solid #928DAB;
-    background: #928DAB;
+    @include font(14, 20, 100, 700);
+    border: 1px solid #928dab;
+    background: #928dab;
     transition: 0.3s ease;
     color: #fff;
     margin-left: 40px;
     @include PC {
       @include max-screen(1140px) {
-        margin-left: vw-pc(30px,1140);
-        width: vw-pc(165px,1140);
-        font-size: vw-pc(14px,1140);
+        margin-left: vw-pc(30px, 1140);
+        width: vw-pc(165px, 1140);
+        font-size: vw-pc(14px, 1140);
       }
     }
     @include HOVER {
       background: #fff;
-      color: #928DAB;
+      color: #928dab;
+    }
+    .en & {
+      width: 201px;
+      letter-spacing: 0;
+      font-weight: 600;
     }
   }
   .hamburger-btn {
@@ -324,7 +333,7 @@
     }
   }
   .navigation-menu {
-    @include font("",1.5,100);
+    @include font("", 1.5, 100);
     @include flexbox;
     @include flex-wrap;
     @include PC {
@@ -338,13 +347,19 @@
     &:last-child {
       margin-bottom: 0;
     }
-    &>li {
+    .en & {
+      letter-spacing: 0;
+    }
+    & > li {
       @include PC {
         width: 190px;
         margin-bottom: 23px;
         &.is-col {
           width: 120px;
           margin-right: -50px;
+          .en & {
+            width: 140px;
+          }
         }
       }
       @include SP {
@@ -393,6 +408,9 @@
       @include SP {
         @include font(16);
       }
+      .en & {
+        font-weight: 600;
+      }
     }
     a {
       color: $brown02;
@@ -411,7 +429,7 @@
     }
   }
   .navigation-ttl {
-    @include font("",1.5,50,500);
+    @include font("", 1.5, 50, 500);
     @include ffGT;
     text-align: center;
     text-transform: uppercase;
@@ -426,12 +444,16 @@
     &.is-space {
       letter-spacing: 0;
     }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
   }
   .navigation-btn {
     max-width: 250px;
     margin: 0 auto;
     padding-bottom: 25px;
-    &>li {
+    & > li {
       @include PC {
         margin-bottom: 20px;
       }
@@ -468,7 +490,7 @@
       padding-top: 1px;
       margin-bottom: 36px;
     }
-    &>li {
+    & > li {
       width: 40px;
       margin: 0 10px;
     }
@@ -476,7 +498,8 @@
   .navigation-close {
     width: 20px;
     height: 20px;
-    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="27.3717" height="0.91239" transform="matrix(0.707102 0.707111 -0.707102 0.707111 0.645508 3.8147e-06)" fill="%23231816"/><rect width="27.3717" height="0.91239" transform="matrix(-0.707102 0.707111 0.707102 0.707111 19.355 0)" fill="%23231816"/></svg>') no-repeat center center/100% auto;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="27.3717" height="0.91239" transform="matrix(0.707102 0.707111 -0.707102 0.707111 0.645508 3.8147e-06)" fill="%23231816"/><rect width="27.3717" height="0.91239" transform="matrix(-0.707102 0.707111 0.707102 0.707111 19.355 0)" fill="%23231816"/></svg>')
+      no-repeat center center/100% auto;
     position: absolute;
     z-index: 1;
     cursor: pointer;
@@ -493,9 +516,9 @@
     @include flexbox;
     @include justify-content(center);
     @include flex-wrap;
-    @include font(15,20,100,700);
+    @include font(15, 20, 100, 700);
     margin: 0 -20px;
-    &>li {
+    & > li {
       margin: 0 10px;
     }
     .language-txt {

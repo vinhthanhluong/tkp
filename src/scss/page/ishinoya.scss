@@ -121,6 +121,15 @@
       padding: 0 calc(24 / 375 * 100vw) calc(35 / 375 * 100vw);
     }
   }
+  .en & {
+    letter-spacing: 0;
+    @include PC {
+      max-width: 885px;
+      @include max-screen(1440px) {
+        max-width: calc(885 / 1440 * 100vw);
+      }
+    }
+  }
   &::before {
     content: "";
     position: absolute;

@@ -1,7 +1,9 @@
 <?php
 $thisPageName = 'shop';
 
-$post_id = get_the_ID();
+$post_id = '140';
+$editor = get_field('editor', $post_id);
+
 $shop_list = get_field('shop_list', $post_id);
 $shop_list_name = [];
 if (!empty($shop_list)) {
@@ -27,11 +29,13 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="shop">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php the_content(); ?>
+    <?php echo $editor; ?>
+
     <section class="sec-shop">
       <div class="inner1170">
         <div class="map-block aos-init" data-aos="fade-up">
-          <img src="<?php echo createSVG(317, 198); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
+          <img class="map-bg pc" src="<?php echo createSVG(1170, 577); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
+          <img class="map-bg sp" src="<?php echo createSVG(327, 162); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop_sp.png" rel="js-lazy" width="327" height="162" alt="ショップエリアマップ">
           <?php if (!empty($shop_list_name[0])) { ?>
             <h3 class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></h3>
           <?php } ?>
@@ -113,7 +117,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         <?php } ?>
       </div>
     </section>
-    <?php echo apply_filters('the_content', get_post_field('news_related', $post->ID)); ?>
+    <?php echo apply_filters('the_content', get_post_field('news_related', $post_id)); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/jquery.matchHeight.min.js?v=<?php echo APP_VER ?>"></script>

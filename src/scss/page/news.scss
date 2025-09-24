@@ -1,7 +1,6 @@
 @charset 'UTF-8';
 @import "../utility/*";
 
-
 /*-----------------------------------------------------------
 for ARCHIVE
 -------------------------------------------------------------*/
@@ -55,7 +54,6 @@ for ARCHIVE
     }
   }
 }
-
 
 /*-----------------------------------------------------------
 for SINGLE
@@ -115,18 +113,21 @@ for SINGLE
     padding-right: 42px;
   }
   .meta-date {
-    color: #AFAFAF;
+    color: #afafaf;
     @include ffGT;
-    @include font(14,"","",500);
+    @include font(14, "", "", 500);
     &:not(.meta-cates) {
       margin-right: 16px;
     }
   }
   .meta-cates {
     color: $blue01;
-    @include font(14,18,"",700);
+    @include font(14, 18, "", 700);
     &:not(:last-child) {
       margin-right: 5px;
+    }
+    .en & {
+      font-weight: 600;
     }
   }
 }
@@ -182,4 +183,3 @@ for SINGLE
 .mod-pagination {
   margin-top: 39px;
 }
-

@@ -59,6 +59,10 @@
     padding: 4px;
     @include font(14);
   }
+  .en & {
+    letter-spacing: 0;
+    font-weight: 600;
+  }
   & > li {
     width: 50%;
     border-radius: 50px;
@@ -229,6 +233,10 @@
       padding-left: 14px;
       margin-bottom: 14px;
     }
+    .en & {
+      letter-spacing: 0.02px;
+      line-height: 100%;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -267,6 +275,10 @@
     @include SP {
       margin-bottom: 13px;
       @include font(15, 28);
+    }
+    .en & {
+      letter-spacing: 0;
+      line-height: 140%;
     }
     &:last-child {
       margin-bottom: 0;

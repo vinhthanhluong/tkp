@@ -88,6 +88,9 @@ a img.aligncenter {
   ol {
     margin: 25px 0;
     @include font(15, 24, 120, 700);
+    .en & {
+      letter-spacing: 0;
+    }
   }
   ul {
     padding-left: 0;
@@ -218,6 +221,11 @@ a img.aligncenter {
   }
   p {
     @include font(15, 26, 100, 500);
+    .en & {
+      letter-spacing: 0;
+      line-height: 140%;
+      font-weight: 400;
+    }
     + p {
       margin-top: 25px;
     }
@@ -241,6 +249,10 @@ a img.aligncenter {
     margin-bottom: 25px;
     @include SP {
       @include font(18, 28);
+    }
+    .en & {
+      letter-spacing: 0;
+      line-height: 140%;
     }
     &:before {
       position: absolute;
@@ -275,6 +287,9 @@ a img.aligncenter {
     @include SP {
       @include font(18, 28);
     }
+    .en & {
+      letter-spacing: 0;
+    }
     &:before {
       position: absolute;
       content: "";
@@ -296,6 +311,9 @@ a img.aligncenter {
     margin-bottom: 16px;
     @include SP {
       @include font(16, 26);
+    }
+    .en & {
+      letter-spacing: 0;
     }
     &:before {
       position: absolute;
@@ -411,6 +429,10 @@ a img.aligncenter {
   @include font(30, 45, 120, 700);
   @include SP {
     @include font(22, 34);
+  }
+  .en & {
+    letter-spacing: 0;
+    line-height: 140%;
   }
 }
 .sg-mainimg {

@@ -1,7 +1,9 @@
 <?php
 $thisPageName = 'restaurant';
 
-$post_id = get_the_ID();
+$post_id = '137';
+$editor = get_field('editor', $post_id);
+
 $food_list = get_field('food_list', $post_id);
 $file_repeater = get_field('file_repeater', $post_id);
 
@@ -31,7 +33,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="restaurant">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php the_content(); ?>
+    <?php echo $editor; ?>
 
     <section class="sec-menu">
       <?php if (!empty($food_list) || !empty($file_repeater)) { ?>
@@ -167,8 +169,23 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
       </section>
     <?php } ?>
+
+    <div class="sec-instagram">
+      <div class="instagram-inner">
+        <div class="t-wcm01">
+          <h2 class="c-ttl02 aos-init" data-aos="fade-up">
+            <span class="c-ttl02__jp">メニュー</span>
+            <span class="c-ttl02__en">Instagram</span>
+          </h2>
+          <div class="instagram-embed">
+            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
+  <?php wp_footer(); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
   <script>
     if ($('.js-swiper-gallery').length) {

@@ -66,6 +66,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .en & {
+    letter-spacing: 0;
+    @include PC {
+      font-size: 18px;
+    }
+  }
   .contact-link {
     color: $brown02;
     text-decoration: underline;
@@ -123,7 +129,18 @@
         }
       }
     }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+      @include PC {
+        min-height: 84px;
+      }
+      @include SP {
+        font-size: 16px;
+      }
+    }
     .icn {
+      display: inline-block;
       position: relative;
       padding-left: 60px;
       @include SP {
@@ -241,6 +258,9 @@
       @include font(30, 1.5, "", 500);
       @include ffGT;
     }
+    .en & {
+      letter-spacing: 0;
+    }
   }
   .faq-question {
     @include font(16, 26, "", 700);
@@ -250,6 +270,9 @@
     }
     @include SP {
       padding: 19px 0 20px 44px;
+    }
+    .en & {
+      font-weight: 600;
     }
     &::before {
       content: "Q";

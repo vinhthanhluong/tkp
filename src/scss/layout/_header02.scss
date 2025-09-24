@@ -344,6 +344,12 @@
           max-width: calc(379 / 1440 * 100vw);
           margin-right: calc(38 / 1440 * 100vw);
         }
+        .en & {
+          @include max-screen(1440px) {
+            max-width: calc(300 / 1440 * 100vw);
+            margin-right: calc(38 / 1440 * 100vw);
+          }
+        }
       }
       @include SP {
         margin-top: 61px;
@@ -378,6 +384,9 @@
           @include HOVER {
             opacity: 1;
             color: $yellow04;
+          }
+          .en & {
+            letter-spacing: 0;
           }
         }
       }

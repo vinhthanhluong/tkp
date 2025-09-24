@@ -73,6 +73,10 @@ body {
     @include SP {
       @include font(14, 24);
     }
+    .en & {
+      font-weight: 600;
+      letter-spacing: 0;
+    }
   }
 }
 .t-overflow {
@@ -277,6 +281,10 @@ body {
       font-family: "Noto Sans JP", sans-serif;
       font-weight: 600;
     }
+    .en & {
+      @include ffGT;
+      letter-spacing: 0;
+    }
   }
 }
 .mv-desc {
@@ -306,6 +314,14 @@ body {
       // max-width: calc(328 / 375 * 100vw);
       margin: 0 auto;
     }
+    .en & {
+      @include PC {
+        max-width: calc(703 / 1440 * 100vw);
+      }
+      @include SP {
+        max-width: calc(310 / 375 * 100vw);
+      }
+    }
   }
   .txt {
     color: #fff;
@@ -316,6 +332,11 @@ body {
     @include SP {
       @include font(14, 28);
       font-size: calc(14 / 375 * 100vw);
+    }
+    .en & {
+      @include ffGT;
+      letter-spacing: 0;
+      font-weight: 600;
     }
   }
 }
@@ -396,21 +417,29 @@ body {
       background: $gray01;
       border-radius: 50px;
       transition: all 0.3s ease;
+      text-align: center;
       @include PC {
-        padding: 1px 26px 0;
+        padding: 1px 10px 0;
+        min-width: 118px;
       }
       @include SP {
-        @include font(14, 34);
-        padding: 1px 22px 0;
+        @include font(14, 32);
+        padding: 1px 10px 0;
+        min-width: 109px;
         @include max-screen(375px) {
           font-size: calc(14 / 375 * 100vw);
-          padding: calc(1 / 375 * 100vw) calc(22 / 375 * 100vw) 0;
+          padding: calc(1 / 375 * 100vw) calc(10 / 375 * 100vw) 0;
         }
       }
       @include HOVER {
         opacity: 1;
         background: $blue01;
         color: #fff;
+      }
+      .en & {
+        @include ffGT;
+        letter-spacing: 0;
+        font-weight: 600;
       }
     }
     input:checked ~ label {
@@ -487,6 +516,11 @@ body {
       order: 2;
       margin: 3px -16px 0 -17px;
     }
+    .en & {
+      @include SP {
+        margin: 33px -16px 0 -17px;
+      }
+    }
   }
 }
 .park-wrap {
@@ -547,6 +581,9 @@ body {
   @include SP {
     margin-top: 33px;
   }
+  .en & {
+    margin-top: 10px;
+  }
   .txt {
     @include font(18, 30, 0.12, 700);
     @include PC {
@@ -556,6 +593,10 @@ body {
     }
     @include SP {
       @include font(14, 24);
+    }
+    .en & {
+      font-weight: 600;
+      letter-spacing: 0;
     }
   }
 }
@@ -731,6 +772,14 @@ body {
   @include SP {
     padding-top: calc(186 / 375 * 100vw);
   }
+  .en & {
+    @include PC {
+      padding-top: 360px;
+      @include max-screen(1440px) {
+        padding-top: calc(360 / 1440 * 100vw);
+      }
+    }
+  }
 }
 .how-btn {
   @include PC {
@@ -769,6 +818,14 @@ body {
     }
     @include SP {
       max-width: 180px;
+    }
+    .en & {
+      @include PC {
+        max-width: 240px;
+      }
+      @include SP {
+        max-width: 200px;
+      }
     }
   }
 }
@@ -1102,6 +1159,9 @@ body {
     }
     @include SP {
       max-width: 180px;
+    }
+    .en & {
+      max-width: 280px;
     }
   }
 }

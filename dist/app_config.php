@@ -51,20 +51,20 @@ $app_url = $protocol . $_SERVER['HTTP_HOST'] . '/' . $dist;
 define('APP_URL', $app_url);
 define('APP_URL_EN', $app_url . 'en/');
 define('APP_URL_KO', $app_url . 'ko/');
-define('APP_URL_ZH', $app_url . 'zh/');
+define('APP_URL_CN', $app_url . 'cn/');
 define('APP_VER', '1.0.0');
 if (defined('ABSPATH')) {
   define('APP_THEME_URL', get_template_directory_uri() . '/');
   define('APP_PATH', get_template_directory() . '/');
   define('APP_PATH_EN', dirname(__FILE__) . '/en/');
   define('APP_PATH_KO', dirname(__FILE__) . '/ko/');
-  define('APP_PATH_ZH', dirname(__FILE__) . '/zh/');
+  define('APP_PATH_CN', dirname(__FILE__) . '/cn/');
   define('APP_ASSETS', APP_THEME_URL . 'assets/');
 } else {
   define('APP_PATH', dirname(__FILE__) . '/wp/wp-content/themes/wp-templ/');
   define('APP_PATH_EN', dirname(__FILE__) . '/en/');
   define('APP_PATH_KO', dirname(__FILE__) . '/ko/');
-  define('APP_PATH_ZH', dirname(__FILE__) . '/zh/');
+  define('APP_PATH_CN', dirname(__FILE__) . '/cn/');
   define('APP_ASSETS', APP_URL . 'wp/wp-content/themes/wp-templ/assets/');
 }
 define('ENVIRONMENT', 'dev');
@@ -104,7 +104,7 @@ if (in_array($matches[1], $supported_languages)) {
   } else if ($lang == 'ko' || $folder == 'ko') {
     $curr_path = str_replace(array('/ko/'), '', $uri);
   } else if ($lang == 'zh' || $folder == 'zh') {
-    $curr_path = str_replace(array('/zh/'), '', $uri);
+    $curr_path = str_replace(array('/cn/'), '', $uri);
   } else {
     $lang = 'ja';
     $curr_path = substr_replace($uri, '', 0, 1);

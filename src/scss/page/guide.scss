@@ -70,6 +70,9 @@ body {
         left: 10px;
       }
     }
+    .en & {
+      text-indent: -9999px;
+    }
   }
   strong {
     display: block;
@@ -99,6 +102,20 @@ body {
     max-width: 1274px;
     margin: 0 auto;
     z-index: 2;
+  }
+  .img-wave-blue {
+    .en & {
+      @include SP {
+        top: 30px;
+      }
+    }
+  }
+  .img-wave-yellow {
+    .en & {
+      @include SP {
+        top: 102px;
+      }
+    }
   }
   .img-item-1 {
     position: absolute;
@@ -151,6 +168,11 @@ body {
     @include SP {
       margin-bottom: 33px;
     }
+    .en & {
+      @include SP {
+        margin-bottom: 48px;
+      }
+    }
     &:before {
       position: absolute;
       content: "";
@@ -166,6 +188,16 @@ body {
         height: 160px;
         margin-left: -80px;
         top: -20px;
+      }
+    }
+    .en & {
+      &:before {
+        @include PC {
+          top: -56px;
+        }
+        @include SP {
+          top: -44px;
+        }
       }
     }
     .ttl01 {
@@ -212,6 +244,16 @@ body {
       @include font(14);
       line-height: 28px;
       letter-spacing: 1.7px;
+    }
+    .en & {
+      font-weight: 600;
+      line-height: 160%;
+      @include PC {
+        letter-spacing: 0.02px;
+      }
+      @include SP {
+        letter-spacing: 0;
+      }
     }
   }
 }
@@ -368,6 +410,11 @@ body {
         @include font(15);
         letter-spacing: 1.4px;
         margin-bottom: 24px;
+      }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 500;
+        line-height: 140%;
       }
     }
     .c-btn01 {
@@ -574,6 +621,10 @@ body {
         @include font(14);
         line-height: 24px;
         letter-spacing: 1.7px;
+      }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 600;
       }
     }
   }

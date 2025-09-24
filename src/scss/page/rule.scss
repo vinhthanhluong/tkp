@@ -42,11 +42,10 @@
   @include PC {
     @include flexbox;
     @include flex-wrap;
-    padding: 0 10px;
-    margin-bottom: 79px;
+    margin: 0 -5px 79px;
     li {
-      width: calc(280 / 880 * 100%);
-      margin-right: calc(20 / 880 * 100%);
+      width: calc(290 / 910 * 100%);
+      margin-right: calc(20 / 910 * 100%);
       &:first-child {
         a.c-btn01 {
           span {
@@ -70,6 +69,13 @@
         margin-right: 0;
         a.c-btn01 span {
           padding-left: 10px;
+        }
+      }
+      a.c-btn01 {
+        .en & {
+          @include PC {
+            padding: 9px 21px 9px 11px;
+          }
         }
       }
     }
@@ -113,6 +119,9 @@
     @include SP {
       @include font(18);
     }
+    .en & {
+      letter-spacing: 0;
+    }
     &:before,
     &:after {
       position: absolute;
@@ -141,6 +150,9 @@
     @include font(15, 26, 100, 500);
     @include SP {
       @include font(14, 25);
+    }
+    .en & {
+      letter-spacing: 0;
     }
     p {
       + p {

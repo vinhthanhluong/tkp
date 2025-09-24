@@ -4,15 +4,19 @@
  * Template Name: Page GUIDE ISHINOYA CUISINE
  **/
 $thisPageName = 'ishinoya-cuisine';
+
+$post_id = '423';
+$editor = get_field('editor', $post_id);
+
 include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/lib/swiper-bundle.min.css?v=<?php echo APP_VER ?>">
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_cuisine.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="ishinoya-cuisine">
+<body id="ishinoya-cuisine" class="ishinoya-cuisine">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
   <main id="wrap02">
-    <?php the_content(); ?>
+    <?php echo $editor; ?>
   </main>
   <?php include(APP_PATH . 'libs/footer02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>

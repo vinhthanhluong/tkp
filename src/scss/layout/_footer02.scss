@@ -40,16 +40,25 @@
             &:nth-child(4),
             &:nth-child(7) {
               width: calc(260 / 748 * 100%);
+              .en & {
+                width: calc(237 / 748 * 100%);
+              }
             }
             &:nth-child(2),
             &:nth-child(5),
             &:nth-child(8) {
               width: calc(256 / 748 * 100%);
+              .en & {
+                width: calc(234 / 748 * 100%);
+              }
             }
             &:nth-child(3),
             &:nth-child(6),
             &:nth-child(9) {
               width: calc(232 / 748 * 100%);
+              .en & {
+                width: calc(277 / 748 * 100%);
+              }
             }
           }
           @include SP {
@@ -66,6 +75,14 @@
             @include SP {
               @include max-screen(375px) {
                 font-size: calc(14 / 375 * 100vw);
+              }
+            }
+            .en & {
+              letter-spacing: 0;
+              @include PC {
+                @include max-screen(1440px) {
+                  font-size: calc(14 / 1440 * 100vw);
+                }
               }
             }
             &.is-exter {
@@ -120,6 +137,9 @@
       @include max-screen(375px) {
         font-size: calc(12 / 375 * 100vw);
       }
+    }
+    .en & {
+      letter-spacing: 0;
     }
   }
   .f2-phone {
@@ -244,6 +264,14 @@
       }
       .col-menu {
         .col-menu__lst .col-menu__item {
+          @include PC {
+            &:nth-child(3) {
+              .link {
+                display: inline-block;
+                margin-right: -40px;
+              }
+            }
+          }
           @include SP {
             width: 100%;
             &:nth-child(1) {
@@ -294,12 +322,18 @@
     .col-info {
       @include PC {
         width: 50%;
+        .en & {
+          width: 40%;
+        }
       }
     }
     .col-social {
       @include PC {
         width: 50%;
         padding-top: 5px;
+        .en & {
+          width: 60%;
+        }
       }
       @include SP {
         margin-top: 22px;
@@ -361,6 +395,9 @@
             @include max-screen(375px) {
               font-size: calc(12 / 375 * 100vw);
             }
+          }
+          .en & {
+            letter-spacing: 0;
           }
           &.is-exter {
             &:after {

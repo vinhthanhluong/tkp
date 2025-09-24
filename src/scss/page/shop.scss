@@ -13,6 +13,12 @@
   @include SP {
     margin-bottom: 49px;
   }
+  .about-content {
+    .en & {
+      @include PC {
+      }
+    }
+  }
   .about-content.cloud-decor {
     @include SP {
       &:before {
@@ -23,6 +29,11 @@
   .about-ttl {
     @include PC {
       margin-bottom: 21px;
+    }
+    .en & {
+      @include PC {
+        margin-right: -50px;
+      }
     }
   }
   .about-right {
@@ -54,10 +65,14 @@
   .about-desc {
     @include PC {
       max-width: 545px;
-      margin-bottom: 74px;
+      margin-bottom: 44px;
       @include max-screen(1280px) {
-        margin-bottom: vw-pc(70px, 1280);
+        margin-bottom: vw-pc(44px, 1280);
       }
+    }
+    .en & {
+      line-height: 160%;
+      letter-spacing: 0.02px;
     }
   }
   .about-bg {
@@ -126,6 +141,9 @@
   @include SP {
     margin-bottom: 24px;
   }
+  .map-bg {
+    width: 100%;
+  }
   .map-tag {
     position: absolute;
     text-align: center;
@@ -171,6 +189,11 @@
         padding: vw-sp(1px) vw-sp(4px) vw-sp(1.5px);
         min-width: vw-sp(30px);
         border-width: vw-sp(1px);
+      }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 600;
+        line-height: 100%;
       }
     }
   }
@@ -445,11 +468,25 @@
         margin-bottom: 0;
       }
     }
+    .en & {
+      letter-spacing: 0.36px;
+      font-weight: 600;
+      @include PC {
+        line-height: 100%;
+      }
+      @include SP {
+        line-height: 140%;
+      }
+    }
   }
   .shop-desc {
     @include font(14, 26, 120);
     @include PC {
       margin-right: -1px;
+    }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 500;
     }
   }
   .shop-group {
@@ -517,10 +554,16 @@
       padding: 6px 0;
       margin-top: 10px;
     }
+    .en & {
+      letter-spacing: 0;
+    }
     dt {
       width: 92px;
       font-weight: bold;
       padding-right: 10px;
+      .en & {
+        font-weight: 600;
+      }
     }
     dd {
       @include flex(1);

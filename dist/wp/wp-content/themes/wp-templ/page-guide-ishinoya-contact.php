@@ -5,14 +5,14 @@
  **/
 $thisPageName = 'ishinoya-contact';
 
-$post_id = 202; //id page info
-$faq03 = get_field('faq03', $post_id);
+$post_id_info = 202; //id page info
+$faq03 = get_field('faq03', $post_id_info);
 
 include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_contact.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="ishinoya-contact">
+<body id="ishinoya-contact" class="ishinoya-contact">
   <?php include(APP_PATH . 'libs/header02.php'); ?>
   <main id="wrap02">
     <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv_sp.jpg">

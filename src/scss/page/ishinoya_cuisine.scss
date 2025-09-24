@@ -138,6 +138,10 @@
     @include ANDR {
       @include font(20);
     }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
   }
   .cuisine-desc {
     @include font("", "", 100);
@@ -152,6 +156,9 @@
     }
     @include ANDR {
       @include font(13);
+    }
+    .en & {
+      letter-spacing: 0;
     }
   }
   .cuisine-list {
@@ -181,6 +188,12 @@
     @include SP {
       @include font(15, 28);
       margin-bottom: 49px;
+    }
+    .en & {
+      letter-spacing: 0;
+      @include SP {
+        line-height: 140%;
+      }
     }
     &:first-child {
       @include PC {
@@ -287,6 +300,12 @@
     @include SP {
       @include font(15, 28);
     }
+    .en & {
+      letter-spacing: 0;
+      @include SP {
+        line-height: 140%;
+      }
+    }
   }
   .cuisine-group {
     @include PC {
@@ -307,6 +326,9 @@
     }
     @include SP {
       margin-bottom: 26px;
+    }
+    .en & {
+      letter-spacing: 0;
     }
     dt,
     dd {

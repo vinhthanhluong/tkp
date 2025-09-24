@@ -12,9 +12,9 @@ $currentTerm  = get_term_by('slug', get_query_var('term'), get_query_var('taxono
 $currentTermName = "";
 $currentTermSlug = "";
 if (!empty($currentTerm)) {
-  $currentTermName = $currentTerm->name;
   $currentTermSlug = $currentTerm->slug;
   $currentTermId = $currentTerm->term_id;
+  $currentTermName = get_field('cat_name_en', 'newscat' . '_' . $currentTermId) ?: $currentTerm->name;
 }
 
 include(APP_PATH_EN . 'libs/head.php');
@@ -22,17 +22,17 @@ include(APP_PATH_EN . 'libs/head.php');
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/news.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="news" class="news">
+<body id="news" class="news en">
   <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
         <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
         <?php if (!empty($currentTerm)) { ?>
-          <li><a href="<?php echo APP_URL_EN; ?>news/">ニュース</a></li>
+          <li><a href="<?php echo APP_URL_EN; ?>news/">News & Event</a></li>
           <li><?php echo strip_tags($currentTermName); ?></li>
         <?php } else { ?>
-          <li>ニュース</li>
+          <li>News & Event</li>
         <?php } ?>
       </ul>
     </div>
@@ -56,8 +56,7 @@ include(APP_PATH_EN . 'libs/head.php');
           </div>
         </div>
         <div class="mv-ttl">
-          <h1 class="mv-ttl-jp">ニュース</h1>
-          <span class="mv-ttl-en">News</span>
+          <span class="mv-ttl-en">NEWS & EVENT</span>
         </div>
       </div>
     </div>
@@ -78,16 +77,14 @@ include(APP_PATH_EN . 'libs/head.php');
         ?>
           <div class="c-catectn aos-init" data-aos="fade-up">
             <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL_EN; ?>news/">
-              <h2>すべて</h2>
+              <h2>All</h2>
             </a>
             <?php
             foreach ($categories as $catitem) {
               $cat_id = $catitem->term_id;
+              $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $catitem->name;
               $cat_link = get_term_link($cat_id);
-              if ($lang != 'jp') {
-                $cat_link = insertLangInUrl($cat_link, 'newscat', $lang);
-              }
-              $cat_name = $catitem->name;
+              $cat_link = insertLangInUrl($cat_link, 'newscat', 'en');
             ?>
               <a class="c-cate01 <?php if ($currentTermName == $cat_name) {
                                     echo 'is-active';
@@ -131,10 +128,8 @@ include(APP_PATH_EN . 'libs/head.php');
               $query_news->the_post();
               $n_id    = $post->ID;
               $n_url   = get_the_permalink($n_id);
-              if ($lang != 'jp') {
-                $n_url = insertLangInUrl($n_url, 'news', $lang);
-              }
-              $n_ttl   = get_the_title($n_id);
+              $n_url   = insertLangInUrl($n_url, 'news', 'en');
+              $n_ttl   = get_field('title_en', $n_id) ?: get_the_title($n_id);
               $n_date  = get_the_date('Y.m.d');
               $n_terms = get_the_terms($n_id, 'newscat');
               $n_thumb = get_the_post_thumbnail_url($n_id);
@@ -150,8 +145,9 @@ include(APP_PATH_EN . 'libs/head.php');
                       <p class="cate">
                         <?php
                         foreach ($n_terms as $nterm) {
-                          $cat_name = $nterm->name;
-                          $cat_class = $cat_name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                          $cat_id = $nterm->term_id;
+                          $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                          $cat_class = $nterm->name == 'お知らせ' ? 'is-blue' : 'is-yellow';
                         ?>
                           <span class="item <?php echo $cat_class; ?>"><?php echo $cat_name; ?></span>
                         <?php } ?>

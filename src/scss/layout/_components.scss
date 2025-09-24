@@ -85,6 +85,11 @@
     padding: 55px 0 58px;
     overflow: hidden;
   }
+  .en & {
+    @include PC {
+      padding: 74px 0 132px;
+    }
+  }
   .mv-inner {
     position: relative;
     padding: 0 24px;
@@ -296,6 +301,11 @@
       }
     }
   }
+  .en & {
+    @include SP {
+      padding: 86px 0 60px;
+    }
+  }
 }
 .c-breadcrumb {
   @include PC {
@@ -359,6 +369,9 @@
           }
         }
       }
+    }
+    .en & {
+      letter-spacing: 0;
     }
   }
   a {
@@ -578,6 +591,10 @@ a.c-btn01 {
     @include SP {
       @include font(14, 24);
     }
+    .en & {
+      letter-spacing: 0.32px;
+      font-weight: 600;
+    }
   }
   &.btn-anchor {
     @include PC {
@@ -644,6 +661,11 @@ a.c-btn01 {
         display: block;
         @include font(12, 24);
         padding: 0 5px 0 20px;
+      }
+      .en & {
+        letter-spacing: 0;
+        line-height: 100%;
+        font-weight: 600;
       }
     }
     .icon {
@@ -819,6 +841,10 @@ button.c-btn02 {
     display: inline-block;
     @include font(16, 30, 0.12, 700);
     transition: transform 0.4s ease;
+    .en & {
+      letter-spacing: 0.32px;
+      font-weight: 600;
+    }
   }
 }
 a.c-btn03 {
@@ -918,6 +944,10 @@ a.c-btn03 {
     @include SP {
       @include font(14, 24);
     }
+    .en & {
+      letter-spacing: 0.32px;
+      font-weight: 600;
+    }
   }
 }
 a.c-link {
@@ -939,6 +969,12 @@ a.c-link {
     @include SP {
       top: 4px;
     }
+    .en & {
+      top: calc(50% - 10px);
+    }
+  }
+  .en & {
+    letter-spacing: 0.02px;
   }
 }
 a.c-btn04 {
@@ -974,6 +1010,10 @@ a.c-btn04 {
       transform: translateX(-110%);
       z-index: 1;
     }
+  }
+  .en & {
+    letter-spacing: 0.32px;
+    font-weight: 600;
   }
   & > span {
     position: relative;
@@ -1064,6 +1104,9 @@ a.c-btn04 {
     @include SP {
       @include font(30, 30);
     }
+    .en & {
+      margin-top: 0;
+    }
   }
   .c-ttl02__jp {
     @include font("", "", 0.12, 700);
@@ -1076,6 +1119,10 @@ a.c-btn04 {
     @include SP {
       padding-left: 30px;
       @include font(15, 25);
+    }
+    .en & {
+      display: inline-block;
+      text-indent: -9999px;
     }
     &:before,
     &:after {
@@ -1195,6 +1242,9 @@ a.c-btn04 {
     @include SP {
       @include font(18, 28);
     }
+    .en & {
+      letter-spacing: 0.02px;
+    }
   }
   &__icon {
     margin: 4px 15px 0 0;
@@ -1227,6 +1277,9 @@ a.c-btn04 {
     @include SP {
       @include font(36);
     }
+    .en & {
+      font-weight: 600;
+    }
   }
 }
 /* ===================== CATEGORY ===================== */
@@ -1251,6 +1304,10 @@ a.c-btn04 {
     opacity: 1;
     background: $blue01;
     color: #fff;
+  }
+  .en & {
+    letter-spacing: 0;
+    font-weight: 600;
   }
   &.is-active {
     background: $blue01;
@@ -1366,6 +1423,20 @@ a.c-btn04 {
             padding: calc(10 / 375 * 100vw) calc(4 / 375 * 100vw);
           }
         }
+        .en & {
+          font-weight: 600;
+          @include PC {
+            padding: 10px 6px;
+          }
+          @include SP {
+            font-size: 10px;
+            padding: 10px 6px;
+            @include max-screen(375px) {
+              font-size: calc(10 / 375 * 100vw);
+              padding: calc(10 / 375 * 100vw) calc(6 / 375 * 100vw);
+            }
+          }
+        }
         &:before {
           content: "";
           display: block;
@@ -1478,6 +1549,11 @@ a.c-btn04 {
         @include max-screen(375px) {
           font-size: calc(14 / 375 * 100vw);
         }
+      }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 600;
+        line-height: 140%;
       }
     }
   }
@@ -1707,6 +1783,12 @@ a.c-btn04 {
         top: 1px;
       }
     }
+    .en & {
+      @include ffGT;
+      letter-spacing: 0.36px;
+      font-weight: 600;
+      text-align: center;
+    }
   }
 }
 /* ===================== MODULE PARK ===================== */
@@ -1803,11 +1885,21 @@ a.c-btn04 {
       .popup-ttl {
         @include font(20, 24, 0.12, 700);
         text-align: center;
+        .en & {
+          @include ffGT;
+          letter-spacing: 0;
+          font-weight: 600;
+        }
       }
       .popup-desc {
         margin-top: 11px;
         .txt {
           @include font(14, 24, 0.12);
+          .en & {
+            @include ffGT;
+            letter-spacing: 0.28px;
+            font-weight: 500;
+          }
         }
       }
     }
@@ -2112,7 +2204,7 @@ a.c-btn04 {
   }
   @include SP {
     margin-top: -138px;
-    padding: 135px 24px 0;
+    padding: 95px 24px 0;
   }
   .about-bg {
     position: absolute;
@@ -2198,6 +2290,16 @@ a.c-btn04 {
       @include font(20);
       margin-bottom: 20px;
     }
+    .en & {
+      font-weight: 600;
+      line-height: 140%;
+      @include PC {
+        letter-spacing: 0.02px;
+      }
+      @include SP {
+        letter-spacing: 0;
+      }
+    }
   }
   .about-desc {
     @include font("", "", 120, bold);
@@ -2210,6 +2312,15 @@ a.c-btn04 {
     @include SP {
       @include font(14, 28);
       margin-right: -3px;
+    }
+    .en & {
+      font-weight: 600;
+      @include PC {
+        letter-spacing: 0.36px;
+      }
+      @include SP {
+        letter-spacing: 0;
+      }
     }
   }
   .about-content {
@@ -2486,6 +2597,10 @@ a.c-btn04 {
     @include ANDR {
       @include font(12);
     }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
   }
   a.c-btn01 {
     @include PC {
@@ -2516,6 +2631,10 @@ a.c-btn04 {
           @include font(16, 28, 0.1);
         }
       }
+      .en & {
+        letter-spacing: 0.02px;
+        line-height: 100%;
+      }
       h3 {
         font-weight: inherit;
       }
@@ -2526,6 +2645,9 @@ a.c-btn04 {
         @include max-screen(1099px) {
           @include font(15, 28, 0.1);
         }
+      }
+      .en & {
+        letter-spacing: 0;
       }
     }
     @include PC {
@@ -2594,6 +2716,10 @@ a.c-btn04 {
           @include SP {
             @include font(12, 15);
             width: 100%;
+          }
+          .en & {
+            letter-spacing: 0;
+            font-weight: 600;
           }
         }
         .tab {
@@ -2692,6 +2818,10 @@ a.c-btn04 {
           @include SP {
             @include font(15, 26, 0.1);
           }
+          .en & {
+            letter-spacing: 0;
+            line-height: 140%;
+          }
         }
         &.is-act {
           &:after {
@@ -2705,6 +2835,9 @@ a.c-btn04 {
         padding: 13px 0 0 55px;
         @include SP {
           padding: 9px 0 0 55px;
+        }
+        .en & {
+          padding: 22px 0 0 55px;
         }
         &:before {
           position: absolute;
@@ -2723,6 +2856,11 @@ a.c-btn04 {
         p {
           color: #fff;
           @include font(15, 26, 0.1, 500);
+          .en & {
+            letter-spacing: 0;
+            line-height: 140%;
+            font-weight: 400;
+          }
         }
         a {
           color: #fff;
@@ -2807,6 +2945,14 @@ a.c-btn04 {
   .intro-ttls,
   .intro-txt {
     @include font("", 1.5, 100, 700);
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+      @include SP {
+        line-height: 140%;
+        padding-top: 2px;
+      }
+    }
   }
   .intro-ttl {
     @include PC {
@@ -2838,6 +2984,16 @@ a.c-btn04 {
     @include SP {
       @include font(15, 28);
       margin-bottom: 14px;
+    }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 500;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 140%;
+      }
     }
     &:last-child {
       margin-bottom: 0;
@@ -2879,6 +3035,14 @@ a.c-btn04 {
     }
     @include SP {
       padding: 14px 16px;
+    }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 500;
+      line-height: 140%;
+      @include PC {
+        padding: 24px 20px;
+      }
     }
   }
   .intro-lst {
@@ -3002,6 +3166,10 @@ a.c-btn04 {
     }
     @include ANDR {
       @include font(13);
+    }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
     }
     & > span {
       position: relative;
@@ -3140,11 +3308,19 @@ a.c-btn04 {
   .news-cate {
     @include font(12, 15, 50, 700);
     color: $brown02;
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
   }
   .news-ttl {
     @include font(16, 26, 120, 700);
     color: $brown02;
     @include multiLineEllipsis(2);
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+    }
   }
   .is-no-slider {
     @include PC {
@@ -3313,6 +3489,10 @@ a.c-btn04 {
           font-size: calc(18 / 375 * 100vw);
         }
       }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 600;
+      }
     }
     .colctn-desc {
       @include PC {
@@ -3340,6 +3520,10 @@ a.c-btn04 {
           @include max-screen(375px) {
             font-size: calc(15 / 375 * 100vw);
           }
+        }
+        .en & {
+          letter-spacing: 0;
+          font-weight: 500;
         }
       }
     }
@@ -3387,6 +3571,9 @@ a.c-btn04 {
             font-size: calc(14 / 375 * 100vw);
             margin-right: calc(6 / 375 * 100vw);
           }
+        }
+        .en & {
+          letter-spacing: 0;
         }
       }
       .time01 {
@@ -3488,6 +3675,13 @@ a.c-btn04 {
           font-size: calc(18 / 375 * 100vw);
         }
       }
+      .en & {
+        letter-spacing: 0;
+        font-weight: 600;
+        @include SP {
+          line-height: 160%;
+        }
+      }
     }
     .colctn-desc {
       @include PC {
@@ -3514,6 +3708,13 @@ a.c-btn04 {
           @include font(15, 28);
           @include max-screen(375px) {
             font-size: calc(15 / 375 * 100vw);
+          }
+        }
+        .en & {
+          letter-spacing: 0;
+          font-weight: 500;
+          @include SP {
+            line-height: 140%;
           }
         }
       }

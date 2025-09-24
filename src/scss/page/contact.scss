@@ -20,6 +20,17 @@
     letter-spacing: 1.6px;
     margin-bottom: 77px;
   }
+  .en & {
+    width: 100%;
+    max-width: 610px;
+    font-weight: 600;
+    @include PC {
+      margin: 0 auto 168px;
+    }
+    @include SP {
+      margin: 0 auto 77px;
+    }
+  }
 }
 
 .sec-form {

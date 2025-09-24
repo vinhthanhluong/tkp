@@ -57,6 +57,22 @@
               calc(9 / 1440 * 100vw) calc(21 / 1440 * 100vw);
           }
         }
+        .en & {
+          @include PC {
+            padding: 12px 21px 10px 11px;
+            @include max-screen(1440px) {
+              padding: calc(9 / 1440 * 100vw) calc(21 / 1440 * 100vw)
+                calc(9 / 1440 * 100vw) calc(11 / 1440 * 100vw);
+            }
+          }
+          @include SP {
+            height: 100%;
+            min-height: 40px;
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center);
+          }
+        }
         span,
         .txt-anchor,
         h2 {
@@ -65,6 +81,11 @@
             @include max-screen(1440px) {
               padding: 0 calc(5 / 1440 * 100vw) 0 calc(40 / 1440 * 100vw);
               font-size: calc(15 / 1440 * 100vw);
+            }
+          }
+          .en & {
+            @include PC {
+              padding: 4px 5px 0 40px;
             }
           }
         }
@@ -208,12 +229,25 @@
       }
       .ttl01 {
         @include font(16, 28, 0.1, 700);
+        .en & {
+          letter-spacing: 0;
+        }
       }
       .txt01 {
         @include font(16, 28, 0.1, 500);
         @include SP {
           @include font(15, 28);
           margin: 0 -2px 0 0;
+        }
+        .en & {
+          letter-spacing: 0;
+          font-weight: 600;
+          @include PC {
+            line-height: 160%;
+          }
+          @include SP {
+            line-height: 140%;
+          }
         }
       }
       .btn01 {
@@ -316,6 +350,16 @@
       @include font(14, 28);
       margin-bottom: 40px;
     }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 140%;
+      }
+    }
   }
   .dercor01 {
     content: "";
@@ -364,13 +408,27 @@
           width: 24px;
           height: 22px;
         }
+        .en & {
+          letter-spacing: 0;
+          @include SP {
+            line-height: 140%;
+          }
+        }
       }
       .ttl {
         @include font(18, 26, 0.12, bold);
         margin-top: 14px;
+        .en & {
+          letter-spacing: 0;
+          line-height: 100%;
+        }
       }
       .desc {
         @include font(14, 26, 0.12, 500);
+        .en & {
+          letter-spacing: 0;
+          line-height: 140%;
+        }
       }
     }
     .lstpost01-info {
@@ -508,6 +566,16 @@
     text-align: center;
     @include font(18, 30, 0.12, bold);
     margin: 39px 0 57px;
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 140%;
+      }
+    }
     a {
       color: #fff;
       text-decoration: underline;

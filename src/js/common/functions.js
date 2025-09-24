@@ -25,7 +25,7 @@ function handleGoogleFontLoader() {
           // https://github.com/theprojectsomething/webfontloader/tree/feature/google-fonts-v2#google
           "Noto Sans JP:400,600,700",
           // "Noto Serif JP:400,700",
-          "Gantari:200,400,500,600",
+          "Gantari:200,400,500,600,700",
         ],
       },
       active: function () {

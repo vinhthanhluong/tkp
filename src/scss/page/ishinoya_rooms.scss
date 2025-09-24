@@ -52,6 +52,9 @@
       background: no-repeat center center/auto 100%;
     }
   }
+  .en & {
+    font-weight: 600;
+  }
 }
 
 .anchor-list {
@@ -81,8 +84,15 @@
       }
     }
     @include SP {
-      min-width: calc(50% - 4.5px);
+      // min-width: calc(50% - 4.5px);
+      width: calc(50% - 4.5px);
       margin: 4px 0 5px;
+      &:last-child {
+        width: 100%;
+      }
+      &:nth-child(2n) {
+        width: calc(50% - 4.5px);
+      }
     }
   }
   .anchor-item {
@@ -170,6 +180,10 @@
     }
     @include ANDR {
       @include font(10);
+    }
+    .en & {
+      letter-spacing: 0.32px;
+      font-weight: 600;
     }
   }
   .c-txt-list {
@@ -310,6 +324,10 @@
     @include ANDR {
       @include font(18);
     }
+    .en & {
+      letter-spacing: 0.7px;
+      font-weight: 600;
+    }
   }
   .rooms-desc {
     color: $brown02;
@@ -321,6 +339,15 @@
     @include SP {
       margin-bottom: 12px;
       @include font(13, 25);
+    }
+    .en & {
+      letter-spacing: 0;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 140%;
+      }
     }
   }
   .rooms-img {
@@ -363,9 +390,14 @@
     @include SP {
       @include font(13, 21);
       margin-left: -2px;
+      margin-top: -5px;
     }
     @include ANDR {
       @include font(11);
+    }
+    .en & {
+      letter-spacing: 0;
+      font-weight: 600;
     }
     & > li {
       @include PC {
@@ -393,6 +425,7 @@
       }
       @include SP {
         padding-left: 28px;
+        margin-top: 5px;
         @include ANDR {
           padding-left: 22px;
         }
@@ -534,6 +567,10 @@
       @include font(26, 36);
       margin-bottom: 24px;
     }
+    .en & {
+      letter-spacing: 0.7px;
+      font-weight: 600;
+    }
   }
   .archive-desc {
     @include font("", "", 100);
@@ -544,6 +581,12 @@
     @include SP {
       @include font(15, 28);
       margin-bottom: 11px;
+    }
+    .en & {
+      letter-spacing: 0;
+      @include SP {
+        line-height: 140%;
+      }
     }
   }
   .archive-data {
@@ -557,6 +600,9 @@
       @include max-screen(800px) {
         @include font(12);
       }
+    }
+    .en & {
+      letter-spacing: 0;
     }
     .date-dt,
     .data-dd {

@@ -1,6 +1,9 @@
 <?php
 $thisPageName = 'top';
 
+$post_id = '815';
+$editor = get_field('editor', $post_id);
+
 $cat_search  = (!empty($_GET['newscat'])) ? $_GET['newscat'] : array();
 
 include(APP_PATH . 'libs/head.php'); ?>
@@ -10,7 +13,7 @@ include(APP_PATH . 'libs/head.php'); ?>
 <body id="top" class="top ok">
   <?php include(APP_PATH . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php the_content(); ?>
+    <?php echo $editor; ?>
 
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
