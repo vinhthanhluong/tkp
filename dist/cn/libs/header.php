@@ -6,7 +6,7 @@
 <header id="header" class="header">
   <div class="inHeader">
     <div id="logo">
-      <a href="<?php echo APP_URL_EN ?>">
+      <a href="<?php echo APP_URL_CN ?>">
         <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo.svg" alt="logo">
         <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo_white.svg" alt="logo">
       </a>
@@ -15,31 +15,31 @@
     <div class="layerMenu">
       <div class="inLayer">
         <ul class="gNavi">
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>guide/"><span>施設案内</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>ways/"><span>楽しみ方</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>news/"><span>ニュース</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>guide/"><span>施設案内</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>ways/"><span>楽しみ方</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>news/"><span>ニュース</span></a></li>
           <li class="gNavi-item"><a href="<?php if ($thisPageName != 'info') {
-                                            echo APP_URL_EN . 'info/';
+                                            echo APP_URL_CN . 'info/';
                                           } ?>#info02"><span>アクセス</span></a></li>
         </ul>
         <ul class="gNavi02">
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
+                        echo APP_URL_CN . 'info/';
                       } ?>#info01"><span>営業時間</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
+                        echo APP_URL_CN . 'info/';
                       } ?>#info03"><span>周辺観光</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
+                        echo APP_URL_CN . 'info/';
                       } ?>#info04"><span>よくあるご質問</span></a>
           </li>
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL_EN ?>contact/"><span>お問い合わせ</span></a>
+            <a href="<?php echo APP_URL_CN ?>contact/"><span>お問い合わせ</span></a>
           </li>
         </ul>
         <p class="gReservat-ttl">
@@ -94,9 +94,9 @@
           </ul>
           <!-- <ul class="gOfficial-lang sp">
             <li class="item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
-            <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
+            <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">English</a></li>
             <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
-            <li class="item"><a href="<?php echo APP_URL_ZH ?><?php echo $curr_path; ?>">中文簡体</a></li>
+            <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
           </ul> -->
         </div>
         <p class="close_layer"></p>
@@ -105,7 +105,7 @@
     <div class="layerMenuPC">
       <ul class="gNaviPC">
         <li class="gNaviPC-item hasSub">
-          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL_EN ?>guide/">
+          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL_CN ?>guide/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu01.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
@@ -113,15 +113,15 @@
           </a>
           <div class="navSub">
             <ul class="navSub-lst">
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/spa/">別府海浜砂湯</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/shop/">ショップ</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/restaurant/">レストラン</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/ishinoya/">宿泊コテージ</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/spa/">別府海浜砂湯</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/shop/">ショップ</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/restaurant/">レストラン</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/ishinoya/">宿泊コテージ</a></li>
             </ul>
           </div>
         </li>
         <li class="gNaviPC-item">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL_EN ?>ways/">
+          <a class="gNaviPC-item__link" href="<?php echo APP_URL_CN ?>ways/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu02.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
@@ -129,7 +129,7 @@
           </a>
         </li>
         <li class="gNaviPC-item">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL_EN ?>news/">
+          <a class="gNaviPC-item__link" href="<?php echo APP_URL_CN ?>news/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu03.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
@@ -138,7 +138,7 @@
         </li>
         <li class="gNaviPC-item">
           <a class="gNaviPC-item__link" href="<?php if ($thisPageName != 'info') {
-                                                echo APP_URL_EN . 'info/';
+                                                echo APP_URL_CN . 'info/';
                                               } ?>#info02">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu04.svg" width="24" height="24" rel="js-lazy" alt="">
@@ -161,9 +161,9 @@
           <div class="navSub">
             <ul class="navSub-lst">
               <li class="item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">English</a></li>
               <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
-              <li class="item"><a href="<?php echo APP_URL_ZH ?><?php echo $curr_path; ?>">中文簡体</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
             </ul>
           </div>
         </div>

@@ -96,7 +96,7 @@
             <li class="item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
             <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
             <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
-            <li class="item"><a href="<?php echo APP_URL_ZH ?><?php echo $curr_path; ?>">中文簡体</a></li>
+            <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
           </ul> -->
         </div>
         <p class="close_layer"></p>
@@ -163,7 +163,7 @@
               <li class="item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
               <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
               <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
-              <li class="item"><a href="<?php echo APP_URL_ZH ?><?php echo $curr_path; ?>">中文簡体</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文简体</a></li>
             </ul>
           </div>
         </div>

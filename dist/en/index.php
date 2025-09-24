@@ -3,7 +3,7 @@ $thisPageName = 'top';
 include('../wp/wp-load.php');
 
 $post_id = '815';
-$editor_en = get_field('editor_en', $post_id);
+$editor = get_field('editor_en', $post_id);
 
 $cat_search  = (!empty($_GET['newscat'])) ? $_GET['newscat'] : array();
 
@@ -14,7 +14,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
 <body id="top" class="top en">
   <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php echo $editor_en; ?>
+    <?php echo $editor; ?>
   </main>
   <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
   <?php wp_footer(); ?>

@@ -1,9 +1,10 @@
 <?php
 $thisPageName = 'top';
+include_once(dirname(__DIR__) . '/app_config.php');
 include('../wp/wp-load.php');
 
 $post_id = '815';
-$editor_en = get_field('editor_en', $post_id);
+$editor = get_field('editor_cn', $post_id);
 
 $cat_search  = (!empty($_GET['newscat'])) ? $_GET['newscat'] : array();
 
@@ -14,7 +15,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
 <body id="top" class="top cn">
   <?php include(APP_PATH_CN . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php echo $editor_en; ?>
+    <?php echo $editor; ?>
   </main>
   <?php include(APP_PATH_CN . 'libs/footer.php'); ?>
   <?php wp_footer(); ?>

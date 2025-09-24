@@ -96,14 +96,14 @@ if (empty($matches[1])) {
   $lang = 'jp';
   $curr_path = substr_replace($uri, '', 0, 1);
 }
-$supported_languages = ['jp', 'en', 'ko', 'zh'];
+$supported_languages = ['jp', 'en', 'ko', 'cn'];
 if (in_array($matches[1], $supported_languages)) {
   $lang = $matches[1];
   if ($lang == 'en' || $folder == 'en') {
     $curr_path = str_replace(array('/en/'), '', $uri);
   } else if ($lang == 'ko' || $folder == 'ko') {
     $curr_path = str_replace(array('/ko/'), '', $uri);
-  } else if ($lang == 'zh' || $folder == 'zh') {
+  } else if ($lang == 'cn' || $folder == 'cn') {
     $curr_path = str_replace(array('/cn/'), '', $uri);
   } else {
     $lang = 'ja';
