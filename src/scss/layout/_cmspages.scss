@@ -226,6 +226,9 @@ a img.aligncenter {
       line-height: 140%;
       font-weight: 400;
     }
+    .cn & {
+      font-weight: 400;
+    }
     + p {
       margin-top: 25px;
     }

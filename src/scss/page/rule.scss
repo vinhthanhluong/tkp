@@ -154,6 +154,9 @@
     .en & {
       letter-spacing: 0;
     }
+    .cn & {
+      font-weight: 400;
+    }
     p {
       + p {
         margin-top: 10px;

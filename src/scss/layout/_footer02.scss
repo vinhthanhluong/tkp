@@ -85,6 +85,9 @@
                 }
               }
             }
+            .cn & {
+              font-weight: 400;
+            }
             &.is-exter {
               &:after {
                 content: "";
@@ -140,6 +143,9 @@
     }
     .en & {
       letter-spacing: 0;
+    }
+    .cn & {
+      font-weight: 400;
     }
   }
   .f2-phone {
@@ -398,6 +404,9 @@
           }
           .en & {
             letter-spacing: 0;
+          }
+          .cn & {
+            font-weight: 400;
           }
           &.is-exter {
             &:after {

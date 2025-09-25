@@ -74,6 +74,16 @@
       line-height: 160%;
       letter-spacing: 0.02px;
     }
+    .cn & {
+      @include PC {
+        line-height: 180%;
+        letter-spacing: 1.8px;
+        padding-right: 40px;
+      }
+      @include SP {
+        padding-right: 10px;
+      }
+    }
   }
   .about-bg {
     @include PC {
@@ -487,6 +497,12 @@
     .en & {
       letter-spacing: 0;
       font-weight: 500;
+    }
+    .cn & {
+      font-weight: 400;
+      @include PC {
+        line-height: 180%;
+      }
     }
   }
   .shop-group {

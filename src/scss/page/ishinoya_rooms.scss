@@ -328,6 +328,11 @@
       letter-spacing: 0.7px;
       font-weight: 600;
     }
+    .cn & {
+      @include PC {
+        letter-spacing: 4.2px;
+      }
+    }
   }
   .rooms-desc {
     color: $brown02;
@@ -347,6 +352,12 @@
       }
       @include SP {
         line-height: 140%;
+      }
+    }
+    .cn & {
+      font-weight: 400;
+      @include PC {
+        line-height: 160%;
       }
     }
   }
@@ -398,6 +409,12 @@
     .en & {
       letter-spacing: 0;
       font-weight: 600;
+    }
+    .cn & {
+      font-weight: 700;
+      @include PC {
+        letter-spacing: 0.8px;
+      }
     }
     & > li {
       @include PC {
@@ -571,6 +588,9 @@
       letter-spacing: 0.7px;
       font-weight: 600;
     }
+    .cn & {
+      letter-spacing: 4.2px;
+    }
   }
   .archive-desc {
     @include font("", "", 100);
@@ -588,6 +608,15 @@
         line-height: 140%;
       }
     }
+    .cn & {
+      font-weight: 400;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 28px;
+      }
+    }
   }
   .archive-data {
     @include font(15, 24, 120);
@@ -603,6 +632,12 @@
     }
     .en & {
       letter-spacing: 0;
+    }
+    .cn & {
+      @include PC {
+        font-weight: 400;
+        letter-spacing: 1.5px;
+      }
     }
     .date-dt,
     .data-dd {

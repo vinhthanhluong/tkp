@@ -1,6 +1,5 @@
 <?php
 $thisPageName = 'top';
-include_once(dirname(__DIR__) . '/app_config.php');
 include('../wp/wp-load.php');
 
 $post_id = '815';
@@ -26,7 +25,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
         type: "GET",
         url: "<?php echo admin_url('admin-ajax.php'); ?>",
         data: {
-          action: "search_ajax_en",
+          action: "search_ajax_cn",
           newscat: $(this).val(),
         },
         dataType: 'json',

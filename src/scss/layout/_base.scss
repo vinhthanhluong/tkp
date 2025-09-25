@@ -296,6 +296,9 @@ body {
   &.en {
     @include ffGT;
   }
+  &.cn {
+    @include ffNS;
+  }
 }
 
 #wrap {

@@ -956,6 +956,19 @@
         }
       }
     }
+    &.cn {
+      .thanks-main__ttl {
+        font-weight: 400;
+      }
+      .thanks-main__txt {
+        font-weight: 400;
+      }
+      .thanks-main__back02 {
+        @include PC {
+          letter-spacing: 1.8px;
+        }
+      }
+    }
   }
 
   //************************ TABLE CONTACT 02 ************************//
@@ -1243,6 +1256,33 @@
           letter-spacing: 0;
           font-weight: 600;
         }
+      }
+    }
+  }
+  &.cn {
+    .tableContact02 {
+      .txt-hint {
+        font-weight: 400;
+      }
+      .radio-list {
+        .radio-item {
+          label {
+            font-weight: 400;
+          }
+        }
+      }
+      em {
+        width: 65px;
+      }
+    }
+    .txtContact02 {
+      ul li {
+        font-weight: 400;
+      }
+    }
+    .box-confirm02 {
+      .check-confirm label {
+        font-weight: 400;
       }
     }
   }

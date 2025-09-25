@@ -5,7 +5,7 @@ include_once(dirname(__DIR__) . '/../../wp/wp-load.php');
 $thisPageName = 'restaurant';
 
 $post_id = '137';
-$editor_en = get_field('editor_en', $post_id);
+$editor = get_field('editor_en', $post_id);
 
 $food_list = get_field('food_list_en', $post_id);
 $file_repeater = get_field('file_repeater_en', $post_id);
@@ -36,7 +36,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
 <body id="restaurant" class="restaurant en">
   <?php include(APP_PATH_EN . 'libs/header.php'); ?>
   <main id="wrap">
-    <?php echo $editor_en; ?>
+    <?php echo $editor; ?>
 
     <section class="sec-menu">
       <?php if (!empty($food_list) || !empty($file_repeater)) { ?>

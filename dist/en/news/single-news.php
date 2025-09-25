@@ -47,8 +47,10 @@ include(APP_PATH_EN . 'libs/head.php');
             foreach ($sg_terms as $term) {
               $cat_id = $term->term_id;
               $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $term->name;
+              $cat_link = get_term_link($term);
+              $cat_link = insertLangInUrl($cat_link, 'newscat', 'en');
           ?>
-              <a class="meta-cates" href="<?php echo get_term_link($term); ?>"><?php echo $cat_name; ?></a>
+              <a class="meta-cates" href="<?php echo $cat_link; ?>"><?php echo $cat_name; ?></a>
           <?php }
           } ?>
         </div>

@@ -89,6 +89,8 @@ include(APP_PATH . 'libs/head02.php');
               $room_slide = !empty($room_slide) ? $room_slide[0] : "";
               $room_slide = !empty($room_slide) ? $room_slide['url'] : APP_NOIMG;
               $room_desc = get_field('room_desc', $rooms_id);
+              $room_desc = !empty($room_desc) ? explode("\n", $room_desc) : [];
+              $room_desc = implode('</br>', $room_desc);
               $room_info = get_field('room_info', $rooms_id);
               $room_info_num = $room_info[0];
               $room_info_num = !empty($room_info_num['detail']) ? $room_info_num['detail'] : "";

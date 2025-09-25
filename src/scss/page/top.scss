@@ -282,8 +282,15 @@ body {
       font-weight: 600;
     }
     .en & {
-      @include ffGT;
       letter-spacing: 0;
+    }
+    .cn & {
+      @include PC {
+        letter-spacing: 7.5px;
+      }
+      @include SP {
+        letter-spacing: 3.735px;
+      }
     }
   }
 }
@@ -334,9 +341,19 @@ body {
       font-size: calc(14 / 375 * 100vw);
     }
     .en & {
-      @include ffGT;
       letter-spacing: 0;
       font-weight: 600;
+    }
+    .cn & {
+      @include PC {
+        line-height: 220%;
+        letter-spacing: 2.16px;
+      }
+      @include SP {
+        font-weight: 600;
+        line-height: 200%;
+        letter-spacing: 1.4px;
+      }
     }
   }
 }
@@ -419,16 +436,15 @@ body {
       transition: all 0.3s ease;
       text-align: center;
       @include PC {
-        padding: 1px 10px 0;
-        min-width: 118px;
+        padding: 1px 25px 0;
       }
       @include SP {
         @include font(14, 32);
-        padding: 1px 10px 0;
-        min-width: 109px;
+        padding: 3px 21px 2px;
         @include max-screen(375px) {
           font-size: calc(14 / 375 * 100vw);
-          padding: calc(1 / 375 * 100vw) calc(10 / 375 * 100vw) 0;
+          padding: calc(3 / 375 * 100vw) calc(10 / 375 * 100vw)
+            calc(2 / 375 * 100vw);
         }
       }
       @include HOVER {
@@ -437,7 +453,6 @@ body {
         color: #fff;
       }
       .en & {
-        @include ffGT;
         letter-spacing: 0;
         font-weight: 600;
       }
@@ -1162,6 +1177,16 @@ body {
     }
     .en & {
       max-width: 280px;
+    }
+    .cn & {
+      @include PC {
+        max-width: 280px;
+      }
+      @include SP {
+        span {
+          letter-spacing: 0.7px;
+        }
+      }
     }
   }
 }

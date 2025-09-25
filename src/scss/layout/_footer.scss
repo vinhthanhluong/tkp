@@ -213,6 +213,11 @@
         margin-right: 0;
       }
     }
+    .cn & {
+      @include PC {
+        margin-right: 50px;
+      }
+    }
     .f-navi02 {
       &:nth-child(1) {
         @include PC {
@@ -239,6 +244,18 @@
         &:nth-child(2) {
           @include PC {
             width: 33%;
+          }
+        }
+      }
+      .cn & {
+        &:nth-child(1) {
+          @include PC {
+            width: 44%;
+          }
+        }
+        &:nth-child(2) {
+          @include PC {
+            width: 37%;
           }
         }
       }
@@ -289,6 +306,9 @@
           letter-spacing: 0;
           font-weight: 500;
         }
+        .cn & {
+          font-weight: 400;
+        }
         &.is-exter {
           position: relative;
           &::after {
@@ -336,6 +356,10 @@
         font-size: calc(15 / 1218 * 100vw);
         margin-right: calc(31 / 1218 * 100vw);
       }
+    }
+    .cn & {
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
   }
   .social-lst {

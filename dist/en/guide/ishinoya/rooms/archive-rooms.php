@@ -16,9 +16,9 @@ include(APP_PATH_EN . 'libs/head02.php');
         </div>
         <div class="c-breadcrumb is-breadcrumb-white">
           <ul>
-            <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/">Facilities</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>guide/">Facilities</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
             <li>Rooms</li>
           </ul>
         </div>
@@ -89,6 +89,8 @@ include(APP_PATH_EN . 'libs/head02.php');
               $room_slide = !empty($room_slide) ? $room_slide[0] : "";
               $room_slide = !empty($room_slide) ? $room_slide['url'] : APP_NOIMG;
               $room_desc = get_field('room_desc_en', $rooms_id);
+              $room_desc = !empty($room_desc) ? explode("\n", $room_desc) : [];
+              $room_desc = implode('</br>', $room_desc);
               $room_info = get_field('room_info_en', $rooms_id);
               $room_info_num = $room_info[0];
               $room_info_num = !empty($room_info_num['detail']) ? $room_info_num['detail'] : "";

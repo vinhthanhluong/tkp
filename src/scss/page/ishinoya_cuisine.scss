@@ -142,6 +142,12 @@
       letter-spacing: 0;
       font-weight: 600;
     }
+    .cn & {
+      @include PC {
+        line-height: 140%;
+        letter-spacing: 4.2px;
+      }
+    }
   }
   .cuisine-desc {
     @include font("", "", 100);
@@ -159,6 +165,12 @@
     }
     .en & {
       letter-spacing: 0;
+    }
+    .cn & {
+      @include PC {
+        font-weight: 400;
+        line-height: 180%;
+      }
     }
   }
   .cuisine-list {
@@ -250,6 +262,12 @@
     @include SP {
       margin-right: -3px;
     }
+    .cn & {
+      @include PC {
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
   }
   .c-ttl04 {
     @include PC {
@@ -306,6 +324,12 @@
         line-height: 140%;
       }
     }
+    .cn & {
+      @include PC {
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
   }
   .cuisine-group {
     @include PC {
@@ -329,6 +353,11 @@
     }
     .en & {
       letter-spacing: 0;
+    }
+    .cn & {
+      @include PC {
+        letter-spacing: 1.5px;
+      }
     }
     dt,
     dd {

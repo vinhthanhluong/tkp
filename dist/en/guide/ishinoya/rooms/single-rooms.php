@@ -34,10 +34,10 @@ include(APP_PATH_EN . 'libs/head02.php');
       <div class="inner1170">
         <div class="c-breadcrumb is-breadcrumb-dis aos-init" data-aos="fade-up">
           <ul>
-            <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/">Facilities</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
-            <li><a href="<?php echo APP_URL; ?>guide/ishinoya/rooms/">Rooms</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>guide/">Facilities</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
+            <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/rooms/">Rooms</a></li>
             <li><?php echo $ttlpost; ?></li>
           </ul>
         </div>

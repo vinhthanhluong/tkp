@@ -249,6 +249,9 @@
             line-height: 140%;
           }
         }
+        .cn & {
+          font-weight: 400;
+        }
       }
       .btn01 {
         .c-btn01 {
@@ -414,6 +417,9 @@
             line-height: 140%;
           }
         }
+        .cn & {
+          font-weight: 400;
+        }
       }
       .ttl {
         @include font(18, 26, 0.12, bold);
@@ -428,6 +434,9 @@
         .en & {
           letter-spacing: 0;
           line-height: 140%;
+        }
+        .cn & {
+          font-weight: 400;
         }
       }
     }

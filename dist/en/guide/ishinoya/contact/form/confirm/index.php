@@ -6,7 +6,7 @@ include_once(dirname(dirname(dirname(dirname(__DIR__)))) . '/../../app_config.ph
 
 if (session_status() === PHP_SESSION_NONE) session_start();
 ob_start();
-if (empty($_POST['actionFlag']) && empty($_SESSION['statusFlag']) && (!isset($_POST['_csrf']) || !verify_csrf_token(sanitize_form_value($_POST['_csrf'])))) header('location: ' . APP_URL);
+if (empty($_POST['actionFlag']) && empty($_SESSION['statusFlag']) && (!isset($_POST['_csrf']) || !verify_csrf_token(sanitize_form_value($_POST['_csrf'])))) header('location: ' . APP_URL_EN);
 
 if (!empty($_POST['check1'])) sanitize_form_value($_POST['check1']);
 
@@ -63,11 +63,11 @@ if ($actionFlag == "confirm") {
         <div class="inner1170">
           <div class="c-breadcrumb is-breadcrumb-dis aos-init" data-aos="fade-up">
             <ul>
-              <li><a href="<?php echo APP_URL; ?>">TOP</a></li>
-              <li><a href="<?php echo APP_URL; ?>guide/">Facilities</a></li>
-              <li><a href="<?php echo APP_URL; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
-              <li><a href="<?php echo APP_URL; ?>guide/ishinoya/contact/">Contact</a></li>
-              <li><a href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/">Individual Customer Inquiry</a></li>
+              <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
+              <li><a href="<?php echo APP_URL_EN; ?>guide/">Facilities</a></li>
+              <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
+              <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/contact/">Contact</a></li>
+              <li><a href="<?php echo APP_URL_EN; ?>guide/ishinoya/contact/form/">Individual Customer Inquiry</a></li>
               <li>Confirm</li>
             </ul>
           </div>

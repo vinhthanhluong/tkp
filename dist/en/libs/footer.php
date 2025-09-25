@@ -9,7 +9,7 @@
         </div>
         <div class="f-info">
           <p class="txt">795-1 Shoningahama-cho, Beppu-shi, <br class="sp">Oita 874-0023, Japan</p>
-          <p class="txt">TEL <?php if (($thisPageName == 'guide-spa')): ?><a href="tel:0977-75-6363">0977-75-6363</a><?php else: ?><a href="tel:0977-75-6363">0977-75-6363</a><?php endif; ?></p>
+          <p class="txt">TEL <a href="tel:0977-75-6363">0977-75-6363</a></p>
         </div>
       </div>
       <div class="col02">

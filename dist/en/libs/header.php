@@ -3,7 +3,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<header id="header" class="header en">
+<header id="header" class="header">
   <div class="inHeader">
     <div id="logo">
       <a href="<?php echo APP_URL_EN ?>">

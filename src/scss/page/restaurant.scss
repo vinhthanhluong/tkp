@@ -65,6 +65,11 @@
         margin-right: -10px;
       }
     }
+    .cn & {
+      @include PC {
+        line-height: 140%;
+      }
+    }
   }
   .about-pic {
     @include PC {
@@ -187,6 +192,12 @@
         letter-spacing: 0;
         font-weight: 600;
       }
+      .cn & {
+        @include PC {
+          line-height: 180%;
+          letter-spacing: 1.8px;
+        }
+      }
     }
     dd {
       @include flex(1);
@@ -205,6 +216,15 @@
       .en & {
         letter-spacing: 0;
         font-weight: 500;
+      }
+      .cn & {
+        @include PC {
+          line-height: 180%;
+          letter-spacing: 1.6px;
+        }
+        @include SP {
+          line-height: 22px;
+        }
       }
     }
     .txt-link {
@@ -439,6 +459,11 @@
       letter-spacing: 0;
       font-weight: 600;
     }
+    .cn & {
+      @include PC {
+        line-height: 160%;
+      }
+    }
     // small {
     //   @include font(12, 24, 120);
     //   @include PC {
@@ -477,6 +502,11 @@
     .en & {
       letter-spacing: 0;
       font-weight: 600;
+    }
+    .cn & {
+      @include PC {
+        line-height: 160%;
+      }
     }
   }
   .menu-desc {

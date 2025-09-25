@@ -72,6 +72,9 @@
       font-size: 18px;
     }
   }
+  .cn & {
+    font-weight: 400;
+  }
   .contact-link {
     color: $brown02;
     text-decoration: underline;
@@ -349,6 +352,12 @@
     }
     @include SP {
       padding: 0 0 20px 42px;
+    }
+    .cn & {
+      font-weight: 400;
+      @include PC {
+        line-height: 160%;
+      }
     }
     &::before {
       content: "A";

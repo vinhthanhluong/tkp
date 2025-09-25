@@ -42,6 +42,11 @@
         margin: 0 auto 201px;
       }
     }
+    .cn & {
+      @include PC {
+        margin: 0 auto 201px;
+      }
+    }
   }
   .anchor-container {
     background: linear-gradient(
@@ -258,6 +263,11 @@
       font-weight: 600;
       line-height: 140%;
     }
+    .cn & {
+      @include PC {
+        line-height: 180%;
+      }
+    }
   }
   .about-desc {
     letter-spacing: 0.1em;
@@ -275,6 +285,12 @@
       }
       @include SP {
         line-height: 160%;
+      }
+    }
+    .cn & {
+      @include PC {
+        font-weight: 500;
+        line-height: 220%;
       }
     }
   }
@@ -349,6 +365,16 @@
       margin: vw-sp(-91px) -24px 24px auto;
       @include max-screen(375px) {
         margin-right: calc(-24 / 375 * 100vw);
+      }
+    }
+    .en & {
+      @include PC {
+        margin: -182px 0 -35px auto;
+      }
+    }
+    .cn & {
+      @include PC {
+        margin: -182px 0 -35px auto;
       }
     }
     .en & {
@@ -523,6 +549,12 @@
           line-height: 140%;
         }
       }
+      .cn & {
+        font-weight: 400;
+        @include PC {
+          line-height: 160%;
+        }
+      }
       .txt-link {
         color: $blue01;
         text-decoration: underline;
@@ -537,6 +569,12 @@
           @include SP {
             font-size: 13px;
           }
+        }
+        .cn & {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 160%;
+          letter-spacing: 1.2px;
         }
       }
     }
@@ -650,6 +688,9 @@
     }
     @include SP {
       padding: 22px 22px 24px 24px;
+    }
+    .cn & {
+      font-weight: 400;
     }
   }
   .step-head {
