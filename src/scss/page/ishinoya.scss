@@ -134,6 +134,16 @@
       }
     }
   }
+  .ko & {
+    line-height: normal;
+    letter-spacing: 6.4px;
+    @include PC {
+      max-width: 940px;
+      @include max-screen(1440px) {
+        max-width: calc(940 / 1440 * 100vw);
+      }
+    }
+  }
   &::before {
     content: "";
     position: absolute;

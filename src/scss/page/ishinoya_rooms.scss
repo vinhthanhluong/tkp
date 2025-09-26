@@ -55,6 +55,9 @@
   .en & {
     font-weight: 600;
   }
+  .ko & {
+    letter-spacing: 1.2px;
+  }
 }
 
 .anchor-list {
@@ -185,6 +188,11 @@
       letter-spacing: 0.32px;
       font-weight: 600;
     }
+    .ko & {
+      @include SP {
+        letter-spacing: 1.2px;
+      }
+    }
   }
   .c-txt-list {
     letter-spacing: 0;
@@ -202,6 +210,11 @@
     }
     @include ANDR {
       @include font(8);
+    }
+    .ko & {
+      @include SP {
+        letter-spacing: 1px;
+      }
     }
     & > li {
       @include PC {
@@ -333,6 +346,15 @@
         letter-spacing: 4.2px;
       }
     }
+    .ko & {
+      @include PC {
+        letter-spacing: 3.5px;
+      }
+      @include SP {
+        line-height: 140%;
+        letter-spacing: 2.2px;
+      }
+    }
   }
   .rooms-desc {
     color: $brown02;
@@ -358,6 +380,14 @@
       font-weight: 400;
       @include PC {
         line-height: 160%;
+      }
+    }
+    .ko & {
+      @include PC {
+        line-height: 200%;
+      }
+      @include SP {
+        line-height: 180%;
       }
     }
   }
@@ -415,6 +445,9 @@
       @include PC {
         letter-spacing: 0.8px;
       }
+    }
+    .ko & {
+      font-weight: 600;
     }
     & > li {
       @include PC {
@@ -591,6 +624,14 @@
     .cn & {
       letter-spacing: 4.2px;
     }
+    .ko & {
+      @include PC {
+        letter-spacing: 3.5px;
+      }
+      @include SP {
+        letter-spacing: 2.6px;
+      }
+    }
   }
   .archive-desc {
     @include font("", "", 100);
@@ -617,6 +658,14 @@
         line-height: 28px;
       }
     }
+    .ko & {
+      @include PC {
+        line-height: 200%;
+      }
+      @include SP {
+        line-height: 180%;
+      }
+    }
   }
   .archive-data {
     @include font(15, 24, 120);
@@ -638,6 +687,9 @@
         font-weight: 400;
         letter-spacing: 1.5px;
       }
+    }
+    .ko & {
+      letter-spacing: 1.5px;
     }
     .date-dt,
     .data-dd {
@@ -681,6 +733,9 @@
     }
     @include SP {
       margin: 24px auto 0;
+    }
+    .ko & {
+      width: 156px;
     }
   }
   .slider-gallery {

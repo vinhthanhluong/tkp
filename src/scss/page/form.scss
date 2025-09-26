@@ -261,6 +261,25 @@
       }
     }
   }
+  &.cn {
+    .tableContact {
+      .txt-hint {
+        font-weight: 400;
+      }
+      em {
+        width: 65px;
+        letter-spacing: 0;
+        font-weight: 600;
+      }
+    }
+  }
+  &.ko {
+    .tableContact {
+      em {
+        width: 36px;
+      }
+    }
+  }
 
   .txtContact01 {
     @include SP {
@@ -268,9 +287,6 @@
     }
     ul {
       text-align: center;
-      @include SP {
-        text-align: left;
-      }
       li {
         @include font(15);
         line-height: 24px;
@@ -309,6 +325,11 @@
       @include SP {
         text-align: center;
       }
+    }
+  }
+  &.cn {
+    .txtContact01 ul li {
+      font-weight: 400;
     }
   }
 
@@ -429,6 +450,16 @@
       }
     }
   }
+  &.cn {
+    .box-confirm {
+      .check-confirm label {
+        font-weight: 400;
+      }
+      .btn-confirm #btnConfirm span {
+        letter-spacing: 0;
+      }
+    }
+  }
 
   // for step 2
   &.contact.form-confirm {
@@ -467,7 +498,7 @@
           margin-bottom: 31px;
           @include SP {
             margin-bottom: 8px;
-            text-align: left;
+            // text-align: left;
             margin-top: 0;
             padding: 0;
             line-height: 24px;
@@ -693,6 +724,59 @@
               max-width: 374px;
               @include max-screen(850px) {
                 width: calc(374 / 850 * 100vw);
+              }
+            }
+            span {
+              @include PC {
+                @include max-screen(850px) {
+                  font-size: calc(18 / 850 * 100vw);
+                  letter-spacing: 0.02px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.ko {
+      .sec-form {
+        // .form-block .short-desc {
+        //   @include PC {
+        //     letter-spacing: 0.02px;
+        //     line-height: 160%;
+        //   }
+        //   @include SP {
+        //     font-size: 14px;
+        //     letter-spacing: 0;
+        //     line-height: 140%;
+        //     text-align: center;
+        //     @include max-screen(375px) {
+        //       font-size: calc(14 / 375 * 100vw);
+        //     }
+        //   }
+        // }
+        // .tableContact {
+        //   td {
+        //     letter-spacing: 0;
+        //   }
+        // }
+        .list-btn {
+          .btn-back .txt-back {
+            @include PC {
+              width: 360px;
+              max-width: 360px;
+              @include max-screen(850px) {
+                width: calc(360 / 850 * 100vw);
+                font-size: calc(18 / 850 * 100vw);
+              }
+            }
+          }
+          #btnSend {
+            @include PC {
+              width: 360px;
+              max-width: 360px;
+              @include max-screen(850px) {
+                width: calc(360 / 850 * 100vw);
               }
             }
             span {
@@ -962,10 +1046,33 @@
       }
       .thanks-main__txt {
         font-weight: 400;
+        @include PC {
+          max-width: 854px;
+          margin: 0 auto 52px;
+        }
+        @include SP {
+          padding: 0 8px;
+        }
       }
       .thanks-main__back02 {
         @include PC {
           letter-spacing: 1.8px;
+        }
+      }
+    }
+    &.ko {
+      .thanks-main__back02 {
+        font-weight: 600;
+        letter-spacing: 1.8px;
+      }
+      .thanks-main__txt {
+        font-weight: 400;
+        @include PC {
+          max-width: 854px;
+          margin: 0 auto 52px;
+        }
+        @include SP {
+          padding: 0 8px;
         }
       }
     }
@@ -1283,6 +1390,54 @@
     .box-confirm02 {
       .check-confirm label {
         font-weight: 400;
+      }
+    }
+  }
+  &.ko {
+    .tableContact02 {
+      .txt-hint {
+        @include PC {
+          letter-spacing: 1.3px;
+        }
+        @include SP {
+          letter-spacing: 1.2px;
+        }
+      }
+      .radio-list {
+        @include SP {
+          display: block;
+        }
+        .radio-item {
+          label {
+            letter-spacing: 1.3px;
+          }
+        }
+      }
+      textarea,
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="url"] {
+        letter-spacing: 1.4px;
+      }
+      em {
+        @include PC {
+          width: 62px;
+        }
+        @include SP {
+          width: 36px;
+        }
+      }
+    }
+    .txtContact02 {
+      ul li {
+        letter-spacing: 1.5px;
+      }
+    }
+    .box-confirm02 {
+      .check-confirm label {
+        letter-spacing: 1.5px;
       }
     }
   }
@@ -1733,15 +1888,36 @@
           letter-spacing: 0;
         }
         .list-btn {
-          .btn-back .txt-back {
-            width: 360px;
-            letter-spacing: 0;
-            font-weight: 600;
+          @include PC {
+            .btn-back .txt-back {
+              width: 360px;
+              letter-spacing: 0;
+              font-weight: 600;
+            }
+            #btnSend {
+              width: 360px;
+              letter-spacing: 0;
+              font-weight: 600;
+            }
           }
-          #btnSend {
-            width: 360px;
-            letter-spacing: 0;
-            font-weight: 600;
+        }
+      }
+    }
+    &.ko {
+      .sec-formconfirm {
+        .tableContact02 td {
+          letter-spacing: 0;
+        }
+        .list-btn {
+          @include PC {
+            .btn-back .txt-back {
+              width: 360px;
+              letter-spacing: 1.8px;
+            }
+            #btnSend {
+              width: 360px;
+              letter-spacing: 1.8px;
+            }
           }
         }
       }

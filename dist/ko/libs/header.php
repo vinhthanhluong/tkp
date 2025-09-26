@@ -6,7 +6,7 @@
 <header id="header" class="header">
   <div class="inHeader">
     <div id="logo">
-      <a href="<?php echo APP_URL_EN ?>">
+      <a href="<?php echo APP_URL_KO ?>">
         <img class="logo-black" src="<?php echo APP_ASSETS ?>img/common/logo.svg" alt="logo">
         <img class="logo-white" src="<?php echo APP_ASSETS ?>img/common/logo_white.svg" alt="logo">
       </a>
@@ -15,61 +15,61 @@
     <div class="layerMenu">
       <div class="inLayer">
         <ul class="gNavi">
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>guide/"><span>施設案内</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>ways/"><span>楽しみ方</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_EN ?>news/"><span>ニュース</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_KO ?>guide/"><span>시설안내</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_KO ?>ways/"><span>즐기시는 방법</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_KO ?>news/"><span>뉴스</span></a></li>
           <li class="gNavi-item"><a href="<?php if ($thisPageName != 'info') {
-                                            echo APP_URL_EN . 'info/';
-                                          } ?>#info02"><span>アクセス</span></a></li>
+                                            echo APP_URL_KO . 'info/';
+                                          } ?>#info02"><span>오시는 길</span></a></li>
         </ul>
         <ul class="gNavi02">
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
-                      } ?>#info01"><span>営業時間</span></a>
+                        echo APP_URL_KO . 'info/';
+                      } ?>#info01"><span>영업시간</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
-                      } ?>#info03"><span>周辺観光</span></a>
+                        echo APP_URL_KO . 'info/';
+                      } ?>#info03"><span>주변 관광 명소</span></a>
           </li>
           <li class="gNavi02-item">
             <a href="<?php if ($thisPageName != 'info') {
-                        echo APP_URL_EN . 'info/';
-                      } ?>#info04"><span>よくあるご質問</span></a>
+                        echo APP_URL_KO . 'info/';
+                      } ?>#info04"><span>자주 묻는 질문</span></a>
           </li>
           <li class="gNavi02-item">
-            <a href="<?php echo APP_URL_EN ?>contact/"><span>お問い合わせ</span></a>
+            <a href="<?php echo APP_URL_KO ?>contact/"><span>문의하기</span></a>
           </li>
         </ul>
         <p class="gReservat-ttl">
-          <span class="txt">RESERVATION</span>
+          <span class="txt">예약</span>
         </p>
         <ul class="gReservat">
           <li class="gReservat-item">
             <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>砂湯・温泉予約</span>
+              <span>모래찜질・온천 예약</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
             <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>レストラン予約</span>
+              <span>레스토랑 예약</span>
               <i class="arr02"></i>
             </a>
           </li>
           <li class="gReservat-item">
             <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
-              <span>宿泊コテージ予約</span>
+              <span>숙박 코티지 예약</span>
               <i class="arr02"></i>
             </a>
           </li>
         </ul>
         <div class="gOfficial-ctn">
-          <p class="gOfficia-ttl pc">OFFICIAL SNS</p>
+          <p class="gOfficia-ttl pc">공식 계정</p>
           <ul class="gOfficial">
             <li class="gOfficial-item">
               <a href="https://www.tiktok.com/@tkp_resort" target="_blank" rel="noopener">
@@ -105,50 +105,50 @@
     <div class="layerMenuPC">
       <ul class="gNaviPC">
         <li class="gNaviPC-item hasSub">
-          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL_EN ?>guide/">
+          <a class="gNaviPC-item__link is-link" href="<?php echo APP_URL_KO ?>guide/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu01.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>施設案内</span>
+            <span>시설안내</span>
           </a>
           <div class="navSub">
             <ul class="navSub-lst">
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/spa/">別府海浜砂湯</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/shop/">ショップ</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/restaurant/">レストラン</a></li>
-              <li class="item"><a href="<?php echo APP_URL_EN ?>guide/ishinoya/">宿泊コテージ</a></li>
+              <li class="item"><a href="<?php echo APP_URL_KO ?>guide/spa/">벳푸 모래찜질</a></li>
+              <li class="item"><a href="<?php echo APP_URL_KO ?>guide/shop/">숍</a></li>
+              <li class="item"><a href="<?php echo APP_URL_KO ?>guide/restaurant/">레스토랑</a></li>
+              <li class="item"><a href="<?php echo APP_URL_KO ?>guide/ishinoya/">숙박 코티지</a></li>
             </ul>
           </div>
         </li>
         <li class="gNaviPC-item">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL_EN ?>ways/">
+          <a class="gNaviPC-item__link" href="<?php echo APP_URL_KO ?>ways/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu02.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>楽しみ方</span>
+            <span>즐기시는 방법</span>
           </a>
         </li>
         <li class="gNaviPC-item">
-          <a class="gNaviPC-item__link" href="<?php echo APP_URL_EN ?>news/">
+          <a class="gNaviPC-item__link" href="<?php echo APP_URL_KO ?>news/">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu03.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>ニュース</span>
+            <span>뉴스</span>
           </a>
         </li>
         <li class="gNaviPC-item">
           <a class="gNaviPC-item__link" href="<?php if ($thisPageName != 'info') {
-                                                echo APP_URL_EN . 'info/';
+                                                echo APP_URL_KO . 'info/';
                                               } ?>#info02">
             <i class="icon">
               <img src="<?php echo createSVG(24, 24) ?>" data-src="<?php echo APP_ASSETS ?>img/common/header/ico_menu04.svg" width="24" height="24" rel="js-lazy" alt="">
             </i>
-            <span>アクセス</span>
+            <span>오시는 길</span>
           </a>
         </li>
       </ul>
     </div>
-    <!-- <div class="btnLang">
+    <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -163,39 +163,39 @@
               <li class="item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
               <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
               <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
-              <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文简体</a></li>
             </ul>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="btnReser">
       <div class="gResert-overlay"></div>
       <div class="gResert">
         <div class="gResert-item hasSub">
           <p class="gResert-item__link">
-            <span>ご予約はこちら</span>
+            <span>예약하기</span>
           </p>
           <div class="navSub">
             <ul class="navSub-lst">
               <li class="item">
                 <a href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener" class="c-btn01">
                   <i class="arr01"></i>
-                  <span>砂湯・温泉予約</span>
+                  <span>모래찜질・온천 예약</span>
                   <i class="arr02"></i>
                 </a>
               </li>
               <li class="item">
                 <a href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=44014354" target="_blank" rel="noopener" class="c-btn01">
                   <i class="arr01"></i>
-                  <span>レストラン予約</span>
+                  <span>레스토랑 예약</span>
                   <i class="arr02"></i>
                 </a>
               </li>
               <li class="item">
                 <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01">
                   <i class="arr01"></i>
-                  <span>宿泊コテージ予約</span>
+                  <span>숙박 코티지 예약</span>
                   <i class="arr02"></i>
                 </a>
               </li>

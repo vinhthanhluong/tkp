@@ -143,6 +143,14 @@
               width: 62.3%;
             }
           }
+          .ko & {
+            @include PC {
+              width: 59.3%;
+              .item {
+                width: 44%;
+              }
+            }
+          }
         }
         &:nth-child(2) {
           flex: 1;
@@ -160,6 +168,13 @@
             @include PC {
               flex: none;
               width: 33%;
+            }
+          }
+          .ko & {
+            @include PC {
+              &:nth-child(1) {
+                width: 52%;
+              }
             }
           }
         }
@@ -256,6 +271,23 @@
         &:nth-child(2) {
           @include PC {
             width: 37%;
+          }
+        }
+      }
+      .ko & {
+        &:nth-child(1) {
+          @include PC {
+            width: 42%;
+          }
+        }
+        &:nth-child(2) {
+          @include PC {
+            width: 43%;
+            .item {
+              &:nth-child(2) {
+                width: 37%;
+              }
+            }
           }
         }
       }

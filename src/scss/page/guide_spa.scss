@@ -47,6 +47,11 @@
         margin: 0 auto 201px;
       }
     }
+    .ko & {
+      @include PC {
+        margin: 0 auto 201px;
+      }
+    }
   }
   .anchor-container {
     background: linear-gradient(
@@ -268,6 +273,12 @@
         line-height: 180%;
       }
     }
+    .ko & {
+      @include PC {
+        font-weight: 600;
+        line-height: 160%;
+      }
+    }
   }
   .about-desc {
     letter-spacing: 0.1em;
@@ -291,6 +302,11 @@
       @include PC {
         font-weight: 500;
         line-height: 220%;
+      }
+    }
+    .ko & {
+      @include PC {
+        line-height: 200%;
       }
     }
   }
@@ -377,7 +393,7 @@
         margin: -182px 0 -35px auto;
       }
     }
-    .en & {
+    .ko & {
       @include PC {
         margin: -182px 0 -35px auto;
       }
@@ -575,6 +591,12 @@
           font-size: 12px;
           line-height: 160%;
           letter-spacing: 1.2px;
+        }
+        .ko & {
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 180%;
+          letter-spacing: 1.3px;
         }
       }
     }

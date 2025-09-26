@@ -19,10 +19,10 @@ if ($page_name == 'news') {
   }
 }
 
-if ($page_lang == 'en' && $page_name == 'news' && (empty($current_id) || !is_numeric($current_id))) {
-  include_once(APP_PATH_EN . 'news/archive-news.php');
-} else if ($page_lang == 'en' && $page_name == 'news' && is_numeric($current_id)) {
-  include_once(APP_PATH_EN . 'news/single-news.php');
+if ($page_lang == 'ko' && $page_name == 'news' && (empty($current_id) || !is_numeric($current_id))) {
+  include_once(APP_PATH_KO . 'news/archive-news.php');
+} else if ($page_lang == 'ko' && $page_name == 'news' && is_numeric($current_id)) {
+  include_once(APP_PATH_KO . 'news/single-news.php');
 } else {
   include_once(APP_PATH . '404.php');
 }

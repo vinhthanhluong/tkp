@@ -1721,6 +1721,7 @@ a.c-btn04 {
     -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    text-align: center;
     @include PC {
       border-width: 2px;
       @include max-screen(1218px) {
@@ -1914,9 +1915,13 @@ a.c-btn04 {
         .txt {
           @include font(14, 24, 0.12);
           .en & {
-            @include ffGT;
             letter-spacing: 0.28px;
             font-weight: 500;
+          }
+          .ko & {
+            font-weight: 400;
+            line-height: 200%;
+            letter-spacing: 1.4px;
           }
         }
       }
@@ -2346,10 +2351,24 @@ a.c-btn04 {
         letter-spacing: 1.8px;
       }
     }
+    .ko & {
+      line-height: 200%;
+      @include PC {
+        letter-spacing: 1.8px;
+      }
+      @include SP {
+        letter-spacing: 1.4px;
+      }
+    }
   }
   .about-content {
     @include PC {
       max-width: 590px;
+    }
+    .ko & {
+      @include PC {
+        max-width: 570px;
+      }
     }
   }
   .about-left {
@@ -2631,7 +2650,7 @@ a.c-btn04 {
       max-width: 200px;
     }
     @include SP {
-      max-width: 180px;
+      max-width: 120px;
       padding-left: 19px;
     }
   }
@@ -3028,6 +3047,9 @@ a.c-btn04 {
         line-height: 180%;
       }
     }
+    .ko & {
+      line-height: 180%;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -3082,6 +3104,9 @@ a.c-btn04 {
       @include PC {
         line-height: 180%;
       }
+    }
+    .ko & {
+      line-height: 180%;
     }
   }
   .intro-lst {
@@ -3272,6 +3297,11 @@ a.c-btn04 {
     }
     @include SP {
       margin: 38px auto 0;
+    }
+    .ko & {
+      @include PC {
+        width: 127px;
+      }
     }
   }
   .news-content {
@@ -3665,6 +3695,11 @@ a.c-btn04 {
       }
       @include SP {
         margin-top: 32px;
+      }
+      .ko & {
+        @include PC {
+          max-width: 127px;
+        }
       }
     }
   }

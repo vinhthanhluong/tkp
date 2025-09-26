@@ -254,12 +254,12 @@ BfxvW+ysOWwPTCv+Hq1S1fGfdTw0tpS+5P5MJviHt8SK9DhciQILhg==
   }
 
   $_SESSION['statusFlag'] = 1;
-  header("Location: " . APP_URL_EN . "contact/complete/");
+  header("Location: " . APP_URL_CN . "contact/complete/");
   exit;
 }
 
 if (!empty($_SESSION['statusFlag'])) unset($_SESSION['statusFlag']);
-else header('location: ' . APP_URL_EN);
+else header('location: ' . APP_URL_CN);
 
 $thisPageName = 'contact';
 include(APP_PATH_CN . "libs/head.php");
@@ -268,7 +268,7 @@ unset($_SESSION['ses_gtime_step2']);
 unset($_SESSION['ses_from_step2']);
 unset($_SESSION['ses_step3']);
 ?>
-<meta http-equiv="refresh" content="15; url=<?php echo APP_URL_EN ?>">
+<meta http-equiv="refresh" content="15; url=<?php echo APP_URL_CN ?>">
 <script type="text/javascript">
   history.pushState({
     page: 1
@@ -287,20 +287,20 @@ unset($_SESSION['ses_step3']);
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
         <li><a href="<?php echo APP_URL_CN; ?>">TOP</a></li>
-        <li>Contact</li>
-        <li>Confirm</li>
-        <li>Complete</li>
+        <li>咨询</li>
+        <li>确认填写内容</li>
+        <li>完成</li>
       </ul>
     </div>
     <div class="sec-form c-bg-wave01">
       <div class="img-step">
-        <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_en.png" rel="js-lazy" width="520" height="140" alt="送信完了">
-        <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_sp_en.png" rel="js-lazy" width="327" height="88" alt="送信完了">
+        <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_cn.png" rel="js-lazy" width="520" height="140" alt="送信完了">
+        <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step03_sp_cn.png" rel="js-lazy" width="327" height="88" alt="送信完了">
       </div>
       <div class="thanks-main">
-        <p class="thanks-main__ttl"><strong>Thank you for your inquiry.</strong></p>
-        <p class="thanks-main__txt">A confirmation email has been sent to the address you provided.<br>Our team will get back to you after reviewing your message.<br><br>*If you don’t receive the email after some time, please check that your address was entered correctly, <br class="pc">and look in your spam or junk folder. If the issue persists, feel free to reach out again using the form or by phone.</p>
-        <a class="thanks-main__back c-btn02" href="<?php echo APP_URL_EN; ?>"><span>Top</span></a>
+        <p class="thanks-main__ttl"><strong>感谢您的咨询</strong></p>
+        <p class="thanks-main__txt">向您填写的邮箱地址发送了确认邮件，烦请确认。<br class="pc">我们确认咨询内容后，负责人会回复您。<br><br>※经过一段时间没有收到邮件时，有可能是邮箱地址填写错误，或因系统故障，将邮件分拣到垃圾邮件文件夹。如果是上述情况，烦请您再次填写表格咨询，或者致电垂询。</p>
+        <a class="thanks-main__back c-btn02" href="<?php echo APP_URL_CN; ?>"><span>Back to top</span></a>
       </div>
     </div>
 

@@ -31,6 +31,18 @@
       margin: 0 auto 77px;
     }
   }
+  .ko & {
+    width: 100%;
+    max-width: 612px;
+    line-height: 180%;
+    letter-spacing: 1.8px;
+    @include PC {
+      margin: 0 auto 168px;
+    }
+    @include SP {
+      margin: 0 auto 77px;
+    }
+  }
 }
 
 .sec-form {

@@ -292,6 +292,14 @@ body {
         letter-spacing: 3.735px;
       }
     }
+    .en & {
+      @include PC {
+        letter-spacing: 5px;
+      }
+      @include SP {
+        letter-spacing: 0;
+      }
+    }
   }
 }
 .mv-desc {
@@ -327,6 +335,14 @@ body {
       }
       @include SP {
         max-width: calc(310 / 375 * 100vw);
+      }
+    }
+    .ko & {
+      @include PC {
+        max-width: calc(700 / 1440 * 100vw);
+      }
+      @include SP {
+        max-width: calc(318 / 375 * 100vw);
       }
     }
   }
@@ -842,6 +858,11 @@ body {
         max-width: 200px;
       }
     }
+    .ko & {
+      @include SP {
+        max-width: 196px;
+      }
+    }
   }
 }
 .how-img {
@@ -1186,6 +1207,14 @@ body {
         span {
           letter-spacing: 0.7px;
         }
+      }
+    }
+    .ko & {
+      @include PC {
+        max-width: 280px;
+      }
+      @include SP {
+        max-width: 201px;
       }
     }
   }

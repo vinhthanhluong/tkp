@@ -488,6 +488,10 @@
         line-height: 140%;
       }
     }
+    .ko & {
+      font-weight: 600;
+      letter-spacing: 1.8px;
+    }
   }
   .shop-desc {
     @include font(14, 26, 120);
@@ -501,6 +505,16 @@
     .cn & {
       font-weight: 400;
       @include PC {
+        line-height: 180%;
+      }
+    }
+    .ko & {
+      font-weight: 400;
+      letter-spacing: 1.4px;
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
         line-height: 180%;
       }
     }

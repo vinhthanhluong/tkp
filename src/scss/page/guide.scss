@@ -416,12 +416,25 @@ body {
         font-weight: 500;
         line-height: 140%;
       }
+      .ko & {
+        font-weight: 400;
+        @include PC {
+          line-height: 200%;
+        }
+        @include SP {
+          line-height: 180%;
+          letter-spacing: 1.5px;
+        }
+      }
     }
     .c-btn01 {
       margin: 0;
       max-width: 200px;
       @include SP {
         max-width: 180px;
+        .ko & {
+          max-width: 120px;
+        }
       }
     }
     .img-item-1 {
@@ -624,6 +637,15 @@ body {
       .en & {
         letter-spacing: 0;
         font-weight: 600;
+      }
+      .ko & {
+        line-height: 180%;
+        @include PC {
+          letter-spacing: 1.8px;
+        }
+        @include PC {
+          letter-spacing: 1.5px;
+        }
       }
     }
   }

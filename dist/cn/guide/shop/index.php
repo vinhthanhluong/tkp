@@ -36,36 +36,36 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
 
     <section class="sec-shop">
       <div class="inner1170">
-        <div class="map-block aos-init" data-aos="fade-up">
-          <img class="map-bg pc" src="<?php echo createSVG(1170, 577); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
-          <img class="map-bg sp" src="<?php echo createSVG(327, 162); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop_sp.png" rel="js-lazy" width="327" height="162" alt="ショップエリアマップ">
-          <?php if (!empty($shop_list_name[0])) { ?>
-            <h3 class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[1])) { ?>
-            <h3 class="map-tag is-tag02"><span class="tag-txt"><?php echo $shop_list_name[1]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[2])) { ?>
-            <h3 class="map-tag is-tag03"><span class="tag-txt"><?php echo $shop_list_name[2]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[3])) { ?>
-            <h3 class="map-tag is-tag04"><span class="tag-txt"><?php echo $shop_list_name[3]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[4])) { ?>
-            <h3 class="map-tag is-tag05"><span class="tag-txt"><?php echo $shop_list_name[4]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[5])) { ?>
-            <h3 class="map-tag is-tag06"><span class="tag-txt"><?php echo $shop_list_name[5]; ?></span></h3>
-          <?php } ?>
-          <?php if (!empty($shop_list_name[6])) { ?>
-            <h3 class="map-tag is-tag07"><span class="tag-txt"><?php echo $shop_list_name[6]; ?></span></h3>
-          <?php } ?>
-        </div>
 
         <?php if (!$is_all_empty) { ?>
           <div class="c-ttl02 aos-init" data-aos="fade-up">
             <h2 class="c-ttl02__jp">区域指南</h2>
             <span class="c-ttl02__en">Shop Area</span>
+          </div>
+          <div class="map-block aos-init" data-aos="fade-up">
+            <img class="map-bg pc" src="<?php echo createSVG(1170, 577); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
+            <img class="map-bg sp" src="<?php echo createSVG(327, 162); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop_sp.png" rel="js-lazy" width="327" height="162" alt="ショップエリアマップ">
+            <?php if (!empty($shop_list_name[0])) { ?>
+              <h3 class="map-tag is-tag01"><span class="tag-txt"><?php echo $shop_list_name[0]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[1])) { ?>
+              <h3 class="map-tag is-tag02"><span class="tag-txt"><?php echo $shop_list_name[1]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[2])) { ?>
+              <h3 class="map-tag is-tag03"><span class="tag-txt"><?php echo $shop_list_name[2]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[3])) { ?>
+              <h3 class="map-tag is-tag04"><span class="tag-txt"><?php echo $shop_list_name[3]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[4])) { ?>
+              <h3 class="map-tag is-tag05"><span class="tag-txt"><?php echo $shop_list_name[4]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[5])) { ?>
+              <h3 class="map-tag is-tag06"><span class="tag-txt"><?php echo $shop_list_name[5]; ?></span></h3>
+            <?php } ?>
+            <?php if (!empty($shop_list_name[6])) { ?>
+              <h3 class="map-tag is-tag07"><span class="tag-txt"><?php echo $shop_list_name[6]; ?></span></h3>
+            <?php } ?>
           </div>
           <ul class="shop-list">
             <?php
@@ -75,6 +75,8 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
               $shop_pic = $shop_pic ? $shop_pic['sizes'] : '';
               $shop_pic = $shop_pic ? $shop_pic['medium']  : APP_NOIMG;
               $shop_desc = $shop['shop_desc'];
+              $shop_desc = explode("\n", $shop_desc);
+              $shop_desc = implode('<br>', $shop_desc);
               $shop_time = $shop['shop_time'];
               $shop_web = $shop['shop_web'];
               $shop_instagram = $shop['shop_instagram'];

@@ -1,0 +1,81 @@
+<?php
+include_once(dirname(dirname(__DIR__)) . '/../../app_config.php');
+include_once(dirname(dirname(__DIR__)) . '/../../wp/wp-load.php');
+
+$thisPageName = 'ishinoya-contact';
+
+$post_id_info = 202; //id page info
+$faq03 = get_field('faq03_ko', $post_id_info);
+
+include(APP_PATH_KO . 'libs/head02.php'); ?>
+<link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_contact.min.css?v=<?php echo APP_VER ?>">
+</head>
+
+<body id="ishinoya-contact" class="ishinoya-contact ko">
+  <?php include(APP_PATH_KO . 'libs/header02.php'); ?>
+  <main id="wrap02">
+    <section class="c-keyvisual aos-init" data-aos="fade-up" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/mv_sp.jpg">
+      <div class="inner1170">
+        <div class="keyvisual-ttl">
+          <span class="ttl-en">Contact</span>
+          <h1 class="ttl-jp">문의하기</h1>
+        </div>
+        <div class="c-breadcrumb is-breadcrumb-white">
+          <ul>
+            <li><a href="<?php echo APP_URL_KO; ?>">TOP</a></li>
+            <li><a href="<?php echo APP_URL_KO; ?>guide/">시설안내</a></li>
+            <li><a href="<?php echo APP_URL_KO; ?>guide/ishinoya/">ISHINOYA벳푸</a></li>
+            <li>문의하기</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="sec-contact-head aos-init" data-aos="fade-up">
+      <div class="inner1170">
+        <p class="c-contact-desc">아래 "<a class="contact-link" href="#faq">자주 묻는 질문</a>"에서 해결 못하시는 경우 하기 폼에서 문의해 주시기 바랍니다.</p>
+        <ul class="btn-list">
+          <li><a href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/form/">
+              <h2><span class="icn icn01">개인 고객님</span></h2>
+            </a></li>
+          <li><a href="https://reg34.smp.ne.jp/regist/is?SMPFORM=qc-sinjs-2237e2e2d56727399f186f7c0c9bcea4&f000607785=SHONIN%20PARK" target="_blank" rel="noopener">
+              <h2><span class="icn icn02">법인 고객님</span></h2>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+    <section class="sec-contact-faq" id="faq" rel="js-lazy" data-bgpc="<?php echo APP_ASSETS; ?>img/ishinoya/contact/pattern_bg.jpg" data-bgsp="<?php echo APP_ASSETS; ?>img/ishinoya/contact/pattern_bg_sp.jpg">
+      <div class="inner1170">
+        <div class="c-ttl04 aos-init" data-aos="fade-up">
+          <h2 class="c-ttl04__jp">자주 묻는 질문</h2>
+          <span class="c-ttl04__en">Q&A</span>
+        </div>
+        <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 벳푸의 이용과 관련하여 자주 묻는 질문을 정리하였습니다.여기서 확인을 못<br class="pc">하시는 내용은 문의 <a class="contact-link" href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/form/">폼</a>에서 문의해 주시기 바랍니다.</p>
+        <?php if (!empty($faq03)) {  ?>
+          <ul class="faq-list">
+            <?php
+            foreach ($faq03 as $item) {
+              $question = !empty($item['question']) ? $item['question'] : '';
+              $answer = !empty($item['answer']) ? $item['answer'] : '';
+              if (!empty($question) && !empty($answer)) {
+            ?>
+                <li class="faq-item aos-init" data-aos="fade-up">
+                  <h3 class="faq-question js-accordion"><span><?php echo $question; ?></span></h3>
+                  <div class="faq-accordion js-accordion-content">
+                    <div class="faq-answer">
+                      <div><?php echo $answer; ?></div>
+                    </div>
+                  </div>
+                </li>
+            <?php }
+            } ?>
+          </ul>
+        <?php } else { ?>
+          <p class="c-text-nonpost">There are no articles to display.</p>
+        <?php } ?>
+      </div>
+    </section>
+  </main>
+  <?php include(APP_PATH_KO . 'libs/footer02.php'); ?>
+</body>
+
+</html>

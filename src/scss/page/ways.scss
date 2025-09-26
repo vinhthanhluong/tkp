@@ -237,6 +237,14 @@
       letter-spacing: 0.02px;
       line-height: 100%;
     }
+    .ko & {
+      @include PC {
+        letter-spacing: 1.6px;
+      }
+      @include SP {
+        line-height: 180%;
+      }
+    }
     &:before {
       content: "";
       position: absolute;
@@ -279,6 +287,14 @@
     .en & {
       letter-spacing: 0;
       line-height: 140%;
+    }
+    .ko & {
+      @include PC {
+        line-height: 160%;
+      }
+      @include SP {
+        line-height: 200%;
+      }
     }
     &:last-child {
       margin-bottom: 0;

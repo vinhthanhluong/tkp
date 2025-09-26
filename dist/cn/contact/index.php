@@ -44,12 +44,11 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
         </div>
       </div>
     </div>
-    <p class="short-desc">Before reaching out, please check our <a href="<?php echo APP_URL_CN ?>info#info04">Frequently Asked Questions</a>.<br>If your question is not addressed there, feel free to fill out the contact form below.</p>
     <p class="short-desc">在咨询前烦请您确认<a href="<?php echo APP_URL_CN ?>info#info04">常见问题</a>，<br>然后填写咨询表格。</p>
     <div class="sec-form c-bg-wave01">
       <div class="img-step">
-        <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step01_en.png" rel="js-lazy" width="520" height="140" alt="内容输入">
-        <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step01_sp_en.png" rel="js-lazy" width="327" height="88" alt="内容输入">
+        <img class="pc" src="<?php echo createSVG(520, 140) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step01_cn.png" rel="js-lazy" width="520" height="140" alt="内容输入">
+        <img class="sp" src="<?php echo createSVG(327, 88) ?>" data-src="<?php echo APP_ASSETS; ?>img/contact/img_step01_sp_cn.png" rel="js-lazy" width="327" height="88" alt="内容输入">
       </div>
       <form method="post" class="contactform" id="contactform" action="<?php echo APP_URL_CN; ?>contact/confirm/?g=<?php echo time() ?>" name="contactform" onSubmit="return check()">
         <div class="form-block">

@@ -172,6 +172,9 @@
         line-height: 180%;
       }
     }
+    .ko & {
+      line-height: 200%;
+    }
   }
   .cuisine-list {
     @include PC {
@@ -268,6 +271,9 @@
         line-height: 160%;
       }
     }
+    .ko & {
+      line-height: 180%;
+    }
   }
   .c-ttl04 {
     @include PC {
@@ -330,6 +336,9 @@
         line-height: 160%;
       }
     }
+    .ko & {
+      line-height: 180%;
+    }
   }
   .cuisine-group {
     @include PC {
@@ -358,6 +367,9 @@
       @include PC {
         letter-spacing: 1.5px;
       }
+    }
+    .ko & {
+      letter-spacing: 1.5px;
     }
     dt,
     dd {

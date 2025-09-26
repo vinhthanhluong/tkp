@@ -166,5 +166,17 @@
       border-radius: 0;
     }
   }
+  &.ko {
+    .sec-formcomplete {
+      .form-inner {
+        @include PC {
+          max-width: 840px;
+        }
+        @include SP {
+          padding: 0 7px;
+        }
+      }
+    }
+  }
 }
 // Section Form Complete

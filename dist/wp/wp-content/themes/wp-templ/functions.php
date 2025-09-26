@@ -578,7 +578,7 @@ function ishinoya_news_shortcode($atts)
       $txt_btn01 = 'See More';
       $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
     } else if ($lang == 'ko') {
-      $txt_btn01 = '더보기';
+      $txt_btn01 = '더 보기';
       $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
     } else if ($lang == 'cn') {
       $txt_btn01 = '了解更多';
@@ -611,7 +611,7 @@ function ishinoya_news_shortcode($atts)
           <div class="c-ttl04">
             <?php if ($lang == 'en') { ?>
             <?php } else if ($lang == 'ko') { ?>
-              <h2 class="c-ttl04__jp">お知らせ</h2>
+              <h2 class="c-ttl04__jp">뉴스</h2>
             <?php } else if ($lang == 'cn') { ?>
               <h2 class="c-ttl04__jp">最新动态</h2>
             <?php } else { ?>
@@ -689,7 +689,7 @@ function ishinoya_news_shortcode($atts)
               </div>
             </div>
           </div>
-          <a class="c-btn04" href="<?php echo esc_url($link_btn01); ?>"><span><?php echo $txt_btn01; ?></span></a>
+          <a class="c-btn04" href="<?php echo $link_btn01; ?>"><span><?php echo $txt_btn01; ?></span></a>
         </div>
       </section>
     </div>
@@ -701,30 +701,6 @@ add_shortcode('ishinoya_news', 'ishinoya_news_shortcode');
 // shortcode shop news
 function shop_news_shortcode($atts)
 {
-  $current_url = $_SERVER['REQUEST_URI'];
-  preg_match("#^/([a-z]{2})/#", $current_url, $matches);
-  $lang = 'jp';
-  if (empty($matches[1])) {
-    $lang = 'jp';
-    $txt_ttl02 = 'ニュース';
-    $txt_btn01 = 'もっと見る';
-  }
-  $supported_languages = ['jp', 'en', 'ko', 'cn'];
-  if (in_array($matches[1], $supported_languages)) {
-    $lang = $matches[1];
-    if ($lang == 'en') {
-      $txt_ttl02 = 'News';
-      $txt_btn01 = 'See More';
-    } else if ($lang == 'ko') {
-      $txt_ttl02 = '뉴스';
-      $txt_btn01 = '더보기';
-    } else if ($lang == 'cn') {
-      $txt_ttl02 = '最新动态与活动';
-      $txt_btn01 = '了解更多';
-    } else {
-      $lang = 'jp';
-    }
-  }
 
   $atts = shortcode_atts(
     array(
@@ -740,6 +716,35 @@ function shop_news_shortcode($atts)
   // Multi category
   $term_ids = array_map('intval', explode(',', $atts['termid']));
   $posts_per_page = intval($atts['posts_per_page']);
+
+  $current_url = $_SERVER['REQUEST_URI'];
+  preg_match("#^/([a-z]{2})/#", $current_url, $matches);
+  $lang = 'jp';
+  if (empty($matches[1])) {
+    $lang = 'jp';
+    $txt_ttl02 = 'ニュース';
+    $txt_btn01 = 'もっと見る';
+    $link_btn01 = get_term_link($term_ids[0], 'newscat');
+  }
+  $supported_languages = ['jp', 'en', 'ko', 'cn'];
+  if (in_array($matches[1], $supported_languages)) {
+    $lang = $matches[1];
+    if ($lang == 'en') {
+      $txt_ttl02 = 'News';
+      $txt_btn01 = 'See More';
+      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
+    } else if ($lang == 'ko') {
+      $txt_ttl02 = '뉴스';
+      $txt_btn01 = '더 보기';
+      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
+    } else if ($lang == 'cn') {
+      $txt_ttl02 = '最新动态与活动';
+      $txt_btn01 = '了解更多';
+      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'cn');
+    } else {
+      $lang = 'jp';
+    }
+  }
 
   ob_start();
   $args_news = array(
@@ -831,7 +836,7 @@ function shop_news_shortcode($atts)
           <?php } ?>
         </ul>
         <div class="aos-init" data-aos="fade-up">
-          <a href="<?php echo get_term_link($term_ids[0], 'newscat'); ?>" class="c-btn01 is-center">
+          <a href="<?php echo $link_btn01; ?>" class="c-btn01 is-center">
             <i class="arr01"></i>
             <span><?php echo $txt_btn01; ?></span>
             <i class="arr02"></i>
@@ -866,7 +871,7 @@ function homepage_news_shortcode($atts)
       $link_btn01 = APP_URL . 'en/news/';
     } else if ($lang == 'ko') {
       $txt_ttl01 = '뉴스';
-      $txt_newscat00 = '모두';
+      $txt_newscat00 = '전체';
       $txt_btn01 = '더 보기';
       $link_btn01 = APP_URL . 'ko/news/';
     } else if ($lang == 'cn') {

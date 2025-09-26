@@ -63,7 +63,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="c-text-nonpost">There are no articles to display.</p>
+                <p class="c-text-nonpost">没有可显示的文章。</p>
               <?php } ?>
             </div>
 
@@ -86,7 +86,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="c-text-nonpost">There are no articles to display.</p>
+                <p class="c-text-nonpost">没有可显示的文章。</p>
               <?php } ?>
             </div>
             <div class="tab-content" id="tab03">
@@ -108,7 +108,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="c-text-nonpost">There are no articles to display.</p>
+                <p class="c-text-nonpost">没有可显示的文章。</p>
               <?php } ?>
             </div>
             <div class="tab-content" id="tab04">
@@ -130,7 +130,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
                 <?php }
                 }
               } else { ?>
-                <p class="c-text-nonpost">There are no articles to display.</p>
+                <p class="c-text-nonpost">没有可显示的文章。</p>
               <?php } ?>
             </div>
           </div>

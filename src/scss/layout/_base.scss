@@ -299,6 +299,9 @@ body {
   &.cn {
     @include ffNS;
   }
+  &.ko {
+    @include ffNS;
+  }
 }
 
 #wrap {
