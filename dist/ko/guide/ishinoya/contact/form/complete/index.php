@@ -20,17 +20,17 @@ if ($actionFlag == 'send') {
   $subject_admin = "ホームページからお問い合わせがありました";
   $subject_user = "お問い合わせありがとうございました";
   $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
-  $email_head_ctm_user = "この度はお問い合わせいただきまして誠にありがとうございます。
-こちらは自動返信メールとなっております。
-弊社にて確認した後、改めてご連絡させていただきます。
+  $email_head_ctm_user = "문의해 주셔서 진심으로 감사드립니다.
+본 메일은 자동 회신 메일입니다.
+당사에서 내용을 확인하는 대로 다시 연락드리겠습니다.
 
-以下、お問い合わせ内容となっております。
-ご確認くださいませ。";
+이하 문의하신 내용입니다.
+확인해 주시기 바랍니다. ";
   $email_body_footer = "
-ISHINOYA 別府
-https://www.shoninpark.jp/guide/ishinoya/
-〒874-0023 大分県別府市上人ケ浜町795-1
-TEL 0977-75-6363（代表番号）
+SHONIN PARK
+https://www.shoninpark.jp/
+(우)874-0023 오이타현 벳푸시 쇼닌가하마쵸795-1
+TEL 0977-75-6363(대표 번호)
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);
@@ -81,7 +81,7 @@ $msgBody
 
   //お客様用メッセージ
   $body_user = "
-$reg_name 様
+$reg_name 님
 
 $email_head_ctm_user
 

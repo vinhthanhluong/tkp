@@ -133,7 +133,7 @@ include(APP_PATH_EN . 'libs/head.php');
               $n_url   = get_the_permalink($n_id);
               $n_url   = insertLangInUrl($n_url, 'news', 'en');
               $n_ttl   = get_field('title_en', $n_id) ?: get_the_title($n_id);
-              $n_date  = get_the_date('Y.m.d');
+              $n_date  = get_the_date('d/m/Y');
               $n_terms = get_the_terms($n_id, 'newscat');
               $n_thumb = get_the_post_thumbnail_url($n_id);
               $n_photo = (!empty($n_thumb)) ? $n_thumb : APP_NOIMG;

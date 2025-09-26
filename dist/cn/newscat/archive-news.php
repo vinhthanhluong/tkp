@@ -81,7 +81,7 @@ include(APP_PATH_CN . 'libs/head.php');
         ?>
           <div class="c-catectn aos-init" data-aos="fade-up">
             <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL_CN; ?>news/">
-              <h2>All</h2>
+              <h2>全部</h2>
             </a>
             <?php
             foreach ($categories as $catitem) {

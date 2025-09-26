@@ -469,6 +469,7 @@
       font-weight: 600;
     }
     .cn & {
+      letter-spacing: 0;
       @include PC {
         line-height: 160%;
       }

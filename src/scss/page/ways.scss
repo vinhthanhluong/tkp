@@ -94,6 +94,9 @@
 }
 .sec-ways {
   position: relative;
+  @include SP {
+    margin-bottom: -10px;
+  }
   .ways-inner {
     @include PC {
       margin: 0 auto;

@@ -1437,6 +1437,17 @@ a.c-btn04 {
             }
           }
         }
+        .cn & {
+          @include PC {
+            padding: 10px 17px;
+          }
+          @include SP {
+            padding: 10px 14px;
+            @include max-screen(375px) {
+              padding: calc(10 / 375 * 100vw) calc(14 / 375 * 100vw);
+            }
+          }
+        }
         &:before {
           content: "";
           display: block;
@@ -1917,6 +1928,9 @@ a.c-btn04 {
           .en & {
             letter-spacing: 0.28px;
             font-weight: 500;
+          }
+          .cn & {
+            font-weight: 400;
           }
           .ko & {
             font-weight: 400;

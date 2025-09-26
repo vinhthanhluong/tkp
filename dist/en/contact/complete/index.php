@@ -21,17 +21,17 @@ if ($actionFlag == 'send') {
   $subject_admin = "ホームページからお問い合わせがありました";
   $subject_user = "お問い合わせありがとうございました";
   $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
-  $email_head_ctm_user = "この度はお問い合わせいただきまして誠にありがとうございます。
-こちらは自動返信メールとなっております。
-弊社にて確認した後、改めてご連絡させていただきます。
+  $email_head_ctm_user = "Thank you for contacting us.
+This is an automated response to confirm that we have received your inquiry.
+Our team will review your message and get back to you as soon as possible.
 
-以下、お問い合わせ内容となっております。
-ご確認くださいませ。";
+Please find the details of your inquiry below.
+Kindly confirm the information.";
   $email_body_footer = "
 SHONIN PARK
 https://www.shoninpark.jp/
-〒874-0023 大分県別府市上人ケ浜町795-1
-TEL 0977-75-6363（代表番号）
+795-1 Shoningahama-cho, Beppu, Oita 874-0023, Japan
+TEL: 0977-75-6363 (main line)
   ";
 
   $entry_time = gmdate("Y/m/d H:i:s", time() + 9 * 3600);
@@ -40,9 +40,6 @@ TEL 0977-75-6363（代表番号）
 
   $msgBody = "■お名前
 $reg_name
-
-■フリガナ
-$reg_namekata
 
 ■メールアドレス
 $reg_email
@@ -70,7 +67,7 @@ $msgBody
 
   //お客様用メッセージ
   $body_user = "
-$reg_name 様
+Dear $reg_name
 
 $email_head_ctm_user
 
