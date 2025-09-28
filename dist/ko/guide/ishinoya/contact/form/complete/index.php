@@ -37,7 +37,34 @@ TEL 0977-75-6363(대표 번호)
   $entry_host = gethostbyaddr(getenv("REMOTE_ADDR"));
   $entry_ua = getenv("HTTP_USER_AGENT");
 
-  $msgBody = "■お名前
+  $msgBodyUser = "■성함
+$reg_name
+
+■이메일
+$reg_email
+
+■전화번호
+$reg_tel
+
+■예약 상태
+$reg_radiostatus
+";
+
+  if (isset($reg_namereser) && $reg_namereser != '') $msgBodyUser .= "
+■예약하신 분의 성함
+$reg_namereser
+";
+
+  if (isset($reg_schedule) && $reg_schedule != '') $msgBodyUser .= "
+■일정
+$reg_schedule
+";
+
+  $msgBodyUser .= "
+■문의 내용
+$reg_content";
+
+  $msgBodyAdmin = "■お名前
 $reg_name
 
 ■メールアドレス
@@ -50,17 +77,17 @@ $reg_tel
 $reg_radiostatus
 ";
 
-  if (isset($reg_namereser) && $reg_namereser != '') $msgBody .= "
+  if (isset($reg_namereser) && $reg_namereser != '') $msgBodyAdmin .= "
 ■ご予約者様のお名前
 $reg_namereser
 ";
 
-  if (isset($reg_schedule) && $reg_schedule != '') $msgBody .= "
+  if (isset($reg_schedule) && $reg_schedule != '') $msgBodyAdmin .= "
 ■日程
 $reg_schedule
 ";
 
-  $msgBody .= "
+  $msgBodyAdmin .= "
 ■お問い合わせ内容
 $reg_content";
 
@@ -73,7 +100,7 @@ $reg_content";
 
 $email_head_ctm_admin
 
-$msgBody
+$msgBodyAdmin
 
 ---------------------------------------------------------------
 " . $email_body_footer . "
@@ -87,7 +114,7 @@ $email_head_ctm_user
 
 ---------------------------------------------------------------
 
-$msgBody
+$msgBodyUser
 
 ---------------------------------------------------------------
 " . $email_body_footer . "
@@ -306,7 +333,6 @@ unset($_SESSION['ses_step3']);
             <li><a href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/">문의하기</a></li>
             <li><a href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/form/">개인 고객 문의사항</a></li>
             <li>내용확인</li>
-            <li>ΩΩ</li>
           </ul>
         </div>
         <div class="form-step">

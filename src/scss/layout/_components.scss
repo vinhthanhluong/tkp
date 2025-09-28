@@ -507,6 +507,9 @@ a.c-btn01 {
     -moz-transform: translateZ(0);
     transform: translateZ(0);
     padding: 9px 31px 9px 21px;
+    .ko & {
+      padding: 9px 21px 9px 11px;
+    }
   }
   @include SP {
     padding: 6px 27px 6px 29px;

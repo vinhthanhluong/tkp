@@ -37,7 +37,35 @@ TEL: 0977-75-6363 (main line)
   $entry_host = gethostbyaddr(getenv("REMOTE_ADDR"));
   $entry_ua = getenv("HTTP_USER_AGENT");
 
-  $msgBody = "■お名前
+  $msgBodyUser = "■Name
+$reg_name
+
+■E-mail Address
+$reg_email
+
+■Phone Number
+$reg_tel
+
+■Reservation Status
+$reg_radiostatus
+";
+
+  if (isset($reg_namereser) && $reg_namereser != '') $msgBodyUser .= "
+■Name of the Person Making the Reservation
+$reg_namereser
+";
+
+  if (isset($reg_schedule) && $reg_schedule != '') $msgBodyUser .= "
+■Dates
+$reg_schedule
+";
+
+  $msgBodyUser .= "
+■Content of Inquiry
+$reg_content";
+
+
+  $msgBodyAdmin = "■お名前
 $reg_name
 
 ■メールアドレス
@@ -50,17 +78,17 @@ $reg_tel
 $reg_radiostatus
 ";
 
-  if (isset($reg_namereser) && $reg_namereser != '') $msgBody .= "
+  if (isset($reg_namereser) && $reg_namereser != '') $msgBodyAdmin .= "
 ■ご予約者様のお名前
 $reg_namereser
 ";
 
-  if (isset($reg_schedule) && $reg_schedule != '') $msgBody .= "
+  if (isset($reg_schedule) && $reg_schedule != '') $msgBodyAdmin .= "
 ■日程
 $reg_schedule
 ";
 
-  $msgBody .= "
+  $msgBodyAdmin .= "
 ■お問い合わせ内容
 $reg_content";
 
@@ -73,7 +101,7 @@ $reg_content";
 
 $email_head_ctm_admin
 
-$msgBody
+$msgBodyAdmin
 
 ---------------------------------------------------------------
 " . $email_body_footer . "
@@ -87,7 +115,7 @@ $email_head_ctm_user
 
 ---------------------------------------------------------------
 
-$msgBody
+$msgBodyUser
 
 ---------------------------------------------------------------
 " . $email_body_footer . "

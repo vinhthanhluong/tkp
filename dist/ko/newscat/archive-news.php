@@ -17,25 +17,25 @@ $currentTermSlug = "";
 if (!empty($currentTerm)) {
   $currentTermSlug = $currentTerm->slug;
   $currentTermId = $currentTerm->term_id;
-  $currentTermName = get_field('cat_name_en', 'newscat' . '_' . $currentTermId) ?: $currentTerm->name;
+  $currentTermName = get_field('cat_name_ko', 'newscat' . '_' . $currentTermId) ?: $currentTerm->name;
 }
 
-include(APP_PATH_EN . 'libs/head.php');
+include(APP_PATH_KO . 'libs/head.php');
 ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/news.min.css?v=<?php echo APP_VER ?>">
 </head>
 
-<body id="news" class="news en">
-  <?php include(APP_PATH_EN . 'libs/header.php'); ?>
+<body id="news" class="news ko">
+  <?php include(APP_PATH_KO . 'libs/header.php'); ?>
   <main id="wrap">
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
-        <li><a href="<?php echo APP_URL_EN; ?>">TOP</a></li>
+        <li><a href="<?php echo APP_URL_KO; ?>">TOP</a></li>
         <?php if (!empty($currentTerm)) { ?>
-          <li><a href="<?php echo APP_URL_EN; ?>news/">News & Event</a></li>
+          <li><a href="<?php echo APP_URL_KO; ?>news/">뉴스・이벤트</a></li>
           <li><?php echo strip_tags($currentTermName); ?></li>
         <?php } else { ?>
-          <li>News & Event</li>
+          <li>뉴스・이벤트</li>
         <?php } ?>
       </ul>
     </div>
@@ -59,6 +59,7 @@ include(APP_PATH_EN . 'libs/head.php');
           </div>
         </div>
         <div class="mv-ttl">
+          <h1 class="mv-ttl-jp">뉴스・이벤트</h1>
           <span class="mv-ttl-en">NEWS & EVENT</span>
         </div>
       </div>
@@ -79,15 +80,15 @@ include(APP_PATH_EN . 'libs/head.php');
         if (!empty($categories)) {
         ?>
           <div class="c-catectn aos-init" data-aos="fade-up">
-            <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL_EN; ?>news/">
-              <h2>All</h2>
+            <a class="c-cate01 <?php echo empty($currentTermName) ? 'is-active' : '' ?>" href="<?php echo APP_URL_KO; ?>news/">
+              <h2>전체</h2>
             </a>
             <?php
             foreach ($categories as $catitem) {
               $cat_id = $catitem->term_id;
-              $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $catitem->name;
+              $cat_name = get_field('cat_name_ko', 'newscat' . '_' . $cat_id) ?: $catitem->name;
               $cat_link = get_term_link($cat_id);
-              $cat_link = insertLangInUrl($cat_link, 'newscat', 'en');
+              $cat_link = insertLangInUrl($cat_link, 'newscat', 'ko');
             ?>
               <a class="c-cate01 <?php if ($currentTermName == $cat_name) {
                                     echo 'is-active';
@@ -131,8 +132,8 @@ include(APP_PATH_EN . 'libs/head.php');
               $query_news->the_post();
               $n_id    = $post->ID;
               $n_url   = get_the_permalink($n_id);
-              $n_url   = insertLangInUrl($n_url, 'news', 'en');
-              $n_ttl   = get_field('title_en', $n_id) ?: get_the_title($n_id);
+              $n_url   = insertLangInUrl($n_url, 'news', 'ko');
+              $n_ttl   = get_field('title_ko', $n_id) ?: get_the_title($n_id);
               $n_date  = get_the_date('Y.m.d');
               $n_terms = get_the_terms($n_id, 'newscat');
               $n_thumb = get_the_post_thumbnail_url($n_id);
@@ -149,7 +150,7 @@ include(APP_PATH_EN . 'libs/head.php');
                         <?php
                         foreach ($n_terms as $nterm) {
                           $cat_id = $nterm->term_id;
-                          $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                          $cat_name = get_field('cat_name_ko', 'newscat' . '_' . $cat_id) ?: $nterm->name;
                           $cat_class = $nterm->name == 'お知らせ' ? 'is-blue' : 'is-yellow';
                         ?>
                           <span class="item <?php echo $cat_class; ?>"><?php echo $cat_name; ?></span>
@@ -166,13 +167,13 @@ include(APP_PATH_EN . 'libs/head.php');
             <?php } ?>
           </ul>
         <?php } else { ?>
-          <p class="c-text-nonpost">表示する記事がありません。</p>
+          <p class="c-text-nonpost">표시할 기사가 없습니다.</p>
         <?php }
         wp_reset_postdata(); ?>
       </div>
     </div>
   </main>
-  <?php include(APP_PATH_EN . 'libs/footer.php'); ?>
+  <?php include(APP_PATH_KO . 'libs/footer.php'); ?>
 </body>
 
 </html>

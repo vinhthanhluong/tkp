@@ -385,6 +385,15 @@ body:not(.fixHeader) {
             }
           }
         }
+        .ko & {
+          @include PC {
+            &:nth-child(even) {
+              a {
+                margin-right: -10px;
+              }
+            }
+          }
+        }
         a {
           position: relative;
           display: block;

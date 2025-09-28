@@ -61,9 +61,9 @@
           </li>
         </ul>
         <ul class="gLangSp sp">
-          <li class="gLangSp-item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
+          <li class="gLangSp-item"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
-          <li class="gLangSp-item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
+          <li class="gLangSp-item is-active"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
         </ul>
         <a class="gLinkSp sp" href="<?php echo APP_URL_KO; ?>">

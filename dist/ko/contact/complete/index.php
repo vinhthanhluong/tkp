@@ -38,7 +38,19 @@ TEL 0977-75-6363(대표 번호)
   $entry_host = gethostbyaddr(getenv("REMOTE_ADDR"));
   $entry_ua = getenv("HTTP_USER_AGENT");
 
-  $msgBody = "■お名前
+  $msgBodyUser = "■성함
+$reg_name
+
+■이메일
+$reg_email
+
+■전화번호
+$reg_tel
+
+■문의 내용
+$reg_content";
+
+  $msgBodyAdmin = "■お名前
 $reg_name
 
 ■メールアドレス
@@ -59,7 +71,7 @@ $reg_content";
 
 $email_head_ctm_admin
 
-$msgBody
+$msgBodyAdmin
 
 ---------------------------------------------------------------
 " . $email_body_footer . "
@@ -73,7 +85,7 @@ $email_head_ctm_user
 
 ---------------------------------------------------------------
 
-$msgBody
+$msgBodyUser
 
 ---------------------------------------------------------------
 " . $email_body_footer . "

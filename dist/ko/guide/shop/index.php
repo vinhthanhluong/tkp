@@ -43,8 +43,8 @@ include(APP_PATH_KO . 'libs/head.php'); ?>
             <span class="c-ttl02__en">Shopping Area</span>
           </div>
           <div class="map-block aos-init" data-aos="fade-up">
-            <img class="map-bg pc" src="<?php echo createSVG(1170, 577); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="ショップエリアマップ">
-            <img class="map-bg sp" src="<?php echo createSVG(327, 162); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop_sp.png" rel="js-lazy" width="327" height="162" alt="ショップエリアマップ">
+            <img class="map-bg pc" src="<?php echo createSVG(1170, 577); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop.svg" rel="js-lazy" width="1170" height="577" alt="상점 지역지도">
+            <img class="map-bg sp" src="<?php echo createSVG(327, 162); ?>" data-src="<?php echo APP_ASSETS ?>img/guide/shop/map_shop_sp.png" rel="js-lazy" width="327" height="162" alt="상점 지역지도">
             <?php if (!empty($shop_list_name[0])) { ?>
               <h3 class="map-tag is-tag01"><span class="tag-txt"><?php echo nl2br($shop_list_name[0]); ?></span></h3>
             <?php } ?>

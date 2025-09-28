@@ -56,7 +56,7 @@ include(APP_PATH_KO . 'libs/head.php');
           </div>
         </div>
         <div class="mv-ttl">
-          <h1 class="mv-ttl-jp">ニュース・イベント</h1>
+          <h1 class="mv-ttl-jp">뉴스・이벤트</h1>
           <span class="mv-ttl-en">NEWS & EVENT</span>
         </div>
       </div>
