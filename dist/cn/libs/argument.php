@@ -77,38 +77,32 @@ switch ($pagename) {
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ways':
-    if (empty($titlepage)) $titlepage = '楽しみ方｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '日帰りでも宿泊でも楽しめる「SHONIN PARK」の過ごし方をご提案。朝昼夜で異なる魅力を持つ公園で、あなたにぴったりの楽しみ方を見つけてください。';
+    if (empty($titlepage)) $titlepage = '游玩指南｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '向您推荐无论一日游还是住宿，都可以尽享「SHONIN PARK」的游玩指南。请探寻在拥有早中晚不同魅力的公园，最适合自己的尽情游乐的方法吧。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'news':
-    if (empty($titlepage)) $titlepage = 'ニュース・イベント｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '「SHONIN PARK」に関する最新ニュース・イベント情報をお届けします。';
+    if (empty($titlepage)) $titlepage = '最新动态与活动｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '为您介绍「SHONIN PARK」相关的最新动态和活动信息。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'info':
-    if (empty($titlepage)) $titlepage = '施設情報｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '営業時間やアクセス、周辺観光やよくあるご質問まで、「SHONIN PARK」を訪れる前に知っておきたい情報をまとめました。';
+    if (empty($titlepage)) $titlepage = '设施信息｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '为您整理了到访“SHONIN PARK”前需了解的营业时间、交通指南、周边观光和常见问题等信息。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'contact':
-    if (empty($titlepage)) $titlepage = 'お問い合わせ｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '「SHONIN PARK」の日帰り利用からご宿泊まで、ご不明点やご質問がございましたら、お気軽にお問い合わせください。';
-    if (empty($keyPage)) $keyPage = '';
-    if (empty($txtH1)) $txtH1 = '';
-    break;
-  case 'contact':
-    if (empty($titlepage)) $titlepage = 'お問い合わせ｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '「SHONIN PARK」の日帰り利用からご宿泊まで、ご不明点やご質問がございましたら、お気軽にお問い合わせください。';
+    if (empty($titlepage)) $titlepage = '咨询｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '关于“SHONIN PARK”一日游和住宿的不明之处，敬请随时咨询。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'rule':
-    if (empty($titlepage)) $titlepage = '利用規約｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '「SHONIN PARK」を安全に楽しんでいただくための利用規約をご案内。ご来園前にご確認をお願いいたします。';
+    if (empty($titlepage)) $titlepage = '使用条款｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '为了您能够安全地在SHONIN PARK游玩，向您介绍使用条款。烦请您在来园前确认。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;

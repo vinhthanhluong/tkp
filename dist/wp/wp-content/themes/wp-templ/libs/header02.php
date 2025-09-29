@@ -37,7 +37,7 @@
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/cuisine/"><span>お食事</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL ?>guide/ishinoya/contact/"><span>お問い合わせ</span></a></li>
         </ul>
-        <!-- <div class="gLang pc">
+        <div class="gLang pc">
           <div class="gLang-item hasSub">
             <p class="gLang-item__link">
               <span>Language</span>
@@ -51,7 +51,7 @@
               </ul>
             </div>
           </div>
-        </div> -->
+        </div>
         <ul class="gBtn">
           <li class="gBtn-item">
             <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/booked/login" target="_blank" rel="noopener nofollow"><span>予約確認</span></a>
@@ -60,12 +60,12 @@
             <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener nofollow"><span>宿泊予約</span></a>
           </li>
         </ul>
-        <!-- <ul class="gLangSp sp">
+        <ul class="gLangSp sp">
           <li class="gLangSp-item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
           <li class="gLangSp-item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
-        </ul> -->
+        </ul>
         <a class="gLinkSp sp" href="<?php echo APP_URL; ?>">
           <span class="txt">SHONIN PARK</span>
         </a>

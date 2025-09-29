@@ -50,7 +50,7 @@
             </span>
           </a>
         </li>
-        <!-- <li class="language has-sub">
+        <li class="language has-sub">
           <span class="menu-link c-txt-hover">
             <span class="txt-wrap">
               <span class="txt-default">Language</span>
@@ -65,7 +65,7 @@
               <li><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
             </ul>
           </div>
-        </li> -->
+        </li>
       </ul>
       <a class="header-btn c-txt-hover pc" href="https://www.asoview.com/channel/tickets/KfG8g2DPlR/" target="_blank" rel="noopener nofollow">
         <span class="txt-wrap">

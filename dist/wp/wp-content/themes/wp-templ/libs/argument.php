@@ -100,12 +100,6 @@ switch ($pagename) {
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
-  case 'contact':
-    if (empty($titlepage)) $titlepage = 'お問い合わせ｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '「SHONIN PARK」の日帰り利用からご宿泊まで、ご不明点やご質問がございましたら、お気軽にお問い合わせください。';
-    if (empty($keyPage)) $keyPage = '';
-    if (empty($txtH1)) $txtH1 = '';
-    break;
   case 'rule':
     if (empty($titlepage)) $titlepage = '利用規約｜SHONIN PARK';
     if (empty($desPage)) $desPage = '「SHONIN PARK」を安全に楽しんでいただくための利用規約をご案内。ご来園前にご確認をお願いいたします。';

@@ -92,12 +92,12 @@
               </a>
             </li>
           </ul>
-          <!-- <ul class="gOfficial-lang sp">
+          <ul class="gOfficial-lang sp">
             <li class="item is-active"><a href="<?php echo APP_URL ?><?php echo $curr_path; ?>">日本語</a></li>
             <li class="item"><a href="<?php echo APP_URL_EN ?><?php echo $curr_path; ?>">English</a></li>
             <li class="item"><a href="<?php echo APP_URL_KO ?><?php echo $curr_path; ?>">한국어</a></li>
             <li class="item"><a href="<?php echo APP_URL_CN ?><?php echo $curr_path; ?>">中文簡体</a></li>
-          </ul> -->
+          </ul>
         </div>
         <p class="close_layer"></p>
       </div>
@@ -154,7 +154,7 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="btnLang">
+    <div class="btnLang">
       <div class="gLang">
         <div class="gLang-item hasSub">
           <p class="gLang-item__link">
@@ -174,7 +174,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div class="btnReser">
       <div class="gResert-overlay"></div>
       <div class="gResert">
