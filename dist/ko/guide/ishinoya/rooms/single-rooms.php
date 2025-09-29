@@ -17,7 +17,7 @@ $room_desc = get_field('room_desc_ko', $post_id);
 $room_info = get_field('room_info_ko', $post_id);
 $room_japan_link = get_field('room_japan_link', $post_id);
 
-$titlepage = strip_tags($ttlpost) . '｜客房｜ISHINOYA 別府 / 石屋 別府';
+$titlepage = strip_tags($ttlpost) . '｜방 ｜ISHINOYA 벳푸 / 이시노야 벳푸';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($room_desc)), 0, 120);
 $desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
 
