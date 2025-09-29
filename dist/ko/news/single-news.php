@@ -10,7 +10,7 @@ $sg_terms = get_the_terms($sg_id, 'newscat');
 $editor = get_field('editor_ko', $sg_id) ?: get_field('editor', $sg_id);
 if (!empty($sg_thumb)) $ogimg = $sg_thumb ? $sg_thumb[0] : get_first_image($post->post_content, false);
 
-$titlepage = $sg_title_strip . '｜SHONIN PARK';
+$titlepage = $sg_title_strip . '｜뉴스・이벤트 ｜SHONIN PARK';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($editor)), 0, 120);
 $desPage = get_field('tp_meta_desc') ? get_field('tp_meta_desc') : $desCnt;
 
