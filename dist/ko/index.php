@@ -25,7 +25,7 @@ include(APP_PATH_KO . 'libs/head.php'); ?>
         type: "GET",
         url: "<?php echo admin_url('admin-ajax.php'); ?>",
         data: {
-          action: "search_ajax_en",
+          action: "search_ajax_ko",
           newscat: $(this).val(),
         },
         dataType: 'json',

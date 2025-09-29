@@ -11,68 +11,68 @@ switch ($pagename) {
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'top':
-    if (empty($titlepage)) $titlepage = 'SHONIN PARK｜別府上人ヶ浜公園';
-    if (empty($desPage)) $desPage = '日帰りでも楽しめるおしゃれな別府海浜砂湯・温泉やレストラン、ショップ、宿泊コテージなど多彩な体験ができる大分・別府観光の新名所「SHONIN PARK」。家族や友人、カップルで訪れ、朝昼夜で異なる楽しみ方ができるパーク＆リゾートです。';
+    if (empty($titlepage)) $titlepage = 'SHONIN PARK｜別府上人之浜公園';
+    if (empty($desPage)) $desPage = '大分·别府观光的新名胜“SHONIN PARK”，在这里有一日游也可享受的时尚别府海滨沙浴和温泉，还有餐厅、商店、住宿度假屋等丰富多彩的体验。这里是可以和家人、朋友、情侣一起到访，早中晚享受不同乐趣的公园和度假村。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'guide':
-    if (empty($titlepage)) $titlepage = '施設案内｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '日帰りでも楽しめる別府海浜砂湯・温泉、おしゃれなレストランやショップ、宿泊コテージなど、大分・別府の魅力を詰め込んだ「SHONIN PARK」の施設をご紹介します。';
+    if (empty($titlepage)) $titlepage = '设施指南｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '向您介绍一日游也可享受的别府海滨沙浴和温泉、时尚的餐厅和商店、住宿度假屋等，充满大分·别府魅力的“SHONIN PARK”各设施。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'restaurant':
-    if (empty($titlepage)) $titlepage = 'レストラン（Grill Takka）｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '別府湾を一望する絶好のロケーションで、本格ハワイアングリルを大分風にアレンジしたお料理を楽しめるレストラン「Grill Takka」。海風と陽気なハワイの雰囲気に包まれながら、特別なひとときをお過ごしください。';
+    if (empty($titlepage)) $titlepage = '餐厅 （Grill Takka）｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '餐厅“Grill Takka”，位于可眺望别府湾的绝好位置。设有可以品尝到融入大分风格的正宗夏威夷烧烤。在海风和欢快的夏威夷氛围中度过特别的时光。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'guide-spa':
-    if (empty($titlepage)) $titlepage = '別府海浜砂湯（Sand SPA）｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '別府唯一の海浜砂湯・温泉「Sand SPA」日帰りでも楽しめる癒しの空間は、夜のライトアップで幻想的な雰囲気に包まれます。海風を感じながら、ここでしか味わえない贅沢なリラクゼーションを。';
+    if (empty($titlepage)) $titlepage = '別府海浜沙浴（Sand SPA）｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '别府唯一的海滨沙浴和温泉“Sand SPA”，一日游也可享受的治愈的空间，置身于被夜晚的灯光所包围的幻想气氛中。一边感受着海风，一边享受着唯有在此才能体验到的奢侈放松时光。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya':
-    if (empty($titlepage)) $titlepage = 'ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '緑豊かな森林と別府湾の美しい景色に囲まれた宿泊コテージ「ISHINOYA 別府 / 石のや 別府」。地元食材にこだわったお料理や砂湯・温泉、快眠を追求したベッドで、寛ぎのひとときを提供いたします。';
+    if (empty($titlepage)) $titlepage = 'ISHINOYA 別府 / 石屋 別府';
+    if (empty($desPage)) $desPage = '被绿意盎然的森林和别府湾美丽景色所包围的住宿度假屋“ISHINOYA别府/石屋 别府”。为您提供讲究当地食材的料理、沙浴、温泉，在易于睡眠的床铺，尽享放松时光。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'rooms':
-    if (empty($titlepage)) $titlepage = 'お部屋｜ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '全7種・23室のお部屋タイプをご用意。露天風呂付客室では、プライベートな時間と別府温泉の源泉をひとり占め。家族や友人、カップルで贅沢なひとときをお過ごしください。';
+    if (empty($titlepage)) $titlepage = '客房｜ISHINOYA 別府 / 石屋 別府';
+    if (empty($desPage)) $desPage = '设有7种各式房型，共23间客房，在配有露天浴池的客房中，独享别府温泉的源泉，尽享私密时光。请在被非日常包围的空间里度过奢侈的时光。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya-cuisine':
-    if (empty($titlepage)) $titlepage = 'お食事｜ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '宿泊者限定の朝食・夕食をご用意。地元の新鮮な食材を使ったお料理で、別府旅行の思い出に彩りを添えます。';
+    if (empty($titlepage)) $titlepage = '餐饮｜ISHINOYA 別府 / 石屋  別府';
+    if (empty($desPage)) $desPage = '为住宿者专门准备的早餐和晚餐。使用当地新鲜食材制作的料理，为别府旅行的回忆增添色彩。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya-spa':
-    if (empty($titlepage)) $titlepage = '温泉・砂湯｜ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '別府ならではの伝統的な砂湯と天然温泉で、心も体も癒される贅沢なひとときを。「ISHINOYA 別府 / 石のや 別府」でしか味わえない、上質な湯浴体験をお楽しみください。';
+    if (empty($titlepage)) $titlepage = '温泉・沙浴｜ISHINOYA 別府 / 石屋 別府';
+    if (empty($desPage)) $desPage = '在别府特有的传统沙浴和天然温泉，度过身心都被治愈的奢侈时光。唯有在“ISHINOYA  別府 / 石屋 別府”才能享受到的优质温泉浴体验。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya-contact':
-    if (empty($titlepage)) $titlepage = 'お問い合わせ｜ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '「ISHINOYA 別府 / 石のや 別府」へのご宿泊に関するご質問・ご相談はこちら。個人・法人問わず、お気軽にお問い合わせください。';
+    if (empty($titlepage)) $titlepage = '咨询｜ISHINOYA 別府 / 石屋  別府';
+    if (empty($desPage)) $desPage = '与“ISHINOYA  别府/石屋 别府“住宿的相关的提问和咨询请点击这里。无论个人还是公司，敬请随时咨询。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya-form':
-    if (empty($titlepage)) $titlepage = '個人のお客様のお問い合わせ｜ISHINOYA 別府 / 石のや 別府';
-    if (empty($desPage)) $desPage = '個人のお客様の「ISHINOYA 別府 / 石のや 別府」へのご宿泊に関するお問い合わせはこちら。ご予約前のご相談やご不明点もお気軽にご連絡ください。';
+    if (empty($titlepage)) $titlepage = '个人咨询｜ISHINOYA 別府 / 石屋  別府';
+    if (empty($desPage)) $desPage = '个人对”ISHINOYA 別府 / 石屋  別府“有关住宿的咨询，请点击这里。预约前的咨询或有不明事宜，敬请随时联系我们。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'shop':
-    if (empty($titlepage)) $titlepage = 'ショップ｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '別府・大分の特産品やグルメを楽しめるショップエリア。お土産にぴったりのアイテムも取り揃えています。';
+    if (empty($titlepage)) $titlepage = '商饮区｜SHONIN PARK';
+    if (empty($desPage)) $desPage = '可以享受别府·大分特产和美食的区域。也准备了适合作为特产的商品。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
