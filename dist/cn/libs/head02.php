@@ -69,5 +69,5 @@
   <link rel="icon" href="<?php echo APP_ASSETS; ?>img/common/favicon.png">
 
   <?php
-  // include_once(APP_PATH_EN . 'wp/wp-load.php');
+  // include_once(APP_PATH_CN . 'wp/wp-load.php');
   if (defined('ABSPATH')) wp_head(); ?>

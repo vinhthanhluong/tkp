@@ -31,7 +31,7 @@
   if ($ua->set() === 'tablet') echo '<meta content="width=1024, shrink-to-fit=no" name="viewport">';
   else echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">';
   $current_url = $globalCanonical = 'http' . (!empty($_SERVER['HTTPS']) ? 's' : '') . '://' . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-  include(APP_PATH_EN . 'libs/argument.php');
+  include(APP_PATH_KO . 'libs/argument.php');
   include(APP_PATH . 'libs/functions.php'); ?>
 
   <script src="<?php echo APP_ASSETS ?>js/lib/detector.min.js?v=<?php echo APP_VER ?>"></script>
@@ -69,5 +69,5 @@
   <link rel="icon" href="<?php echo APP_ASSETS; ?>img/common/favicon.png">
 
   <?php
-  // include_once(APP_PATH_EN . 'wp/wp-load.php');
+  // include_once(APP_PATH_KO . 'wp/wp-load.php');
   if (defined('ABSPATH')) wp_head(); ?>
