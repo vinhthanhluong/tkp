@@ -343,7 +343,7 @@ unset($_SESSION['ses_step3']);
           <div class="thanks-main">
             <h1 class="thanks-main__ttl"><strong>문의해 주셔서 감사합니다.</strong></h1>
             <p class="thanks-main__txt">입력하신 이메일로 확인 메일을 보내드렸습니다. 확인 부탁드립니다.<br>내용을 확인하는 대로 담당자가 연락 드리겠습니다.</p>
-            <p class="thanks-main__txt02">일정한 시간이 지나도 이메일을 못 받으시는 경우 입력하신 이메일이 잘 못 입력 되었거나 시스템 오류,스팸 메일 폴더에 보관되어 있을 수 있습니다. 그럴 경우 죄송하지만 한 번 더 문의 폼에서 문의를 주시거나 전화로 직접 연락 주시기 바랍니다.</p>
+            <p class="thanks-main__txt02">일정한 시간이 지나도 이메일을 못 받으시는 경우 입력하신 이메일이 잘못 입력 되었거나 시스템 오류,스팸 메일 폴더에 보관되어 있을 수 있습니다. 그럴 경우 죄송하지만 한 번 더 문의 사항 란에서 문의를 주시거나 전화로 직접 연락 주시기 바랍니다.</p>
             <a class="thanks-main__back02" href="<?php echo APP_URL_KO; ?>guide/ishinoya/"><span>ISHINOYA 別府 TOP</span></a>
           </div>
         </div>

@@ -52,7 +52,7 @@
               <a class="link" href="<?php echo APP_URL_KO ?>info/">시설 정보</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="<?php echo APP_URL_KO ?>guide/">사설 안내</a>
+              <a class="link" href="<?php echo APP_URL_KO ?>guide/">시설 안내</a>
             </li>
             <li class="col-menu__item">
               <a class="link" href="<?php echo APP_URL_KO ?>news/">뉴스</a>
@@ -166,3 +166,51 @@
   var JS_APP_ASSETS = '<?php echo APP_ASSETS ?>';
 </script>
 <script src="<?php echo APP_ASSETS; ?>js/common.min.js?v=<?php echo APP_VER ?>"></script>
+
+
+
+
+<div class="c-secwrap__colslide">
+  <div class="c-gallery__main">
+    <div class="gallery-wrapper js-slider-gallery02">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="gallery-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/slide_spa01.jpg" width="625" height="440" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="gallery-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/slide_spa02.jpg" width="625" height="440" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="gallery-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/slide_spa03.jpg" width="625" height="440" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="gallery-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/slide_spa03.jpg" width="625" height="440" alt="温泉和沙浴"></div>
+        </div>
+      </div>
+      <p class="c-cursor__slide js-cursor__slide"><span class="txt">Prev</span></p>
+      <div class="gallerySwiper-prev swiper02-prev"></div>
+      <div class="gallerySwiper-next swiper02-next"></div>
+    </div>
+    <div class="swiper-group">
+      <div class="gallerySwiper-pagination swiper02-pagination"></div>
+      <div class="gallerySwiper-progress-bar swiper02-progress-bar pc"><span class="slide-progress-bar"></span></div>
+    </div>
+  </div>
+  <div class="c-gallery__thumb">
+    <div class="slider-thumb-gallery js-slider-thumb02">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="thumb-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/thumb_spa01.jpg" width="140" height="100" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="thumb-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/thumb_spa02.jpg" width="140" height="100" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="thumb-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/thumb_spa03.jpg" width="140" height="100" alt="温泉和沙浴"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="thumb-pic c-img"><img src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/ishinoya/thumb_spa03.jpg" width="140" height="100" alt="温泉和沙浴"></div>
+        </div>
+      </div>
+    </div>
+  </div>

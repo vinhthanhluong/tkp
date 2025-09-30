@@ -8,6 +8,7 @@ $post_id = '140';
 $editor = get_field('editor_ko', $post_id);
 
 $shop_list = get_field('shop_list_ko', $post_id);
+
 $shop_list_name = [];
 if (!empty($shop_list)) {
   $is_all_empty = true;
@@ -39,7 +40,7 @@ include(APP_PATH_KO . 'libs/head.php'); ?>
 
         <?php if (!$is_all_empty) { ?>
           <div class="c-ttl02 aos-init" data-aos="fade-up">
-            <h2 class="c-ttl02__jp">모래탕・온천</h2>
+            <h2 class="c-ttl02__jp">쇼핑 에어리어</h2>
             <span class="c-ttl02__en">Shopping Area</span>
           </div>
           <div class="map-block aos-init" data-aos="fade-up">

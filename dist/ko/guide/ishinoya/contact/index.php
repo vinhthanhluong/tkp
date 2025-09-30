@@ -32,7 +32,7 @@ include(APP_PATH_KO . 'libs/head02.php'); ?>
     </section>
     <div class="sec-contact-head aos-init" data-aos="fade-up">
       <div class="inner1170">
-        <p class="c-contact-desc">아래 "<a class="contact-link" href="#faq">자주 묻는 질문</a>"에서 해결 못하시는 경우 하기 폼에서 문의해 주시기 바랍니다.</p>
+        <p class="c-contact-desc">아래 "<a class="contact-link" href="#faq">자주 묻는 질문</a>"에서 해결하지 못하신 경우, 문의하기 란을 이용해 주시기 바랍니다.</p>
         <ul class="btn-list">
           <li><a href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/form/">
               <h2><span class="icn icn01">개인 고객님</span></h2>
@@ -47,9 +47,9 @@ include(APP_PATH_KO . 'libs/head02.php'); ?>
       <div class="inner1170">
         <div class="c-ttl04 aos-init" data-aos="fade-up">
           <h2 class="c-ttl04__jp">자주 묻는 질문</h2>
-          <span class="c-ttl04__en">Q&A</span>
+          <span class="c-ttl04__en">FAQs</span>
         </div>
-        <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 벳푸의 이용과 관련하여 자주 묻는 질문을 정리하였습니다.여기서 확인을 못<br class="pc">하시는 내용은 문의 <a class="contact-link" href="<?php echo APP_URL_KO; ?>guide/ishinoya/contact/form/">폼</a>에서 문의해 주시기 바랍니다.</p>
+        <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 벳푸의 이용과 관련하여 자주 묻는 질문을 정리하였습니다.여기서 확인을 못<br class="pc">하시는 내용은 문의하기 란을 이용해 주시기 바랍니다.</p>
         <?php if (!empty($faq03)) {  ?>
           <ul class="faq-list">
             <?php
