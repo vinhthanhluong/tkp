@@ -47,7 +47,7 @@ include(APP_PATH_CN . 'libs/head02.php'); ?>
       <div class="inner1170">
         <div class="c-ttl04 aos-init" data-aos="fade-up">
           <h2 class="c-ttl04__jp">常见问题</h2>
-          <span class="c-ttl04__en">Q&A</span>
+          <span class="c-ttl04__en">FAQs</span>
         </div>
         <p class="c-contact-desc aos-init" data-aos="fade-up">总结了在SHONIN PARK游玩的常见疑问与解答。<br class="pc">在此查找不到的内容，烦请填写咨询<a class="contact-link" href="<?php echo APP_URL_CN; ?>guide/ishinoya/contact/form/">表格</a>询问。</p>
         <?php if (!empty($faq03)) {  ?>

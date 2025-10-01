@@ -54,10 +54,10 @@
         </div>
         <ul class="gBtn">
           <li class="gBtn-item">
-            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/booked/login" target="_blank" rel="noopener nofollow"><span>예약확인</span></a>
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/3/booked/login" target="_blank" rel="noopener nofollow"><span>예약확인</span></a>
           </li>
           <li class="gBtn-item">
-            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener nofollow"><span>숙박 예약</span></a>
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/3/plan/stay" target="_blank" rel="noopener nofollow"><span>숙박 예약</span></a>
           </li>
         </ul>
         <ul class="gLangSp sp">

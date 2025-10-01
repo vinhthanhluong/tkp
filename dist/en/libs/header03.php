@@ -90,13 +90,12 @@
               <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
                                               echo APP_URL_EN . 'info/';
                                             } ?>#info01">Opening Hours</a></li>
-              <li class="is-col02 sp"><a href="<?php echo APP_URL_EN ?>">採用情報</a></li>
-              <li class="is-col is-col01"><a href="<?php if ($thisPageName != 'info') {
+              <li class="is-col is-col02"><a href="<?php if ($thisPageName != 'info') {
                                                       echo APP_URL_EN . 'info/';
                                                     } ?>#info03">Nearby Attractions</a></li>
-              <li class="is-col01 is-order04"><a href="<?php if ($thisPageName != 'info') {
-                                                          echo APP_URL_EN . 'info/';
-                                                        } ?>#info04">FAQs</a></li>
+              <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
+                                              echo APP_URL_EN . 'info/';
+                                            } ?>#info04">FAQs</a></li>
               <li class="is-col is-col02 is-order05"><a href="<?php echo APP_URL_EN ?>contact/">Contact</a></li>
             </ul>
           </div>

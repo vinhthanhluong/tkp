@@ -61,7 +61,7 @@
             </a>
           </li>
           <li class="gReservat-item">
-            <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01 is-center">
+            <a href="https://reserve.489ban.net/client/ishinoya-beppu/4/plan/stay" target="_blank" rel="noopener" class="c-btn01 is-center">
               <i class="arr01"></i>
               <span>Cottage Reservation</span>
               <i class="arr02"></i>
@@ -193,7 +193,7 @@
                 </a>
               </li>
               <li class="item">
-                <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn01">
+                <a href="https://reserve.489ban.net/client/ishinoya-beppu/4/plan/stay" target="_blank" rel="noopener" class="c-btn01">
                   <i class="arr01"></i>
                   <span>Cottage Reservation</span>
                   <i class="arr02"></i>

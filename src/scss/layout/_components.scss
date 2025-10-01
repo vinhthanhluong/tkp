@@ -2596,9 +2596,9 @@ a.c-btn04 {
   .news-cate {
     margin-right: 12px;
     @include font(12, 18, 0, bold);
-    padding: 4px 3px 7px;
+    padding: 4px 5px 7px;
     position: relative;
-    width: 68px;
+    // width: 68px;
     text-align: center;
     min-height: 30px;
     @include singleLineEllipsis;

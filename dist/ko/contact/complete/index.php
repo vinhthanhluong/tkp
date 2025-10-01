@@ -277,7 +277,7 @@ unset($_SESSION['ses_gtime_step2']);
 unset($_SESSION['ses_from_step2']);
 unset($_SESSION['ses_step3']);
 ?>
-<!-- <meta http-equiv="refresh" content="15; url=<?php echo APP_URL_KO ?>"> -->
+<meta http-equiv="refresh" content="15; url=<?php echo APP_URL_KO ?>">
 <script type="text/javascript">
   history.pushState({
     page: 1

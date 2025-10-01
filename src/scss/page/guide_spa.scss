@@ -299,8 +299,8 @@
       }
     }
     .cn & {
+      font-weight: 400;
       @include PC {
-        font-weight: 500;
         line-height: 220%;
       }
     }

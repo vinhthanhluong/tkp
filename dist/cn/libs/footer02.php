@@ -25,7 +25,7 @@
               <a class="link" href="<?php echo APP_URL_CN ?>guide/ishinoya/cuisine/">餐饮</a>
             </li>
             <li class="col-menu__item">
-              <a class="link" href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener">预约住宿</a>
+              <a class="link" href="https://reserve.489ban.net/client/ishinoya-beppu/1/plan/stay" target="_blank" rel="noopener">预约住宿</a>
             </li>
           </ul>
         </div>

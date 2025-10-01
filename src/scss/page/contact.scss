@@ -25,9 +25,11 @@
     max-width: 610px;
     font-weight: 600;
     @include PC {
+      letter-spacing: 0.36px;
       margin: 0 auto 168px;
     }
     @include SP {
+      letter-spacing: 0.28px;
       margin: 0 auto 77px;
     }
   }

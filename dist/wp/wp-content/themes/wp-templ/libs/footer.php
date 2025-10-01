@@ -34,15 +34,11 @@
             <li class="item"><a href="<?php if ($thisPageName != 'info') {
                                         echo APP_URL . 'info/';
                                       } ?>#info03">周辺観光</a></li>
-            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a href="<?php if ($thisPageName != 'info') {
-                                                                                        echo APP_URL . 'info/';
-                                                                                      } ?>#info04">よくあるご質問</a></li><?php endif; ?>
           </ul>
           <ul class="f-navi02">
-            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a class="is-blank" href="#" target="_blank" rel="noopener nofollow">採用情報</a></li><?php endif; ?>
-            <li class="item<?php if (($thisPageName == 'guide-spa')): ?> pc<?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
-                                                                                                        echo APP_URL . 'info/';
-                                                                                                      } ?>#info04">よくあるご質問</a></li>
+            <li class="item<?php if (($thisPageName == 'guide-spa')): ?> <?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
+                                                                                                      echo APP_URL . 'info/';
+                                                                                                    } ?>#info04">よくあるご質問</a></li>
             <li class="item"><a href="<?php echo APP_URL ?>contact/">お問い合わせ</a></li>
           </ul>
         </div>

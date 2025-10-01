@@ -179,6 +179,7 @@
     }
     .logo-link {
       position: relative;
+      display: block;
     }
     .home-link {
       display: block;
@@ -534,6 +535,9 @@
           }
           @include SP {
             text-align: center;
+          }
+          .en & {
+            letter-spacing: 0.28px;
           }
         }
         &:nth-child(1) {

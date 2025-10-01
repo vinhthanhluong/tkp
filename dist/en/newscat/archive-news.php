@@ -166,7 +166,7 @@ include(APP_PATH_EN . 'libs/head.php');
             <?php } ?>
           </ul>
         <?php } else { ?>
-          <p class="c-text-nonpost">表示する記事がありません。</p>
+          <p class="c-text-nonpost">There are no articles to display.</p>
         <?php }
         wp_reset_postdata(); ?>
       </div>

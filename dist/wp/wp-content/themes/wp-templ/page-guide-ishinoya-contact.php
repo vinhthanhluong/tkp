@@ -48,7 +48,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
       <div class="inner1170">
         <div class="c-ttl04 aos-init" data-aos="fade-up">
           <h2 class="c-ttl04__jp">よくあるご質問</h2>
-          <span class="c-ttl04__en">Q&A</span>
+          <span class="c-ttl04__en">FAQs</span>
         </div>
         <p class="c-contact-desc aos-init" data-aos="fade-up">ISHINOYA 別府の利⽤についてよくあるご質問をまとめています。<br>こちらで確認できない内容は<a class="contact-link" href="<?php echo APP_URL; ?>guide/ishinoya/contact/form/">お問い合わせフォーム</a>よりご質問ください。</p>
         <?php if (!empty($faq03)) {  ?>

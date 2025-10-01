@@ -138,14 +138,9 @@
           @include SP {
             width: 60%;
           }
-          .en & {
-            @include PC {
-              width: 62.3%;
-            }
-          }
           .ko & {
             @include PC {
-              width: 59.3%;
+              width: 58%;
               .item {
                 width: 44%;
               }
@@ -167,7 +162,7 @@
           .en & {
             @include PC {
               flex: none;
-              width: 33%;
+              width: 36%;
             }
           }
           .ko & {
@@ -248,6 +243,7 @@
         }
         @include SP {
           flex: 1;
+          margin-right: -20px;
         }
       }
       .en & {
@@ -838,6 +834,9 @@
         .col02-wrap01 .f-navi {
           &:nth-child(1) {
             width: 48.3%;
+            .en & {
+              width: 64%;
+            }
           }
           &:nth-child(2) {
             .item:nth-child(1) {
@@ -860,8 +859,14 @@
             }
             &:nth-child(1) {
               width: 48.3%;
+              .en & {
+                width: 64%;
+              }
               .item {
                 width: 50%;
+                .ko & {
+                  width: 44.3%;
+                }
               }
             }
             &:nth-child(2) {

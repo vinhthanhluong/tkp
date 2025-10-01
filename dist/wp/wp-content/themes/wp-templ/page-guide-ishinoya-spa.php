@@ -6,7 +6,7 @@
 $thisPageName = 'ishinoya-spa';
 
 $post_id = '425';
-$editor = get_field('editor_en', $post_id);
+$editor = get_field('editor', $post_id);
 
 include(APP_PATH . 'libs/head02.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/ishinoya_spa.min.css?v=<?php echo APP_VER ?>">

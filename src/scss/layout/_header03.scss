@@ -350,6 +350,9 @@
     .en & {
       letter-spacing: 0;
     }
+    .cn & {
+      font-weight: 400;
+    }
     & > li {
       @include PC {
         width: 190px;

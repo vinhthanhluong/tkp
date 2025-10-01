@@ -68,19 +68,19 @@ include(APP_PATH_KO . 'libs/head02.php'); ?>
                 <td>
                   <div class="radio-list">
                     <p class="radio-item">
-                      <input type="radio" id="radiostatus01" name="radiostatus" value="<?php echo sanitize_form_value('Considering a Reservation') ?>" class="validate[required]">
+                      <input type="radio" id="radiostatus01" name="radiostatus" value="<?php echo sanitize_form_value('예약 검토중') ?>" class="validate[required]">
                       <label for="radiostatus01"><i class="ske"></i>예약 검토중</label>
                     </p>
                     <p class="radio-item">
-                      <input type="radio" id="radiostatus02" name="radiostatus" value="<?php echo sanitize_form_value('Reservation Confirmed') ?>" class="validate[required]">
+                      <input type="radio" id="radiostatus02" name="radiostatus" value="<?php echo sanitize_form_value('예약 완료') ?>" class="validate[required]">
                       <label for="radiostatus02"><i class="ske"></i>예약 완료</label>
                     </p>
                     <p class="radio-item">
-                      <input type="radio" id="radiostatus03" name="radiostatus" value="<?php echo sanitize_form_value('Already Stayed') ?>" class="validate[required]">
+                      <input type="radio" id="radiostatus03" name="radiostatus" value="<?php echo sanitize_form_value('이용 완료') ?>" class="validate[required]">
                       <label for="radiostatus03"><i class="ske"></i>이용 완료</label>
                     </p>
                     <p class="radio-item">
-                      <input type="radio" id="radiostatus04" name="radiostatus" value="<?php echo sanitize_form_value('Other') ?>" class="validate[required]">
+                      <input type="radio" id="radiostatus04" name="radiostatus" value="<?php echo sanitize_form_value('기타') ?>" class="validate[required]">
                       <label for="radiostatus04"><i class="ske"></i>기타</label>
                     </p>
                   </div>

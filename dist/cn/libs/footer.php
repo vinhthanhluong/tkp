@@ -32,15 +32,11 @@
             <li class="item"><a href="<?php if ($thisPageName != 'info') {
                                         echo APP_URL_CN . 'info/';
                                       } ?>#info03">周边观光</a></li>
-            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a href="<?php if ($thisPageName != 'info') {
-                                                                                        echo APP_URL_CN . 'info/';
-                                                                                      } ?>#info04">FAQs</a></li><?php endif; ?>
           </ul>
           <ul class="f-navi02">
-            <?php if (($thisPageName == 'guide-spa')): ?><li class="item sp"><a class="is-blank" href="#" target="_blank" rel="noopener nofollow">採用情報</a></li><?php endif; ?>
-            <li class="item<?php if (($thisPageName == 'guide-spa')): ?> pc<?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
-                                                                                                        echo APP_URL_CN . 'info/';
-                                                                                                      } ?>#info04">常见问题</a></li>
+            <li class="item<?php if (($thisPageName == 'guide-spa')): ?><?php endif; ?>"><a href="<?php if ($thisPageName != 'info') {
+                                                                                                    echo APP_URL_CN . 'info/';
+                                                                                                  } ?>#info04">常见问题</a></li>
             <li class="item"><a href="<?php echo APP_URL_CN ?>contact/">咨询</a></li>
           </ul>
         </div>
@@ -76,7 +72,7 @@
         </a>
       </li>
       <li class="item">
-        <a href="https://reserve.489ban.net/client/ishinoya-beppu/0/plan" target="_blank" rel="noopener" class="c-btn03 is-center">
+        <a href="https://reserve.489ban.net/client/ishinoya-beppu/1/plan/stay" target="_blank" rel="noopener" class="c-btn03 is-center">
           <i class="arr01"></i><span>预约住宿度假屋</span><i class="arr02"></i>
         </a>
       </li>

@@ -90,14 +90,13 @@
               <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
                                               echo APP_URL_KO . 'info/';
                                             } ?>#info01">영업시간</a></li>
-              <li class="is-col02 sp"><a href="<?php echo APP_URL_KO ?>">주변 관광 명소</a></li>
-              <li class="is-col is-col01"><a href="<?php if ($thisPageName != 'info') {
-                                                      echo APP_URL_KO . 'info/';
-                                                    } ?>#info03">자주 묻는 질문</a></li>
-              <li class="is-col01 is-order04"><a href="<?php if ($thisPageName != 'info') {
-                                                          echo APP_URL_KO . 'info/';
-                                                        } ?>#info04">문의하기</a></li>
-              <li class="is-col is-col02 is-order05"><a href="<?php echo APP_URL_KO ?>contact/">문의하기</a></li>
+              <li class="is-col"><a href="<?php if ($thisPageName != 'info') {
+                                            echo APP_URL_KO . 'info/';
+                                          } ?>#info03">주변 관광 명소</a></li>
+              <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
+                                              echo APP_URL_EN . 'info/';
+                                            } ?>#info04">자주 묻는 질문</a></li>
+              <li class="is-col is-col02"><a href="<?php echo APP_URL_KO ?>contact/">문의하기</a></li>
             </ul>
           </div>
           <div class="navigation-row">

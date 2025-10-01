@@ -375,6 +375,7 @@
         }
         @include SP {
           @include justify-content(center);
+          @include flex-wrap(wrap);
           margin: 19px -10px 0;
         }
       }

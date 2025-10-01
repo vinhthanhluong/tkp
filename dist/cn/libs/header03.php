@@ -90,13 +90,12 @@
               <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
                                               echo APP_URL_CN . 'info/';
                                             } ?>#info01">营业时间</a></li>
-              <li class="is-col02 sp"><a href="<?php echo APP_URL_CN ?>">採用情報</a></li>
-              <li class="is-col is-col01"><a href="<?php if ($thisPageName != 'info') {
-                                                      echo APP_URL_CN . 'info/';
-                                                    } ?>#info03">周边观光</a></li>
-              <li class="is-col01 is-order04"><a href="<?php if ($thisPageName != 'info') {
-                                                          echo APP_URL_CN . 'info/';
-                                                        } ?>#info04">常见问题</a></li>
+              <li class="is-col"><a href="<?php if ($thisPageName != 'info') {
+                                            echo APP_URL_CN . 'info/';
+                                          } ?>#info03">周边观光</a></li>
+              <li class="is-col01"><a href="<?php if ($thisPageName != 'info') {
+                                              echo APP_URL_CN . 'info/';
+                                            } ?>#info04">常见问题</a></li>
               <li class="is-col is-col02 is-order05"><a href="<?php echo APP_URL_CN ?>contact/">咨询</a></li>
             </ul>
           </div>

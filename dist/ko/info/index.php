@@ -11,6 +11,7 @@ $faq02 = get_field('faq02_ko', $post_id);
 $faq03 = get_field('faq03_ko', $post_id);
 $faq04 = get_field('faq04_ko', $post_id);
 
+
 include(APP_PATH_KO . 'libs/head.php'); ?>
 <link rel="stylesheet" href="<?php echo APP_ASSETS ?>css/page/info.min.css?v=<?php echo APP_VER ?>">
 </head>

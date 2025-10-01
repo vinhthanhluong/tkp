@@ -688,7 +688,6 @@
       .sec-form {
         .form-block .short-desc {
           @include PC {
-            letter-spacing: 0.02px;
             line-height: 160%;
           }
           @include SP {
@@ -1030,12 +1029,13 @@
         font-weight: 600;
       }
       .thanks-main__txt {
-        letter-spacing: 0;
         @include PC {
+          letter-spacing: 0.36px;
           max-width: 854px;
           margin: 0 auto 52px;
         }
         @include SP {
+          letter-spacing: 0.28px;
           padding: 0 8px;
         }
       }
