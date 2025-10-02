@@ -38,7 +38,7 @@
   <link rel="canonical" href="<?php echo sanitize_form_value($thisCanonical) ?>">
 
   <title><?php echo $titlepage ?></title>
-  <meta name="description" content="<?php echo $desPage; ?>">
+  <meta name="description" content="<?php echo htmlspecialchars($desPage, ENT_QUOTES, 'UTF-8'); ?>">
   <meta name="keywords" content="<?php echo $keyPage; ?>">
 
   <!--facebook-->
@@ -47,7 +47,7 @@
   <meta property="og:url" content="<?php echo sanitize_form_value($current_url); ?>">
   <meta property="og:image" content="<?php echo (!empty($ogimg)) ? $ogimg : APP_ASSETS . 'img/common/other/fb_image02.jpg'; ?>">
   <meta property="og:site_name" content="<?php echo (function_exists('get_bloginfo') && get_bloginfo('name')) ? get_bloginfo('name') : '' ?>">
-  <meta property="og:description" content="<?php echo $desPage; ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($desPage, ENT_QUOTES, 'UTF-8'); ?>">
   <meta property="fb:app_id" content="">
   <!--/facebook-->
 
@@ -55,7 +55,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="<?php echo sanitize_form_value($current_url); ?>">
   <meta name="twitter:title" content="<?php echo $titlepage ?>">
-  <meta name="twitter:description" content="<?php echo $desPage; ?>">
+  <meta name="twitter:description" content="<?php echo htmlspecialchars($desPage, ENT_QUOTES, 'UTF-8'); ?>">
   <meta name="twitter:image" content="<?php echo (!empty($ogimg)) ? $ogimg : APP_ASSETS . 'img/common/other/fb_image02.jpg'; ?>">
   <meta name="twitter:site" content="<?php echo (function_exists('get_bloginfo') && get_bloginfo('name')) ? get_bloginfo('name') : '' ?>">
   <meta name="twitter:creator" content="<?php echo (function_exists('get_bloginfo') && get_bloginfo('name')) ? get_bloginfo('name') : '' ?>">
