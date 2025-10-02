@@ -138,11 +138,15 @@ include(APP_PATH_KO . 'libs/head02.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/datepicker-ja.min.js?v=<?php echo APP_VER ?>"></script>
   <script>
     $(function() {
-      $.datepicker.setDefaults($.datepicker.regional["ja"]);
+      if ($.datepicker.regional["ko"]) {
+        $.datepicker.setDefaults($.datepicker.regional["ko"]);
+      } else {
+        $.datepicker.setDefaults($.datepicker.regional["ja"]);
+      }
       var dateToday = new Date();
       if ($(".datepicker").length) {
         $(".datepicker").datepicker({
-          dateFormat: 'yy年m月d日（D）',
+          dateFormat: 'yy/m/d',
           minDate: dateToday
         });
       }

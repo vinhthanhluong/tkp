@@ -25,7 +25,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
           <h2 class="c-ttl02__jp">よくあるご質問</h2>
           <span class="c-ttl02__en">FAQs</span>
         </div>
-        <p class="desc01 aos-init" data-aos="fade-up">Answers to common questions about visiting SHONIN PARK.<br>If you can't find the information you're looking for <a href="<?php echo APP_URL; ?>contact/" class="">here</a>, please feel free to contact us through our inquiry form.</p>
+        <p class="desc01 aos-init" data-aos="fade-up">Answers to common questions about visiting SHONIN PARK.<br>If you can't find the information you're looking for <a href="<?php echo APP_URL_EN; ?>contact/" class="">here</a>, please feel free to contact us through our inquiry form.</p>
         <div class="mod-tabs aos-init" data-aos="fade-up">
           <div class="nav-tabs">
             <ul>

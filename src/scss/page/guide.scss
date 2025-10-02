@@ -416,6 +416,9 @@ body {
         font-weight: 500;
         line-height: 140%;
       }
+      .cn & {
+        font-weight: 400;
+      }
       .ko & {
         font-weight: 400;
         @include PC {

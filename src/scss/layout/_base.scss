@@ -297,7 +297,8 @@ body {
     @include ffGT;
   }
   &.cn {
-    @include ffNS;
+    @include ffNSSC;
+    font-weight: 400;
   }
   &.ko {
     @include ffNS;

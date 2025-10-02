@@ -24,9 +24,9 @@ include(APP_PATH_KO . 'libs/head.php'); ?>
       <div class="inner1170">
         <div class="c-ttl02 is-white is-center aos-init" data-aos="fade-up">
           <h2 class="c-ttl02__jp">자주 묻는 질문</h2>
-          <span class="c-ttl02__en">Q&A</span>
+          <span class="c-ttl02__en">FAQs</span>
         </div>
-        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARK의 이용에 대해 자주 묻는 질문을 정리하였습니다.<br>여기서 확인 되지 않는 내용은 <a href="<?php echo APP_URL; ?>contact/" class="">문의 양식</a>을 통해 질문해 주시기 바랍니다.</p>
+        <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARK의 이용에 대해 자주 묻는 질문을 정리하였습니다.<br>여기서 확인 되지 않는 내용은 <a href="<?php echo APP_URL_KO; ?>contact/" class="">문의 양식</a>을 통해 질문해 주시기 바랍니다.</p>
         <div class="mod-tabs aos-init" data-aos="fade-up">
           <div class="nav-tabs">
             <ul>

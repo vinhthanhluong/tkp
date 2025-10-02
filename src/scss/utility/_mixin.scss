@@ -42,6 +42,7 @@ $yumincho: "游明朝体", "游明朝", "YuMincho", "Yu Mincho", "Noto Serif JP"
   "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 $gantari: "Gantari", sans-serif;
 $notosans: "Noto Sans", sans-serif;
+$notosanssc: "Noto Sans SC", sans-serif;
 
 /* font style */
 @mixin ffN {
@@ -61,6 +62,9 @@ $notosans: "Noto Sans", sans-serif;
 }
 @mixin ffNS {
   font-family: $notosans;
+}
+@mixin ffNSSC {
+  font-family: $notosanssc;
 }
 
 @mixin font-smooth() {

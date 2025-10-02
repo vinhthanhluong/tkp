@@ -114,7 +114,7 @@
           <div class="navSub">
             <ul class="navSub-lst">
               <li class="item"><a href="<?php echo APP_URL_CN ?>guide/spa/">别府海滨沙浴</a></li>
-              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/shop/">店铺</a></li>
+              <li class="item"><a href="<?php echo APP_URL_CN ?>guide/shop/">商饮区</a></li>
               <li class="item"><a href="<?php echo APP_URL_CN ?>guide/restaurant/">餐厅</a></li>
               <li class="item"><a href="<?php echo APP_URL_CN ?>guide/ishinoya/">住宿度假屋</a></li>
             </ul>

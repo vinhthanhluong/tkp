@@ -95,6 +95,9 @@
         letter-spacing: 0;
         font-weight: 400;
       }
+      .cn & {
+        font-weight: 400;
+      }
       &:not(:last-child) {
         @include PC {
           margin-bottom: 5px;
@@ -113,6 +116,9 @@
       @include max-screen(1218px) {
         width: calc(570 / 1170 * 100%);
       }
+      .en & {
+        width: calc(590 / 1170 * 100%);
+      }
     }
     @include SP {
       width: 100%;
@@ -125,6 +131,7 @@
         margin-left: -4px;
         .en & {
           @include justify-content(space-between);
+          margin-left: 11px;
         }
       }
       .f-navi {
@@ -220,7 +227,7 @@
     }
     .en & {
       @include PC {
-        margin-right: 0;
+        margin-right: 16px;
       }
     }
     .cn & {

@@ -19,7 +19,7 @@ if ($actionFlag == 'send') {
   $from = $fromContact;
   $mailFromName = $fromName;
   $subject_admin = "ホームページからお問い合わせがありました";
-  $subject_user = "お問い合わせありがとうございました";
+  $subject_user = "感谢您的咨询";
   $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
   $email_head_ctm_user = "非常感谢您的咨询。
 此邮件为自动回复。

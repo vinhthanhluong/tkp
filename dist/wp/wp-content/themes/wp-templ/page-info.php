@@ -20,7 +20,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       <div class="inner1170">
         <div class="c-ttl02 is-white is-center aos-init" data-aos="fade-up">
           <h2 class="c-ttl02__jp">よくあるご質問</h2>
-          <span class="c-ttl02__en">Q&A</span>
+          <span class="c-ttl02__en">FAQs</span>
         </div>
         <p class="desc01 aos-init" data-aos="fade-up">SHONIN PARKの利⽤に<br class="sp">ついてよくあるご質問をまとめています。<br>こちらで確認できない内容は<br class="sp"><a href="<?php echo APP_URL; ?>contact/" class="">お問い合わせフォーム</a>よりご質問ください。</p>
         <div class="mod-tabs aos-init" data-aos="fade-up">

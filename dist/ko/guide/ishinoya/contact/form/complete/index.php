@@ -17,7 +17,7 @@ if ($actionFlag == 'send') {
   $aBccTo = isset($aBccToContact) && count($aBccToContact) > 0 ? $aBccToContact : array('');
   $from = $fromContact;
   $mailFromName = $fromName02;
-  $subject_admin = "ホームページからお問い合わせがありました";
+  $subject_admin = "문의해 주셔서 감사합니다";
   $subject_user = "お問い合わせありがとうございました";
   $email_head_ctm_admin = "ホームページからお問い合わせがありました。";
   $email_head_ctm_user = "문의해 주셔서 진심으로 감사드립니다.

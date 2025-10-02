@@ -848,9 +848,6 @@
             font-size: calc(12 / 375 * 100vw);
           }
         }
-        .en & {
-          letter-spacing: 0;
-        }
       }
 
       &__back {
@@ -1038,6 +1035,9 @@
           letter-spacing: 0.28px;
           padding: 0 8px;
         }
+      }
+      .thanks-main__txt02 {
+        letter-spacing: 0;
       }
     }
     &.cn {

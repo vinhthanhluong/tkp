@@ -161,7 +161,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
       var dateToday = new Date();
       if ($(".datepicker").length) {
         $(".datepicker").datepicker({
-          dateFormat: 'yy年m月d日（D）',
+          dateFormat: 'yy/m/d',
           minDate: dateToday
         });
       }
