@@ -35,8 +35,8 @@
         <li>
           <a class="menu-link c-txt-hover" href="<?php echo APP_URL_CN ?>news/">
             <span class="txt-wrap">
-              <span class="txt-default">游玩指南</span>
-              <span class="txt-on">游玩指南</span>
+              <span class="txt-default">最新动态</span>
+              <span class="txt-on">最新动态</span>
             </span>
           </a>
         </li>
@@ -45,8 +45,8 @@
                                                     echo APP_URL_CN . 'info/';
                                                   } ?>#info02">
             <span class="txt-wrap">
-              <span class="txt-default">游玩指南</span>
-              <span class="txt-on">游玩指南</span>
+              <span class="txt-default">交通指南</span>
+              <span class="txt-on">交通指南</span>
             </span>
           </a>
         </li>

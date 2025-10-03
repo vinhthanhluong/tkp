@@ -15,7 +15,7 @@ if (!empty($room_slide)) {
 }
 $room_desc = get_field('room_desc', $post_id);
 $room_info = get_field('room_info', $post_id);
-$room_japan_link = get_field('room_japan_link', $post_id);
+$room_link = get_field('room_link', $post_id);
 
 $titlepage = strip_tags($ttlpost) . '｜お部屋｜ISHINOYA 別府 / 石のや 別府';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($room_desc)), 0, 120);
@@ -126,8 +126,8 @@ include(APP_PATH . 'libs/head02.php');
                   } ?>
                 </div>
               <?php } ?>
-              <?php if (!empty($room_japan_link)) { ?>
-                <a class="c-btn04 is-btn-reverse" href="<?php echo $room_japan_link; ?>" target="_blank" rel="noopener"><span>ご予約はこちら</span></a>
+              <?php if (!empty($room_link)) { ?>
+                <a class="c-btn04 is-btn-reverse" href="<?php echo $room_link; ?>" target="_blank" rel="noopener"><span>ご予約はこちら</span></a>
               <?php } ?>
             </div>
           </div>

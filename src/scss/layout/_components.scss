@@ -3368,6 +3368,23 @@ a.c-btn04 {
         display: none;
       }
     }
+    .slider-wrap {
+      @include flexbox;
+    }
+    .slider-wrap__item {
+      @include PC {
+        width: calc(260 / 880 * 100%);
+        &:not(:last-child) {
+          margin-right: calc(50 / 880 * 100%);
+        }
+      }
+      @include SP {
+        width: calc(178.5 / 381 * 100%);
+        &:not(:last-child) {
+          margin-right: calc(24 / 381 * 100%);
+        }
+      }
+    }
   }
   .news-item {
     display: block;

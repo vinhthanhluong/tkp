@@ -42,7 +42,7 @@ include(APP_PATH_CN . 'libs/head.php'); ?>
       <?php if (!empty($food_list) || !empty($file_repeater)) { ?>
         <div class="inner1170">
           <h2 class="c-ttl02 aos-init" data-aos="fade-up">
-            <span class="c-ttl02__jp">メニュー</span>
+            <span class="c-ttl02__jp">菜单</span>
             <span class="c-ttl02__en">Menu</span>
           </h2>
           <?php if (!empty($food_list)) { ?>

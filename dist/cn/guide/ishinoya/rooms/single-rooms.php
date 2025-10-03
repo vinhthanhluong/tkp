@@ -15,7 +15,7 @@ if (!empty($room_slide)) {
 }
 $room_desc = get_field('room_desc_cn', $post_id);
 $room_info = get_field('room_info_cn', $post_id);
-$room_japan_link = get_field('room_japan_link', $post_id);
+$room_link = get_field('room_link_cn', $post_id);
 
 $titlepage = strip_tags($ttlpost) . '｜客房｜ISHINOYA 別府 / 石屋 別府';
 $desCnt = mb_substr(preg_replace('/\r\n|\n|\r?\[.*\]/', '', strip_tags($room_desc)), 0, 120);
@@ -35,9 +35,9 @@ include(APP_PATH_CN . 'libs/head02.php');
         <div class="c-breadcrumb is-breadcrumb-dis aos-init" data-aos="fade-up">
           <ul>
             <li><a href="<?php echo APP_URL_CN; ?>">TOP</a></li>
-            <li><a href="<?php echo APP_URL_CN; ?>guide/">Facilities</a></li>
-            <li><a href="<?php echo APP_URL_CN; ?>guide/ishinoya/">ISHINOYA Beppu</a></li>
-            <li><a href="<?php echo APP_URL_CN; ?>guide/ishinoya/rooms/">Rooms</a></li>
+            <li><a href="<?php echo APP_URL_CN; ?>guide/">设施指南</a></li>
+            <li><a href="<?php echo APP_URL_CN; ?>guide/ishinoya/">ISHINOYA 別府</a></li>
+            <li><a href="<?php echo APP_URL_CN; ?>guide/ishinoya/rooms/">客房</a></li>
             <li><?php echo $ttlpost; ?></li>
           </ul>
         </div>
@@ -126,8 +126,8 @@ include(APP_PATH_CN . 'libs/head02.php');
                   } ?>
                 </div>
               <?php } ?>
-              <?php if (!empty($room_japan_link)) { ?>
-                <a class="c-btn04 is-btn-reverse" href="<?php echo $room_japan_link; ?>" target="_blank" rel="noopener"><span>预约住宿</span></a>
+              <?php if (!empty($room_link)) { ?>
+                <a class="c-btn04 is-btn-reverse" href="<?php echo $room_link; ?>" target="_blank" rel="noopener"><span>预约住宿</span></a>
               <?php } ?>
             </div>
           </div>

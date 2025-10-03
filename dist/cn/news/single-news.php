@@ -25,7 +25,7 @@ include(APP_PATH_CN . 'libs/head.php');
     <div class="c-breadcrumb aos-init" data-aos="fade-up">
       <ul>
         <li><a href="<?php echo APP_URL_CN; ?>">TOP</a></li>
-        <li><a href="<?php echo APP_URL_CN; ?>news/">News & Event</a></li>
+        <li><a href="<?php echo APP_URL_CN; ?>news/">最新动态与活动</a></li>
         <li><?php echo $sg_title_strip; ?></li>
       </ul>
     </div>

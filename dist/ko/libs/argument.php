@@ -30,7 +30,7 @@ switch ($pagename) {
     break;
   case 'guide-spa':
     if (empty($titlepage)) $titlepage = '벳푸 해변모래찜질（Sand SPA）｜SHONIN PARK';
-    if (empty($desPage)) $desPage = '벳푸 유일한 해변 모래찜질・온천시설  "Sand SPA".당일치기로도 즐길 수 있는 힐링공간은 밤에는 라이트업으로 환상적인 분위기를 느낄 수있습니다. 바닷바람을 느끼며  이곳에서만 누릴 수 있는 최고의 릴렉제이션을 경험해 보세요.';
+    if (empty($desPage)) $desPage = '벳푸 유일한 해변 모래찜질・온천시설  "Sand SPA".당일치기로도 즐길 수 있는 힐링공간은 밤에는 라이트업으로 환상적인 분위기를 느낄 수있습니다. 바닷바람을 느끼며  이곳에서만 누릴 수 있는 최고의 휴식을 경험해 보세요.';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;
@@ -41,8 +41,8 @@ switch ($pagename) {
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'rooms':
-    if (empty($titlepage)) $titlepage = '방 ｜ISHINOYA 벳푸 / 이시노야 벳푸';
-    if (empty($desPage)) $desPage = '총 7종류, 23객실의 객실 타입을 준비하였습니다.노천탕 포함 객실에서는 자유시간과 벳푸온천의 원천을 마음껏 즐기세요. 가족,친구,커플로 럭셔리한 시간을 보내시기 바랍니다.';
+    if (empty($titlepage)) $titlepage = '객실 ｜ISHINOYA 벳푸 / 이시노야 벳푸';
+    if (empty($desPage)) $desPage = '7가지 타입,23개의 객실 타입을 준비하였습니다.노천탕 포함 객실에서는 자유시간과 벳푸온천의 원천을 마음껏 즐기세요. 가족,친구,커플로 럭셔리한 시간을 보내시기 바랍니다.';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
     break;

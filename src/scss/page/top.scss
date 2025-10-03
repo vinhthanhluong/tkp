@@ -331,7 +331,7 @@ body {
     }
     .en & {
       @include PC {
-        max-width: calc(703 / 1440 * 100vw);
+        max-width: calc(623 / 1440 * 100vw);
       }
       @include SP {
         max-width: calc(310 / 375 * 100vw);

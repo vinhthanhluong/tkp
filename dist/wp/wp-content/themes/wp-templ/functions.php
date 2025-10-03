@@ -689,76 +689,143 @@ function ishinoya_news_shortcode($atts)
             <?php } ?>
             <span class="c-ttl04__en">News</span>
           </div>
-          <div class="news-content">
-            <div class="news-slider js-slider-news">
-              <div class="swiper-wrapper">
-                <?php
-                while ($query_news->have_posts()) {
-                  $query_news->the_post();
-                  $n_id    = get_the_ID();
-                  $n_url   = get_permalink($n_id);
-                  if ($lang == 'en') {
-                    $n_ttl = get_field('title_en', $n_id) ?: get_the_title($n_id);
-                    $n_url = insertLangInUrl($n_url, 'news', 'en');
-                    $n_date  = get_the_date('d/m/Y');
-                  } else if ($lang == 'ko') {
-                    $n_ttl = get_field('title_ko', $n_id) ?: get_the_title($n_id);
-                    $n_url = insertLangInUrl($n_url, 'news', 'ko');
-                    $n_date  = get_the_date('Y.m.d');
-                  } else if ($lang == 'cn') {
-                    $n_ttl = get_field('title_cn', $n_id) ?: get_the_title($n_id);
-                    $n_url = insertLangInUrl($n_url, 'news', 'cn');
-                    $n_date  = get_the_date('Y.m.d');
-                  } else {
-                    $n_ttl = get_the_title($n_id);
-                    $n_date  = get_the_date('Y.m.d');
-                  }
-                  $n_terms = get_the_terms($n_id, 'newscat');
-                  $n_thumb = get_the_post_thumbnail_url($n_id);
-                  $n_photo = (!empty($n_thumb)) ? $n_thumb : (defined('APP_NOIMG') ? APP_NOIMG : '');
-                ?>
-                  <div class="swiper-slide">
-                    <a class="news-item" href="<?php echo esc_url($n_url); ?>">
-                      <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
-                        <img src="<?php echo esc_url($n_photo); ?>" width="260" height="260" alt="<?php echo esc_attr($n_ttl); ?>">
-                      </figure>
-                      <div class="news-head">
-                        <span class="news-time"><?php echo esc_html($n_date); ?></span>
-                        <?php if (!empty($n_terms)) { ?>
-                          <span class="news-cate">
-                            <?php
-                            foreach ($n_terms as $nterm) {
-                              $cat_id = $nterm->term_id;
-                              if ($lang == 'en') {
-                                $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $nterm->name;
-                              } else if ($lang == 'ko') {
-                                $cat_name = get_field('cat_name_ko', 'newscat' . '_' . $cat_id) ?: $nterm->name;
-                              } else if ($lang == 'cn') {
-                                $cat_name = get_field('cat_name_cn', 'newscat' . '_' . $cat_id) ?: $nterm->name;
-                              } else {
-                                $cat_name = $nterm->name;
-                              }
-                              $cat_class = $nterm->name == 'お知らせ' ? 'is-blue' : 'is-yellow';
-                            ?>
-                              <span class="item <?php echo esc_attr($cat_class); ?>"><?php echo esc_html($cat_name); ?></span>
-                            <?php } ?>
-                          </span>
-                        <?php } ?>
-                      </div>
-                      <h3 class="news-ttl"><?php echo esc_html($n_ttl); ?></h3>
-                    </a>
+          <?php if ($query_news->found_posts > $posts_per_page) { ?>
+            <div class="news-content">
+              <div class="news-slider js-slider-news">
+                <div class="swiper-wrapper">
+                  <?php
+                  while ($query_news->have_posts()) {
+                    $query_news->the_post();
+                    $n_id    = get_the_ID();
+                    $n_url   = get_permalink($n_id);
+                    if ($lang == 'en') {
+                      $n_ttl = get_field('title_en', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'en');
+                      $n_date  = get_the_date('d/m/Y');
+                    } else if ($lang == 'ko') {
+                      $n_ttl = get_field('title_ko', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'ko');
+                      $n_date  = get_the_date('Y.m.d');
+                    } else if ($lang == 'cn') {
+                      $n_ttl = get_field('title_cn', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'cn');
+                      $n_date  = get_the_date('Y.m.d');
+                    } else {
+                      $n_ttl = get_the_title($n_id);
+                      $n_date  = get_the_date('Y.m.d');
+                    }
+                    $n_terms = get_the_terms($n_id, 'newscat');
+                    $n_thumb = get_the_post_thumbnail_url($n_id);
+                    $n_photo = (!empty($n_thumb)) ? $n_thumb : (defined('APP_NOIMG') ? APP_NOIMG : '');
+                  ?>
+                    <div class="swiper-slide">
+                      <a class="news-item" href="<?php echo esc_url($n_url); ?>">
+                        <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                          <img src="<?php echo esc_url($n_photo); ?>" width="260" height="260" alt="<?php echo esc_attr($n_ttl); ?>">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time"><?php echo esc_html($n_date); ?></span>
+                          <?php if (!empty($n_terms)) { ?>
+                            <span class="news-cate">
+                              <?php
+                              foreach ($n_terms as $nterm) {
+                                $cat_id = $nterm->term_id;
+                                if ($lang == 'en') {
+                                  $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else if ($lang == 'ko') {
+                                  $cat_name = get_field('cat_name_ko', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else if ($lang == 'cn') {
+                                  $cat_name = get_field('cat_name_cn', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else {
+                                  $cat_name = $nterm->name;
+                                }
+                                $cat_class = $nterm->name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                              ?>
+                                <span class="item <?php echo esc_attr($cat_class); ?>"><?php echo esc_html($cat_name); ?></span>
+                              <?php } ?>
+                            </span>
+                          <?php } ?>
+                        </div>
+                        <h3 class="news-ttl"><?php echo esc_html($n_ttl); ?></h3>
+                      </a>
+                    </div>
+                  <?php }
+                  wp_reset_postdata(); ?>
+                </div>
+                <div class="swiper-group">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-progress-bar">
+                    <span class="slide-progress-bar"></span>
                   </div>
-                <?php }
-                wp_reset_postdata(); ?>
-              </div>
-              <div class="swiper-group">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-progress-bar">
-                  <span class="slide-progress-bar"></span>
                 </div>
               </div>
             </div>
-          </div>
+          <?php } else { ?>
+            <div class="news-content">
+              <div class="news-slider">
+                <div class="slider-wrap">
+                  <?php
+                  while ($query_news->have_posts()) {
+                    $query_news->the_post();
+                    $n_id    = get_the_ID();
+                    $n_url   = get_permalink($n_id);
+                    if ($lang == 'en') {
+                      $n_ttl = get_field('title_en', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'en');
+                      $n_date  = get_the_date('d/m/Y');
+                    } else if ($lang == 'ko') {
+                      $n_ttl = get_field('title_ko', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'ko');
+                      $n_date  = get_the_date('Y.m.d');
+                    } else if ($lang == 'cn') {
+                      $n_ttl = get_field('title_cn', $n_id) ?: get_the_title($n_id);
+                      $n_url = insertLangInUrl($n_url, 'news', 'cn');
+                      $n_date  = get_the_date('Y.m.d');
+                    } else {
+                      $n_ttl = get_the_title($n_id);
+                      $n_date  = get_the_date('Y.m.d');
+                    }
+                    $n_terms = get_the_terms($n_id, 'newscat');
+                    $n_thumb = get_the_post_thumbnail_url($n_id);
+                    $n_photo = (!empty($n_thumb)) ? $n_thumb : (defined('APP_NOIMG') ? APP_NOIMG : '');
+                  ?>
+                    <div class="slider-wrap__item">
+                      <a class="news-item" href="<?php echo esc_url($n_url); ?>">
+                        <figure class="news-img c-img <?php echo $n_photo == APP_NOIMG ? "c-nophoto" : ""; ?>">
+                          <img src="<?php echo esc_url($n_photo); ?>" width="260" height="260" alt="<?php echo esc_attr($n_ttl); ?>">
+                        </figure>
+                        <div class="news-head">
+                          <span class="news-time"><?php echo esc_html($n_date); ?></span>
+                          <?php if (!empty($n_terms)) { ?>
+                            <span class="news-cate">
+                              <?php
+                              foreach ($n_terms as $nterm) {
+                                $cat_id = $nterm->term_id;
+                                if ($lang == 'en') {
+                                  $cat_name = get_field('cat_name_en', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else if ($lang == 'ko') {
+                                  $cat_name = get_field('cat_name_ko', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else if ($lang == 'cn') {
+                                  $cat_name = get_field('cat_name_cn', 'newscat' . '_' . $cat_id) ?: $nterm->name;
+                                } else {
+                                  $cat_name = $nterm->name;
+                                }
+                                $cat_class = $nterm->name == 'お知らせ' ? 'is-blue' : 'is-yellow';
+                              ?>
+                                <span class="item <?php echo esc_attr($cat_class); ?>"><?php echo esc_html($cat_name); ?></span>
+                              <?php } ?>
+                            </span>
+                          <?php } ?>
+                        </div>
+                        <h3 class="news-ttl"><?php echo esc_html($n_ttl); ?></h3>
+                      </a>
+                    </div>
+                  <?php }
+                  wp_reset_postdata(); ?>
+                </div>
+              </div>
+            </div>
+          <?php } ?>
           <a class="c-btn04" href="<?php echo $link_btn01; ?>"><span><?php echo $txt_btn01; ?></span></a>
         </div>
       </section>

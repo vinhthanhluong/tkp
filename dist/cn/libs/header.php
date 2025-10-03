@@ -17,7 +17,7 @@
         <ul class="gNavi">
           <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>guide/"><span>设施指南</span></a></li>
           <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>ways/"><span>如何享乐</span></a></li>
-          <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>news/"><span>新闻</span></a></li>
+          <li class="gNavi-item"><a href="<?php echo APP_URL_CN ?>news/"><span>最新动态</span></a></li>
           <li class="gNavi-item"><a href="<?php if ($thisPageName != 'info') {
                                             echo APP_URL_CN . 'info/';
                                           } ?>#info02"><span>交通指南</span></a></li>

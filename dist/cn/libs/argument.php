@@ -29,7 +29,7 @@ switch ($pagename) {
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'guide-spa':
-    if (empty($titlepage)) $titlepage = '別府海浜沙浴（Sand SPA）｜SHONIN PARK';
+    if (empty($titlepage)) $titlepage = '別府海滨沙浴（Sand SPA）｜SHONIN PARK';
     if (empty($desPage)) $desPage = '别府唯一的海滨沙浴和温泉“Sand SPA”，一日游也可享受的治愈的空间，置身于被夜晚的灯光所包围的幻想气氛中。一边感受着海风，一边享受着唯有在此才能体验到的奢侈放松时光。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
@@ -53,7 +53,7 @@ switch ($pagename) {
     if (empty($txtH1)) $txtH1 = '';
     break;
   case 'ishinoya-spa':
-    if (empty($titlepage)) $titlepage = '温泉・沙浴｜ISHINOYA 別府 / 石屋 別府';
+    if (empty($titlepage)) $titlepage = '温泉和沙浴｜ISHINOYA 別府 / 石屋 別府';
     if (empty($desPage)) $desPage = '在别府特有的传统沙浴和天然温泉，度过身心都被治愈的奢侈时光。唯有在“ISHINOYA  別府 / 石屋 別府”才能享受到的优质温泉浴体验。';
     if (empty($keyPage)) $keyPage = '';
     if (empty($txtH1)) $txtH1 = '';
