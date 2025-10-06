@@ -339,7 +339,7 @@ body {
     }
     .ko & {
       @include PC {
-        max-width: calc(700 / 1440 * 100vw);
+        max-width: calc(640 / 1440 * 100vw);
       }
       @include SP {
         max-width: calc(318 / 375 * 100vw);
