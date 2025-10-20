@@ -53,7 +53,6 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
                 $food_pic = $item['food_pic'];
                 $food_pic = $food_pic ? $food_pic['sizes'] : '';
                 $food_pic = $food_pic ? $food_pic['medium'] : APP_NOIMG;
-                $food_halfprice = $item['food_halfprice'];
                 $food_price = $item['food_price'];
                 $food_desc = $item['food_desc'];
               ?>
@@ -123,7 +122,7 @@ include(APP_PATH_EN . 'libs/head.php'); ?>
             <?php
             while ($news_relate->have_posts()) {
               $news_relate->the_post();
-              $news_id = $news->ID;
+              $news_id = $news_relate->ID;
               $news_url = get_the_permalink($news_id);
               $news_url = insertLangInUrl($news_url, 'news', 'en');
               $news_ttl = get_field('title_en', $news_id) ?: get_the_title($news_id);

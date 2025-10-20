@@ -642,19 +642,21 @@ function ishinoya_news_shortcode($atts)
     $link_btn01 = get_term_link($term_ids[0], 'newscat');
   }
   $supported_languages = ['jp', 'en', 'ko', 'cn'];
-  if (in_array($matches[1], $supported_languages)) {
-    $lang = $matches[1];
-    if ($lang == 'en') {
-      $txt_btn01 = 'See More';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
-    } else if ($lang == 'ko') {
-      $txt_btn01 = '더 보기';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
-    } else if ($lang == 'cn') {
-      $txt_btn01 = '了解更多';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'cn');
-    } else {
-      $lang = 'jp';
+  if (!empty($matches[1])) {
+    if (in_array($matches[1], $supported_languages)) {
+      $lang = $matches[1];
+      if ($lang == 'en') {
+        $txt_btn01 = 'See More';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
+      } else if ($lang == 'ko') {
+        $txt_btn01 = '더 보기';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
+      } else if ($lang == 'cn') {
+        $txt_btn01 = '了解更多';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'cn');
+      } else {
+        $lang = 'jp';
+      }
     }
   }
 
@@ -864,22 +866,24 @@ function shop_news_shortcode($atts)
     $link_btn01 = get_term_link($term_ids[0], 'newscat');
   }
   $supported_languages = ['jp', 'en', 'ko', 'cn'];
-  if (in_array($matches[1], $supported_languages)) {
-    $lang = $matches[1];
-    if ($lang == 'en') {
-      $txt_ttl02 = 'News';
-      $txt_btn01 = 'See More';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
-    } else if ($lang == 'ko') {
-      $txt_ttl02 = '뉴스';
-      $txt_btn01 = '더 보기';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
-    } else if ($lang == 'cn') {
-      $txt_ttl02 = '最新动态与活动';
-      $txt_btn01 = '了解更多';
-      $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'cn');
-    } else {
-      $lang = 'jp';
+  if (!empty($matches[1])) {
+    if (in_array($matches[1], $supported_languages)) {
+      $lang = $matches[1];
+      if ($lang == 'en') {
+        $txt_ttl02 = 'News';
+        $txt_btn01 = 'See More';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'en');
+      } else if ($lang == 'ko') {
+        $txt_ttl02 = '뉴스';
+        $txt_btn01 = '더 보기';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'ko');
+      } else if ($lang == 'cn') {
+        $txt_ttl02 = '最新动态与活动';
+        $txt_btn01 = '了解更多';
+        $link_btn01 = insertLangInUrl(get_term_link($term_ids[0], 'newscat'), 'newscat', 'cn');
+      } else {
+        $lang = 'jp';
+      }
     }
   }
 
@@ -999,25 +1003,27 @@ function homepage_news_shortcode($atts)
     $link_btn01 = APP_URL . 'news/';
   }
   $supported_languages = ['jp', 'en', 'ko', 'cn'];
-  if (in_array($matches[1], $supported_languages)) {
-    $lang = $matches[1];
-    if ($lang == 'en') {
-      $txt_ttl01 = 'News';
-      $txt_newscat00 = 'All';
-      $txt_btn01 = 'See More';
-      $link_btn01 = APP_URL . 'en/news/';
-    } else if ($lang == 'ko') {
-      $txt_ttl01 = '뉴스';
-      $txt_newscat00 = '전체';
-      $txt_btn01 = '더 보기';
-      $link_btn01 = APP_URL . 'ko/news/';
-    } else if ($lang == 'cn') {
-      $txt_ttl01 = '最新动态';
-      $txt_newscat00 = '全部';
-      $txt_btn01 = '了解更多';
-      $link_btn01 = APP_URL . 'cn/news/';
-    } else {
-      $lang = 'ja';
+  if (!empty($matches[1])) {
+    if (in_array($matches[1], $supported_languages)) {
+      $lang = $matches[1];
+      if ($lang == 'en') {
+        $txt_ttl01 = 'News';
+        $txt_newscat00 = 'All';
+        $txt_btn01 = 'See More';
+        $link_btn01 = APP_URL . 'en/news/';
+      } else if ($lang == 'ko') {
+        $txt_ttl01 = '뉴스';
+        $txt_newscat00 = '전체';
+        $txt_btn01 = '더 보기';
+        $link_btn01 = APP_URL . 'ko/news/';
+      } else if ($lang == 'cn') {
+        $txt_ttl01 = '最新动态';
+        $txt_newscat00 = '全部';
+        $txt_btn01 = '了解更多';
+        $link_btn01 = APP_URL . 'cn/news/';
+      } else {
+        $lang = 'ja';
+      }
     }
   }
 

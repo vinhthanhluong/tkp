@@ -70,7 +70,7 @@ include(APP_PATH_EN . 'libs/head.php');
         <div class="sg-share aos-init" data-aos="fade-up">
           <div class="share-inner">
             <span class="share__ttl">Share</span>
-            <a class="share__link" target="_blank" href="https://twitter.com/share?url=<?php echo APP_URL_EN; ?>news/<?php echo urlencode($post->post_name); ?>">
+            <a class="share__link" target="_blank" href="https://twitter.com/share?url=<?php echo APP_URL_EN; ?>news/<?php echo urlencode(strip_tags(get_post_field('post_name', $sg_id))); ?>">
               <img width="31" height="30" src="<?php echo createSVG(31, 30); ?>" data-src="<?php echo APP_ASSETS; ?>img/common/ico_x.svg" rel="js-lazy" alt="">
             </a>
             <a class="share__link pc" target="_blank" href="https://line.me/R/msg/text/?<?php echo urlencode(get_the_title($sg_id)); ?>%0D%0A<?php echo urlencode(insertLangInUrl(get_the_permalink($sg_id), 'news', 'en')); ?>">

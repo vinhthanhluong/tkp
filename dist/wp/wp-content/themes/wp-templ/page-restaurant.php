@@ -50,7 +50,6 @@ include(APP_PATH . 'libs/head.php'); ?>
                 $food_pic = $item['food_pic'];
                 $food_pic = $food_pic ? $food_pic['sizes'] : '';
                 $food_pic = $food_pic ? $food_pic['medium'] : APP_NOIMG;
-                $food_halfprice = $item['food_halfprice'];
                 $food_price = $item['food_price'];
                 $food_desc = $item['food_desc'];
               ?>
@@ -120,7 +119,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             <?php
             while ($news_relate->have_posts()) {
               $news_relate->the_post();
-              $news_id = $news->ID;
+              $news_id = $news_relate->ID;
               $news_url = get_the_permalink($news_id);
               $news_ttl = get_the_title($news_id);
               $news_date = get_the_date('Y.m.d', $news_id);

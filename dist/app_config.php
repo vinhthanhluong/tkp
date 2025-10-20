@@ -86,7 +86,7 @@ define('SMTP_PORT', 587);
 
 $uri = $_SERVER['REQUEST_URI'];
 $curr_url = explode("/", $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-$folder = $curr_url[2];
+$folder = isset($curr_url[2]) ? $curr_url[2] : '';
 
 // Lấy URI hiện tại
 $current_url = $_SERVER['REQUEST_URI'];
@@ -97,17 +97,19 @@ if (empty($matches[1])) {
   $curr_path = substr_replace($uri, '', 0, 1);
 }
 $supported_languages = ['jp', 'en', 'ko', 'cn'];
-if (in_array($matches[1], $supported_languages)) {
-  $lang = $matches[1];
-  if ($lang == 'en' || $folder == 'en') {
-    $curr_path = str_replace(array('/en/'), '', $uri);
-  } else if ($lang == 'ko' || $folder == 'ko') {
-    $curr_path = str_replace(array('/ko/'), '', $uri);
-  } else if ($lang == 'cn' || $folder == 'cn') {
-    $curr_path = str_replace(array('/cn/'), '', $uri);
-  } else {
-    $lang = 'ja';
-    $curr_path = substr_replace($uri, '', 0, 1);
+if (!empty($matches[1])) {
+  if (in_array($matches[1], $supported_languages)) {
+    $lang = $matches[1];
+    if ($lang == 'en' || $folder == 'en') {
+      $curr_path = str_replace(array('/en/'), '', $uri);
+    } else if ($lang == 'ko' || $folder == 'ko') {
+      $curr_path = str_replace(array('/ko/'), '', $uri);
+    } else if ($lang == 'cn' || $folder == 'cn') {
+      $curr_path = str_replace(array('/cn/'), '', $uri);
+    } else {
+      $lang = 'ja';
+      $curr_path = substr_replace($uri, '', 0, 1);
+    }
   }
 }
 

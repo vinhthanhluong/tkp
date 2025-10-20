@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 
 <head>
   <!-- Google Tag Manager -->
@@ -67,6 +67,35 @@
   <!--/css-->
 
   <link rel="icon" href="<?php echo APP_ASSETS; ?>img/common/favicon.png">
+
+  <?php
+  if ($lang == 'en') {
+    $href_link_jp = str_replace(APP_URL_EN, APP_URL, $current_url);
+    $href_link_en = $current_url;
+    $href_link_ko = str_replace(APP_URL_EN, APP_URL_KO, $current_url);
+    $href_link_cn = str_replace(APP_URL_EN, APP_URL_CN, $current_url);
+  } else if ($lang == 'ko') {
+    $href_link_jp = str_replace(APP_URL_KO, APP_URL, $current_url);
+    $href_link_en = str_replace(APP_URL_KO, APP_URL_EN, $current_url);
+    $href_link_ko = $current_url;
+    $href_link_cn = str_replace(APP_URL_KO, APP_URL_CN, $current_url);
+  } else if ($lang == 'cn') {
+    $href_link_jp = str_replace(APP_URL_CN, APP_URL, $current_url);
+    $href_link_en = str_replace(APP_URL_CN, APP_URL_EN, $current_url);
+    $href_link_ko = str_replace(APP_URL_CN, APP_URL_KO, $current_url);
+    $href_link_cn = $current_url;
+  } else {
+    $href_link_jp = $current_url;
+    $href_link_en = str_replace(APP_URL, APP_URL_EN, $current_url);
+    $href_link_ko = str_replace(APP_URL, APP_URL_KO, $current_url);
+    $href_link_cn = str_replace(APP_URL, APP_URL_CN, $current_url);
+  }
+  ?>
+  <link rel="alternate" hreflang="ja" href="<?php echo $href_link_jp; ?>">
+  <link rel="alternate" hreflang="en" href="<?php echo $href_link_en; ?>">
+  <link rel="alternate" hreflang="ko" href="<?php echo $href_link_ko; ?>">
+  <link rel="alternate" hreflang="zh" href="<?php echo $href_link_cn; ?>">
+  <link rel="alternate" hreflang="x-default" href="<?php echo $href_link_jp; ?>">
 
   <?php
   // include_once(APP_PATH_CN . 'wp/wp-load.php');

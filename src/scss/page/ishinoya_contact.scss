@@ -352,6 +352,9 @@
     }
     @include SP {
       padding: 0 0 20px 42px;
+      p {
+        min-height: 52px;
+      }
     }
     .cn & {
       font-weight: 400;
