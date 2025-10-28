@@ -709,12 +709,14 @@ body:not(.fixHeader) {
         &.hasSub {
           .gNaviPC-item__link {
             &.is-link {
-              @include min-screen(1025px) {
+              @include PC {
                 display: block;
               }
-              @include screen(768px, 1024px) {
-                display: none;
-              }
+              // @include min-screen(1025px) {
+              // }
+              // @include screen(768px, 1024px) {
+              //   display: none;
+              // }
             }
             &.is-menu {
               @include min-screen(1025px) {

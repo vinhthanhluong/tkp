@@ -1694,9 +1694,9 @@ a.c-btn04 {
     }
     .btn-link {
       @include PC {
-        padding: 0 7px 0 9px;
+        padding: 0 15px 0 9px;
         @include max-screen(1218px) {
-          padding: 0 calc(7 / 1440 * 100vw) 0 calc(9 / 1440 * 100vw);
+          padding: 0 calc(15 / 1440 * 100vw) 0 calc(9 / 1440 * 100vw);
         }
       }
       @include SP {
@@ -3432,6 +3432,9 @@ a.c-btn04 {
     @include font(16, 26, 120, 700);
     color: $brown02;
     @include multiLineEllipsis(2);
+    @include SP {
+      @include font(14);
+    }
     .en & {
       letter-spacing: 0;
       font-weight: 600;
@@ -3668,7 +3671,8 @@ a.c-btn04 {
           padding: calc(6 / 375 * 100vw) 0 calc(8 / 375 * 100vw);
         }
       }
-      .info-item {
+      .info-item,
+      p {
         @include SP {
           display: inline-block;
         }

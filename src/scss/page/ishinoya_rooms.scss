@@ -89,14 +89,14 @@
     }
     @include SP {
       min-width: calc(50% - 4.5px);
-      // width: calc(50% - 4.5px);
+      width: calc(50% - 4.5px);
       margin: 4px 0 5px;
       &:last-child {
         width: 100%;
       }
-      &:nth-child(2n) {
-        width: calc(50% - 4.5px);
-      }
+      // &:nth-child(2n) {
+      //   width: calc(50% - 4.5px);
+      // }
     }
   }
   .anchor-item {
@@ -369,7 +369,7 @@
     }
     @include SP {
       margin-bottom: 12px;
-      @include font(13, 25);
+      @include font(15, 25);
     }
     .en & {
       letter-spacing: 0;
