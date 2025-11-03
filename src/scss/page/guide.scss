@@ -351,8 +351,8 @@ body {
           padding: 0;
           width: 47.86%;
           height: 400px;
-          -webkit-mask-image: url($img_url + "img/guide/img_shop.png");
-          mask-image: url($img_url + "img/guide/img_shop.png");
+          -webkit-mask-image: url($img_url + "img/guide/img_mask.png");
+          mask-image: url($img_url + "img/guide/img_mask.png");
           mask-size: 100% 100%;
           mask-repeat: no-repeat;
           mask-position: center;
@@ -369,8 +369,8 @@ body {
       @include PC {
         width: 47.86%;
         height: 400px;
-        -webkit-mask-image: url($img_url + "img/guide/img_spa.png");
-        mask-image: url($img_url + "img/guide/img_spa.png");
+        -webkit-mask-image: url($img_url + "img/guide/img_mask.png");
+        mask-image: url($img_url + "img/guide/img_mask.png");
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
         mask-position: center;
