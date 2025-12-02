@@ -1,5 +1,14 @@
+RewriteRule ^news/p832(.+) /news/p1381/ [L,NC,R=301]
+RewriteRule ^news/p810(.+) /news/p1380/ [L,NC,R=301]
+RewriteRule ^news/p782(.+) /news/p1378/ [L,NC,R=301]
+RewriteRule ^news/p765(.+) /news/p1377/ [L,NC,R=301]
+RewriteRule ^news/p760(.+) /news/p1376/ [L,NC,R=301]
+RewriteRule ^news/p797(.+) /news/p1379/ [L,NC,R=301]
+RewriteRule ^news/p743(.+) /news/p1375/ [L,NC,R=301]
+RewriteRule ^news/p687(.+) /news/p1374/ [L,NC,R=301]
+
 #SetEnvIf User-Agent .*Lighthouse* require_auth=true
-#AuthUserFile /path/to/.htpasswd
+#AuthUserFile /home/aliveweb-space/www/ju.alive-web.space/tkp/.htpasswd
 #AuthType Basic
 #AuthName "Password Protected"
 #Require valid-user

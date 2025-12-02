@@ -1,0 +1,218 @@
+@charset 'UTF-8';
+@import "../utility/*";
+.c-keyvisual {
+    @include PC {
+        margin-bottom: 120px;
+    }
+    @include SP {
+        margin-bottom: 56px;
+    }
+}
+
+.sec-gallery {
+    padding: 0 0 120px;
+}
+
+.gallery-anc {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    margin-bottom: 61px;
+    @include SP {
+        margin-bottom: 34px;
+    }
+
+    li {
+        margin-right: 20px;
+        min-height: 46px;
+        @include PC {
+            width: calc(180 / 1170 * 100%);
+            margin-right: calc(18 / 1170 * 100%);
+            margin-bottom: calc(18 / 1170 * 100%);
+            &:nth-child(6n) {
+                margin-right: 0;
+            }
+            @include max-screen(1023px) {
+                margin-right: 15px;
+                margin-bottom: 15px;
+                width: calc((100% - 30px) / 3);
+                &:nth-child(6n) {
+                    margin-right: 15px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @include SP {
+            width: calc((100% - 13px) / 2);
+            margin-right: 13px;
+            margin-bottom: 13px;
+            min-height: 44px;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    a {
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 8px 30px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $yellow04;
+        @include font(16, 28, 120, 700);
+        position: relative;
+        @include HOVER {
+            opacity: 1;
+            color: #fff;
+            &::before {
+                filter: brightness(0) invert(1);
+            }
+            &::after {
+                width: 100%;
+            }
+        }
+        @include PC {
+            transition: all .3s ease;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: $yellow04;
+                z-index: -1;
+                transition: all 0.3s ease;
+            }
+            @include max-screen(1200px) {
+                font-size: 15px;
+            }
+        }
+        @include SP {
+            padding: 7px 30px 7px 17px;
+            @include font(14, 28, 120);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 16px;
+            width: 13px;
+            height: 13px;
+            margin: auto 0;
+            background: url('data:image/svg+xml,<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.04152 1.08312L7.04152 10.6089L9.90856 7.74183C9.95853 7.6901 10.0183 7.64883 10.0844 7.62044C10.1505 7.59205 10.2215 7.57711 10.2935 7.57649C10.3654 7.57586 10.4367 7.58957 10.5033 7.6168C10.5699 7.64404 10.6303 7.68426 10.6812 7.73512C10.7321 7.78598 10.7723 7.84645 10.7995 7.91302C10.8267 7.97959 10.8404 8.05092 10.8398 8.12284C10.8392 8.19476 10.8243 8.26584 10.7959 8.33193C10.7675 8.39801 10.7262 8.45778 10.6745 8.50775L6.88281 12.2994C6.78123 12.401 6.64348 12.458 6.49985 12.458C6.35622 12.458 6.21847 12.401 6.1169 12.2994L2.32523 8.50775C2.22656 8.40559 2.17196 8.26876 2.1732 8.12674C2.17443 7.98472 2.2314 7.84886 2.33183 7.74843C2.43226 7.648 2.56811 7.59103 2.71014 7.5898C2.85216 7.58857 2.98899 7.64316 3.09115 7.74183L5.95819 10.6089L5.95819 1.08312C5.95819 0.939465 6.01526 0.801689 6.11684 0.700107C6.21842 0.598524 6.3562 0.541456 6.49985 0.541456C6.64351 0.541456 6.78129 0.598524 6.88287 0.700107C6.98445 0.801689 7.04152 0.939465 7.04152 1.08312Z" fill="%23231816"/></svg>')
+                center/contain no-repeat;
+            transition: all 0.3s ease;
+            @include SP {
+                right: 11px;
+                bottom: 1px;
+            }
+        }
+    }
+}
+
+.gallery-post {
+}
+
+.gallery-item {
+    margin-bottom: 79px;
+    @include SP {
+        margin-bottom: 32px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .c-ttl03 {
+        margin-bottom: 40px;
+        padding-bottom: 12px;
+        @include SP {
+            padding-bottom: 17px;
+            margin-bottom: 25px;
+        }
+        &::before,
+        &::after {
+            height: 1px;
+        }
+        &::before {
+            width: 240px;
+            background-color: $yellow04;
+            @include SP {
+                width: 100px;
+            }
+        }
+        &::after {
+            width: calc(100% - 250px);
+            left: unset;
+            right: 0;
+            background-color: #dcdcdc;
+            @include SP {
+                width: calc(100% - 105px);
+            }
+        }
+    }
+
+    .gallery-ctn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 15px;
+        @include SP {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px 13px;
+        }
+        li {
+            @include PC {
+            }
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include HOVER {
+                opacity: 1;
+                .img {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .img {
+            @include aspect-ratio(380, 280);
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease;
+            }
+        }
+
+        h3 {
+            @include font(14, 20, 100);
+            margin-top: 20px;
+            text-align: center;
+            @include PC {
+                @include max-screen(1023px) {
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+            }
+            @include SP {
+                @include font(13, 1.5, 100);
+                text-align: left;
+                margin-top: 16px;
+            }
+        }
+    }
+}

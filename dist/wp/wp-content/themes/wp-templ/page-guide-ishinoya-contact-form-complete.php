@@ -278,6 +278,10 @@ else header('location: ' . APP_URL);
 $thisPageName = 'ishinoya-form';
 include(APP_PATH . "libs/head02.php");
 
+echo '<pre style="background:#222;color:#31cfb3;padding:10px;position:relative;z-index:9999999;border:0;font-size:12px;margin:10px;overflow-x:scroll;white-space:pre-wrap;">';
+print_r($gtime_step2);
+echo '</pre>';
+
 unset($_SESSION['ses_gtime_step2']);
 unset($_SESSION['ses_from_step2']);
 unset($_SESSION['ses_step3']);

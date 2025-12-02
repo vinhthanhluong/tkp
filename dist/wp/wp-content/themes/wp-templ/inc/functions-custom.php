@@ -189,3 +189,15 @@ function wdm_add_tinymce_plugin( $plugin_array ) {
 $plugin_array['wdm_mce_button'] = get_stylesheet_directory_uri() .'/tiny_mce/common.js';
 return $plugin_array;
 }
+
+/* Template directory */
+add_shortcode('tmpurl', 'shortcode_tmpurl');
+function shortcode_tmpurl() {
+   return APP_ASSETS;
+}
+
+/* Site directory */
+add_shortcode('siteurl', 'shortcode_siteurl');
+function shortcode_siteurl() {
+	return get_bloginfo('url');
+}

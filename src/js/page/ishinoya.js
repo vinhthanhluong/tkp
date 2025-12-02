@@ -20,6 +20,10 @@ function mvSlide() {
       spaceBetween: 0,
       slidesPerView: 1,
       allowTouchMove: false,
+      pagination: {
+        el: ".mv-pagination",
+        clickable: true,
+      },
       effect: "fade",
       speed: 3000,
       autoplay: {
