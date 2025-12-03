@@ -145,6 +145,28 @@ include(APP_PATH . 'libs/head.php'); ?>
             <span class="c-ttl02__en">Menu</span>
           </h2>
 
+          <p class="demo-ttl">.c-ttl03</p>
+          <h2 class="c-ttl03">
+            <p><span class="c-ttl03__icon"><img alt="" width="32" height="32" data-src="<?php echo APP_ASSETS; ?>img/ishinoya/access/ico_car.svg" data-rel="js-lazy" /></span></p>
+            <span class="c-ttl03__ttl">メニュー</span>
+          </h2>
+
+          <p class="demo-ttl">.c-ttl04</p>
+          <h2 class="c-ttl04">
+            <span class="c-ttl04__jp">メニュー</span>
+            <span class="c-ttl04__en">Menu</span>
+          </h2>
+
+          <p class="demo-ttl">.c-ttl05</p>
+          <h2 class="c-ttl05">
+            団体プラン
+            <span class="c-ttl05__sm">1泊2食付き(全23室)　※会議室料金別途</span>
+          </h2>
+
+          <p class="demo-ttl">.c-ttl06</p>
+          <h2 class="c-ttl06">プレミアム(露天風呂付客室)</h2>
+
+
           <p class="demo-ttl">.c-cate01</p>
           <a href="" class="c-cate01">すべて</a>
           <p class="demo-ttl">.c-cate01.is-active</p>

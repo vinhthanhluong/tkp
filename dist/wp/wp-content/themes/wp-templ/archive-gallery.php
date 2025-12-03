@@ -25,7 +25,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
     </section>
     <div class="sec-gallery">
       <div class="inner1170">
-        <ul class="gallery-anc">
+        <ul class="gallery-anc" data-aos="fade-up">
           <li><a href="#">施設・設備</a></li>
           <li><a href="#">お部屋</a></li>
           <li><a href="#">温泉・砂湯</a></li>
@@ -34,7 +34,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
           <li><a href="#">その他</a></li>
         </ul>
         <div class="gallery-post">
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">施設・設備</h2>
             </div>
@@ -95,7 +95,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
               </li>
             </ul>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">お部屋</h2>
             </div>
@@ -156,7 +156,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
               </li>
             </ul>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">お部屋</h2>
             </div>
@@ -181,7 +181,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
               </li>
             </ul>
           </div>
-            <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">お部屋</h2>
             </div>
@@ -206,7 +206,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
               </li>
             </ul>
           </div>
-            <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">お部屋</h2>
             </div>
@@ -231,7 +231,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
               </li>
             </ul>
           </div>
-            <div class="gallery-item">
+          <div class="gallery-item" data-aos="fade-up">
             <div class="c-ttl03">
               <h2 class="c-ttl03__ttl">お部屋</h2>
             </div>

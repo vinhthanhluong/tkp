@@ -107,8 +107,7 @@
     &:after {
       content: "";
       position: absolute;
-      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100%
-        auto;
+      background: url($img_url + "img/common/dot_decor.png") no-repeat 0 0/100% auto;
       z-index: -1;
       @include PC {
         width: 180px;
@@ -1286,6 +1285,44 @@ a.c-btn04 {
     .en & {
       font-weight: 600;
     }
+  }
+}
+
+.c-ttl05 {
+  @include font(22, 1.4, 100, 700);
+  position: relative;
+  padding: 4px 0 2px 14px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    border-radius: 99px;
+    background-image: linear-gradient(180deg, #f5bb1e 0%, #f5bb1e 49%, #fff 49%, #fff 51%, #65b0d4 51%, #65b0d4 100%);
+  }
+
+  &__sm {
+    margin-left: 6px;
+    @include font(16, 1.4, 100);
+  }
+}
+
+.c-ttl06 {
+  @include font(20, 1.4, 120, 700);
+  padding-left: 20px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: $blue01;
+
   }
 }
 /* ===================== CATEGORY ===================== */
@@ -2622,15 +2659,14 @@ a.c-btn04 {
     &:before {
       left: 0;
       right: 0;
-      background: url($img_url + "img/common/tag_bg_l.png") no-repeat 0 0/15px
-          auto,
+      background:
+        url($img_url + "img/common/tag_bg_l.png") no-repeat 0 0/15px auto,
         url($img_url + "img/common/tag_bg_r.png") no-repeat right 0/15px auto;
     }
     &:after {
       left: 14px;
       right: 14px;
-      background: url($img_url + "img/common/tag_bg_c.png") repeat-x 0 0/1px
-        auto;
+      background: url($img_url + "img/common/tag_bg_c.png") repeat-x 0 0/1px auto;
     }
   }
   .news-time {
@@ -2677,13 +2713,12 @@ a.c-btn04 {
 }
 .c-table01 {
   .c-table01__row {
-    background: url($img_url + "img/common/ico_line01.png") repeat-x center
-      bottom;
+    background: url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
     background-size: 15px 1px;
     padding: 20px 0 19px;
     &:first-child {
-      background: url($img_url + "img/common/ico_line01.png") repeat-x center
-          top,
+      background:
+        url($img_url + "img/common/ico_line01.png") repeat-x center top,
         url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
       background-size: 15px 1px;
     }
@@ -2737,8 +2772,8 @@ a.c-btn04 {
       padding: 16px 0 15px;
       background-size: 6px 1px;
       &:first-child {
-        background: url($img_url + "img/common/ico_line01_sp.png") repeat-x
-            center top,
+        background:
+          url($img_url + "img/common/ico_line01_sp.png") repeat-x center top,
           url($img_url + "img/common/ico_line01_sp.png") repeat-x center bottom;
         background-size: 6px 1px;
       }
@@ -3214,8 +3249,7 @@ a.c-btn04 {
         top: -60px;
         right: 60px;
         bottom: 60px;
-        background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px
-          auto;
+        background: url($img_url + "img/common/pattern_bg.png") repeat 0 0/150px auto;
         @include max-screen(1200px) {
           left: vw-pc(-60px, 1200);
           right: vw-pc(60px, 1200);
@@ -3280,8 +3314,7 @@ a.c-btn04 {
         position: absolute;
         left: 0;
         top: 50%;
-        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100%
-          auto;
+        background: url($img_url + "img/ishinoya/spa/icn_dot.svg") no-repeat 0 0/100% auto;
         transition: 0.3s;
         @include PC {
           margin-top: -10px;
@@ -3659,8 +3692,7 @@ a.c-btn04 {
         margin-top: 31px;
         padding: 18px 19px 19px 20px;
         @include max-screen(1200px) {
-          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw)
-            calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
+          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw) calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
         }
       }
       @include SP {
@@ -3864,8 +3896,7 @@ a.c-btn04 {
         margin-top: 31px;
         padding: 18px 19px 19px 20px;
         @include max-screen(1200px) {
-          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw)
-            calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
+          padding: calc(18 / 1200 * 100vw) calc(19 / 1200 * 100vw) calc(19 / 1200 * 100vw) calc(20 / 1200 * 100vw);
         }
       }
       @include SP {
@@ -4021,8 +4052,7 @@ a.c-btn04 {
       padding: 0 0 20px 78px;
       @include max-screen(1200px) {
         width: calc(178 / 1200 * 100vw);
-        padding: calc(0 / 1200 * 100vw) calc(0 / 1200 * 100vw)
-          calc(20 / 1200 * 100vw) calc(78 / 1200 * 100vw);
+        padding: calc(0 / 1200 * 100vw) calc(0 / 1200 * 100vw) calc(20 / 1200 * 100vw) calc(78 / 1200 * 100vw);
       }
     }
     @include SP {
