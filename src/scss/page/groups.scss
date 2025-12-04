@@ -198,21 +198,18 @@
 }
 
 .sec-spa {
-    padding: 101px 0 120px;
+    padding: 101px 0 142px;
     .inner1170 {
         max-width: 1388px;
     }
 }
 
 .sec-dining {
-    padding: 118px 0 136px;
+    padding: 96px 0 114px;
+    background-color: #fdf7ed;
     .inner1170 {
         max-width: 1388px;
     }
-}
-
-.c-bg-wave02 {
-    background-color: #fdf7ed;
 }
 
 // .c-bg-wave03 {
@@ -237,7 +234,7 @@
 // }
 
 .sec-accom {
-    padding: 98px 0 77px;
+    padding: 120px 0 77px;
     .inner1170 {
         max-width: 1388px;
     }
@@ -263,7 +260,7 @@
 }
 
 .sec-group {
-    padding-bottom: 100px;
+    padding-bottom: 140px;
     .inner1170 {
         max-width: 1048px;
     }
@@ -288,14 +285,311 @@
 
     .c-ttl05 {
         margin-bottom: 33px;
+        &.mb02 {
+            margin-bottom: 24px;
+        }
     }
 
-    .c-ttl06{
+    .c-ttl06 {
         margin-bottom: 8px;
     }
 
     .c-ttl06-desc {
         padding-left: 20px;
         @include font(14, 1.4, 20, 700);
+        margin-bottom: 24px;
+    }
+
+    .sc4 {
+        margin-bottom: 53px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .sc5 {
+        margin-bottom: 33px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .utbl-scroll {
+        @include SP {
+            overflow: auto;
+        }
+    }
+
+    .utbl-gr {
+        min-width: 500px;
+        display: block;
+        thead,
+        tbody,
+        tr,
+        th,
+        td {
+            display: block;
+        }
+        &.col3 {
+            tr {
+                grid-template-columns: 198px repeat(2, 1fr);
+            }
+        }
+        &.col2 {
+            tr {
+                grid-template-columns: 198px 1fr;
+            }
+        }
+        thead {
+            th {
+                border-radius: 4px;
+                background-color: rgba($color: #000000, $alpha: 0.05);
+                &:first-child {
+                    background-color: #cdecfc;
+                }
+                &:last-child {
+                }
+            }
+        }
+        tbody {
+            tr {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background: url($img_url + "img/common/ico_line01.png") repeat-x center/contain;
+                    background-size: 15px 1px;
+                }
+            }
+            th,
+            td {
+                padding: 13px 10px 12px;
+            }
+        }
+        tr {
+            position: relative;
+            display: grid;
+            grid-template-columns: 198px repeat(4, 1fr);
+            gap: 0 2px;
+        }
+        th,
+        td {
+            @include font(16, 1.4, 120);
+            text-align: center;
+        }
+        th {
+            font-weight: 700;
+            padding: 16px 10px 12px;
+            &:first-child {
+                color: $blue01;
+            }
+        }
+        td {
+        }
+
+        .grid-4 {
+            grid-column: 2 / span 4;
+        }
+
+        .utbl-laster {
+            th {
+                padding-top: 9px;
+                padding-bottom: 10px;
+            }
+            td {
+                padding-top: 10px;
+                padding-bottom: 11px;
+            }
+        }
+
+        .utbl-link {
+            color: $blue01;
+            font-weight: 700;
+            display: inline-block;
+            padding-left: 30px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                bottom: 0;
+                left: 6px;
+                width: 20px;
+                height: 20px;
+                background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="%2365B0D4"/></svg>')
+                    center/contain no-repeat;
+            }
+        }
+    }
+
+    .utbl-note {
+        margin-top: 23px;
+        li {
+            position: relative;
+            padding-left: 22px;
+            @include font(14, 1.6, 120);
+            &::before {
+                content: "※";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+.sec-meeting {
+    padding: 98px 0 100px;
+    background-color: $gray02;
+
+    .inner1170 {
+        max-width: 1388px;
+    }
+
+    .c-secwrap.wrap-right {
+        .colctn-desc {
+            @include PC {
+                margin-top: 40px;
+                .txt {
+                    letter-spacing: 0.045em;
+                }
+            }
+        }
+    }
+
+    .c-secwrap__colctn {
+        @include PC {
+            padding-top: 80px;
+        }
+    }
+    .c-wcm01 {
+        margin-bottom: 74px;
+    }
+}
+
+.room-cnt {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .r-item {
+        padding: 25px 24px 58px;
+        position: relative;
+        background:
+            url($img_url + "img/common/ico_line01.png") repeat-x center top,
+            url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
+        background-size: 15px 1px;
+        @include PC {
+            @include flexbox;
+        }
+    }
+    .r-logo {
+        @include PC {
+            width: 192px;
+            flex-shrink: 0;
+            padding: 5px 30px 0 0;
+        }
+    }
+    .r-cnt {
+        width: 100%;
+    }
+    .r-head {
+        margin-bottom: 31px;
+    }
+    .r-name {
+        @include font(16, 1.84, 100, 700);
+    }
+    .r-adr {
+        @include font(14, 1.84, 100);
+        margin-bottom: 2px;
+    }
+    .r-map {
+        @include font(14, 28, 100, 700);
+        color: $blue01;
+        display: inline-block;
+        position: relative;
+        padding-left: 24px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto 0;
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2594 10.8035L3.75 10.8035L3.75 9.19645L13.2594 9.19645L9.06875 4.88622L10.1734 3.75L16.25 10L10.1734 16.25L9.06875 15.1138L13.2594 10.8035Z" fill="%2365B0D4"/></svg>')
+                center/contain no-repeat;
+        }
+    }
+    .r-info {
+        padding: 20px 32px 20px 20px;
+        border-radius: 32px;
+        box-shadow: 0 0 20px rgba($color: #002554, $alpha: 0.1);
+        background-color: #fff;
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @include PC {
+            @include flexbox;
+        }
+    }
+    .r-img {
+        @include aspect-ratio(328, 222);
+        background-color: wheat;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include PC {
+            width: 328px;
+            flex-shrink: 0;
+            margin-right: 24px;
+        }
+    }
+    .img_c {
+    }
+    .r-txt {
+        width: 100%;
+        padding-top: 18px;
+    }
+    .c-ttl05 {
+        @include font(18, 1.4, 100);
+        margin-bottom: 15px;
+        @include PC {
+            padding-top: 1px;
+        }
+    }
+    .r-tbl {
+        dt,
+        dd {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+        }
+        dt {
+            background:
+                url($img_url + "img/common/ico_line01.png") repeat-x center top,
+                url($img_url + "img/common/ico_line01.png") repeat-x center bottom;
+            background-size: 15px 1px;
+            padding: 10px 0 7px;
+            margin-bottom: 17px;
+            p {
+                font-weight: 700;
+            }
+        }
+        p {
+            @include font(14, 1.1, 120);
+        }
     }
 }
