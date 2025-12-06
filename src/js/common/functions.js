@@ -9,7 +9,13 @@ $(function () {
 
 function handleClickToTop() {
   $('[rel~="js-to-top"]').on("click", function () {
-    $("html, body").stop().animate({ scrollTop: 0 }, 800, "swing");
+    $("html, body").stop().animate(
+      {
+        scrollTop: 0,
+      },
+      800,
+      "swing"
+    );
   });
 }
 
@@ -117,6 +123,7 @@ function modtabs() {
     });
   }
 }
+
 function toggleDropdown() {
   if ($(".js-accordion").length) {
     $(".js-accordion").click(function () {
@@ -136,6 +143,7 @@ function toggleDropdown() {
     });
   }
 }
+
 function jsSliderNews() {
   var sliderJs;
   var sliderWrapper;
@@ -248,6 +256,62 @@ function jsSlideGallery() {
       progress: ".swiper03-progress-bar",
     },
     {
+      gallery: ".js-slider-gallery04",
+      thumb: ".js-slider-thumb04",
+      next: ".swiper04-next",
+      prev: ".swiper04-prev",
+      pagination: ".swiper04-pagination",
+      progress: ".swiper04-progress-bar",
+      options: {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      },
+    },
+    {
+      gallery: ".js-slider-gallery05",
+      thumb: ".js-slider-thumb05",
+      next: ".swiper05-next",
+      prev: ".swiper05-prev",
+      pagination: ".swiper05-pagination",
+      progress: ".swiper05-progress-bar",
+      options: {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      },
+    },
+    {
+      gallery: ".js-slider-gallery06",
+      thumb: ".js-slider-thumb06",
+      next: ".swiper06-next",
+      prev: ".swiper06-prev",
+      pagination: ".swiper06-pagination",
+      progress: ".swiper06-progress-bar",
+      options: {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      },
+    },
+    {
+      gallery: ".js-slider-gallery07",
+      thumb: ".js-slider-thumb07",
+      next: ".swiper07-next",
+      prev: ".swiper07-prev",
+      pagination: ".swiper07-pagination",
+      progress: ".swiper07-progress-bar",
+      options: {
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      },
+    },
+    {
       gallery: ".js-slider-gallerysingle",
       thumb: ".js-slider-thumbsingle",
       next: ".swipersingle-next",
@@ -313,6 +377,7 @@ function jsSlideGallery() {
             }
           },
         },
+        ...(cfg.options || {}),
         on: {
           init: function () {
             $(cfg.progress).removeClass("animate active");
@@ -330,6 +395,7 @@ function jsSlideGallery() {
     }
   });
 }
+
 function initCustomCursor() {
   if (window.innerWidth > 767) {
     var $curs = $(".js-cursor__slide").hide();

@@ -1295,17 +1295,32 @@ a.c-btn04 {
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 0;
     bottom: 0;
     left: 0;
     width: 4px;
     border-radius: 99px;
     background-image: linear-gradient(180deg, #f5bb1e 0%, #f5bb1e 49%, #fff 49%, #fff 51%, #65b0d4 51%, #65b0d4 100%);
+    @include PC {
+      top:2px;
+    }
   }
 
   &__sm {
     margin-left: 6px;
     @include font(16, 1.4, 100);
+    @include SP {
+      @include font(14, 1.4, 120 , 500);
+      display: block;
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+
+  @include SP {
+    @include font(18, 1.4, 120);
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -1322,7 +1337,13 @@ a.c-btn04 {
     height: 10px;
     border-radius: 2px;
     background-color: $blue01;
+    @include SP {
+      top: 4px;
+    }
+  }
 
+  @include SP {
+    @include font(14, 1.4, 120);
   }
 }
 /* ===================== CATEGORY ===================== */

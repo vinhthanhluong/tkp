@@ -40,7 +40,7 @@ include(APP_PATH . 'libs/head.php'); ?>
           <h1 class="mv-ttl-jp">団体利用</h1>
           <span class="mv-ttl-en">GROUPS</span>
           <p class="short-desc">
-            研修・社員旅行・学校行事など、団体でのご利用も大歓迎！<br>大型バスでのご来園も可能で、目的やご予算に合わせた最適なプランをご提案します。
+            研修・社員旅行・学校行事など、<br class="sp">団体でのご利用も大歓迎！<br>大型バスでのご来園も可能で、目的やご予算に合わせた最適なプランをご提案します。
           </p>
         </div>
       </div>
@@ -54,10 +54,10 @@ include(APP_PATH . 'libs/head.php'); ?>
               <i class="arr01"></i>
               <span class="txt-anchor">
                 <em class="icon icon__off">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor01_icn.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor01_icn.svg" src="<?php echo createSVG(37, 15); ?>" width="37" height="15" rel="js-lazy" alt="">
                 </em>
                 <em class="icon icon__on">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor01_icn_hv.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor01_icn_hv.svg" src="<?php echo createSVG(37, 15); ?>" width="37" height="15" rel="js-lazy" alt="">
                 </em>
                 別府海浜砂湯
               </span>
@@ -69,10 +69,10 @@ include(APP_PATH . 'libs/head.php'); ?>
               <i class="arr01"></i>
               <span class="txt-anchor">
                 <em class="icon icon__off">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor02_icn.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor02_icn.svg" src="<?php echo createSVG(27, 28); ?>" width="27" height="28" rel="js-lazy" alt="">
                 </em>
                 <em class="icon icon__on">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor02_icn_hv.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor02_icn_hv.svg" src="<?php echo createSVG(27, 28); ?>" width="27" height="28" rel="js-lazy" alt="">
                 </em>
                 お食事
               </span>
@@ -84,10 +84,10 @@ include(APP_PATH . 'libs/head.php'); ?>
               <i class="arr01"></i>
               <span class="txt-anchor">
                 <em class="icon icon__off">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor03_icn.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor03_icn.svg" src="<?php echo createSVG(29, 27); ?>" width="29" height="27" rel="js-lazy" alt="">
                 </em>
                 <em class="icon icon__on">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor03_icn_hv.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor03_icn_hv.svg" src="<?php echo createSVG(29, 27); ?>" width="29" height="27" rel="js-lazy" alt="">
                 </em>
                 宿泊
               </span>
@@ -99,10 +99,10 @@ include(APP_PATH . 'libs/head.php'); ?>
               <i class="arr01"></i>
               <span class="txt-anchor">
                 <em class="icon icon__off">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor04_icn.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor04_icn.svg" src="<?php echo createSVG(27, 25); ?>" width="27" height="25" rel="js-lazy" alt="">
                 </em>
                 <em class="icon icon__on">
-                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyMiI+PC9zdmc+" alt="" width="24" height="22" data-src="https://tkp-jp.ju.alive-web.space/wp/wp-content/themes/wp-templ/assets/img/info/anchor04_icn_hv.svg" data-rel="js-lazy" />
+                  <img data-src="<?php echo APP_ASSETS; ?>img/groups/anchor04_icn_hv.svg" src="<?php echo createSVG(27, 25); ?>" width="27" height="25" rel="js-lazy" alt="">
                 </em>
                 会議室
               </span>
@@ -113,7 +113,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-spa" id="groups01">
-      <div class="inner1170">
+      <div class="inner1170" data-aos="fade-up">
         <div class="c-wcm01">
           <h2 class="c-ttl02 sp">
             <span class="c-ttl02__jp">別府海浜砂湯</span>
@@ -122,50 +122,47 @@ include(APP_PATH . 'libs/head.php'); ?>
           <section class="c-secwrap wrap-left">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
-                <div class="gallery-wrapper js-slider-gallery02">
+                <div class="gallery-wrapper js-slider-gallery05">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="715" height="513" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="715" height="513" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="715" height="513" alt="">
                       </div>
                     </div>
                   </div>
-                  <p class="c-cursor__slide js-cursor__slide">
-                    <span class="txt">Prev</span>
-                  </p>
-                  <div class="gallerySwiper-prev swiper02-prev">
+                  <div class="gr-prev swiper05-prev">
                   </div>
-                  <div class="gallerySwiper-next swiper02-next">
+                  <div class="gr-next swiper05-next">
                   </div>
                 </div>
                 <div class="swiper-group">
-                  <div class="gallerySwiper-pagination swiper02-pagination"></div>
-                  <div class="gallerySwiper-progress-bar swiper02-progress-bar pc">
+                  <div class="gallerySwiper-pagination swiper05-pagination"></div>
+                  <div class="gallerySwiper-progress-bar swiper05-progress-bar">
                     <span class="slide-progress-bar"></span>
                   </div>
                 </div>
               </div>
               <div class="c-gallery__thumb">
-                <div class="slider-thumb-gallery js-slider-thumb02">
+                <div class="slider-thumb-gallery js-slider-thumb05">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa01.jpg" width="176" height="120" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="176" height="120" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="176" height="120" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="176" height="120" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa03.jpg" width="176" height="120" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="176" height="120" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -185,7 +182,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <dl class="colctn-dl">
                   <dt>料金</dt>
-                  <dd>大人：2,500円　小人（6歳～12歳）：1,800円</dd>
+                  <dd>大人：2,500円　<br class="sp">小人（6歳～12歳）：1,800円</dd>
                 </dl>
                 <p class="colctn-note">※砂湯体験時間は約15分です。<br>※貸切をご希望の際はお問い合わせください。</p>
 
@@ -202,7 +199,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-dining c-bg-wave02 wave-yellow" id="groups02">
-      <div class="inner1170">
+      <div class="inner1170" data-aos="fade-up">
         <div class="c-wcm01">
           <h2 class="c-ttl02 sp">
             <span class="c-ttl02__jp">お食事</span>
@@ -211,58 +208,47 @@ include(APP_PATH . 'libs/head.php'); ?>
           <section class="c-secwrap wrap-right">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
-                <div class="gallery-wrapper js-slider-gallery02">
+                <div class="gallery-wrapper js-slider-gallery06">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_dining01.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_dining02.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="751" height="478" alt="">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_dining03.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                   </div>
-                  <p class="c-cursor__slide js-cursor__slide">
-                    <span class="txt">Prev</span>
-                  </p>
-                  <div class="gallerySwiper-prev swiper02-prev">
+                  <div class="gr-prev swiper06-prev">
                   </div>
-                  <div class="gallerySwiper-next swiper02-next">
+                  <div class="gr-next swiper06-next">
                   </div>
                 </div>
                 <div class="swiper-group">
-                  <div class="gallerySwiper-pagination swiper02-pagination"></div>
-                  <div class="gallerySwiper-progress-bar swiper02-progress-bar pc">
+                  <div class="gallerySwiper-pagination swiper06-pagination"></div>
+                  <div class="gallerySwiper-progress-bar swiper06-progress-bar">
                     <span class="slide-progress-bar"></span>
                   </div>
                 </div>
               </div>
               <div class="c-gallery__thumb">
-                <div class="slider-thumb-gallery js-slider-thumb02">
+                <div class="slider-thumb-gallery js-slider-thumb06">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_dining01.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_dining02.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa03.jpg" width="140" height="100" alt=""></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_dining03.jpg" width="140" height="100" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -299,7 +285,7 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
     <div class="sec-accom" id="groups03">
-      <div class="inner1170">
+      <div class="inner1170" data-aos="fade-up">
         <div class="c-wcm01">
           <h2 class="c-ttl02 sp">
             <span class="c-ttl02__jp">宿泊</span>
@@ -308,50 +294,47 @@ include(APP_PATH . 'libs/head.php'); ?>
           <section class="c-secwrap wrap-left">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
-                <div class="gallery-wrapper js-slider-gallery02">
+                <div class="gallery-wrapper js-slider-gallery07">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_accom01.jpg" width="625" height="440" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_accom02.jpg" width="625" height="440" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="625" height="440" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_accom03.jpg" width="625" height="440" alt="">
                       </div>
                     </div>
                   </div>
-                  <p class="c-cursor__slide js-cursor__slide">
-                    <span class="txt">Prev</span>
-                  </p>
-                  <div class="gallerySwiper-prev swiper02-prev">
+                  <div class="gr-prev swiper07-prev">
                   </div>
-                  <div class="gallerySwiper-next swiper02-next">
+                  <div class="gr-next swiper07-next">
                   </div>
                 </div>
                 <div class="swiper-group">
-                  <div class="gallerySwiper-pagination swiper02-pagination"></div>
-                  <div class="gallerySwiper-progress-bar swiper02-progress-bar pc">
+                  <div class="gallerySwiper-pagination swiper07-pagination"></div>
+                  <div class="gallerySwiper-progress-bar swiper07-progress-bar">
                     <span class="slide-progress-bar"></span>
                   </div>
                 </div>
               </div>
               <div class="c-gallery__thumb">
-                <div class="slider-thumb-gallery js-slider-thumb02">
+                <div class="slider-thumb-gallery js-slider-thumb07">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_accom01.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_accom02.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa03.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_accom03.jpg" width="140" height="100" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -389,22 +372,22 @@ include(APP_PATH . 'libs/head.php'); ?>
 
     <div class="sec-group">
       <div class="inner1170">
-        <div class="c-ttl03">
+        <div class="c-ttl03" data-aos="fade-up">
           <h3 class="c-ttl03__ttl">料金プラン</h3>
         </div>
-        <div class="desc">
+        <div class="desc" data-aos="fade-up">
           <p><a href="#" class="ulink">「宿泊料金カレンダー」</a>で候補日のA/B/Cをご確認の上、各プランの該当料金をご確認ください。</p>
         </div>
-        <div class="sc4">
+        <div class="sc4" data-aos="fade-up">
           <h4 class="c-ttl05">団体プラン <span class="c-ttl05__sm">1泊2食付き(全23室)　※会議室料金別途</span></h4>
-          <div class="sc5">
+          <div class="sc5" data-aos="fade-up">
             <h5 class="c-ttl06">プレミアム(露天風呂付客室)</h5>
             <p class="c-ttl06-desc">対象客室：プレミアムツイン（クイーンベッド2台）／プレミアムトリプル（セミダブルベッド3台）／プレミアムバンクフォース（クイーンベッド2台＋シングルベッド2台）</p>
             <div class="utbl-scroll">
               <table class="utbl-gr">
                 <thead>
                   <tr>
-                    <th>料金ランク</th>
+                    <th>料金<br class="sp">ランク</th>
                     <th>1名利用</th>
                     <th>2名利用</th>
                     <th>3名利用</th>
@@ -441,14 +424,14 @@ include(APP_PATH . 'libs/head.php'); ?>
               </table>
             </div>
           </div>
-          <div class="sc5">
+          <div class="sc5" data-aos="fade-up">
             <h5 class="c-ttl06">スーペリア</h5>
             <p class="c-ttl06-desc">対象客室：スーペリアツイン（クイーンベッド2台）／スーペリアトリプル（セミダブルベッド3台）／スーペリアバンクフォース（クイーンベッド2台＋シングルベッド2台）</p>
             <div class="utbl-scroll">
               <table class="utbl-gr">
                 <thead>
                   <tr>
-                    <th>料金ランク</th>
+                    <th>料金<br class="sp">ランク</th>
                     <th>1名利用</th>
                     <th>2名利用</th>
                     <th>3名利用</th>
@@ -485,13 +468,13 @@ include(APP_PATH . 'libs/head.php'); ?>
               </table>
             </div>
           </div>
-          <div class="sc5">
+          <div class="sc5" data-aos="fade-up">
             <h5 class="c-ttl06">スタンダード</h5>
             <p class="c-ttl06-desc">対象客室：スタンダードキング（キングベッド1台）</p>
             <table class="utbl-gr col3">
               <thead>
                 <tr>
-                  <th>料金ランク</th>
+                  <th>料金<br class="sp">ランク</th>
                   <th>1名利用</th>
                   <th>2名利用</th>
                 </tr>
@@ -525,12 +508,12 @@ include(APP_PATH . 'libs/head.php'); ?>
             </ul>
           </div>
         </div>
-        <div class="sc4">
+        <div class="sc4" data-aos="fade-up">
           <h4 class="c-ttl05 mb02">貸切プラン<span class="c-ttl05__sm">1泊2食（宿泊コテージエリア全23室貸切）15:00～翌10:00</span></h4>
-          <table class="utbl-gr col2">
+          <table class="utbl-gr col2" data-aos="fade-up">
             <thead>
               <tr>
-                <th>料金ランク</th>
+                <th>料金<br class="sp">ランク</th>
                 <th>基本料金（23名まで）</th>
               </tr>
             </thead>
@@ -553,7 +536,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               </tr>
             </tbody>
           </table>
-          <ul class="utbl-note">
+          <ul class="utbl-note" data-aos="fade-up">
             <li>24名様以上のご利用の際は1名様追加につき+14,300円/名を頂戴いたします。</li>
             <li>宿泊コテージエリアのみを貸切でご利用頂けます。</li>
             <li>貸切プランは特別料金のため31名以上の違約金が適用されます。</li>
@@ -565,9 +548,9 @@ include(APP_PATH . 'libs/head.php'); ?>
       </div>
     </div>
 
-    <div class="sec-meeting c-bg-wave02 wave-gray">
+    <div class="sec-meeting c-bg-wave02 wave-gray" id="groups04">
       <div class="inner1170">
-        <div class="c-wcm01">
+        <div class="c-wcm01" data-aos="fade-up">
           <h2 class="c-ttl02 sp">
             <span class="c-ttl02__jp">会議室</span>
             <span class="c-ttl02__en">Meeting Room</span>
@@ -575,58 +558,47 @@ include(APP_PATH . 'libs/head.php'); ?>
           <div class="c-secwrap wrap-right">
             <div class="c-secwrap__colslide">
               <div class="c-gallery__main">
-                <div class="gallery-wrapper js-slider-gallery02">
+                <div class="gallery-wrapper js-slider-gallery04">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa01.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_meet01.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_meet02.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa03.jpg" width="751" height="478" alt="">
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="gallery-pic c-img">
-                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_spa02.jpg" width="751" height="478" alt="">
+                        <img src="<?php echo APP_ASSETS ?>img/groups/slide_meet03.jpg" width="751" height="478" alt="">
                       </div>
                     </div>
                   </div>
-                  <p class="c-cursor__slide js-cursor__slide">
-                    <span class="txt">Prev</span>
-                  </p>
-                  <div class="gallerySwiper-prev swiper02-prev">
+                  <div class="gr-prev swiper04-prev">
                   </div>
-                  <div class="gallerySwiper-next swiper02-next">
+                  <div class="gr-next swiper04-next">
                   </div>
                 </div>
                 <div class="swiper-group">
-                  <div class="gallerySwiper-pagination swiper02-pagination"></div>
-                  <div class="gallerySwiper-progress-bar swiper02-progress-bar pc">
+                  <div class="gallerySwiper-pagination swiper04-pagination"></div>
+                  <div class="gallerySwiper-progress-bar swiper04-progress-bar">
                     <span class="slide-progress-bar"></span>
                   </div>
                 </div>
               </div>
               <div class="c-gallery__thumb">
-                <div class="slider-thumb-gallery js-slider-thumb02">
+                <div class="slider-thumb-gallery js-slider-thumb04">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa01.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_meet01.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_meet02.jpg" width="140" height="100" alt=""></div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa03.jpg" width="140" height="100" alt=""></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/thumb_spa02.jpg" width="140" height="100" alt=""></div>
+                      <div class="thumb-pic c-img"><img src="<?php echo APP_ASSETS ?>img/groups/slide_meet03.jpg" width="140" height="100" alt=""></div>
                     </div>
                   </div>
                 </div>
@@ -641,6 +613,13 @@ include(APP_PATH . 'libs/head.php'); ?>
                 <div class="colctn-desc">
                   <p class="txt">研修やミーティングに最適な近隣の会議室を手配いたします｡<br>人数や用途に応じて、SHONIN PARK周辺の会議室や多目的スペースをご案内可能です｡</p>
                 </div>
+                <div class="sp">
+                  <dl class="colctn-dl">
+                    <dt>座席数</dt>
+                    <dd>店内：40　テラス：46</dd>
+                  </dl>
+                  <p class="colctn-note">※貸切をご希望の際はお問い合わせください。</p>
+                </div>
                 <a class="c-btn03" href="#">
                   <i class="arr01"></i>
                   <span>団体利用のお問い合わせ</span>
@@ -652,7 +631,7 @@ include(APP_PATH . 'libs/head.php'); ?>
         </div>
 
         <div class="room-cnt">
-          <div class="r-item">
+          <div class="r-item r-item1" data-aos="fade-up">
             <div class="r-logo">
               <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="124" height="50" alt="">
             </div>
@@ -665,7 +644,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <div class="r-post">
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img01.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">個室</p>
@@ -685,7 +664,7 @@ include(APP_PATH . 'libs/head.php'); ?>
             </div>
           </div>
 
-          <div class="r-item">
+          <div class="r-item r-item2" data-aos="fade-up">
             <div class="r-logo">
               <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo05.png" width="125" height="56" alt="">
             </div>
@@ -698,7 +677,7 @@ include(APP_PATH . 'libs/head.php'); ?>
               <div class="r-post">
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img02.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">カンファレンスルーム2A</p>
@@ -716,7 +695,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img03.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">カンファレンスルーム2B</p>
@@ -734,7 +713,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img04.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">カンファレンスルーム2C</p>
@@ -750,37 +729,74 @@ include(APP_PATH . 'libs/head.php'); ?>
                     </dl>
                   </div>
                 </div>
+                <div class="r-info">
+                  <p class="r-img img_c">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img05.jpg" width="328" height="222" alt="">
+                  </p>
+                  <div class="r-txt">
+                    <p class="c-ttl05">カンファレンスルーム2D</p>
+                    <dl class="r-tbl">
+                      <dt>
+                        <p>広さ</p>
+                        <p>収容人数</p>
+                      </dt>
+                      <dd>
+                        <p>76.71㎡</p>
+                        <p>54名様</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="r-info">
+                  <p class="r-img img_c">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img06.jpg" width="328" height="222" alt="">
+                  </p>
+                  <div class="r-txt">
+                    <p class="c-ttl05">ミーティングルーム2E</p>
+                    <dl class="r-tbl">
+                      <dt>
+                        <p>広さ</p>
+                        <p>収容人数</p>
+                      </dt>
+                      <dd>
+                        <p>13.32㎡</p>
+                        <p>6名様</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
               </div>
+              <div class="r-btn"></div>
             </div>
           </div>
 
-          <div class="r-item">
+          <div class="r-item r-item3" data-aos="fade-up">
             <div class="r-logo">
               <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo06.png" width="160" height="71" alt="">
             </div>
             <div class="r-cnt">
               <div class="r-head">
                 <p class="r-name">ホテル サンバリー アネックス</p>
-                <p class="r-adr">〒874-0919　大分県別府市石垣東10-1-20</p>
+                <p class="r-adr">〒874-0919　大分県別府市石垣東<br class="sp">10-1-20</p>
                 <a href="#" class="r-map">Google map</a>
               </div>
               <div class="r-post">
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img07.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
-                    <p class="c-ttl05">ホール｜エメラルド（サファイア・ルビー）</p>
-                    <dl class="r-tbl">
+                    <p class="c-ttl05">ホール｜エメラルド(サファイア･ルビー)</p>
+                    <dl class="r-tbl cst3">
                       <dt>
                         <p></p>
                         <p>広さ</p>
                         <p>収容人数</p>
                       </dt>
                       <dd>
-                        <p>エメラルド<br>(サファイア＋ルビー)</p>
-                        <p>12㎡</p>
-                        <p>8名様</p>
+                        <p>エメラルド<br><span>(サファイア＋ルビー)</span></p>
+                        <p>480㎡</p>
+                        <p>〜220名様</p>
                       </dd>
                       <dd>
                         <p>サファイア</p>
@@ -797,7 +813,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img08.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">ホール｜ルナ</p>
@@ -815,7 +831,7 @@ include(APP_PATH . 'libs/head.php'); ?>
                 </div>
                 <div class="r-info">
                   <p class="r-img img_c">
-                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_logo02.png" width="127" height="52" alt="">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img09.jpg" width="328" height="222" alt="">
                   </p>
                   <div class="r-txt">
                     <p class="c-ttl05">和室｜桜の間</p>
@@ -831,7 +847,86 @@ include(APP_PATH . 'libs/head.php'); ?>
                     </dl>
                   </div>
                 </div>
+                <div class="r-info">
+                  <p class="r-img img_c">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img10.jpg" width="328" height="222" alt="">
+                  </p>
+                  <div class="r-txt">
+                    <p class="c-ttl05">和室｜りんどう・ききょう</p>
+                    <dl class="r-tbl cst3">
+                      <dt>
+                        <p></p>
+                        <p>広さ</p>
+                        <p>収容人数</p>
+                      </dt>
+                      <dd>
+                        <p>りんどう+ききょう</p>
+                        <p>60㎡</p>
+                        <p>～25名様</p>
+                      </dd>
+                      <dd>
+                        <p>りんどう</p>
+                        <p>30㎡</p>
+                        <p>～8名様</p>
+                      </dd>
+                      <dd>
+                        <p>ききょう</p>
+                        <p>30㎡</p>
+                        <p>～8名様</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="r-info">
+                  <p class="r-img img_c">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img11.jpg" width="328" height="222" alt="">
+                  </p>
+                  <div class="r-txt">
+                    <p class="c-ttl05">洋室｜若潮の間</p>
+                    <dl class="r-tbl">
+                      <dt>
+                        <p>広さ</p>
+                        <p>収容人数</p>
+                      </dt>
+                      <dd>
+                        <p>65㎡</p>
+                        <p>～30名様</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="r-info">
+                  <p class="r-img img_c">
+                    <img src="<?php echo APP_ASSETS ?>/img/groups/groups_img12.jpg" width="328" height="222" alt="">
+                  </p>
+                  <div class="r-txt">
+                    <p class="c-ttl05">控室｜リリー・カトレア</p>
+                    <dl class="r-tbl cst3">
+                      <dt>
+                        <p></p>
+                        <p>広さ</p>
+                        <p>収容人数</p>
+                      </dt>
+                      <dd>
+                        <p>リリー+カトレア</p>
+                        <p>30㎡</p>
+                        <p>～10名様</p>
+                      </dd>
+                      <dd>
+                        <p>リリー</p>
+                        <p>14㎡</p>
+                        <p>～4名様</p>
+                      </dd>
+                      <dd>
+                        <p>カトレア</p>
+                        <p>16㎡</p>
+                        <p>～6名様</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
               </div>
+              <div class="r-btn"></div>
             </div>
           </div>
 
@@ -842,7 +937,14 @@ include(APP_PATH . 'libs/head.php'); ?>
   </main>
   <?php include(APP_PATH . 'libs/footer.php'); ?>
   <script src="<?php echo APP_ASSETS ?>js/lib/swiper-bundle.min.js?v=<?php echo APP_VER ?>"></script>
-
+  <script>
+    $(function() {
+      $('.r-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).closest('.r-cnt').find('.r-post').toggleClass('show');
+      });
+    });
+  </script>
 </body>
 
 </html>

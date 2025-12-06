@@ -47,6 +47,7 @@ if (!empty($dist)) $dist .= '/';
 if (strpos($dist, ".php") !== false || strpos($dist, ".html") !== false || strpos($dist, ".htm") !== false) $dist = "";
 
 // get host.
+// Dynamic URL based on server configuration
 $app_url = $protocol . $_SERVER['HTTP_HOST'] . '/' . $dist;
 define('APP_URL', $app_url);
 define('APP_URL_EN', $app_url . 'en/');
@@ -55,7 +56,8 @@ define('APP_URL_CN', $app_url . 'cn/');
 define('APP_VER', '1.0.0');
 if (defined('ABSPATH')) {
   define('APP_THEME_URL', get_template_directory_uri() . '/');
-  define('APP_PATH', get_template_directory() . '/');
+  // define('APP_PATH', get_template_directory() . '/');
+  define('APP_PATH', dirname(__FILE__) . '/wp/wp-content/themes/wp-templ/');
   define('APP_PATH_EN', dirname(__FILE__) . '/en/');
   define('APP_PATH_KO', dirname(__FILE__) . '/ko/');
   define('APP_PATH_CN', dirname(__FILE__) . '/cn/');

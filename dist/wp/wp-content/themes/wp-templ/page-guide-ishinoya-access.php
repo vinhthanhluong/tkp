@@ -33,7 +33,7 @@ include(APP_PATH . 'libs/head02.php'); ?>
     <div class="sec-access">
       <div class="inner1170">
         <div class="block01" data-aos="fade-up">
-          <div class="block01_map"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5296.497499092876!2d131.4986357770873!3d33.31388477344385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a94de4fdd5%3A0x5e4099a53d0100aa!2sSHONIN%20PARK!5e1!3m2!1sja!2sjp!4v1753412184171!5m2!1sja!2sjp" width="600" height="490" allowfullscreen="allowfullscreen"></iframe></div>
+          <div class="block01_map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6668.3771618562505!2d131.501211!3d33.313885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a7a94de4fdd5%3A0x5e4099a53d0100aa!2sSHONIN%20PARK!5e0!3m2!1sja!2sjp!4v1765029122900!5m2!1sja!2sjp" width="600" height="490" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
           <div class="block01_info">
             <div class="info01">
               <p class="ttl01">ISHINOYA 別府 / 石のや 別府 </p>
